@@ -1,11 +1,30 @@
-# Assessing local interconnectivity resilience in Pakistan
-Pakistan's local internet efficiency project. APNIC Research Fellowship 2026.
+# Assessing Local Interconnectivity Resilience in Pakistan
 
-# How to check whether you have a Pi 2 or later?
-To check this, boot your Pi, and open a terminal. Type the command `getconf LONG_BIT`. If the output is 32, then you have a 32 bit Pi, which is Raspberry Pi 2. Otherwise, it is Pi 3 or later.
+A network measurement research project studying Pakistani internet infrastructure
+using RIPE Atlas probes. 
 
-# Setup instructions
-Here are instructions to install the RIPE Atlas Probe software on Raspberry Pi 2, 3, or later boards.
+The study uses traceroutes launched from Pakistani RIPE Atlas probes to determine:
+- Where Pakistani websites are physically hosted (in-country vs abroad)
+- How traffic is routed across Pakistani ISPs
+- Whether traffic transits Pakistan's internet exchange point (PKIX) or exits the country unnecessarily
 
-- [Raspberry Pi 2](pi2.md)
-- [Raspberry Pi 3 and later](pi3.md)
+## Repository Structure
+
+```
+scripts/measurement/   Python scripts for launching and processing measurements
+targets/               Input files (website lists, probe lists)
+experiments/           One subfolder per experiment with notes and results
+findings/              Summaries and analysis outputs
+```
+
+## Experiments
+
+- [01 — Website Destinations](experiments/01_website_destinations/notes.md):
+  Traceroutes to Pakistani websites to determine hosting location by ASN and RTT.
+
+## Probe Setup
+
+Instructions for deploying a RIPE Atlas software probe on Raspberry Pi hardware:
+
+- [Raspberry Pi 2](pi2.md) (32-bit, build from source)
+- [Raspberry Pi 3 and later](pi3.md) (64-bit, official Debian package)
