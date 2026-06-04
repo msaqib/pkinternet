@@ -11,7 +11,8 @@ Funded by APNIC Foundation; supervised by Dr Saqib Ilyas at LUMS.
 | Path | Purpose |
 |------|---------|
 | `scripts/measurement/pk_multi_probe.py` | Main measurement + analysis script |
-| `targets/pk_websites_list.csv` | Input: list of Pakistani websites to probe |
+| `data/pk_websites_list.csv` | Input: list of Pakistani websites to probe |
+| `data/pk_isp_fll_list.csv` | PTA FLL licensee list (77 unique ISPs, deduped) |
 | `experiments/01_website_destinations/notes.md` | Experiment log |
 | `experiments/01_website_destinations/results/` | Output CSVs, one subfolder per run |
 

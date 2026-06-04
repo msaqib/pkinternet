@@ -40,13 +40,13 @@ API_KEY        = os.environ.get("RIPE_API_KEY", "your-api-key-here")
 # ── RUN NAME — edit before each run ───────────────────
 # Results will be saved to:
 # experiments/01_website_destinations/results/{RUN_NAME}/
-RUN_NAME       = "run_20260604_batch2"
+RUN_NAME       = "run_20260604_batch5"
 # ─────────────────────────────────────────────────────
 
 # Path to websites list — relative to repo root
 # Run this script from the repo root:
 # python scripts/measurement/pk_multi_probe.py
-WEBSITES_FILE  = "targets/pk_websites_list.csv"
+WEBSITES_FILE  = "data/pk_websites_list.csv"
 
 # ── PROBES — edit this list manually ──────────────────
 # Format: (probe_id, asn, city, description)
@@ -66,7 +66,7 @@ PROBES = [
 #   targets  1-20  →  BATCH_START = 0,  BATCH_SIZE = 20
 #   targets 21-40  →  BATCH_START = 20, BATCH_SIZE = 20
 #   targets 41-end →  BATCH_START = 40, BATCH_SIZE = None
-BATCH_START    = 10
+BATCH_START    = 30
 BATCH_SIZE     = 10
 
 # Wait between probe batches (seconds)
