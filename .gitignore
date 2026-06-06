@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .env
 venv/
+.ipynb_checkpoints/
+# regenerable geolocation cache (locations are already baked into the result CSVs)
+scripts/measurement/.geo_cache.json

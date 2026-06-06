@@ -1,0 +1,647 @@
+Readable routes  —  pk_grouped_20260604_165834.csv
+45 traceroutes  ·  destination shown once per block (in the DEST header)
+
+==============================================================================
+ arynews.tv   —   ARY News  (news)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     172.67.72.246 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.1   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.3   110.93.252.102     —         TWA (PK)  [registry]
+    4     21.1   110.93.252.222     —         TWA (PK)  [registry]
+    5     18.6   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     18.0   172.67.72.246      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ arynews.tv   —   ARY News  (news)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     172.67.72.246 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.64.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.27.0.29        —         (private/internal)
+    4      2.9   172.27.0.22        —         (private/internal)
+    5      3.4   172.31.5.253       —         (private/internal)
+    6     46.8   172.31.5.106       —         (private/internal)
+    7      3.6   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.3   172.67.72.246      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ arynews.tv   —   ARY News  (news)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     172.67.72.246 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     26.7   172.67.72.246      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ arynews.tv   —   ARY News  (news)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     172.67.72.246 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.1   172.17.0.1         —         (private/internal)
+    2     23.7   172.67.72.246      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ arynews.tv   —   ARY News  (news)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     172.67.72.246 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.8   192.168.100.1      —         (private/internal)
+    2      1.6   70.70.209.16       AS6327    Shaw Communications (CA)
+    3      2.2   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     22.6   110.93.252.200     —         TWA (PK)  [registry]
+    5     21.9   110.93.252.222     —         TWA (PK)  [registry]
+    6     21.5   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     21.5   172.67.72.246      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ bolnews.com   —   Bol News  (news)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     104.26.10.66 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.2   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.0   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.3   110.93.252.102     —         TWA (PK)  [registry]
+    4     21.0   110.93.252.222     —         TWA (PK)  [registry]
+    5     18.4   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     18.0   104.26.10.66       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ bolnews.com   —   Bol News  (news)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     104.26.10.66 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      2.9   100.89.64.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.7   172.27.0.29        —         (private/internal)
+    4      2.5   172.27.0.22        —         (private/internal)
+    5      3.1   172.31.5.253       —         (private/internal)
+    6    114.6   172.31.5.106       —         (private/internal)
+    7      3.7   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      2.7   104.26.10.66       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ bolnews.com   —   Bol News  (news)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     104.26.10.66 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.4   10.102.76.1        —         (private/internal)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     24.3   104.26.10.66       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ bolnews.com   —   Bol News  (news)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     104.26.10.66 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.1   172.17.0.1         —         (private/internal)
+    2     21.3   104.26.10.66       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ bolnews.com   —   Bol News  (news)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     104.26.10.66 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.1   192.168.100.1      —         (private/internal)
+    2      1.7   70.70.209.16       AS6327    Shaw Communications (CA)
+    3      4.0   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.5   110.93.254.144     —         TWA (PK)  [registry]
+    5     49.2   110.93.252.224     —         TWA (PK)  [registry]
+    6     18.7   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     21.2   104.26.10.66       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ dawn.com   —   Dawn News  (news)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     172.67.72.98 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.1   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.2   110.93.252.48      —         TWA (PK)  [registry]
+    4     19.4   110.93.252.224     —         TWA (PK)  [registry]
+    5     19.2   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     18.4   172.67.72.98       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ dawn.com   —   Dawn News  (news)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     172.67.72.98 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.1   192.168.18.1       —         (private/internal)
+    2      3.3   100.89.64.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.0   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      3.4   172.31.5.253       —         (private/internal)
+    6    281.4   172.31.5.106       —         (private/internal)
+    7      4.0   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      4.0   172.67.72.98       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ dawn.com   —   Dawn News  (news)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     172.67.72.98 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.4   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     27.7   172.67.72.98       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ dawn.com   —   Dawn News  (news)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     172.67.72.98 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.1   172.17.0.1         —         (private/internal)
+    2     22.9   172.67.72.98       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ dawn.com   —   Dawn News  (news)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     172.67.72.98 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2      1.7   70.70.209.16       AS6327    Shaw Communications (CA)
+    3      2.3   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.6   110.93.252.50      —         TWA (PK)  [registry]
+    5     18.0   110.93.252.224     —         TWA (PK)  [registry]
+    6     18.1   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     20.9   172.67.72.98       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ dunyanews.tv   —   Dunya News  (news)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     202.142.167.148 · Multinet Pakistan Pvt. Ltd. (AS9260) · PK · reached, host replied
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.0   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3      1.3   110.93.197.227     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4      1.4   202.142.160.201    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    5      1.6   125.209.73.226     AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    6      2.1   202.142.167.148    AS9260    Multinet Pakistan Pvt. Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ dunyanews.tv   —   Dunya News  (news)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     202.142.167.148 · Multinet Pakistan Pvt. Ltd. (AS9260) · PK · reached, host replied
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      6.5   100.89.64.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.3   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      2.9   172.31.5.205       —         (private/internal)
+    6     41.8   172.31.5.130       —         (private/internal)
+    7      9.6   172.31.5.198       —         (private/internal)
+    8      7.7   100.64.128.30      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    9      7.9   10.160.160.1       —         (private/internal)
+   10      7.5   202.142.160.201    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   11      8.6   125.209.73.226     AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   12      8.3   202.142.167.148    AS9260    Multinet Pakistan Pvt. Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ dunyanews.tv   —   Dunya News  (news)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     202.142.167.148 · Multinet Pakistan Pvt. Ltd. (AS9260) · PK · reached, host replied
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.9   10.102.76.1        —         (private/internal)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      7.5   202.142.167.148    AS9260    Multinet Pakistan Pvt. Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ dunyanews.tv   —   Dunya News  (news)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     202.142.167.148 · Multinet Pakistan Pvt. Ltd. (AS9260) · PK · reached, host replied
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2     85.4   202.142.167.148    AS9260    Multinet Pakistan Pvt. Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ dunyanews.tv   —   Dunya News  (news)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     202.142.167.148 · Multinet Pakistan Pvt. Ltd. (AS9260) · PK · reached, host replied
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      3.3   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.209.16       AS6327    Shaw Communications (CA)
+    3      2.4   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4      2.8   110.93.197.227     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    5      2.7   202.142.160.201    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    6      4.9   125.209.73.226     AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    7      4.8   202.142.167.148    AS9260    Multinet Pakistan Pvt. Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ express.com.pk   —   Express Tribune  (news)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     172.67.174.102 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Singapore, Central Singapore, SG   (Cloudflare network — this probe's handoff 27.111.228.132; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.1   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     17.9   110.93.254.40      —         TWA (PK)  [registry]
+    4     18.4   110.93.252.246     —         TWA (PK)  [registry]
+    5     98.7   27.111.228.132     —         EQUINIX-AP (SG)  [registry]
+    6    101.6   172.69.117.51      AS13335   Cloudflare, Inc. (US)
+    7     98.4   172.67.174.102     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ express.com.pk   —   Express Tribune  (news)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     172.67.174.102 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      3.7   192.168.18.1       —         (private/internal)
+    2      3.6   100.89.64.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.2   172.27.0.29        —         (private/internal)
+    4      2.4   172.27.0.22        —         (private/internal)
+    5      3.2   172.31.5.253       —         (private/internal)
+    6    150.3   172.31.5.106       —         (private/internal)
+    7      3.9   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.4   172.67.174.102     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ express.com.pk   —   Express Tribune  (news)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     172.67.174.102 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    100.2   172.67.174.102     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ express.com.pk   —   Express Tribune  (news)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     172.67.174.102 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.1   172.17.0.1         —         (private/internal)
+    2    102.9   172.67.174.102     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ express.com.pk   —   Express Tribune  (news)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     172.67.174.102 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Singapore, Central Singapore, SG   (Cloudflare network — this probe's handoff 27.111.228.132; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.8   192.168.100.1      —         (private/internal)
+    2      1.5   70.70.209.16       AS6327    Shaw Communications (CA)
+    3      2.2   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     20.6   110.93.254.40      —         TWA (PK)  [registry]
+    5     35.6   110.93.252.246     —         TWA (PK)  [registry]
+    6     94.7   27.111.228.132     —         EQUINIX-AP (SG)  [registry]
+    7    108.9   172.69.117.49      AS13335   Cloudflare, Inc. (US)
+    8     96.5   172.67.174.102     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ geo.tv   —   Geo TV  (news)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     104.16.218.243 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.1   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.2   110.93.252.48      —         TWA (PK)  [registry]
+    4     19.3   110.93.252.224     —         TWA (PK)  [registry]
+    5     18.3   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     19.4   104.16.218.243     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ geo.tv   —   Geo TV  (news)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     104.16.218.243 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2     15.4   100.89.64.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      4.3   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      4.0   172.31.5.253       —         (private/internal)
+    6    351.4   172.31.5.106       —         (private/internal)
+    7      3.9   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.3   104.16.218.243     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ geo.tv   —   Geo TV  (news)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     104.16.218.243 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     26.9   104.16.218.243     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ geo.tv   —   Geo TV  (news)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     104.16.218.243 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.1   172.17.0.1         —         (private/internal)
+    2     21.2   104.16.218.243     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ geo.tv   —   Geo TV  (news)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     104.16.218.243 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.209.16       AS6327    Shaw Communications (CA)
+    3      2.3   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     20.6   110.93.252.48      —         TWA (PK)  [registry]
+    5     19.9   110.93.252.224     —         TWA (PK)  [registry]
+    6     20.9   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     22.2   104.16.218.243     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ hamariweb.com   —   HamariWeb  (news)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     104.20.40.53 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1     12.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.3   110.93.252.102     —         TWA (PK)  [registry]
+    4     21.5   110.93.252.222     —         TWA (PK)  [registry]
+    5     19.2   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     18.4   104.20.40.53       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ hamariweb.com   —   HamariWeb  (news)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     104.20.40.53 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      3.4   100.89.64.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.4   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      3.2   172.31.5.253       —         (private/internal)
+    6    220.5   172.31.5.106       —         (private/internal)
+    7      4.1   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      2.9   104.20.40.53       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ hamariweb.com   —   HamariWeb  (news)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     104.20.40.53 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     23.3   104.20.40.53       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ hamariweb.com   —   HamariWeb  (news)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     104.20.40.53 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2     89.0   104.20.40.53       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ hamariweb.com   —   HamariWeb  (news)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     104.20.40.53 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.3   192.168.100.1      —         (private/internal)
+    2      1.6   70.70.209.16       AS6327    Shaw Communications (CA)
+    3      2.4   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     22.3   110.93.252.200     —         TWA (PK)  [registry]
+    5     20.7   110.93.252.222     —         TWA (PK)  [registry]
+    6     22.1   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     22.1   104.20.40.53       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ jang.com.pk   —   Jang News  (news)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     104.18.86.101 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.3   110.93.254.144     —         TWA (PK)  [registry]
+    4     18.9   110.93.252.224     —         TWA (PK)  [registry]
+    5     17.1   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     16.4   104.18.86.101      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ jang.com.pk   —   Jang News  (news)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     104.18.86.101 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      2.9   100.89.64.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.2   172.27.0.29        —         (private/internal)
+    4      2.4   172.27.0.22        —         (private/internal)
+    5      3.4   172.31.5.253       —         (private/internal)
+    6    179.7   172.31.5.106       —         (private/internal)
+    7      9.0   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      2.8   104.18.86.101      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ jang.com.pk   —   Jang News  (news)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     104.18.86.101 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     23.8   104.18.86.101      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ jang.com.pk   —   Jang News  (news)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     104.18.86.101 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2     24.7   104.18.86.101      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ jang.com.pk   —   Jang News  (news)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     104.18.86.101 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2      1.8   70.70.209.16       AS6327    Shaw Communications (CA)
+    3      2.1   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     21.1   110.93.254.66      —         TWA (PK)  [registry]
+    5     25.1   110.93.252.222     —         TWA (PK)  [registry]
+    6     19.0   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     18.0   104.18.86.101      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thenews.com.pk   —   The News  (news)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     104.18.83.16 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.1   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     17.8   110.93.254.66      —         TWA (PK)  [registry]
+    4     19.5   110.93.252.222     —         TWA (PK)  [registry]
+    5     17.1   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     18.0   104.18.83.16       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thenews.com.pk   —   The News  (news)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     104.18.83.16 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.18.1       —         (private/internal)
+    2      2.8   100.89.64.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.9   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.253       —         (private/internal)
+    6    127.5   172.31.5.106       —         (private/internal)
+    7      3.8   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      2.7   104.18.83.16       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thenews.com.pk   —   The News  (news)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     104.18.83.16 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     22.9   104.18.83.16       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thenews.com.pk   —   The News  (news)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     104.18.83.16 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.1   172.17.0.1         —         (private/internal)
+    2     23.9   104.18.83.16       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thenews.com.pk   —   The News  (news)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     104.18.83.16 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.3   192.168.100.1      —         (private/internal)
+    2      1.8   70.70.209.16       AS6327    Shaw Communications (CA)
+    3      2.3   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     20.3   110.93.254.38      —         TWA (PK)  [registry]
+    5     19.3   110.93.252.224     —         TWA (PK)  [registry]
+    6     69.1   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     19.4   104.18.83.16       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION

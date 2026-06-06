@@ -11,16 +11,27 @@ The study uses traceroutes launched from Pakistani RIPE Atlas probes to determin
 ## Repository Structure
 
 ```
-scripts/measurement/   Python scripts for launching and processing measurements
-targets/               Input files (website lists, probe lists)
+scripts/measurement/   Python scripts (pk_multi_probe, geo_utils, format_routes)
+data/                  Input files (website list, ISP/FLL list)
 experiments/           One subfolder per experiment with notes and results
-findings/              Summaries and analysis outputs
+findings/              Analysis writeups and the charts notebook
 ```
 
 ## Experiments
 
 - [01 — Website Destinations](experiments/01_website_destinations/notes.md):
-  Traceroutes to Pakistani websites to determine hosting location by ASN and RTT.
+  Traceroutes to Pakistani websites to determine hosting location and routing.
+  Per-run outputs (grouped/summary CSV + readable routes), a full
+  [batch inventory](experiments/01_website_destinations/batch_inventory.md), and a
+  [website list](experiments/01_website_destinations/website_list.md).
+- [02 — ISP Classification](experiments/02_isp_classification/probe_deployment_plan.md):
+  Plan for deploying 20 probes to classify ISPs by PKIX peering status (in progress).
+
+## Findings
+
+- [01 — Hosting & Routing Analysis](findings/01_hosting_and_routing_analysis.md)
+  with the [charts notebook](findings/01_hosting_and_routing.ipynb)
+  (re-run after new batches to refresh every figure).
 
 ## Probe Setup
 

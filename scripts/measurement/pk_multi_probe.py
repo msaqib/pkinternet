@@ -24,10 +24,14 @@ import requests
 import csv
 import time
 import socket
+import sys
 import dns.resolver
 import os
 from datetime import datetime
 from dotenv import load_dotenv
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from geo_utils import serving_location   # actual destination location helper
 
 load_dotenv()
 
@@ -40,7 +44,7 @@ API_KEY        = os.environ.get("RIPE_API_KEY", "your-api-key-here")
 # ── RUN NAME — edit before each run ───────────────────
 # Results will be saved to:
 # experiments/01_website_destinations/results/{RUN_NAME}/
-RUN_NAME       = "run_20260604_batch5"
+RUN_NAME       = "run_20260604_batch11"
 # ─────────────────────────────────────────────────────
 
 # Path to websites list — relative to repo root
@@ -66,7 +70,7 @@ PROBES = [
 #   targets  1-20  →  BATCH_START = 0,  BATCH_SIZE = 20
 #   targets 21-40  →  BATCH_START = 20, BATCH_SIZE = 20
 #   targets 41-end →  BATCH_START = 40, BATCH_SIZE = None
-BATCH_START    = 30
+BATCH_START    = 90
 BATCH_SIZE     = 10
 
 # Wait between probe batches (seconds)
@@ -181,6 +185,45 @@ def asn_name(asn):
     return ""
 
 
+_reg_cache = {}
+
+def registry_lookup(ip):
+    """Fallback for IPs that Team Cymru can't resolve because their prefix is
+    not announced in BGP (e.g. an ISP's internal backbone interfaces).
+
+    Queries RDAP (via the rdap.org redirector → the correct RIR) for the
+    *allocation* record, which exists even when the prefix isn't routed.
+    Returns (prefix, country, name). The numeric origin AS is usually absent
+    from RDAP IP objects, so callers should treat a registry result as an
+    operator/country hint, not a BGP origin — it is left with an empty hop_asn.
+    """
+    if ip in _reg_cache:
+        return _reg_cache[ip]
+    result = ("", "", "")
+    try:
+        r = requests.get(
+            f"https://rdap.org/ip/{ip}",
+            headers={"Accept": "application/rdap+json"},
+            timeout=8,
+        )
+        if r.ok:
+            d = r.json()
+            name    = (d.get("name") or "").strip()
+            country = (d.get("country") or "").strip()
+            prefix  = ""
+            cidrs   = d.get("cidr0_cidrs") or []
+            if cidrs:
+                c = cidrs[0]
+                net = c.get("v4prefix") or c.get("v6prefix")
+                if net:
+                    prefix = f"{net}/{c.get('length', '')}"
+            result = (prefix, country, name)
+    except Exception:
+        pass
+    _reg_cache[ip] = result
+    return result
+
+
 # ─────────────────────────────────────────────────────
 #  STEP 5 — CREATE TRACEROUTE MEASUREMENT
 # ─────────────────────────────────────────────────────
@@ -222,7 +265,8 @@ def wait_for_all(msm_ids, timeout=180):
     Much faster than waiting for each one sequentially.
     """
     pending  = set(msm_ids)
-    done     = set()
+    done     = set()   # reached "Stopped" — has results
+    failed   = set()   # terminal failure (e.g. No suitable probes) — no results
     deadline = time.time() + timeout
 
     print(f"  Polling {len(pending)} measurements", end="", flush=True)
@@ -235,16 +279,22 @@ def wait_for_all(msm_ids, timeout=180):
                     headers=HDR, timeout=10
                 )
                 r.raise_for_status()
-                if r.json().get("status", {}).get("name") == "Stopped":
+                status = r.json().get("status", {})
+                sid, sname = status.get("id", 0), status.get("name", "")
+                # RIPE status ids: <4 = still running (Specified/Scheduled/Ongoing);
+                # >=4 = terminal (4 Stopped, 5 Forced, 6 No suitable probes, 7 Failed).
+                if sid >= 4 or sname == "Stopped":
                     pending.remove(mid)
-                    done.add(mid)
+                    (done if sname == "Stopped" else failed).add(mid)
             except Exception:
                 pass
         if pending:
             print(".", end="", flush=True)
             time.sleep(10)
 
-    print(f" done ({len(done)} completed, {len(pending)} timed out)")
+    if failed:
+        print(f"\n  {len(failed)} measurement(s) failed (e.g. offline probe / no suitable probes) — skipping them")
+    print(f"  done ({len(done)} completed, {len(failed)} failed, {len(pending)} timed out)")
     return done
 
 
@@ -306,6 +356,8 @@ SUMMARY_FIELDS = [
     "target_asn",
     "target_asn_name",
     "target_country",
+    "dest_location",
+    "location_via",
     "destination_responded",
     "total_hops",
     "timeout_hops",
@@ -413,6 +465,13 @@ def flatten(msm_id, probe, target, raw_results):
                 h_asn, h_prefix, h_cc = asn_for_ip(ip)
                 h_name    = asn_name(h_asn) if h_asn else ""
                 is_private = False
+                # BGP had no origin AS (unannounced internal prefix) — fall back
+                # to the RDAP registry allocation for an operator/country hint.
+                if not h_asn:
+                    r_prefix, r_cc, r_name = registry_lookup(ip)
+                    h_prefix = h_prefix or r_prefix
+                    h_cc     = h_cc or r_cc
+                    h_name   = h_name or r_name
 
             if h_asn and h_asn not in all_asns:
                 all_asns.append(h_asn)
@@ -446,6 +505,10 @@ def flatten(msm_id, probe, target, raw_results):
                 "timestamp":             ts,
             })
 
+        # Actual serving location (handoff geolocation for anycast CDNs, server
+        # IP geolocation for unicast) — not the ASN's registration country.
+        dest_location, location_via = serving_location(hop_rows, t_asn or "", t_ip)
+
         sum_row = {
             "measurement_id":       msm_id,
             "probe_id":             probe["probe_id"],
@@ -458,6 +521,8 @@ def flatten(msm_id, probe, target, raw_results):
             "target_asn":           t_asn or "",
             "target_asn_name":      t_name,
             "target_country":       t_cc,
+            "dest_location":        dest_location,
+            "location_via":         location_via,
             "destination_responded":responded,
             "total_hops":           real_count,
             "timeout_hops":         tmout_count,
@@ -591,13 +656,25 @@ def main():
     all_msm_ids = [mid for mid, _, _ in scheduled]
     completed   = wait_for_all(all_msm_ids, RESULT_TIMEOUT)
 
-    # Fetch and process all results
-    print(f"\n[5b] Fetching results...")
+    # Fetch and process results — ONLY for measurements that actually completed.
+    # Failed ones (e.g. a disconnected probe → "No suitable probes") have no
+    # results; skipping them avoids slow empty fetches and keeps the output a
+    # faithful record of the measurements that really ran.
+    skipped = [(mid, p, t) for mid, p, t in scheduled if mid not in completed]
+    if skipped:
+        print(f"\n  Skipping {len(skipped)} measurement(s) with no results "
+              f"(disconnected probe / no suitable probes):")
+        for _mid, p, t in skipped:
+            print(f"    Probe {p['probe_id']} -> {t['label']}")
+
+    print(f"\n[5b] Fetching results for {len(completed)} completed measurement(s)...")
     all_hop_rows = []
     all_grouped  = []
     all_summaries= []
 
     for msm_id, probe, t in scheduled:
+        if msm_id not in completed:
+            continue   # failed/incomplete — nothing to fetch
         print(f"  Probe {probe['probe_id']} -> {t['label']}", end="")
         try:
             raw = fetch_result(msm_id)
@@ -608,8 +685,6 @@ def main():
             all_grouped.extend(grouped_rows)
             if sum_row:
                 all_summaries.append(sum_row)
-
-
 
         except Exception as e:
             print(f" ERROR: {e}")
@@ -623,20 +698,35 @@ def main():
         x["probe_id"],
         x["hop"] or 0
     ))
-    with open(GROUPED_FILE, "w", newline="") as f:
+    with open(GROUPED_FILE, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=GROUPED_FIELDS)
         writer.writeheader()
         writer.writerows(all_grouped)
     print(f"  Grouped CSV → {GROUPED_FILE}")
 
-    with open(SUMMARY_FILE, "w", newline="") as f:
+    with open(SUMMARY_FILE, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=SUMMARY_FIELDS)
         writer.writeheader()
         writer.writerows(all_summaries)
     print(f"  Summary CSV → {SUMMARY_FILE}")
 
+    # [6b] Generate the readable per-trace route report (best-effort).
+    # Hop ASNs are already enriched live above via registry_lookup(), so this
+    # just renders the grouped CSV into routes_*.txt. A failure here must not
+    # lose the measurement data, hence the try/except.
+    try:
+        import sys
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from format_routes import format_file as _format_routes
+        routes_path = _format_routes(GROUPED_FILE)
+        print(f"  Readable routes → {routes_path}")
+    except Exception as e:
+        print(f"  (skipped readable routes — run format_routes.py manually: {e})")
 
-    print(f"\n  Total measurements : {len(scheduled)}")
+
+    print(f"\n  Scheduled          : {len(scheduled)}")
+    print(f"  Completed (in CSV) : {len(all_summaries)}")
+    print(f"  Skipped (no result): {len(skipped)}")
     print(f"  Total hop rows     : {len(all_hop_rows)}")
     print("=" * 60)
 
