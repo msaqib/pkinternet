@@ -1,0 +1,72 @@
+DNS resolution per ISP  -  run_20260606_dns_batch8
+Each probe resolved the name via its own ISP resolver.
+
+============================================================
+ brain.net.pk   (telecom)
+   Nayatel (AS23674)      5.161.30.49
+   Transworld (AS38193)   5.161.30.49
+   Z-Com (AS152605)       5.161.30.49
+   => same IP from all responding ISPs
+
+============================================================
+ lums.edu.pk   (education)
+   Nayatel (AS23674)      110.93.234.24; 111.68.103.174; 203.135.62.24
+   Transworld (AS38193)   10.99.0.24
+   Z-Com (AS152605)       110.93.234.24; 111.68.103.174; 203.135.62.24
+   => DIFFERENT IPs per ISP (GeoDNS)
+
+============================================================
+ nayatel.com   (telecom)
+   Nayatel (AS23674)      124.109.50.84
+   Transworld (AS38193)   203.82.48.231
+   Z-Com (AS152605)       188.166.22.60; 203.82.48.231
+   => DIFFERENT IPs per ISP (GeoDNS)
+
+============================================================
+ nexlinx.net.pk   (telecom)
+   Nayatel (AS23674)      202.59.80.26
+   Transworld (AS38193)   202.59.80.26
+   Z-Com (AS152605)       202.59.80.26
+   => same IP from all responding ISPs
+
+============================================================
+ nust.edu.pk   (education)
+   Nayatel (AS23674)      104.26.2.7; 104.26.3.7; 172.67.68.211
+   Transworld (AS38193)   104.26.2.7; 104.26.3.7; 172.67.68.211
+   Z-Com (AS152605)       104.26.2.7; 104.26.3.7; 172.67.68.211
+   => same IP from all responding ISPs
+
+============================================================
+ pu.edu.pk   (education)
+   Nayatel (AS23674)      111.68.103.27
+   Transworld (AS38193)   111.68.103.27
+   Z-Com (AS152605)       111.68.103.27
+   => same IP from all responding ISPs
+
+============================================================
+ stormfiber.com   (telecom)
+   Nayatel (AS23674)      203.101.172.139
+   Transworld (AS38193)   203.101.172.139
+   Z-Com (AS152605)       203.101.172.139
+   => same IP from all responding ISPs
+
+============================================================
+ supernet.com.pk   (telecom)
+   Nayatel (AS23674)      (no A record)
+   Transworld (AS38193)   (no A record)
+   Z-Com (AS152605)       (no A record)
+   => same IP from all responding ISPs
+
+============================================================
+ wateen.com   (telecom)
+   Nayatel (AS23674)      91.108.117.126
+   Transworld (AS38193)   91.108.117.126
+   Z-Com (AS152605)       91.108.117.126
+   => same IP from all responding ISPs
+
+============================================================
+ zong.com.pk   (telecom)
+   Nayatel (AS23674)      148.72.244.140
+   Transworld (AS38193)   148.72.244.140
+   Z-Com (AS152605)       148.72.244.140
+   => same IP from all responding ISPs

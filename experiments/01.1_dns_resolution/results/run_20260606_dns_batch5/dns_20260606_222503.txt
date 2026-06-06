@@ -1,0 +1,72 @@
+DNS resolution per ISP  -  run_20260606_dns_batch5
+Each probe resolved the name via its own ISP resolver.
+
+============================================================
+ 1bill.com.pk   (banking)
+   Nayatel (AS23674)      (no A record)
+   Transworld (AS38193)   (no A record)
+   Z-Com (AS152605)       (no A record)
+   => same IP from all responding ISPs
+
+============================================================
+ askaribank.com.pk   (banking)
+   Nayatel (AS23674)      104.18.2.57; 104.18.3.57
+   Transworld (AS38193)   104.18.2.57; 104.18.3.57
+   Z-Com (AS152605)       104.18.2.57; 104.18.3.57
+   => same IP from all responding ISPs
+
+============================================================
+ bankalfalah.com   (banking)
+   Nayatel (AS23674)      40.120.122.192
+   Transworld (AS38193)   40.120.122.192
+   Z-Com (AS152605)       40.120.122.192
+   => same IP from all responding ISPs
+
+============================================================
+ bankislami.com.pk   (banking)
+   Nayatel (AS23674)      104.18.28.162; 104.18.29.162
+   Transworld (AS38193)   104.18.28.162; 104.18.29.162
+   Z-Com (AS152605)       104.18.28.162; 104.18.29.162
+   => same IP from all responding ISPs
+
+============================================================
+ easypaisa.com.pk   (banking)
+   Nayatel (AS23674)      18.142.75.3
+   Transworld (AS38193)   18.142.75.3
+   Z-Com (AS152605)       18.142.75.3
+   => same IP from all responding ISPs
+
+============================================================
+ jazzcash.com.pk   (banking)
+   Nayatel (AS23674)      104.26.0.79; 104.26.1.79; 172.67.70.2
+   Transworld (AS38193)   104.26.0.79; 104.26.1.79; 172.67.70.2
+   Z-Com (AS152605)       104.26.0.79; 104.26.1.79; 172.67.70.2
+   => same IP from all responding ISPs
+
+============================================================
+ meezanbank.com   (banking)
+   Nayatel (AS23674)      104.18.0.183; 104.18.1.183
+   Transworld (AS38193)   104.18.0.183; 104.18.1.183
+   Z-Com (AS152605)       104.18.0.183; 104.18.1.183
+   => same IP from all responding ISPs
+
+============================================================
+ nayapay.com   (banking)
+   Nayatel (AS23674)      104.20.21.218; 172.66.158.161
+   Transworld (AS38193)   104.20.21.218; 172.66.158.161
+   Z-Com (AS152605)       104.20.21.218; 172.66.158.161
+   => same IP from all responding ISPs
+
+============================================================
+ sadapay.com   (banking)
+   Nayatel (AS23674)      198.202.211.1
+   Transworld (AS38193)   198.202.211.1
+   Z-Com (AS152605)       198.202.211.1
+   => same IP from all responding ISPs
+
+============================================================
+ ubldigital.com   (banking)
+   Nayatel (AS23674)      103.8.14.50
+   Transworld (AS38193)   103.8.14.50
+   Z-Com (AS152605)       103.8.14.50
+   => same IP from all responding ISPs

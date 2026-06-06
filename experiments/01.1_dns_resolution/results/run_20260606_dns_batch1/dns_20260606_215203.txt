@@ -1,0 +1,72 @@
+DNS resolution per ISP  -  run_20260606_dns_batch1
+Each probe resolved the name via its own ISP resolver.
+
+============================================================
+ balochistan.gov.pk   (government)
+   Nayatel (AS23674)      129.121.85.241
+   Transworld (AS38193)   129.121.85.241
+   Z-Com (AS152605)       129.121.85.241
+   => same IP from all responding ISPs
+
+============================================================
+ fbr.gov.pk   (government)
+   Nayatel (AS23674)      103.125.60.60
+   Transworld (AS38193)   103.125.60.60
+   Z-Com (AS152605)       103.125.60.60
+   => same IP from all responding ISPs
+
+============================================================
+ hec.gov.pk   (government)
+   Nayatel (AS23674)      111.68.100.163
+   Transworld (AS38193)   111.68.100.163
+   Z-Com (AS152605)       111.68.100.163
+   => same IP from all responding ISPs
+
+============================================================
+ kp.gov.pk   (government)
+   Nayatel (AS23674)      175.107.63.150
+   Transworld (AS38193)   175.107.63.150
+   Z-Com (AS152605)       175.107.63.150
+   => same IP from all responding ISPs
+
+============================================================
+ nadra.gov.pk   (government)
+   Nayatel (AS23674)      23.206.197.50; 23.206.197.72
+   Transworld (AS38193)   2.19.193.138; 2.19.193.169
+   Z-Com (AS152605)       2.23.84.10; 2.23.84.46; 23.48.214.75; 23.48.214.80
+   => DIFFERENT IPs per ISP (GeoDNS)
+
+============================================================
+ pakistan.gov.pk   (government)
+   Nayatel (AS23674)      203.101.184.84
+   Transworld (AS38193)   203.101.184.84
+   Z-Com (AS152605)       203.101.184.84
+   => same IP from all responding ISPs
+
+============================================================
+ pta.gov.pk   (government)
+   Nayatel (AS23674)      175.107.60.231
+   Transworld (AS38193)   175.107.60.231
+   Z-Com (AS152605)       175.107.60.231
+   => same IP from all responding ISPs
+
+============================================================
+ punjab.gov.pk   (government)
+   Nayatel (AS23674)      103.226.216.120
+   Transworld (AS38193)   103.226.216.120
+   Z-Com (AS152605)       103.226.216.120
+   => same IP from all responding ISPs
+
+============================================================
+ secp.gov.pk   (government)
+   Nayatel (AS23674)      104.20.33.223; 172.66.157.118
+   Transworld (AS38193)   104.20.33.223; 172.66.157.118
+   Z-Com (AS152605)       104.20.33.223; 172.66.157.118
+   => same IP from all responding ISPs
+
+============================================================
+ sindh.gov.pk   (government)
+   Nayatel (AS23674)      175.107.33.163
+   Transworld (AS38193)   175.107.33.163
+   Z-Com (AS152605)       175.107.33.163
+   => same IP from all responding ISPs

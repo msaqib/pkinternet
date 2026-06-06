@@ -1,0 +1,72 @@
+DNS resolution per ISP  -  run_20260606_dns_batch10
+Each probe resolved the name via its own ISP resolver.
+
+============================================================
+ bykea.com   (food)
+   Nayatel (AS23674)      104.21.59.53; 172.67.214.144
+   Transworld (AS38193)   104.21.59.53; 172.67.214.144
+   Z-Com (AS152605)       188.114.96.6; 188.114.96.7; 188.114.97.6; 188.114.97.7
+   => DIFFERENT IPs per ISP (GeoDNS)
+
+============================================================
+ cheetay.pk   (food)
+   Nayatel (AS23674)      (no A record)
+   Transworld (AS38193)   (no A record)
+   Z-Com (AS152605)       (no A record)
+   => same IP from all responding ISPs
+
+============================================================
+ dawaaidawa.com   (health)
+   Nayatel (AS23674)      (no A record)
+   Transworld (AS38193)   (no A record)
+   Z-Com (AS152605)       (no A record)
+   => same IP from all responding ISPs
+
+============================================================
+ foodpanda.pk   (food)
+   Nayatel (AS23674)      104.18.33.30; 172.64.154.226
+   Transworld (AS38193)   104.18.33.30; 172.64.154.226
+   Z-Com (AS152605)       104.18.33.30; 172.64.154.226
+   => same IP from all responding ISPs
+
+============================================================
+ gharbaar.com   (real_estate)
+   Nayatel (AS23674)      15.206.219.50; 43.204.181.126
+   Transworld (AS38193)   15.206.219.50; 43.204.181.126
+   Z-Com (AS152605)       15.206.219.50; 43.204.181.126
+   => same IP from all responding ISPs
+
+============================================================
+ hum.tv   (entertainment)
+   Nayatel (AS23674)      20.74.192.6
+   Transworld (AS38193)   20.74.192.6
+   Z-Com (AS152605)       20.74.192.6
+   => same IP from all responding ISPs
+
+============================================================
+ lamudi.pk   (real_estate)
+   Nayatel (AS23674)      (no A record)
+   Transworld (AS38193)   (no A record)
+   Z-Com (AS152605)       (no A record)
+   => same IP from all responding ISPs
+
+============================================================
+ oladoc.com   (health)
+   Nayatel (AS23674)      104.26.12.63; 104.26.13.63; 172.67.68.42
+   Transworld (AS38193)   104.26.12.63; 104.26.13.63; 172.67.68.42
+   Z-Com (AS152605)       104.26.12.63; 104.26.13.63; 172.67.68.42
+   => same IP from all responding ISPs
+
+============================================================
+ sehat.com.pk   (health)
+   Nayatel (AS23674)      104.21.57.219; 172.67.192.115
+   Transworld (AS38193)   104.21.57.219; 172.67.192.115
+   Z-Com (AS152605)       104.21.57.219; 172.67.192.115
+   => same IP from all responding ISPs
+
+============================================================
+ shifa.com.pk   (health)
+   Nayatel (AS23674)      104.26.14.111; 104.26.15.111; 172.67.68.27
+   Transworld (AS38193)   104.26.14.111; 104.26.15.111; 172.67.68.27
+   Z-Com (AS152605)       104.26.14.111; 104.26.15.111; 172.67.68.27
+   => same IP from all responding ISPs

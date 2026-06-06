@@ -1,0 +1,23 @@
+DNS resolution per ISP  -  run_20260606_dns_batch11
+Each probe resolved the name via its own ISP resolver.
+
+============================================================
+ aplus.tv   (entertainment)
+   Nayatel (AS23674)      (no A record)
+   Transworld (AS38193)   (no A record)
+   Z-Com (AS152605)       (no A record)
+   => same IP from all responding ISPs
+
+============================================================
+ dramas.online   (entertainment)
+   Nayatel (AS23674)      15.197.204.56; 3.33.243.145
+   Transworld (AS38193)   15.197.204.56; 3.33.243.145
+   Z-Com (AS152605)       15.197.204.56; 3.33.243.145
+   => same IP from all responding ISPs
+
+============================================================
+ paktv.tv   (entertainment)
+   Nayatel (AS23674)      185.151.30.207
+   Transworld (AS38193)   185.151.30.207
+   Z-Com (AS152605)       185.151.30.207
+   => same IP from all responding ISPs

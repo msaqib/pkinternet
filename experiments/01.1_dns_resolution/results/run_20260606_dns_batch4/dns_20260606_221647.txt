@@ -1,0 +1,72 @@
+DNS resolution per ISP  -  run_20260606_dns_batch4
+Each probe resolved the name via its own ISP resolver.
+
+============================================================
+ 24newshd.tv   (news)
+   Nayatel (AS23674)      65.21.69.178
+   Transworld (AS38193)   65.21.69.178
+   Z-Com (AS152605)       65.21.69.178
+   => same IP from all responding ISPs
+
+============================================================
+ businessrecorder.com   (news)
+   Nayatel (AS23674)      (no A record)
+   Transworld (AS38193)   (no A record)
+   Z-Com (AS152605)       (no A record)
+   => same IP from all responding ISPs
+
+============================================================
+ dailypakistan.com.pk   (news)
+   Nayatel (AS23674)      65.109.77.254
+   Transworld (AS38193)   65.109.77.254
+   Z-Com (AS152605)       65.109.77.254
+   => same IP from all responding ISPs
+
+============================================================
+ hbl.com   (banking)
+   Nayatel (AS23674)      45.60.109.176; 45.60.73.176
+   Transworld (AS38193)   45.60.109.176; 45.60.73.176
+   Z-Com (AS152605)       45.60.109.176; 45.60.73.176
+   => same IP from all responding ISPs
+
+============================================================
+ mcb.com.pk   (banking)
+   Nayatel (AS23674)      192.124.249.159
+   Transworld (AS38193)   192.124.249.159
+   Z-Com (AS152605)       192.124.249.159
+   => same IP from all responding ISPs
+
+============================================================
+ nawaiwaqt.com.pk   (news)
+   Nayatel (AS23674)      65.109.88.147
+   Transworld (AS38193)   65.109.88.147
+   Z-Com (AS152605)       65.109.88.147
+   => same IP from all responding ISPs
+
+============================================================
+ propakistani.pk   (news)
+   Nayatel (AS23674)      104.26.12.229; 104.26.13.229; 172.67.71.114
+   Transworld (AS38193)   104.26.12.229; 104.26.13.229; 172.67.71.114
+   Z-Com (AS152605)       104.26.12.229; 104.26.13.229; 172.67.71.114
+   => same IP from all responding ISPs
+
+============================================================
+ such.tv   (news)
+   Nayatel (AS23674)      13.248.169.48; 76.223.54.146
+   Transworld (AS38193)   13.248.169.48; 76.223.54.146
+   Z-Com (AS152605)       13.248.169.48; 76.223.54.146
+   => same IP from all responding ISPs
+
+============================================================
+ tribune.com.pk   (news)
+   Nayatel (AS23674)      104.18.193.13; 104.18.194.13
+   Transworld (AS38193)   104.18.193.13; 104.18.194.13
+   Z-Com (AS152605)       104.18.193.13; 104.18.194.13
+   => same IP from all responding ISPs
+
+============================================================
+ urdupoint.com   (news)
+   Nayatel (AS23674)      104.26.6.27; 104.26.7.27; 172.67.68.78
+   Transworld (AS38193)   104.26.6.27; 104.26.7.27; 172.67.68.78
+   Z-Com (AS152605)       104.26.6.27; 104.26.7.27; 172.67.68.78
+   => same IP from all responding ISPs

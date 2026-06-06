@@ -25,11 +25,14 @@ Five RIPE Atlas probes, one per major Pakistani access network:
 
 | Probe ID | ASN    | Operator                    |
 |----------|--------|-----------------------------|
-| 1015679  | 136174 | Transworld (LocalInternetProj) |
+| 1015679  | 136174 | TPCPL / Nova (transits Transworld) |
 | 1015210  | 17557  | PTCL                        |
 | 62224    | 38193  | Transworld (Zartash-Office) |
 | 60223    | 23674  | Nayatel                     |
 | 7613     | 152605 | Z-Com Networks              |
+
+Note: AS136174 (TPCPL / Nova) is a distinct *access* ISP that buys transit from
+Transworld (AS38193); it is not Transworld itself. Earlier labels conflated the two.
 
 Measuring from multiple ISPs is the point: the same destination is often reached
 **differently per ISP**, which is where the routing-inefficiency findings come
@@ -205,6 +208,17 @@ These are the firmest results and don't depend on noisy RTT:
   handoff+RTT > IP geolocation of an anycast IP (worst)**.
 - **RTT guide (from PK):** < 50 ms → likely stayed in Pakistan; > 100 ms → almost
   certainly exited.
+- **DNS was resolved centrally, once, not per probe.** Each hostname was resolved
+  on the machine running the script (`socket.gethostbyname`) and that single IP was
+  sent to all probes. This is fine for the hosting-country goal of real-server
+  sites (same IP from everywhere) and for anycast CDNs (same IP; only the path
+  differs). It can misrepresent **GeoDNS** sites (e.g. Akamai), which hand
+  different IPs — possibly in different countries — to different ISPs. Validity
+  also assumes the resolving machine was **in Pakistan** (representative of a PK
+  user); a foreign/VPN resolver would skew the GeoDNS subset only. **Experiment
+  1.1** measures this properly by resolving from each probe's own ISP, and found
+  the difference is confined to a few GeoDNS sites (e.g. `nadra.gov.pk`), not
+  pervasive. See `experiments/01.1_dns_resolution/`.
 
 ## Measurement IDs
 

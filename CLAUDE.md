@@ -50,11 +50,42 @@ submarine-cable cuts.
 
 | Path | Purpose |
 |------|---------|
-| `scripts/measurement/pk_multi_probe.py` | Main measurement + analysis script |
+| `scripts/measurement/pk_multi_probe.py` | Main measurement + analysis script (Exp 01) |
 | `data/pk_websites_list.csv` | Input: 100 Pakistani websites across 10 categories |
 | `data/pk_isp_fll_list.csv` | PTA FLL licensee list (77 unique ISPs, deduped) |
-| `experiments/01_website_destinations/notes.md` | Experiment log |
-| `experiments/01_website_destinations/results/` | Output CSVs, one subfolder per run |
+| `data/pk_cdn_targets.csv` | Input: CDN/content services to test for in-PK caches (Exp 1.2) |
+| `experiments/01_website_destinations/` | Exp 01: website hosting/routing (notes, results, inventory, site list) |
+| `experiments/01.1_dns_resolution/` | Exp 1.1: per-ISP DNS resolution (`dns_check.py`) |
+| `experiments/01.2_cdn_presence/` | Exp 1.2: CDN/cache presence in PK (`cdn_check.py`) |
+| `experiments/02_isp_classification/` | Exp 02: 20-probe deployment plan (PKIX set classification) |
+| `findings/` | Analysis writeups (01, 01.1) + charts notebook |
+
+---
+
+## Spin-off experiments 1.1 and 1.2
+
+Both reuse Exp 01's probe list / helpers by **importing** from `pk_multi_probe.py`
+(read-only — they do not modify it), and skip offline probes via an
+`OFFLINE_PROBES` set (PTCL 1015210, TPCPL 1015679 were down during these runs).
+
+- **Exp 1.1 - per-ISP DNS** (`experiments/01.1_dns_resolution/dns_check.py`):
+  RIPE Atlas DNS A-record lookups with `use_probe_resolver=True`, so each probe
+  resolves via its own ISP. Addresses the Exp 01 limitation of resolving DNS
+  centrally. **Result: only 8 of 103 sites (~8%) returned different IPs per ISP
+  (GeoDNS); ~92% identical.** Most of the 8 are just different edges of the same
+  CDN; two are notable (`lums.edu.pk` split-DNS private IP on Transworld;
+  `nayatel.com` foreign IP on Z-Com). So Exp 01's central resolution was fine for
+  the vast majority. See `findings/01.1_dns_resolution_analysis.md`.
+
+- **Exp 1.2 - CDN/cache presence** (`experiments/01.2_cdn_presence/cdn_check.py`):
+  PINGs major content services (Netflix, Google, Meta, Akamai, Cloudflare, ...)
+  from each probe with `resolve_on_probe=True`; the resolved IP + RTT reveal a
+  local cache. Verdict per (service, probe): PK-local (<15 ms) / regional
+  (<50 ms) / abroad. **Early result (3 probes): most big content is reached
+  "regional" (~20-50 ms, Gulf/region), not from inside Pakistan; only Cloudflare
+  and X were PK-local, and only via Nayatel.** Caveat: the ISPs that reportedly
+  host embedded caches (Optix, StormFiber, Telenor, ...) are not among our probes,
+  so this undercounts - ties into Exp 02.
 
 ---
 
@@ -116,7 +147,7 @@ Probes are manually specified in the `PROBES` list at the top of
 Current probes:
 ```python
 PROBES = [
-    (1015679, 136174, "Pakistan", "LocalInternetProj01 (TPCPL/Nova/Transworld)"),
+    (1015679, 136174, "Pakistan", "LocalInternetProj01 (TPCPL/Nova, transits Transworld)"),
     (1015210,  17557, "Pakistan", "AS17557 (PTCL)"),
     (  62224,  38193, "Pakistan", "Zartash-Office (Transworld)"),
     (  60223,  23674, "Pakistan", "PK_Inara (Nayatel)"),

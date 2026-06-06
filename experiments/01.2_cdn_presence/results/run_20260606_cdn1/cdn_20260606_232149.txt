@@ -1,0 +1,142 @@
+CDN / cache presence in Pakistan  -  run_20260606_cdn1
+Per service: where each PK ISP reaches it. PK-local (<15 ms) = cache inside Pakistan.
+
+================================================================
+ amazon.com   (Amazon / ecommerce)
+   60223       98.87.170.71       -1 ms  no reply  AMAZON-02 (US)
+   62224       98.82.161.185      -1 ms  no reply  AMAZON-02 (US)
+   7613        98.87.170.74       -1 ms  no reply  AMAZON-02 (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ apple.com   (Apple / software)
+   60223       17.253.144.10     146 ms  abroad    APPLE-ENGINEERING (US)
+   62224       17.253.144.10     280 ms  abroad    APPLE-ENGINEERING (US)
+   7613        17.253.144.10     271 ms  abroad    APPLE-ENGINEERING (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ bing.com   (Microsoft / search)
+   60223       150.171.28.10      44 ms  regional  MICROSOFT-CORP-MSN-AS-BL (US)
+   62224       150.171.27.10      48 ms  regional  MICROSOFT-CORP-MSN-AS-BL (US)
+   7613        150.171.27.10     112 ms  abroad    MICROSOFT-CORP-MSN-AS-BL (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ cloudflare.com   (Cloudflare / cdn)
+   60223       104.16.133.229      3 ms  PK-local  CLOUDFLARENET (US)
+   62224       104.16.133.229     25 ms  regional  CLOUDFLARENET (US)
+   7613        104.16.132.229     16 ms  regional  CLOUDFLARENET (US)
+   => PK-local cache (seen by 1/3 ISPs)
+
+================================================================
+ facebook.com   (Meta / social)
+   60223       57.144.148.1       38 ms  regional  FACEBOOK (IE)
+   62224       157.240.227.35     38 ms  regional  FACEBOOK (US)
+   7613        157.240.227.35     27 ms  regional  FACEBOOK (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ fast.com   (Netflix / streaming)
+   60223       23.12.143.201     130 ms  abroad    SEABONE-NET (US)
+   62224       104.102.35.193    140 ms  abroad    AKAMAI-AS (US)
+   7613        72.247.209.121    123 ms  abroad    AKAMAI-AS (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ github.com   (Fastly / software)
+   60223       20.207.73.82      110 ms  abroad    MICROSOFT-CORP-MSN-AS-BL (US)
+   62224       20.207.73.82      108 ms  abroad    MICROSOFT-CORP-MSN-AS-BL (US)
+   7613        20.207.73.82      277 ms  abroad    MICROSOFT-CORP-MSN-AS-BL (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ google.com   (Google / search)
+   60223       142.250.187.46     38 ms  regional  GOOGLE (US)
+   62224       142.251.221.238   323 ms  abroad    GOOGLE (US)
+   7613        142.250.202.142    30 ms  regional  GOOGLE (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ googlevideo.com   (Google / video)
+   60223       142.250.202.100    38 ms  regional  GOOGLE (US)
+   62224       142.251.222.100   324 ms  abroad    GOOGLE (US)
+   7613        142.250.187.68     29 ms  regional  GOOGLE (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ instagram.com   (Meta / social)
+   60223       57.144.148.34      37 ms  regional  FACEBOOK (IE)
+   62224       157.240.227.174    33 ms  regional  FACEBOOK (US)
+   7613        157.240.227.174    30 ms  regional  FACEBOOK (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ linkedin.com   (Microsoft / social)
+   60223       150.171.22.12      42 ms  regional  MICROSOFT-CORP-MSN-AS-BL (US)
+   62224       150.171.22.12     105 ms  abroad    MICROSOFT-CORP-MSN-AS-BL (US)
+   7613        150.171.22.12     124 ms  abroad    MICROSOFT-CORP-MSN-AS-BL (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ microsoft.com   (Microsoft / software)
+   60223       150.171.109.163    -1 ms  no reply  MICROSOFT-CORP-MSN-AS-BL (US)
+   62224       150.171.109.163    -1 ms  no reply  MICROSOFT-CORP-MSN-AS-BL (US)
+   7613        150.171.109.163    -1 ms  no reply  MICROSOFT-CORP-MSN-AS-BL (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ netflix.com   (Netflix / streaming)
+   60223       54.170.196.176     -1 ms  no reply  AMAZON-02 (US)
+   62224       18.200.8.190       -1 ms  no reply  AMAZON-02 (US)
+   7613        3.251.50.149       -1 ms  no reply  AMAZON-02 (US)
+   => no local cache detected (served regional/abroad)
+1
+================================================================
+ reddit.com   (Fastly / social)
+   60223       151.101.193.140    38 ms  regional  FASTLY (US)
+   62224       151.101.65.140     37 ms  regional  FASTLY (US)
+   7613        151.101.1.140      28 ms  regional  FASTLY (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ spotify.com   (Spotify / music)
+   60223       35.186.224.24      36 ms  regional  GOOGLE-CLOUD-PLATFORM (US)
+   62224       35.186.224.24      38 ms  regional  GOOGLE-CLOUD-PLATFORM (US)
+   7613        35.186.224.24      29 ms  regional  GOOGLE-CLOUD-PLATFORM (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ tiktok.com   (TikTok / social)
+   60223       104.88.70.107      97 ms  abroad    AKAMAI-ASN1 (US)
+   62224       23.209.46.148      99 ms  abroad    AKAMAI-ASN1 (US)
+   7613        95.100.170.147     32 ms  regional  AKAMAI-ASN1 (NL)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ whatsapp.com   (Meta / social)
+   60223       157.240.227.60     37 ms  regional  FACEBOOK (US)
+   62224       157.240.227.60     38 ms  regional  FACEBOOK (US)
+   7613        157.240.227.60     31 ms  regional  FACEBOOK (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ wikipedia.org   (Wikimedia / reference)
+   60223       103.102.166.224    99 ms  abroad    WIKIMEDIA (US)
+   62224       103.102.166.224    98 ms  abroad    WIKIMEDIA (US)
+   7613        103.102.166.224    91 ms  abroad    WIKIMEDIA (US)
+   => no local cache detected (served regional/abroad)
+
+================================================================
+ x.com   (X/Twitter / social)
+   60223       172.66.0.227        4 ms  PK-local  CLOUDFLARENET (US)
+   62224       162.159.140.229    24 ms  regional  CLOUDFLARENET (US)
+   7613        151.101.2.146      29 ms  regional  FASTLY (US)
+   => PK-local cache (seen by 1/3 ISPs)
+
+================================================================
+ youtube.com   (Google / video)
+   60223       142.250.202.14     41 ms  regional  GOOGLE (US)
+   62224       216.58.203.46     325 ms  abroad    GOOGLE (US)
+   7613        142.250.200.174    30 ms  regional  GOOGLE (US)
+   => no local cache detected (served regional/abroad)

@@ -1,0 +1,25 @@
+# hostname, provider (expected/known CDN), category
+# Targets to test for an in-Pakistan cache/PoP. The provider column is the
+# hypothesis; the measurement (resolved IP ASN + RTT from PK probes) decides.
+fast.com,Netflix,streaming
+netflix.com,Netflix,streaming
+youtube.com,Google,video
+google.com,Google,search
+googlevideo.com,Google,video
+facebook.com,Meta,social
+instagram.com,Meta,social
+whatsapp.com,Meta,social
+tiktok.com,TikTok,social
+microsoft.com,Microsoft,software
+windowsupdate.com,Microsoft,software
+apple.com,Apple,software
+amazon.com,Amazon,ecommerce
+cloudflare.com,Cloudflare,cdn
+one.one.one.one,Cloudflare,cdn
+github.com,Fastly,software
+reddit.com,Fastly,social
+wikipedia.org,Wikimedia,reference
+x.com,X/Twitter,social
+linkedin.com,Microsoft,social
+spotify.com,Spotify,music
+bing.com,Microsoft,search

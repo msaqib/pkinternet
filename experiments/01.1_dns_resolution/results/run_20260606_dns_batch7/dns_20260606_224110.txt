@@ -1,0 +1,72 @@
+DNS resolution per ISP  -  run_20260606_dns_batch7
+Each probe resolved the name via its own ISP resolver.
+
+============================================================
+ alfatah.com.pk   (ecommerce)
+   Nayatel (AS23674)      46.202.136.217
+   Transworld (AS38193)   46.202.136.217
+   Z-Com (AS152605)       46.202.136.217
+   => same IP from all responding ISPs
+
+============================================================
+ gulahmedshop.com   (ecommerce)
+   Nayatel (AS23674)      23.227.38.65
+   Transworld (AS38193)   23.227.38.65
+   Z-Com (AS152605)       23.227.38.65
+   => same IP from all responding ISPs
+
+============================================================
+ ishopping.pk   (ecommerce)
+   Nayatel (AS23674)      104.20.47.188; 172.66.149.222
+   Transworld (AS38193)   104.20.47.188; 172.66.149.222; 188.114.96.6; 188.114.97.6
+   Z-Com (AS152605)       188.114.96.6; 188.114.96.7; 188.114.97.6; 188.114.97.7
+   => DIFFERENT IPs per ISP (GeoDNS)
+
+============================================================
+ jazz.com.pk   (telecom)
+   Nayatel (AS23674)      104.20.42.250; 172.66.168.19
+   Transworld (AS38193)   104.20.42.250; 172.66.168.19
+   Z-Com (AS152605)       104.20.42.250; 172.66.168.19
+   => same IP from all responding ISPs
+
+============================================================
+ khaadi.com   (ecommerce)
+   Nayatel (AS23674)      3.160.77.120; 3.160.77.15; 3.160.77.47; 3.160.77.54
+   Transworld (AS38193)   3.160.77.120; 3.160.77.15; 3.160.77.47; 3.160.77.54
+   Z-Com (AS152605)       18.66.78.124; 18.66.78.46; 18.66.78.8; 18.66.78.83; 65.9.168.3; 65.9.168.34; 65.9.168.42; 65.9.168.98
+   => DIFFERENT IPs per ISP (GeoDNS)
+
+============================================================
+ outfitters.com.pk   (ecommerce)
+   Nayatel (AS23674)      23.227.38.32
+   Transworld (AS38193)   23.227.38.32
+   Z-Com (AS152605)       23.227.38.32
+   => same IP from all responding ISPs
+
+============================================================
+ ptcl.com.pk   (telecom)
+   Nayatel (AS23674)      221.120.226.61
+   Transworld (AS38193)   221.120.226.61
+   Z-Com (AS152605)       221.120.226.61
+   => same IP from all responding ISPs
+
+============================================================
+ sapphireonline.pk   (ecommerce)
+   Nayatel (AS23674)      64.68.202.16
+   Transworld (AS38193)   64.68.202.16
+   Z-Com (AS152605)       64.68.202.16
+   => same IP from all responding ISPs
+
+============================================================
+ sargodha.com   (ecommerce)
+   Nayatel (AS23674)      13.248.169.48; 76.223.54.146
+   Transworld (AS38193)   13.248.169.48; 76.223.54.146
+   Z-Com (AS152605)       13.248.169.48; 76.223.54.146
+   => same IP from all responding ISPs
+
+============================================================
+ telenor.com.pk   (telecom)
+   Nayatel (AS23674)      104.18.12.112; 104.18.13.112
+   Transworld (AS38193)   104.18.12.112; 104.18.13.112
+   Z-Com (AS152605)       104.18.12.112; 104.18.13.112
+   => same IP from all responding ISPs

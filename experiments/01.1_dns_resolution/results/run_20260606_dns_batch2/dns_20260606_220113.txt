@@ -1,0 +1,72 @@
+DNS resolution per ISP  -  run_20260606_dns_batch2
+Each probe resolved the name via its own ISP resolver.
+
+============================================================
+ bisp.gov.pk   (government)
+   Nayatel (AS23674)      104.21.43.243; 172.67.190.163
+   Transworld (AS38193)   104.21.43.243; 172.67.190.163; 188.114.96.6; 188.114.97.6
+   Z-Com (AS152605)       188.114.96.6; 188.114.96.7; 188.114.97.6; 188.114.97.7
+   => DIFFERENT IPs per ISP (GeoDNS)
+
+============================================================
+ moitt.gov.pk   (government)
+   Nayatel (AS23674)      203.101.184.86
+   Transworld (AS38193)   203.101.184.86
+   Z-Com (AS152605)       203.101.184.86
+   => same IP from all responding ISPs
+
+============================================================
+ nlc.com.pk   (government)
+   Nayatel (AS23674)      104.26.6.113; 104.26.7.113; 172.67.71.233
+   Transworld (AS38193)   104.26.6.113; 104.26.7.113; 172.67.71.233
+   Z-Com (AS152605)       104.26.6.113; 104.26.7.113; 172.67.71.233
+   => same IP from all responding ISPs
+
+============================================================
+ nltpk.gov.pk   (government)
+   Nayatel (AS23674)      (no A record)
+   Transworld (AS38193)   (no A record)
+   Z-Com (AS152605)       (no A record)
+   => same IP from all responding ISPs
+
+============================================================
+ pbs.gov.pk   (government)
+   Nayatel (AS23674)      113.197.54.86
+   Transworld (AS38193)   113.197.54.86
+   Z-Com (AS152605)       113.197.54.86
+   => same IP from all responding ISPs
+
+============================================================
+ pid.gov.pk   (government)
+   Nayatel (AS23674)      203.124.45.87
+   Transworld (AS38193)   203.124.45.87
+   Z-Com (AS152605)       203.124.45.87
+   => same IP from all responding ISPs
+
+============================================================
+ pitc.com.pk   (government)
+   Nayatel (AS23674)      163.61.25.12
+   Transworld (AS38193)   163.61.25.12
+   Z-Com (AS152605)       163.61.25.12
+   => same IP from all responding ISPs
+
+============================================================
+ pseb.org.pk   (government)
+   Nayatel (AS23674)      125.209.103.90
+   Transworld (AS38193)   125.209.103.90
+   Z-Com (AS152605)       125.209.103.90
+   => same IP from all responding ISPs
+
+============================================================
+ railways.gov.pk   (government)
+   Nayatel (AS23674)      203.101.184.86
+   Transworld (AS38193)   203.101.184.86
+   Z-Com (AS152605)       203.101.184.86
+   => same IP from all responding ISPs
+
+============================================================
+ sbp.org.pk   (government)
+   Nayatel (AS23674)      (no A record)
+   Transworld (AS38193)   (no A record)
+   Z-Com (AS152605)       (no A record)
+   => same IP from all responding ISPs

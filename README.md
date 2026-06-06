@@ -24,6 +24,12 @@ findings/              Analysis writeups and the charts notebook
   Per-run outputs (grouped/summary CSV + readable routes), a full
   [batch inventory](experiments/01_website_destinations/batch_inventory.md), and a
   [website list](experiments/01_website_destinations/website_list.md).
+- [1.1 — DNS Resolution](experiments/01.1_dns_resolution/notes.md):
+  Per-ISP DNS lookups to find sites that resolve differently per ISP (GeoDNS).
+  ~8% of sites differ; refines Exp 01's central-resolution shortcut.
+- [1.2 — CDN Presence](experiments/01.2_cdn_presence/notes.md):
+  Pings major content services (Netflix, Google, Meta, ...) per ISP to detect
+  caches served from inside Pakistan.
 - [02 — ISP Classification](experiments/02_isp_classification/probe_deployment_plan.md):
   Plan for deploying 20 probes to classify ISPs by PKIX peering status (in progress).
 
@@ -32,6 +38,8 @@ findings/              Analysis writeups and the charts notebook
 - [01 — Hosting & Routing Analysis](findings/01_hosting_and_routing_analysis.md)
   with the [charts notebook](findings/01_hosting_and_routing.ipynb)
   (re-run after new batches to refresh every figure).
+- [1.1 — Per-ISP DNS Resolution](findings/01.1_dns_resolution_analysis.md):
+  which sites resolve differently per ISP, and how much it matters.
 
 ## Probe Setup
 
