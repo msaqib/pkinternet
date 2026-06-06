@@ -46,6 +46,8 @@ RESULT_TIMEOUT = 600
 OFFLINE_PROBES = {1015679, 1015210}   # TPCPL/Nova, PTCL - offline; skip (empty when back)
 
 PN = {136174: "TPCPL", 17557: "PTCL", 38193: "Transworld", 23674: "Nayatel", 152605: "Z-Com"}
+# RIPE results carry the probe ID, not the ASN - map probe ID -> ISP name.
+PROBE_NAME = {p[0]: PN.get(p[1], str(p[1])) for p in PROBES}
 OUTDIR = os.path.join("experiments", "01.2_cdn_presence", "results", RUN_NAME)
 FIELDS = ["hostname", "provider", "category", "probe", "resolved_ip", "ip_asn",
           "ip_operator", "ip_country", "rtt_ms", "verdict", "timestamp"]
@@ -135,7 +137,7 @@ def main():
                 name = asn_name(asn) if asn else ""
             rows.append({
                 "hostname": t["hostname"], "provider": t["label"],
-                "category": t["category"], "probe": PN.get(r.get("prb_id"), r.get("prb_id")),
+                "category": t["category"], "probe": PROBE_NAME.get(r.get("prb_id"), r.get("prb_id")),
                 "resolved_ip": ip, "ip_asn": asn or "", "ip_operator": (name or "").split(" - ")[0],
                 "ip_country": cc, "rtt_ms": rtt if rtt is not None else "",
                 "verdict": verdict(rtt), "timestamp": datetime.now(timezone.utc).isoformat(),

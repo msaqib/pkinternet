@@ -40,6 +40,8 @@ findings/              Analysis writeups and the charts notebook
   (re-run after new batches to refresh every figure).
 - [1.1 — Per-ISP DNS Resolution](findings/01.1_dns_resolution_analysis.md):
   which sites resolve differently per ISP, and how much it matters.
+- [1.2 — CDN Presence in Pakistan](findings/01.2_cdn_presence_analysis.md):
+  whether Netflix/Google/Meta/etc. are served from caches inside Pakistan.
 
 ## Probe Setup
 
