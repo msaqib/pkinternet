@@ -30,8 +30,9 @@ findings/              Analysis writeups and the charts notebook
 - [1.2 — CDN Presence](experiments/01.2_cdn_presence/notes.md):
   Pings major content services (Netflix, Google, Meta, ...) per ISP to detect
   caches served from inside Pakistan.
-- [02 — ISP Classification](experiments/02_isp_classification/probe_deployment_plan.md):
-  Plan for deploying 20 probes to classify ISPs by PKIX peering status (in progress).
+- [02 — ISP Classification](experiments/02_isp_classification/notes.md):
+  Classifying ISPs into PKIX Sets 1/2/3, with the roster, probe coverage, and the
+  ~21-probe deployment plan (in progress).
 
 ## Findings
 
@@ -42,6 +43,8 @@ findings/              Analysis writeups and the charts notebook
   which sites resolve differently per ISP, and how much it matters.
 - [1.2 — CDN Presence in Pakistan](findings/01.2_cdn_presence_analysis.md):
   whether Netflix/Google/Meta/etc. are served from caches inside Pakistan.
+- [1.3 — Nayatel Routing](findings/01.3_nayatel_routes.md):
+  per-destination breakdown of what Nayatel transits (LDI vs direct peering).
 
 ## Probe Setup
 

@@ -1,0 +1,52 @@
+Longitudinal routing - run_20260610_2h
+probe 60223 (AS23674, Islamabad)  every 15 min
+window 2026-06-10T10:22:31+00:00  ->  2026-06-10T12:22:31+00:00
+
+======================================================================
+ dunyanews.tv   -   Dunya News  (news)
+   rounds: 8   reachable: 8/8 (100%)
+   dest RTT (ms): min 40.3  median 40.4  max 40.7  jitter(stdev) 0.1
+   distinct AS-paths: 1
+     [   8x]  38193 > 9260
+              served via: Islamabad, Islamabad, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 315 pkts, loss 0.6%  |  rtt min 39.6  median 40.7  max 46.2  jitter(stdev) 0.5 ms
+
+======================================================================
+ hbl.com   -   HBL Bank  (banking)
+   rounds: 8   reachable: 8/8 (100%)
+   dest RTT (ms): min 199.6  median 199.8  max 200.1  jitter(stdev) 0.1
+   distinct AS-paths: 1
+     [   8x]  174 > 19551
+              served via: Secaucus, New Jersey, US
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 318 pkts, loss 0.0%  |  rtt min 199.2  median 200.2  max 208.0  jitter(stdev) 1.2 ms
+
+======================================================================
+ mcb.com.pk   -   MCB Bank  (banking)
+   rounds: 8   reachable: 8/8 (100%)
+   dest RTT (ms): min 128.4  median 128.9  max 131.2  jitter(stdev) 1.1
+   distinct AS-paths: 1
+     [   8x]  2914 > 30148
+              served via: Singapore, Central Singapore, SG
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 315 pkts, loss 0.0%  |  rtt min 128.5  median 129.4  max 139.5  jitter(stdev) 1.2 ms
+
+======================================================================
+ pseb.org.pk   -   PSEB  (government)
+   rounds: 8   reachable: 8/8 (100%)
+   dest RTT (ms): min 22.7  median 22.9  max 23.2  jitter(stdev) 0.2
+   distinct AS-paths: 1
+     [   8x]  9260
+              served via: Karachi, Sindh, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 312 pkts, loss 0.0%  |  rtt min 22.4  median 23.3  max 35.3  jitter(stdev) 1.0 ms
+
+======================================================================
+ ptcl.com.pk   -   PTCL  (telecom)
+   rounds: 8   reachable: 0/8 (0%)
+   distinct AS-paths: 1
+     [   8x]  17557
+              served via: Islamabad, Islamabad, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 315 pkts, loss 100.0% (no replies)

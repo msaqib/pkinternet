@@ -112,18 +112,27 @@ and are the firmest evidence in this experiment. The Shaw/Canada hop (AS6327, on
 TPCPL probe) is a known artifact and is **excluded**.
 
 **Transit dependency** - share of each ISP's paths that traverse an LDI operator
-(PTCL AS17557 or Transworld AS38193):
+(PTCL or Transworld). Detected by **ASN + RDAP registry name**: Transworld's backbone
+is **not announced in BGP** (no origin ASN), but RDAP attributes those hops to
+Transworld (TWA) - already stored as the hop operator. An ASN-only check misses them;
+we match the registry operator name (not a hardcoded IP range), and exclude each
+probe's own network.
 
-| ISP | via an LDI |
-|---|---|
-| Z-Com | 100% (91/91) |
-| TPCPL | 100% (65/65) |
-| Nayatel | 6% (6/91) |
-| Transworld | 0% (is an LDI) |
-| PTCL | 0% (is an LDI) |
+| ISP | via an LDI (IP+AS) | ASN-only (undercount) |
+|---|---|---|
+| Z-Com | 100% (91/91) | 100% |
+| TPCPL | 100% (65/65) | 100% |
+| **Nayatel** | **40% (37/91)** | 6% |
+| Transworld | 0% (is an LDI) | 0% |
+| PTCL | 0% (is an LDI) | 0% |
 
-Downstream ISPs route essentially **everything** through the two international-transit
-providers; **Nayatel is the exception**, mostly on independent peering.
+Downstream ISPs (Z-Com, TPCPL) route essentially **everything** through the two
+international-transit providers. **Nayatel is the most independent**, but at **40%**,
+not the 6% an ASN-only check suggests - the difference is Transworld's unannounced
+`110.93.x` hops. For the **60% it avoids the LDIs**, Nayatel reaches CDNs (Cloudflare,
+~3 ms) and other Pakistani ISPs (Multinet, COMSATS) by **direct/local peering**; it
+falls back to **Transworld** only for genuinely foreign-hosted destinations (where
+international transit is unavoidable).
 
 **Hairpinning is concentrated, not pervasive.** Of the 23 Pakistan-hosted sites, only
 **five** are reached via a foreign hop, and only by the downstream ISPs - never by

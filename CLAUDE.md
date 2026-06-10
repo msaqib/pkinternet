@@ -58,7 +58,8 @@ submarine-cable cuts.
 | `experiments/01.1_dns_resolution/` | Exp 1.1: per-ISP DNS resolution (`dns_check.py`) |
 | `experiments/01.2_cdn_presence/` | Exp 1.2: CDN/cache presence in PK (`cdn_check.py`) |
 | `experiments/02_isp_classification/` | Exp 02: 20-probe deployment plan (PKIX set classification) |
-| `findings/` | Analysis writeups (01, 01.1) + charts notebook |
+| `experiments/03_longitudinal_routing/` | Exp 03: one probe → 5 sites every 15 min over days; path/RTT change over time (`trace_monitor.py`) |
+| `findings/` | Analysis writeups (01, 01.1, 01.2, 03) + charts notebook |
 
 ---
 
@@ -348,9 +349,12 @@ locally," and confirm true serving PoP with `/cdn-cgi/trace` where possible.
 
 Robust, RTT-independent results from the traceroutes (Shaw AS6327 artifact excluded):
 - **Transit dependency:** downstream ISPs route ~100% of paths through an LDI
-  operator (PTCL AS17557 or Transworld AS38193) — Z-Com 91/91, TPCPL 65/65 —
-  whereas **Nayatel is ~6%**. Confirms PTCL/Transworld as the chokepoint and
-  Nayatel as largely independent (good local peering).
+  operator (PTCL or Transworld) — Z-Com 91/91, TPCPL 65/65 — whereas **Nayatel is
+  ~40%** (37/91), the most independent. **Detect by ASN + RDAP registry name:**
+  Transworld's backbone is not announced in BGP, so an ASN-only check undercounts
+  Nayatel as 6%; the RDAP operator label (already in the data) catches it - no
+  hardcoded IP range. Nayatel reaches CDNs/other PK ISPs by direct peering and only
+  uses Transworld for foreign-hosted destinations.
 - **Hairpinning is concentrated:** of 23 PK-hosted sites, only 5 are reached via a
   foreign hop (pakistan.gov.pk, moitt.gov.pk, railways.gov.pk, pitc.com.pk,
   goto.com.pk), and only by downstream ISPs — never PTCL/Transworld.

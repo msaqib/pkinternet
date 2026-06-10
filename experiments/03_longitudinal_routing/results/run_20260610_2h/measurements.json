@@ -1,0 +1,53 @@
+{
+  "run_name": "run_20260610_2h",
+  "interval_sec": 900,
+  "probe_id": 60223,
+  "probe_asn": 23674,
+  "probe_city": "Islamabad",
+  "start": 1781086951,
+  "stop": 1781094151,
+  "start_iso": "2026-06-10T10:22:31+00:00",
+  "stop_iso": "2026-06-10T12:22:31+00:00",
+  "targets": [
+    {
+      "hostname": "dunyanews.tv",
+      "label": "Dunya News",
+      "category": "news",
+      "ip": "202.142.167.148",
+      "msm_id": 178952544,
+      "ping_msm_id": 178955540
+    },
+    {
+      "hostname": "hbl.com",
+      "label": "HBL Bank",
+      "category": "banking",
+      "ip": "45.60.73.176",
+      "msm_id": 178952553,
+      "ping_msm_id": 178955553
+    },
+    {
+      "hostname": "mcb.com.pk",
+      "label": "MCB Bank",
+      "category": "banking",
+      "ip": "192.124.249.159",
+      "msm_id": 178952586,
+      "ping_msm_id": 178956530
+    },
+    {
+      "hostname": "ptcl.com.pk",
+      "label": "PTCL",
+      "category": "telecom",
+      "ip": "221.120.226.61",
+      "msm_id": 178952607,
+      "ping_msm_id": 178956552
+    },
+    {
+      "hostname": "pseb.org.pk",
+      "label": "PSEB",
+      "category": "government",
+      "ip": "125.209.103.90",
+      "msm_id": 178952631,
+      "ping_msm_id": 178957057
+    }
+  ]
+}
