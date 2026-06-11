@@ -4,7 +4,10 @@ Experiment 03 - Longitudinal Routing Monitor
 ============================================
 From SEVERAL probes (one per PK ISP), traceroute the SAME destinations every 15
 minutes for several days, and record whether the PATH and the RTT change over time
-- per (site, probe), so you can compare ISPs.
+- per (site, probe), so you can compare ISPs. Each probe's egress ASN is measured
+live every round (from the result's public `from` IP), not taken from registration,
+so multi-homed / campus probes that switch ISP are recorded correctly - see the
+"Dynamic probe ASN" section in notes.md.
 
 Where Exp 01 is a one-off snapshot, this adds the time axis. It uses a RIPE Atlas
 *periodic* measurement (one per target) so RIPE's own infrastructure fires every
@@ -93,9 +96,12 @@ TARGETS = [
 RESULTS_DIR = os.path.join("experiments", "03_longitudinal_routing", "results", RUN_NAME)
 STATE_FILE  = os.path.join(RESULTS_DIR, "measurements.json")
 
+# probe_asn = ASN measured live from the probe's public egress IP each round (the
+# truth); probe_asn_reg = ASN we registered in PROBES (may go stale); probe_ip = the
+# egress IP it was derived from. See "Dynamic probe ASN" in notes.md.
 GROUPED_FIELDS = [
     "target_hostname", "target_label", "target_category",
-    "probe_id", "probe_asn", "probe_city",
+    "probe_id", "probe_asn", "probe_asn_reg", "probe_city", "probe_ip",
     "trace_time", "hop", "hop_ip", "rtt_ms",
     "hop_asn", "hop_prefix", "hop_country", "hop_asn_name",
     "is_private", "is_timeout",
@@ -104,7 +110,7 @@ GROUPED_FIELDS = [
 ]
 SUMMARY_FIELDS = [
     "trace_time", "target_hostname", "target_label", "target_category",
-    "probe_id", "probe_asn", "probe_city",
+    "probe_id", "probe_asn", "probe_asn_reg", "probe_city", "probe_ip",
     "target_ip", "target_asn", "target_asn_name", "target_country",
     "dest_rtt_ms", "total_hops", "timeout_hops",
     "asns_in_path", "countries_in_path",
@@ -113,7 +119,7 @@ SUMMARY_FIELDS = [
 ]
 PING_FIELDS = [
     "ping_time", "target_hostname", "target_label",
-    "probe_id", "probe_asn", "probe_city",
+    "probe_id", "probe_asn", "probe_asn_reg", "probe_city", "probe_ip",
     "sent", "rcvd", "loss_pct", "rtt_min", "rtt_avg", "rtt_max", "measurement_id",
 ]
 
@@ -273,6 +279,30 @@ def schedule():
 #  FETCH + FLATTEN  (per-round, with the round's real timestamp)
 # ─────────────────────────────────────────────────────
 
+_PROBE_ASN_CACHE = {}
+
+
+def _probe_live_asn(result):
+    """Determine a probe's CURRENT egress ASN at the time of a round, from the
+    public IP RIPE saw it connect from (`from`) - the data-plane equivalent of
+    `whois $(curl ifconfig.me)`, but for a RIPE probe we can't shell into.
+
+    Returns (asn, public_ip). For a multi-homed site (campus with >1 ISP) this can
+    differ round to round, and from the registered ASN. Memoised by IP - distinct
+    egress IPs per run are few, so this is ~free even across 36k pings.
+    """
+    ip = result.get("from") or ""
+    if not ip:
+        return "", ""
+    if ip not in _PROBE_ASN_CACHE:
+        try:
+            a, _prefix, _cc = asn_for_ip(ip)
+        except Exception:
+            a = ""
+        _PROBE_ASN_CACHE[ip] = a or ""
+    return _PROBE_ASN_CACHE[ip], ip
+
+
 def _hop_rows_for_round(state, t, result):
     """One traceroute result (one round) -> (hop_rows, summary_row).
 
@@ -290,8 +320,10 @@ def _hop_rows_for_round(state, t, result):
 
     prb    = result.get("prb_id")                       # which probe produced this round
     pmeta  = state.get("probes", {}).get(str(prb), {})
-    p_asn  = pmeta.get("asn", "")
+    p_reg  = pmeta.get("asn", "")                        # ASN we registered (may be stale)
     p_city = pmeta.get("city", str(prb) if prb is not None else "")
+    live_asn, p_ip = _probe_live_asn(result)            # ASN measured this round
+    p_asn  = live_asn or p_reg                           # prefer measured, fall back to registered
 
     hop_rows, all_asns, all_cc = [], [], []
     real_count = tmout_count = 0
@@ -300,7 +332,7 @@ def _hop_rows_for_round(state, t, result):
     base = {
         "target_hostname": t["hostname"], "target_label": t["label"],
         "target_category": t["category"], "probe_id": prb,
-        "probe_asn": p_asn, "probe_city": p_city,
+        "probe_asn": p_asn, "probe_asn_reg": p_reg, "probe_city": p_city, "probe_ip": p_ip,
         "trace_time": trace_time, "target_ip": t_ip, "target_asn": t_asn or "",
         "target_asn_name": t_name, "target_country": t_cc,
         "measurement_id": t["msm_id"],
@@ -353,8 +385,8 @@ def _hop_rows_for_round(state, t, result):
     summary = {
         "trace_time": trace_time, "target_hostname": t["hostname"],
         "target_label": t["label"], "target_category": t["category"],
-        "probe_id": prb, "probe_asn": p_asn,
-        "probe_city": p_city, "target_ip": t_ip,
+        "probe_id": prb, "probe_asn": p_asn, "probe_asn_reg": p_reg,
+        "probe_city": p_city, "probe_ip": p_ip, "target_ip": t_ip,
         "target_asn": t_asn or "", "target_asn_name": t_name, "target_country": t_cc,
         "dest_rtt_ms": dest_rtt if dest_rtt is not None else "",
         "total_hops": real_count, "timeout_hops": tmout_count,
@@ -428,7 +460,9 @@ def _collect_pings(state):
             prb   = r.get("prb_id")
             pmeta = probes_meta.get(str(prb), {})
             pcity = pmeta.get("city", str(prb) if prb is not None else "")
-            pasn  = pmeta.get("asn", "")
+            preg  = pmeta.get("asn", "")
+            live_asn, pip = _probe_live_asn(r)
+            pasn  = live_asn or preg
             st = stats.setdefault((t["hostname"], prb),
                                   {"label": t["label"], "probe_city": pcity,
                                    "probe_asn": pasn, "sent": 0, "rcvd": 0, "rtts": []})
@@ -442,7 +476,8 @@ def _collect_pings(state):
             rows.append({
                 "ping_time": ptime, "target_hostname": t["hostname"],
                 "target_label": t["label"], "probe_id": prb,
-                "probe_asn": pasn, "probe_city": pcity, "sent": sent, "rcvd": rcvd,
+                "probe_asn": pasn, "probe_asn_reg": preg, "probe_city": pcity,
+                "probe_ip": pip, "sent": sent, "rcvd": rcvd,
                 "loss_pct": round(100 * (sent - rcvd) / sent, 1) if sent else "",
                 "rtt_min": r.get("min") if r.get("min", -1) not in (-1, None) else "",
                 "rtt_avg": r.get("avg") if r.get("avg", -1) not in (-1, None) else "",
@@ -638,9 +673,23 @@ def write_path_changes(path, state, summaries, ping_stats=None):
         rtts = [float(r["dest_rtt_ms"]) for r in answered if r["dest_rtt_ms"] != ""]
         label = rows[0]["target_label"]
 
+        # measured egress ASN(s) this probe used, vs what we registered
+        asns_seen = {}
+        for r in rows:
+            a = r.get("probe_asn") or "?"
+            asns_seen[a] = asns_seen.get(a, 0) + 1
+        reg = rows[0].get("probe_asn_reg", "")
+
         lines.append("=" * 70)
         lines.append(f" {host}   -   {label}  ({rows[0]['target_category']})")
         lines.append(f"   probe {prb}  AS{rows[0]['probe_asn']}  {rows[0]['probe_city']}")
+        if len(asns_seen) > 1:
+            detail = ", ".join(f"AS{a} ({c}x)" for a, c in
+                               sorted(asns_seen.items(), key=lambda kv: -kv[1]))
+            lines.append(f"   ** probe egress ASN VARIES across rounds (multi-homed?): {detail}")
+        elif reg and str(reg) != str(next(iter(asns_seen), "")):
+            lines.append(f"   ** measured egress ASN AS{next(iter(asns_seen))} != "
+                         f"registered AS{reg}")
         lines.append(f"   rounds: {n}   reachable: {len(answered)}/{n} "
                      f"({100*len(answered)//n if n else 0}%)")
         if rtts:

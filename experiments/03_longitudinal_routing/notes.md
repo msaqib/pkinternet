@@ -155,6 +155,38 @@ in place (they're also safe on RIPE).
 
 ---
 
+## Dynamic probe ASN (multi-ISP / campus probes)
+
+Each probe's ASN is **measured every round**, not taken from what we registered in
+`PROBES`. A probe at a multi-homed site (e.g. a university campus with PERN/HEC +
+a commercial ISP) can egress via **different ISPs round to round**, so its true
+origin ASN is a moving quantity — the registered value is just a point-in-time guess.
+
+**How** (RIPE-compatible): we can't shell into a RIPE Atlas probe to run the
+`whois $(curl -s ifconfig.me)` one-liner. But every RIPE result already carries the
+probe's **public egress IP** in the `from` field, so `_probe_live_asn()` runs that
+through the same Team Cymru lookup we use everywhere else — the data-plane
+equivalent of the `whois` command, derived per round. (If we ever deploy our **own**
+measurement nodes on campus servers we control, that exact `curl/whois` one-liner is
+what we'd embed instead, writing the same columns.)
+
+**What gets recorded** (every trace/summary/ping row):
+- `probe_id` — the RIPE probe (stable).
+- `probe_asn` — ASN **measured this round** from the egress IP (the source of truth).
+- `probe_asn_reg` — the ASN we registered in `PROBES` (kept for comparison).
+- `probe_ip` — the public egress IP the ASN was derived from.
+
+**An ASN changes when:** the site is multi-homed and load-balances/policy-routes
+across ISPs; an ISP link fails over to a backup; a dynamic public IP rotates or the
+host changes provider (registered ASN now stale); a prefix is re-homed (different
+origin ASN in BGP); or the probe is physically moved.
+
+`path_changes_*.txt` flags both: `** probe egress ASN VARIES across rounds
+(multi-homed?)` with per-ASN counts, and `** measured egress ASN ... != registered`
+when a probe's real ASN differs from what we registered.
+
+---
+
 ## Caveats
 
 - **Single vantage = vantage-biased** (paper 1): this is *Nayatel-from-Islamabad's*
