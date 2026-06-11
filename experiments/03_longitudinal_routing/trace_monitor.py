@@ -684,11 +684,103 @@ def stop():
                 print(f"  x {t['label']:<16} {kind} {e}")
 
 
+# ─────────────────────────────────────────────────────
+#  STATS  (data volume, storage, credits - estimate + actuals)
+# ─────────────────────────────────────────────────────
+
+def _human(n):
+    n = float(n)
+    for unit in ("B", "KB", "MB", "GB"):
+        if n < 1024:
+            return f"{n:.1f} {unit}"
+        n /= 1024
+    return f"{n:.1f} TB"
+
+
+def _dir_size(path):
+    total = 0
+    for root, _, files in os.walk(path):
+        for f in files:
+            try:
+                total += os.path.getsize(os.path.join(root, f))
+            except OSError:
+                pass
+    return total
+
+
+# rough per-row sizes of our output files, from the 2h baseline run
+_BYTES = {"grouped_hop": 150, "summary_row": 200, "ping_row": 120, "routes_hop": 55}
+_AVG_HOPS  = 16          # typical hops per traceroute (reach/decay)
+_TR_PKTS   = 3           # RIPE traceroute packets per hop
+_HDR_OVH   = 28         # IP+ICMP header bytes added to the 48B payload
+
+
+def _estimate_storage(trace_rounds, pings):
+    grouped = trace_rounds * _AVG_HOPS * _BYTES["grouped_hop"]
+    summary = trace_rounds * _BYTES["summary_row"]
+    routes  = trace_rounds * (_AVG_HOPS + 6) * _BYTES["routes_hop"]
+    pingcsv = pings * _BYTES["ping_row"]
+    return grouped + summary + routes + pingcsv
+
+
+def stats():
+    """Report data volume, storage footprint and credits for this run - both the
+    pre-run estimate (from config) and on-disk actuals if results exist."""
+    nprb, ntar = len(PROBES), len(TARGETS)
+    rounds      = DURATION_HOURS * 3600 // INTERVAL_SEC
+    ping_rounds = DURATION_HOURS * 3600 // PING_INTERVAL_SEC if PING_COMPANION else 0
+    trace_total = ntar * rounds * nprb
+    ping_total  = ntar * ping_rounds * nprb
+    cadence = ("off" if not PING_COMPANION else
+               "1/min" if PING_INTERVAL_SEC == 60 else f"1/{PING_INTERVAL_SEC//60}min")
+
+    # probe wire traffic (sent + received), from measurement params
+    pkt = 48 + _HDR_OVH
+    tr_wire = trace_total * _AVG_HOPS * _TR_PKTS * pkt * 2
+    pg_wire = ping_total * PING_PACKETS * pkt * 2
+    wire    = tr_wire + pg_wire
+    credits = trace_total * 20 + ping_total * PING_PACKETS
+
+    print(f"Exp 03 stats - {RUN_NAME}")
+    print(f"  {nprb} probes x {ntar} targets, traceroute every {INTERVAL_SEC//60} min, "
+          f"ping {cadence}, {DURATION_HOURS}h")
+    print(f"  measurements created: {ntar * (2 if PING_COMPANION else 1)} "
+          f"({ntar} trace{f' + {ntar} ping' if PING_COMPANION else ''})")
+    print(f"  expected results: {trace_total:,} trace rounds, {ping_total:,} pings\n")
+
+    print(f"  probe wire traffic (sent+received, whole run, all probes):")
+    print(f"    traceroute ~{_human(tr_wire)}   ping ~{_human(pg_wire)}   total ~{_human(wire)}")
+    print(f"    => ~{_human(wire/nprb)} per probe over {DURATION_HOURS}h  "
+          f"(assumes {_AVG_HOPS} hops, {_TR_PKTS} pkts/hop, {PING_PACKETS} ping pkts, "
+          f"{pkt}B/pkt)\n")
+
+    print(f"  RIPE credits: ~{credits:,}\n")
+
+    if os.path.isdir(RESULTS_DIR) and _dir_size(RESULTS_DIR):
+        size = _dir_size(RESULTS_DIR)
+        print(f"  stored on disk now: {_human(size)}  ({RESULTS_DIR})")
+        if os.path.exists(STATE_FILE):
+            with open(STATE_FILE, encoding="utf-8") as f:
+                st = json.load(f)
+            span = st["stop"] - st["start"]
+            frac = min(max((time.time() - st["start"]) / span, 0.001), 1.0) if span else 1.0
+            if frac < 0.99:
+                print(f"    ~{frac*100:.0f}% through the window "
+                      f"-> projected full-run size ~{_human(size/frac)}")
+        print(f"  note: fetching pulls the raw JSON from RIPE (~2-3x the CSV size) into memory,"
+              f" but only the CSV/txt above are written to disk.")
+    else:
+        print(f"  stored on disk: none yet (run schedule -> fetch/watch first)")
+        print(f"  estimated full-run storage: ~{_human(_estimate_storage(trace_total, ping_total))}"
+              f"  (CSVs + routes/path_changes txt)")
+
+
 if __name__ == "__main__":
     mode = sys.argv[1] if len(sys.argv) > 1 else ""
     if   mode == "schedule": schedule()
     elif mode == "fetch":    fetch()
     elif mode == "watch":    watch()
+    elif mode == "stats":    stats()
     elif mode == "stop":     stop()
     else:
-        sys.exit("usage: trace_monitor.py [schedule|fetch|watch|stop]")
+        sys.exit("usage: trace_monitor.py [schedule|fetch|watch|stats|stop]")

@@ -116,6 +116,9 @@ as Exp 01.
 ```bash
 export RIPE_API_KEY="your-key-here"          # or .env at repo root
 
+# 0) estimate data volume / storage / credits before spending anything
+python experiments/03_longitudinal_routing/trace_monitor.py stats
+
 # 1) schedule: 1 traceroute/15min per site, + (if PING_COMPANION) 1 ping/min per site
 python experiments/03_longitudinal_routing/trace_monitor.py schedule
 
