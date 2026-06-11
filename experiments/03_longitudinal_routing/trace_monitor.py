@@ -129,6 +129,25 @@ def _probes_block(probe_ids):
              "requested": len(probe_ids)}]
 
 
+def _post_measurement(payload, tries=4):
+    """POST a measurement, retrying transient network errors so a flaky link can't
+    orphan a measurement mid-schedule. A real API error (HTTP 4xx/5xx) is raised
+    immediately - retrying it would just create duplicates."""
+    last = None
+    for i in range(tries):
+        try:
+            r = requests.post(f"{BASE}/measurements/", headers=HDR, json=payload, timeout=20)
+            r.raise_for_status()
+            return r.json()["measurements"][0]
+        except requests.HTTPError:
+            raise
+        except Exception as e:                          # ConnectTimeout etc. -> retry
+            last = e
+            if i < tries - 1:
+                time.sleep(3)
+    raise last
+
+
 def create_periodic(probe_ids, target_ip, description, start, stop):
     """One PERIODIC ICMP Paris traceroute from ALL probe_ids (same shape as Exp 01's
     one-off, but is_oneoff=False + interval, so RIPE fires it every INTERVAL_SEC)."""
@@ -152,9 +171,7 @@ def create_periodic(probe_ids, target_ip, description, start, stop):
         "start_time":  start,
         "stop_time":   stop,
     }
-    r = requests.post(f"{BASE}/measurements/", headers=HDR, json=payload, timeout=15)
-    r.raise_for_status()
-    return r.json()["measurements"][0]
+    return _post_measurement(payload)
 
 
 def create_ping(probe_ids, target_ip, description, start, stop):
@@ -175,9 +192,7 @@ def create_ping(probe_ids, target_ip, description, start, stop):
         "start_time":  start,
         "stop_time":   stop,
     }
-    r = requests.post(f"{BASE}/measurements/", headers=HDR, json=payload, timeout=15)
-    r.raise_for_status()
-    return r.json()["measurements"][0]
+    return _post_measurement(payload)
 
 
 def schedule():
@@ -199,8 +214,13 @@ def schedule():
           f"auto-push: {'ON' if AUTO_PUSH else 'off'}")
     print(f"  est. credits: ~{est:,}  (make sure your RIPE balance covers this)\n")
 
-    if sys.stdin.isatty():                              # attended run -> confirm the spend
-        if input("  proceed and spend these credits? [y/N]: ").strip().lower() not in ("y", "yes"):
+    # attended run -> confirm the spend (skip with EXP03_YES=1 for automation)
+    if sys.stdin.isatty() and os.environ.get("EXP03_YES") != "1":
+        try:
+            ans = input("  proceed and spend these credits? [y/N]: ").strip().lower()
+        except EOFError:
+            ans = "n"
+        if ans not in ("y", "yes"):
             print("  aborted - nothing scheduled."); return
 
     state = {
@@ -211,6 +231,10 @@ def schedule():
         "stop_iso":  datetime.fromtimestamp(stop, timezone.utc).isoformat(),
         "targets": [],
     }
+    def _save():
+        with open(STATE_FILE, "w", encoding="utf-8") as f:
+            json.dump(state, f, indent=2)
+
     for t in TARGETS:
         ip, err = resolve(t["hostname"])
         if err:
@@ -218,19 +242,28 @@ def schedule():
             continue
         try:
             mid = create_periodic(probe_ids, ip, f"{t['label']} (exp03)", start, stop)
-            entry = {**t, "ip": ip, "msm_id": mid, "ping_msm_id": None}
-            if PING_COMPANION:
-                entry["ping_msm_id"] = create_ping(
-                    probe_ids, ip, f"{t['label']} ping (exp03)", start, stop)
-            state["targets"].append(entry)
-            pinfo = f" + ping {entry['ping_msm_id']}" if entry["ping_msm_id"] else ""
-            print(f"  ok {t['label']:<16} {t['hostname']:<24} {ip:<16} trace {mid}{pinfo}")
-            time.sleep(0.3)
         except requests.HTTPError as e:
             print(f"  x {t['label']:<16} HTTP {e.response.status_code}: {e.response.text[:120]}")
+            continue
+        except Exception as e:
+            print(f"  x {t['label']:<16} trace POST failed: {e}")
+            continue
+        # trace exists on RIPE - record it NOW so a later ping failure can't orphan it
+        entry = {**t, "ip": ip, "msm_id": mid, "ping_msm_id": None}
+        state["targets"].append(entry)
+        _save()
+        if PING_COMPANION:
+            try:
+                entry["ping_msm_id"] = create_ping(
+                    probe_ids, ip, f"{t['label']} ping (exp03)", start, stop)
+                _save()
+            except Exception as e:
+                print(f"  ! {t['label']:<16} ping POST failed (trace {mid} kept): {e}")
+        pinfo = f" + ping {entry['ping_msm_id']}" if entry["ping_msm_id"] else " (no ping)"
+        print(f"  ok {t['label']:<16} {t['hostname']:<24} {ip:<16} trace {mid}{pinfo}")
+        time.sleep(0.3)
 
-    with open(STATE_FILE, "w", encoding="utf-8") as f:
-        json.dump(state, f, indent=2)
+    _save()
     print(f"\n  scheduled {len(state['targets'])} target(s) x {nprb} probes; state -> {STATE_FILE}")
     print(f"  window: {state['start_iso']}  ->  {state['stop_iso']}")
     print(f"  fetch any time with:  python {sys.argv[0]} fetch")
