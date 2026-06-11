@@ -2,8 +2,9 @@
 """
 Experiment 03 - Longitudinal Routing Monitor
 ============================================
-From ONE probe (one ISP), traceroute the SAME 5 destinations every 15 minutes
-for several days, and record whether the PATH and the RTT change over time.
+From SEVERAL probes (one per PK ISP), traceroute the SAME destinations every 15
+minutes for several days, and record whether the PATH and the RTT change over time
+- per (site, probe), so you can compare ISPs.
 
 Where Exp 01 is a one-off snapshot, this adds the time axis. It uses a RIPE Atlas
 *periodic* measurement (one per target) so RIPE's own infrastructure fires every
@@ -33,6 +34,7 @@ import sys
 import csv
 import json
 import time
+import subprocess
 import statistics
 from datetime import datetime, timezone, timedelta
 
@@ -52,20 +54,33 @@ if "your-api-key-here" in HDR.get("Authorization", ""):
     sys.exit("RIPE_API_KEY not found. Put it in a .env file at the repo root.")
 
 # ── CONFIG - edit before scheduling ───────────────────
-RUN_NAME      = "run_20260610_2h"
+RUN_NAME      = "run_20260611_24h"
 INTERVAL_SEC  = 900          # 15 minutes between traceroutes (see notes.md for why 15)
-DURATION_HOURS = 2           # short 2h window -> ~8 rounds/site (not a full diurnal cycle)
+DURATION_HOURS = 24          # full day -> ~96 rounds/site/probe, covers the diurnal cycle
 
 # Optional ping companion (paper 2's design): 1 ping/min alongside the traceroutes
 # for finer RTT / jitter / packet-loss than 15-min traceroutes can give.
-PING_COMPANION   = True
+# NOTE: with many probes this multiplies credit cost - watch the estimate schedule prints.
+PING_COMPANION    = True
 PING_INTERVAL_SEC = 60       # one ping per minute
 PING_PACKETS      = 3        # packets per ping -> per-minute loss + jitter
 
-# Single probe: 60223 Nayatel (AS23674, Islamabad) - full hop visibility.
-PROBE = (60223, 23674, "Islamabad", "PK_Inara (Nayatel)")
+# After the run window closes, watch() auto-commits the results folder and pushes.
+# Needs working git auth on this machine (SSH deploy key, or a cached HTTPS token).
+AUTO_PUSH = True
 
-# 5 targets: 1 PK-hosted news + 2 banks hosted abroad + 2 more PK-hosted (per request).
+# Probes: (probe_id, asn, label). The PK RIPE Atlas probes for this run.
+# ONE measurement per target runs from ALL of these at once (RIPE multi-probe), so
+# each result carries its prb_id and every output is per (site, probe) for ISP comparison.
+PROBES = [
+    (60223,   23674,  "Nayatel"),
+    (62224,   38193,  "Transworld"),
+    (7613,    152605, "Z COM Networks"),
+    (1016036, 9541,   "Cybernet"),
+    (1015679, 136174, "LocalInternetProj01"),
+]
+
+# 5 targets: 1 PK-hosted news + 2 banks hosted abroad + 2 more PK-hosted.
 TARGETS = [
     {"hostname": "dunyanews.tv",  "label": "Dunya News", "category": "news"},        # PK (Multinet)
     {"hostname": "hbl.com",       "label": "HBL Bank",   "category": "banking"},     # abroad (Incapsula, US)
@@ -98,6 +113,7 @@ SUMMARY_FIELDS = [
 ]
 PING_FIELDS = [
     "ping_time", "target_hostname", "target_label",
+    "probe_id", "probe_asn", "probe_city",
     "sent", "rcvd", "loss_pct", "rtt_min", "rtt_avg", "rtt_max", "measurement_id",
 ]
 
@@ -106,9 +122,16 @@ PING_FIELDS = [
 #  SCHEDULE
 # ─────────────────────────────────────────────────────
 
-def create_periodic(probe_id, target_ip, description, start, stop):
-    """One PERIODIC ICMP Paris traceroute (same shape as Exp 01's one-off, but
-    is_oneoff=False + interval, so RIPE fires it every INTERVAL_SEC itself)."""
+def _probes_block(probe_ids):
+    """RIPE multi-probe selector: run one measurement from ALL these probes."""
+    return [{"type": "probes",
+             "value": ",".join(str(p) for p in probe_ids),
+             "requested": len(probe_ids)}]
+
+
+def create_periodic(probe_ids, target_ip, description, start, stop):
+    """One PERIODIC ICMP Paris traceroute from ALL probe_ids (same shape as Exp 01's
+    one-off, but is_oneoff=False + interval, so RIPE fires it every INTERVAL_SEC)."""
     payload = {
         "definitions": [{
             "target":           target_ip,
@@ -124,7 +147,7 @@ def create_periodic(probe_id, target_ip, description, start, stop):
             "resolve_on_probe": False,
             "interval":         INTERVAL_SEC,
         }],
-        "probes": [{"type": "probes", "value": str(probe_id), "requested": 1}],
+        "probes":      _probes_block(probe_ids),
         "is_oneoff":   False,
         "start_time":  start,
         "stop_time":   stop,
@@ -134,8 +157,8 @@ def create_periodic(probe_id, target_ip, description, start, stop):
     return r.json()["measurements"][0]
 
 
-def create_ping(probe_id, target_ip, description, start, stop):
-    """One PERIODIC ping (1/min) - the fine-grained RTT/jitter/loss companion."""
+def create_ping(probe_ids, target_ip, description, start, stop):
+    """One PERIODIC ping (1/min) from ALL probe_ids - the RTT/jitter/loss companion."""
     payload = {
         "definitions": [{
             "target":           target_ip,
@@ -147,7 +170,7 @@ def create_ping(probe_id, target_ip, description, start, stop):
             "interval":         PING_INTERVAL_SEC,
             "resolve_on_probe": False,
         }],
-        "probes": [{"type": "probes", "value": str(probe_id), "requested": 1}],
+        "probes":      _probes_block(probe_ids),
         "is_oneoff":   False,
         "start_time":  start,
         "stop_time":   stop,
@@ -159,23 +182,30 @@ def create_ping(probe_id, target_ip, description, start, stop):
 
 def schedule():
     os.makedirs(RESULTS_DIR, exist_ok=True)
-    pid, pasn, pcity, pdesc = PROBE
+    probe_ids   = [p[0] for p in PROBES]
+    probes_meta = {str(pid): {"asn": asn, "city": label} for (pid, asn, label) in PROBES}
+    nprb  = len(probe_ids)
     start = int(time.time()) + 60                       # +1 min lead
     stop  = start + DURATION_HOURS * 3600
     rounds = DURATION_HOURS * 3600 // INTERVAL_SEC
 
-    print(f"Experiment 03 - longitudinal routing monitor")
-    print(f"  probe {pid} (AS{pasn}, {pcity}) -> {len(TARGETS)} targets")
+    print("Experiment 03 - longitudinal routing monitor")
+    print(f"  {nprb} probes ({', '.join(p[2] for p in PROBES)}) -> {len(TARGETS)} targets")
     print(f"  every {INTERVAL_SEC//60} min for {DURATION_HOURS}h "
-          f"(~{rounds} rounds/target)")
+          f"(~{rounds} rounds/site/probe)")
     ping_rounds = DURATION_HOURS * 3600 // PING_INTERVAL_SEC if PING_COMPANION else 0
-    est = len(TARGETS) * rounds * 20 + len(TARGETS) * ping_rounds * PING_PACKETS
-    print(f"  ping companion: {'ON (1/min)' if PING_COMPANION else 'off'}")
-    print(f"  est. credits: ~{est:,}\n")
+    est = len(TARGETS) * rounds * nprb * 20 + len(TARGETS) * ping_rounds * nprb * PING_PACKETS
+    print(f"  ping companion: {'ON (1/min)' if PING_COMPANION else 'off'}   "
+          f"auto-push: {'ON' if AUTO_PUSH else 'off'}")
+    print(f"  est. credits: ~{est:,}  (make sure your RIPE balance covers this)\n")
+
+    if sys.stdin.isatty():                              # attended run -> confirm the spend
+        if input("  proceed and spend these credits? [y/N]: ").strip().lower() not in ("y", "yes"):
+            print("  aborted - nothing scheduled."); return
 
     state = {
         "run_name": RUN_NAME, "interval_sec": INTERVAL_SEC,
-        "probe_id": pid, "probe_asn": pasn, "probe_city": pcity,
+        "probe_ids": probe_ids, "probes": probes_meta,
         "start": start, "stop": stop,
         "start_iso": datetime.fromtimestamp(start, timezone.utc).isoformat(),
         "stop_iso":  datetime.fromtimestamp(stop, timezone.utc).isoformat(),
@@ -187,11 +217,11 @@ def schedule():
             print(f"  x {t['label']:<16} {t['hostname']} - DNS failed: {err}")
             continue
         try:
-            mid = create_periodic(pid, ip, f"{pid}~{t['label']} (exp03)", start, stop)
+            mid = create_periodic(probe_ids, ip, f"{t['label']} (exp03)", start, stop)
             entry = {**t, "ip": ip, "msm_id": mid, "ping_msm_id": None}
             if PING_COMPANION:
                 entry["ping_msm_id"] = create_ping(
-                    pid, ip, f"{pid}~{t['label']} ping (exp03)", start, stop)
+                    probe_ids, ip, f"{t['label']} ping (exp03)", start, stop)
             state["targets"].append(entry)
             pinfo = f" + ping {entry['ping_msm_id']}" if entry["ping_msm_id"] else ""
             print(f"  ok {t['label']:<16} {t['hostname']:<24} {ip:<16} trace {mid}{pinfo}")
@@ -201,7 +231,7 @@ def schedule():
 
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2)
-    print(f"\n  scheduled {len(state['targets'])} measurement(s); state -> {STATE_FILE}")
+    print(f"\n  scheduled {len(state['targets'])} target(s) x {nprb} probes; state -> {STATE_FILE}")
     print(f"  window: {state['start_iso']}  ->  {state['stop_iso']}")
     print(f"  fetch any time with:  python {sys.argv[0]} fetch")
 
@@ -225,14 +255,19 @@ def _hop_rows_for_round(state, t, result):
     trace_time = (datetime.fromtimestamp(epoch, timezone.utc).isoformat()
                   if epoch else datetime.now(timezone.utc).isoformat())
 
+    prb    = result.get("prb_id")                       # which probe produced this round
+    pmeta  = state.get("probes", {}).get(str(prb), {})
+    p_asn  = pmeta.get("asn", "")
+    p_city = pmeta.get("city", str(prb) if prb is not None else "")
+
     hop_rows, all_asns, all_cc = [], [], []
     real_count = tmout_count = 0
     dest_rtt = None
 
     base = {
         "target_hostname": t["hostname"], "target_label": t["label"],
-        "target_category": t["category"], "probe_id": state["probe_id"],
-        "probe_asn": state["probe_asn"], "probe_city": state["probe_city"],
+        "target_category": t["category"], "probe_id": prb,
+        "probe_asn": p_asn, "probe_city": p_city,
         "trace_time": trace_time, "target_ip": t_ip, "target_asn": t_asn or "",
         "target_asn_name": t_name, "target_country": t_cc,
         "measurement_id": t["msm_id"],
@@ -285,8 +320,8 @@ def _hop_rows_for_round(state, t, result):
     summary = {
         "trace_time": trace_time, "target_hostname": t["hostname"],
         "target_label": t["label"], "target_category": t["category"],
-        "probe_id": state["probe_id"], "probe_asn": state["probe_asn"],
-        "probe_city": state["probe_city"], "target_ip": t_ip,
+        "probe_id": prb, "probe_asn": p_asn,
+        "probe_city": p_city, "target_ip": t_ip,
         "target_asn": t_asn or "", "target_asn_name": t_name, "target_country": t_cc,
         "dest_rtt_ms": dest_rtt if dest_rtt is not None else "",
         "total_hops": real_count, "timeout_hops": tmout_count,
@@ -335,16 +370,18 @@ def _collect(state, verbose=True):
             all_summary.append(summary)
         if verbose:
             print(f"  ok {t['label']:<16} {len(rounds)} round(s)")
-    all_grouped.sort(key=lambda x: (x["target_hostname"], x["trace_time"], x["hop"] or 0))
-    all_summary.sort(key=lambda x: (x["target_hostname"], x["trace_time"]))
+    all_grouped.sort(key=lambda x: (x["target_hostname"], str(x["probe_id"]),
+                                    x["trace_time"], x["hop"] or 0))
+    all_summary.sort(key=lambda x: (x["target_hostname"], str(x["probe_id"]), x["trace_time"]))
     return all_grouped, all_summary
 
 
 def _collect_pings(state):
     """Pull the 1/min ping companion. Returns (series_rows, stats) where stats is
-    {hostname: {label, sent, rcvd, rtts[]}} for the per-target aggregate
-    (loss%, rtt min/median/max, jitter=stdev) - paper 2's metrics."""
+    {(hostname, probe_id): {label, probe_city, probe_asn, sent, rcvd, rtts[]}} for the
+    per-(site,probe) aggregate (loss%, rtt min/median/max, jitter=stdev)."""
     rows, stats = [], {}
+    probes_meta = state.get("probes", {})
     for t in state["targets"]:
         pmid = t.get("ping_msm_id")
         if not pmid:
@@ -354,8 +391,14 @@ def _collect_pings(state):
             print(f"  ! {t['label']:<16} ping fetch failed after retries - "
                   f"kept out of THIS snapshot (data is safe on RIPE)")
             continue
-        st = stats.setdefault(t["hostname"], {"label": t["label"], "sent": 0, "rcvd": 0, "rtts": []})
         for r in raw if isinstance(raw, list) else []:
+            prb   = r.get("prb_id")
+            pmeta = probes_meta.get(str(prb), {})
+            pcity = pmeta.get("city", str(prb) if prb is not None else "")
+            pasn  = pmeta.get("asn", "")
+            st = stats.setdefault((t["hostname"], prb),
+                                  {"label": t["label"], "probe_city": pcity,
+                                   "probe_asn": pasn, "sent": 0, "rcvd": 0, "rtts": []})
             epoch = r.get("timestamp")
             ptime = (datetime.fromtimestamp(epoch, timezone.utc).isoformat()
                      if epoch else "")
@@ -365,14 +408,15 @@ def _collect_pings(state):
             st["sent"] += sent; st["rcvd"] += rcvd; st["rtts"] += rtts
             rows.append({
                 "ping_time": ptime, "target_hostname": t["hostname"],
-                "target_label": t["label"], "sent": sent, "rcvd": rcvd,
+                "target_label": t["label"], "probe_id": prb,
+                "probe_asn": pasn, "probe_city": pcity, "sent": sent, "rcvd": rcvd,
                 "loss_pct": round(100 * (sent - rcvd) / sent, 1) if sent else "",
                 "rtt_min": r.get("min") if r.get("min", -1) not in (-1, None) else "",
                 "rtt_avg": r.get("avg") if r.get("avg", -1) not in (-1, None) else "",
                 "rtt_max": r.get("max") if r.get("max", -1) not in (-1, None) else "",
                 "measurement_id": pmid,
             })
-    rows.sort(key=lambda x: (x["target_hostname"], x["ping_time"]))
+    rows.sort(key=lambda x: (x["target_hostname"], str(x["probe_id"]), x["ping_time"]))
     return rows, stats
 
 
@@ -467,13 +511,39 @@ def fetch():
         print(f"  ping series   -> {paths[4]}  ({len(ping_rows)} pings)")
 
 
+def git_autopush(state):
+    """After the run completes, commit just this run's results folder and push.
+    Never raises - on any git/auth failure it reports and leaves the files in place
+    (they are also safe on RIPE). Run from the repo root."""
+    msg = (f"Exp03 results: {state['run_name']} "
+           f"({len(state.get('probe_ids', []))} probes x {len(state['targets'])} sites)")
+    try:
+        subprocess.run(["git", "add", RESULTS_DIR], check=True,
+                       capture_output=True, text=True)
+        c = subprocess.run(["git", "commit", "-m", msg], capture_output=True, text=True)
+        if c.returncode != 0 and "nothing to commit" in (c.stdout + c.stderr):
+            print("  auto-push: nothing new to commit"); return
+        if c.returncode != 0:
+            print(f"  auto-push: commit FAILED:\n   {(c.stdout + c.stderr).strip()[:300]}"); return
+        p = subprocess.run(["git", "push"], capture_output=True, text=True)
+        if p.returncode == 0:
+            print("  auto-push: committed + pushed OK")
+        else:
+            print(f"  auto-push: commit OK but PUSH FAILED:\n   {p.stderr.strip()[:300]}")
+            print("   results are saved locally + safe on RIPE; push manually once git auth is set up.")
+    except Exception as e:
+        print(f"  auto-push: FAILED ({e}); results saved locally")
+
+
 def watch():
     """Auto-update the local data every INTERVAL_SEC: re-fetch on the interval and
     overwrite a single live dataset (trace_*_live.*) until the run window ends,
-    then write a final timestamped snapshot. Keep this running in a terminal."""
+    then write a final timestamped snapshot (and, if AUTO_PUSH, commit + push it).
+    Keep this running in a terminal (tmux/VNC) so it survives disconnects."""
     state = _load_state()
     stop  = state["stop"]
     every = state["interval_sec"]
+    completed = False
     print(f"watch: refreshing every {every//60} min until "
           f"{state.get('stop_iso','?')}  (Ctrl-C to stop)\n")
     try:
@@ -485,6 +555,7 @@ def watch():
             print(f"  [{now}Z] {len(summary)} trace rounds, {len(ping_rows)} pings "
                   f"-> *_live.* refreshed")
             if time.time() > stop + 120:          # window closed (+2 min grace)
+                completed = True
                 break
             time.sleep(every)
     except KeyboardInterrupt:
@@ -496,6 +567,12 @@ def watch():
     print("\n  final snapshot:")
     for p in paths:
         print(f"   {p}")
+    if AUTO_PUSH and completed:
+        print()
+        git_autopush(state)
+    elif AUTO_PUSH and not completed:
+        print("\n  auto-push skipped (interrupted before the window closed); "
+              "run a manual git add/commit/push if you want these saved.")
 
 
 # ─────────────────────────────────────────────────────
@@ -510,17 +587,19 @@ def write_path_changes(path, state, summaries, ping_stats=None):
     If a ping companion ran, its per-target loss/RTT/jitter is appended too.
     """
     ping_stats = ping_stats or {}
-    bytarget = {}
+    bykey = {}
     for s in summaries:
-        bytarget.setdefault(s["target_hostname"], []).append(s)
+        bykey.setdefault((s["target_hostname"], s["probe_id"]), []).append(s)
 
+    probes = state.get("probes", {})
+    plist = ", ".join(f"{m['city']}(AS{m['asn']})" for m in probes.values()) or "?"
     lines = [f"Longitudinal routing - {state['run_name']}",
-             f"probe {state['probe_id']} (AS{state['probe_asn']}, {state['probe_city']})"
-             f"  every {state['interval_sec']//60} min",
+             f"{len(state.get('probe_ids', []))} probes: {plist}"
+             f"  every {state['interval_sec']//60} min   (blocks below are per site x probe)",
              f"window {state.get('start_iso','?')}  ->  {state.get('stop_iso','?')}", ""]
 
-    for host in sorted(bytarget):
-        rows = sorted(bytarget[host], key=lambda x: x["trace_time"])
+    for (host, prb) in sorted(bykey, key=lambda k: (k[0], str(k[1]))):
+        rows = sorted(bykey[(host, prb)], key=lambda x: x["trace_time"])
         n = len(rows)
         answered = [r for r in rows if r["destination_responded"]]
         rtts = [float(r["dest_rtt_ms"]) for r in answered if r["dest_rtt_ms"] != ""]
@@ -528,6 +607,7 @@ def write_path_changes(path, state, summaries, ping_stats=None):
 
         lines.append("=" * 70)
         lines.append(f" {host}   -   {label}  ({rows[0]['target_category']})")
+        lines.append(f"   probe {prb}  AS{rows[0]['probe_asn']}  {rows[0]['probe_city']}")
         lines.append(f"   rounds: {n}   reachable: {len(answered)}/{n} "
                      f"({100*len(answered)//n if n else 0}%)")
         if rtts:
@@ -566,7 +646,7 @@ def write_path_changes(path, state, summaries, ping_stats=None):
         else:
             lines.append("   path changes: 0  (stable for the whole window)")
 
-        ps = ping_stats.get(host)
+        ps = ping_stats.get((host, prb))
         if ps and ps["sent"]:
             loss = 100 * (ps["sent"] - ps["rcvd"]) / ps["sent"]
             pr = ps["rtts"]

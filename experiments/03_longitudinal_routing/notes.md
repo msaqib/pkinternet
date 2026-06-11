@@ -1,19 +1,20 @@
-# Experiment 03 — Longitudinal Routing (one probe → 5 sites, every 15 min)
+# Experiment 03 — Longitudinal Routing (5 probes → 5 sites, every 15 min)
 
 **Author:** Rayan Atif
 
 ## Objective
 
 Experiments 01/01.1/01.2 take a **single snapshot** of where Pakistani sites live
-and how each ISP reaches them. This experiment adds the **time axis**: from **one
-probe** (one ISP), repeatedly traceroute the **same 5 destinations every 15
-minutes** over several days, and record whether the **path** and the **RTT**
-change over time.
+and how each ISP reaches them. This experiment adds the **time axis**: from **5 PK
+probes** (one per ISP), repeatedly traceroute the **same 5 destinations every 15
+minutes** over a day, and record whether the **path** and the **RTT** change over
+time — **per (site, probe)**, so ISPs can be compared. (The first run,
+`run_20260610_2h`, used a single Nayatel probe as a baseline.)
 
 The question it answers for PKIX work:
 
-> For a real Pakistani user on one ISP, is the route to a site **stable**, or does
-> it flip between a local path and a foreign hairpin (different CDN PoP, different
+> For a real Pakistani user on a given ISP, is the route to a site **stable**, or
+> does it flip between a local path and a foreign hairpin (different CDN PoP, different
 > transit) depending on the time of day? How much does RTT swing across the
 > diurnal (day/night) cycle?
 
@@ -52,7 +53,7 @@ real structure; this is the time-domain version of that warning.)
 
 | Decision | Value | Why |
 |---|---|---|
-| **Probe** | **1 probe — 60223 (Nayatel, AS23674, Islamabad)** | Single ISP = clean per-user view. Nayatel is chosen because its traceroutes show **full hop visibility** (it is the most route-independent probe, ~40 % non-LDI paths) — the PTCL probe runs in Docker and the Transworld probe filters ICMP (`* * *`), so neither can show a *path* change even if one happened. You can't study path stability on a probe whose path is invisible. |
+| **Probes** | **5 PK probes** — 60223 Nayatel (AS23674), 62224 Transworld (AS38193), 7613 Z COM Networks (AS152605), 1016036 Cybernet (AS9541), 1015679 LocalInternetProj01 (AS136174) | One measurement per site runs from **all 5 at once** (RIPE multi-probe), so every output is **per (site, probe)** and ISPs are directly comparable. Each result carries its `prb_id`. Note: some probes (Docker / ICMP-filtering) may show `* * *` mid-path and can't reveal a *path* change — Nayatel remains the most route-visible. Earlier single-probe runs (e.g. `run_20260610_2h`) used only Nayatel. |
 | **Targets** | **5 sites**, deliberately spread by behaviour (see `targets.md`) | One stable PK server (control), two Cloudflare anycast sites that were already seen to flip PoP (Karachi vs Hong Kong/Singapore) across ISPs, one US-hairpinning gov site, one foreign real server. The mix maximises the chance of *seeing* change and contrast. |
 | **Traceroute type** | **ICMP, Paris (`paris=16`)**, `max_hops=32`, `size=48`, `dont_fragment` | Identical to Exp 01 so results are directly comparable, and Paris kills load-balancer false positives (above). |
 | **Interval** | **15 min** (900 s) → 96 rounds/target/day | Matches the paper-2 cadence band (10 min), round number, low credit cost, fine enough to resolve the diurnal RTT curve and any path change lasting more than ~30 min. |
@@ -121,16 +122,30 @@ python experiments/03_longitudinal_routing/trace_monitor.py schedule
 # 2a) one-shot: pull results so far + build timestamped CSVs
 python experiments/03_longitudinal_routing/trace_monitor.py fetch
 
-# 2b) OR auto-refresh the local data every INTERVAL_SEC until the window closes
+# 2b) OR auto-refresh the local data every INTERVAL_SEC until the window closes,
+#     then (if AUTO_PUSH) auto-commit + push the results folder. Run inside
+#     tmux/VNC so it survives SSH disconnects on a 24h run.
 python experiments/03_longitudinal_routing/trace_monitor.py watch
 
 # optional: stop the measurements early
 python experiments/03_longitudinal_routing/trace_monitor.py stop
 ```
 
-Edit `RUN_NAME`, `PROBE`, `TARGETS`, `INTERVAL_SEC`, `DURATION_HOURS`, and the
-`PING_COMPANION` / `PING_INTERVAL_SEC` / `PING_PACKETS` knobs at the top of
-`trace_monitor.py` before scheduling.
+Edit `RUN_NAME`, `PROBES`, `TARGETS`, `INTERVAL_SEC`, `DURATION_HOURS`, and the
+`PING_COMPANION` / `PING_INTERVAL_SEC` / `PING_PACKETS` / `AUTO_PUSH` knobs at the
+top of `trace_monitor.py` before scheduling.
+
+**Multi-probe credit cost.** One measurement per site fans out to all probes, so
+cost scales with `targets × rounds × probes`. A 24 h, 5-probe, 5-site run is
+**~156k credits** — and **~108k of that is the 1/min ping companion**. To cut it:
+set `PING_INTERVAL_SEC = 300` (1/5 min → ~22k for pings), or `PING_COMPANION =
+False`. `schedule` prints the estimate and asks for confirmation when run
+interactively.
+
+**Auto-push** (`AUTO_PUSH = True`) makes `watch` commit the run's results folder
+and `git push` when the window closes. It needs working git auth on the machine
+(SSH deploy key or cached HTTPS token); on failure it reports and leaves the files
+in place (they're also safe on RIPE).
 
 **Credit cost:** 5 targets × 96 rounds/day × ~20 credits ≈ **9.6k credits/day**
 (~29k for a 72 h run) — well within budget.
