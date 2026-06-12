@@ -1,0 +1,273 @@
+Longitudinal routing - run_20260611_24h
+5 probes: Nayatel(AS23674), Transworld(AS38193), Z COM Networks(AS152605), Cybernet(AS9541), LocalInternetProj01(AS136174)  every 15 min   (blocks below are per site x probe)
+window 2026-06-11T09:12:28+00:00  ->  2026-06-12T09:12:28+00:00
+
+======================================================================
+ dunyanews.tv   -   Dunya News  (news)
+   probe 1015679  AS136174  LocalInternetProj01
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 2.8  median 3.2  max 26.2  jitter(stdev) 7.5
+   distinct AS-paths: 1
+     [   9x]  6327 > 38193 > 9260
+              served via: Islamabad, Islamabad, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 410 pkts, loss 0.2%  |  rtt min 2.7  median 4.4  max 27.2  jitter(stdev) 4.7 ms
+
+======================================================================
+ dunyanews.tv   -   Dunya News  (news)
+   probe 1016036  AS9541  Cybernet
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 40.4  median 41.2  max 52.9  jitter(stdev) 4.5
+   distinct AS-paths: 1
+     [   9x]  9541 > 38193 > 9260
+              served via: Islamabad, Islamabad, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 406 pkts, loss 0.0%  |  rtt min 39.9  median 41.9  max 89.6  jitter(stdev) 6.9 ms
+
+======================================================================
+ dunyanews.tv   -   Dunya News  (news)
+   probe 60223  AS23674  Nayatel
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 39.2  median 42.0  max 42.3  jitter(stdev) 1.2
+   distinct AS-paths: 1
+     [   9x]  38193 > 9260
+              served via: Islamabad, Islamabad, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 414 pkts, loss 0.0%  |  rtt min 39.0  median 42.4  max 102.6  jitter(stdev) 3.2 ms
+
+======================================================================
+ dunyanews.tv   -   Dunya News  (news)
+   probe 62224  AS38193  Transworld
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 6.1  median 6.6  max 7.2  jitter(stdev) 0.3
+   distinct AS-paths: 1
+     [   9x]  9260
+              served via: Islamabad, Islamabad, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 399 pkts, loss 1.3%  |  rtt min 4.8  median 7.4  max 32.5  jitter(stdev) 2.8 ms
+
+======================================================================
+ dunyanews.tv   -   Dunya News  (news)
+   probe 7613  AS152605  Z COM Networks
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 1.5  median 1.6  max 1.6  jitter(stdev) 0.0
+   distinct AS-paths: 1
+     [   9x]  152605 > 38193 > 9260
+              served via: Islamabad, Islamabad, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 399 pkts, loss 0.3%  |  rtt min 1.5  median 1.6  max 2.7  jitter(stdev) 0.1 ms
+
+======================================================================
+ hbl.com   -   HBL Bank  (banking)
+   probe 1015679  AS136174  LocalInternetProj01
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 208.6  median 211.5  max 211.9  jitter(stdev) 1.3
+   distinct AS-paths: 1
+     [   9x]  6327 > 38193 > 174 > 19551
+              served via: Secaucus, New Jersey, US
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 383 pkts, loss 3.1%  |  rtt min 205.7  median 211.9  max 2796.9  jitter(stdev) 180.7 ms
+
+======================================================================
+ hbl.com   -   HBL Bank  (banking)
+   probe 1016036  AS9541  Cybernet
+   rounds: 10   reachable: 10/10 (100%)
+   dest RTT (ms): min 210.1  median 211.2  max 211.5  jitter(stdev) 0.5
+   distinct AS-paths: 1
+     [  10x]  9541 > 174 > 19551
+              served via: Secaucus, New Jersey, US
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 406 pkts, loss 0.2%  |  rtt min 209.7  median 211.5  max 221.8  jitter(stdev) 1.5 ms
+
+======================================================================
+ hbl.com   -   HBL Bank  (banking)
+   probe 60223  AS23674  Nayatel
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 199.7  median 200.1  max 212.3  jitter(stdev) 3.9
+   distinct AS-paths: 1
+     [   9x]  174 > 19551
+              served via: Secaucus, New Jersey, US
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 414 pkts, loss 0.0%  |  rtt min 199.1  median 200.3  max 219.7  jitter(stdev) 4.0 ms
+
+======================================================================
+ hbl.com   -   HBL Bank  (banking)
+   probe 62224  AS38193  Transworld
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 201.6  median 203.4  max 206.2  jitter(stdev) 1.3
+   distinct AS-paths: 1
+     [   9x]  19551
+              served via: -
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 410 pkts, loss 0.0%  |  rtt min 200.5  median 203.0  max 224.6  jitter(stdev) 2.4 ms
+
+======================================================================
+ hbl.com   -   HBL Bank  (banking)
+   probe 7613  AS152605  Z COM Networks
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 201.8  median 201.9  max 202.0  jitter(stdev) 0.1
+   distinct AS-paths: 1
+     [   9x]  152605 > 38193 > 174 > 19551
+              served via: Secaucus, New Jersey, US
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 408 pkts, loss 0.2%  |  rtt min 196.2  median 202.0  max 203.9  jitter(stdev) 0.5 ms
+
+======================================================================
+ mcb.com.pk   -   MCB Bank  (banking)
+   probe 1015679  AS136174  LocalInternetProj01
+   rounds: 10   reachable: 10/10 (100%)
+   dest RTT (ms): min 131.6  median 131.8  max 132.3  jitter(stdev) 0.2
+   distinct AS-paths: 1
+     [  10x]  6327 > 38193 > 6762 > 3257 > 30148
+              served via: London, England, GB
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 410 pkts, loss 0.5%  |  rtt min 131.5  median 132.5  max 199.2  jitter(stdev) 5.0 ms
+
+======================================================================
+ mcb.com.pk   -   MCB Bank  (banking)
+   probe 1016036  AS9541  Cybernet
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 138.3  median 138.6  max 150.1  jitter(stdev) 4.7
+   distinct AS-paths: 1
+     [   9x]  9541 > 1299 > 20773 > 30148
+              served via: Cologne, North Rhine-Westphalia, DE
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 407 pkts, loss 0.5%  |  rtt min 138.3  median 139.6  max 162.3  jitter(stdev) 5.5 ms
+
+======================================================================
+ mcb.com.pk   -   MCB Bank  (banking)
+   probe 60223  AS23674  Nayatel
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 127.7  median 128.7  max 197.6  jitter(stdev) 27.6
+   distinct AS-paths: 1
+     [   9x]  2914 > 30148
+              served via: Singapore, Central Singapore, SG
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 405 pkts, loss 0.5%  |  rtt min 127.4  median 130.0  max 198.8  jitter(stdev) 27.8 ms
+
+======================================================================
+ mcb.com.pk   -   MCB Bank  (banking)
+   probe 62224  AS38193  Transworld
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 132.2  median 133.2  max 137.5  jitter(stdev) 1.5
+   distinct AS-paths: 1
+     [   9x]  30148
+              served via: -
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 410 pkts, loss 0.2%  |  rtt min 130.9  median 133.7  max 159.5  jitter(stdev) 2.9 ms
+
+======================================================================
+ mcb.com.pk   -   MCB Bank  (banking)
+   probe 7613  AS152605  Z COM Networks
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 130.1  median 130.3  max 130.7  jitter(stdev) 0.2
+   distinct AS-paths: 1
+     [   9x]  152605 > 38193 > 6762 > 3257 > 30148
+              served via: Frankfurt am Main, Hesse, DE
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 405 pkts, loss 0.0%  |  rtt min 130.0  median 130.3  max 134.0  jitter(stdev) 0.3 ms
+
+======================================================================
+ pseb.org.pk   -   PSEB  (government)
+   probe 1015679  AS136174  LocalInternetProj01
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 37.3  median 37.8  max 40.9  jitter(stdev) 1.1
+   distinct AS-paths: 1
+     [   9x]  6327 > 38193 > 9260
+              served via: Karachi, Sindh, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 406 pkts, loss 0.2%  |  rtt min 37.1  median 38.3  max 4098.6  jitter(stdev) 206.5 ms
+
+======================================================================
+ pseb.org.pk   -   PSEB  (government)
+   probe 1016036  AS9541  Cybernet
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 24.3  median 24.7  max 35.4  jitter(stdev) 3.6
+   distinct AS-paths: 1
+     [   9x]  9541 > 9260
+              served via: Karachi, Sindh, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 402 pkts, loss 0.5%  |  rtt min 24.0  median 25.3  max 47.6  jitter(stdev) 5.3 ms
+
+======================================================================
+ pseb.org.pk   -   PSEB  (government)
+   probe 60223  AS23674  Nayatel
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 2.7  median 23.0  max 23.2  jitter(stdev) 6.4
+   distinct AS-paths: 1
+     [   9x]  9260
+              served via: Karachi, Sindh, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 413 pkts, loss 0.0%  |  rtt min 3.2  median 23.4  max 28.4  jitter(stdev) 6.3 ms
+
+======================================================================
+ pseb.org.pk   -   PSEB  (government)
+   probe 62224  AS38193  Transworld
+   rounds: 9   reachable: 9/9 (100%)
+   dest RTT (ms): min 40.4  median 40.8  max 41.7  jitter(stdev) 0.4
+   distinct AS-paths: 1
+     [   9x]  9260
+              served via: Karachi, Sindh, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 408 pkts, loss 0.0%  |  rtt min 39.5  median 42.2  max 66.1  jitter(stdev) 2.2 ms
+
+======================================================================
+ pseb.org.pk   -   PSEB  (government)
+   probe 7613  AS152605  Z COM Networks
+   rounds: 8   reachable: 8/8 (100%)
+   dest RTT (ms): min 36.4  median 39.1  max 39.2  jitter(stdev) 1.2
+   distinct AS-paths: 1
+     [   8x]  152605 > 38193 > 9260
+              served via: Karachi, Sindh, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 410 pkts, loss 0.0%  |  rtt min 36.3  median 39.2  max 47.6  jitter(stdev) 1.3 ms
+
+======================================================================
+ ptcl.com.pk   -   PTCL  (telecom)
+   probe 1015679  AS136174  LocalInternetProj01
+   rounds: 9   reachable: 0/9 (0%)
+   distinct AS-paths: 1
+     [   9x]  6327 > 38193 > 17557
+              served via: Islamabad, Islamabad, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 411 pkts, loss 100.0% (no replies)
+
+======================================================================
+ ptcl.com.pk   -   PTCL  (telecom)
+   probe 1016036  AS9541  Cybernet
+   rounds: 9   reachable: 0/9 (0%)
+   distinct AS-paths: 1
+     [   9x]  9541 > 9557
+              served via: Islamabad, Islamabad, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 408 pkts, loss 100.0% (no replies)
+
+======================================================================
+ ptcl.com.pk   -   PTCL  (telecom)
+   probe 60223  AS23674  Nayatel
+   rounds: 9   reachable: 0/9 (0%)
+   distinct AS-paths: 1
+     [   9x]  17557
+              served via: Islamabad, Islamabad, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 414 pkts, loss 100.0% (no replies)
+
+======================================================================
+ ptcl.com.pk   -   PTCL  (telecom)
+   probe 62224  AS38193  Transworld
+   rounds: 9   reachable: 0/9 (0%)
+   distinct AS-paths: 1
+     [   9x]  (no path visible)
+              served via: Islamabad, Islamabad, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 411 pkts, loss 100.0% (no replies)
+
+======================================================================
+ ptcl.com.pk   -   PTCL  (telecom)
+   probe 7613  AS152605  Z COM Networks
+   rounds: 9   reachable: 0/9 (0%)
+   distinct AS-paths: 1
+     [   9x]  152605 > 38193 > 17557
+              served via: Islamabad, Islamabad, PK
+   path changes: 0  (stable for the whole window)
+   ping 1/min: 411 pkts, loss 100.0% (no replies)

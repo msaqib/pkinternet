@@ -1,0 +1,79 @@
+{
+  "run_name": "run_20260611_24h",
+  "interval_sec": 900,
+  "probe_ids": [
+    60223,
+    62224,
+    7613,
+    1016036,
+    1015679
+  ],
+  "probes": {
+    "60223": {
+      "asn": 23674,
+      "city": "Nayatel"
+    },
+    "62224": {
+      "asn": 38193,
+      "city": "Transworld"
+    },
+    "7613": {
+      "asn": 152605,
+      "city": "Z COM Networks"
+    },
+    "1016036": {
+      "asn": 9541,
+      "city": "Cybernet"
+    },
+    "1015679": {
+      "asn": 136174,
+      "city": "LocalInternetProj01"
+    }
+  },
+  "start": 1781169148,
+  "stop": 1781255548,
+  "start_iso": "2026-06-11T09:12:28+00:00",
+  "stop_iso": "2026-06-12T09:12:28+00:00",
+  "targets": [
+    {
+      "hostname": "dunyanews.tv",
+      "label": "Dunya News",
+      "category": "news",
+      "ip": "202.142.167.148",
+      "msm_id": 179311279,
+      "ping_msm_id": 179311285
+    },
+    {
+      "hostname": "hbl.com",
+      "label": "HBL Bank",
+      "category": "banking",
+      "ip": "45.60.73.176",
+      "msm_id": 179311289,
+      "ping_msm_id": 179311292
+    },
+    {
+      "hostname": "mcb.com.pk",
+      "label": "MCB Bank",
+      "category": "banking",
+      "ip": "192.124.249.159",
+      "msm_id": 179311300,
+      "ping_msm_id": 179311301
+    },
+    {
+      "hostname": "ptcl.com.pk",
+      "label": "PTCL",
+      "category": "telecom",
+      "ip": "221.120.226.61",
+      "msm_id": 179311305,
+      "ping_msm_id": 179311307
+    },
+    {
+      "hostname": "pseb.org.pk",
+      "label": "PSEB",
+      "category": "government",
+      "ip": "125.209.103.90",
+      "msm_id": 179311308,
+      "ping_msm_id": 179311311
+    }
+  ]
+}
