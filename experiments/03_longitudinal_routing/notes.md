@@ -55,11 +55,29 @@ real structure; this is the time-domain version of that warning.)
 |---|---|---|
 | **Probes** | **5 PK probes** — 60223 Nayatel (AS23674), 62224 Transworld (AS38193), 7613 Z COM Networks (AS152605), 1016036 Cybernet (AS9541), 1015679 LocalInternetProj01 (AS136174) | One measurement per site runs from **all 5 at once** (RIPE multi-probe), so every output is **per (site, probe)** and ISPs are directly comparable. Each result carries its `prb_id`. Note: some probes (Docker / ICMP-filtering) may show `* * *` mid-path and can't reveal a *path* change — Nayatel remains the most route-visible. Earlier single-probe runs (e.g. `run_20260610_2h`) used only Nayatel. |
 | **Targets** | **5 sites**, deliberately spread by behaviour (see `targets.md`) | One stable PK server (control), two Cloudflare anycast sites that were already seen to flip PoP (Karachi vs Hong Kong/Singapore) across ISPs, one US-hairpinning gov site, one foreign real server. The mix maximises the chance of *seeing* change and contrast. |
-| **Traceroute type** | **ICMP, Paris (`paris=16`)**, `max_hops=32`, `size=48`, `dont_fragment` | Identical to Exp 01 so results are directly comparable, and Paris kills load-balancer false positives (above). |
+| **Traceroute type** | **ICMP, Paris (`paris=16`)**, `max_hops=32`, `size=48`, `dont_fragment`, **3 packets/hop** (RIPE default) | Identical to Exp 01 so results are directly comparable, and Paris kills load-balancer false positives (above). |
 | **Interval** | **15 min** (900 s) → 96 rounds/target/day | Matches the paper-2 cadence band (10 min), round number, low credit cost, fine enough to resolve the diurnal RTT curve and any path change lasting more than ~30 min. |
 | **Duration** | **≥ 48–72 h, ideally including a weekend** | Must cover **full 24 h diurnal cycles** (peak-evening congestion vs early-morning) and ≥1 weekend/weekday contrast. 48 h is one CAIDA-Ark cycle; 72 h is safer. |
 | **Scheduling** | RIPE Atlas **periodic measurement** (`is_oneoff=False`, `interval=900`, `start`/`stop`), **not** a local loop of one-offs | RIPE's own infrastructure fires every 15 min on time, survives our script/laptop dying, and is one measurement ID per target (5 total) instead of thousands of one-offs. Results persist on RIPE and are fetched later (matches CLAUDE.md's interrupted-run recovery philosophy). |
 | **RTT recorded** | **min (best-of-3) reply** to the destination per round | Exp 01 stored the *first* reply (noisy — a documented caveat). For a time series we take the **min of the hop's replies**, which removes per-round queuing jitter and makes the diurnal trend cleaner. |
+
+### Packets per traceroute (and what "a round" costs)
+
+Each traceroute probes by **incrementing TTL** (1, 2, 3, …); the router that many
+hops away replies. At **each hop (each TTL) RIPE sends 3 packets** — this is the
+RIPE default and we don't override it. So:
+- Each hop gets up to **3 RTT samples**, and we record the **min (best-of-3)** —
+  see the *RTT recorded* row; the other two still cost packets but aren't stored.
+- A traceroute **stops when it reaches the destination**, not at `max_hops`. So a
+  path that reaches the target in 12 hops sends ≈ **12 × 3 = 36 packets** out (plus
+  replies), not 32 × 3. Timed-out hops (`* * *`) still cost their 3 packets.
+- A **"round"** in the `watch` log = one *whole* traceroute (one probe → one target
+  at one 15-min mark), **not** a packet. Each 15-min cycle adds up to
+  `sites × probes` rounds (25 here). This `~hops × 3 packets/round` is exactly the
+  assumption behind the wire-traffic figure in `stats` (~32 MB for the full run).
+
+To send fewer packets (cheaper, slightly noisier RTT) add `"packets": 1` to the
+traceroute payload in `create_periodic` — but 3 is the sensible default.
 
 ### What counts as "a change"
 
