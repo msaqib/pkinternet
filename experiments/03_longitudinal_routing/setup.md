@@ -59,6 +59,34 @@ git push                                   # verify
 ```
 If you skip this, just `fetch` the results to your laptop instead — nothing is lost.
 
+## 6. Re-enter the session and check progress
+SSH back into the server (on LUMS VPN/campus network if it's a LUMS box), then:
+```bash
+tmux ls                         # list sessions - you should see "trace"
+tmux attach -t trace            # reattach to the live watch log
+#   it ticks every 15 min:  [HH:MM:SSZ] N trace rounds, M pings -> *_live.* refreshed
+#   detach again WITHOUT stopping it:  Ctrl-b  then  d   (do NOT press Ctrl-C)
+```
+
+To look at the data **without disturbing `watch`**, either open a second SSH
+session, or a new tmux window from inside the session (`Ctrl-b` then `c`; switch
+back with `Ctrl-b` then `0`). Then pull a fresh snapshot and read it:
+```bash
+cd ~/pkinternet
+python3 experiments/03_longitudinal_routing/trace_monitor.py fetch
+
+R=experiments/03_longitudinal_routing/results/$(ls -t experiments/03_longitudinal_routing/results | head -1)
+cat $R/path_changes_*.txt | head -80          # per (site, probe): reachability, RTT, paths, ASN flags
+grep -E "reachable|VARIES|!=" $R/path_changes_*.txt   # quick health + multi-ISP/ASN-mismatch flags
+```
+Healthy signs: 25 blocks (5 sites × 5 probes), `reachable: N/N` climbing, sane RTTs.
+`ptcl.com.pk` showing `0%` reachable is expected (it firewalls ICMP — trust the
+traceroute path, not the ping).
+
+If `tmux attach` says **"no server running"** or the `trace` session is gone (e.g.
+the box rebooted), `watch` stopped — but the measurements are still running on RIPE.
+Just restart it: `tmux new -s trace` then `python3 …/trace_monitor.py watch`.
+
 ## Getting results without the server
 The data lives on RIPE, so you don't strictly need the server running: `schedule`
 returns instantly and RIPE runs for the full window on its own. You can then
