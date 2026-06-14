@@ -1,20 +1,54 @@
-# Experiment 03 — the 5 longitudinal targets
+# Experiment 03 — targets and probes (`run_20260612_48h`)
 
-Picked from the Exp 01 results so that the set spans the behaviours most likely to
-**change over time**, plus one stable control. Edit the `TARGETS` list in
-`trace_monitor.py` to match this table.
+8 probes × 10 targets, ICMP Paris traceroute every 15 min + 1 ping / 5 min, over
+**48 h** (two diurnal cycles). Edit the `PROBES` / `TARGETS` lists in
+`trace_monitor.py` to match these tables.
 
-| # | Hostname | Label | Category | Exp 01 behaviour | Why watch it over time |
+## 10 targets
+
+Picked from the Exp 01 results to span the behaviours most likely to **change over
+time**, with two stable PK controls. Mix: 2 PK-hosted, 2 local-Cloudflare, 2
+international-Cloudflare, 1 ecommerce abroad, 2 banks abroad, 1 GeoDNS/anycast gov.
+
+| # | Hostname | Label | Category | Hosting (Exp 01) | Why watch it over time |
 |---|----------|-------|----------|------------------|------------------------|
-| 1 | `pseb.org.pk` | PSEB | government | Real PK server on **Multinet (AS9260)**, genuinely local (~40 ms) | **Stable control.** A real in-country unicast server should show a flat path/RTT. If *this* moves, something systemic changed. |
-| 2 | `sehat.com.pk` | Sehat | health | **Cloudflare anycast**; observed serving from **Karachi** on some ISPs but **Hong Kong (~195 ms)** on Z-Com | Prime PoP-flip candidate — watch whether the handoff metro swings between PK and HK/SG across the day. |
-| 3 | `bykea.com` | Bykea | food | **Cloudflare anycast**; seen at **Islamabad ~6 ms** (Nayatel) vs **Hong Kong ~194 ms** (Z-Com) | Second anycast watcher; from the Nayatel probe it should be local — does it ever get pushed abroad at peak? |
-| 4 | `moitt.gov.pk` | MoITT | government | PK ASN (Cybernet) but **hairpins through Akamai Prolexic (AS32787) in the US**, 120–210 ms, often no reply | High-latency hairpin + scrubbing — watch RTT swing and reachability (loss) over time. |
-| 5 | `dailypakistan.com.pk` | Daily Pakistan | news | **Foreign real server — Hetzner, Helsinki (FI)** | Stable *foreign* unicast baseline: path should be steady but long; contrasts with target 1 (stable + local) and isolates pure diurnal RTT change on a fixed foreign path. |
+| 1 | `dunyanews.tv` | Dunya News | news | **PK** — Multinet (AS9260), Islamabad | Stable local control + continuity with the 24 h run. |
+| 2 | `fbr.gov.pk` | FBR | government | **PK** — FBR (AS138424), Islamabad | Second local control on a different network. |
+| 3 | `dawn.com` | Dawn | news | Cloudflare → **Karachi** (local edge) | Top-traffic news on a local CDN edge; watch for per-ISP edge / evening shifts. |
+| 4 | `geo.tv` | Geo TV | news | Cloudflare → **Karachi** (local edge) | Second local-CDN watcher, high traffic. |
+| 5 | `express.com.pk` | Express | news | Cloudflare → **Singapore** (served abroad) | International-CDN: does the handoff metro ever flip PK↔SG over the day? |
+| 6 | `telemart.pk` | Telemart | ecommerce | Cloudflare → **Hong Kong** (served abroad) | Second international-CDN PoP-flip candidate. |
+| 7 | `daraz.pk` | Daraz | ecommerce | Alibaba, **Singapore** | #1 shopping site → evening-congestion / diurnal-RTT candidate. |
+| 8 | `hbl.com` | HBL Bank | banking | Incapsula, **New Jersey US** | Offshore bank (~200 ms); continuity with the 24 h run. |
+| 9 | `mcb.com.pk` | MCB Bank | banking | Sucuri, **Singapore** | Offshore bank (~130 ms); **ICMP-blocked at host** → loss signal, trust the path. |
+| 10 | `nadra.gov.pk` | NADRA | government | Akamai (**GeoDNS / anycast**) | Best path-change candidate — Akamai edge varies per ISP; watch the serving metro. |
 
-**Probe:** 60223 — Nayatel (AS23674), Islamabad. Chosen for full hop visibility
-(see `notes.md` → Chosen methodology).
+## 8 probes
 
-These 5 are **not** in Exp 1.1's GeoDNS list, so resolving once at schedule time is
-valid. If you swap any target, re-check it against
-`experiments/01.1_dns_resolution/` first.
+All connected PK RIPE Atlas probes **except the Endangered one (1014872, AS150683)**.
+Six distinct ISPs; Cybernet (AS9541) and PTCL (AS17557) each contribute two probes.
+
+| Probe | ASN | ISP | City | Note |
+|-------|-----|-----|------|------|
+| 60223 | AS23674 | Nayatel | Islamabad | most route-visible (full hop visibility) |
+| 62224 | AS38193 | Transworld | Lahore | LDI (licensed international transit) |
+| 7613 | AS152605 | Z COM Networks | Lahore | **anchor** |
+| 1016036 | AS9541 | Cybernet | Haripur | LocalInternetProj02 |
+| 1016143 | AS9541 | Cybernet | Karachi | LocalInternetProj04 (2nd Cybernet) |
+| 7764 | AS17557 | **PTCL** | LUMS | **anchor** — PTCL vantage (dominant LDI), new this run |
+| 1016126 | AS17557 | PTCL | Karachi | LocalInternetProj05 (2nd PTCL) |
+| 1015679 | AS136174 | TPCPL / Nova | Lahore | LocalInternetProj01 |
+
+Each result records the probe's **live-measured egress ASN** (`probe_asn`) alongside
+the registered one (`probe_asn_reg`) — useful here since two probes share AS9541 and
+two share AS17557. See `notes.md` → *Dynamic probe ASN*.
+
+## Caveats on this target set
+
+- **GeoDNS (`nadra.gov.pk`, and Akamai/Cloudflare generally):** the hostname is
+  resolved **once at schedule time**, so all 8 probes measure the **same IP** — we do
+  *not* capture per-ISP GeoDNS IP differences (only anycast *routing* differences to
+  that IP). Exp 1.1 flagged `nadra` as GeoDNS; the script records each round's
+  `dst_addr` so any silent re-resolution is still visible.
+- **`mcb.com.pk`** firewalls ICMP at the host (100 % no-reply) — treat the traceroute
+  *path* as the signal, not the loss.

@@ -53,12 +53,12 @@ real structure; this is the time-domain version of that warning.)
 
 | Decision | Value | Why |
 |---|---|---|
-| **Probes** | **5 PK probes** — 60223 Nayatel (AS23674), 62224 Transworld (AS38193), 7613 Z COM Networks (AS152605), 1016036 Cybernet (AS9541), 1015679 LocalInternetProj01 (AS136174) | One measurement per site runs from **all 5 at once** (RIPE multi-probe), so every output is **per (site, probe)** and ISPs are directly comparable. Each result carries its `prb_id`. Note: some probes (Docker / ICMP-filtering) may show `* * *` mid-path and can't reveal a *path* change — Nayatel remains the most route-visible. Earlier single-probe runs (e.g. `run_20260610_2h`) used only Nayatel. |
-| **Targets** | **5 sites**, deliberately spread by behaviour (see `targets.md`) | One stable PK server (control), two Cloudflare anycast sites that were already seen to flip PoP (Karachi vs Hong Kong/Singapore) across ISPs, one US-hairpinning gov site, one foreign real server. The mix maximises the chance of *seeing* change and contrast. |
+| **Probes** | **8 PK probes** across 6 ISPs (full list in `targets.md`): Nayatel, Transworld, Z-Com (anchor), **Cybernet ×2**, **PTCL ×2** (7764 anchor + 1016126), TPCPL/Nova. All connected PK probes except the Endangered one (1014872). | One measurement per site runs from **all 8 at once** (RIPE multi-probe), so every output is **per (site, probe)** and ISPs are directly comparable. Each result carries its `prb_id` and its **live-measured egress ASN** (two probes share AS9541, two share AS17557). Note: some probes (Docker / ICMP-filtering) show `* * *` mid-path and can't reveal a *path* change — Nayatel is the most route-visible. Earlier runs used fewer probes (`run_20260610_2h` = 1, `run_20260611_24h` = 5). |
+| **Targets** | **10 sites**, spread by behaviour (see `targets.md`) | 2 PK-hosted controls, 2 local-Cloudflare, 2 international-Cloudflare, 1 ecommerce abroad, 2 banks abroad, 1 GeoDNS/anycast gov. The mix maximises the chance of *seeing* PoP flips / diurnal change while keeping stable baselines. |
 | **Traceroute type** | **ICMP, Paris (`paris=16`)**, `max_hops=32`, `size=48`, `dont_fragment`, **3 packets/hop** (RIPE default) | Identical to Exp 01 so results are directly comparable, and Paris kills load-balancer false positives (above). |
 | **Interval** | **15 min** (900 s) → 96 rounds/target/day | Matches the paper-2 cadence band (10 min), round number, low credit cost, fine enough to resolve the diurnal RTT curve and any path change lasting more than ~30 min. |
 | **Duration** | **≥ 48–72 h, ideally including a weekend** | Must cover **full 24 h diurnal cycles** (peak-evening congestion vs early-morning) and ≥1 weekend/weekday contrast. 48 h is one CAIDA-Ark cycle; 72 h is safer. |
-| **Scheduling** | RIPE Atlas **periodic measurement** (`is_oneoff=False`, `interval=900`, `start`/`stop`), **not** a local loop of one-offs | RIPE's own infrastructure fires every 15 min on time, survives our script/laptop dying, and is one measurement ID per target (5 total) instead of thousands of one-offs. Results persist on RIPE and are fetched later (matches CLAUDE.md's interrupted-run recovery philosophy). |
+| **Scheduling** | RIPE Atlas **periodic measurement** (`is_oneoff=False`, `interval=900`, `start`/`stop`), **not** a local loop of one-offs | RIPE's own infrastructure fires every 15 min on time, survives our script/laptop dying, and is one measurement ID per target (10 trace + 10 ping = 20) instead of thousands of one-offs. Results persist on RIPE and are fetched later (matches CLAUDE.md's interrupted-run recovery philosophy). |
 | **RTT recorded** | **min (best-of-3) reply** to the destination per round | Exp 01 stored the *first* reply (noisy — a documented caveat). For a time series we take the **min of the hop's replies**, which removes per-round queuing jitter and makes the diurnal trend cleaner. |
 
 ### Packets per traceroute (and what "a round" costs)
@@ -168,8 +168,10 @@ and `git push` when the window closes. It needs working git auth on the machine
 (SSH deploy key or cached HTTPS token); on failure it reports and leaves the files
 in place (they're also safe on RIPE).
 
-**Credit cost:** 5 targets × 96 rounds/day × ~20 credits ≈ **9.6k credits/day**
-(~29k for a 72 h run) — well within budget.
+**Credit cost** scales with `targets × rounds × probes` (+ ping). Run `stats` for the
+exact figure; e.g. the 48 h × 8-probe × 10-site run with **1 ping/5 min** is
+**~445k credits**. The 1/min ping would have been ~1M — the ping cadence is the main
+cost lever (`PING_INTERVAL_SEC`). Check your balance with the RIPE credits API first.
 
 ---
 

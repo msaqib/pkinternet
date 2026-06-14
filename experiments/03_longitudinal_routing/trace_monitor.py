@@ -57,16 +57,16 @@ if "your-api-key-here" in HDR.get("Authorization", ""):
     sys.exit("RIPE_API_KEY not found. Put it in a .env file at the repo root.")
 
 # ── CONFIG - edit before scheduling ───────────────────
-RUN_NAME      = "run_20260611_24h"
+RUN_NAME      = "run_20260612_48h"
 INTERVAL_SEC  = 900          # 15 minutes between traceroutes (see notes.md for why 15)
-DURATION_HOURS = 24          # full day -> ~96 rounds/site/probe, covers the diurnal cycle
+DURATION_HOURS = 48          # two days -> ~192 rounds/site/probe, 2 diurnal cycles
 
 # Optional ping companion (paper 2's design): 1 ping/min alongside the traceroutes
 # for finer RTT / jitter / packet-loss than 15-min traceroutes can give.
 # NOTE: with many probes this multiplies credit cost - watch the estimate schedule prints.
 PING_COMPANION    = True
-PING_INTERVAL_SEC = 60       # one ping per minute
-PING_PACKETS      = 3        # packets per ping -> per-minute loss + jitter
+PING_INTERVAL_SEC = 300      # one ping per 5 min (cuts ping credits ~5x for big runs)
+PING_PACKETS      = 3        # packets per ping -> loss + jitter
 
 # After the run window closes, watch() auto-commits the results folder and pushes.
 # Needs working git auth on this machine (SSH deploy key, or a cached HTTPS token).
@@ -76,20 +76,29 @@ AUTO_PUSH = True
 # ONE measurement per target runs from ALL of these at once (RIPE multi-probe), so
 # each result carries its prb_id and every output is per (site, probe) for ISP comparison.
 PROBES = [
-    (60223,   23674,  "Nayatel"),
-    (62224,   38193,  "Transworld"),
-    (7613,    152605, "Z COM Networks"),
-    (1016036, 9541,   "Cybernet"),
-    (1015679, 136174, "LocalInternetProj01"),
-]
+    (60223,   23674,  "Nayatel Islamabad"),
+    (62224,   38193,  "Transworld Lahore"),
+    (7613,    152605, "Z COM Networks Lahore"),      # anchor
+    (1016036, 9541,   "LocalInternetProj02 Cybernet Haripur"),
+    (1016143, 9541,   "LocalInternetProj04 Cybernet Karachi"),        # 2nd Cybernet probe
+    (7764,    17557,  "PTCL (anchor) LUMS"),       # PTCL vantage - the dominant LDI, new
+    (1016126, 17557,  "LocalInternetProj05 PTCL Karachi"),            # 2nd PTCL probe
+    (1015679, 136174, "LocalInternetProj01 Lahore"),
+]                                              # 8 probes = all connected PK probes except Endangered (1014872)
 
-# 5 targets: 1 PK-hosted news + 2 banks hosted abroad + 2 more PK-hosted.
+# 10 targets: 2 PK-hosted, 2 local-Cloudflare, 2 international-Cloudflare, 1 ecommerce
+# abroad, 2 banks abroad, 1 GeoDNS/anycast gov. Spread for distance + CDN-PoP variation.
 TARGETS = [
-    {"hostname": "dunyanews.tv",  "label": "Dunya News", "category": "news"},        # PK (Multinet)
-    {"hostname": "hbl.com",       "label": "HBL Bank",   "category": "banking"},     # abroad (Incapsula, US)
-    {"hostname": "mcb.com.pk",    "label": "MCB Bank",   "category": "banking"},     # abroad (Sucuri)
-    {"hostname": "ptcl.com.pk",   "label": "PTCL",       "category": "telecom"},     # PK (PTCL)
-    {"hostname": "pseb.org.pk",   "label": "PSEB",       "category": "government"},   # PK (Multinet)
+    {"hostname": "dunyanews.tv",  "label": "Dunya News",  "category": "news"},        # PK (Multinet)
+    {"hostname": "fbr.gov.pk",    "label": "FBR",         "category": "government"},   # PK (Islamabad)
+    {"hostname": "dawn.com",      "label": "Dawn",        "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "geo.tv",        "label": "Geo TV",      "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "express.com.pk","label": "Express",     "category": "news"},         # Cloudflare -> Singapore (intl)
+    {"hostname": "telemart.pk",   "label": "Telemart",    "category": "ecommerce"},    # Cloudflare -> Hong Kong (intl)
+    {"hostname": "daraz.pk",      "label": "Daraz",       "category": "ecommerce"},    # Alibaba, Singapore
+    {"hostname": "hbl.com",       "label": "HBL Bank",    "category": "banking"},      # Incapsula, New Jersey US
+    {"hostname": "mcb.com.pk",    "label": "MCB Bank",    "category": "banking"},      # Sucuri, Singapore (ICMP-blocked)
+    {"hostname": "nadra.gov.pk",  "label": "NADRA",       "category": "government"},   # Akamai (GeoDNS / anycast)
 ]
 # ──────────────────────────────────────────────────────
 
