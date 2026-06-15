@@ -207,6 +207,31 @@ when a probe's real ASN differs from what we registered.
 
 ---
 
+## Results & findings
+
+This file is the **methodology**; per-run results live in `findings/` (Exp 01
+convention). Written up so far:
+
+| Run | Findings doc | What it shows |
+|-----|--------------|---------------|
+| `run_20260610_2h` (1 probe, 5 sites, 2 h) | [`findings/03_longitudinal_routing_analysis.md`](../../findings/03_longitudinal_routing_analysis.md) | Baseline + pipeline validation: clean local-vs-offshore latency snapshot. |
+| `run_20260611_24h` (5 probes, 5 sites, 24 h) | [`findings/03_longitudinal_routing_24h.md`](../../findings/03_longitudinal_routing_24h.md) | The full per-ISP day, **incl. the overnight thunderstorm outage**. |
+| `run_20260612_48h` (8 probes, 10 sites, 48 h) | *pending* (will be `…_48h.md`) | Two diurnal cycles; CDN-PoP-flip + PTCL-vantage run. |
+
+Charts: [`findings/03_longitudinal_routing.ipynb`](../../findings/03_longitudinal_routing.ipynb)
+(per-probe + per-site ping-fluctuation graphs, PKT).
+
+**24 h headline:** a Pakistani user reaches **local** government/news in **2–40 ms**
+(wildly ISP-dependent — same site is 1.6 ms on Z-Com vs 42 ms on Cybernet) but their
+**banks in 127–211 ms regardless of ISP, because both banks are hosted offshore**
+(MCB→Singapore, HBL→New Jersey). Over the full day there was **no diurnal congestion
+cycle and no route flapping** — so for these sites the inefficiency is a
+**hosting/peering** problem (the PKIX story), not a time-of-day capacity problem. The
+only real event was a **~5.7 h ISP outage** (TPCPL/Nova) during an overnight
+thunderstorm, which the method captured cleanly as a gap across all targets.
+
+---
+
 ## Caveats
 
 - **Single vantage = vantage-biased** (paper 1): this is *Nayatel-from-Islamabad's*
