@@ -1,0 +1,134 @@
+{
+  "run_name": "run_20260612_48h",
+  "interval_sec": 900,
+  "probe_ids": [
+    60223,
+    62224,
+    7613,
+    1016036,
+    1016143,
+    7764,
+    1016126,
+    1015679
+  ],
+  "probes": {
+    "60223": {
+      "asn": 23674,
+      "city": "Nayatel Islamabad"
+    },
+    "62224": {
+      "asn": 38193,
+      "city": "Transworld Lahore"
+    },
+    "7613": {
+      "asn": 152605,
+      "city": "Z COM Networks Lahore"
+    },
+    "1016036": {
+      "asn": 9541,
+      "city": "LocalInternetProj02 Cybernet Haripur"
+    },
+    "1016143": {
+      "asn": 9541,
+      "city": "LocalInternetProj04 Cybernet Karachi"
+    },
+    "7764": {
+      "asn": 17557,
+      "city": "PTCL (anchor) LUMS"
+    },
+    "1016126": {
+      "asn": 17557,
+      "city": "LocalInternetProj05 PTCL Karachi"
+    },
+    "1015679": {
+      "asn": 136174,
+      "city": "LocalInternetProj01 Lahore"
+    }
+  },
+  "start": 1781446987,
+  "stop": 1781619787,
+  "start_iso": "2026-06-14T14:23:07+00:00",
+  "stop_iso": "2026-06-16T14:23:07+00:00",
+  "targets": [
+    {
+      "hostname": "dunyanews.tv",
+      "label": "Dunya News",
+      "category": "news",
+      "ip": "202.142.167.148",
+      "msm_id": 180055854,
+      "ping_msm_id": 180055857
+    },
+    {
+      "hostname": "fbr.gov.pk",
+      "label": "FBR",
+      "category": "government",
+      "ip": "103.125.60.60",
+      "msm_id": 180055861,
+      "ping_msm_id": 180055862
+    },
+    {
+      "hostname": "dawn.com",
+      "label": "Dawn",
+      "category": "news",
+      "ip": "172.67.72.98",
+      "msm_id": 180055865,
+      "ping_msm_id": 180055866
+    },
+    {
+      "hostname": "geo.tv",
+      "label": "Geo TV",
+      "category": "news",
+      "ip": "104.16.219.243",
+      "msm_id": 180055868,
+      "ping_msm_id": 180055869
+    },
+    {
+      "hostname": "express.com.pk",
+      "label": "Express",
+      "category": "news",
+      "ip": "172.67.174.102",
+      "msm_id": 180055870,
+      "ping_msm_id": 180055874
+    },
+    {
+      "hostname": "telemart.pk",
+      "label": "Telemart",
+      "category": "ecommerce",
+      "ip": "172.67.195.207",
+      "msm_id": 180055875,
+      "ping_msm_id": 180055876
+    },
+    {
+      "hostname": "daraz.pk",
+      "label": "Daraz",
+      "category": "ecommerce",
+      "ip": "47.246.167.168",
+      "msm_id": 180055878,
+      "ping_msm_id": 180055880
+    },
+    {
+      "hostname": "hbl.com",
+      "label": "HBL Bank",
+      "category": "banking",
+      "ip": "45.60.109.176",
+      "msm_id": 180055882,
+      "ping_msm_id": 180055883
+    },
+    {
+      "hostname": "mcb.com.pk",
+      "label": "MCB Bank",
+      "category": "banking",
+      "ip": "192.124.249.159",
+      "msm_id": 180055894,
+      "ping_msm_id": 180055896
+    },
+    {
+      "hostname": "nadra.gov.pk",
+      "label": "NADRA",
+      "category": "government",
+      "ip": "2.19.193.138",
+      "msm_id": 180055898,
+      "ping_msm_id": 180055901
+    }
+  ]
+}
