@@ -588,28 +588,77 @@ def fetch():
         print(f"  ping series   -> {paths[4]}  ({len(ping_rows)} pings)")
 
 
+def _zip_results():
+    """Zip RESULTS_DIR into a sibling `<run>.zip` (built OUTSIDE the folder so it can't
+    include itself). Returns the zip path, or None if zipping fails."""
+    import shutil
+    try:
+        return shutil.make_archive(RESULTS_DIR, "zip", root_dir=RESULTS_DIR)
+    except Exception as e:
+        print(f"  auto-push: zip failed ({type(e).__name__}: {e}); continuing without zip")
+        return None
+
+
+def _git(*args, timeout=120):
+    """Run one git command, capturing output. Returns the CompletedProcess. Does not
+    raise on non-zero exit (the caller checks returncode); only a timeout/OS error
+    propagates to git_autopush's try/except."""
+    return subprocess.run(["git", *args], capture_output=True, text=True, timeout=timeout)
+
+
 def git_autopush(state):
-    """After the run completes, commit just this run's results folder and push.
-    Never raises - on any git/auth failure it reports and leaves the files in place
-    (they are also safe on RIPE). Run from the repo root."""
+    """After the run completes: zip the results, commit them, REBASE onto the latest
+    remote so the push fast-forwards, then push. Careful and non-destructive:
+
+      - commits before rebasing (rebase needs a clean tree);
+      - if the rebase cannot apply cleanly, it ABORTS the rebase (commit stays intact,
+        tree stays clean) and stops WITHOUT pushing - never leaves a half-rebase and
+        never force-pushes;
+      - never raises; on any failure the results are still saved locally + on RIPE.
+
+    Run from the repo root."""
     msg = (f"Exp03 results: {state['run_name']} "
            f"({len(state.get('probe_ids', []))} probes x {len(state['targets'])} sites)")
     try:
-        subprocess.run(["git", "add", RESULTS_DIR], check=True,
-                       capture_output=True, text=True)
-        c = subprocess.run(["git", "commit", "-m", msg], capture_output=True, text=True)
-        if c.returncode != 0 and "nothing to commit" in (c.stdout + c.stderr):
-            print("  auto-push: nothing new to commit"); return
+        # 1) zip the run's results (committed alongside the raw files)
+        zip_path = _zip_results()
+
+        # 2) stage the results folder + the zip
+        a = _git("add", RESULTS_DIR, *( [zip_path] if zip_path else [] ))
+        if a.returncode != 0:
+            print(f"  auto-push: git add FAILED:\n   {(a.stdout + a.stderr).strip()[:300]}"); return
+
+        # 3) commit
+        c = _git("commit", "-m", msg)
         if c.returncode != 0:
+            if "nothing to commit" in (c.stdout + c.stderr):
+                print("  auto-push: nothing new to commit"); return
             print(f"  auto-push: commit FAILED:\n   {(c.stdout + c.stderr).strip()[:300]}"); return
-        p = subprocess.run(["git", "push"], capture_output=True, text=True)
+        print("  auto-push: committed results" + (" + zip" if zip_path else ""))
+
+        # 4) rebase onto the latest remote (pull --rebase). On ANY failure, abort the
+        #    rebase so the repo is left clean, and stop - do not push a mess.
+        r = _git("pull", "--rebase", "origin", "main")
+        if r.returncode != 0:
+            print(f"  auto-push: rebase onto origin/main FAILED:\n"
+                  f"   {(r.stdout + r.stderr).strip()[:400]}")
+            _git("rebase", "--abort")          # safe no-op if no rebase is in progress
+            print("   rebase aborted; your results commit is intact but NOT pushed.")
+            print("   fix manually:  git pull --rebase origin main   then   git push origin main")
+            return
+        print("  auto-push: rebased onto origin/main")
+
+        # 5) push the fast-forward
+        p = _git("push", "origin", "main")
         if p.returncode == 0:
-            print("  auto-push: committed + pushed OK")
+            print("  auto-push: pushed to origin/main OK")
         else:
-            print(f"  auto-push: commit OK but PUSH FAILED:\n   {p.stderr.strip()[:300]}")
-            print("   results are saved locally + safe on RIPE; push manually once git auth is set up.")
+            print(f"  auto-push: PUSH FAILED:\n   {p.stderr.strip()[:400]}")
+            print("   commit is local + results safe on RIPE; push manually:  git push origin main")
+    except subprocess.TimeoutExpired as e:
+        print(f"  auto-push: a git step timed out ({e.cmd}); results saved locally, push manually")
     except Exception as e:
-        print(f"  auto-push: FAILED ({e}); results saved locally")
+        print(f"  auto-push: FAILED ({type(e).__name__}: {e}); results saved locally")
 
 
 def watch():
