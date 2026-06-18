@@ -28,7 +28,8 @@ git config user.email "you@example.com"
 git config user.name  "Your Name"
 ```
 Edit the top of `experiments/03_longitudinal_routing/trace_monitor.py`:
-`RUN_NAME`, `PROBES`, `TARGETS`, `DURATION_HOURS`, `PING_INTERVAL_SEC`, `AUTO_PUSH`.
+`RUN_NAME`, the probe set (`PROBE_META` + `PROBE_IDS`), `TARGETS`, `DURATION_HOURS`,
+`PING_INTERVAL_SEC`, `AUTO_PUSH`.
 
 ## 3. Sanity-check cost/volume BEFORE spending credits
 ```bash
@@ -64,28 +65,51 @@ SSH back into the server (on LUMS VPN/campus network if it's a LUMS box), then:
 ```bash
 tmux ls                         # list sessions - you should see "trace"
 tmux attach -t trace            # reattach to the live watch log
-#   it ticks every 15 min:  [HH:MM:SSZ] N trace rounds, M pings -> *_live.* refreshed
+#   it ticks every interval:  [HH:MM:SSZ] N trace rounds, M pings -> exp03_live.prom refreshed
 #   detach again WITHOUT stopping it:  Ctrl-b  then  d   (do NOT press Ctrl-C)
 ```
 
-To look at the data **without disturbing `watch`**, either open a second SSH
-session, or a new tmux window from inside the session (`Ctrl-b` then `c`; switch
-back with `Ctrl-b` then `0`). Then pull a fresh snapshot and read it:
+While `watch` runs, the live data is the Prometheus file `live/<run>/exp03_live.prom`
+(see §7). To look at the **committed** data **without disturbing `watch`**, open a
+second SSH session (or a new tmux window: `Ctrl-b` then `c`; back with `Ctrl-b` `0`),
+pull a fresh snapshot and read it:
 ```bash
 cd ~/pkinternet
 python3 experiments/03_longitudinal_routing/trace_monitor.py fetch
 
 R=experiments/03_longitudinal_routing/results/$(ls -t experiments/03_longitudinal_routing/results | head -1)
-cat $R/path_changes_*.txt | head -80          # per (site, probe): reachability, RTT, paths, ASN flags
-grep -E "reachable|VARIES|!=" $R/path_changes_*.txt   # quick health + multi-ISP/ASN-mismatch flags
+wc -l $R/normalized/fact_trace.csv $R/normalized/fact_ping.csv   # row counts climbing = data arriving
+tail -40 $R/routes_*.txt                                          # a few readable traceroutes
 ```
-Healthy signs: 25 blocks (5 sites × 5 probes), `reachable: N/N` climbing, sane RTTs.
-`ptcl.com.pk` showing `0%` reachable is expected (it firewalls ICMP — trust the
-traceroute path, not the ping).
+Healthy signs: `fact_trace`/`fact_ping` row counts climbing, and the routes file
+shows `reached` for most sites. A site showing `no reply from destination` (e.g.
+Dunya, FBR) is expected — they firewall ICMP, so trust the traceroute **path**, not
+the reply.
 
 If `tmux attach` says **"no server running"** or the `trace` session is gone (e.g.
 the box rebooted), `watch` stopped — but the measurements are still running on RIPE.
 Just restart it: `tmux new -s trace` then `python3 …/trace_monitor.py watch`.
+
+## 7. Live dashboard (Grafana via Prometheus) — optional
+`watch` rewrites `experiments/03_longitudinal_routing/live/<RUN_NAME>/exp03_live.prom`
+every interval: a Prometheus **text-exposition** file with the latest value per
+(probe, site) — `exp03_dest_rtt_ms`, `exp03_ping_rtt_ms`, `exp03_ping_loss_pct`,
+`exp03_probe_up` — each labelled `probe`, `isp`, `city`, `site`. It is local-only
+(outside `results/`, gitignored), so it never gets committed or pushed.
+
+Wire it up **on the same server**:
+1. Run **node_exporter** with the textfile collector pointed at the live dir:
+   ```bash
+   node_exporter --collector.textfile.directory=$HOME/pkinternet/experiments/03_longitudinal_routing/live/<RUN_NAME>
+   ```
+   (node_exporter scrapes every `*.prom` in that directory.)
+2. Point **Prometheus** at node_exporter (`scrape_configs` → target `localhost:9100`).
+   Prometheus stores the history; the `.prom` only ever holds the latest values.
+3. In **Grafana**, add the Prometheus datasource and graph e.g.
+   `exp03_dest_rtt_ms` / `exp03_ping_rtt_ms` by `site` and `probe`.
+
+(The file is written atomically — temp + rename — so a scrape never sees a partial
+write.)
 
 ## Getting results without the server
 The data lives on RIPE, so you don't strictly need the server running: `schedule`
@@ -100,6 +124,6 @@ python3 experiments/03_longitudinal_routing/trace_monitor.py fetch
 |---|---|
 | `schedule` | Create the RIPE measurements (asks to confirm the credit spend) |
 | `stats`    | Estimate/report data volume, storage, credits |
-| `fetch`    | One-shot pull → timestamped CSVs/txt |
-| `watch`    | Refresh live files each interval, write final snapshot + auto-push at the end |
+| `fetch`    | One-shot pull → normalized snapshot (`normalized/`) + routes txt |
+| `watch`    | Refresh live `exp03_live.prom` each interval; write committed snapshot + auto-push at the end |
 | `stop`     | Delete the measurements early |

@@ -29,6 +29,22 @@ Run from the repo root:
     python experiments/03_longitudinal_routing/trace_monitor.py fetch
     python experiments/03_longitudinal_routing/trace_monitor.py stop
 
+Outputs
+-------
+Committed (in results/<run>/, written by fetch and at the end of watch):
+  normalized/   a small STAR SCHEMA, no repeated text (pure stdlib, no pandas):
+                  dim_probe.csv  probe_id (PK), label "isp.city (ASN)", isp, city, asn...
+                  dim_site.csv   site_id  (PK), target_label, target_hostname, category
+                  fact_trace.csv trace_id (PK), trace_time, probe_id, site_id, + per-round obs
+                  fact_hop.csv   trace_id (FK), hop, hop_ip, rtt_ms, hop_asn, ...   (per hop)
+                  fact_ping.csv  ping_id  (PK), ping_time, probe_id, site_id, rtt_*, loss_pct
+  routes_<tag>.txt   one readable hop-by-hop block per (site, round)
+  measurements.json  the RIPE measurement state (lets you re-fetch without re-spending)
+
+Live, LOCAL ONLY (in live/<run>/, refreshed by watch every interval, never committed
+or zipped): exp03_live.prom - a Prometheus text-exposition file of the latest RTT/loss
+per (probe, site) + probe liveness, for node_exporter's textfile collector -> Grafana.
+
 Requires: RIPE_API_KEY in the environment / .env.
 """
 
@@ -59,7 +75,7 @@ if "your-api-key-here" in HDR.get("Authorization", ""):
 # ── CONFIG - edit before scheduling ───────────────────
 RUN_NAME      = "run_20260612_48h"
 INTERVAL_SEC  = 900          # 15 minutes between traceroutes (see notes.md for why 15)
-DURATION_HOURS = 48          # two days -> ~192 rounds/site/probe, 2 diurnal cycles
+DURATION_HOURS = 24          # two days -> ~192 rounds/site/probe, 2 diurnal cycles
 
 # Optional ping companion (paper 2's design): 1 ping/min alongside the traceroutes
 # for finer RTT / jitter / packet-loss than 15-min traceroutes can give.
@@ -72,19 +88,34 @@ PING_PACKETS      = 3        # packets per ping -> loss + jitter
 # Needs working git auth on this machine (SSH deploy key, or a cached HTTPS token).
 AUTO_PUSH = True
 
-# Probes: (probe_id, asn, label). The PK RIPE Atlas probes for this run.
-# ONE measurement per target runs from ALL of these at once (RIPE multi-probe), so
-# each result carries its prb_id and every output is per (site, probe) for ISP comparison.
-PROBES = [
-    (60223,   23674,  "Nayatel Islamabad"),
-    (62224,   38193,  "Transworld Lahore"),
-    (7613,    152605, "Z COM Networks Lahore"),      # anchor
-    (1016036, 9541,   "LocalInternetProj02 Cybernet Haripur"),
-    (1016143, 9541,   "LocalInternetProj04 Cybernet Karachi"),        # 2nd Cybernet probe
-    (7764,    17557,  "PTCL (anchor) LUMS"),       # PTCL vantage - the dominant LDI, new
-    (1016126, 17557,  "LocalInternetProj05 PTCL Karachi"),            # 2nd PTCL probe
-    (1015679, 136174, "LocalInternetProj01 Lahore"),
-]                                              # 8 probes = all connected PK probes except Endangered (1014872)
+# Canonical probe identity - the SINGLE source of truth: probe_id -> (isp, city_code, asn).
+# The clean label "isp.city (ASN)" (e.g. "nova.lhe (AS136174)") is built from this and used
+# everywhere: the normalized dim_probe table, the routes report, and the live .prom metrics.
+PROBE_META = {
+    60223:   ("nayatel",    "isb", 23674),
+    62224:   ("transworld", "lhe", 38193),
+    7613:    ("zcom",       "lhe", 152605),
+    1016036: ("cybernet",   "hrp", 9541),
+    1016143: ("cybernet",   "khi", 9541),
+    7764:    ("ptcl",       "lhe", 17557),
+    1016126: ("ptcl",       "khi", 17557),
+    1015679: ("nova",       "lhe", 136174),
+}
+CITY_NAME  = {"isb": "Islamabad", "lhe": "Lahore", "khi": "Karachi", "hrp": "Haripur"}
+CITY_ORDER = ["isb", "lhe", "hrp", "khi"]      # group probes by city in this order on axes
+
+def probe_label(pid):
+    """'isp.city (ASN)', e.g. 'nova.lhe (AS136174)'. The one canonical probe name."""
+    m = PROBE_META.get(int(pid))
+    return f"{m[0]}.{m[1]} (AS{m[2]})" if m else str(pid)
+
+# Probes used in THIS run. ONE measurement per target runs from ALL of these at once
+# (RIPE multi-probe), so each result carries its prb_id and every output row is per
+# (site, probe). PROBES keeps the (probe_id, asn, label) shape the rest of the script
+# expects, but the label now comes from PROBE_META so there is no second place to edit.
+PROBE_IDS = [60223, 62224, 7613, 1016036, 1016143, 7764, 1016126, 1015679]
+PROBES = [(pid, PROBE_META[pid][2], probe_label(pid)) for pid in PROBE_IDS]
+#         8 probes = all connected PK probes except Endangered (1014872)
 
 # 10 targets: 2 PK-hosted, 2 local-Cloudflare, 2 international-Cloudflare, 1 ecommerce
 # abroad, 2 banks abroad, 1 GeoDNS/anycast gov. Spread for distance + CDN-PoP variation.
@@ -98,12 +129,109 @@ TARGETS = [
     {"hostname": "daraz.pk",      "label": "Daraz",       "category": "ecommerce"},    # Alibaba, Singapore
     {"hostname": "hbl.com",       "label": "HBL Bank",    "category": "banking"},      # Incapsula, New Jersey US
     {"hostname": "mcb.com.pk",    "label": "MCB Bank",    "category": "banking"},      # Sucuri, Singapore (ICMP-blocked)
-    {"hostname": "nadra.gov.pk",  "label": "NADRA",       "category": "government"},   # Akamai (GeoDNS / anycast)
+    {"hostname": "nadra.gov.pk",  "label": "NADRA",       "category": "government"},
+    {"hostname": "dunyanews.tv",  "label": "Dunya News",  "category": "news"},        # PK (Multinet)
+    {"hostname": "fbr.gov.pk",    "label": "FBR",         "category": "government"},   # PK (Islamabad)
+    {"hostname": "dawn.com",      "label": "Dawn",        "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "geo.tv",        "label": "Geo TV",      "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "express.com.pk","label": "Express",     "category": "news"},         # Cloudflare -> Singapore (intl)
+    {"hostname": "telemart.pk",   "label": "Telemart",    "category": "ecommerce"},    # Cloudflare -> Hong Kong (intl)
+    {"hostname": "daraz.pk",      "label": "Daraz",       "category": "ecommerce"},    # Alibaba, Singapore
+    {"hostname": "hbl.com",       "label": "HBL Bank",    "category": "banking"},      # Incapsula, New Jersey US
+    {"hostname": "mcb.com.pk",    "label": "MCB Bank",    "category": "banking"},      # Sucuri, Singapore (ICMP-blocked)
+    {"hostname": "nadra.gov.pk",  "label": "NADRA",       "category": "government"},
+    {"hostname": "dunyanews.tv",  "label": "Dunya News",  "category": "news"},        # PK (Multinet)
+    {"hostname": "fbr.gov.pk",    "label": "FBR",         "category": "government"},   # PK (Islamabad)
+    {"hostname": "dawn.com",      "label": "Dawn",        "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "geo.tv",        "label": "Geo TV",      "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "express.com.pk","label": "Express",     "category": "news"},         # Cloudflare -> Singapore (intl)
+    {"hostname": "telemart.pk",   "label": "Telemart",    "category": "ecommerce"},    # Cloudflare -> Hong Kong (intl)
+    {"hostname": "daraz.pk",      "label": "Daraz",       "category": "ecommerce"},    # Alibaba, Singapore
+    {"hostname": "hbl.com",       "label": "HBL Bank",    "category": "banking"},      # Incapsula, New Jersey US
+    {"hostname": "mcb.com.pk",    "label": "MCB Bank",    "category": "banking"},      # Sucuri, Singapore (ICMP-blocked)
+    {"hostname": "nadra.gov.pk",  "label": "NADRA",       "category": "government"},
+    {"hostname": "dunyanews.tv",  "label": "Dunya News",  "category": "news"},        # PK (Multinet)
+    {"hostname": "fbr.gov.pk",    "label": "FBR",         "category": "government"},   # PK (Islamabad)
+    {"hostname": "dawn.com",      "label": "Dawn",        "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "geo.tv",        "label": "Geo TV",      "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "express.com.pk","label": "Express",     "category": "news"},         # Cloudflare -> Singapore (intl)
+    {"hostname": "telemart.pk",   "label": "Telemart",    "category": "ecommerce"},    # Cloudflare -> Hong Kong (intl)
+    {"hostname": "daraz.pk",      "label": "Daraz",       "category": "ecommerce"},    # Alibaba, Singapore
+    {"hostname": "hbl.com",       "label": "HBL Bank",    "category": "banking"},      # Incapsula, New Jersey US
+    {"hostname": "mcb.com.pk",    "label": "MCB Bank",    "category": "banking"},      # Sucuri, Singapore (ICMP-blocked)
+    {"hostname": "nadra.gov.pk",  "label": "NADRA",       "category": "government"},
+    {"hostname": "dunyanews.tv",  "label": "Dunya News",  "category": "news"},        # PK (Multinet)
+    {"hostname": "fbr.gov.pk",    "label": "FBR",         "category": "government"},   # PK (Islamabad)
+    {"hostname": "dawn.com",      "label": "Dawn",        "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "geo.tv",        "label": "Geo TV",      "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "express.com.pk","label": "Express",     "category": "news"},         # Cloudflare -> Singapore (intl)
+    {"hostname": "telemart.pk",   "label": "Telemart",    "category": "ecommerce"},    # Cloudflare -> Hong Kong (intl)
+    {"hostname": "daraz.pk",      "label": "Daraz",       "category": "ecommerce"},    # Alibaba, Singapore
+    {"hostname": "hbl.com",       "label": "HBL Bank",    "category": "banking"},      # Incapsula, New Jersey US
+    {"hostname": "mcb.com.pk",    "label": "MCB Bank",    "category": "banking"},      # Sucuri, Singapore (ICMP-blocked)
+    {"hostname": "nadra.gov.pk",  "label": "NADRA",       "category": "government"},
+    {"hostname": "dunyanews.tv",  "label": "Dunya News",  "category": "news"},        # PK (Multinet)
+    {"hostname": "fbr.gov.pk",    "label": "FBR",         "category": "government"},   # PK (Islamabad)
+    {"hostname": "dawn.com",      "label": "Dawn",        "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "geo.tv",        "label": "Geo TV",      "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "express.com.pk","label": "Express",     "category": "news"},         # Cloudflare -> Singapore (intl)
+    {"hostname": "telemart.pk",   "label": "Telemart",    "category": "ecommerce"},    # Cloudflare -> Hong Kong (intl)
+    {"hostname": "daraz.pk",      "label": "Daraz",       "category": "ecommerce"},    # Alibaba, Singapore
+    {"hostname": "hbl.com",       "label": "HBL Bank",    "category": "banking"},      # Incapsula, New Jersey US
+    {"hostname": "mcb.com.pk",    "label": "MCB Bank",    "category": "banking"},      # Sucuri, Singapore (ICMP-blocked)
+    {"hostname": "nadra.gov.pk",  "label": "NADRA",       "category": "government"},
+      {"hostname": "dunyanews.tv",  "label": "Dunya News",  "category": "news"},        # PK (Multinet)
+    {"hostname": "fbr.gov.pk",    "label": "FBR",         "category": "government"},   # PK (Islamabad)
+    {"hostname": "dawn.com",      "label": "Dawn",        "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "geo.tv",        "label": "Geo TV",      "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "express.com.pk","label": "Express",     "category": "news"},         # Cloudflare -> Singapore (intl)
+    {"hostname": "telemart.pk",   "label": "Telemart",    "category": "ecommerce"},    # Cloudflare -> Hong Kong (intl)
+    {"hostname": "daraz.pk",      "label": "Daraz",       "category": "ecommerce"},    # Alibaba, Singapore
+    {"hostname": "hbl.com",       "label": "HBL Bank",    "category": "banking"},      # Incapsula, New Jersey US
+    {"hostname": "mcb.com.pk",    "label": "MCB Bank",    "category": "banking"},      # Sucuri, Singapore (ICMP-blocked)
+    {"hostname": "nadra.gov.pk",  "label": "NADRA",       "category": "government"},
+    {"hostname": "dunyanews.tv",  "label": "Dunya News",  "category": "news"},        # PK (Multinet)
+    {"hostname": "fbr.gov.pk",    "label": "FBR",         "category": "government"},   # PK (Islamabad)
+    {"hostname": "dawn.com",      "label": "Dawn",        "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "geo.tv",        "label": "Geo TV",      "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "express.com.pk","label": "Express",     "category": "news"},         # Cloudflare -> Singapore (intl)
+    {"hostname": "telemart.pk",   "label": "Telemart",    "category": "ecommerce"},    # Cloudflare -> Hong Kong (intl)
+    {"hostname": "daraz.pk",      "label": "Daraz",       "category": "ecommerce"},    # Alibaba, Singapore
+    {"hostname": "hbl.com",       "label": "HBL Bank",    "category": "banking"},      # Incapsula, New Jersey US
+    {"hostname": "mcb.com.pk",    "label": "MCB Bank",    "category": "banking"},      # Sucuri, Singapore (ICMP-blocked)
+    {"hostname": "nadra.gov.pk",  "label": "NADRA",       "category": "government"},
+    {"hostname": "dunyanews.tv",  "label": "Dunya News",  "category": "news"},        # PK (Multinet)
+    {"hostname": "fbr.gov.pk",    "label": "FBR",         "category": "government"},   # PK (Islamabad)
+    {"hostname": "dawn.com",      "label": "Dawn",        "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "geo.tv",        "label": "Geo TV",      "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "express.com.pk","label": "Express",     "category": "news"},         # Cloudflare -> Singapore (intl)
+    {"hostname": "telemart.pk",   "label": "Telemart",    "category": "ecommerce"},    # Cloudflare -> Hong Kong (intl)
+    {"hostname": "daraz.pk",      "label": "Daraz",       "category": "ecommerce"},    # Alibaba, Singapore
+    {"hostname": "hbl.com",       "label": "HBL Bank",    "category": "banking"},      # Incapsula, New Jersey US
+    {"hostname": "mcb.com.pk",    "label": "MCB Bank",    "category": "banking"},      # Sucuri, Singapore (ICMP-blocked)
+    {"hostname": "nadra.gov.pk",  "label": "NADRA",       "category": "government"},
+      {"hostname": "dunyanews.tv",  "label": "Dunya News",  "category": "news"},        # PK (Multinet)
+    {"hostname": "fbr.gov.pk",    "label": "FBR",         "category": "government"},   # PK (Islamabad)
+    {"hostname": "dawn.com",      "label": "Dawn",        "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "geo.tv",        "label": "Geo TV",      "category": "news"},         # Cloudflare -> Karachi (local)
+    {"hostname": "express.com.pk","label": "Express",     "category": "news"},         # Cloudflare -> Singapore (intl)
+    {"hostname": "telemart.pk",   "label": "Telemart",    "category": "ecommerce"},    # Cloudflare -> Hong Kong (intl)
+    {"hostname": "daraz.pk",      "label": "Daraz",       "category": "ecommerce"},    # Alibaba, Singapore
+    {"hostname": "hbl.com",       "label": "HBL Bank",    "category": "banking"},      # Incapsula, New Jersey US
+    {"hostname": "mcb.com.pk",    "label": "MCB Bank",    "category": "banking"},      # Sucuri, Singapore (ICMP-blocked)
+    {"hostname": "nadra.gov.pk",  "label": "NADRA",       "category": "government"},  # Akamai (GeoDNS / anycast)
 ]
 # ──────────────────────────────────────────────────────
 
 RESULTS_DIR = os.path.join("experiments", "03_longitudinal_routing", "results", RUN_NAME)
+NORM_DIR    = os.path.join(RESULTS_DIR, "normalized")        # committed star-schema CSVs
 STATE_FILE  = os.path.join(RESULTS_DIR, "measurements.json")
+
+# Live Prometheus textfile - written locally ONLY, never committed or zipped. It lives
+# OUTSIDE RESULTS_DIR, so `git add RESULTS_DIR` and the results zip (root_dir=RESULTS_DIR)
+# both skip it. node_exporter's textfile collector scrapes it -> Prometheus -> Grafana.
+LIVE_DIR    = os.path.join("experiments", "03_longitudinal_routing", "live", RUN_NAME)
+PROM_FILE   = os.path.join(LIVE_DIR, "exp03_live.prom")
 
 # probe_asn = ASN measured live from the probe's public egress IP each round (the
 # truth); probe_asn_reg = ASN we registered in PROBES (may go stale); probe_ip = the
@@ -550,42 +678,180 @@ def write_routes(path, grouped):
         f.write("\n".join(lines))
 
 
-def _write(state, grouped, summary, ping_rows, ping_stats, tag):
-    """Write the output files with a filename `tag` (a timestamp for a one-shot
-    fetch, or 'live' for the continuously-overwritten watch dataset)."""
-    grouped_path = os.path.join(RESULTS_DIR, f"trace_grouped_{tag}.csv")
-    summary_path = os.path.join(RESULTS_DIR, f"trace_summary_{tag}.csv")
-    changes_path = os.path.join(RESULTS_DIR, f"path_changes_{tag}.txt")
-    routes_path  = os.path.join(RESULTS_DIR, f"routes_{tag}.txt")
-    with open(grouped_path, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=GROUPED_FIELDS); w.writeheader(); w.writerows(grouped)
-    with open(summary_path, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=SUMMARY_FIELDS); w.writeheader(); w.writerows(summary)
-    write_path_changes(changes_path, state, summary, ping_stats)
+def _write_normalized(grouped, summary, ping_rows, out_dir):
+    """Committed data: the normalized star schema, built from the in-memory rows with
+    pure stdlib (no pandas, so the server needs nothing beyond requests/dnspython).
+
+      dim_probe / dim_site   - the entities (probe_id / site_id keys)
+      fact_trace / fact_hop  - one row per round / per hop (linked by trace_id)
+      fact_ping              - one row per ping
+
+    No descriptive text is repeated in the facts; they reference the dims by number.
+    """
+    os.makedirs(out_dir, exist_ok=True)
+
+    # dim_site: a stable numeric id per target, in TARGETS order
+    site_id   = {t["label"]: i for i, t in enumerate(TARGETS, 1)}
+    site_rows = [{"site_id": i, "target_label": t["label"],
+                  "target_hostname": t["hostname"], "target_category": t["category"]}
+                 for i, t in enumerate(TARGETS, 1)]
+
+    # dim_probe: identity from PROBE_META + the egress IP actually observed in the data
+    probe_ip = {}
+    for r in summary:
+        pid = r.get("probe_id")
+        if pid is not None and pid not in probe_ip:
+            probe_ip[pid] = r.get("probe_ip", "")
+    probe_rows = []
+    for pid in PROBE_IDS:
+        isp, cc, asn = PROBE_META[pid]
+        probe_rows.append({"probe_id": pid, "label": probe_label(pid), "isp": isp,
+                           "city": CITY_NAME.get(cc, ""), "city_code": cc,
+                           "asn_registered": asn, "probe_ip": probe_ip.get(pid, "")})
+
+    # fact_trace: one row per round; a surrogate trace_id links the hops back to it
+    s_sorted = sorted(summary, key=lambda r: (r["trace_time"], str(r["probe_id"]),
+                                              site_id.get(r["target_label"], 0)))
+    trace_id, trace_rows = {}, []
+    for i, r in enumerate(s_sorted, 1):
+        trace_id[(r["probe_id"], r["target_hostname"], r["trace_time"])] = i
+        trace_rows.append({
+            "trace_id": i, "trace_time": r["trace_time"], "probe_id": r["probe_id"],
+            "site_id": site_id.get(r["target_label"], ""),
+            "probe_asn_measured": r.get("probe_asn", ""), "target_ip": r.get("target_ip", ""),
+            "target_asn": r.get("target_asn", ""), "target_asn_name": r.get("target_asn_name", ""),
+            "target_country": r.get("target_country", ""), "dest_rtt_ms": r.get("dest_rtt_ms", ""),
+            "total_hops": r.get("total_hops", ""), "timeout_hops": r.get("timeout_hops", ""),
+            "asns_in_path": r.get("asns_in_path", ""), "countries_in_path": r.get("countries_in_path", ""),
+            "dest_location": r.get("dest_location", ""), "location_via": r.get("location_via", ""),
+            "destination_responded": r.get("destination_responded", ""),
+            "measurement_id": r.get("measurement_id", ""),
+        })
+
+    # fact_hop: every hop, attached to its round by trace_id
+    hop_rows = []
+    for h in grouped:
+        tid = trace_id.get((h["probe_id"], h["target_hostname"], h["trace_time"]))
+        if tid is None:
+            continue
+        hop_rows.append({"trace_id": tid, "hop": h.get("hop", ""), "hop_ip": h.get("hop_ip", ""),
+                         "rtt_ms": h.get("rtt_ms", ""), "hop_asn": h.get("hop_asn", ""),
+                         "hop_prefix": h.get("hop_prefix", ""), "hop_country": h.get("hop_country", ""),
+                         "hop_asn_name": h.get("hop_asn_name", ""), "is_private": h.get("is_private", ""),
+                         "is_timeout": h.get("is_timeout", "")})
+
+    # fact_ping
+    p_sorted = sorted(ping_rows, key=lambda r: (r["ping_time"], str(r["probe_id"]),
+                                                site_id.get(r["target_label"], 0)))
+    ping_out = [{"ping_id": i, "ping_time": r["ping_time"], "probe_id": r["probe_id"],
+                 "site_id": site_id.get(r["target_label"], ""),
+                 "probe_asn_measured": r.get("probe_asn", ""), "sent": r.get("sent", ""),
+                 "rcvd": r.get("rcvd", ""), "loss_pct": r.get("loss_pct", ""),
+                 "rtt_min": r.get("rtt_min", ""), "rtt_avg": r.get("rtt_avg", ""),
+                 "rtt_max": r.get("rtt_max", ""), "measurement_id": r.get("measurement_id", "")}
+                for i, r in enumerate(p_sorted, 1)]
+
+    def _dump(name, fields, rows):
+        with open(os.path.join(out_dir, name), "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=fields); w.writeheader(); w.writerows(rows)
+
+    _dump("dim_probe.csv", ["probe_id", "label", "isp", "city", "city_code", "asn_registered", "probe_ip"], probe_rows)
+    _dump("dim_site.csv",  ["site_id", "target_label", "target_hostname", "target_category"], site_rows)
+    _dump("fact_trace.csv", ["trace_id", "trace_time", "probe_id", "site_id", "probe_asn_measured",
+                             "target_ip", "target_asn", "target_asn_name", "target_country", "dest_rtt_ms",
+                             "total_hops", "timeout_hops", "asns_in_path", "countries_in_path",
+                             "dest_location", "location_via", "destination_responded", "measurement_id"], trace_rows)
+    _dump("fact_hop.csv",  ["trace_id", "hop", "hop_ip", "rtt_ms", "hop_asn", "hop_prefix",
+                            "hop_country", "hop_asn_name", "is_private", "is_timeout"], hop_rows)
+    _dump("fact_ping.csv", ["ping_id", "ping_time", "probe_id", "site_id", "probe_asn_measured", "sent",
+                            "rcvd", "loss_pct", "rtt_min", "rtt_avg", "rtt_max", "measurement_id"], ping_out)
+    return {"dim_probe": len(probe_rows), "dim_site": len(site_rows), "fact_trace": len(trace_rows),
+            "fact_hop": len(hop_rows), "fact_ping": len(ping_out)}
+
+
+def _prom_q(v):
+    """Escape a Prometheus label value."""
+    return str(v).replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ")
+
+
+def _write_prom(summary, ping_rows, path):
+    """Local-only Prometheus text-exposition file with the LATEST value per (probe, site):
+    last traceroute RTT + reachability, last ping RTT + loss, and probe liveness. Rewritten
+    atomically each cycle; scraped by node_exporter's textfile collector."""
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    last_tr, last_pg = {}, {}
+    for r in summary:                  # summary is time-sorted -> last write per key = latest
+        last_tr[(r["probe_id"], r["target_label"])] = r
+    for r in ping_rows:
+        last_pg[(r["probe_id"], r["target_label"])] = r
+
+    def lbls(pid, site):
+        isp, cc, _ = PROBE_META.get(pid, ("", "", 0))
+        return (f'probe="{_prom_q(probe_label(pid))}",isp="{isp}",city="{CITY_NAME.get(cc, "")}",'
+                f'site="{_prom_q(site)}"')
+
+    L = ["# HELP exp03_dest_rtt_ms last traceroute RTT to the destination (ms)",
+         "# TYPE exp03_dest_rtt_ms gauge"]
+    for (pid, site), r in last_tr.items():
+        if r.get("dest_rtt_ms") not in ("", None):
+            L.append(f'exp03_dest_rtt_ms{{{lbls(pid, site)}}} {r["dest_rtt_ms"]}')
+    L += ["# HELP exp03_dest_responded 1 if the destination replied in the last round",
+          "# TYPE exp03_dest_responded gauge"]
+    for (pid, site), r in last_tr.items():
+        up = 1 if r.get("destination_responded") in (True, "True") else 0
+        L.append(f'exp03_dest_responded{{{lbls(pid, site)}}} {up}')
+    L += ["# HELP exp03_ping_rtt_ms last ping average RTT (ms)",
+          "# TYPE exp03_ping_rtt_ms gauge"]
+    for (pid, site), r in last_pg.items():
+        if r.get("rtt_avg") not in ("", None):
+            L.append(f'exp03_ping_rtt_ms{{{lbls(pid, site)}}} {r["rtt_avg"]}')
+    L += ["# HELP exp03_ping_loss_pct last ping packet loss (percent)",
+          "# TYPE exp03_ping_loss_pct gauge"]
+    for (pid, site), r in last_pg.items():
+        if r.get("loss_pct") not in ("", None):
+            L.append(f'exp03_ping_loss_pct{{{lbls(pid, site)}}} {r["loss_pct"]}')
+    L += ["# HELP exp03_probe_up 1 if the probe produced any data this cycle",
+          "# TYPE exp03_probe_up gauge"]
+    live = {r["probe_id"] for r in summary}
+    for pid in PROBE_IDS:
+        isp, cc, _ = PROBE_META[pid]
+        L.append(f'exp03_probe_up{{probe="{_prom_q(probe_label(pid))}",isp="{isp}",'
+                 f'city="{CITY_NAME.get(cc, "")}"}} {1 if pid in live else 0}')
+
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        f.write("\n".join(L) + "\n")
+    os.replace(tmp, path)              # atomic: a scrape never sees a half-written file
+    return path
+
+
+def _write_snapshot(grouped, summary, ping_rows, tag):
+    """Committed output: the normalized star-schema CSVs + one readable routes file.
+    (Flat per-hop/summary/ping CSVs are no longer written - normalized/ holds it all.)"""
+    routes_path = os.path.join(RESULTS_DIR, f"routes_{tag}.txt")
     write_routes(routes_path, grouped)
-    paths = [grouped_path, summary_path, changes_path, routes_path]
-    if ping_rows:
-        ping_path = os.path.join(RESULTS_DIR, f"ping_series_{tag}.csv")
-        with open(ping_path, "w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=PING_FIELDS); w.writeheader(); w.writerows(ping_rows)
-        paths.append(ping_path)
-    return paths
+    counts = _write_normalized(grouped, summary, ping_rows, NORM_DIR)
+    return routes_path, counts
+
+
+def _write_live(summary, ping_rows):
+    """Local-only Prometheus metrics for the on-server Grafana dashboard (not committed)."""
+    return _write_prom(summary, ping_rows, PROM_FILE)
 
 
 def fetch():
-    """One-shot pull: grab all rounds so far and write timestamped files."""
+    """One-shot pull: grab all rounds so far and write the committed snapshot
+    (normalized star-schema CSVs + the readable routes file)."""
     state = _load_state()
     print(f"Fetching results for {len(state['targets'])} target(s)...")
     grouped, summary = _collect(state)
-    ping_rows, ping_stats = _collect_pings(state)
+    ping_rows, _ = _collect_pings(state)
     tag = datetime.now().strftime("%Y%m%d_%H%M%S")
-    paths = _write(state, grouped, summary, ping_rows, ping_stats, tag)
-    print(f"\n  grouped CSV   -> {paths[0]}  ({len(grouped)} hop rows)")
-    print(f"  summary CSV   -> {paths[1]}  ({len(summary)} trace rounds)")
-    print(f"  path changes  -> {paths[2]}")
-    print(f"  routes (read) -> {paths[3]}")
-    if ping_rows:
-        print(f"  ping series   -> {paths[4]}  ({len(ping_rows)} pings)")
+    routes_path, counts = _write_snapshot(grouped, summary, ping_rows, tag)
+    print(f"\n  normalized -> {NORM_DIR}")
+    for k, v in counts.items():
+        print(f"      {k:<11} {v:>7} rows")
+    print(f"  routes     -> {routes_path}")
 
 
 def _zip_results():
@@ -662,24 +928,25 @@ def git_autopush(state):
 
 
 def watch():
-    """Auto-update the local data every INTERVAL_SEC: re-fetch on the interval and
-    overwrite a single live dataset (trace_*_live.*) until the run window ends,
-    then write a final timestamped snapshot (and, if AUTO_PUSH, commit + push it).
-    Keep this running in a terminal (tmux/VNC) so it survives disconnects."""
+    """Refresh the live Prometheus file every INTERVAL_SEC until the window ends, then
+    write the committed snapshot (and, if AUTO_PUSH, commit + push it). The live .prom is
+    LOCAL ONLY - never committed or zipped - so Grafana/Prometheus on the same server can
+    read it. Keep this running in tmux/VNC so it survives disconnects."""
     state = _load_state()
     stop  = state["stop"]
     every = state["interval_sec"]
     completed = False
-    print(f"watch: refreshing every {every//60} min until "
-          f"{state.get('stop_iso','?')}  (Ctrl-C to stop)\n")
+    print(f"watch: refreshing live metrics every {every//60} min until "
+          f"{state.get('stop_iso','?')}  (Ctrl-C to stop)")
+    print(f"  live -> {PROM_FILE}  (local only; not committed or zipped)\n")
     try:
         while True:
             grouped, summary = _collect(state, verbose=False)
-            ping_rows, ping_stats = _collect_pings(state)
-            _write(state, grouped, summary, ping_rows, ping_stats, "live")
+            ping_rows, _ = _collect_pings(state)
+            _write_live(summary, ping_rows)
             now = datetime.now(timezone.utc).strftime("%H:%M:%S")
             print(f"  [{now}Z] {len(summary)} trace rounds, {len(ping_rows)} pings "
-                  f"-> *_live.* refreshed")
+                  f"-> {os.path.basename(PROM_FILE)} refreshed")
             if time.time() > stop + 120:          # window closed (+2 min grace)
                 completed = True
                 break
@@ -687,121 +954,18 @@ def watch():
     except KeyboardInterrupt:
         print("\n  interrupted - writing final snapshot...")
     grouped, summary = _collect(state, verbose=False)
-    ping_rows, ping_stats = _collect_pings(state)
-    paths = _write(state, grouped, summary, ping_rows, ping_stats,
-                   datetime.now().strftime("%Y%m%d_%H%M%S"))
-    print("\n  final snapshot:")
-    for p in paths:
-        print(f"   {p}")
+    ping_rows, _ = _collect_pings(state)
+    tag = datetime.now().strftime("%Y%m%d_%H%M%S")
+    routes_path, counts = _write_snapshot(grouped, summary, ping_rows, tag)
+    print("\n  final snapshot (committed):")
+    print(f"   normalized -> {NORM_DIR}  {counts}")
+    print(f"   routes     -> {routes_path}")
     if AUTO_PUSH and completed:
         print()
         git_autopush(state)
     elif AUTO_PUSH and not completed:
         print("\n  auto-push skipped (interrupted before the window closed); "
               "run a manual git add/commit/push if you want these saved.")
-
-
-# ─────────────────────────────────────────────────────
-#  READABLE LONGITUDINAL REPORT  (the time-domain routes_*.txt)
-# ─────────────────────────────────────────────────────
-
-def write_path_changes(path, state, summaries, ping_stats=None):
-    """Per target: distinct AS-paths over time, transitions, and RTT stats.
-
-    This is the longitudinal analogue of Exp 01's routes_*.txt - instead of one
-    block per trace, it shows how the path/RTT for each target MOVED over the run.
-    If a ping companion ran, its per-target loss/RTT/jitter is appended too.
-    """
-    ping_stats = ping_stats or {}
-    bykey = {}
-    for s in summaries:
-        bykey.setdefault((s["target_hostname"], s["probe_id"]), []).append(s)
-
-    probes = state.get("probes", {})
-    plist = ", ".join(f"{m['city']}(AS{m['asn']})" for m in probes.values()) or "?"
-    lines = [f"Longitudinal routing - {state['run_name']}",
-             f"{len(state.get('probe_ids', []))} probes: {plist}"
-             f"  every {state['interval_sec']//60} min   (blocks below are per site x probe)",
-             f"window {state.get('start_iso','?')}  ->  {state.get('stop_iso','?')}", ""]
-
-    for (host, prb) in sorted(bykey, key=lambda k: (k[0], str(k[1]))):
-        rows = sorted(bykey[(host, prb)], key=lambda x: x["trace_time"])
-        n = len(rows)
-        answered = [r for r in rows if r["destination_responded"]]
-        rtts = [float(r["dest_rtt_ms"]) for r in answered if r["dest_rtt_ms"] != ""]
-        label = rows[0]["target_label"]
-
-        # measured egress ASN(s) this probe used, vs what we registered
-        asns_seen = {}
-        for r in rows:
-            a = r.get("probe_asn") or "?"
-            asns_seen[a] = asns_seen.get(a, 0) + 1
-        reg = rows[0].get("probe_asn_reg", "")
-
-        lines.append("=" * 70)
-        lines.append(f" {host}   -   {label}  ({rows[0]['target_category']})")
-        lines.append(f"   probe {prb}  AS{rows[0]['probe_asn']}  {rows[0]['probe_city']}")
-        if len(asns_seen) > 1:
-            detail = ", ".join(f"AS{a} ({c}x)" for a, c in
-                               sorted(asns_seen.items(), key=lambda kv: -kv[1]))
-            lines.append(f"   ** probe egress ASN VARIES across rounds (multi-homed?): {detail}")
-        elif reg and str(reg) != str(next(iter(asns_seen), "")):
-            lines.append(f"   ** measured egress ASN AS{next(iter(asns_seen))} != "
-                         f"registered AS{reg}")
-        lines.append(f"   rounds: {n}   reachable: {len(answered)}/{n} "
-                     f"({100*len(answered)//n if n else 0}%)")
-        if rtts:
-            jit = statistics.pstdev(rtts) if len(rtts) > 1 else 0.0
-            lines.append(f"   dest RTT (ms): min {min(rtts):.1f}  median "
-                         f"{statistics.median(rtts):.1f}  max {max(rtts):.1f}  "
-                         f"jitter(stdev) {jit:.1f}")
-
-        # distinct AS-paths + the metro each round served from
-        seen = {}
-        for r in rows:
-            key = r["asns_in_path"] or "(no path visible)"
-            d = seen.setdefault(key, {"count": 0, "metros": set(), "first": r["trace_time"], "last": r["trace_time"]})
-            d["count"] += 1
-            d["last"] = r["trace_time"]
-            if r["dest_location"]:
-                d["metros"].add(r["dest_location"])
-        lines.append(f"   distinct AS-paths: {len(seen)}")
-        for key, d in sorted(seen.items(), key=lambda kv: -kv[1]["count"]):
-            metros = "; ".join(sorted(d["metros"])) or "-"
-            lines.append(f"     [{d['count']:>4}x]  {key}")
-            lines.append(f"              served via: {metros}")
-
-        # chronological transitions (only when the AS-path flips)
-        transitions = []
-        prev = None
-        for r in rows:
-            key = r["asns_in_path"] or "(no path visible)"
-            if prev is not None and key != prev:
-                transitions.append((r["trace_time"], prev, key))
-            prev = key
-        if transitions:
-            lines.append(f"   path changes: {len(transitions)}")
-            for tm, a, b in transitions:
-                lines.append(f"     {tm}   {a}   ->   {b}")
-        else:
-            lines.append("   path changes: 0  (stable for the whole window)")
-
-        ps = ping_stats.get((host, prb))
-        if ps and ps["sent"]:
-            loss = 100 * (ps["sent"] - ps["rcvd"]) / ps["sent"]
-            pr = ps["rtts"]
-            if pr:
-                jit = statistics.pstdev(pr) if len(pr) > 1 else 0.0
-                lines.append(
-                    f"   ping 1/min: {ps['sent']} pkts, loss {loss:.1f}%  |  "
-                    f"rtt min {min(pr):.1f}  median {statistics.median(pr):.1f}  "
-                    f"max {max(pr):.1f}  jitter(stdev) {jit:.1f} ms")
-            else:
-                lines.append(f"   ping 1/min: {ps['sent']} pkts, loss {loss:.1f}% (no replies)")
-        lines.append("")
-
-    with open(path, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
 
 
 # ─────────────────────────────────────────────────────
@@ -908,11 +1072,11 @@ def stats():
                 print(f"    ~{frac*100:.0f}% through the window "
                       f"-> projected full-run size ~{_human(size/frac)}")
         print(f"  note: fetching pulls the raw JSON from RIPE (~2-3x the CSV size) into memory,"
-              f" but only the CSV/txt above are written to disk.")
+              f" but only the normalized CSVs + routes txt are written to disk.")
     else:
         print(f"  stored on disk: none yet (run schedule -> fetch/watch first)")
         print(f"  estimated full-run storage: ~{_human(_estimate_storage(trace_total, ping_total))}"
-              f"  (CSVs + routes/path_changes txt)")
+              f"  (normalized CSVs + routes txt; the star schema removes ~60% of the flat redundancy)")
 
 
 if __name__ == "__main__":

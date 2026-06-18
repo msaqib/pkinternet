@@ -87,10 +87,10 @@ For each target we track, per 15-min round:
 3. the **destination RTT** (min reply), and **reachability** (did it answer).
 
 A **path change** = the `asns_in_path` (or serving metro) differs from the previous
-round. The readable `path_changes_*.txt` lists, per target, every distinct path
-seen, the time windows it held, the transitions between them, and RTT
-min/median/max + **jitter (stdev)** + reachability %. That report is the
-longitudinal analogue of Exp 01's `routes_*.txt`.
+round. `fact_trace` carries `asns_in_path` + `dest_location` per round, so the
+analysis notebook derives, per (site, probe), every distinct path seen, the
+transitions between them, and RTT min/mean/max + **jitter (stdev)** + reachability %
+(see `findings/03_*_48h.ipynb` §10, the path-change + ASN tables).
 
 ### Why 15 min, and how it relates to "noticing changes"
 
@@ -107,25 +107,35 @@ longitudinal analogue of Exp 01's `routes_*.txt`.
 
 ---
 
-## Output files per fetch  (mirrors Exp 01, plus a `trace_time` axis)
+## Output files  (a normalized star schema + a readable routes report)
 
-`experiments/03_longitudinal_routing/results/{RUN_NAME}/`:
+`experiments/03_longitudinal_routing/results/{RUN_NAME}/` (committed to git):
 
 | File | Contents |
 |------|----------|
-| `trace_grouped_TIMESTAMP.csv` | One row **per hop, per round** — same columns as Exp 01's `pk_grouped` plus `trace_time` (the round's actual UTC time). |
-| `trace_summary_TIMESTAMP.csv` | One row **per target, per round**: `trace_time`, `dest_rtt_ms` (min reply), `total_hops`, `asns_in_path`, `countries_in_path`, `dest_location`, `destination_responded`. This is the **time series** you plot. |
-| `ping_series_TIMESTAMP.csv` | *(ping companion)* one row **per ping (1/min)**: `ping_time`, `sent`, `rcvd`, `loss_pct`, `rtt_min/avg/max`. The fine-grained RTT/loss series. |
-| `routes_TIMESTAMP.txt` | Readable **hop-by-hop traceroute**, one block per (site, 15-min round) — SOURCE/TIME/DEST header then the full path. The time-domain analogue of Exp 01's `routes_*.txt`. |
-| `path_changes_TIMESTAMP.txt` | Readable per-target report: distinct AS-paths over time + transitions + RTT min/median/max + jitter + reachability %, **plus the ping companion's loss% / rtt / jitter** when it ran. |
+| `normalized/dim_probe.csv` | One row per probe: `probe_id` (key), `label` (`isp.city (ASN)`), `isp`, `city`, `city_code`, `asn_registered`, `probe_ip`. |
+| `normalized/dim_site.csv` | One row per target: `site_id` (key), `target_label`, `target_hostname`, `target_category`. |
+| `normalized/fact_trace.csv` | One row **per (probe, site, round)**: `trace_id` (key), `trace_time`, `probe_id`, `site_id`, `probe_asn_measured`, `dest_rtt_ms` (min reply), `total_hops`, `asns_in_path`, `countries_in_path`, `dest_location`, `destination_responded`, `measurement_id`. The **time series** you plot. |
+| `normalized/fact_hop.csv` | One row **per hop**, linked to its round by `trace_id`: `hop`, `hop_ip`, `rtt_ms`, `hop_asn`, `hop_prefix`, `hop_country`, `hop_asn_name`, `is_private`, `is_timeout`. |
+| `normalized/fact_ping.csv` | *(ping companion)* one row **per ping**: `ping_id`, `ping_time`, `probe_id`, `site_id`, `sent`, `rcvd`, `loss_pct`, `rtt_min/avg/max`. |
+| `routes_TIMESTAMP.txt` | Readable **hop-by-hop traceroute**, one block per (site, round) — SOURCE/TIME/DEST header then the full path. The time-domain analogue of Exp 01's `routes_*.txt`. |
 | `measurements.json` | The periodic measurement IDs (trace + ping per target) + probe/target metadata, written at schedule time and read at fetch time. |
 
-`watch` mode writes the same files with a `_live` suffix (overwritten each cycle)
-instead of a timestamp, so there's always one current dataset mid-run; it also
-writes a final timestamped snapshot when the window closes.
+This is a **star schema**: the facts reference the dimensions by numeric id and
+repeat no descriptive text, so the data is ~40 % of the old flat-CSV size with no
+loss (verified row-for-row). It is written with pure stdlib (no pandas) so the
+server needs nothing beyond `requests`/`dnspython`. Re-join it for analysis with a
+read + merge on `probe_id`/`site_id`/`trace_id` (see `findings/03_*_48h.ipynb`,
+which loads it in three lines).
 
-Results CSVs should be committed to git, one subfolder per run — same convention
-as Exp 01.
+`watch` mode does **not** write these every cycle. Each cycle it refreshes a
+**local-only Prometheus textfile** `live/{RUN_NAME}/exp03_live.prom` — the latest
+RTT/loss per (probe, site) + probe liveness as gauges (`exp03_dest_rtt_ms`,
+`exp03_ping_rtt_ms`, `exp03_ping_loss_pct`, `exp03_probe_up`). It lives **outside**
+`results/`, so it is never committed or zipped; node_exporter's textfile collector
+scrapes it → Prometheus → Grafana for a live on-server dashboard. The committed
+normalized snapshot + routes file are written once when the window closes (or on
+Ctrl-C). Results are committed to git, one subfolder per run.
 
 ---
 
@@ -140,19 +150,21 @@ python experiments/03_longitudinal_routing/trace_monitor.py stats
 # 1) schedule: 1 traceroute/15min per site, + (if PING_COMPANION) 1 ping/min per site
 python experiments/03_longitudinal_routing/trace_monitor.py schedule
 
-# 2a) one-shot: pull results so far + build timestamped CSVs
+# 2a) one-shot: pull results so far + write the normalized snapshot + routes file
 python experiments/03_longitudinal_routing/trace_monitor.py fetch
 
-# 2b) OR auto-refresh the local data every INTERVAL_SEC until the window closes,
-#     then (if AUTO_PUSH) auto-commit + push the results folder. Run inside
-#     tmux/VNC so it survives SSH disconnects on a 24h run.
+# 2b) OR refresh the local-only live/<run>/exp03_live.prom every INTERVAL_SEC for
+#     Grafana/Prometheus; when the window closes, write the committed normalized
+#     snapshot + routes and (if AUTO_PUSH) commit + push the results folder. Run
+#     inside tmux/VNC so it survives SSH disconnects on a long run.
 python experiments/03_longitudinal_routing/trace_monitor.py watch
 
 # optional: stop the measurements early
 python experiments/03_longitudinal_routing/trace_monitor.py stop
 ```
 
-Edit `RUN_NAME`, `PROBES`, `TARGETS`, `INTERVAL_SEC`, `DURATION_HOURS`, and the
+Edit `RUN_NAME`, the probe set (`PROBE_META` + `PROBE_IDS`, which build the clean
+`isp.city (ASN)` labels), `TARGETS`, `INTERVAL_SEC`, `DURATION_HOURS`, and the
 `PING_COMPANION` / `PING_INTERVAL_SEC` / `PING_PACKETS` / `AUTO_PUSH` knobs at the
 top of `trace_monitor.py` before scheduling.
 
@@ -190,10 +202,11 @@ equivalent of the `whois` command, derived per round. (If we ever deploy our **o
 measurement nodes on campus servers we control, that exact `curl/whois` one-liner is
 what we'd embed instead, writing the same columns.)
 
-**What gets recorded** (every trace/summary/ping row):
-- `probe_id` — the RIPE probe (stable).
-- `probe_asn` — ASN **measured this round** from the egress IP (the source of truth).
-- `probe_asn_reg` — the ASN we registered in `PROBES` (kept for comparison).
+**What gets recorded** (`probe_asn_measured`/`probe_ip` per round in `fact_trace` and
+`fact_ping`; the registered ASN once in `dim_probe`):
+- `probe_id` — the RIPE probe (stable; the foreign key into `dim_probe`).
+- `probe_asn_measured` — ASN **measured this round** from the egress IP (source of truth).
+- `asn_registered` (`dim_probe`) — the ASN we registered in `PROBE_META` (for comparison).
 - `probe_ip` — the public egress IP the ASN was derived from.
 
 **An ASN changes when:** the site is multi-homed and load-balances/policy-routes
@@ -201,9 +214,10 @@ across ISPs; an ISP link fails over to a backup; a dynamic public IP rotates or 
 host changes provider (registered ASN now stale); a prefix is re-homed (different
 origin ASN in BGP); or the probe is physically moved.
 
-`path_changes_*.txt` flags both: `** probe egress ASN VARIES across rounds
-(multi-homed?)` with per-ASN counts, and `** measured egress ASN ... != registered`
-when a probe's real ASN differs from what we registered.
+The notebook's ASN table (§10) flags this: it lists each probe's **measured** egress
+ASN(s) vs its **registered** ASN and marks any probe whose egress ASN varies across
+rounds (multi-homed) or differs from registration. (Across all runs so far every
+probe was stable on its registered network.)
 
 ---
 

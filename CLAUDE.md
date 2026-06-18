@@ -58,7 +58,7 @@ submarine-cable cuts.
 | `experiments/01.1_dns_resolution/` | Exp 1.1: per-ISP DNS resolution (`dns_check.py`) |
 | `experiments/01.2_cdn_presence/` | Exp 1.2: CDN/cache presence in PK (`cdn_check.py`) |
 | `experiments/02_isp_classification/` | Exp 02: 20-probe deployment plan (PKIX set classification) |
-| `experiments/03_longitudinal_routing/` | Exp 03: one probe → 5 sites every 15 min over days; path/RTT change over time (`trace_monitor.py`) |
+| `experiments/03_longitudinal_routing/` | Exp 03: 8 probes → 10 sites, traceroute every 15 min + ping companion over days; path/RTT change over time (`trace_monitor.py`). Committed output is a normalized star schema (`results/<run>/normalized/dim_*`+`fact_*` CSVs) + a `routes_*.txt`; `watch` also writes a local-only Prometheus textfile (`live/<run>/exp03_live.prom`) for Grafana. Probe identity lives in one `PROBE_META` map (labels `isp.city (ASN)`). |
 | `findings/` | Analysis writeups (01, 01.1, 01.2, 03) + charts notebook |
 
 ---

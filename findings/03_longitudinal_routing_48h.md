@@ -57,6 +57,41 @@ content that is a 45-90x latency difference, driven purely by CDN peering qualit
 This is a strong PKIX-relevant result: the biggest ISP peers worst with the CDN that
 hosts most Pakistani consumer sites.
 
+## 2b. Sample traceroutes: the same Cloudflare IP, four ISPs
+
+The four probes below all fetch **dawn.com, which resolves to the very same
+Cloudflare address `172.67.72.98`** - so the latency difference is pure
+routing/peering, not the destination. (One representative round per probe, picked
+nearest that probe's median RTT; a middle `*` is an ICMP-filtered hop.)
+
+```
+nayatel.isb (AS23674)  ->    3 ms   local Cloudflare edge, Islamabad
+    1    0.8  192.168.18.1                 RFC1918
+    7    3.6  203.175.65.67    AS23674     Nayatel, PK
+    8    3.0  172.67.72.98     AS13335     Cloudflare   <<< served locally
+
+cybernet.khi (AS9541)  ->    5 ms   local Cloudflare edge, Karachi
+    2    4.0  202.163.100.236              Cybernet, PK
+    6    5.5  103.213.109.251  AS9541      Cybernet, PK
+    7    4.8  172.67.72.98     AS13335     Cloudflare   <<< served locally
+
+ptcl.lhe (AS17557)     ->  135 ms   geo says "Lahore", the RTT says abroad
+    1    1.4  203.135.63.1     AS17557     PTCL, PK
+  2-7     *   (ICMP-filtered)
+  255  135.2  172.67.72.98     AS13335     Cloudflare   <<< 135 ms = not local
+
+ptcl.khi (AS17557)     ->  282 ms   detours through Europe
+    2   25.6  39.39.0.1        AS17557     PTCL, PK
+    6  128.6  212.133.112.201              Colt (EU transit)
+    7  136.1  171.75.8.225     AS3356      Level3
+   10  282.1  172.67.72.98     AS13335     Cloudflare   <<< served from Paris, FR
+```
+
+Read straight down the RTT column: identical content (same IP), **3-5 ms** on
+Nayatel/Cybernet versus **135 ms** on PTCL-Lahore and **282 ms** on PTCL-Karachi,
+which visibly loops out through Colt and Level3 in Europe before doubling back to
+Cloudflare. This is the 45-90x peering gap of section 2, made concrete hop by hop.
+
 ## 3. Theoretical vs actual latency (the inflation cost)
 
 For each (probe, site) we compare the **measured** RTT against the **theoretical floor**
