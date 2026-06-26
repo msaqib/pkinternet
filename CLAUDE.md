@@ -57,9 +57,10 @@ submarine-cable cuts.
 | `experiments/01_website_destinations/` | Exp 01: website hosting/routing (notes, results, inventory, site list) |
 | `experiments/01.1_dns_resolution/` | Exp 1.1: per-ISP DNS resolution (`dns_check.py`) |
 | `experiments/01.2_cdn_presence/` | Exp 1.2: CDN/cache presence in PK (`cdn_check.py`) |
-| `experiments/02_isp_classification/` | Exp 02: 20-probe deployment plan (PKIX set classification) |
+| `experiments/02_isp_classification/` | Exp 02: 20-probe deployment plan (PKIX set classification). Also holds the PTCL↔Transworld peering probe (`ptcl_peering.py`, modes `peering`/`hosted`) backing finding 3.1. |
+| `experiments/04_path_tromboning/` | Exp 04: systematic path-tromboning detection across an ISP's whole address space. Pipeline: `enumerate_prefixes.py <ASN>` (RIPEstat announced prefixes) → `responsiveness_sweep.py` (find live IPs/prefix) → `tromboning_sweep.py` (TCP/80 Paris traceroute + 3-signal RTT-robust detector). `trace_from_probes.py` = ad-hoc traceroute to one target from named probes (RQ4). Built on **ripe-atlas-cousteau + sagan**. |
 | `experiments/03_longitudinal_routing/` | Exp 03: 8 probes → 10 sites, traceroute every 15 min + ping companion over days; path/RTT change over time (`trace_monitor.py`). Committed output is a normalized star schema (`results/<run>/normalized/dim_*`+`fact_*` CSVs) + a `routes_*.txt`; `watch` also writes a local-only Prometheus textfile (`live/<run>/exp03_live.prom`) for Grafana. Probe identity lives in one `PROBE_META` map (labels `isp.city (ASN)`). |
-| `findings/` | Analysis writeups (01, 01.1, 01.2, 03) + charts notebook |
+| `findings/` | Analysis writeups (01, 01.1, 01.2, 03, **3.1 PTCL↔Transworld**, **04 Worldcall tromboning**) + charts notebook |
 
 ---
 
@@ -156,12 +157,28 @@ PROBES = [
 ]
 ```
 
-**Geography:** RIPE Atlas reports 5 connected probes for this account in Pakistan
-— 4 in Lahore, 1 in Islamabad (the Nayatel / 60223 probe), one of the Lahore
-probes being a RIPE Atlas *Anchor*. The RTT table below assumes a Lahore vantage.
-Note: only Transworld is double-covered (two probes, 1015679 and 62224); every
-other ISP has a single probe — which limits RQ2 (intra-ISP consistency) until
-more probes are deployed.
+**Probe roster (name ↔ ID ↔ ASN, connected as of 2026-06-22).** RIPE's API does
+**not** expose our custom "LocalInternetProjNN" names, so keep this table current by
+hand. Proj-number ≠ probe-ID order.
+
+| Probe ID | ProjNN | ASN | ISP | City | Notes |
+|---|---|---|---|---|---|
+| 1015679 | Proj01 | AS136174 | TPCPL/Nova | Lahore | transits Transworld; hop-2 Shaw (AS6327) artifact |
+| 1016036 | Proj02 | AS9541 | Cybernet | Haripur | |
+| 1016143 | Proj04 | AS9541 | Cybernet | Karachi | |
+| 1016126 | Proj05 | AS17557 | PTCL | Karachi | route-visible; ~25 ms access floor |
+| 1016153 | **Proj14** | **AS135407** | TES-PL (Transworld retail/home) | Karachi | **unfiltered** — best Transworld-family vantage |
+| 1016154 | ? | AS9541 | Cybernet | Karachi | unidentified Proj# |
+| 64535 | ? | AS151983 | Orbit | Faisalabad | unidentified Proj# |
+| 7764 | — | AS17557 | PTCL (anchor, LUMS) | Lahore | **ICMP-filtered** (only hop1/2/dest) |
+| 62224 | — | AS38193 | Transworld (Zartash office) | Lahore | **ICMP-filtered**; use ping for RTT |
+| 60223 | — | AS23674 | Nayatel | Islamabad | most route-independent |
+| 7613 | — | AS152605 | Z-Com | Lahore | anchor |
+
+Disconnected (can't measure): AS38264 Wateen ×4, AS45773 PERN ×2, others.
+**ICMP-filtered probes** (62224, 7764) hide their path and report bogus
+1000 ms+ dest RTTs (ICMP-error-generation delay) — **use ping (min-of-N) for a real
+RTT**, and the unfiltered TES probe (1016153) to *see* a Transworld path.
 
 **Batching:** With 5 probes × 100 sites = 500 measurements, RIPE Atlas hits its
 100-concurrent-measurement limit. Current settings: `BATCH_WAIT = 30` (seconds
@@ -304,9 +321,12 @@ filtering throughout. Destination-level data usable; no routing path visible.
 | AS138424| FBR | Federal Board of Revenue (own ASN) |
 | AS7590  | COMSATS | Commission on Science & Technology |
 | AS153561| PITC | Pakistan IT Company |
+| AS135407| TES-PL / Transworld Enterprise | Transworld's retail/home arm; probe 1016153 (Proj14) |
+| AS38710 | Worldcall | ISP; Exp 04 first target (52 announced /24s) |
 | AS32787 | Prolexic/Akamai | DDoS mitigation (US) — appears in govt site paths |
-| AS174   | Cogent | US backbone — appears in PITC paths |
-| AS6327  | Shaw/Rogers | Canadian ISP — appears at hop 2 of probe 1015679 |
+| AS174   | Cogent | **Runs a PoP physically IN Pakistan** (~2 ms) used as a domestic interconnect fabric — geo-IP mislabels it "US". Don't treat AS174 hops as foreign without checking RTT. |
+| AS6327  | Shaw/Rogers | "Canadian" ISP, but hop 2 of probe 1015679 is **physically in PK** (~1.5 ms) — measurement artifact, exclude from country analysis |
+| — | Equinix Singapore (`27.111.228.83`) | Transworld's int'l egress where Worldcall traffic trombones (Exp 04). Unannounced in BGP — only RDAP/hostname (`*.equinix.com`) identifies it. |
 
 ---
 
@@ -376,6 +396,30 @@ destination set differs per probe. Quote medians; prefer path-based metrics.
 - PTCL and Transworld have a private bilateral routing arrangement
 - Neither PTCL nor Transworld are at PKIX (Transworld has zero North American
   presence; PKIX is in Pakistan)
+
+### Path tromboning — Exp 04 (Worldcall, 2026-06-22)
+
+See `findings/04_path_tromboning_worldcall.md`. From the Nova probe to **Worldcall
+(AS38710)**: **16 of 52 announced /24s (31%) trombone to Equinix Singapore** and
+back; 36 stay local; **all hairpins handed off by Transworld via `110.93.252.136`**.
+Local paths stay in-PK via a **Cogent PoP inside Pakistan** (`149.40.227.134`).
+
+- **RQ4 isolates Transworld as the culprit (a domestic route exists):** the *same*
+  Worldcall IP `115.186.61.254` is **LOCAL ~46 ms from PTCL** (path never touches
+  Transworld) but **TROMBONE ~134 ms from Transworld** / 117 ms TES / 124 ms Nova.
+  Worldcall IP `117.102.19.1` is local from *everyone* (3–20 ms). So Transworld
+  routes some Worldcall destinations domestically and hairpins others — a routing
+  choice, not a connectivity limit. Strongest form of the PKIX argument.
+- **Detector methodology (reusable):** geo-IP lies (Shaw/Cogent register abroad but
+  sit in PK at ~2 ms), so tromboning is decided by **RTT physics**, not hop country:
+  (a) a responding foreign hop with RTT ≥40 ms, (b) a ≥60 ms RTT jump, or (c) any hop
+  ≥70 ms = left PK; a path whose RTT stays <45 ms = local. Ignore RTTs >~500 ms
+  (queuing / ICMP-error-generation artifact, esp. on filtered probes — use **ping
+  min-of-N** there). This took the result from 53/53 false positives → 16/52 clean.
+- **Open caveat:** "per-prefix" is so far an *inference* — only one IP/­/24 was tested;
+  intra-/24 consistency is unverified, and per-flow/time variance is real (an IP
+  flipped local↔abroad minutes apart). The intra-block test (many IPs in one /24) is
+  the next step.
 
 ### PKIX status
 
@@ -544,5 +588,13 @@ COMSATS at ~3ms — suggesting direct local peering with these networks in Islam
 ## Dependencies
 
 ```bash
-pip install requests dnspython python-dotenv
+pip install requests dnspython python-dotenv          # Exp 01/03 (hand-rolled API)
+pip install ripe.atlas.cousteau ripe.atlas.sagan      # Exp 04 (official RIPE libs)
 ```
+
+Exp 01/03 hand-roll the RIPE Atlas REST API with `requests`. **Exp 04 onward uses the
+official libraries**: `ripe.atlas.cousteau` to create/fetch measurements
+(`Traceroute(protocol="TCP", port=80, paris=16)`, `AtlasSource`, `AtlasCreateRequest`,
+`AtlasResultsRequest`) and `ripe.atlas.sagan` (`TracerouteResult`) to parse results.
+Use `.last_median_rtt` (not the deprecated `.last_rtt`). `RIPE_API_KEY` still comes
+from `.env` via `pk_multi_probe` (Exp 04 scripts import its ASN/RDAP helpers).

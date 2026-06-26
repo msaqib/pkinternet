@@ -41,6 +41,8 @@ A few terms used below:
 | **1.3** | What does Nayatel's traffic actually pass through? | done | About 40% of Nayatel paths use an international operator (the foreign-hosted tail); about 59% bypass it with direct peering. Nayatel is multi-homed. |
 | **02** | Classify ISPs by whether they use PKIX, and plan probe coverage. | planning / deploying | Sets 1/2/3 built from the PTA roadshow deck plus Exp 01; plan is about 21 new probes plus 5 existing plus volunteers. |
 | **03** | Does the route and RTT to a site change over time? | 24h done, 48h running | Local sites 2 to 40 ms versus offshore 130 to 200 ms. No daily (diurnal) cycle and stable routes, so the inefficiency is structural, not congestion. |
+| **3.1** | Where do PTCL paths jump in RTT, and does PTCL peer with Transworld? | done | A ~26 ms access floor then a +80–200 ms international exit; PTCL peers with Transworld **domestically** (100%) but never for abroad traffic (0%) — verified by direct probe-to-probe test. |
+| **04** | How much of an ISP's address space hairpins (trombones) abroad, systematically? | Worldcall done | 31% of Worldcall's 52 /24s trombone to **Equinix Singapore via Transworld**; the same IPs are reached **locally by PTCL** — so a domestic route exists and Transworld chooses the hairpin. Prefix-sampled (TASS-style), RTT-physics detector. |
 
 ---
 

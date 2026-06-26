@@ -1,0 +1,14 @@
+prefix,target_ip,reached,trombones,status,evidence,exit_hop,exit_ip,exit_name,exit_country,transit_asn,transit_name,max_rtt_ms,dest_rtt_ms,n_hops,note,measurement_id
+115.186.17.0/24,115.186.17.1,True,False,local,,,,,,,,2.7,2.8,6,,182511984
+115.186.25.0/24,115.186.25.1,False,True,trombone,foreign_hop,6,27.111.228.83,EQUINIX-AP,SG,38193,Transworld,185.7,120.7,18,,182511992
+115.186.31.0/24,115.186.31.1,True,False,local,,,,,,,,6.7,2.7,8,,182512003
+115.186.56.0/24,115.186.56.1,True,False,local,,,,,,,,37.0,37.1,8,,182512010
+115.186.57.0/24,115.186.57.1,True,False,local,,,,,,,,40.7,41.6,8,,182512021
+115.186.58.0/24,115.186.58.1,True,False,local,,,,,,,,37.3,38.2,8,,182512030
+115.186.60.0/24,115.186.60.1,True,True,trombone,foreign_hop,6,27.111.228.83,EQUINIX-AP,SG,38193,Transworld,194.1,128.8,13,,182512039
+115.186.61.0/24,115.186.61.254,True,True,trombone,foreign_hop,6,27.111.228.83,EQUINIX-AP,SG,38193,Transworld,194.1,131.6,11,,182512047
+115.186.113.0/24,115.186.113.1,True,True,trombone,foreign_hop,6,27.111.228.83,EQUINIX-AP,SG,38193,Transworld,194.4,124.2,12,,182512056
+117.102.18.0/24,117.102.18.1,True,False,local,,,,,,,,3.4,2.7,7,,182512072
+117.102.19.0/24,117.102.19.1,True,False,local,,,,,,,,3.1,2.8,8,,182512085
+203.81.239.0/24,203.81.239.1,True,False,local,,,,,,,,37.6,37.0,9,,182512092
+control,115.186.61.254,True,True,trombone,foreign_hop,6,27.111.228.83,EQUINIX-AP,SG,38193,Transworld,181.0,123.5,14,,182512101

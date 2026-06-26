@@ -1,0 +1,265 @@
+PTCL-hosted sites reached from every probe  -  readable traceroutes
+Exp 02 'probe-on-A to host-on-B': how each ISP reaches a PTCL (AS17557) server.
+Targets: lums.edu.pk (203.135.62.24), ptcl.com.pk (221.120.226.61)
+
+==============================================================================
+ lums.edu.pk  (203.135.62.24)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T11:04:04+00:00
+ SOURCE  probe 7613 - AS152605 - Z-Com (Lahore)   [egress 157.20.147.16]
+ DEST    203.135.62.24 - reached
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   157.20.147.17      AS152605  ZCOMNETWORKS-AS-AP - Z COM NETWORKS, PK (PK)
+    2       0.6   110.93.205.184     AS38193   TWA-AS-AP - Transworld Associates (Pvt.) Ltd., PK (PK)
+    3       1.6   119.63.137.49      -         TWA (PK)
+    4       2.2   10.253.8.17        -         RFC1918
+    5       2.3   203.135.62.24      AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)  <<< DESTINATION
+
+==============================================================================
+ lums.edu.pk  (203.135.62.24)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T11:04:07+00:00
+ SOURCE  probe 7764 - AS17557 - PTCL (Lahore, anchor LUMS)   [egress 203.135.63.50]
+ DEST    203.135.62.24 - no final response
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.0   203.135.63.1       AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)
+    2       0.4   172.25.3.14        -         RFC1918
+    3      *     (no response)
+    4      *     (no response)
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ lums.edu.pk  (203.135.62.24)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T11:04:10+00:00
+ SOURCE  probe 60223 - AS23674 - Nayatel (Islamabad)   [egress 192.168.18.38]
+ DEST    203.135.62.24 - reached
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.18.1       -         RFC1918
+    2       2.7   100.89.0.1         -         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED
+    3       2.7   172.27.0.29        -         RFC1918
+    4       2.5   172.27.0.22        -         RFC1918
+    5       2.6   172.31.5.170       -         RFC1918
+    6      21.7   110.93.202.134     -         TWA (PK)
+    7      22.7   110.93.252.86      -         TWA (PK)
+    8      22.5   119.63.137.83      -         TWA (PK)
+    9      *     (no response)
+   10      *     (no response)
+   11      23.4   203.135.62.24      AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)  <<< DESTINATION
+
+==============================================================================
+ lums.edu.pk  (203.135.62.24)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T11:04:14+00:00
+ SOURCE  probe 62224 - AS38193 - Transworld (Lahore)   [egress 10.102.77.14]
+ DEST    203.135.62.24 - no final response
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.2   10.102.76.1        -         RFC1918
+    2       0.4   172.25.3.14        -         RFC1918
+    3      *     (no response)
+    4      *     (no response)
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ lums.edu.pk  (203.135.62.24)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T11:04:17+00:00
+ SOURCE  probe 1015679 - AS136174 - TPCPL/Nova (Lahore)   [egress 192.168.100.246]
+ DEST    203.135.62.24 - reached
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1      -         RFC1918
+    2       1.5   70.70.71.137       AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.2   110.93.212.161     AS38193   TWA-AS-AP - Transworld Associates (Pvt.) Ltd., PK (PK)
+    4       3.3   119.63.137.49      -         TWA (PK)
+    5       3.8   10.253.8.17        -         RFC1918
+    6       4.2   203.135.62.24      AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)  <<< DESTINATION
+
+==============================================================================
+ lums.edu.pk   from probe 1016036 - AS9541 - Cybernet (Haripur)
+   (no result — timed out / no suitable probe)
+
+==============================================================================
+ lums.edu.pk  (203.135.62.24)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T11:04:23+00:00
+ SOURCE  probe 1016126 - AS17557 - PTCL (Karachi)   [egress 192.168.10.88]
+ DEST    203.135.62.24 - reached
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.10.1       -         RFC1918
+    2      25.3   39.39.0.1          AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)
+    3      25.6   10.253.5.94        -         RFC1918
+    4      25.6   10.253.4.122       -         RFC1918
+    5      41.8   10.253.4.37        -         RFC1918
+    6      42.2   10.253.8.41        -         RFC1918
+    7      42.2   203.135.62.24      AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)  <<< DESTINATION
+
+==============================================================================
+ lums.edu.pk  (203.135.62.24)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T11:04:27+00:00
+ SOURCE  probe 1016143 - AS9541 - Cybernet (Karachi)   [egress 192.168.18.106]
+ DEST    203.135.62.24 - reached
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.4   192.168.18.1       -         RFC1918
+    2       3.9   202.163.100.236    -         CYBERNET-PK (PK)
+    3       3.6   10.15.15.122       -         RFC1918
+    4       3.9   192.168.251.141    -         RFC1918
+    5      *     (no response)
+    6       4.5   221.120.202.48     AS9557    PKTELECOM-AS-PK - Paknet Limited Merged into PTCL, PK (PK)
+    7      21.4   10.253.4.37        -         RFC1918
+    8      21.5   10.253.8.41        -         RFC1918
+    9      21.7   203.135.62.24      AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)  <<< DESTINATION
+
+==============================================================================
+ ptcl.com.pk  (221.120.226.61)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T10:53:30+00:00
+ SOURCE  probe 7613 - AS152605 - Z-Com (Lahore)   [egress 157.20.147.16]
+ DEST    221.120.226.61 - no final response
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   157.20.147.17      AS152605  ZCOMNETWORKS-AS-AP - Z COM NETWORKS, PK (PK)
+    2       0.6   110.93.205.184     AS38193   TWA-AS-AP - Transworld Associates (Pvt.) Ltd., PK (PK)
+    3      16.1   110.93.254.144     -         TWA (PK)
+    4      17.4   119.63.137.83      -         TWA (PK)
+    5      20.7   10.253.4.39        -         RFC1918
+    6      20.8   10.253.12.91       -         RFC1918
+    7      20.5   10.253.13.53       -         RFC1918
+    8      21.1   116.71.241.234     AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ ptcl.com.pk  (221.120.226.61)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T10:53:33+00:00
+ SOURCE  probe 7764 - AS17557 - PTCL (Lahore, anchor LUMS)   [egress 203.135.63.50]
+ DEST    221.120.226.61 - no final response
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   203.135.63.1       AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)
+    2       0.9   172.25.3.14        -         RFC1918
+    3      *     (no response)
+    4      *     (no response)
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ ptcl.com.pk  (221.120.226.61)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T10:53:36+00:00
+ SOURCE  probe 60223 - AS23674 - Nayatel (Islamabad)   [egress 192.168.18.38]
+ DEST    221.120.226.61 - no final response
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.18.1       -         RFC1918
+    2       3.1   100.89.0.1         -         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED
+    3       3.4   172.27.0.29        -         RFC1918
+    4       2.4   172.27.0.22        -         RFC1918
+    5       3.1   172.31.5.170       -         RFC1918
+    6      *     (no response)
+    7      *     (no response)
+    8       3.7   116.71.241.234     AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ ptcl.com.pk  (221.120.226.61)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T10:53:39+00:00
+ SOURCE  probe 62224 - AS38193 - Transworld (Lahore)   [egress 10.102.77.14]
+ DEST    221.120.226.61 - no final response
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   10.102.76.1        -         RFC1918
+    2       0.6   172.25.3.14        -         RFC1918
+    3      *     (no response)
+    4      *     (no response)
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ ptcl.com.pk  (221.120.226.61)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T10:53:45+00:00
+ SOURCE  probe 1015679 - AS136174 - TPCPL/Nova (Lahore)   [egress 192.168.100.246]
+ DEST    221.120.226.61 - no final response
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1      -         RFC1918
+    2      11.2   70.70.71.137       AS6327    SHAW - Shaw Communications, CA (CA)
+    3       6.5   110.93.212.161     AS38193   TWA-AS-AP - Transworld Associates (Pvt.) Ltd., PK (PK)
+    4      23.2   110.93.254.144     -         TWA (PK)
+    5      21.2   119.63.137.83      -         TWA (PK)
+    6      22.5   10.253.4.39        -         RFC1918
+    7      22.3   10.253.12.91       -         RFC1918
+    8      22.1   10.253.13.53       -         RFC1918
+    9      22.9   116.71.241.234     AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ ptcl.com.pk   from probe 1016036 - AS9541 - Cybernet (Haripur)
+   (no result — timed out / no suitable probe)
+
+==============================================================================
+ ptcl.com.pk  (221.120.226.61)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T10:53:49+00:00
+ SOURCE  probe 1016126 - AS17557 - PTCL (Karachi)   [egress 192.168.10.88]
+ DEST    221.120.226.61 - no final response
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.10.1       -         RFC1918
+    2      25.4   39.39.0.1          AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)
+    3      25.6   10.253.5.94        -         RFC1918
+    4      26.5   10.253.4.40        -         RFC1918
+    5      47.8   10.253.4.19        -         RFC1918
+    6      45.3   10.253.12.17       -         RFC1918
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ ptcl.com.pk  (221.120.226.61)  -  AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+ TIME    2026-06-19T10:53:51+00:00
+ SOURCE  probe 1016143 - AS9541 - Cybernet (Karachi)   [egress 192.168.18.106]
+ DEST    221.120.226.61 - no final response
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.3   192.168.18.1       -         RFC1918
+    2       4.3   202.163.100.236    -         CYBERNET-PK (PK)
+    3       3.9   10.15.15.122       -         RFC1918
+    4       3.9   192.168.112.161    -         RFC1918
+    5       6.3   192.168.76.194     -         RFC1918
+    6       4.5   221.120.202.48     AS9557    PKTELECOM-AS-PK - Paknet Limited Merged into PTCL, PK (PK)
+    7      24.0   10.253.4.39        -         RFC1918
+    8      24.0   10.253.12.91       -         RFC1918
+    9      24.3   10.253.13.53       -         RFC1918
+   10      24.3   116.71.241.234     AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+   15      *     (no response)
+  255      *     (no response)
+

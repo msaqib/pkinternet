@@ -38,6 +38,13 @@ Six distinct ISPs; Cybernet (AS9541) and PTCL (AS17557) each contribute two prob
 | 7764 | AS17557 | **PTCL** | LUMS | **anchor** — PTCL vantage (dominant LDI), new this run |
 | 1016126 | AS17557 | PTCL | Karachi | LocalInternetProj05 (2nd PTCL) |
 | 1015679 | AS136174 | TPCPL / Nova | Lahore | LocalInternetProj01 |
+| 1016153 | AS135407 | TES-PL (Transworld retail/home) | Karachi | **LocalInternetProj14** — unfiltered, best Transworld-family path visibility (Exp 04 RQ4) |
+| 1016154 | AS9541 | Cybernet | Karachi | Proj# unconfirmed |
+| 64535 | AS151983 | Orbit | Faisalabad | Proj# unconfirmed |
+
+(Canonical probe roster — including ICMP-filtered and disconnected probes — is the
+table in `CLAUDE.md` → *Probe configuration*. RIPE's API does not expose the
+`LocalInternetProjNN` names, so both tables are maintained by hand.)
 
 Each result records the probe's **live-measured egress ASN** (`probe_asn`) alongside
 the registered one (`probe_asn_reg`) — useful here since two probes share AS9541 and

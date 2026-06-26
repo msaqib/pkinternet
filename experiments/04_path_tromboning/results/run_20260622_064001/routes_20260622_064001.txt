@@ -1,0 +1,1077 @@
+Exp 04 path-tromboning sweep — AS38710 from probe 1015679
+TCP/80 Paris traceroute, 53 prefixes. trombrne = a hop outside PK.
+
+==============================================================================
+ 111.88.233.0/24  ->  111.88.233.128   [TROMBONES via EQUINIX-AP (SG)]
+ reached=False  dest_rtt=129.337  msm=182490637
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.3   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.5   110.93.254.38    -         TWA (PK)
+    5      17.6   110.93.252.136   -         TWA (PK)
+    6     193.8   27.111.228.83    -         EQUINIX-AP (SG)  <<< LEAVES PK
+    7      *     (no response)
+    8     116.7   10.253.4.19      -         RFC1918
+    9     116.8   10.253.12.85     -         RFC1918
+   10     116.8   10.253.13.57     -         RFC1918
+   11      *     (no response)
+   12     129.2   10.10.60.61      -         RFC1918
+   13      *     (no response)
+   14      *     (no response)
+   15      *     (no response)
+   16      *     (no response)
+   17      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.17.0/24  ->  115.186.17.128   [stays in PK]
+ reached=False  dest_rtt=3.212  msm=182490687
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.2   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.3   110.93.252.139   -         TWA (PK)
+    5       2.2   110.93.255.94    -         TWA (PK)
+    6       2.6   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7       3.0   10.200.107.153   -         RFC1918
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.23.0/24  ->  115.186.23.128   [stays in PK]
+ reached=False  dest_rtt=37.77  msm=182490732
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.7   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.2   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.6   110.93.252.48    -         TWA (PK)
+    5      36.7   110.93.255.187   -         TWA (PK)
+    6      37.4   149.40.227.138   AS174     COGENT-174 - Cogent Communicat (US)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.25.0/24  ->  115.186.25.128   [TROMBONES via (foreign hop not visible (?)]
+ reached=False  dest_rtt=117.39  msm=182490773
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.4   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.7   110.93.252.48    -         TWA (PK)
+    5      17.7   110.93.252.136   -         TWA (PK)
+    6      *     (no response)
+    7     109.2   10.253.4.3       -         RFC1918
+    8     117.1   10.253.4.19      -         RFC1918
+    9     117.2   10.253.12.17     -         RFC1918
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.30.0/24  ->  115.186.30.128   [stays in PK]
+ reached=False  dest_rtt=3.028  msm=182490821
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.5   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.4   110.93.252.139   -         TWA (PK)
+    5       2.4   110.93.255.94    -         TWA (PK)
+    6       2.8   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.31.0/24  ->  115.186.31.128   [stays in PK]
+ reached=False  dest_rtt=2.674  msm=182490869
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.6   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.5   110.93.252.191   -         TWA (PK)
+    5       2.3   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.32.0/24  ->  115.186.32.128   [stays in PK]
+ reached=False  dest_rtt=3.903  msm=182490908
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.3   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.6   110.93.252.191   -         TWA (PK)
+    5       2.4   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    6       3.2   10.200.107.153   -         RFC1918
+    7       2.9   192.168.12.13    -         RFC1918
+    8      *     (no response)
+    9       3.5   117.102.7.130    AS38710   WORLDCALL-AS-LHR - Worldcall B (PK)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.33.0/24  ->  115.186.33.128   [stays in PK]
+ reached=False  dest_rtt=3.712  msm=182490958
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.3   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.4   110.93.252.139   -         TWA (PK)
+    5       2.5   110.93.255.94    -         TWA (PK)
+    6       2.4   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7       3.0   10.200.107.153   -         RFC1918
+    8       2.6   192.168.12.13    -         RFC1918
+    9      *     (no response)
+   10       3.5   117.102.7.130    AS38710   WORLDCALL-AS-LHR - Worldcall B (PK)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+   15      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.34.0/24  ->  115.186.34.128   [stays in PK]
+ reached=False  dest_rtt=3.584  msm=182491005
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.7   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.5   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.3   110.93.252.139   -         TWA (PK)
+    5       2.4   110.93.255.94    -         TWA (PK)
+    6       2.4   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.35.0/24  ->  115.186.35.128   [stays in PK]
+ reached=False  dest_rtt=3.696  msm=182491050
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.5   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.3   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.6   110.93.252.139   -         TWA (PK)
+    5       2.1   110.93.255.94    -         TWA (PK)
+    6       1.8   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7       3.0   10.200.107.153   -         RFC1918
+    8       2.7   192.168.12.13    -         RFC1918
+    9      *     (no response)
+   10       3.4   117.102.7.130    AS38710   WORLDCALL-AS-LHR - Worldcall B (PK)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+   15      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.38.0/24  ->  115.186.38.128   [stays in PK]
+ reached=False  dest_rtt=3.77  msm=182491100
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.100.1    -         RFC1918
+    2       1.3   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.3   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.4   110.93.252.139   -         TWA (PK)
+    5       2.6   110.93.255.94    -         TWA (PK)
+    6       2.4   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7       2.8   10.200.107.153   -         RFC1918
+    8       2.9   192.168.12.13    -         RFC1918
+    9      *     (no response)
+   10       3.7   117.102.7.130    AS38710   WORLDCALL-AS-LHR - Worldcall B (PK)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+   15      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.39.0/24  ->  115.186.39.128   [stays in PK]
+ reached=False  dest_rtt=3.79  msm=182491146
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.100.1    -         RFC1918
+    2       1.3   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       3.1   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.4   110.93.252.191   -         TWA (PK)
+    5       3.5   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    6       3.0   10.200.107.153   -         RFC1918
+    7       2.7   192.168.12.13    -         RFC1918
+    8      *     (no response)
+    9       3.6   117.102.7.130    AS38710   WORLDCALL-AS-LHR - Worldcall B (PK)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.56.0/24  ->  115.186.56.128   [stays in PK]
+ reached=False  dest_rtt=39.764  msm=182491190
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.4   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.6   110.93.254.144   -         TWA (PK)
+    5      36.9   110.93.254.209   -         TWA (PK)
+    6      37.1   149.40.227.138   AS174     COGENT-174 - Cogent Communicat (US)
+    7      36.9   10.200.108.141   -         RFC1918
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.57.0/24  ->  115.186.57.128   [stays in PK]
+ reached=False  dest_rtt=37.456  msm=182491237
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.4   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.6   110.93.252.48    -         TWA (PK)
+    5      37.2   110.93.254.111   -         TWA (PK)
+    6      37.4   149.40.227.138   AS174     COGENT-174 - Cogent Communicat (US)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.58.0/24  ->  115.186.58.128   [stays in PK]
+ reached=False  dest_rtt=37.484  msm=182491282
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.5   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.2   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.7   110.93.252.48    -         TWA (PK)
+    5      37.4   110.93.254.111   -         TWA (PK)
+    6      37.5   149.40.227.138   AS174     COGENT-174 - Cogent Communicat (US)
+    7      37.4   10.200.108.141   -         RFC1918
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.59.0/24  ->  115.186.59.128   [TROMBONES via EQUINIX-AP (SG)]
+ reached=False  dest_rtt=116.905  msm=182491328
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.5   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       3.1   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.7   110.93.252.50    -         TWA (PK)
+    5      18.3   110.93.252.136   -         TWA (PK)
+    6     193.8   27.111.228.83    -         EQUINIX-AP (SG)  <<< LEAVES PK
+    7     108.8   10.253.4.25      -         RFC1918
+    8     116.9   10.253.4.39      -         RFC1918
+    9     116.9   10.253.12.89     -         RFC1918
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.60.0/24  ->  115.186.60.128   [TROMBONES via EQUINIX-AP (SG)]
+ reached=False  dest_rtt=117.239  msm=182491372
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.1   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      18.1   110.93.254.66    -         TWA (PK)
+    5      18.7   110.93.252.246   -         TWA (PK)
+    6     193.7   27.111.228.83    -         EQUINIX-AP (SG)  <<< LEAVES PK
+    7     109.0   10.253.4.3       -         RFC1918
+    8     116.9   10.253.4.19      -         RFC1918
+    9     117.2   10.253.12.17     -         RFC1918
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.61.0/24  ->  115.186.61.128   [TROMBONES via EQUINIX-AP (SG)]
+ reached=False  dest_rtt=132.375  msm=182491407
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.6   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.2   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      18.0   110.93.252.200   -         TWA (PK)
+    5      18.7   110.93.252.246   -         TWA (PK)
+    6     198.4   27.111.228.83    -         EQUINIX-AP (SG)  <<< LEAVES PK
+    7     113.4   10.253.4.3       -         RFC1918
+    8     120.6   10.253.4.19      -         RFC1918
+    9     121.1   10.253.12.85     -         RFC1918
+   10     121.1   10.253.13.57     -         RFC1918
+   11      *     (no response)
+   12     133.4   10.10.60.61      -         RFC1918
+   13     132.3   172.20.20.2      -         RFC1918
+   14      *     (no response)
+   15      *     (no response)
+   16      *     (no response)
+   17      *     (no response)
+   18      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.90.0/24  ->  115.186.90.128   [TROMBONES via EQUINIX-AP (SG)]
+ reached=False  dest_rtt=111.878  msm=182491458
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.5   192.168.100.1    -         RFC1918
+    2       1.1   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       1.9   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.6   110.93.254.40    -         TWA (PK)
+    5      17.7   110.93.252.246   -         TWA (PK)
+    6     177.4   27.111.228.83    -         EQUINIX-AP (SG)  <<< LEAVES PK
+    7      92.0   10.253.4.25      -         RFC1918
+    8      99.6   10.253.4.39      -         RFC1918
+    9      99.9   10.253.12.37     -         RFC1918
+   10      99.7   10.253.13.57     -         RFC1918
+   11      *     (no response)
+   12     111.8   10.10.60.61      -         RFC1918
+   13      *     (no response)
+   14      *     (no response)
+   15      *     (no response)
+   16      *     (no response)
+   17      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.96.0/24  ->  115.186.96.128   [stays in PK]
+ reached=False  dest_rtt=26.181  msm=182491511
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.100.1    -         RFC1918
+    2       1.3   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       4.1   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.6   110.93.254.38    -         TWA (PK)
+    5      18.8   119.63.137.83    -         TWA (PK)
+    6      26.0   10.253.4.39      -         RFC1918
+    7      26.2   10.253.12.45     -         RFC1918
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.98.0/24  ->  115.186.98.128   [TROMBONES via (foreign hop not visible (?)]
+ reached=False  dest_rtt=117.808  msm=182491559
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.7   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.7   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.7   110.93.254.40    -         TWA (PK)
+    5      17.9   110.93.252.246   -         TWA (PK)
+    6      *     (no response)
+    7    1137.4   10.253.4.3       -         RFC1918
+    8     116.6   10.253.4.19      -         RFC1918
+    9     117.0   10.253.12.17     -         RFC1918
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.101.0/24  ->  115.186.101.128   [stays in PK]
+ reached=False  dest_rtt=39.577  msm=182491599
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.2   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      18.1   110.93.252.200   -         TWA (PK)
+    5      39.4   110.93.254.99    -         TWA (PK)
+    6      39.5   149.40.227.138   AS174     COGENT-174 - Cogent Communicat (US)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.106.0/24  ->  115.186.106.128   [TROMBONES via EQUINIX-AP (SG)]
+ reached=False  dest_rtt=119.838  msm=182491643
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.5   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      18.0   110.93.252.50    -         TWA (PK)
+    5      33.9   110.93.252.136   -         TWA (PK)
+    6     186.0   27.111.228.83    -         EQUINIX-AP (SG)  <<< LEAVES PK
+    7     101.1   10.253.4.25      -         RFC1918
+    8     108.3   10.253.4.39      -         RFC1918
+    9     108.3   10.253.12.89     -         RFC1918
+   10     119.7   172.20.20.2      -         RFC1918
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+   15      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.107.0/24  ->  115.186.107.128   [TROMBONES via EQUINIX-AP (SG)]
+ reached=False  dest_rtt=128.117  msm=182491694
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.6   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.6   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.9   110.93.252.48    -         TWA (PK)
+    5      18.0   110.93.252.136   -         TWA (PK)
+    6     194.3   27.111.228.83    -         EQUINIX-AP (SG)  <<< LEAVES PK
+    7     109.1   10.253.4.3       -         RFC1918
+    8     116.5   10.253.4.19      -         RFC1918
+    9     116.7   10.253.12.17     -         RFC1918
+   10     128.0   172.20.20.2      -         RFC1918
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+   15      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.108.0/24  ->  115.186.108.128   [TROMBONES via (foreign hop not visible (?)]
+ reached=False  dest_rtt=128.493  msm=182491738
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.4   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.9   110.93.252.102   -         TWA (PK)
+    5      18.2   110.93.252.246   -         TWA (PK)
+    6      *     (no response)
+    7     109.3   10.253.4.3       -         RFC1918
+    8     117.1   10.253.4.19      -         RFC1918
+    9     117.6   10.253.12.85     -         RFC1918
+   10     117.4   10.253.13.57     -         RFC1918
+   11      *     (no response)
+   12     129.3   10.10.60.61      -         RFC1918
+   13     128.4   172.20.20.2      -         RFC1918
+   14      *     (no response)
+   15      *     (no response)
+   16      *     (no response)
+   17      *     (no response)
+   18      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.109.0/24  ->  115.186.109.128   [TROMBONES via EQUINIX-AP (SG)]
+ reached=False  dest_rtt=127.939  msm=182491778
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.6   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.3   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.8   110.93.252.102   -         TWA (PK)
+    5      19.0   110.93.252.246   -         TWA (PK)
+    6     195.1   27.111.228.83    -         EQUINIX-AP (SG)  <<< LEAVES PK
+    7     108.9   10.253.4.3       -         RFC1918
+    8     116.4   10.253.4.19      -         RFC1918
+    9     116.9   10.253.12.85     -         RFC1918
+   10     116.7   10.253.13.57     -         RFC1918
+   11      *     (no response)
+   12     128.7   10.10.60.61      -         RFC1918
+   13     127.7   172.20.20.2      -         RFC1918
+   14      *     (no response)
+   15      *     (no response)
+   16      *     (no response)
+   17      *     (no response)
+   18      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.110.0/24  ->  115.186.110.128   [TROMBONES via (foreign hop not visible (?)]
+ reached=False  dest_rtt=119.143  msm=182491813
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.3   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.7   110.93.254.40    -         TWA (PK)
+    5      18.0   110.93.252.246   -         TWA (PK)
+    6      *     (no response)
+    7      99.7   10.253.4.25      -         RFC1918
+    8     107.9   10.253.4.39      -         RFC1918
+    9     110.9   10.253.12.37     -         RFC1918
+   10     107.3   10.253.13.57     -         RFC1918
+   11      *     (no response)
+   12     119.6   10.10.60.61      -         RFC1918
+   13     118.4   172.20.20.2      -         RFC1918
+   14      *     (no response)
+   15      *     (no response)
+   16      *     (no response)
+   17      *     (no response)
+   18      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.111.0/24  ->  115.186.111.128   [TROMBONES via EQUINIX-AP (SG)]
+ reached=False  dest_rtt=132.0  msm=182491859
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.3   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.7   110.93.254.144   -         TWA (PK)
+    5      18.1   110.93.252.136   -         TWA (PK)
+    6     198.2   27.111.228.83    -         EQUINIX-AP (SG)  <<< LEAVES PK
+    7     112.6   10.253.4.3       -         RFC1918
+    8     119.2   10.253.4.19      -         RFC1918
+    9     120.0   10.253.12.17     -         RFC1918
+   10     132.0   172.20.20.2      -         RFC1918
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+   15      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.112.0/24  ->  115.186.112.128   [TROMBONES via EQUINIX-AP (SG)]
+ reached=False  dest_rtt=117.555  msm=182491903
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.1   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.4   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      18.7   110.93.252.200   -         TWA (PK)
+    5      18.4   110.93.252.246   -         TWA (PK)
+    6     194.3   27.111.228.83    -         EQUINIX-AP (SG)  <<< LEAVES PK
+    7     109.4   10.253.4.25      -         RFC1918
+    8     117.2   10.253.4.39      -         RFC1918
+    9     117.4   10.253.12.89     -         RFC1918
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.113.0/24  ->  115.186.113.128   [TROMBONES via EQUINIX-AP (SG)]
+ reached=False  dest_rtt=107.027  msm=182491953
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.2   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.8   110.93.252.48    -         TWA (PK)
+    5      17.9   110.93.252.136   -         TWA (PK)
+    6     182.0   27.111.228.83    -         EQUINIX-AP (SG)  <<< LEAVES PK
+    7      96.1   10.253.4.3       -         RFC1918
+    8     103.9   10.253.4.19      -         RFC1918
+    9     105.6   10.253.12.17     -         RFC1918
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.115.0/24  ->  115.186.115.128   [stays in PK]
+ reached=False  dest_rtt=37.853  msm=182491998
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.7   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.5   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.9   110.93.254.40    -         TWA (PK)
+    5      37.4   110.93.253.183   -         TWA (PK)
+    6      37.5   149.40.227.138   AS174     COGENT-174 - Cogent Communicat (US)
+    7      37.5   10.200.108.141   -         RFC1918
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.121.0/24  ->  115.186.121.128   [TROMBONES via (foreign hop not visible (?)]
+ reached=False  dest_rtt=112.153  msm=182492049
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.1   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.7   110.93.252.102   -         TWA (PK)
+    5      18.2   110.93.252.246   -         TWA (PK)
+    6      *     (no response)
+    7      92.1   10.253.4.25      -         RFC1918
+    8      99.6   10.253.4.39      -         RFC1918
+    9      99.9   10.253.12.37     -         RFC1918
+   10      99.7   10.253.13.57     -         RFC1918
+   11      *     (no response)
+   12     112.2   10.10.60.61      -         RFC1918
+   13     110.9   172.20.20.2      -         RFC1918
+   14     111.2   115.186.61.35    AS38710   WORLDCALL-AS-LHR - Worldcall B (PK)
+   15      *     (no response)
+   16      *     (no response)
+   17      *     (no response)
+   18      *     (no response)
+   19      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 115.186.126.0/24  ->  115.186.126.128   [stays in PK]
+ reached=False  dest_rtt=36.912  msm=182492090
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.2   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.7   110.93.254.38    -         TWA (PK)
+    5      36.8   110.93.254.209   -         TWA (PK)
+    6      36.8   149.40.227.138   AS174     COGENT-174 - Cogent Communicat (US)
+    7      36.7   10.200.108.141   -         RFC1918
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.7.0/24  ->  117.102.7.128   [stays in PK]
+ reached=False  dest_rtt=2.562  msm=182492137
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.5   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.3   110.93.252.139   -         TWA (PK)
+    5       2.4   110.93.255.94    -         TWA (PK)
+    6       2.4   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7       2.7   10.200.107.153   -         RFC1918
+    8       2.4   192.168.12.13    -         RFC1918
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.8.0/24  ->  117.102.8.128   [stays in PK]
+ reached=False  dest_rtt=2.947  msm=182492178
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.100.1    -         RFC1918
+    2       1.8   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.5   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.5   110.93.252.139   -         TWA (PK)
+    5       2.9   110.93.255.94    -         TWA (PK)
+    6       2.5   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.9.0/24  ->  117.102.9.128   [stays in PK]
+ reached=False  dest_rtt=2.781  msm=182492235
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.8   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.3   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.6   110.93.252.191   -         TWA (PK)
+    5       2.7   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.16.0/24  ->  117.102.16.128   [stays in PK]
+ reached=False  dest_rtt=8.536  msm=182492279
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.5   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.4   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.9   110.93.252.139   -         TWA (PK)
+    5       2.6   110.93.255.94    -         TWA (PK)
+    6       7.6   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.17.0/24  ->  117.102.17.128   [stays in PK]
+ reached=False  dest_rtt=13.635  msm=182492334
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.4   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.6   110.93.252.191   -         TWA (PK)
+    5      10.0   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.18.0/24  ->  117.102.18.128   [stays in PK]
+ reached=False  dest_rtt=2.569  msm=182492378
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.6   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.4   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.7   110.93.252.191   -         TWA (PK)
+    5       2.5   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.19.0/24  ->  117.102.19.128   [stays in PK]
+ reached=False  dest_rtt=2.54  msm=182492421
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.5   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.5   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.5   110.93.252.191   -         TWA (PK)
+    5       1.8   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.26.0/24  ->  117.102.26.128   [stays in PK]
+ reached=False  dest_rtt=2.535  msm=182492465
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.3   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.6   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.4   110.93.252.191   -         TWA (PK)
+    5       2.5   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.32.0/24  ->  117.102.32.128   [stays in PK]
+ reached=False  dest_rtt=4.92  msm=182492510
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.7   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.5   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.7   110.93.252.191   -         TWA (PK)
+    5       2.6   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    6       3.1   10.200.107.153   -         RFC1918
+    7       2.8   192.168.12.13    -         RFC1918
+    8      *     (no response)
+    9       4.1   117.102.7.130    AS38710   WORLDCALL-AS-LHR - Worldcall B (PK)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.40.0/24  ->  117.102.40.128   [stays in PK]
+ reached=False  dest_rtt=2.68  msm=182492555
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.6   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.4   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.4   110.93.252.139   -         TWA (PK)
+    5       2.3   110.93.255.94    -         TWA (PK)
+    6       2.3   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7       2.7   10.200.107.153   -         RFC1918
+    8       2.7   192.168.12.13    -         RFC1918
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.41.0/24  ->  117.102.41.128   [stays in PK]
+ reached=False  dest_rtt=2.693  msm=182492595
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.4   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.2   110.93.252.139   -         TWA (PK)
+    5       2.4   110.93.255.94    -         TWA (PK)
+    6       2.5   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7       3.0   10.200.107.153   -         RFC1918
+    8       2.6   192.168.12.13    -         RFC1918
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.42.0/24  ->  117.102.42.128   [stays in PK]
+ reached=False  dest_rtt=3.515  msm=182492639
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.5   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.3   110.93.252.139   -         TWA (PK)
+    5       2.5   110.93.255.94    -         TWA (PK)
+    6       2.9   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7       3.1   10.200.107.153   -         RFC1918
+    8       2.8   192.168.12.13    -         RFC1918
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.43.0/24  ->  117.102.43.128   [stays in PK]
+ reached=False  dest_rtt=3.499  msm=182492688
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.7   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.6   110.93.252.191   -         TWA (PK)
+    5       2.8   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    6       3.1   10.200.107.153   -         RFC1918
+    7       2.9   192.168.12.13    -         RFC1918
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.44.0/24  ->  117.102.44.128   [stays in PK]
+ reached=False  dest_rtt=2.636  msm=182492733
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.7   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.7   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.3   110.93.252.139   -         TWA (PK)
+    5       2.7   110.93.255.94    -         TWA (PK)
+    6       2.7   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7       3.1   10.200.107.153   -         RFC1918
+    8       2.5   192.168.12.13    -         RFC1918
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.45.0/24  ->  117.102.45.128   [stays in PK]
+ reached=False  dest_rtt=4.1  msm=182492781
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.100.1    -         RFC1918
+    2       1.9   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.6   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.5   110.93.252.191   -         TWA (PK)
+    5       2.5   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    6       2.9   10.200.107.153   -         RFC1918
+    7       2.8   192.168.12.13    -         RFC1918
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.46.0/24  ->  117.102.46.128   [stays in PK]
+ reached=False  dest_rtt=2.521  msm=182492826
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.8   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.1   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.3   110.93.252.191   -         TWA (PK)
+    5       2.4   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    6       2.8   10.200.107.153   -         RFC1918
+    7       2.5   192.168.12.13    -         RFC1918
+    8       2.5   115.186.30.140   AS38710   WORLDCALL-AS-LHR - Worldcall B (PK)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 117.102.47.0/24  ->  117.102.47.128   [stays in PK]
+ reached=False  dest_rtt=2.355  msm=182492869
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.5   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.0   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.2   110.93.252.139   -         TWA (PK)
+    5       2.3   110.93.255.94    -         TWA (PK)
+    6       3.3   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7       2.9   10.200.107.153   -         RFC1918
+    8       2.6   192.168.12.13    -         RFC1918
+    9       1.9   115.186.30.140   AS38710   WORLDCALL-AS-LHR - Worldcall B (PK)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 203.81.230.0/24  ->  203.81.230.128   [stays in PK]
+ reached=False  dest_rtt=3.837  msm=182492913
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.5   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4       2.3   110.93.252.139   -         TWA (PK)
+    5       2.7   110.93.255.94    -         TWA (PK)
+    6       4.6   149.40.227.134   AS174     COGENT-174 - Cogent Communicat (US)
+    7       2.9   10.200.107.153   -         RFC1918
+    8       3.5   192.168.103.103  -         RFC1918
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ 203.81.239.0/24  ->  203.81.239.128   [stays in PK]
+ reached=False  dest_rtt=37.875  msm=182492961
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.3   192.168.100.1    -         RFC1918
+    2       1.3   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.4   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.7   110.93.252.48    -         TWA (PK)
+    5      36.8   110.93.255.187   -         TWA (PK)
+    6      37.5   149.40.227.138   AS174     COGENT-174 - Cogent Communicat (US)
+    7      37.3   10.200.108.141   -         RFC1918
+    8      36.8   172.20.20.2      -         RFC1918
+    9      37.7   192.168.56.98    -         RFC1918
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ control  ->  115.186.61.254   [TROMBONES via (foreign hop not visible (?)]
+ reached=True  dest_rtt=112.007  msm=182493016
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.4   192.168.100.1    -         RFC1918
+    2       1.4   70.70.71.137     AS6327    SHAW - Shaw Communications, CA (CA)
+    3       2.3   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associa (PK)
+    4      17.8   110.93.254.144   -         TWA (PK)
+    5      18.3   110.93.252.136   -         TWA (PK)
+    6      *     (no response)
+    7      92.0   10.253.4.3       -         RFC1918
+    8     101.1   10.253.4.19      -         RFC1918
+    9     100.4   10.253.12.17     -         RFC1918
+   10     111.5   115.186.56.83    AS38710   WORLDCALL-AS-LHR - Worldcall B (PK)
+   11     112.0   115.186.61.254   AS38710   WORLDCALL-AS-LHR - Worldcall B (PK)
+

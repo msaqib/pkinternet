@@ -1,0 +1,103 @@
+PTCL <-> Transworld peering check  -  readable traceroutes
+Direct probe-to-probe test, both directions. Settles 'no PTCL/TWA peering => routed internationally'.
+5 traceroutes, 4 pings.
+
+==============================================================================
+ ptcl.khi to transworld.lhe    (msm 182105424)
+ TIME    2026-06-19T10:25:57+00:00
+ SOURCE  probe 1016126   [egress 192.168.10.88]
+ DEST    110.93.235.222 - AS38193 TWA-AS-AP - Transworld Associates (Pvt.) Ltd., PK (PK) - no final response
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.10.1       -         RFC1918
+    2      25.2   39.39.0.1          AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)
+    3      25.6   10.253.5.94        -         RFC1918
+    4      25.6   10.253.4.122       -         RFC1918
+    5      25.8   119.63.137.82      -         TWA (PK)
+    6      42.8   110.93.255.107     -         TWA (PK)
+    7      41.9   119.63.135.106     AS38193   TWA-AS-AP - Transworld Associates (Pvt.) Ltd., PK (PK)
+    8      42.1   110.93.234.253     AS38193   TWA-AS-AP - Transworld Associates (Pvt.) Ltd., PK (PK)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ ptcl.khi to transworld.lhe    (msm 182105869)
+ TIME    2026-06-19T10:33:23+00:00
+ SOURCE  probe 1016126   [egress 192.168.10.88]
+ DEST    110.93.235.222 - AS38193 TWA-AS-AP - Transworld Associates (Pvt.) Ltd., PK (PK) - no final response
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.1   192.168.10.1       -         RFC1918
+    2      29.3   39.39.0.1          AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)
+    3      30.0   10.253.5.94        -         RFC1918
+    4      33.5   10.253.4.122       -         RFC1918
+    5      34.1   119.63.137.82      -         TWA (PK)
+    6      55.0   110.93.255.107     -         TWA (PK)
+    7      42.1   119.63.135.106     AS38193   TWA-AS-AP - Transworld Associates (Pvt.) Ltd., PK (PK)
+    8      42.7   58.27.202.35       AS38264   WATEEN-IMS-PK-AS-AP - National WiMAX/IMS environment, PK (PK)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ ptcl.lhe to transworld.lhe    (msm 182105878)
+ TIME    2026-06-19T10:33:25+00:00
+ SOURCE  probe 7764   [egress 203.135.63.50]
+ DEST    110.93.235.222 - AS38193 TWA-AS-AP - Transworld Associates (Pvt.) Ltd., PK (PK) - no final response
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.1   203.135.63.1       AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)
+    2       0.7   172.25.3.14        -         RFC1918
+    3      *     (no response)
+    4      *     (no response)
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+  255      *     (no response)
+
+==============================================================================
+ transworld.lhe to ptcl.khi    (msm 182105882)
+ TIME    2026-06-19T10:33:30+00:00
+ SOURCE  probe 62224   [egress 10.102.77.14]
+ DEST    39.39.48.53 - AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK) - reached
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.9   10.102.76.1        -         RFC1918
+    2       0.7   172.25.3.14        -         RFC1918
+    3      *     (no response)
+    4      *     (no response)
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+  255      47.0   39.39.48.53        AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)  <<< DESTINATION
+
+==============================================================================
+ transworld.lhe to ptcl.lhe    (msm 182105887)
+ TIME    2026-06-19T10:33:35+00:00
+ SOURCE  probe 62224   [egress 10.102.77.14]
+ DEST    203.135.63.50 - AS17557 PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK) - reached
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   10.102.76.1        -         RFC1918
+    2       1.0   172.25.3.1         -         RFC1918
+    3       1.2   203.135.63.50      AS17557   PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK (PK)  <<< DESTINATION
+
+==============================================================================
+ PING RTT SUMMARY  (the speed-of-light evidence)
+ floor: Karachi/Lahore -> Singapore ~60-90ms, -> Europe ~100-130ms
+------------------------------------------------------------------------------
+ direction                             min      avg      max  rcvd  verdict
+ ptcl.khi to transworld.lhe              -        -        -  0/3  no reply (ICMP filtered)
+ ptcl.lhe to transworld.lhe              -        -        -  0/3  no reply (ICMP filtered)
+ transworld.lhe to ptcl.khi           47.0     49.9     52.2  3/3  DOMESTIC (<50ms)
+ transworld.lhe to ptcl.lhe            1.5      1.6      1.7  3/3  DOMESTIC (<50ms)
+
+Verdict: PTCL and Transworld interconnect DOMESTICALLY (1.5-47ms, all PK).
+The 'routed internationally' claim is disproved. See findings/03.1_ptcl_rtt_jumps.md.
