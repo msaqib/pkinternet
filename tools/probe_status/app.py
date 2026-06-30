@@ -289,4 +289,8 @@ if __name__ == "__main__":
     if not SHEET:
         print("WARNING: SHEET_CSV_URL not set — set it and restart.", file=sys.stderr)
     print(f"Probe-status dashboard on http://{HOST}:{PORT}", file=sys.stderr)
-    app.run(host=HOST, port=PORT, debug=False)
+    try:
+        from waitress import serve                       # production server if installed
+        serve(app, host=HOST, port=PORT)
+    except ImportError:
+        app.run(host=HOST, port=PORT, debug=False)        # fallback: Flask dev server
