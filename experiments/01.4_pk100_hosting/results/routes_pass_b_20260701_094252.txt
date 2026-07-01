@@ -1,0 +1,1908 @@
+Exp 1.4 Pass B — traceroutes from probe 64078 (Transworld / TES-PL AS135407, Rawalpindi)
+PK100 hosting check. '<<< LEAVES PK' = a foreign hop (a PK-hosted site reached via a hairpin).
+
+================================================================================
+ adamjeeinsurance.com   (Pakistan: TWA-AS-AP - Transworld Associates (Pvt)   ->   149.40.232.33
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 3.708ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.1   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.4   119.63.137.130   -         ?
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ agp.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.86
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 205.033ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.3   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.5   119.63.137.130   -         ?
+    5      23.0   110.93.253.208   -         TWA (PK)
+    6      24.0   110.93.252.136   -         TWA (PK)
+    7      98.7   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      98.7   2.21.120.59      AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     204.9   72.52.25.142     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ agpr.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.86
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 204.978ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.101.1    -         RFC1918
+    2       1.3   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.5   119.63.137.130   -         ?
+    5      23.2   110.93.253.208   -         TWA (PK)
+    6      24.3   110.93.252.136   -         TWA (PK)
+    7      98.6   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      98.7   2.21.120.59      AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     204.7   72.52.25.142     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ alfalahamc.com   (Pakistan: CYBERNET-APII - Cyber Internet Service)   ->   175.107.198.164
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 23.696ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.9   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.8   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.3   119.63.137.130   -         ?
+    5      23.5   110.93.252.86    -         TWA (PK)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ aust.edu.pk   (Pakistan: LDN-AS-PK - LINKdotNET Telecom Limited)   ->   210.2.169.216
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 24.074ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.8   110.93.252.84    -         TWA (PK)
+    6      24.0   110.93.252.173   -         TWA (PK)
+    7      24.3   110.93.202.21    -         TWA (PK)
+    8      *     (no response)
+    9      23.3   119.30.105.222   AS58470   Mobilink-Peering-AS-PK - IX  (PK)
+   10      *     (no response)
+   11      24.0   210.2.169.216    AS23966   LDN-AS-PK - LINKdotNET Telec (PK)
+
+================================================================================
+ aviation.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.86
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 204.683ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.101.1    -         RFC1918
+    2       1.3   192.168.18.1     -         RFC1918
+    3       3.8   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.4   119.63.137.130   -         ?
+    5      23.3   110.93.253.208   -         TWA (PK)
+    6      23.9   110.93.252.136   -         TWA (PK)
+    7      98.9   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      98.7   2.21.120.59      AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     204.4   72.52.25.142     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ bisehyd.edu.pk   (Pakistan: GESNET-AS-AP - Gemnet Enterprise Solut)   ->   103.11.220.131
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 27.516ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.3   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.9   119.63.137.130   -         ?
+    5      23.7   110.93.252.86    -         TWA (PK)
+    6      24.2   110.93.254.163   -         TWA (PK)
+    7      27.0   110.93.252.115   -         TWA (PK)
+    8      26.8   110.93.199.161   AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    9      27.5   203.80.128.253   AS58893   GESNET-AS-AP - Gemnet Enterp (PK)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ cga.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.86
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 205.279ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.0   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      23.3   110.93.253.208   -         TWA (PK)
+    6      24.3   110.93.252.136   -         TWA (PK)
+    7      98.7   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      98.8   2.21.120.59      AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     205.0   72.52.25.142     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ cii.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.81
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 199.461ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.2   192.168.101.1    -         RFC1918
+    2       1.3   192.168.18.1     -         RFC1918
+    3       3.6   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      23.2   110.93.252.86    -         TWA (PK)
+    6      24.4   110.93.252.136   -         TWA (PK)
+    7     102.5   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8     103.9   2.21.120.120     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     199.4   72.52.21.194     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ comsats.net.pk   (Pakistan: COMSATS - Commission on Science and Te)   ->   210.56.11.242
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.367ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5       3.3   110.93.254.7     -         TWA (PK)
+    6       4.2   119.63.134.94    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    7       4.3   210.56.8.151     AS7590    COMSATS - Commission on Scie (PK)
+    8       4.2   210.56.11.242    AS7590    COMSATS - Commission on Scie (PK)
+
+================================================================================
+ crcp.org.pk   (Pakistan: MULTINET-IE-AS-AP - Multinet Broadband)   ->   103.152.255.10
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 8.897ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.1   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.3   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.5   119.63.137.130   -         ?
+    5       6.8   110.93.204.15    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    6       3.8   202.142.160.132  AS9260    MULTINET-AS-AP - Multinet Pa (PK)
+    7       7.9   103.152.255.10   AS135523  MULTINET-IE-AS-AP - Multinet (PK)
+
+================================================================================
+ digiskills.pk   (Pakistan: WATEEN-IMS-PK-AS-AP - National WiMAX/I)   ->   58.27.231.139
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 24.47ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.5   192.168.101.1    -         RFC1918
+    2       1.2   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       4.3   103.213.108.70   -         HTISPL-PK (PK)
+    5       3.9   58.27.177.105    -         WATEEN-TEL (PK)
+    6      24.4   58.27.211.227    AS38264   WATEEN-IMS-PK-AS-AP - Nation (PK)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ dunya.com.pk   (Pakistan: TWA-AS-AP - Transworld Associates (Pvt)   ->   117.20.18.153
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.663ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.101.1    -         RFC1918
+    2       1.3   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5      24.2   110.93.252.34    -         TWA (PK)
+    6      39.0   110.93.253.227   -         TWA (PK)
+    7      39.5   117.20.18.123    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    8      39.3   117.20.18.153    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+
+================================================================================
+ dunyanews.tv   (Pakistan: MULTINET-AS-AP - Multinet Pakistan Pvt)   ->   202.142.167.148
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.855ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.101.1    -         RFC1918
+    2       1.4   192.168.18.1     -         RFC1918
+    3       3.2   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      23.2   110.93.252.106   -         TWA (PK)
+    6      38.8   110.93.252.49    -         TWA (PK)
+    7      39.4   110.93.197.229   AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    8      39.3   202.142.160.201  AS9260    MULTINET-AS-AP - Multinet Pa (PK)
+    9      39.8   125.209.73.226   AS9260    MULTINET-AS-AP - Multinet Pa (PK)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ ead.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.86
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 206.424ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.5   192.168.101.1    -         RFC1918
+    2       1.9   192.168.18.1     -         RFC1918
+    3       3.9   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      23.4   110.93.253.208   -         TWA (PK)
+    6      24.5   110.93.252.136   -         TWA (PK)
+    7      98.8   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      99.0   2.21.120.59      AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     205.3   72.52.25.142     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ ecp.gov.pk   (Pakistan: PKTELECOM-AS-PK - Pakistan Telecommuni)   ->   59.103.225.220
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 24.431ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.0   192.168.101.1    -         RFC1918
+    2       1.4   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.5   119.63.137.130   -         ?
+    5      23.0   110.93.252.106   -         TWA (PK)
+    6      *     (no response)
+    7      *     (no response)
+    8      24.7   221.120.242.101  AS17557   PKTELECOM-AS-PK - Pakistan T (PK)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      24.3   59.103.225.220   AS17557   PKTELECOM-AS-PK - Pakistan T (PK)
+
+================================================================================
+ eobi.gov.pk   (Pakistan: COMSATS - Commission on Science and Te)   ->   210.56.16.59
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 40.064ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.4   192.168.101.1    -         RFC1918
+    2       1.8   192.168.18.1     -         RFC1918
+    3       4.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       4.4   119.63.137.130   -         ?
+    5      23.2   110.93.253.208   -         TWA (PK)
+    6      38.9   110.93.252.51    -         TWA (PK)
+    7      40.8   117.20.30.62     AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    8      40.0   210.56.16.59     AS7590    COMSATS - Commission on Scie (PK)
+
+================================================================================
+ fauji.com.pk   (Pakistan: NAYATEL-PK - Nayatel (Pvt) Ltd, PK)   ->   124.109.54.66
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 7.78ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.6   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       4.1   103.213.108.68   -         HTISPL-PK (PK)
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ fbr.gov.pk   (Pakistan: FBR-AS-AP - Federal Board of Revenue, )   ->   103.125.60.60
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 3.583ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.9   192.168.101.1    -         RFC1918
+    2       1.4   192.168.18.1     -         RFC1918
+    3       3.3   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.3   119.63.137.130   -         ?
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ fc.gov.pk   (Pakistan: COMSATS - Commission on Science and Te)   ->   203.124.44.147
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.36ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.5   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       4.3   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5       3.7   110.93.254.7     -         TWA (PK)
+    6       4.3   119.63.134.94    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ fesco.com.pk   (Pakistan: PITC1-AS-AP - PITC, PK)   ->   163.61.25.38
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.912ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.8   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      24.0   110.93.253.98    -         TWA (PK)
+    6      38.9   110.93.252.49    -         TWA (PK)
+    7      39.8   149.40.227.93    AS174     COGENT-174 - Cogent Communic (US)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ gepco.com.pk   (Pakistan: PITC1-AS-AP - PITC, PK)   ->   163.61.25.23
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.753ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.7   110.93.252.106   -         TWA (PK)
+    6      39.8   110.93.254.145   -         TWA (PK)
+    7      39.7   149.40.227.93    AS174     COGENT-174 - Cogent Communic (US)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ gnnhd.tv   (Pakistan: GOURMETFOODS-AS-AP - Gourmet Foods, PK)   ->   103.178.96.22
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 40.014ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.4   192.168.18.1     -         RFC1918
+    3       3.4   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.5   119.63.137.130   -         ?
+    5      23.2   110.93.252.86    -         TWA (PK)
+    6      38.7   110.93.252.49    -         TWA (PK)
+    7      39.7   110.93.197.49    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    8      *     (no response)
+    9      39.8   58.27.213.107    AS38264   WATEEN-IMS-PK-AS-AP - Nation (PK)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ goto.com.pk   (Pakistan: TELECARD-AS-AP - Telecard Limited, PK)   ->   116.0.44.219
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 24.112ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.6   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      24.2   110.93.253.98    -         TWA (PK)
+    6      24.4   110.93.255.169   -         TWA (PK)
+    7      24.0   149.40.226.17    AS174     COGENT-174 - Cogent Communic (US)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ hec.gov.pk   (Pakistan: HECPERN-AS-PK - PERN AS Content Servie)   ->   111.68.100.163
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.473ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.9   192.168.101.1    -         RFC1918
+    2       2.1   192.168.18.1     -         RFC1918
+    3       3.9   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       4.0   103.213.108.66   -         HTISPL-PK (PK)
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ hitecuni.edu.pk   (Pakistan: LDN-AS-PK - LINKdotNET Telecom Limited)   ->   210.2.169.136
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 23.23ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.7   192.168.18.1     -         RFC1918
+    3       3.4   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5      23.5   110.93.253.208   -         TWA (PK)
+    6      24.1   110.93.255.169   -         TWA (PK)
+    7      24.3   110.93.202.21    -         TWA (PK)
+    8      *     (no response)
+    9      23.0   119.30.105.222   AS58470   Mobilink-Peering-AS-PK - IX  (PK)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ iesco.com.pk   (Pakistan: COMSATS - Commission on Science and Te)   ->   210.56.28.14
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.349ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.5   192.168.101.1    -         RFC1918
+    2       1.9   192.168.18.1     -         RFC1918
+    3       3.8   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5       3.4   110.93.254.7     -         TWA (PK)
+    6       4.3   119.63.134.94    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ iqra.edu.pk   (Pakistan: IQRAUNIVERSITY-AS-AP - Iqra University)   ->   103.138.162.150
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 25.11ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.9   192.168.101.1    -         RFC1918
+    2       1.9   192.168.18.1     -         RFC1918
+    3       3.8   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5      23.6   110.93.252.106   -         TWA (PK)
+    6      24.4   110.93.254.163   -         TWA (PK)
+    7      25.0   110.93.215.29    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ irrigation.punjab.gov.pk   (Pakistan: PITB-PUNJAB-PK - Punjab Information Te)   ->   103.111.160.21
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 40.663ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.3   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.4   110.93.252.84    -         TWA (PK)
+    6      40.2   110.93.255.109   -         TWA (PK)
+    7      40.0   110.93.202.170   -         TWA (PK)
+    8      40.6   116.58.85.10     AS17563   NEXLINX-AS-AP - Autonomous S (PK)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ irrigation.sindh.gov.pk   (Pakistan: BBI-AS-AP - Broadband Business Ideas ()   ->   103.120.116.7
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 28.253ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5      23.3   110.93.253.208   -         TWA (PK)
+    6      24.9   119.63.137.83    -         TWA (PK)
+    7      *     (no response)
+    8      *     (no response)
+    9      27.7   202.70.157.195   AS9557    PKTELECOM-AS-PK - Paknet Lim (PK)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ isra.edu.pk   (Pakistan: GESNET-AS-AP - Gemnet Enterprise Solut)   ->   103.12.58.100
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 27.231ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.7   192.168.18.1     -         RFC1918
+    3       3.4   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.3   110.93.253.110   -         TWA (PK)
+    6      24.4   110.93.254.161   -         TWA (PK)
+    7      27.3   110.93.252.115   -         TWA (PK)
+    8      26.9   110.93.199.161   AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    9      *     (no response)
+   10      27.0   103.12.58.100    AS58893   GESNET-AS-AP - Gemnet Enterp (PK)
+
+================================================================================
+ jinnah.edu.pk   (Pakistan: LDN-AS-PK - LINKdotNET Telecom Limited)   ->   210.2.169.195
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 24.383ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.0   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.8   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      24.5   110.93.252.34    -         TWA (PK)
+    6      24.6   110.93.252.173   -         TWA (PK)
+    7      24.5   110.93.202.21    -         TWA (PK)
+    8      *     (no response)
+    9      23.2   119.30.105.222   AS58470   Mobilink-Peering-AS-PK - IX  (PK)
+   10      *     (no response)
+   11      23.7   210.2.169.195    AS23966   LDN-AS-PK - LINKdotNET Telec (PK)
+
+================================================================================
+ kiu.edu.pk   (Pakistan: COMSATS - Commission on Science and Te)   ->   210.56.9.86
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.397ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.0   192.168.101.1    -         RFC1918
+    2       1.4   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.9   119.63.137.130   -         ?
+    5       3.5   110.93.254.7     -         TWA (PK)
+    6       4.3   119.63.134.94    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    7       4.3   210.56.8.151     AS7590    COMSATS - Commission on Scie (PK)
+    8       4.4   210.56.9.86      AS7590    COMSATS - Commission on Scie (PK)
+
+================================================================================
+ lesco.gov.pk   (Pakistan: NEXLINX-AS-AP - Autonomous System Numb)   ->   116.58.54.125
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 41.794ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.9   192.168.101.1    -         RFC1918
+    2       1.9   192.168.18.1     -         RFC1918
+    3       3.9   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       4.0   119.63.137.130   -         ?
+    5      23.4   110.93.253.208   -         TWA (PK)
+    6      40.3   110.93.252.229   -         TWA (PK)
+    7      39.9   110.93.202.170   -         TWA (PK)
+    8      40.0   202.59.80.2      AS17563   NEXLINX-AS-AP - Autonomous S (PK)
+    9      39.9   202.59.80.68     AS17563   NEXLINX-AS-AP - Autonomous S (PK)
+   10      *     (no response)
+   11      40.5   116.58.54.125    AS17563   NEXLINX-AS-AP - Autonomous S (PK)
+
+================================================================================
+ lhc.gov.pk   (Pakistan: PITB-PUNJAB-PK - Punjab Information Te)   ->   103.226.216.153
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.662ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.8   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5      24.5   110.93.252.34    -         TWA (PK)
+    6      39.2   110.93.253.227   -         TWA (PK)
+    7      39.5   110.93.202.170   -         TWA (PK)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ livestock.punjab.gov.pk   (Pakistan: PITB-PUNJAB-PK - Punjab Information Te)   ->   103.226.217.56
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.763ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.7   192.168.18.1     -         RFC1918
+    3       3.9   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       4.0   119.63.137.130   -         ?
+    5      23.6   110.93.252.86    -         TWA (PK)
+    6      39.0   110.93.255.107   -         TWA (PK)
+    7      39.6   110.93.202.170   -         TWA (PK)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ maju.edu.pk   (Pakistan: WATEEN-IMS-PK-AS-AP - National WiMAX/I)   ->   58.27.134.39
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 27.707ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.2   192.168.101.1    -         RFC1918
+    2       1.3   192.168.18.1     -         RFC1918
+    3       3.4   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.2   119.63.137.130   -         ?
+    5      23.6   110.93.253.110   -         TWA (PK)
+    6      24.4   110.93.252.173   -         TWA (PK)
+    7      24.9   119.63.130.115   AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    8      24.7   58.27.183.2      -         ?
+    9      25.2   58.27.134.114    AS38264   WATEEN-IMS-PK-AS-AP - Nation (PK)
+   10      26.9   58.27.134.39     AS38264   WATEEN-IMS-PK-AS-AP - Nation (PK)
+   11      27.4   58.27.134.39     AS38264   WATEEN-IMS-PK-AS-AP - Nation (PK)
+   12      26.6   58.27.134.39     AS38264   WATEEN-IMS-PK-AS-AP - Nation (PK)
+   13      26.4   58.27.134.39     AS38264   WATEEN-IMS-PK-AS-AP - Nation (PK)
+   14      *     (no response)
+   15      *     (no response)
+   16      *     (no response)
+   17      *     (no response)
+   18      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ mepco.com.pk   (Pakistan: PITC1-AS-AP - PITC, PK)   ->   163.61.25.38
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.772ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.9   192.168.18.1     -         RFC1918
+    3       3.8   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      24.0   110.93.253.98    -         TWA (PK)
+    6      39.0   110.93.252.49    -         TWA (PK)
+    7      39.6   149.40.227.93    AS174     COGENT-174 - Cogent Communic (US)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ mocc.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.86
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.143ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.9   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4      *     (no response)
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ mofept.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.89
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 197.159ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.4   110.93.252.86    -         TWA (PK)
+    6      24.2   110.93.252.136   -         TWA (PK)
+    7      99.1   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8     102.7   2.21.120.154     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     197.0   72.52.25.142     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ moitt.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.86
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 205.705ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.1   192.168.101.1    -         RFC1918
+    2       1.2   192.168.18.1     -         RFC1918
+    3       3.2   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      23.2   110.93.253.208   -         TWA (PK)
+    6      24.4   110.93.252.136   -         TWA (PK)
+    7      99.4   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      98.8   2.21.120.59      AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     205.3   72.52.25.142     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ nab.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.107
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 209.772ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.0   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.6   110.93.253.208   -         TWA (PK)
+    6      24.2   110.93.252.136   -         TWA (PK)
+    7     102.5   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8     102.7   2.21.120.122     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     209.6   72.52.25.142     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ nacp.gov.pk   (Pakistan: NAYATEL-PK - Nayatel (Pvt) Ltd, PK)   ->   203.82.55.53
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 8.037ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.3   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       4.7   103.213.108.68   -         HTISPL-PK (PK)
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ nayatel.com   (Pakistan: NAYATEL-PK - Nayatel (Pvt) Ltd, PK)   ->   203.82.48.231
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.171ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.4   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   103.213.108.68   -         HTISPL-PK (PK)
+    5      *     (no response)
+    6      *     (no response)
+    7       4.0   203.82.48.231    AS23674   NAYATEL-PK - Nayatel (Pvt) L (PK)
+
+================================================================================
+ ncsw.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.86
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 205.137ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.4   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.6   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      23.3   110.93.253.208   -         TWA (PK)
+    6      23.9   110.93.252.136   -         TWA (PK)
+    7      98.7   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      98.6   2.21.120.59      AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     204.7   72.52.25.142     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ ndma.gov.pk   (Pakistan: PKTELECOM-AS-PK - Pakistan Telecommuni)   ->   182.188.28.161
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 43.963ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.7   192.168.18.1     -         RFC1918
+    3       3.6   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.9   119.63.137.130   -         ?
+    5      23.6   110.93.252.106   -         TWA (PK)
+    6      24.3   119.63.137.83    -         TWA (PK)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      43.9   59.103.245.219   AS17557   PKTELECOM-AS-PK - Pakistan T (PK)
+   11      43.9   182.188.28.161   AS17557   PKTELECOM-AS-PK - Pakistan T (PK)
+
+================================================================================
+ nexlinx.net.pk   (Pakistan: NEXLINX-AS-AP - Autonomous System Numb)   ->   202.59.80.26
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 41.185ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.3   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.9   119.63.137.130   -         ?
+    5      24.3   110.93.252.34    -         TWA (PK)
+    6      40.6   110.93.253.201   -         TWA (PK)
+    7      40.9   110.93.202.170   -         TWA (PK)
+    8      41.2   202.59.80.2      AS17563   NEXLINX-AS-AP - Autonomous S (PK)
+    9      41.2   202.59.80.26     AS17563   NEXLINX-AS-AP - Autonomous S (PK)
+
+================================================================================
+ nhmp.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.77
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 206.878ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.3   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5      23.5   110.93.253.208   -         TWA (PK)
+    6      24.4   110.93.252.136   -         TWA (PK)
+    7      99.3   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      99.5   2.21.120.163     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     206.7   72.52.21.194     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ nhsrc.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.91
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 200.08800000000002ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.4   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.5   110.93.252.86    -         TWA (PK)
+    6      24.3   110.93.252.136   -         TWA (PK)
+    7     102.4   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8     103.5   2.21.120.144     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     199.8   72.52.21.194     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ nitb.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.87
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 195.967ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.2   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.9   119.63.137.130   -         ?
+    5      23.4   110.93.252.106   -         TWA (PK)
+    6      24.6   110.93.252.136   -         TWA (PK)
+    7      98.7   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      98.9   2.21.120.59      AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     195.9   72.52.21.194     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ ntc.net.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.82
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 196.51ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.9   192.168.101.1    -         RFC1918
+    2       1.4   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.9   119.63.137.130   -         ?
+    5      23.4   110.93.253.208   -         TWA (PK)
+    6      24.2   110.93.252.136   -         TWA (PK)
+    7      98.3   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      99.4   2.21.120.169     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     196.1   72.52.21.194     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ ntdc.gov.pk   (Pakistan: PKTELECOM-AS-PK - Pakistan Telecommuni)   ->   119.156.239.229
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 23.33ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.6   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      23.1   110.93.253.208   -         TWA (PK)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ nu.edu.pk   (Pakistan: COMSATS - Commission on Science and Te)   ->   203.124.44.78
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.264ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.2   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5       3.8   110.93.254.7     -         TWA (PK)
+    6       4.1   119.63.134.94    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ ogdcl.com   (Pakistan: COMSATS - Commission on Science and Te)   ->   203.124.33.195
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 5.352ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.1   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.9   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.9   119.63.137.130   -         ?
+    5       3.7   110.93.254.7     -         TWA (PK)
+    6       4.3   119.63.134.94    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    7      *     (no response)
+    8       5.3   203.124.33.195   AS7590    COMSATS - Commission on Scie (PK)
+
+================================================================================
+ paec.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.82
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 196.471ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.9   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.5   110.93.253.208   -         TWA (PK)
+    6      24.3   110.93.252.136   -         TWA (PK)
+    7      98.7   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      99.5   2.21.120.169     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     196.1   72.52.21.194     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pakistan.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.84
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 215.819ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5      24.3   110.93.253.98    -         TWA (PK)
+    6      24.4   110.93.252.136   -         TWA (PK)
+    7      99.1   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      98.8   2.21.120.208     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     215.4   72.52.21.194     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pap.gov.pk   (Pakistan: PITB-PUNJAB-PK - Punjab Information Te)   ->   103.226.217.162
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 40.157ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.0   192.168.101.1    -         RFC1918
+    2       1.4   192.168.18.1     -         RFC1918
+    3       3.4   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.4   119.63.137.130   -         ?
+    5      23.3   110.93.252.106   -         TWA (PK)
+    6      40.0   110.93.252.229   -         TWA (PK)
+    7      40.0   110.93.202.170   -         TWA (PK)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ parco.com.pk   (Pakistan: CYBERNET-APII - Cyber Internet Service)   ->   175.107.195.175
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 23.511ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.4   110.93.253.208   -         TWA (PK)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pbs.gov.pk   (Pakistan: NTC-AS-AP - National Telecommunication)   ->   113.197.54.86
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 27.396ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.101.1    -         RFC1918
+    2       1.4   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.9   119.63.137.130   -         ?
+    5      23.5   110.93.252.86    -         TWA (PK)
+    6      23.9   119.63.137.83    -         TWA (PK)
+    7      *     (no response)
+    8      *     (no response)
+    9      24.0   221.120.236.30   AS17557   PKTELECOM-AS-PK - Pakistan T (PK)
+   10      *     (no response)
+   11      26.6   113.197.54.86    AS23888   NTC-AS-AP - National Telecom (PK)
+
+================================================================================
+ pcsir.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.77
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 206.866ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.4   192.168.18.1     -         RFC1918
+    3       3.2   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.5   119.63.137.130   -         ?
+    5      23.3   110.93.253.208   -         TWA (PK)
+    6      24.3   110.93.252.136   -         TWA (PK)
+    7      98.8   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      99.3   2.21.120.163     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     206.1   72.52.21.194     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pcsw.punjab.gov.pk   (Pakistan: PITB-PUNJAB-PK - Punjab Information Te)   ->   103.226.216.120
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.913ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.9   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.6   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      23.6   110.93.252.84    -         TWA (PK)
+    6      40.1   110.93.252.205   -         TWA (PK)
+    7      39.7   110.93.202.170   -         TWA (PK)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pdma.gop.pk   (Pakistan: PITB-PUNJAB-PK - Punjab Information Te)   ->   103.226.216.186
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.822ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.0   192.168.101.1    -         RFC1918
+    2       1.7   192.168.18.1     -         RFC1918
+    3       3.6   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.4   110.93.253.208   -         TWA (PK)
+    6      38.9   110.93.255.105   -         TWA (PK)
+    7      39.7   110.93.202.170   -         TWA (PK)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pemra.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.81
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 200.149ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.3   110.93.252.86    -         TWA (PK)
+    6      23.8   110.93.252.136   -         TWA (PK)
+    7     102.2   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8     103.7   2.21.120.120     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     200.0   72.52.21.194     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ petroleum.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.86
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 205.309ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.3   192.168.18.1     -         RFC1918
+    3       3.6   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      23.3   110.93.253.208   -         TWA (PK)
+    6      24.1   110.93.252.136   -         TWA (PK)
+    7      98.3   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      99.0   2.21.120.59      AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     204.9   72.52.25.142     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ phc.org.pk   (Pakistan: NEXLINX-AS-AP - Autonomous System Numb)   ->   116.58.11.236
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.398ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.0   192.168.101.1    -         RFC1918
+    2       1.1   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.5   119.63.137.130   -         ?
+    5      23.1   110.93.252.84    -         TWA (PK)
+    6      39.8   110.93.255.109   -         TWA (PK)
+    7      39.3   110.93.202.170   -         TWA (PK)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pid.gov.pk   (Pakistan: COMSATS - Commission on Science and Te)   ->   203.124.45.87
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.855ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.9   192.168.101.1    -         RFC1918
+    2       1.7   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5       3.8   110.93.254.7     -         TWA (PK)
+    6       4.3   119.63.134.94    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    7       4.5   210.56.8.180     AS7590    COMSATS - Commission on Scie (PK)
+    8       4.4   203.124.45.87    AS7590    COMSATS - Commission on Scie (PK)
+
+================================================================================
+ pims.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.84
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 216.386ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.2   192.168.18.1     -         RFC1918
+    3       3.3   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.5   119.63.137.130   -         ?
+    5      24.1   110.93.253.98    -         TWA (PK)
+    6      24.1   110.93.252.136   -         TWA (PK)
+    7      98.7   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      99.2   2.21.120.208     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     216.2   72.52.21.194     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pitb.gov.pk   (Pakistan: PITB-PUNJAB-PK - Punjab Information Te)   ->   103.226.216.151
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 40.02ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.2   192.168.101.1    -         RFC1918
+    2       1.7   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5      23.5   110.93.252.106   -         TWA (PK)
+    6      40.1   110.93.252.229   -         TWA (PK)
+    7      39.8   110.93.202.170   -         TWA (PK)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pitc.com.pk   (Pakistan: PITC1-AS-AP - PITC, PK)   ->   163.61.25.12
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.666ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      24.5   110.93.252.34    -         TWA (PK)
+    6      39.0   110.93.254.41    -         TWA (PK)
+    7      39.6   149.40.227.93    AS174     COGENT-174 - Cogent Communic (US)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pmc.edu.pk   (Pakistan: COMSATS - Commission on Science and Te)   ->   203.124.44.75
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.044ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.5   119.63.137.130   -         ?
+    5       3.8   110.93.254.7     -         TWA (PK)
+    6       4.0   119.63.134.94    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pmo.gov.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.118
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 195.859ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.2   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.5   119.63.137.130   -         ?
+    5      24.1   110.93.253.98    -         TWA (PK)
+    6      24.5   110.93.252.136   -         TWA (PK)
+    7      99.1   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      99.3   2.21.120.171     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     195.8   72.52.21.194     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ ppaf.org.pk   (Pakistan: NAYATEL-PK - Nayatel (Pvt) Ltd, PK)   ->   115.186.178.82
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.925ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.9   192.168.101.1    -         RFC1918
+    2       1.4   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       7.7   103.213.108.68   -         HTISPL-PK (PK)
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+    8       4.8   115.186.178.82   AS23674   NAYATEL-PK - Nayatel (Pvt) L (PK)
+
+================================================================================
+ ppra.gov.pk   (Pakistan: PKTELECOM-AS-PK - Pakistan Telecommuni)   ->   59.103.225.210
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 24.789ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.3   119.63.137.130   -         ?
+    5      23.9   110.93.252.86    -         TWA (PK)
+    6      24.8   119.63.137.83    -         TWA (PK)
+    7      *     (no response)
+    8      24.6   221.120.242.113  AS17557   PKTELECOM-AS-PK - Pakistan T (PK)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      24.7   59.103.225.210   AS17557   PKTELECOM-AS-PK - Pakistan T (PK)
+
+================================================================================
+ pra.gop.pk   (Pakistan: NAYATEL-PK - Nayatel (Pvt) Ltd, PK)   ->   58.65.170.119
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 8.104ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.4   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       4.1   103.213.108.68   -         HTISPL-PK (PK)
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pral.com.pk   (Pakistan: FBR-AS-AP - Federal Board of Revenue, )   ->   103.125.60.72
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 3.873ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.3   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ prsp.org.pk   (Pakistan: NEXLINX-AS-AP - Autonomous System Numb)   ->   116.58.40.29
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.941ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.7   192.168.18.1     -         RFC1918
+    3       3.9   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5      24.2   110.93.252.34    -         TWA (PK)
+    6      39.2   110.93.252.135   -         TWA (PK)
+    7      39.5   110.93.202.170   -         TWA (PK)
+    8      39.6   202.59.80.2      AS17563   NEXLINX-AS-AP - Autonomous S (PK)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pseb.org.pk   (Pakistan: MULTINET-AS-AP - Multinet Pakistan Pvt)   ->   125.209.103.90
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.138ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.6   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   202.142.174.30   AS9260    MULTINET-AS-AP - Multinet Pa (PK)
+    5       4.0   202.142.160.212  AS9260    MULTINET-AS-AP - Multinet Pa (PK)
+    6       3.8   202.142.160.132  AS9260    MULTINET-AS-AP - Multinet Pa (PK)
+    7       4.0   125.209.103.90   AS9260    MULTINET-AS-AP - Multinet Pa (PK)
+
+================================================================================
+ psl.com.pk   (Pakistan: NAYATEL-PK - Nayatel (Pvt) Ltd, PK)   ->   115.186.173.250
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 5.099ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.6   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       4.5   103.213.108.68   -         HTISPL-PK (PK)
+    5      *     (no response)
+    6      *     (no response)
+    7      *     (no response)
+    8       4.7   115.186.173.250  AS23674   NAYATEL-PK - Nayatel (Pvt) L (PK)
+
+================================================================================
+ ptcl.com.pk   (Pakistan: PKTELECOM-AS-PK - Pakistan Telecommuni)   ->   221.120.226.61
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 44.867ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.0   192.168.101.1    -         RFC1918
+    2       1.4   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5      23.5   110.93.252.86    -         TWA (PK)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      44.7   116.71.241.234   AS17557   PKTELECOM-AS-PK - Pakistan T (PK)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+   15      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pts.org.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   175.107.240.161
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 23.497ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      23.5   110.93.252.106   -         TWA (PK)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pucit.edu.pk   (Pakistan: LDN-AS-PK - LINKdotNET Telecom Limited)   ->   202.147.169.205
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 40.694ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.0   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      24.3   110.93.252.34    -         TWA (PK)
+    6      24.0   110.93.252.173   -         TWA (PK)
+    7      24.2   110.93.202.21    -         TWA (PK)
+    8      *     (no response)
+    9      39.6   119.30.106.18    AS23966   LDN-AS-PK - LINKdotNET Telec (PK)
+   10      *     (no response)
+   11      *     (no response)
+   12      40.6   202.147.169.205  AS23966   LDN-AS-PK - LINKdotNET Telec (PK)
+
+================================================================================
+ punjab.gov.pk   (Pakistan: PITB-PUNJAB-PK - Punjab Information Te)   ->   103.226.216.120
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.788ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.6   192.168.101.1    -         RFC1918
+    2       1.7   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.9   119.63.137.130   -         ?
+    5      23.8   110.93.252.84    -         TWA (PK)
+    6      40.1   110.93.252.205   -         TWA (PK)
+    7      39.7   110.93.202.170   -         TWA (PK)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ pvtc.gop.pk   (Pakistan: PITB-PUNJAB-PK - Punjab Information Te)   ->   103.111.161.192
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.612ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.1   192.168.101.1    -         RFC1918
+    2       1.3   192.168.18.1     -         RFC1918
+    3       3.3   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.6   110.93.253.110   -         TWA (PK)
+    6      39.8   110.93.252.205   -         TWA (PK)
+    7      39.5   110.93.202.170   -         TWA (PK)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ qesco.com.pk   (Pakistan: PITC1-AS-AP - PITC, PK)   ->   163.61.25.23
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.641ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.9   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.8   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      23.5   110.93.252.106   -         TWA (PK)
+    6      39.8   110.93.254.145   -         TWA (PK)
+    7      39.4   149.40.227.93    AS174     COGENT-174 - Cogent Communic (US)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ rmc.edu.pk   (Pakistan: COMSATS - Commission on Science and Te)   ->   210.56.11.155
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 5.266ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.4   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5       3.9   110.93.254.7     -         TWA (PK)
+    6       3.9   119.63.134.94    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    7       4.2   210.56.8.151     AS7590    COMSATS - Commission on Scie (PK)
+    8       4.7   210.56.11.155    AS7590    COMSATS - Commission on Scie (PK)
+
+================================================================================
+ sacgb.gov.pk   (Pakistan: COMSATS - Commission on Science and Te)   ->   210.56.27.2
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.731ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.9   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.4   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5       3.6   110.93.254.7     -         TWA (PK)
+    6       4.4   119.63.134.94    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    7      *     (no response)
+    8       4.7   210.56.27.2      AS7590    COMSATS - Commission on Scie (PK)
+
+================================================================================
+ secp.gov.pk   (CDN: Cloudflare)   ->   104.20.33.223
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 24.037ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.4   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.4   119.63.137.130   -         ?
+    5      23.3   110.93.253.208   -         TWA (PK)
+    6      23.5   110.93.252.224   -         TWA (PK)
+    7      24.1   110.93.192.198   AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    8      23.9   104.20.33.223    AS13335   CLOUDFLARENET - Cloudflare,  (US)
+
+================================================================================
+ sepco.com.pk   (Pakistan: PITC1-AS-AP - PITC, PK)   ->   163.61.25.38
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.595ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      24.2   110.93.253.98    -         TWA (PK)
+    6      39.5   110.93.252.49    -         TWA (PK)
+    7      39.6   149.40.227.93    AS174     COGENT-174 - Cogent Communic (US)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ silkbank.com.pk   (Pakistan: CYBERNET-APII - Cyber Internet Service)   ->   124.29.248.249
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 28.05ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.9   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.9   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.4   119.63.137.130   -         ?
+    5      23.7   110.93.253.110   -         TWA (PK)
+    6      *     (no response)
+    7      *     (no response)
+    8      *     (no response)
+    9      27.9   124.29.248.249   AS24440   CYBERNET-APII - Cyber Intern (PK)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ sngpl.com.pk   (Pakistan: WATEEN-IMS-PK-AS-AP - National WiMAX/I)   ->   58.27.202.230
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 24.82ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.7   192.168.101.1    -         RFC1918
+    2       1.3   192.168.18.1     -         RFC1918
+    3       3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       4.4   103.213.108.70   -         HTISPL-PK (PK)
+    5       4.0   58.27.177.105    -         WATEEN-TEL (PK)
+    6      25.4   58.27.203.210    AS38264   WATEEN-IMS-PK-AS-AP - Nation (PK)
+    7      26.2   58.27.202.228    AS38264   WATEEN-IMS-PK-AS-AP - Nation (PK)
+    8      24.8   58.27.202.230    AS38264   WATEEN-IMS-PK-AS-AP - Nation (PK)
+
+================================================================================
+ stormfiber.com   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.172.139
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 26.221ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.3   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.9   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5      24.5   110.93.252.34    -         TWA (PK)
+    6      25.1   117.20.17.113    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      26.2   203.101.172.139  AS9541    CYBERNET-AP - Cyber Internet (PK)
+
+================================================================================
+ tevta.gop.pk   (Pakistan: MULTINET-AS-AP - Multinet Pakistan Pvt)   ->   202.142.172.236
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 40.49ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.2   192.168.101.1    -         RFC1918
+    2       1.9   192.168.18.1     -         RFC1918
+    3       4.0   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.5   110.93.252.86    -         TWA (PK)
+    6      40.4   110.93.254.39    -         TWA (PK)
+    7      39.8   110.93.197.229   AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    8      39.3   202.142.160.201  AS9260    MULTINET-AS-AP - Multinet Pa (PK)
+    9      40.2   202.142.172.236  AS9260    MULTINET-AS-AP - Multinet Pa (PK)
+
+================================================================================
+ uaf.edu.pk   (Pakistan: COMSATS - Commission on Science and Te)   ->   203.124.33.162
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.481ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.1   192.168.101.1    -         RFC1918
+    2       1.6   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5       3.8   110.93.254.7     -         TWA (PK)
+    6       4.2   119.63.134.94    AS38193   TWA-AS-AP - Transworld Assoc (PK)
+    7       4.5   210.56.8.151     AS7590    COMSATS - Commission on Scie (PK)
+    8       4.4   203.124.33.162   AS7590    COMSATS - Commission on Scie (PK)
+
+================================================================================
+ ubank.com.pk   (Pakistan: MULTINET-AS-AP - Multinet Pakistan Pvt)   ->   202.141.231.86
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 25.721ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.7   192.168.18.1     -         RFC1918
+    3       3.6   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.2   119.63.137.130   -         ?
+    5      23.7   110.93.252.86    -         TWA (PK)
+    6      24.7   110.93.254.163   -         TWA (PK)
+    7      25.9   149.40.227.187   AS174     COGENT-174 - Cogent Communic (US)
+    8      25.6   202.141.224.9    AS9260    MULTINET-AS-AP - Multinet Pa (PK)
+    9      25.4   202.141.231.86   AS9260    MULTINET-AS-AP - Multinet Pa (PK)
+
+================================================================================
+ ubldigital.com   (Pakistan: UBL-PK - 13 Floor UBL Building, PK)   ->   103.8.14.50
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 24.364ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.1   192.168.101.1    -         RFC1918
+    2       2.1   192.168.18.1     -         RFC1918
+    3       3.8   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5      24.3   110.93.253.98    -         TWA (PK)
+    6      24.2   110.93.255.169   -         TWA (PK)
+    7      24.2   110.93.255.169   -         TWA (PK)
+
+================================================================================
+ ufone.com   (Pakistan: PKTELECOM-AS-PK - Pakistan Telecommuni)   ->   59.103.225.37
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 24.498ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.3   192.168.101.1    -         RFC1918
+    2       2.0   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.5   119.63.137.130   -         ?
+    5      23.4   110.93.253.208   -         TWA (PK)
+    6      *     (no response)
+    7      *     (no response)
+    8      24.7   221.120.242.101  AS17557   PKTELECOM-AS-PK - Pakistan T (PK)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      24.3   59.103.225.37    AS17557   PKTELECOM-AS-PK - Pakistan T (PK)
+
+================================================================================
+ wapda.gov.pk   (Pakistan: PITC1-AS-AP - PITC, PK)   ->   163.61.25.38
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 39.623ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.8   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.6   119.63.137.130   -         ?
+    5      24.2   110.93.253.98    -         TWA (PK)
+    6      39.0   110.93.252.49    -         TWA (PK)
+    7      39.4   149.40.227.93    AS174     COGENT-174 - Cogent Communic (US)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+  255      *     (no response)
+
+================================================================================
+ yansrhr.org   (Pakistan: LDN-AS-PK - LINKdotNET Telecom Limited)   ->   210.2.169.195
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 23.956ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.3   192.168.101.1    -         RFC1918
+    2       1.8   192.168.18.1     -         RFC1918
+    3       3.5   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.8   119.63.137.130   -         ?
+    5      24.5   110.93.252.34    -         TWA (PK)
+    6      24.4   110.93.252.173   -         TWA (PK)
+    7      24.5   110.93.202.21    -         TWA (PK)
+    8      *     (no response)
+    9      23.2   119.30.105.222   AS58470   Mobilink-Peering-AS-PK - IX  (PK)
+   10      *     (no response)
+   11      23.8   210.2.169.195    AS23966   LDN-AS-PK - LINKdotNET Telec (PK)
+
+================================================================================
+ zong.com.pk   (Pakistan: CMPAKLIMITED-AS-AP - CMPak Limited, PK)   ->   209.150.154.189
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 4.918ms   reached=True
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       1.3   192.168.101.1    -         RFC1918
+    2       1.5   192.168.18.1     -         RFC1918
+    3       3.6   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5       4.1   110.93.254.7     -         TWA (PK)
+    6       4.6   149.40.227.35    AS174     COGENT-174 - Cogent Communic (US)
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10      *     (no response)
+   11      *     (no response)
+  255       4.9   209.150.154.189  AS59257   CMPAKLIMITED-AS-AP - CMPak L (PK)
+
+================================================================================
+ ztbl.com.pk   (Pakistan: CYBERNET-AP - Cyber Internet Services )   ->   203.101.184.80
+ SOURCE   probe 64078 - Transworld/TES-PL (AS135407), Rawalpindi
+ DEST RTT 206.642ms   reached=False
+--------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1       0.8   192.168.101.1    -         RFC1918
+    2       1.8   192.168.18.1     -         RFC1918
+    3       3.9   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World E (PK)
+    4       3.7   119.63.137.130   -         ?
+    5      23.6   110.93.253.208   -         TWA (PK)
+    6      24.3   110.93.252.136   -         TWA (PK)
+    7      98.7   27.111.228.157   -         EQUINIX-AP (SG)   <<< LEAVES PK
+    8      99.6   2.21.120.112     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (NL)   <<< LEAVES PK
+    9     206.5   72.52.25.142     AS32787   PROLEXIC-TECHNOLOGIES-DDOS-M (US)   <<< LEAVES PK
+   10      *     (no response)
+   11      *     (no response)
+   12      *     (no response)
+   13      *     (no response)
+   14      *     (no response)
+  255      *     (no response)
+
