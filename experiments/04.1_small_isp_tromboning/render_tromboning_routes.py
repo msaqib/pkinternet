@@ -48,7 +48,8 @@ for comp, asn, prefix, ip, prb, v, r in items:
     lines.append("=" * 80)
     lines.append(f" {comp[:44]} (AS{asn})   ->   {ip}    [block {prefix}]")
     lines.append(f" SOURCE   probe {prb} - {SRC.get(prb, prb)}")
-    lines.append(f" VERDICT  TROMBONE   exit={v['exit_name'] or '?'} ({v['exit_cc']})   "
+    lines.append(f" VERDICT  TROMBONE   reached={pr.destination_ip_responded}   "
+                 f"exit={v['exit_name'] or '?'} ({v['exit_cc']})   "
                  f"transit={v['transit']}   maxRTT={v['max_rtt']}ms   evidence={v['evidence']}")
     lines.append("-" * 80)
     lines.append("  hop   rtt(ms)   ip                 asn       operator (country)")

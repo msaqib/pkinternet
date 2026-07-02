@@ -135,6 +135,16 @@ traffic."
   the per-ISP rate needs R rounds and should be quoted as a range / fraction-of-rounds.
 - **FLL roster** includes a few non-small / LDI members — flagged, not dropped.
 - **18 FLL ISPs announce no prefixes** — excluded (nothing to measure).
+- **Target IP (aimed-at) ≠ last responding hop.** Each block is probed at 8 *spread*
+  addresses (`.16, .48, …`), which are the traceroute **targets** (`dst_addr`, the
+  `-> IP` in the routes header) — **not** necessarily live hosts. Small-ISP /24s are
+  sparse, so most targets are dead/unassigned or ICMP-filtered and never reply: the
+  trace then ends in `* * *` and the **last responding hop is an upstream/transit
+  router, not the target**. They coincide **only when `reached=True`** (target
+  answered). The `routes_tromboning_*.txt` blocks carry a **`reached=`** label so this
+  is explicit. This does **not** affect tromboning detection — the foreign hop appears
+  *mid-path, before* the target, so the hairpin is seen even when the target address
+  is empty/silent (we measure the **route toward the block**, not one host's liveness).
 
 ## Status
 
