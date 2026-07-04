@@ -1,0 +1,840 @@
+Readable routes  —  pk_grouped_20260618_013247.csv
+44 traceroutes  ·  destination shown once per block (in the DEST header)
+
+==============================================================================
+ eatoye.pk   —   Eatoye  (food)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     172.67.138.158 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.4   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     17.2   110.93.252.200     —         TWA (PK)  [registry]
+    4     16.4   110.93.252.246     —         TWA (PK)  [registry]
+    5     91.1   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    6     92.1   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    7    102.3   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    8     93.4   172.69.117.39      AS13335   Cloudflare, Inc. (US)
+    9     94.1   172.69.117.109     AS13335   Cloudflare, Inc. (US)
+   10     91.8   172.67.138.158     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ eatoye.pk   —   Eatoye  (food)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     172.67.138.158 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.3   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      8.0   172.27.0.29        —         (private/internal)
+    4      2.4   172.27.0.22        —         (private/internal)
+    5      3.2   172.31.5.253       —         (private/internal)
+    6    101.8   172.31.5.106       —         (private/internal)
+    7      3.9   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      2.9   172.67.138.158     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ eatoye.pk   —   Eatoye  (food)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     172.67.138.158 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.4   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    100.4   172.67.138.158     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ eatoye.pk   —   Eatoye  (food)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     172.67.138.158 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.6   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.0   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.9   110.93.254.66      —         TWA (PK)  [registry]
+    5     18.5   110.93.252.246     —         TWA (PK)  [registry]
+    6     98.1   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    7     98.0   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    8     95.4   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    9     95.8   172.69.117.60      AS13335   Cloudflare, Inc. (US)
+   10     93.0   172.69.117.45      AS13335   Cloudflare, Inc. (US)
+   11     98.0   172.67.138.158     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ foodoo.pk   —   Foodoo  (food)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     172.67.145.154 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     17.5   110.93.254.38      —         TWA (PK)  [registry]
+    4     18.2   110.93.252.136     —         TWA (PK)  [registry]
+    5     91.0   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    6     92.0   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    7     95.3   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    8     93.0   172.69.117.39      AS13335   Cloudflare, Inc. (US)
+    9     99.6   172.69.117.101     AS13335   Cloudflare, Inc. (US)
+   10     95.4   172.67.145.154     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ foodoo.pk   —   Foodoo  (food)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     172.67.145.154 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      3.4   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      3.3   172.31.5.253       —         (private/internal)
+    6      8.5   172.31.5.106       —         (private/internal)
+    7     25.5   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      2.7   172.67.145.154     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ foodoo.pk   —   Foodoo  (food)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     172.67.145.154 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.9   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    101.5   172.67.145.154     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ foodoo.pk   —   Foodoo  (food)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     172.67.145.154 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   192.168.100.1      —         (private/internal)
+    2      2.5   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.7   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     20.5   110.93.254.38      —         TWA (PK)  [registry]
+    5     19.4   110.93.252.136     —         TWA (PK)  [registry]
+    6     96.7   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    7     98.2   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    8     96.1   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    9     93.4   172.69.117.60      AS13335   Cloudflare, Inc. (US)
+   10     93.9   172.69.117.47      AS13335   Cloudflare, Inc. (US)
+   11     93.5   172.67.145.154     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ foodpanda.pk   —   Foodpanda  (food)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     172.64.154.226 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.254.66      —         TWA (PK)  [registry]
+    4     16.4   110.93.252.222     —         TWA (PK)  [registry]
+    5     16.8   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     16.7   172.64.154.226     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ foodpanda.pk   —   Foodpanda  (food)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     172.64.154.226 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.3   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.8   172.27.0.29        —         (private/internal)
+    4      2.9   172.27.0.22        —         (private/internal)
+    5      3.6   172.31.5.253       —         (private/internal)
+    6    204.7   172.31.5.106       —         (private/internal)
+    7      4.2   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.2   172.64.154.226     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ foodpanda.pk   —   Foodpanda  (food)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     172.64.154.226 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     30.6   172.64.154.226     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ foodpanda.pk   —   Foodpanda  (food)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     172.64.154.226 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   192.168.100.1      —         (private/internal)
+    2      2.0   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.8   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.4   110.93.254.144     —         TWA (PK)  [registry]
+    5     18.0   110.93.252.224     —         TWA (PK)  [registry]
+    6     19.1   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     17.6   172.64.154.226     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ howdy.pk   —   Howdy  (food)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     172.67.207.11 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     17.2   110.93.252.200     —         TWA (PK)  [registry]
+    4     16.9   110.93.252.246     —         TWA (PK)  [registry]
+    5     91.2   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    6     92.2   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    7     95.9   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    8     91.6   172.69.117.60      AS13335   Cloudflare, Inc. (US)
+    9     97.3   172.69.117.81      AS13335   Cloudflare, Inc. (US)
+   10     93.2   172.67.207.11      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ howdy.pk   —   Howdy  (food)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     172.67.207.11 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      3.1   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.8   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      3.4   172.31.5.253       —         (private/internal)
+    6     65.8   172.31.5.106       —         (private/internal)
+    7      3.7   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.0   172.67.207.11      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ howdy.pk   —   Howdy  (food)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     172.67.207.11 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   10.102.76.1        —         (private/internal)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    101.4   172.67.207.11      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ howdy.pk   —   Howdy  (food)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     172.67.207.11 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.2   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.2   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.8   110.93.252.102     —         TWA (PK)  [registry]
+    5     18.5   110.93.252.246     —         TWA (PK)  [registry]
+    6     97.5   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    7     95.3   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    8   4936.2   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    9     92.4   172.69.117.60      AS13335   Cloudflare, Inc. (US)
+   10     97.3   172.69.117.53      AS13335   Cloudflare, Inc. (US)
+   11     92.7   172.67.207.11      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ islamabadfood.com   —   Islamabadfood  (food)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     15.197.225.128 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Montreal, Quebec, CA   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.6   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.252.50      —         TWA (PK)  [registry]
+    4     16.5   110.93.252.224     —         TWA (PK)  [registry]
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+  255     91.8   15.197.225.128     AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ islamabadfood.com   —   Islamabadfood  (food)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     15.197.225.128 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Montreal, Quebec, CA   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   192.168.18.1       —         (private/internal)
+    2      2.9   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.0   172.27.0.29        —         (private/internal)
+    4      2.5   172.27.0.22        —         (private/internal)
+    5      3.1   172.31.5.170       —         (private/internal)
+    6     22.9   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.0   110.93.252.84      —         TWA (PK)  [registry]
+    8     23.0   110.93.252.222     —         TWA (PK)  [registry]
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255    101.1   15.197.225.128     AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ islamabadfood.com   —   Islamabadfood  (food)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     15.197.225.128 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Montreal, Quebec, CA   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    105.6   15.197.225.128     AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ islamabadfood.com   —   Islamabadfood  (food)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     15.197.225.128 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Montreal, Quebec, CA   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   192.168.100.1      —         (private/internal)
+    2      2.1   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      3.5   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.5   110.93.252.50      —         TWA (PK)  [registry]
+    5     17.8   110.93.252.224     —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+  255     93.8   15.197.225.128     AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ karachifood.com   —   Karachifood  (food)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     13.248.169.48 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Montreal, Quebec, CA   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.2   110.93.254.144     —         TWA (PK)  [registry]
+    4     16.2   110.93.252.224     —         TWA (PK)  [registry]
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+  255     91.3   13.248.169.48      AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ karachifood.com   —   Karachifood  (food)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     13.248.169.48 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Montreal, Quebec, CA   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2     10.5   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.0   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      3.5   172.31.5.170       —         (private/internal)
+    6     23.0   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.7   110.93.253.110     —         TWA (PK)  [registry]
+    8     23.2   110.93.252.222     —         TWA (PK)  [registry]
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255    113.1   13.248.169.48      AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ karachifood.com   —   Karachifood  (food)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     13.248.169.48 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Montreal, Quebec, CA   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ karachifood.com   —   Karachifood  (food)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     13.248.169.48 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Montreal, Quebec, CA   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      3.1   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.4   110.93.252.102     —         TWA (PK)  [registry]
+    5     17.7   110.93.252.222     —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+  255     92.9   13.248.169.48      AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ kfcpakistan.com   —   Kfcpakistan  (food)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     13.214.111.28 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Singapore, Central Singapore, SG   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.254.66      —         TWA (PK)  [registry]
+    4     16.7   110.93.252.222     —         TWA (PK)  [registry]
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ kfcpakistan.com   —   Kfcpakistan  (food)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     13.214.111.28 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Singapore, Central Singapore, SG   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      3.8   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.8   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      8.6   172.31.5.170       —         (private/internal)
+    6     23.3   110.93.202.134     —         TWA (PK)  [registry]
+    7     36.8   110.93.252.106     —         TWA (PK)  [registry]
+    8     23.4   110.93.252.224     —         TWA (PK)  [registry]
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ kfcpakistan.com   —   Kfcpakistan  (food)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     13.214.111.28 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Singapore, Central Singapore, SG   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   10.102.76.1        —         (private/internal)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ kfcpakistan.com   —   Kfcpakistan  (food)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     13.214.111.28 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Singapore, Central Singapore, SG   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.1   192.168.100.1      —         (private/internal)
+    2      2.2   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.3   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.2   110.93.254.38      —         TWA (PK)  [registry]
+    5     17.5   110.93.252.224     —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ lahorefood.com   —   Lahorefood  (food)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     54.243.117.197 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Ashburn, Virginia, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.252.50      —         TWA (PK)  [registry]
+    4     16.5   110.93.252.224     —         TWA (PK)  [registry]
+    5    112.8   110.93.252.95      —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7    126.2   154.54.72.109      AS174     Cogent Communications, LLC (US)
+    8    195.3   66.28.4.197        AS174     Cogent Communications, LLC (US)
+    9    195.7   66.28.4.182        AS174     Cogent Communications, LLC (US)
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ lahorefood.com   —   Lahorefood  (food)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     54.243.117.197 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Ashburn, Virginia, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   192.168.18.1       —         (private/internal)
+    2      3.4   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.27.0.29        —         (private/internal)
+    4      2.4   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.170       —         (private/internal)
+    6     22.7   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.0   110.93.252.34      —         TWA (PK)  [registry]
+    8     48.2   110.93.252.222     —         TWA (PK)  [registry]
+    9    145.4   110.93.252.175     —         TWA (PK)  [registry]
+   10      *     (no response)     
+   11    130.0   154.54.72.109      AS174     Cogent Communications, LLC (US)
+   12    200.6   66.28.4.197        AS174     Cogent Communications, LLC (US)
+   13    200.5   66.28.4.182        AS174     Cogent Communications, LLC (US)
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+   18      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ lahorefood.com   —   Lahorefood  (food)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     54.243.117.197 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Ashburn, Virginia, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ lahorefood.com   —   Lahorefood  (food)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     54.243.117.197 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Ashburn, Virginia, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      2.2   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.3   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.8   110.93.252.102     —         TWA (PK)  [registry]
+    5     18.6   110.93.252.246     —         TWA (PK)  [registry]
+    6    124.3   110.93.252.41      —         TWA (PK)  [registry]
+    7      *     (no response)     
+    8    126.6   154.54.72.109      AS174     Cogent Communications, LLC (US)
+    9    206.2   66.28.4.197        AS174     Cogent Communications, LLC (US)
+   10    197.8   154.54.89.178      AS174     Cogent Communications, LLC (US)
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ mcdonalds.com.pk   —   Mcdonalds  (food)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     54.251.195.236 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Singapore, Central Singapore, SG   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.254.66      —         TWA (PK)  [registry]
+    4     16.5   110.93.252.222     —         TWA (PK)  [registry]
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ mcdonalds.com.pk   —   Mcdonalds  (food)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     54.251.195.236 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Singapore, Central Singapore, SG   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      8.7   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.9   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      4.3   172.31.5.170       —         (private/internal)
+    6     22.6   110.93.202.134     —         TWA (PK)  [registry]
+    7     33.5   110.93.252.84      —         TWA (PK)  [registry]
+    8     23.1   110.93.252.222     —         TWA (PK)  [registry]
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ mcdonalds.com.pk   —   Mcdonalds  (food)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     54.251.195.236 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Singapore, Central Singapore, SG   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   10.102.76.1        —         (private/internal)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ mcdonalds.com.pk   —   Mcdonalds  (food)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     54.251.195.236 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Singapore, Central Singapore, SG   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      2.2   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.2   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.3   110.93.254.38      —         TWA (PK)  [registry]
+    5     17.5   110.93.252.224     —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ menu.pk   —   Menu  (food)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     49.13.80.3 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     17.6   110.93.254.38      —         TWA (PK)  [registry]
+    4     16.5   110.93.252.224     —         TWA (PK)  [registry]
+    5    125.2   212.73.253.101     AS3356    Level 3 Parent, LLC (GB)
+    6    147.8   171.75.8.27        AS3356    Level 3 Parent, LLC (GB)
+    7    142.7   62.67.27.10        AS3356    Level 3 Parent, LLC (GB)
+    8    138.1   213.239.203.133    AS24940   Hetzner Online GmbH (DE)
+    9    139.0   213.239.227.205    AS24940   Hetzner Online GmbH (DE)
+   10      *     (no response)     
+   11      *     (no response)     
+   12    137.9   49.12.24.86        AS24940   Hetzner Online GmbH (DE)
+   13    147.1   49.13.80.3         AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ menu.pk   —   Menu  (food)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     49.13.80.3 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      4.8   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.5   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      3.9   172.31.5.170       —         (private/internal)
+    6     23.3   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.0   110.93.253.110     —         TWA (PK)  [registry]
+    8     23.7   110.93.252.222     —         TWA (PK)  [registry]
+    9    133.1   212.73.253.101     AS3356    Level 3 Parent, LLC (GB)
+   10    177.9   171.75.8.27        AS3356    Level 3 Parent, LLC (GB)
+   11    153.7   62.67.27.6         AS3356    Level 3 Parent, LLC (GB)
+   12    152.0   213.239.237.141    AS24940   Hetzner Online GmbH (DE)
+   13   1246.5   213.239.227.213    AS24940   Hetzner Online GmbH (DE)
+   14      *     (no response)     
+   15      *     (no response)     
+   16    154.1   49.12.24.86        AS24940   Hetzner Online GmbH (DE)
+   17    154.3   49.13.80.3         AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ menu.pk   —   Menu  (food)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     49.13.80.3 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   10.102.76.1        —         (private/internal)
+    2      0.5   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    152.8   49.13.80.3         AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ menu.pk   —   Menu  (food)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     49.13.80.3 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      2.1   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.6   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.7   110.93.254.38      —         TWA (PK)  [registry]
+    5     17.8   110.93.252.224     —         TWA (PK)  [registry]
+    6    119.5   212.73.253.101     AS3356    Level 3 Parent, LLC (GB)
+    7      *     (no response)     
+    8    140.2   62.67.27.10        AS3356    Level 3 Parent, LLC (GB)
+    9    139.7   213.239.237.133    AS24940   Hetzner Online GmbH (DE)
+   10    139.8   213.239.227.197    AS24940   Hetzner Online GmbH (DE)
+   11      *     (no response)     
+   12      *     (no response)     
+   13    139.7   49.12.24.86        AS24940   Hetzner Online GmbH (DE)
+   14    142.3   49.13.80.3         AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ nandos.com.pk   —   Nandos  (food)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     178.79.178.218 · Akamai Connected Cloud (AS63949) · US · reached, host replied
+ SERVED   London, England, GB   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.2   110.93.252.50      —         TWA (PK)  [registry]
+    4     17.8   110.93.252.136     —         TWA (PK)  [registry]
+    5    147.4   149.14.211.241     AS174     Cogent Communications, LLC (US)
+    6    148.2   154.54.56.146      AS174     Cogent Communications, LLC (US)
+    7    137.9   149.11.20.3        AS174     Cogent Communications, LLC (US)
+    8    151.5   23.197.79.84       AS20940   Akamai International B.V. (US)
+    9    135.9   23.197.78.75       AS20940   Akamai International B.V. (US)
+   10    142.0   23.38.118.57       AS20940   Akamai International B.V. (US)
+   11    141.3   23.197.75.96       AS20940   Akamai International B.V. (US)
+   12    141.8   23.197.75.85       AS20940   Akamai International B.V. (US)
+   13    152.6   23.210.48.109      AS20940   Akamai International B.V. (US)
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+   17    142.5   178.79.178.218     AS63949   Akamai Connected Cloud (US)   <<< DESTINATION
+
+==============================================================================
+ nandos.com.pk   —   Nandos  (food)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     178.79.178.218 · Akamai Connected Cloud (AS63949) · US · reached, host replied
+ SERVED   London, England, GB   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      3.6   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.8   172.27.0.29        —         (private/internal)
+    4      2.9   172.27.0.22        —         (private/internal)
+    5      2.9   172.31.5.170       —         (private/internal)
+    6     22.7   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.4   110.93.252.34      —         TWA (PK)  [registry]
+    8     23.5   110.93.252.246     —         TWA (PK)  [registry]
+    9    153.9   149.14.211.241     AS174     Cogent Communications, LLC (US)
+   10    153.2   154.54.56.146      AS174     Cogent Communications, LLC (US)
+   11    140.1   149.11.20.3        AS174     Cogent Communications, LLC (US)
+   12    147.0   23.197.79.70       AS20940   Akamai International B.V. (US)
+   13    141.7   23.197.79.67       AS20940   Akamai International B.V. (US)
+   14    150.1   23.38.118.41       AS20940   Akamai International B.V. (US)
+   15    147.2   23.197.75.100      AS20940   Akamai International B.V. (US)
+   16    147.4   23.197.75.69       AS20940   Akamai International B.V. (US)
+   17    166.8   23.197.75.127      AS20940   Akamai International B.V. (US)
+   18      *     (no response)     
+   19      *     (no response)     
+   20      *     (no response)     
+   21    156.7   178.79.178.218     AS63949   Akamai Connected Cloud (US)   <<< DESTINATION
+
+==============================================================================
+ nandos.com.pk   —   Nandos  (food)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     178.79.178.218 · Akamai Connected Cloud (AS63949) · US · reached, host replied
+ SERVED   London, England, GB   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   10.102.76.1        —         (private/internal)
+    2      0.9   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    150.9   178.79.178.218     AS63949   Akamai Connected Cloud (US)   <<< DESTINATION
+
+==============================================================================
+ nandos.com.pk   —   Nandos  (food)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     178.79.178.218 · Akamai Connected Cloud (AS63949) · US · reached, host replied
+ SERVED   London, England, GB   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   192.168.100.1      —         (private/internal)
+    2      2.2   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      5.9   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.5   110.93.252.48      —         TWA (PK)  [registry]
+    5     17.8   110.93.252.136     —         TWA (PK)  [registry]
+    6    149.5   149.14.211.241     AS174     Cogent Communications, LLC (US)
+    7    143.4   154.54.56.146      AS174     Cogent Communications, LLC (US)
+    8    142.8   149.11.20.3        AS174     Cogent Communications, LLC (US)
+    9    145.5   23.197.79.84       AS20940   Akamai International B.V. (US)
+   10    137.7   23.197.78.75       AS20940   Akamai International B.V. (US)
+   11    146.3   23.38.118.57       AS20940   Akamai International B.V. (US)
+   12    152.4   23.197.75.96       AS20940   Akamai International B.V. (US)
+   13    144.8   23.197.75.85       AS20940   Akamai International B.V. (US)
+   14    143.8   23.210.48.109      AS20940   Akamai International B.V. (US)
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+   18    145.1   178.79.178.218     AS63949   Akamai Connected Cloud (US)   <<< DESTINATION

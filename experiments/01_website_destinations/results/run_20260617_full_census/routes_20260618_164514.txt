@@ -1,0 +1,1181 @@
+Readable routes  —  pk_grouped_20260618_164514.csv
+70 traceroutes  ·  destination shown once per block (in the DEST header)
+
+==============================================================================
+ ucp.edu.pk   —   Ucp  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     162.159.135.42 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      9.6   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.3   110.93.254.40      —         TWA (PK)  [registry]
+    4     17.5   110.93.252.222     —         TWA (PK)  [registry]
+    5     17.0   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     16.3   162.159.135.42     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ ucp.edu.pk   —   Ucp  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     162.159.135.42 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      2.7   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.9   172.27.0.29        —         (private/internal)
+    4      3.0   172.27.0.22        —         (private/internal)
+    5      3.4   172.31.5.253       —         (private/internal)
+    6      *     (no response)     
+    7      4.1   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      4.4   162.159.135.42     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ ucp.edu.pk   —   Ucp  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     162.159.135.42 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     30.1   162.159.135.42     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ ucp.edu.pk   —   Ucp  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     162.159.135.42 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2     27.8   162.159.135.42     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ ucp.edu.pk   —   Ucp  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     162.159.135.42 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.100.1      —         (private/internal)
+    2      2.5   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      3.6   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     25.0   110.93.252.200     —         TWA (PK)  [registry]
+    5     19.4   110.93.252.222     —         TWA (PK)  [registry]
+    6     36.8   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     20.4   162.159.135.42     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ udemy.pk   —   Udemy  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     217.19.248.132 · Safenames Ltd. (AS60819) · GB · host did NOT reply (trace incomplete)
+ SERVED   Milton Keynes, England, GB   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     18.1   110.93.252.200     —         TWA (PK)  [registry]
+    4     17.6   110.93.252.246     —         TWA (PK)  [registry]
+    5     97.9   27.111.228.132     —         EQUINIX-AP (SG)  [registry]
+    6     94.4   172.69.117.51      AS13335   Cloudflare, Inc. (US)
+    7     93.1   162.158.92.74      AS13335   Cloudflare, Inc. (US)
+    8     95.3   162.158.92.67      AS13335   Cloudflare, Inc. (US)
+    9     93.0   162.158.92.6       AS13335   Cloudflare, Inc. (US)
+   10    193.5   172.16.14.0        —         (private/internal)
+   11    195.0   172.16.1.22        —         (private/internal)
+   12    194.9   172.16.1.50        —         (private/internal)
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ udemy.pk   —   Udemy  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     217.19.248.132 · Safenames Ltd. (AS60819) · GB · host did NOT reply (trace incomplete)
+ SERVED   Milton Keynes, England, GB   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      4.1   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.2   172.27.0.29        —         (private/internal)
+    4      2.3   172.27.0.22        —         (private/internal)
+    5      3.1   172.31.5.253       —         (private/internal)
+    6      *     (no response)     
+    7      5.3   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.3   172.69.242.82      AS14789   Cloudflare, Inc. (US)
+    9      4.5   172.69.242.77      AS14789   Cloudflare, Inc. (US)
+   10      3.9   172.69.242.82      AS14789   Cloudflare, Inc. (US)
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+  255      0.0   172.31.5.106       —         (private/internal)
+
+==============================================================================
+ udemy.pk   —   Udemy  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     217.19.248.132 · Safenames Ltd. (AS60819) · GB · host did NOT reply (trace incomplete)
+ SERVED   Milton Keynes, England, GB   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   10.102.76.1        —         (private/internal)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ udemy.pk   —   Udemy  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     217.19.248.132 · Safenames Ltd. (AS60819) · GB · host did NOT reply (trace incomplete)
+ SERVED   Milton Keynes, England, GB   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2      *     (no response)     
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ udemy.pk   —   Udemy  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     217.19.248.132 · Safenames Ltd. (AS60819) · GB · host did NOT reply (trace incomplete)
+ SERVED   Milton Keynes, England, GB   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   192.168.100.1      —         (private/internal)
+    2      3.1   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      4.1   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     20.0   110.93.252.200     —         TWA (PK)  [registry]
+    5     22.1   110.93.252.246     —         TWA (PK)  [registry]
+    6     98.6   27.111.228.132     —         EQUINIX-AP (SG)  [registry]
+    7    100.9   172.69.117.75      AS13335   Cloudflare, Inc. (US)
+    8     99.6   172.69.165.144     AS13335   Cloudflare, Inc. (US)
+    9    102.2   162.158.161.96     AS13335   Cloudflare, Inc. (US)
+   10     98.8   162.158.161.219    AS13335   Cloudflare, Inc. (US)
+   11    210.7   172.16.14.0        —         (private/internal)
+   12    201.0   172.16.1.13        —         (private/internal)
+   13    201.3   172.16.1.50        —         (private/internal)
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+   18      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ uet.edu.pk   —   Uet  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     104.21.79.62 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     17.6   110.93.254.38      —         TWA (PK)  [registry]
+    4     17.8   110.93.252.136     —         TWA (PK)  [registry]
+    5     91.8   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    6     91.9   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    7     96.9   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    8      *     (no response)     
+    9    109.0   172.69.117.113     AS13335   Cloudflare, Inc. (US)
+   10     91.8   104.21.79.62       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uet.edu.pk   —   Uet  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     104.21.79.62 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.5   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      3.8   172.31.5.253       —         (private/internal)
+    6      *     (no response)     
+    7      4.5   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.3   104.21.79.62       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uet.edu.pk   —   Uet  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     104.21.79.62 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   10.102.76.1        —         (private/internal)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    106.9   104.21.79.62       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uet.edu.pk   —   Uet  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     104.21.79.62 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2    221.8   104.21.79.62       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uet.edu.pk   —   Uet  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     104.21.79.62 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.100.1      —         (private/internal)
+    2      3.0   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      4.2   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.7   110.93.254.40      —         TWA (PK)  [registry]
+    5     21.1   110.93.252.246     —         TWA (PK)  [registry]
+    6    103.1   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    7     96.6   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    8     95.2   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    9     92.6   172.69.117.60      AS13335   Cloudflare, Inc. (US)
+   10     94.5   172.69.117.51      AS13335   Cloudflare, Inc. (US)
+   11     92.9   104.21.79.62       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uhs.edu.pk   —   Uhs  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     172.67.167.225 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.0   110.93.252.50      —         TWA (PK)  [registry]
+    4     17.6   110.93.252.136     —         TWA (PK)  [registry]
+    5     91.2   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    6     92.4   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    7     96.4   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    8     91.1   172.69.117.60      AS13335   Cloudflare, Inc. (US)
+    9     95.4   172.69.117.53      AS13335   Cloudflare, Inc. (US)
+   10     95.4   172.67.167.225     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uhs.edu.pk   —   Uhs  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     172.67.167.225 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.5   192.168.18.1       —         (private/internal)
+    2      3.8   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.6   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      3.7   172.31.5.253       —         (private/internal)
+    6      *     (no response)     
+    7      5.4   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      4.1   172.67.167.225     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uhs.edu.pk   —   Uhs  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     172.67.167.225 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   10.102.76.1        —         (private/internal)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    101.0   172.67.167.225     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uhs.edu.pk   —   Uhs  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     172.67.167.225 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      *     (no response)     
+    2    225.9   172.67.167.225     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uhs.edu.pk   —   Uhs  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     172.67.167.225 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   192.168.100.1      —         (private/internal)
+    2      2.3   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.7   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.1   110.93.252.48      —         TWA (PK)  [registry]
+    5     18.1   110.93.252.136     —         TWA (PK)  [registry]
+    6    108.0   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    7     96.6   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    8     95.5   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    9     92.5   172.69.117.39      AS13335   Cloudflare, Inc. (US)
+   10     94.2   172.69.117.87      AS13335   Cloudflare, Inc. (US)
+   11     94.8   172.67.167.225     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ umt.edu.pk   —   Umt  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     104.26.9.133 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      3.7   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.1   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     17.5   110.93.254.38      —         TWA (PK)  [registry]
+    4     16.3   110.93.252.224     —         TWA (PK)  [registry]
+    5     40.4   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     20.1   104.26.9.133       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ umt.edu.pk   —   Umt  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     104.26.9.133 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.0   172.27.0.29        —         (private/internal)
+    4      3.8   172.27.0.22        —         (private/internal)
+    5      5.2   172.31.5.253       —         (private/internal)
+    6      *     (no response)     
+    7      4.7   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      4.1   104.26.9.133       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ umt.edu.pk   —   Umt  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     104.26.9.133 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.5   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     25.5   104.26.9.133       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ umt.edu.pk   —   Umt  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     104.26.9.133 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   172.17.0.1         —         (private/internal)
+    2    219.4   104.26.9.133       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ umt.edu.pk   —   Umt  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     104.26.9.133 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      2.4   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      3.0   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.4   110.93.252.50      —         TWA (PK)  [registry]
+    5     27.0   110.93.252.224     —         TWA (PK)  [registry]
+    6     18.3   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     18.1   104.26.9.133       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uog.edu.pk   —   Uog  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     144.76.4.71 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     17.5   110.93.252.48      —         TWA (PK)  [registry]
+    4     16.7   110.93.252.224     —         TWA (PK)  [registry]
+    5    124.5   110.93.255.11      —         TWA (PK)  [registry]
+    6    130.7   193.239.117.110    —         NL-ix (NL)  [registry]
+    7    136.6   213.239.224.93     AS24940   Hetzner Online GmbH (DE)
+    8    144.7   213.133.117.205    AS24940   Hetzner Online GmbH (DE)
+    9    137.6   144.76.4.71        AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ uog.edu.pk   —   Uog  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     144.76.4.71 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.1   192.168.18.1       —         (private/internal)
+    2      3.9   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.8   172.27.0.29        —         (private/internal)
+    4      3.1   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.170       —         (private/internal)
+    6     22.8   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.3   110.93.253.110     —         TWA (PK)  [registry]
+    8     29.0   110.93.252.246     —         TWA (PK)  [registry]
+    9    148.6   110.93.252.233     —         TWA (PK)  [registry]
+   10    148.9   193.239.117.110    —         NL-ix (NL)  [registry]
+   11    139.1   213.239.224.77     AS24940   Hetzner Online GmbH (DE)
+   12    137.2   213.133.117.205    AS24940   Hetzner Online GmbH (DE)
+   13    138.0   144.76.4.71        AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ uog.edu.pk   —   Uog  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     144.76.4.71 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.5   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    142.4   144.76.4.71        AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ uog.edu.pk   —   Uog  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     144.76.4.71 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      *     (no response)     
+    2    140.0   144.76.4.71        AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ uog.edu.pk   —   Uog  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     144.76.4.71 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   192.168.100.1      —         (private/internal)
+    2      2.4   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      3.6   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.3   110.93.254.38      —         TWA (PK)  [registry]
+    5     19.0   110.93.252.136     —         TWA (PK)  [registry]
+    6    121.2   110.93.252.189     —         TWA (PK)  [registry]
+    7    130.0   193.239.117.110    —         NL-ix (NL)  [registry]
+    8    134.3   213.239.224.109    AS24940   Hetzner Online GmbH (DE)
+    9    132.6   213.133.117.205    AS24940   Hetzner Online GmbH (DE)
+   10    139.9   144.76.4.71        AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ uom.edu.pk   —   Uom  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     94.130.77.117 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Nuremberg, Bavaria, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.2   110.93.254.40      —         TWA (PK)  [registry]
+    4     17.9   110.93.252.222     —         TWA (PK)  [registry]
+    5      *     (no response)     
+    6    114.8   154.54.76.165      AS174     Cogent Communications, LLC (US)
+    7    122.0   154.54.61.165      AS174     Cogent Communications, LLC (US)
+    8    134.5   154.54.61.182      AS174     Cogent Communications, LLC (US)
+    9    133.2   154.54.72.90       AS174     Cogent Communications, LLC (US)
+   10    134.9   154.25.1.193       AS174     Cogent Communications, LLC (US)
+   11    132.2   149.6.158.186      AS174     Cogent Communications, LLC (US)
+   12    131.9   213.239.245.25     AS24940   Hetzner Online GmbH (DE)
+   13    131.6   213.239.203.106    AS24940   Hetzner Online GmbH (DE)
+   14      *     (no response)     
+   15      *     (no response)     
+   16    142.6   195.201.65.94      AS24940   Hetzner Online GmbH (DE)
+   17    133.0   94.130.77.117      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ uom.edu.pk   —   Uom  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     94.130.77.117 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Nuremberg, Bavaria, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      2.9   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.8   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      3.1   172.31.5.170       —         (private/internal)
+    6     23.9   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.2   110.93.252.106     —         TWA (PK)  [registry]
+    8     24.1   110.93.252.224     —         TWA (PK)  [registry]
+    9      *     (no response)     
+   10    144.7   154.54.76.165      AS174     Cogent Communications, LLC (US)
+   11    137.4   154.54.61.165      AS174     Cogent Communications, LLC (US)
+   12    152.7   154.54.61.182      AS174     Cogent Communications, LLC (US)
+   13    138.1   154.54.72.90       AS174     Cogent Communications, LLC (US)
+   14    160.7   154.25.1.193       AS174     Cogent Communications, LLC (US)
+   15    138.6   149.6.158.186      AS174     Cogent Communications, LLC (US)
+   16    151.6   213.239.203.137    AS24940   Hetzner Online GmbH (DE)
+   17    185.9   213.239.203.102    AS24940   Hetzner Online GmbH (DE)
+   18      *     (no response)     
+   19      *     (no response)     
+   20    138.6   195.201.65.94      AS24940   Hetzner Online GmbH (DE)
+   21    171.7   94.130.77.117      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ uom.edu.pk   —   Uom  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     94.130.77.117 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Nuremberg, Bavaria, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   10.102.76.1        —         (private/internal)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    153.5   94.130.77.117      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ uom.edu.pk   —   Uom  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     94.130.77.117 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Nuremberg, Bavaria, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2    174.8   94.130.77.117      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ uom.edu.pk   —   Uom  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     94.130.77.117 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Nuremberg, Bavaria, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2      1.8   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.1   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.5   110.93.252.50      —         TWA (PK)  [registry]
+    5     17.5   110.93.252.224     —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7    115.9   154.54.76.165      AS174     Cogent Communications, LLC (US)
+    8    129.4   154.54.61.165      AS174     Cogent Communications, LLC (US)
+    9    149.0   154.54.61.182      AS174     Cogent Communications, LLC (US)
+   10    134.1   154.54.72.90       AS174     Cogent Communications, LLC (US)
+   11    144.5   154.25.1.193       AS174     Cogent Communications, LLC (US)
+   12    137.2   149.6.158.186      AS174     Cogent Communications, LLC (US)
+   13    134.7   213.239.245.25     AS24940   Hetzner Online GmbH (DE)
+   14    134.6   213.239.203.106    AS24940   Hetzner Online GmbH (DE)
+   15      *     (no response)     
+   16      *     (no response)     
+   17    137.9   195.201.65.94      AS24940   Hetzner Online GmbH (DE)
+   18    146.4   94.130.77.117      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ uos.edu.pk   —   Uos  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     172.67.205.219 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     17.4   110.93.254.38      —         TWA (PK)  [registry]
+    4     18.5   110.93.252.136     —         TWA (PK)  [registry]
+    5     91.5   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    6     92.0   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    7     97.8   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    8      *     (no response)     
+    9     92.0   172.69.117.105     AS13335   Cloudflare, Inc. (US)
+   10     94.0   172.67.205.219     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uos.edu.pk   —   Uos  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     172.67.205.219 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.8   192.168.18.1       —         (private/internal)
+    2      3.6   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.4   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      3.5   172.31.5.253       —         (private/internal)
+    6      *     (no response)     
+    7      5.5   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      4.2   172.67.205.219     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uos.edu.pk   —   Uos  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     172.67.205.219 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    100.3   172.67.205.219     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uos.edu.pk   —   Uos  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     172.67.205.219 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.1   172.17.0.1         —         (private/internal)
+    2    212.2   172.67.205.219     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uos.edu.pk   —   Uos  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     172.67.205.219 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2      5.7   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.4   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.7   110.93.254.38      —         TWA (PK)  [registry]
+    5     18.2   110.93.252.136     —         TWA (PK)  [registry]
+    6    111.4   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    7     96.7   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    8    234.3   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    9     97.4   172.69.117.60      AS13335   Cloudflare, Inc. (US)
+   10     95.1   172.69.117.51      AS13335   Cloudflare, Inc. (US)
+   11     94.7   172.67.205.219     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uow.edu.pk   —   Uow  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     195.201.84.146 · Hetzner Online GmbH (AS24940) · DE · host did NOT reply (trace incomplete)
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.5   110.93.254.40      —         TWA (PK)  [registry]
+    4     16.2   110.93.252.246     —         TWA (PK)  [registry]
+    5    121.0   110.93.253.125     —         TWA (PK)  [registry]
+    6    147.8   110.93.255.196     —         TWA (PK)  [registry]
+    7    135.9   80.81.193.164      —         DE-CIX-FRA-IXP (DE)  [registry]
+    8    142.1   213.239.224.105    AS24940   Hetzner Online GmbH (DE)
+    9    146.5   213.133.117.197    AS24940   Hetzner Online GmbH (DE)
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ uow.edu.pk   —   Uow  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     195.201.84.146 · Hetzner Online GmbH (AS24940) · DE · host did NOT reply (trace incomplete)
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   192.168.18.1       —         (private/internal)
+    2      3.7   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.3   172.27.0.29        —         (private/internal)
+    4      3.2   172.27.0.22        —         (private/internal)
+    5      2.7   172.31.5.170       —         (private/internal)
+    6     22.7   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.7   110.93.252.34      —         TWA (PK)  [registry]
+    8     23.6   110.93.252.246     —         TWA (PK)  [registry]
+    9    167.2   110.93.252.233     —         TWA (PK)  [registry]
+   10    156.3   110.93.255.196     —         TWA (PK)  [registry]
+   11    148.5   80.81.193.164      —         DE-CIX-FRA-IXP (DE)  [registry]
+   12    139.9   213.239.224.89     AS24940   Hetzner Online GmbH (DE)
+   13    178.3   213.133.117.197    AS24940   Hetzner Online GmbH (DE)
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+   18      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ uow.edu.pk   —   Uow  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     195.201.84.146 · Hetzner Online GmbH (AS24940) · DE · host did NOT reply (trace incomplete)
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   10.102.76.1        —         (private/internal)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ uow.edu.pk   —   Uow  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     195.201.84.146 · Hetzner Online GmbH (AS24940) · DE · host did NOT reply (trace incomplete)
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   172.17.0.1         —         (private/internal)
+    2      *     (no response)     
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ uow.edu.pk   —   Uow  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     195.201.84.146 · Hetzner Online GmbH (AS24940) · DE · host did NOT reply (trace incomplete)
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      *     (no response)     
+    2      1.9   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.7   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.3   110.93.252.102     —         TWA (PK)  [registry]
+    5     48.5   110.93.252.222     —         TWA (PK)  [registry]
+    6    115.2   110.93.252.95      —         TWA (PK)  [registry]
+    7    132.5   110.93.255.196     —         TWA (PK)  [registry]
+    8    130.3   80.81.193.164      —         DE-CIX-FRA-IXP (DE)  [registry]
+    9    149.8   213.239.224.105    AS24940   Hetzner Online GmbH (DE)
+   10    136.1   213.133.117.197    AS24940   Hetzner Online GmbH (DE)
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ usindh.edu.pk   —   Usindh  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     176.9.92.94 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     18.2   110.93.252.200     —         TWA (PK)  [registry]
+    4     19.2   110.93.252.222     —         TWA (PK)  [registry]
+    5    122.5   110.93.255.11      —         TWA (PK)  [registry]
+    6    128.7   193.239.117.110    —         NL-ix (NL)  [registry]
+    7    133.3   213.239.224.181    AS24940   Hetzner Online GmbH (DE)
+    8    139.5   213.133.117.200    AS24940   Hetzner Online GmbH (DE)
+    9    142.7   176.9.92.94        AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ usindh.edu.pk   —   Usindh  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     176.9.92.94 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      3.8   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.8   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      3.2   172.31.5.170       —         (private/internal)
+    6     22.8   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.9   110.93.252.34      —         TWA (PK)  [registry]
+    8     23.3   110.93.252.222     —         TWA (PK)  [registry]
+    9    151.1   110.93.252.175     —         TWA (PK)  [registry]
+   10    148.7   193.239.117.110    —         NL-ix (NL)  [registry]
+   11    139.3   213.239.224.93     AS24940   Hetzner Online GmbH (DE)
+   12    135.6   213.133.117.200    AS24940   Hetzner Online GmbH (DE)
+   13    154.4   176.9.92.94        AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ usindh.edu.pk   —   Usindh  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     176.9.92.94 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    146.4   176.9.92.94        AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ usindh.edu.pk   —   Usindh  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     176.9.92.94 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   172.17.0.1         —         (private/internal)
+    2    161.9   176.9.92.94        AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ usindh.edu.pk   —   Usindh  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     176.9.92.94 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.4   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.5   110.93.252.48      —         TWA (PK)  [registry]
+    5     17.9   110.93.252.224     —         TWA (PK)  [registry]
+    6    128.3   110.93.255.11      —         TWA (PK)  [registry]
+    7    132.8   193.239.117.110    —         NL-ix (NL)  [registry]
+    8    137.4   213.239.224.109    AS24940   Hetzner Online GmbH (DE)
+    9    137.9   213.133.117.200    AS24940   Hetzner Online GmbH (DE)
+   10    146.5   176.9.92.94        AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ ust.edu.pk   —   Ust  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     65.109.114.31 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Helsinki, Uusimaa, FI   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     17.5   110.93.252.102     —         TWA (PK)  [registry]
+    4     17.2   110.93.252.246     —         TWA (PK)  [registry]
+    5    128.6   110.93.255.237     —         TWA (PK)  [registry]
+    6    146.1   110.93.255.196     —         TWA (PK)  [registry]
+    7    135.8   80.81.192.98       —         DE-CIX-FRA-IXP (DE)  [registry]
+    8    153.7   213.239.224.169    AS24940   Hetzner Online GmbH (DE)
+    9    156.0   213.133.119.11     AS24940   Hetzner Online GmbH (DE)
+   10    157.2   65.109.114.31      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ ust.edu.pk   —   Ust  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     65.109.114.31 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Helsinki, Uusimaa, FI   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      2.8   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.27.0.29        —         (private/internal)
+    4      2.9   172.27.0.22        —         (private/internal)
+    5      3.1   172.31.5.170       —         (private/internal)
+    6     22.6   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.4   110.93.252.106     —         TWA (PK)  [registry]
+    8     23.2   110.93.252.136     —         TWA (PK)  [registry]
+    9    155.8   110.93.252.189     —         TWA (PK)  [registry]
+   10    150.0   110.93.255.196     —         TWA (PK)  [registry]
+   11    133.2   80.81.192.98       —         DE-CIX-FRA-IXP (DE)  [registry]
+   12    170.5   213.239.224.165    AS24940   Hetzner Online GmbH (DE)
+   13    170.5   213.133.119.11     AS24940   Hetzner Online GmbH (DE)
+   14    171.7   65.109.114.31      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ ust.edu.pk   —   Ust  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     65.109.114.31 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Helsinki, Uusimaa, FI   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   10.102.76.1        —         (private/internal)
+    2      0.9   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    215.4   65.109.114.31      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ ust.edu.pk   —   Ust  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     65.109.114.31 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Helsinki, Uusimaa, FI   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2    183.7   65.109.114.31      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ ust.edu.pk   —   Ust  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     65.109.114.31 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Helsinki, Uusimaa, FI   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      *     (no response)     
+    2      1.9   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.6   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.9   110.93.254.38      —         TWA (PK)  [registry]
+    5     17.8   110.93.252.136     —         TWA (PK)  [registry]
+    6    116.4   110.93.252.233     —         TWA (PK)  [registry]
+    7    133.1   110.93.255.196     —         TWA (PK)  [registry]
+    8    129.7   80.81.192.98       —         DE-CIX-FRA-IXP (DE)  [registry]
+    9    153.1   213.239.224.165    AS24940   Hetzner Online GmbH (DE)
+   10    157.7   213.133.119.11     AS24940   Hetzner Online GmbH (DE)
+   11    165.0   65.109.114.31      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ uvas.edu.pk   —   Uvas  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     88.222.222.200 · Hostinger International Limited (AS47583) · LT · reached, host replied
+ SERVED   Vilnius, Vilnius, LT   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     17.7   110.93.252.102     —         TWA (PK)  [registry]
+    4     16.2   110.93.252.246     —         TWA (PK)  [registry]
+    5     93.5   27.111.231.83      —         EQUINIX-AP (SG)  [registry]
+    6     92.7   2.25.25.11         AS47583   Hostinger International Limited (LT)
+    7     93.7   172.17.1.225       —         (private/internal)
+    8     97.3   88.222.222.200     AS47583   Hostinger International Limited (LT)   <<< DESTINATION
+
+==============================================================================
+ uvas.edu.pk   —   Uvas  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     88.222.222.200 · Hostinger International Limited (AS47583) · LT · reached, host replied
+ SERVED   Vilnius, Vilnius, LT   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.18.1       —         (private/internal)
+    2      2.8   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.3   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      2.9   172.31.5.170       —         (private/internal)
+    6     22.6   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.6   110.93.253.110     —         TWA (PK)  [registry]
+    8     58.6   110.93.252.246     —         TWA (PK)  [registry]
+    9    100.5   27.111.231.83      —         EQUINIX-AP (SG)  [registry]
+   10    112.9   2.25.25.11         AS47583   Hostinger International Limited (LT)
+   11      *     (no response)     
+   12    115.3   88.222.222.200     AS47583   Hostinger International Limited (LT)   <<< DESTINATION
+
+==============================================================================
+ uvas.edu.pk   —   Uvas  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     88.222.222.200 · Hostinger International Limited (AS47583) · LT · reached, host replied
+ SERVED   Vilnius, Vilnius, LT   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   10.102.76.1        —         (private/internal)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    105.0   88.222.222.200     AS47583   Hostinger International Limited (LT)   <<< DESTINATION
+
+==============================================================================
+ uvas.edu.pk   —   Uvas  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     88.222.222.200 · Hostinger International Limited (AS47583) · LT · reached, host replied
+ SERVED   Vilnius, Vilnius, LT   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2    120.1   88.222.222.200     AS47583   Hostinger International Limited (LT)   <<< DESTINATION
+
+==============================================================================
+ uvas.edu.pk   —   Uvas  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     88.222.222.200 · Hostinger International Limited (AS47583) · LT · reached, host replied
+ SERVED   Vilnius, Vilnius, LT   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.2   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.7   110.93.252.50      —         TWA (PK)  [registry]
+    5     19.2   110.93.252.136     —         TWA (PK)  [registry]
+    6     93.8   27.111.231.83      —         EQUINIX-AP (SG)  [registry]
+    7     93.8   2.25.25.12         AS47583   Hostinger International Limited (LT)
+    8     96.6   172.17.1.218       —         (private/internal)
+    9     95.9   88.222.222.200     AS47583   Hostinger International Limited (LT)   <<< DESTINATION
+
+==============================================================================
+ yansrhr.org   —   Yansrhr  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     210.2.169.195 · LINKdotNET Telecom Limited (AS23966) · PK · reached, host replied
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.3   110.93.254.66      —         TWA (PK)  [registry]
+    4     16.5   110.93.252.173     —         TWA (PK)  [registry]
+    5     32.1   110.93.202.21      —         TWA (PK)  [registry]
+    6     36.2   10.221.198.121     —         (private/internal)
+    7     36.2   119.30.105.222     AS58470   IX Peering for Mobilink and Link Direct International. (PK)
+    8     35.1   10.222.34.86       —         (private/internal)
+    9     35.3   210.2.169.195      AS23966   LINKdotNET Telecom Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ yansrhr.org   —   Yansrhr  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     210.2.169.195 · LINKdotNET Telecom Limited (AS23966) · PK · reached, host replied
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      3.7   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.7   172.27.0.29        —         (private/internal)
+    4      2.2   172.27.0.22        —         (private/internal)
+    5      3.4   172.31.5.170       —         (private/internal)
+    6     23.2   110.93.202.134     —         TWA (PK)  [registry]
+    7     29.1   110.93.252.34      —         TWA (PK)  [registry]
+    8     23.3   110.93.252.173     —         TWA (PK)  [registry]
+    9     23.8   110.93.202.21      —         TWA (PK)  [registry]
+   10      *     (no response)     
+   11     41.8   119.30.105.222     AS58470   IX Peering for Mobilink and Link Direct International. (PK)
+   12      *     (no response)     
+   13     42.3   210.2.169.195      AS23966   LINKdotNET Telecom Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ yansrhr.org   —   Yansrhr  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     210.2.169.195 · LINKdotNET Telecom Limited (AS23966) · PK · reached, host replied
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   10.102.76.1        —         (private/internal)
+    2      0.9   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     44.0   210.2.169.195      AS23966   LINKdotNET Telecom Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ yansrhr.org   —   Yansrhr  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     210.2.169.195 · LINKdotNET Telecom Limited (AS23966) · PK · reached, host replied
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2     32.9   210.2.169.195      AS23966   LINKdotNET Telecom Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ yansrhr.org   —   Yansrhr  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     210.2.169.195 · LINKdotNET Telecom Limited (AS23966) · PK · reached, host replied
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      1.8   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      3.2   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     30.9   110.93.252.200     —         TWA (PK)  [registry]
+    5     20.9   110.93.252.173     —         TWA (PK)  [registry]
+    6     21.5   110.93.202.21      —         TWA (PK)  [registry]
+    7     39.3   10.221.198.121     —         (private/internal)
+    8     37.6   119.30.105.222     AS58470   IX Peering for Mobilink and Link Direct International. (PK)
+    9     40.8   10.222.34.86       —         (private/internal)
+   10     38.5   210.2.169.195      AS23966   LINKdotNET Telecom Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ zu.edu.pk   —   Zu  (education)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     172.67.74.190 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.254.144     —         TWA (PK)  [registry]
+    4     32.0   110.93.252.224     —         TWA (PK)  [registry]
+    5     16.7   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     17.8   172.67.74.190      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ zu.edu.pk   —   Zu  (education)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     172.67.74.190 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      3.4   172.31.5.253       —         (private/internal)
+    6      *     (no response)     
+    7      4.8   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.6   172.67.74.190      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ zu.edu.pk   —   Zu  (education)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     172.67.74.190 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.8   10.102.76.1        —         (private/internal)
+    2      0.9   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     31.8   172.67.74.190      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ zu.edu.pk   —   Zu  (education)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     172.67.74.190 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.1   172.17.0.1         —         (private/internal)
+    2    208.8   172.67.74.190      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ zu.edu.pk   —   Zu  (education)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     172.67.74.190 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.2   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     19.3   110.93.252.200     —         TWA (PK)  [registry]
+    5     20.4   110.93.252.222     —         TWA (PK)  [registry]
+    6     20.1   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     21.3   172.67.74.190      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION

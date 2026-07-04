@@ -1,0 +1,259 @@
+#!/usr/bin/env python3
+"""
+Rigorous BGP Path Validation — Multi-Level Peer Checking
+Sources: bgp.he.net, bgp.tools peer tables (fetched June 2026)
+
+For each observed path, validates every transit ASN by checking:
+1. Is it in the probe ISP's direct peer table?
+2. If not, is it in the probe's upstream's peer table? (level 2)
+3. If not, is it a known downstream/customer of a transit ASN in the path?
+4. If still unverified after 3 levels → flag as genuinely anomalous
+"""
+
+import pandas as pd
+from collections import defaultdict
+
+# ── Peer tables from bgp.he.net and bgp.tools (June 2026) ──────────────────
+# Level 1: Direct peers of our probe ISPs
+PEERS = {
+    # PTCL (AS17557) — bgp.he.net
+    17557: {8529, 7473, 8966, 3491, 1299, 174, 3356, 6461, 58682, 6939, 2914},
+
+    # Transworld (AS38193) — bgp.he.net
+    38193: {6762, 8529, 174, 3356, 7473, 8966, 58453, 3320, 138423, 6461,
+            13335, 9260},
+
+    # Nayatel (AS23674) — bgp.he.net: only 2 peers
+    23674: {17557, 38193},
+
+    # Cybernet (AS9541) — bgp.he.net + traceroute evidence
+    9541:  {1299, 8529, 6939, 38193, 174, 3356, 13335},
+
+    # Zcom (AS152605) — primary upstream is Transworld
+    152605: {38193},
+
+    # Nova (AS136174) — primary upstream is Shaw Canada (AS6327)
+    136174: {6327},
+
+    # Shaw Canada (AS6327) — bgp.tools: upstreams AS1299, AS3356, AS174, AS3257, AS6453
+    6327: {1299, 3356, 174, 3257, 6453, 11342},
+
+    # Arelion/Telia (AS1299) — major Tier-1, peers with almost everyone
+    # Including Transworld (AS38193) as a known customer
+    1299: {38193, 3356, 174, 6762, 3257, 6453, 7473, 2914, 6939, 13335,
+           19551, 30148, 20940, 45102, 58453},
+
+    # SingTel (AS7473) — peers with Alibaba (AS45102) confirmed via bgp.tools
+    7473: {45102, 4845, 13335, 38193, 17557, 3356, 174, 1299},
+
+    # Lumen/Level3 (AS3356) — Tier-1, peers with everyone
+    3356: {13335, 19551, 30148, 20940, 45102, 1299, 174, 6939, 3257},
+
+    # Cogent (AS174) — Tier-1
+    174: {13335, 19551, 30148, 20940, 45102, 1299, 3356, 6939},
+
+    # GTT (AS3257) — known transit provider
+    3257: {30148, 19551, 13335, 20940, 1299, 3356, 174},
+
+    # Telecom Italia Sparkle (AS6762) — Transworld's peer
+    6762: {30148, 19551, 13335, 3257, 3356, 174, 1299},
+
+    # China Mobile International (AS58453) — Transworld's peer
+    58453: {13335, 38193, 7473},
+
+    # Alibaba AS45102 — upstreams: SingTel (7473), TATA (6453), PCCW (3491)
+    45102: {7473, 6453, 3491, 4845},
+
+    # AS4845 — Alibaba Singapore intermediate AS
+    4845: {45102, 7473},
+}
+
+ASN_NAMES = {
+    174:    "Cogent (US)",
+    1299:   "Arelion/Telia (Sweden)",
+    2914:   "NTT (Japan)",
+    3257:   "GTT Communications (US)",
+    3320:   "Deutsche Telekom (Germany)",
+    3356:   "Lumen/Level3 (US/UK)",
+    3491:   "PCCW Global (HK)",
+    4845:   "Alibaba Singapore",
+    6327:   "Shaw Communications (Canada)",
+    6453:   "TATA Communications",
+    6762:   "Telecom Italia Sparkle (Italy)",
+    6939:   "Hurricane Electric (US)",
+    7473:   "SingTel (Singapore)",
+    8529:   "Zain Omantel (Oman)",
+    8966:   "Etisalat (UAE)",
+    9260:   "Multinet Pakistan",
+    9541:   "Cybernet",
+    13335:  "Cloudflare",
+    17557:  "PTCL",
+    19551:  "Incapsula/Imperva (US)",
+    20773:  "GTT subsidiary / Hurricane Electric customer",
+    20940:  "Akamai",
+    23674:  "Nayatel",
+    26496:  "GoDaddy (web host — NOT a transit provider)",
+    30148:  "Sucuri (US)",
+    38193:  "Transworld",
+    45102:  "Alibaba (US/Singapore)",
+    58453:  "China Mobile International (HK)",
+    136174: "Nova",
+    152605: "Zcom",
+}
+
+ISP_ASN = {
+    'ptcl':       17557,
+    'transworld': 38193,
+    'nayatel':    23674,
+    'cybernet':   9541,
+    'zcom':       152605,
+    'nova':       136174,
+}
+
+def parse_path(path_str):
+    if pd.isna(path_str) or not str(path_str).strip():
+        return []
+    try:
+        return [int(x.strip()) for x in str(path_str).split(">")]
+    except Exception:
+        return []
+
+def can_reach(asn, target, visited=None, depth=0):
+    """
+    Can `asn` reach `target` through its known peers/upstreams?
+    Checks up to 3 levels deep.
+    """
+    if depth > 3:
+        return False
+    if visited is None:
+        visited = set()
+    if asn in visited:
+        return False
+    visited.add(asn)
+
+    peers = PEERS.get(asn, set())
+    if target in peers:
+        return True
+    # check one level deeper
+    for peer in peers:
+        if peer not in visited:
+            if can_reach(peer, target, visited.copy(), depth + 1):
+                return True
+    return False
+
+def validate_path(observed_path, probe_asn, isp_name):
+    """
+    Validate each transit ASN in the path using multi-level peer checking.
+    Returns (verdict, per_asn_results)
+    """
+    if len(observed_path) <= 1:
+        return "no_transit", []
+
+    transit_asns = observed_path[1:-1] if len(observed_path) > 2 else []
+    dest_asn = observed_path[-1]
+
+    if not transit_asns:
+        # direct: probe → destination
+        if can_reach(probe_asn, dest_asn):
+            return "consistent_direct", [(dest_asn, "reachable via known peers", True)]
+        else:
+            return "unverified_direct", [(dest_asn, "not found in peer tables", False)]
+
+    per_asn = []
+    all_verified = True
+    any_verified = False
+
+    for asn in transit_asns:
+        name = ASN_NAMES.get(asn, f"AS{asn} (unknown)")
+        # check if reachable from probe through peer chain
+        reachable = can_reach(probe_asn, asn)
+        per_asn.append((asn, name, reachable))
+        if reachable:
+            any_verified = True
+        else:
+            all_verified = False
+
+    if all_verified:
+        verdict = "consistent"
+    elif any_verified:
+        verdict = "partial_verified"
+    else:
+        verdict = "unverified"
+
+    return verdict, per_asn
+
+def main():
+    print("Loading BGP validation results...")
+    df = pd.read_csv('findings/bgp_validation_results.csv')
+
+    unique_paths = df[df['observed_path'].notna()]\
+        .groupby(['isp', 'target_hostname', 'observed_path'])\
+        .size().reset_index(name='count')\
+        .sort_values(['isp', 'count'], ascending=[True, False])
+
+    print(f"Validating {len(unique_paths)} unique paths with multi-level peer checking\n")
+    print("=" * 70)
+
+    results = []
+    anomalies = []
+
+    for _, row in unique_paths.iterrows():
+        isp = row['isp']
+        site = row['target_hostname']
+        path_str = row['observed_path']
+        count = row['count']
+        path = parse_path(path_str)
+        probe_asn = ISP_ASN.get(isp)
+
+        if not probe_asn or not path:
+            continue
+
+        verdict, per_asn = validate_path(path, probe_asn, isp)
+
+        # build readable details
+        details_parts = []
+        for asn, name, verified in per_asn:
+            mark = "✅" if verified else "❌"
+            details_parts.append(f"AS{asn} {name} {mark}")
+
+        details = " → ".join(details_parts) if details_parts else ""
+
+        print(f"ISP: {isp:<12} Site: {site:<20} Count: {count}")
+        print(f"  Path:    {path_str}")
+        print(f"  Verdict: {verdict.upper()}")
+        if details:
+            print(f"  Transit: {details}")
+        print()
+
+        if verdict in ('unverified', 'unverified_direct', 'partial_verified'):
+            anomalies.append({
+                'isp': isp, 'site': site,
+                'path': path_str, 'count': count,
+                'verdict': verdict, 'details': details
+            })
+
+        results.append({
+            'isp': isp, 'site': site,
+            'observed_path': path_str, 'count': count,
+            'verdict': verdict, 'details': details,
+        })
+
+    out = pd.DataFrame(results)
+    out.to_csv('findings/bgp_rigorous_validation.csv', index=False)
+
+    print("=" * 70)
+    print("\n=== Summary ===")
+    print(out['verdict'].value_counts())
+
+    print("\n=== Remaining anomalies after multi-level checking ===")
+    if anomalies:
+        for a in anomalies:
+            print(f"  {a['isp']:<12} {a['site']:<20} {a['path']}")
+            print(f"    {a['verdict'].upper()}: {a['details']}")
+    else:
+        print("  None — all paths explained by known peer relationships")
+
+    print("\nSaved to findings/bgp_rigorous_validation.csv")
+
+if __name__ == "__main__":
+    main()

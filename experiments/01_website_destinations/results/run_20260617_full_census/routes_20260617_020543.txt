@@ -1,0 +1,708 @@
+Readable routes  —  pk_grouped_20260617_020543.csv
+36 traceroutes  ·  destination shown once per block (in the DEST header)
+
+==============================================================================
+ hec.gov.pk   —   Hec  (government)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     111.68.100.163 · PERN AS Content Servie Provider, Islamabad, Pakistan (AS45773) · PK · host did NOT reply (trace incomplete)
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      4.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.0   110.93.252.48      —         TWA (PK)  [registry]
+    4     38.0   110.93.254.209     —         TWA (PK)  [registry]
+    5     38.7   117.20.23.234      AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     38.7   172.31.149.186     —         (private/internal)
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ hec.gov.pk   —   Hec  (government)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     111.68.100.163 · PERN AS Content Servie Provider, Islamabad, Pakistan (AS45773) · PK · host did NOT reply (trace incomplete)
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.224.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      7.7   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      3.1   172.31.5.205       —         (private/internal)
+    6      3.5   172.31.5.30        —         (private/internal)
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ hec.gov.pk   —   Hec  (government)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     111.68.100.163 · PERN AS Content Servie Provider, Islamabad, Pakistan (AS45773) · PK · host did NOT reply (trace incomplete)
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   10.102.76.1        —         (private/internal)
+    2      0.9   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ hec.gov.pk   —   Hec  (government)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     111.68.100.163 · PERN AS Content Servie Provider, Islamabad, Pakistan (AS45773) · PK · host did NOT reply (trace incomplete)
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.71.137       AS6327    Shaw Communications (CA)
+    3     14.3   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     23.3   110.93.254.66      —         TWA (PK)  [registry]
+    5     38.9   110.93.253.183     —         TWA (PK)  [registry]
+    6     40.1   117.20.23.234      AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     40.8   172.31.149.186     —         (private/internal)
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ icci.com.pk   —   Icci  (government)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     65.181.113.41 · WHG Hosting Services Ltd (AS209341) · GB · reached, host replied
+ SERVED   Frankfurt am Main, Hesse, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      5.6   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.1   110.93.254.40      —         TWA (PK)  [registry]
+    4     20.8   110.93.252.222     —         TWA (PK)  [registry]
+    5    119.7   195.22.198.88      AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    6    125.8   195.22.212.149     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    7    123.6   212.221.95.185     AS3257    GTT Communications Inc. (US)
+    8    133.2   141.136.110.41     AS3257    GTT Communications Inc. (US)
+    9      *     (no response)     
+   10    132.5   213.251.31.181     AS3257    GTT Communications Inc. (US)
+   11    132.7   213.251.31.182     AS3257    GTT Communications Inc. (US)
+   12    147.3   208.116.57.7       AS209341  WHG Hosting Services Ltd (GB)
+   13    134.9   65.181.113.41      AS209341  WHG Hosting Services Ltd (GB)   <<< DESTINATION
+
+==============================================================================
+ icci.com.pk   —   Icci  (government)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     65.181.113.41 · WHG Hosting Services Ltd (AS209341) · GB · reached, host replied
+ SERVED   Frankfurt am Main, Hesse, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      4.2   100.89.224.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.8   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      2.8   172.31.5.170       —         (private/internal)
+    6      *     (no response)     
+    7      *     (no response)     
+    8    118.7   62.115.165.16      AS1299    Arelion Sweden AB (SE)
+    9    132.8   62.115.124.58      AS1299    Arelion Sweden AB (SE)
+   10    132.8   62.115.132.227     AS1299    Arelion Sweden AB (SE)
+   11    133.8   62.115.153.95      AS1299    Arelion Sweden AB (SE)
+   12    136.6   208.116.57.5       AS209341  WHG Hosting Services Ltd (GB)
+   13    134.5   65.181.113.41      AS209341  WHG Hosting Services Ltd (GB)   <<< DESTINATION
+
+==============================================================================
+ icci.com.pk   —   Icci  (government)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     65.181.113.41 · WHG Hosting Services Ltd (AS209341) · GB · reached, host replied
+ SERVED   Frankfurt am Main, Hesse, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.8   10.102.76.1        —         (private/internal)
+    2      1.0   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    146.5   65.181.113.41      AS209341  WHG Hosting Services Ltd (GB)   <<< DESTINATION
+
+==============================================================================
+ icci.com.pk   —   Icci  (government)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     65.181.113.41 · WHG Hosting Services Ltd (AS209341) · GB · reached, host replied
+ SERVED   Frankfurt am Main, Hesse, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      2.0   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.3   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     20.6   110.93.254.40      —         TWA (PK)  [registry]
+    5     20.9   110.93.252.222     —         TWA (PK)  [registry]
+    6    107.5   195.22.198.88      AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    7    127.9   195.22.192.139     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    8    127.7   195.22.192.139     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    9    127.4   212.221.95.185     AS3257    GTT Communications Inc. (US)
+   10    136.8   141.136.110.41     AS3257    GTT Communications Inc. (US)
+   11      *     (no response)     
+   12    136.3   213.251.31.181     AS3257    GTT Communications Inc. (US)
+   13    138.0   213.251.31.182     AS3257    GTT Communications Inc. (US)
+   14    143.8   208.116.57.7       AS209341  WHG Hosting Services Ltd (GB)
+   15    156.0   65.181.113.41      AS209341  WHG Hosting Services Ltd (GB)   <<< DESTINATION
+
+==============================================================================
+ iesco.com.pk   —   Iesco  (government)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     210.56.28.14 · Commission on Science and Technology for (AS7590) · PK · host did NOT reply (trace incomplete)
+ SERVED   Saidpur, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.8   110.93.252.200     —         TWA (PK)  [registry]
+    4     39.2   110.93.254.99      —         TWA (PK)  [registry]
+    5     38.5   119.63.134.94      AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ iesco.com.pk   —   Iesco  (government)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     210.56.28.14 · Commission on Science and Technology for (AS7590) · PK · host did NOT reply (trace incomplete)
+ SERVED   Saidpur, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.224.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.4   172.27.0.29        —         (private/internal)
+    4      2.5   172.27.0.22        —         (private/internal)
+    5      3.2   172.31.5.170       —         (private/internal)
+    6      3.6   103.213.108.87     —         HTISPL-PK (PK)  [registry]
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ iesco.com.pk   —   Iesco  (government)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     210.56.28.14 · Commission on Science and Technology for (AS7590) · PK · host did NOT reply (trace incomplete)
+ SERVED   Saidpur, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.9   10.102.76.1        —         (private/internal)
+    2      1.0   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ iesco.com.pk   —   Iesco  (government)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     210.56.28.14 · Commission on Science and Technology for (AS7590) · PK · host did NOT reply (trace incomplete)
+ SERVED   Saidpur, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      1.8   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.5   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     23.0   110.93.252.200     —         TWA (PK)  [registry]
+    5     66.8   110.93.254.99      —         TWA (PK)  [registry]
+    6     41.3   119.63.134.94      AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ ignite.org.pk   —   Ignite  (government)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     104.26.5.216 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.1   110.93.254.40      —         TWA (PK)  [registry]
+    4     20.9   110.93.252.222     —         TWA (PK)  [registry]
+    5     19.8   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     19.3   104.26.5.216       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ ignite.org.pk   —   Ignite  (government)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     104.26.5.216 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   192.168.18.1       —         (private/internal)
+    2      3.4   100.89.224.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.0   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      3.6   172.31.5.253       —         (private/internal)
+    6      6.4   172.31.5.106       —         (private/internal)
+    7      3.5   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.5   104.26.5.216       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ ignite.org.pk   —   Ignite  (government)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     104.26.5.216 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.8   10.102.76.1        —         (private/internal)
+    2      1.0   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     23.7   104.26.5.216       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ ignite.org.pk   —   Ignite  (government)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     104.26.5.216 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.5   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     21.2   110.93.252.102     —         TWA (PK)  [registry]
+    5     21.0   110.93.252.222     —         TWA (PK)  [registry]
+    6     21.4   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     20.6   104.26.5.216       AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ indianembassy.org   —   Indianembassy  (government)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     103.119.217.37 · Hawk Host Inc. (AS20068) · CA · reached, host replied
+ SERVED   London, England, GB   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.5   110.93.252.200     —         TWA (PK)  [registry]
+    4     21.1   110.93.252.246     —         TWA (PK)  [registry]
+    5    117.9   110.93.252.233     —         TWA (PK)  [registry]
+    6    142.7   110.93.255.196     —         TWA (PK)  [registry]
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11    145.2   54.36.50.243       AS16276   OVH SAS (FR)
+   12    152.0   54.36.50.240       AS16276   OVH SAS (FR)
+   13    156.0   213.186.32.253     AS16276   OVH SAS (FR)
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+   17    150.5   103.119.217.37     AS20068   Hawk Host Inc. (CA)   <<< DESTINATION
+
+==============================================================================
+ indianembassy.org   —   Indianembassy  (government)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     103.119.217.37 · Hawk Host Inc. (AS20068) · CA · reached, host replied
+ SERVED   London, England, GB   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.8   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.224.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.0   172.27.0.29        —         (private/internal)
+    4      3.2   172.27.0.22        —         (private/internal)
+    5      2.8   172.31.5.170       —         (private/internal)
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+  255    161.5   103.119.217.37     AS20068   Hawk Host Inc. (CA)   <<< DESTINATION
+
+==============================================================================
+ indianembassy.org   —   Indianembassy  (government)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     103.119.217.37 · Hawk Host Inc. (AS20068) · CA · reached, host replied
+ SERVED   London, England, GB   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   10.102.76.1        —         (private/internal)
+    2      0.9   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    160.9   103.119.217.37     AS20068   Hawk Host Inc. (CA)   <<< DESTINATION
+
+==============================================================================
+ indianembassy.org   —   Indianembassy  (government)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     103.119.217.37 · Hawk Host Inc. (AS20068) · CA · host did NOT reply (trace incomplete)
+ SERVED   London, England, GB   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.8   192.168.100.1      —         (private/internal)
+    2      1.8   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.3   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     20.8   110.93.254.38      —         TWA (PK)  [registry]
+    5     20.8   110.93.252.136     —         TWA (PK)  [registry]
+    6    118.1   110.93.252.233     —         TWA (PK)  [registry]
+    7    135.9   110.93.255.196     —         TWA (PK)  [registry]
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12    149.7   54.36.50.243       AS16276   OVH SAS (FR)
+   13    150.5   54.36.50.240       AS16276   OVH SAS (FR)
+   14    153.0   213.186.32.253     AS16276   OVH SAS (FR)
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+   18      *     (no response)     
+   19      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ interior.gov.pk   —   Interior  (government)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     23.44.4.184 · Akamai International B.V. (AS20940) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Akamai network — this probe's handoff 110.93.192.129; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.2   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.3   110.93.254.66      —         TWA (PK)  [registry]
+    4     20.7   110.93.252.222     —         TWA (PK)  [registry]
+    5     94.6   110.93.192.129     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     94.3   104.74.134.126     AS20940   Akamai International B.V. (US)
+    7     94.6   104.74.134.88      AS20940   Akamai International B.V. (US)
+    8     94.3   104.74.134.125     AS20940   Akamai International B.V. (US)
+    9     96.2   23.215.54.211      AS20940   Akamai International B.V. (US)
+   10     95.1   104.74.135.116     AS20940   Akamai International B.V. (US)
+   11     95.2   104.74.135.123     AS20940   Akamai International B.V. (US)
+   12    102.4   23.56.139.193      AS20940   Akamai International B.V. (US)
+   13     95.3   23.44.4.184        AS20940   Akamai International B.V. (US)   <<< DESTINATION
+
+==============================================================================
+ interior.gov.pk   —   Interior  (government)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     23.44.4.184 · Akamai International B.V. (AS20940) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Akamai network — this probe's handoff 110.93.192.129; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.1   100.89.224.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.170       —         (private/internal)
+    6     21.9   110.93.202.134     —         TWA (PK)  [registry]
+    7     21.9   110.93.252.86      —         TWA (PK)  [registry]
+    8     22.1   110.93.252.224     —         TWA (PK)  [registry]
+    9    103.0   110.93.192.129     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+   10    101.8   104.74.134.126     AS20940   Akamai International B.V. (US)
+   11    102.4   104.74.134.80      AS20940   Akamai International B.V. (US)
+   12    102.4   104.74.134.121     AS20940   Akamai International B.V. (US)
+   13     96.6   23.215.54.215      AS20940   Akamai International B.V. (US)
+   14     99.0   104.74.135.126     AS20940   Akamai International B.V. (US)
+   15     96.1   104.74.135.131     AS20940   Akamai International B.V. (US)
+   16    435.6   23.56.139.193      AS20940   Akamai International B.V. (US)
+   17     94.9   23.44.4.184        AS20940   Akamai International B.V. (US)   <<< DESTINATION
+
+==============================================================================
+ interior.gov.pk   —   Interior  (government)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     23.44.4.184 · Akamai International B.V. (AS20940) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   10.102.76.1        —         (private/internal)
+    2      0.5   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    111.9   23.44.4.184        AS20940   Akamai International B.V. (US)   <<< DESTINATION
+
+==============================================================================
+ interior.gov.pk   —   Interior  (government)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     23.44.4.184 · Akamai International B.V. (AS20940) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Akamai network — this probe's handoff 110.93.192.129; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.0   192.168.100.1      —         (private/internal)
+    2      1.8   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.3   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     22.2   110.93.252.200     —         TWA (PK)  [registry]
+    5     22.6   110.93.252.222     —         TWA (PK)  [registry]
+    6     97.3   110.93.192.129     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     97.6   104.74.134.126     AS20940   Akamai International B.V. (US)
+    8     97.5   104.74.134.88      AS20940   Akamai International B.V. (US)
+    9     99.0   104.74.134.125     AS20940   Akamai International B.V. (US)
+   10    169.2   23.215.54.215      AS20940   Akamai International B.V. (US)
+   11    181.1   104.74.135.126     AS20940   Akamai International B.V. (US)
+   12    102.8   104.74.135.131     AS20940   Akamai International B.V. (US)
+   13      *     (no response)     
+   14    102.4   23.44.4.184        AS20940   Akamai International B.V. (US)   <<< DESTINATION
+
+==============================================================================
+ irrigation.punjab.gov.pk   —   Irrigation  (government)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     103.111.160.21 · Punjab Information Technology Board (AS59323) · PK · host did NOT reply (trace incomplete)
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3      0.8   110.93.252.139     —         TWA (PK)  [registry]
+    4      0.8   110.93.255.94      —         TWA (PK)  [registry]
+    5      1.1   110.93.202.170     —         TWA (PK)  [registry]
+    6      8.1   116.58.85.10       AS17563   Autonomous System Number for Nexlinx (PK)
+    7      6.5   10.101.2.5         —         (private/internal)
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ irrigation.punjab.gov.pk   —   Irrigation  (government)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     103.111.160.21 · Punjab Information Technology Board (AS59323) · PK · host did NOT reply (trace incomplete)
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   192.168.18.1       —         (private/internal)
+    2      3.6   100.89.224.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      2.9   172.31.5.205       —         (private/internal)
+    6     11.7   172.31.5.130       —         (private/internal)
+    7     17.0   172.31.5.198       —         (private/internal)
+    8     16.2   100.64.128.80      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    9     20.4   10.101.2.5         —         (private/internal)
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ irrigation.punjab.gov.pk   —   Irrigation  (government)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     103.111.160.21 · Punjab Information Technology Board (AS59323) · PK · host did NOT reply (trace incomplete)
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   10.102.76.1        —         (private/internal)
+    2      1.0   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ irrigation.punjab.gov.pk   —   Irrigation  (government)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     103.111.160.21 · Punjab Information Technology Board (AS59323) · PK · host did NOT reply (trace incomplete)
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.6   192.168.100.1      —         (private/internal)
+    2      1.7   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.1   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4      2.3   110.93.252.191     —         TWA (PK)  [registry]
+    5      2.5   110.93.202.170     —         TWA (PK)  [registry]
+    6      3.4   116.58.85.10       AS17563   Autonomous System Number for Nexlinx (PK)
+    7     81.7   10.101.2.5         —         (private/internal)
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ irrigation.sindh.gov.pk   —   Irrigation  (government)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     103.120.116.7 · Broadband Business Ideas (PVT.) Limited (AS138039) · PK · host did NOT reply (trace incomplete)
+ SERVED   Tando Adam, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.0   110.93.252.50      —         TWA (PK)  [registry]
+    4     18.3   119.63.137.83      —         TWA (PK)  [registry]
+    5     21.0   10.253.4.125       —         (private/internal)
+    6     23.1   10.253.5.181       —         (private/internal)
+    7     22.4   202.70.157.195     AS9557    Paknet Limited Merged into PTCL (PK)
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ irrigation.sindh.gov.pk   —   Irrigation  (government)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     103.120.116.7 · Broadband Business Ideas (PVT.) Limited (AS138039) · PK · host did NOT reply (trace incomplete)
+ SERVED   Tando Adam, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   192.168.18.1       —         (private/internal)
+    2      2.8   100.89.224.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.170       —         (private/internal)
+    6      *     (no response)     
+    7      *     (no response)     
+    8     26.6   202.70.157.195     AS9557    Paknet Limited Merged into PTCL (PK)
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ irrigation.sindh.gov.pk   —   Irrigation  (government)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     103.120.116.7 · Broadband Business Ideas (PVT.) Limited (AS138039) · PK · host did NOT reply (trace incomplete)
+ SERVED   Tando Adam, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ irrigation.sindh.gov.pk   —   Irrigation  (government)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     103.120.116.7 · Broadband Business Ideas (PVT.) Limited (AS138039) · PK · host did NOT reply (trace incomplete)
+ SERVED   Tando Adam, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   192.168.100.1      —         (private/internal)
+    2      1.7   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.8   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     21.0   110.93.254.38      —         TWA (PK)  [registry]
+    5     20.6   119.63.137.83      —         TWA (PK)  [registry]
+    6     19.8   10.253.4.125       —         (private/internal)
+    7     27.3   10.253.5.181       —         (private/internal)
+    8     24.0   202.70.157.195     AS9557    Paknet Limited Merged into PTCL (PK)
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ islamabad.mfa.ir   —   Islamabad  (government)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     185.143.234.235 · Noyan Abr Arvan Co. ( Private Joint Stock) (AS205585) · IR · reached, host replied
+ SERVED   Tehran, Tehran, IR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.1   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.0   110.93.254.38      —         TWA (PK)  [registry]
+    4     19.1   110.93.252.224     —         TWA (PK)  [registry]
+    5    114.8   110.93.252.95      —         TWA (PK)  [registry]
+    6    141.5   110.93.255.196     —         TWA (PK)  [registry]
+    7    185.7   80.81.192.51       —         DE-CIX-FRA-IXP (DE)  [registry]
+    8    190.9   172.16.42.234      —         (private/internal)
+    9    188.7   172.16.42.78       —         (private/internal)
+   10    186.1   172.16.42.142      —         (private/internal)
+   11    187.3   185.143.234.235    AS205585  Noyan Abr Arvan Co. ( Private Joint Stock) (IR)   <<< DESTINATION
+
+==============================================================================
+ islamabad.mfa.ir   —   Islamabad  (government)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     185.143.234.235 · Noyan Abr Arvan Co. ( Private Joint Stock) (AS205585) · IR · reached, host replied
+ SERVED   Tehran, Tehran, IR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.224.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.8   172.27.0.29        —         (private/internal)
+    4      2.4   172.27.0.22        —         (private/internal)
+    5      2.8   172.31.5.170       —         (private/internal)
+    6     21.8   110.93.202.134     —         TWA (PK)  [registry]
+    7     21.7   110.93.252.34      —         TWA (PK)  [registry]
+    8     39.7   110.93.252.222     —         TWA (PK)  [registry]
+    9    136.2   110.93.255.209     —         TWA (PK)  [registry]
+   10    136.3   110.93.255.196     —         TWA (PK)  [registry]
+   11    139.7   80.81.192.51       —         DE-CIX-FRA-IXP (DE)  [registry]
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+   15    146.9   185.143.234.235    AS205585  Noyan Abr Arvan Co. ( Private Joint Stock) (IR)   <<< DESTINATION
+
+==============================================================================
+ islamabad.mfa.ir   —   Islamabad  (government)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     185.143.234.235 · Noyan Abr Arvan Co. ( Private Joint Stock) (AS205585) · IR · reached, host replied
+ SERVED   Tehran, Tehran, IR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      3.9   10.102.76.1        —         (private/internal)
+    2      0.9   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    147.4   185.143.234.235    AS205585  Noyan Abr Arvan Co. ( Private Joint Stock) (IR)   <<< DESTINATION
+
+==============================================================================
+ islamabad.mfa.ir   —   Islamabad  (government)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     185.143.234.235 · Noyan Abr Arvan Co. ( Private Joint Stock) (AS205585) · IR · reached, host replied
+ SERVED   Tehran, Tehran, IR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.100.1      —         (private/internal)
+    2      1.6   70.70.71.137       AS6327    Shaw Communications (CA)
+    3     17.8   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     22.3   110.93.254.66      —         TWA (PK)  [registry]
+    5     21.7   110.93.252.246     —         TWA (PK)  [registry]
+    6    153.6   110.93.252.41      —         TWA (PK)  [registry]
+    7    154.9   110.93.255.196     —         TWA (PK)  [registry]
+    8    133.1   80.81.192.51       —         DE-CIX-FRA-IXP (DE)  [registry]
+    9    134.5   172.16.42.234      —         (private/internal)
+   10    136.0   172.16.42.78       —         (private/internal)
+   11    135.2   172.16.42.142      —         (private/internal)
+   12    143.3   185.143.234.235    AS205585  Noyan Abr Arvan Co. ( Private Joint Stock) (IR)   <<< DESTINATION

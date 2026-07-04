@@ -1,0 +1,498 @@
+Readable routes  —  pk_grouped_20260617_232542.csv
+24 traceroutes  ·  destination shown once per block (in the DEST header)
+
+==============================================================================
+ amc.edu.pk   —   Amc  (health)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     173.0.54.42 · Wowrack.com (AS27323) · US · reached, host replied
+ SERVED   Tukwila, Washington, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      7.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      9.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.252.50      —         TWA (PK)  [registry]
+    4     49.6   110.93.252.136     —         TWA (PK)  [registry]
+    5    147.5   149.14.211.241     AS174     Cogent Communications, LLC (US)
+    6    138.0   130.117.0.29       AS174     Cogent Communications, LLC (US)
+    7    146.9   130.117.1.1        AS174     Cogent Communications, LLC (US)
+    8    144.0   154.54.62.142      AS174     Cogent Communications, LLC (US)
+    9    147.0   154.54.77.246      AS174     Cogent Communications, LLC (US)
+   10    217.1   154.54.44.162      AS174     Cogent Communications, LLC (US)
+   11    243.4   154.54.41.205      AS174     Cogent Communications, LLC (US)
+   12    287.8   154.54.82.253      AS174     Cogent Communications, LLC (US)
+   13    276.6   154.54.28.14       AS174     Cogent Communications, LLC (US)
+   14    277.6   154.24.14.98       AS174     Cogent Communications, LLC (US)
+   15    283.6   154.24.94.198      AS174     Cogent Communications, LLC (US)
+   16    278.1   38.122.91.186      AS174     Cogent Communications, LLC (US)
+   17    278.1   216.244.88.177     AS23033   Wowrack.com (US)
+   18    277.0   216.244.89.3       AS23033   Wowrack.com (US)
+   19      *     (no response)     
+   20    287.2   173.0.54.42        AS27323   Wowrack.com (US)   <<< DESTINATION
+
+==============================================================================
+ amc.edu.pk   —   Amc  (health)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     173.0.54.42 · Wowrack.com (AS27323) · US · reached, host replied
+ SERVED   Tukwila, Washington, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.2   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.6   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      2.7   172.31.5.170       —         (private/internal)
+    6     24.5   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.1   110.93.252.34      —         TWA (PK)  [registry]
+    8     26.1   110.93.252.246     —         TWA (PK)  [registry]
+    9    153.7   149.14.211.241     AS174     Cogent Communications, LLC (US)
+   10    142.5   130.117.0.29       AS174     Cogent Communications, LLC (US)
+   11    152.9   130.117.1.1        AS174     Cogent Communications, LLC (US)
+   12    157.1   154.54.62.142      AS174     Cogent Communications, LLC (US)
+   13    162.1   154.54.77.246      AS174     Cogent Communications, LLC (US)
+   14    221.2   154.54.44.162      AS174     Cogent Communications, LLC (US)
+   15    230.0   154.54.41.205      AS174     Cogent Communications, LLC (US)
+   16    293.3   154.54.82.253      AS174     Cogent Communications, LLC (US)
+   17    291.8   154.54.28.14       AS174     Cogent Communications, LLC (US)
+   18    293.1   154.24.14.98       AS174     Cogent Communications, LLC (US)
+   19    292.7   154.24.94.198      AS174     Cogent Communications, LLC (US)
+   20    288.6   38.122.91.186      AS174     Cogent Communications, LLC (US)
+   21    287.7   216.244.88.177     AS23033   Wowrack.com (US)
+   22    295.0   216.244.89.3       AS23033   Wowrack.com (US)
+   23      *     (no response)     
+   24    295.1   173.0.54.42        AS27323   Wowrack.com (US)   <<< DESTINATION
+
+==============================================================================
+ amc.edu.pk   —   Amc  (health)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     173.0.54.42 · Wowrack.com (AS27323) · US · reached, host replied
+ SERVED   Tukwila, Washington, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.5   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    285.5   173.0.54.42        AS27323   Wowrack.com (US)   <<< DESTINATION
+
+==============================================================================
+ amc.edu.pk   —   Amc  (health)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     173.0.54.42 · Wowrack.com (AS27323) · US · reached, host replied
+ SERVED   Tukwila, Washington, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.5   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     36.2   110.93.254.66      —         TWA (PK)  [registry]
+    5     39.7   110.93.252.246     —         TWA (PK)  [registry]
+    6    168.3   149.14.211.241     AS174     Cogent Communications, LLC (US)
+    7    160.5   154.54.56.146      AS174     Cogent Communications, LLC (US)
+    8    153.3   154.54.38.114      AS174     Cogent Communications, LLC (US)
+    9    159.6   154.54.72.41       AS174     Cogent Communications, LLC (US)
+   10    168.7   154.54.58.69       AS174     Cogent Communications, LLC (US)
+   11    230.7   154.54.44.166      AS174     Cogent Communications, LLC (US)
+   12    256.1   154.54.42.89       AS174     Cogent Communications, LLC (US)
+   13    318.3   154.54.94.73       AS174     Cogent Communications, LLC (US)
+   14    293.1   154.54.28.18       AS174     Cogent Communications, LLC (US)
+   15    291.3   154.24.14.98       AS174     Cogent Communications, LLC (US)
+   16    302.1   154.24.94.198      AS174     Cogent Communications, LLC (US)
+   17    326.2   38.122.91.186      AS174     Cogent Communications, LLC (US)
+   18    308.1   216.244.88.177     AS23033   Wowrack.com (US)
+   19    302.6   216.244.89.3       AS23033   Wowrack.com (US)
+   20      *     (no response)     
+   21    343.1   173.0.54.42        AS27323   Wowrack.com (US)   <<< DESTINATION
+
+==============================================================================
+ ayubmed.edu.pk   —   Ayubmed  (health)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     50.28.48.75 · Liquid Web, L.L.C (AS32244) · US · reached, host replied
+ SERVED   Lansing, Michigan, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      6.7   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      5.0   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.252.50      —         TWA (PK)  [registry]
+    4     16.5   110.93.252.224     —         TWA (PK)  [registry]
+    5    113.5   110.93.252.95      —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7    135.0   154.54.39.225      AS174     Cogent Communications, LLC (US)
+    8    198.0   154.54.47.137      AS174     Cogent Communications, LLC (US)
+    9    235.2   154.54.5.218       AS174     Cogent Communications, LLC (US)
+   10    202.4   38.88.214.15       AS174     Cogent Communications, LLC (US)
+   11    214.4   209.59.157.21      AS32244   Liquid Web, L.L.C (US)
+   12    225.9   209.59.157.65      AS32244   Liquid Web, L.L.C (US)
+   13    230.0   209.59.157.218     AS32244   Liquid Web, L.L.C (US)
+   14    233.8   69.167.128.141     AS32244   Liquid Web, L.L.C (US)
+   15    218.9   50.28.48.75        AS32244   Liquid Web, L.L.C (US)   <<< DESTINATION
+
+==============================================================================
+ ayubmed.edu.pk   —   Ayubmed  (health)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     50.28.48.75 · Liquid Web, L.L.C (AS32244) · US · reached, host replied
+ SERVED   Lansing, Michigan, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.18.1       —         (private/internal)
+    2      3.1   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.5   172.27.0.29        —         (private/internal)
+    4      2.9   172.27.0.22        —         (private/internal)
+    5      2.8   172.31.5.170       —         (private/internal)
+    6     24.3   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.9   110.93.252.106     —         TWA (PK)  [registry]
+    8     23.2   110.93.252.136     —         TWA (PK)  [registry]
+    9    133.8   110.93.253.89      —         TWA (PK)  [registry]
+   10      *     (no response)     
+   11    130.1   154.54.39.225      AS174     Cogent Communications, LLC (US)
+   12    202.0   154.54.47.137      AS174     Cogent Communications, LLC (US)
+   13    207.5   154.54.5.218       AS174     Cogent Communications, LLC (US)
+   14    222.0   38.88.214.15       AS174     Cogent Communications, LLC (US)
+   15    238.9   209.59.157.21      AS32244   Liquid Web, L.L.C (US)
+   16    230.2   209.59.157.65      AS32244   Liquid Web, L.L.C (US)
+   17    243.2   209.59.157.218     AS32244   Liquid Web, L.L.C (US)
+   18    243.8   69.167.128.141     AS32244   Liquid Web, L.L.C (US)
+   19    235.7   50.28.48.75        AS32244   Liquid Web, L.L.C (US)   <<< DESTINATION
+
+==============================================================================
+ ayubmed.edu.pk   —   Ayubmed  (health)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     50.28.48.75 · Liquid Web, L.L.C (AS32244) · US · reached, host replied
+ SERVED   Lansing, Michigan, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1     60.8   10.102.76.1        —         (private/internal)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    234.3   50.28.48.75        AS32244   Liquid Web, L.L.C (US)   <<< DESTINATION
+
+==============================================================================
+ ayubmed.edu.pk   —   Ayubmed  (health)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     50.28.48.75 · Liquid Web, L.L.C (AS32244) · US · reached, host replied
+ SERVED   Lansing, Michigan, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2      9.8   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      8.1   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     27.4   110.93.254.66      —         TWA (PK)  [registry]
+    5     54.7   110.93.252.246     —         TWA (PK)  [registry]
+    6    137.5   110.93.253.125     —         TWA (PK)  [registry]
+    7      *     (no response)     
+    8    142.4   154.54.39.225      AS174     Cogent Communications, LLC (US)
+    9    239.7   154.54.47.137      AS174     Cogent Communications, LLC (US)
+   10    231.3   154.54.5.218       AS174     Cogent Communications, LLC (US)
+   11      *     (no response)     
+   12    253.8   209.59.157.21      AS32244   Liquid Web, L.L.C (US)
+   13    236.7   209.59.157.65      AS32244   Liquid Web, L.L.C (US)
+   14    247.4   209.59.157.218     AS32244   Liquid Web, L.L.C (US)
+   15    262.5   69.167.128.141     AS32244   Liquid Web, L.L.C (US)
+   16    253.3   50.28.48.75        AS32244   Liquid Web, L.L.C (US)   <<< DESTINATION
+
+==============================================================================
+ blog.sehat.com.pk   —   Blog  (health)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     95.217.74.102 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Helsinki, Uusimaa, FI   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1     11.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     17.0   110.93.252.200     —         TWA (PK)  [registry]
+    4     16.5   110.93.252.246     —         TWA (PK)  [registry]
+    5    129.0   110.93.255.237     —         TWA (PK)  [registry]
+    6    145.4   110.93.255.196     —         TWA (PK)  [registry]
+    7    136.2   80.81.192.98       —         DE-CIX-FRA-IXP (DE)  [registry]
+    8    154.5   213.239.224.169    AS24940   Hetzner Online GmbH (DE)
+    9    156.1   213.133.119.4      AS24940   Hetzner Online GmbH (DE)
+   10    154.8   95.217.74.102      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ blog.sehat.com.pk   —   Blog  (health)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     95.217.74.102 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Helsinki, Uusimaa, FI   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      5.5   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.6   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      3.1   172.31.5.170       —         (private/internal)
+    6     23.1   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.3   110.93.252.106     —         TWA (PK)  [registry]
+    8     23.6   110.93.252.224     —         TWA (PK)  [registry]
+    9    144.2   110.93.252.175     —         TWA (PK)  [registry]
+   10    149.6   110.93.255.196     —         TWA (PK)  [registry]
+   11    134.0   80.81.192.98       —         DE-CIX-FRA-IXP (DE)  [registry]
+   12    172.3   213.239.224.165    AS24940   Hetzner Online GmbH (DE)
+   13    172.8   213.133.119.4      AS24940   Hetzner Online GmbH (DE)
+   14    168.4   95.217.74.102      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ blog.sehat.com.pk   —   Blog  (health)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     95.217.74.102 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Helsinki, Uusimaa, FI   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    155.2   95.217.74.102      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ blog.sehat.com.pk   —   Blog  (health)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     95.217.74.102 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Helsinki, Uusimaa, FI   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   192.168.100.1      —         (private/internal)
+    2     13.6   70.70.71.137       AS6327    Shaw Communications (CA)
+    3     18.4   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     29.7   110.93.254.40      —         TWA (PK)  [registry]
+    5     39.1   110.93.252.246     —         TWA (PK)  [registry]
+    6    132.5   110.93.253.125     —         TWA (PK)  [registry]
+    7    151.1   110.93.255.196     —         TWA (PK)  [registry]
+    8    154.2   80.81.192.98       —         DE-CIX-FRA-IXP (DE)  [registry]
+    9    172.9   213.239.224.165    AS24940   Hetzner Online GmbH (DE)
+   10    173.9   213.133.119.4      AS24940   Hetzner Online GmbH (DE)
+   11    169.6   95.217.74.102      AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ cardiology.pk   —   Cardiology  (health)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     192.250.229.100 · WHG Hosting Services Ltd (AS209341) · GB · reached, host replied
+ SERVED   Frankfurt am Main, Hesse, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1     11.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.2   110.93.252.102     —         TWA (PK)  [registry]
+    4     16.5   110.93.252.222     —         TWA (PK)  [registry]
+    5    122.3   195.22.198.88      AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    6    122.4   195.22.212.149     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    7    121.3   212.221.95.185     AS3257    GTT Communications Inc. (US)
+    8    131.6   141.136.110.41     AS3257    GTT Communications Inc. (US)
+    9      *     (no response)     
+   10    131.0   213.251.31.181     AS3257    GTT Communications Inc. (US)
+   11    130.1   213.251.31.182     AS3257    GTT Communications Inc. (US)
+   12    170.7   208.116.57.7       AS209341  WHG Hosting Services Ltd (GB)
+   13    132.8   192.250.229.100    AS209341  WHG Hosting Services Ltd (GB)   <<< DESTINATION
+
+==============================================================================
+ cardiology.pk   —   Cardiology  (health)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     192.250.229.100 · WHG Hosting Services Ltd (AS209341) · GB · reached, host replied
+ SERVED   Frankfurt am Main, Hesse, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   192.168.18.1       —         (private/internal)
+    2      3.5   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.3   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      3.4   172.31.5.170       —         (private/internal)
+    6      *     (no response)     
+    7      *     (no response)     
+    8    117.9   62.115.165.16      AS1299    Arelion Sweden AB (SE)
+    9    142.2   62.115.143.8       AS1299    Arelion Sweden AB (SE)
+   10    133.7   62.115.132.227     AS1299    Arelion Sweden AB (SE)
+   11    532.4   62.115.153.95      AS1299    Arelion Sweden AB (SE)
+   12    135.5   208.116.57.5       AS25653   FortressITX (US)
+   13    134.1   192.250.229.100    AS209341  WHG Hosting Services Ltd (GB)   <<< DESTINATION
+
+==============================================================================
+ cardiology.pk   —   Cardiology  (health)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     192.250.229.100 · WHG Hosting Services Ltd (AS209341) · GB · reached, host replied
+ SERVED   Frankfurt am Main, Hesse, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    140.0   192.250.229.100    AS209341  WHG Hosting Services Ltd (GB)   <<< DESTINATION
+
+==============================================================================
+ cardiology.pk   —   Cardiology  (health)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     192.250.229.100 · WHG Hosting Services Ltd (AS209341) · GB · host did NOT reply (trace incomplete)
+ SERVED   Frankfurt am Main, Hesse, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2     23.5   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      3.2   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.4   110.93.254.40      —         TWA (PK)  [registry]
+    5     22.1   110.93.252.222     —         TWA (PK)  [registry]
+    6    119.3   195.22.198.88      AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    7    121.0   195.22.192.139     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    8    128.6   195.22.192.139     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    9    149.4   212.221.95.185     AS3257    GTT Communications Inc. (US)
+   10    144.4   141.136.110.41     AS3257    GTT Communications Inc. (US)
+   11      *     (no response)     
+   12    130.2   213.251.31.181     AS3257    GTT Communications Inc. (US)
+   13    151.6   213.251.31.182     AS3257    GTT Communications Inc. (US)
+   14    145.5   208.116.57.7       AS209341  WHG Hosting Services Ltd (GB)
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+   18      *     (no response)     
+   19      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ cerp.org.pk   —   Cerp  (health)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     172.67.196.71 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1     11.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.254.144     —         TWA (PK)  [registry]
+    4     16.4   110.93.252.136     —         TWA (PK)  [registry]
+    5     92.6   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    6     91.8   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    7     95.7   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    8     91.1   172.69.117.60      AS13335   Cloudflare, Inc. (US)
+    9     92.2   172.69.117.125     AS13335   Cloudflare, Inc. (US)
+   10     91.5   172.67.196.71      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ cerp.org.pk   —   Cerp  (health)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     172.67.196.71 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   192.168.18.1       —         (private/internal)
+    2      3.1   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.5   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      3.4   172.31.5.253       —         (private/internal)
+    6      *     (no response)     
+    7     17.6   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.7   172.67.196.71      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ cerp.org.pk   —   Cerp  (health)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     172.67.196.71 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      6.2   10.102.76.1        —         (private/internal)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    101.9   172.67.196.71      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ cerp.org.pk   —   Cerp  (health)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     172.67.196.71 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.8   192.168.100.1      —         (private/internal)
+    2      8.4   70.70.71.137       AS6327    Shaw Communications (CA)
+    3     14.5   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     29.9   110.93.252.50      —         TWA (PK)  [registry]
+    5     31.9   110.93.252.136     —         TWA (PK)  [registry]
+    6    132.9   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    7    126.0   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    8    110.9   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    9     95.7   172.69.117.39      AS13335   Cloudflare, Inc. (US)
+   10    101.8   172.69.117.91      AS13335   Cloudflare, Inc. (US)
+   11    101.6   172.67.196.71      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ cpsp.edu.pk   —   Cpsp  (health)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     111.68.111.15 · PERN AS Content Servie Provider, Islamabad, Pakistan (AS45773) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1     10.1   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.4   110.93.252.102     —         TWA (PK)  [registry]
+    4     16.6   110.93.252.173     —         TWA (PK)  [registry]
+    5     17.1   110.93.253.193     —         TWA (PK)  [registry]
+    6     18.1   117.20.16.70       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     20.3   172.31.240.69      —         (private/internal)
+    8     18.5   172.31.253.58      —         (private/internal)
+    9     17.1   111.68.111.15      AS45773   PERN AS Content Servie Provider, Islamabad, Pakistan (PK)   <<< DESTINATION
+
+==============================================================================
+ cpsp.edu.pk   —   Cpsp  (health)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     111.68.111.15 · PERN AS Content Servie Provider, Islamabad, Pakistan (AS45773) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   192.168.18.1       —         (private/internal)
+    2      3.4   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.4   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.205       —         (private/internal)
+    6      3.4   172.31.5.30        —         (private/internal)
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255     31.0   111.68.111.15      AS45773   PERN AS Content Servie Provider, Islamabad, Pakistan (PK)   <<< DESTINATION
+
+==============================================================================
+ cpsp.edu.pk   —   Cpsp  (health)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     111.68.111.15 · PERN AS Content Servie Provider, Islamabad, Pakistan (AS45773) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   10.102.76.1        —         (private/internal)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     27.9   111.68.111.15      AS45773   PERN AS Content Servie Provider, Islamabad, Pakistan (PK)   <<< DESTINATION
+
+==============================================================================
+ cpsp.edu.pk   —   Cpsp  (health)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     111.68.111.15 · PERN AS Content Servie Provider, Islamabad, Pakistan (AS45773) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.6   192.168.100.1      —         (private/internal)
+    2     14.2   70.70.71.137       AS6327    Shaw Communications (CA)
+    3     10.2   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     38.2   110.93.254.66      —         TWA (PK)  [registry]
+    5     31.3   110.93.252.173     —         TWA (PK)  [registry]
+    6     30.1   110.93.253.193     —         TWA (PK)  [registry]
+    7     32.5   117.20.16.70       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    8     20.4   172.31.240.69      —         (private/internal)
+    9     21.8   172.31.253.58      —         (private/internal)
+   10     23.1   111.68.111.15      AS45773   PERN AS Content Servie Provider, Islamabad, Pakistan (PK)   <<< DESTINATION

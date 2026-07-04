@@ -1,0 +1,323 @@
+Readable routes  —  pk_grouped_20260617_022023.csv
+16 traceroutes  ·  destination shown once per block (in the DEST header)
+
+==============================================================================
+ kcci.com.pk   —   Kcci  (government)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     138.201.222.163 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.6   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.0   110.93.254.66      —         TWA (PK)  [registry]
+    4     20.7   110.93.252.222     —         TWA (PK)  [registry]
+    5    140.9   212.73.253.101     AS3356    Level 3 Parent, LLC (GB)
+    6    155.0   171.75.8.27        AS3356    Level 3 Parent, LLC (GB)
+    7    144.7   62.67.27.6         AS3356    Level 3 Parent, LLC (GB)
+    8    144.3   213.239.237.141    AS24940   Hetzner Online GmbH (DE)
+    9    155.2   213.133.117.189    AS24940   Hetzner Online GmbH (DE)
+   10    144.8   138.201.222.163    AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ kcci.com.pk   —   Kcci  (government)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     138.201.222.163 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.224.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      8.6   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      2.8   172.31.5.170       —         (private/internal)
+    6     22.8   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.4   110.93.252.84      —         TWA (PK)  [registry]
+    8     26.4   110.93.252.222     —         TWA (PK)  [registry]
+    9    131.9   212.73.253.101     AS3356    Level 3 Parent, LLC (GB)
+   10    151.6   171.75.8.27        AS3356    Level 3 Parent, LLC (GB)
+   11    212.3   62.67.27.10        AS3356    Level 3 Parent, LLC (GB)
+   12    156.7   213.239.203.133    AS24940   Hetzner Online GmbH (DE)
+   13    156.2   213.133.117.189    AS24940   Hetzner Online GmbH (DE)
+   14    146.8   138.201.222.163    AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ kcci.com.pk   —   Kcci  (government)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     138.201.222.163 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    152.5   138.201.222.163    AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ kcci.com.pk   —   Kcci  (government)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     138.201.222.163 · Hetzner Online GmbH (AS24940) · DE · reached, host replied
+ SERVED   Falkenstein, Saxony, DE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   192.168.100.1      —         (private/internal)
+    2      1.8   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.2   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     20.4   110.93.252.48      —         TWA (PK)  [registry]
+    5     20.6   110.93.252.224     —         TWA (PK)  [registry]
+    6    147.7   212.73.253.101     AS3356    Level 3 Parent, LLC (GB)
+    7      *     (no response)     
+    8    146.1   62.67.27.6         AS3356    Level 3 Parent, LLC (GB)
+    9    145.8   213.239.237.137    AS24940   Hetzner Online GmbH (DE)
+   10    156.7   213.133.117.189    AS24940   Hetzner Online GmbH (DE)
+   11    146.2   138.201.222.163    AS24940   Hetzner Online GmbH (DE)   <<< DESTINATION
+
+==============================================================================
+ koausa.org   —   Koausa  (government)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     185.230.63.107 · Wix.com Ltd. (AS58182) · IL · reached, host replied
+ SERVED   Ashburn, Virginia, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.7   110.93.252.102     —         TWA (PK)  [registry]
+    4     20.6   110.93.252.222     —         TWA (PK)  [registry]
+    5    119.7   195.22.198.88      AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    6    122.7   195.22.192.139     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    7    122.5   195.22.192.139     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    8    121.4   195.22.212.223     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    9    145.9   171.75.8.245       AS3356    Level 3 Parent, LLC (GB)
+   10    155.4   213.242.106.182    AS3356    Level 3 Parent, LLC (GB)
+   11      *     (no response)     
+   12    207.5   185.230.63.107     AS58182   Wix.com Ltd. (IL)   <<< DESTINATION
+
+==============================================================================
+ koausa.org   —   Koausa  (government)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     185.230.63.107 · Wix.com Ltd. (AS58182) · IL · reached, host replied
+ SERVED   Ashburn, Virginia, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.224.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.2   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.170       —         (private/internal)
+    6     22.9   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.4   110.93.253.110     —         TWA (PK)  [registry]
+    8     22.6   110.93.252.222     —         TWA (PK)  [registry]
+    9    116.0   195.22.198.88      AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+   10    127.8   195.22.212.149     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+   11    137.1   195.22.212.223     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+   12    158.9   171.75.8.245       AS3356    Level 3 Parent, LLC (GB)
+   13    181.4   213.242.106.182    AS3356    Level 3 Parent, LLC (GB)
+   14      *     (no response)     
+   15    155.9   185.230.63.107     AS58182   Wix.com Ltd. (IL)   <<< DESTINATION
+
+==============================================================================
+ koausa.org   —   Koausa  (government)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     185.230.63.107 · Wix.com Ltd. (AS58182) · IL · reached, host replied
+ SERVED   Ashburn, Virginia, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   10.102.76.1        —         (private/internal)
+    2      0.5   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    458.8   185.230.63.107     AS58182   Wix.com Ltd. (IL)   <<< DESTINATION
+
+==============================================================================
+ koausa.org   —   Koausa  (government)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     185.230.63.107 · Wix.com Ltd. (AS58182) · IL · reached, host replied
+ SERVED   Ashburn, Virginia, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   192.168.100.1      —         (private/internal)
+    2      2.1   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.4   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     20.6   110.93.254.38      —         TWA (PK)  [registry]
+    5     21.2   110.93.252.224     —         TWA (PK)  [registry]
+    6    107.3   195.22.198.88      AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    7    125.4   195.22.212.149     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    8    126.3   195.22.212.223     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    9    161.6   171.75.8.245       AS3356    Level 3 Parent, LLC (GB)
+   10    162.6   213.242.106.182    AS3356    Level 3 Parent, LLC (GB)
+   11      *     (no response)     
+   12    152.8   185.230.63.107     AS58182   Wix.com Ltd. (IL)   <<< DESTINATION
+
+==============================================================================
+ kp.gov.pk   —   Kp  (government)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     175.107.63.150 · National Telecommunication Corporation HQ, (AS23888) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.3   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     20.0   110.93.252.200     —         TWA (PK)  [registry]
+    4     40.1   110.93.253.183     —         TWA (PK)  [registry]
+    5     43.1   110.93.204.153     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ kp.gov.pk   —   Kp  (government)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     175.107.63.150 · National Telecommunication Corporation HQ, (AS23888) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.8   192.168.18.1       —         (private/internal)
+    2      7.2   100.89.224.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.5   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      3.4   172.31.5.170       —         (private/internal)
+    6     22.8   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.9   110.93.254.7       —         TWA (PK)  [registry]
+    8     29.6   110.93.204.153     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ kp.gov.pk   —   Kp  (government)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     175.107.63.150 · National Telecommunication Corporation HQ, (AS23888) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      8.7   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ kp.gov.pk   —   Kp  (government)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     175.107.63.150 · National Telecommunication Corporation HQ, (AS23888) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   192.168.100.1      —         (private/internal)
+    2      1.8   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.2   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     20.6   110.93.252.48      —         TWA (PK)  [registry]
+    5     38.9   110.93.255.187     —         TWA (PK)  [registry]
+    6     42.0   110.93.204.153     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ lcci.com.pk   —   Lcci  (government)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     74.50.90.187 · Interserver, Inc (AS19318) · US · reached, host replied
+ SERVED   Englewood Cliffs, New Jersey, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.2   110.93.254.66      —         TWA (PK)  [registry]
+    4     21.0   110.93.252.222     —         TWA (PK)  [registry]
+    5    115.5   110.93.252.175     —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7    127.5   154.54.72.109      AS174     Cogent Communications, LLC (US)
+    8    198.7   66.28.4.197        AS174     Cogent Communications, LLC (US)
+    9    205.1   154.54.30.114      AS174     Cogent Communications, LLC (US)
+   10    199.6   154.24.11.54       AS174     Cogent Communications, LLC (US)
+   11    204.5   38.122.117.162     AS174     Cogent Communications, LLC (US)
+   12    197.8   64.20.32.128       AS19318   Interserver, Inc (US)
+   13    343.5   64.20.32.138       AS19318   Interserver, Inc (US)
+   14    208.6   68.168.215.211     AS19318   Interserver, Inc (US)
+   15    197.3   74.50.90.187       AS19318   Interserver, Inc (US)   <<< DESTINATION
+
+==============================================================================
+ lcci.com.pk   —   Lcci  (government)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     74.50.90.187 · Interserver, Inc (AS19318) · US · reached, host replied
+ SERVED   Englewood Cliffs, New Jersey, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.18.1       —         (private/internal)
+    2      3.1   100.89.224.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      3.2   172.31.5.170       —         (private/internal)
+    6     22.6   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.8   110.93.252.34      —         TWA (PK)  [registry]
+    8     22.9   110.93.252.222     —         TWA (PK)  [registry]
+    9    133.1   110.93.255.11      —         TWA (PK)  [registry]
+   10      *     (no response)     
+   11    139.2   154.54.72.109      AS174     Cogent Communications, LLC (US)
+   12    200.0   66.28.4.197        AS174     Cogent Communications, LLC (US)
+   13    200.7   154.54.30.114      AS174     Cogent Communications, LLC (US)
+   14    199.6   154.24.11.54       AS174     Cogent Communications, LLC (US)
+   15    217.7   38.122.117.162     AS174     Cogent Communications, LLC (US)
+   16    220.4   64.20.32.128       AS19318   Interserver, Inc (US)
+   17    218.2   64.20.32.138       AS19318   Interserver, Inc (US)
+   18    217.6   68.168.215.211     AS19318   Interserver, Inc (US)
+   19    207.6   74.50.90.187       AS19318   Interserver, Inc (US)   <<< DESTINATION
+
+==============================================================================
+ lcci.com.pk   —   Lcci  (government)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     74.50.90.187 · Interserver, Inc (AS19318) · US · reached, host replied
+ SERVED   Englewood Cliffs, New Jersey, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    202.9   74.50.90.187       AS19318   Interserver, Inc (US)   <<< DESTINATION
+
+==============================================================================
+ lcci.com.pk   —   Lcci  (government)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     74.50.90.187 · Interserver, Inc (AS19318) · US · reached, host replied
+ SERVED   Englewood Cliffs, New Jersey, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.100.1      —         (private/internal)
+    2      1.6   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.3   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     20.4   110.93.254.38      —         TWA (PK)  [registry]
+    5     20.8   110.93.252.224     —         TWA (PK)  [registry]
+    6    117.9   110.93.252.95      —         TWA (PK)  [registry]
+    7      *     (no response)     
+    8    129.6   154.54.72.109      AS174     Cogent Communications, LLC (US)
+    9    209.3   66.28.4.197        AS174     Cogent Communications, LLC (US)
+   10    201.4   154.54.83.206      AS174     Cogent Communications, LLC (US)
+   11    211.8   154.24.82.150      AS174     Cogent Communications, LLC (US)
+   12    206.7   38.122.117.162     AS174     Cogent Communications, LLC (US)
+   13    216.5   64.20.32.70        AS19318   Interserver, Inc (US)
+   14    220.8   64.20.32.214       AS19318   Interserver, Inc (US)
+   15    212.5   68.168.215.211     AS19318   Interserver, Inc (US)
+   16    207.9   74.50.90.187       AS19318   Interserver, Inc (US)   <<< DESTINATION

@@ -1,0 +1,81 @@
+isp,site,observed_path,count,verdict,details
+cybernet,express.com.pk,9541 > 13335,282,consistent_direct,direct peer to AS13335 (Cloudflare)
+cybernet,telemart.pk,9541 > 13335,282,consistent_direct,direct peer to AS13335 (Cloudflare)
+cybernet,geo.tv,9541 > 13335,273,consistent_direct,direct peer to AS13335 (Cloudflare)
+cybernet,dawn.com,9541 > 13335,272,consistent_direct,direct peer to AS13335 (Cloudflare)
+cybernet,hbl.com,9541 > 1299 > 19551,192,consistent,all transit ASNs verified: AS1299 (Arelion/Telia (Sweden)) ✅
+cybernet,daraz.pk,9541 > 45102,191,unverified_direct,no record of direct peering with AS45102
+cybernet,fbr.gov.pk,9541 > 38193,191,consistent_direct,direct peer to AS38193 (Transworld)
+cybernet,nadra.gov.pk,9541 > 8529 > 6939 > 20940,181,consistent,"all transit ASNs verified: AS8529 (Zain Omantel (Oman)) ✅, AS6939 (Hurricane Electric (US)) ✅"
+cybernet,daraz.pk,45102,90,no_transit,only destination ASN visible
+cybernet,dunyanews.tv,38193 > 9260,90,consistent_direct,direct peer to AS9260 (Multinet Pakistan)
+cybernet,hbl.com,1299 > 19551,90,unverified_direct,no record of direct peering with AS19551
+cybernet,mcb.com.pk,1299 > 20773 > 30148,90,unverified,no transit ASNs in peer table: AS20773 (AS20773) ❓
+cybernet,fbr.gov.pk,38193,89,no_transit,only destination ASN visible
+cybernet,nadra.gov.pk,8529 > 6939 > 20940,79,consistent,all transit ASNs verified: AS6939 (Hurricane Electric (US)) ✅
+cybernet,dawn.com,13335,10,no_transit,only destination ASN visible
+cybernet,geo.tv,13335,9,no_transit,only destination ASN visible
+cybernet,daraz.pk,9541,1,no_transit,only destination ASN visible
+cybernet,fbr.gov.pk,9541,1,no_transit,only destination ASN visible
+cybernet,nadra.gov.pk,8529,1,no_transit,only destination ASN visible
+cybernet,nadra.gov.pk,8529 > 20940,1,unverified_direct,no record of direct peering with AS20940
+cybernet,nadra.gov.pk,9541,1,no_transit,only destination ASN visible
+cybernet,nadra.gov.pk,9541 > 8529,1,consistent_direct,direct peer to AS8529 (Zain Omantel (Oman))
+nayatel,daraz.pk,7473 > 4845 > 45102,191,unverified,no transit ASNs in peer table: AS4845 (Alibaba/Singapore) ❓
+nayatel,dunyanews.tv,38193 > 9260,191,consistent_direct,direct peer to AS9260 (Multinet Pakistan)
+nayatel,express.com.pk,23674 > 13335,191,consistent_direct,direct peer to AS13335 (Cloudflare)
+nayatel,geo.tv,23674 > 13335,191,consistent_direct,direct peer to AS13335 (Cloudflare)
+nayatel,hbl.com,174 > 19551,191,unverified_direct,no record of direct peering with AS19551
+nayatel,telemart.pk,23674 > 13335,191,consistent_direct,direct peer to AS13335 (Cloudflare)
+nayatel,dawn.com,23674 > 13335,190,consistent_direct,direct peer to AS13335 (Cloudflare)
+nayatel,mcb.com.pk,2914 > 30148,190,unverified_direct,no record of direct peering with AS30148
+nayatel,daraz.pk,45102,1,no_transit,only destination ASN visible
+nayatel,dawn.com,23674,1,no_transit,only destination ASN visible
+nayatel,express.com.pk,13335,1,no_transit,only destination ASN visible
+nayatel,mcb.com.pk,2914 > 26496 > 30148,1,unverified,no transit ASNs in peer table: AS26496 (AS26496) ❓
+nova,daraz.pk,6327 > 38193 > 45102,192,unverified,no transit ASNs in peer table: AS38193 (Transworld) ❓
+nova,dawn.com,6327 > 38193 > 13335,192,unverified,no transit ASNs in peer table: AS38193 (Transworld) ❓
+nova,express.com.pk,6327 > 38193 > 58453 > 13335,192,partial_verified,verified: AS58453 (China Mobile International (HK)) ✅ | unverified: AS38193 (Transworld) ❓
+nova,fbr.gov.pk,6327 > 38193,192,unverified_direct,no record of direct peering with AS38193
+nova,geo.tv,6327 > 38193 > 13335,192,unverified,no transit ASNs in peer table: AS38193 (Transworld) ❓
+nova,telemart.pk,6327 > 38193 > 58453 > 13335,192,partial_verified,verified: AS58453 (China Mobile International (HK)) ✅ | unverified: AS38193 (Transworld) ❓
+nova,mcb.com.pk,6327 > 38193 > 6762 > 3257 > 30148,98,partial_verified,"verified: AS6762 (Telecom Italia Sparkle (Italy)) ✅ | unverified: AS38193 (Transworld) ❓, AS3257 (AS3257) ❓"
+ptcl,fbr.gov.pk,17557,378,no_transit,only destination ASN visible
+ptcl,geo.tv,17557 > 13335,294,unverified_direct,no record of direct peering with AS13335
+ptcl,daraz.pk,17557 > 7473 > 4845 > 45102,190,partial_verified,verified: AS7473 (SingTel (Singapore)) ✅ | unverified: AS4845 (Alibaba/Singapore) ❓
+ptcl,dawn.com,17557 > 3356 > 13335,190,consistent,all transit ASNs verified: AS3356 (Lumen/Level3 (US/UK)) ✅
+ptcl,express.com.pk,17557 > 3356 > 13335,190,consistent,all transit ASNs verified: AS3356 (Lumen/Level3 (US/UK)) ✅
+ptcl,mcb.com.pk,17557 > 2914 > 30148,190,consistent,all transit ASNs verified: AS2914 (NTT (Japan)) ✅
+ptcl,telemart.pk,17557 > 3356 > 13335,190,consistent,all transit ASNs verified: AS3356 (Lumen/Level3 (US/UK)) ✅
+ptcl,dunyanews.tv,17557,188,no_transit,only destination ASN visible
+ptcl,telemart.pk,17557,159,no_transit,only destination ASN visible
+ptcl,daraz.pk,17557 > 45102,121,unverified_direct,no record of direct peering with AS45102
+ptcl,hbl.com,17557 > 19551,114,unverified_direct,no record of direct peering with AS19551
+ptcl,nadra.gov.pk,17557 > 20940,113,unverified_direct,no record of direct peering with AS20940
+ptcl,dawn.com,17557 > 13335,107,unverified_direct,no record of direct peering with AS13335
+ptcl,express.com.pk,17557 > 13335,104,unverified_direct,no record of direct peering with AS13335
+ptcl,mcb.com.pk,17557 > 30148,102,unverified_direct,no record of direct peering with AS30148
+ptcl,mcb.com.pk,17557,86,no_transit,only destination ASN visible
+ptcl,express.com.pk,17557,84,no_transit,only destination ASN visible
+ptcl,geo.tv,17557,84,no_transit,only destination ASN visible
+ptcl,dawn.com,17557,81,no_transit,only destination ASN visible
+ptcl,nadra.gov.pk,17557,76,no_transit,only destination ASN visible
+ptcl,hbl.com,17557,75,no_transit,only destination ASN visible
+ptcl,daraz.pk,17557,68,no_transit,only destination ASN visible
+ptcl,telemart.pk,17557 > 13335,29,unverified_direct,no record of direct peering with AS13335
+ptcl,nadra.gov.pk,17557 > 2914 > 20940,15,consistent,all transit ASNs verified: AS2914 (NTT (Japan)) ✅
+transworld,daraz.pk,45102,192,no_transit,only destination ASN visible
+transworld,dawn.com,13335,192,no_transit,only destination ASN visible
+transworld,express.com.pk,13335,192,no_transit,only destination ASN visible
+transworld,geo.tv,13335,192,no_transit,only destination ASN visible
+transworld,hbl.com,19551,192,no_transit,only destination ASN visible
+transworld,mcb.com.pk,30148,192,no_transit,only destination ASN visible
+transworld,nadra.gov.pk,20940,192,no_transit,only destination ASN visible
+transworld,telemart.pk,13335,192,no_transit,only destination ASN visible
+zcom,daraz.pk,152605 > 38193 > 45102,192,consistent,all transit ASNs verified: AS38193 (Transworld) ✅
+zcom,dawn.com,152605 > 38193 > 13335,192,consistent,all transit ASNs verified: AS38193 (Transworld) ✅
+zcom,express.com.pk,152605 > 38193 > 58453 > 13335,192,consistent,"all transit ASNs verified: AS38193 (Transworld) ✅, AS58453 (China Mobile International (HK)) ✅"
+zcom,fbr.gov.pk,152605 > 38193,192,consistent_direct,direct peer to AS38193 (Transworld)
+zcom,geo.tv,152605 > 38193 > 13335,192,consistent,all transit ASNs verified: AS38193 (Transworld) ✅
+zcom,telemart.pk,152605 > 38193 > 58453 > 13335,192,consistent,"all transit ASNs verified: AS38193 (Transworld) ✅, AS58453 (China Mobile International (HK)) ✅"
+zcom,mcb.com.pk,152605 > 38193 > 6762 > 3257 > 30148,98,partial_verified,"verified: AS38193 (Transworld) ✅, AS6762 (Telecom Italia Sparkle (Italy)) ✅ | unverified: AS3257 (AS3257) ❓"

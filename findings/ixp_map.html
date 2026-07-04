@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2740f4977e7c0b29334c9f7d31e282d7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="
+    position: fixed;
+    bottom: 30px; left: 30px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: sans-serif;
+    font-size: 13px;
+    z-index: 1000;
+    line-height: 2;
+">
+    <b>Pakistani ISPs at IXPs</b><br>
+    <span style="color:#2a78d6">&#9679;</span> PTCL (AS17557)<br>
+    <span style="color:#1baf7a">&#9679;</span> Transworld (AS38193)<br>
+    <span style="color:#eda100">&#9679;</span> Cybernet (AS9541)<br>
+    <span style="color:#7c5cbf">&#9679;</span> Multiple ISPs<br>
+    <span style="color:red">&#9733;</span> PIE Karachi (only PK IXP)<br>
+    <hr style="margin:6px 0">
+    <span style="color:#aaa">&#9679;</span> Nayatel — no IXP presence<br>
+    <span style="color:#aaa">&#9679;</span> Nova — no IXP presence<br>
+    <span style="color:#aaa">&#9679;</span> Zcom — no IXP presence<br>
+</div>
+    
+            <div class="folium-map" id="map_2740f4977e7c0b29334c9f7d31e282d7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2740f4977e7c0b29334c9f7d31e282d7 = L.map(
+                "map_2740f4977e7c0b29334c9f7d31e282d7",
+                {
+                    center: [30.0, 40.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 3,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e856efecfd72dfbee102204b3679258a = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e856efecfd72dfbee102204b3679258a.addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+            var circle_marker_ae0ab262ac8bb753f490e424dff8e92b = L.circleMarker(
+                [50.11, 8.68],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7c5cbf", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_95231c068b9b2a67632e8a91c4286fdf = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_67355219f147be835975cc41b678781c = $(`<div id="html_67355219f147be835975cc41b678781c" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>DE-CIX Frankfurt</b><br>         <span style='color:#888'>Frankfurt, Germany</span><br><br>         <span style='color:#2a78d6'><b>PTCL</b>: 300G</span><br><span style='color:#1baf7a'><b>Transworld</b>: 100G</span><br><span style='color:#eda100'><b>Cybernet</b>: 100G</span><br>     </div>     </div>`)[0];
+                popup_95231c068b9b2a67632e8a91c4286fdf.setContent(html_67355219f147be835975cc41b678781c);
+            
+        
+
+        circle_marker_ae0ab262ac8bb753f490e424dff8e92b.bindPopup(popup_95231c068b9b2a67632e8a91c4286fdf)
+        ;
+
+        
+    
+    
+            circle_marker_ae0ab262ac8bb753f490e424dff8e92b.bindTooltip(
+                `<div>
+                     DE-CIX Frankfurt
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_86c921ac7164c4076444d7542caccd21 = L.circleMarker(
+                [1.29, 103.85],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7c5cbf", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_8737227275e42ae66034647011e79f1b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_48d9aa2cbb11f4bdab26ddb6e3da9a46 = $(`<div id="html_48d9aa2cbb11f4bdab26ddb6e3da9a46" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>Equinix Singapore</b><br>         <span style='color:#888'>Singapore</span><br><br>         <span style='color:#2a78d6'><b>PTCL</b>: 500G</span><br><span style='color:#1baf7a'><b>Transworld</b>: 600G</span><br><span style='color:#eda100'><b>Cybernet</b>: 100G</span><br>     </div>     </div>`)[0];
+                popup_8737227275e42ae66034647011e79f1b.setContent(html_48d9aa2cbb11f4bdab26ddb6e3da9a46);
+            
+        
+
+        circle_marker_86c921ac7164c4076444d7542caccd21.bindPopup(popup_8737227275e42ae66034647011e79f1b)
+        ;
+
+        
+    
+    
+            circle_marker_86c921ac7164c4076444d7542caccd21.bindTooltip(
+                `<div>
+                     Equinix Singapore
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7c6e244f6a4b9d28f846b97fc2d79df6 = L.circleMarker(
+                [52.37, 4.89],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_30b74fe13876083aaab8e1e2d8343422 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_705ab1d94657f6030f3aa680f54952c4 = $(`<div id="html_705ab1d94657f6030f3aa680f54952c4" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>AMS-IX</b><br>         <span style='color:#888'>Amsterdam, Netherlands</span><br><br>         <span style='color:#2a78d6'><b>PTCL</b>: 200G</span><br>     </div>     </div>`)[0];
+                popup_30b74fe13876083aaab8e1e2d8343422.setContent(html_705ab1d94657f6030f3aa680f54952c4);
+            
+        
+
+        circle_marker_7c6e244f6a4b9d28f846b97fc2d79df6.bindPopup(popup_30b74fe13876083aaab8e1e2d8343422)
+        ;
+
+        
+    
+    
+            circle_marker_7c6e244f6a4b9d28f846b97fc2d79df6.bindTooltip(
+                `<div>
+                     AMS-IX
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_47e9c4c1694ba5eb041c16adfef844fe = L.circleMarker(
+                [51.51, -0.13],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_f6e8914e11f9f70921d6e3a4434509e8 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_2bfff57f96a045ecc97b6906cf25ffc5 = $(`<div id="html_2bfff57f96a045ecc97b6906cf25ffc5" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>LINX LON1</b><br>         <span style='color:#888'>London, UK</span><br><br>         <span style='color:#2a78d6'><b>PTCL</b>: 10G</span><br>     </div>     </div>`)[0];
+                popup_f6e8914e11f9f70921d6e3a4434509e8.setContent(html_2bfff57f96a045ecc97b6906cf25ffc5);
+            
+        
+
+        circle_marker_47e9c4c1694ba5eb041c16adfef844fe.bindPopup(popup_f6e8914e11f9f70921d6e3a4434509e8)
+        ;
+
+        
+    
+    
+            circle_marker_47e9c4c1694ba5eb041c16adfef844fe.bindTooltip(
+                `<div>
+                     LINX LON1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_491c82d54886428ea25a795bc2686d90 = L.circleMarker(
+                [40.71, -74.01],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_20d7c999c5e7cc2761df24469f1157e8 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_dfaa9298755ce5d3ec69da10fe281c9a = $(`<div id="html_dfaa9298755ce5d3ec69da10fe281c9a" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>DE-CIX New York</b><br>         <span style='color:#888'>New York, USA</span><br><br>         <span style='color:#2a78d6'><b>PTCL</b>: 20G</span><br>     </div>     </div>`)[0];
+                popup_20d7c999c5e7cc2761df24469f1157e8.setContent(html_dfaa9298755ce5d3ec69da10fe281c9a);
+            
+        
+
+        circle_marker_491c82d54886428ea25a795bc2686d90.bindPopup(popup_20d7c999c5e7cc2761df24469f1157e8)
+        ;
+
+        
+    
+    
+            circle_marker_491c82d54886428ea25a795bc2686d90.bindTooltip(
+                `<div>
+                     DE-CIX New York
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0453770dfa369461890331bee854aad = L.circleMarker(
+                [22.32, 114.17],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7c5cbf", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_0eabb09a2537d71dd3699a56c7367b8c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_367e1ffdb2f63dcb189530f58291cb33 = $(`<div id="html_367e1ffdb2f63dcb189530f58291cb33" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>HKIX</b><br>         <span style='color:#888'>Hong Kong</span><br><br>         <span style='color:#1baf7a'><b>Transworld</b>: 10G</span><br><span style='color:#eda100'><b>Cybernet</b>: 30G</span><br>     </div>     </div>`)[0];
+                popup_0eabb09a2537d71dd3699a56c7367b8c.setContent(html_367e1ffdb2f63dcb189530f58291cb33);
+            
+        
+
+        circle_marker_f0453770dfa369461890331bee854aad.bindPopup(popup_0eabb09a2537d71dd3699a56c7367b8c)
+        ;
+
+        
+    
+    
+            circle_marker_f0453770dfa369461890331bee854aad.bindTooltip(
+                `<div>
+                     HKIX
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3587ae7840c34f4b9efcea8e4ff860a7 = L.circleMarker(
+                [52.38, 4.91],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_84b173221106ca8f5b3ba405b43f486b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_135e4d8284bf413ce21fff079e7c0e4a = $(`<div id="html_135e4d8284bf413ce21fff079e7c0e4a" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>NL-ix</b><br>         <span style='color:#888'>Amsterdam, Netherlands</span><br><br>         <span style='color:#1baf7a'><b>Transworld</b>: 100G</span><br>     </div>     </div>`)[0];
+                popup_84b173221106ca8f5b3ba405b43f486b.setContent(html_135e4d8284bf413ce21fff079e7c0e4a);
+            
+        
+
+        circle_marker_3587ae7840c34f4b9efcea8e4ff860a7.bindPopup(popup_84b173221106ca8f5b3ba405b43f486b)
+        ;
+
+        
+    
+    
+            circle_marker_3587ae7840c34f4b9efcea8e4ff860a7.bindTooltip(
+                `<div>
+                     NL-ix
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_482dc81823fd1226d6d732b5f5b6dd48 = L.circleMarker(
+                [41.9, 12.5],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7c5cbf", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_cae28235b98aece67de5b3ef0324fbce = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_58b3386384a6e326e0114264ba7e66ce = $(`<div id="html_58b3386384a6e326e0114264ba7e66ce" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>SH-IX</b><br>         <span style='color:#888'>Rome, Italy</span><br><br>         <span style='color:#2a78d6'><b>PTCL</b>: 20G</span><br><span style='color:#1baf7a'><b>Transworld</b>: 100G</span><br><span style='color:#eda100'><b>Cybernet</b>: 10G</span><br>     </div>     </div>`)[0];
+                popup_cae28235b98aece67de5b3ef0324fbce.setContent(html_58b3386384a6e326e0114264ba7e66ce);
+            
+        
+
+        circle_marker_482dc81823fd1226d6d732b5f5b6dd48.bindPopup(popup_cae28235b98aece67de5b3ef0324fbce)
+        ;
+
+        
+    
+    
+            circle_marker_482dc81823fd1226d6d732b5f5b6dd48.bindTooltip(
+                `<div>
+                     SH-IX
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e32aec1aaf3844214cb5a5e35f83e42 = L.circleMarker(
+                [25.2, 55.27],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7c5cbf", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_12755a7d2cf7279e104eaca7d38d9f9b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_921b3694ef1f055d6919d2d802f1aa11 = $(`<div id="html_921b3694ef1f055d6919d2d802f1aa11" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>UAE-IX</b><br>         <span style='color:#888'>Dubai, UAE</span><br><br>         <span style='color:#2a78d6'><b>PTCL</b>: 10G</span><br><span style='color:#eda100'><b>Cybernet</b>: 10G</span><br>     </div>     </div>`)[0];
+                popup_12755a7d2cf7279e104eaca7d38d9f9b.setContent(html_921b3694ef1f055d6919d2d802f1aa11);
+            
+        
+
+        circle_marker_5e32aec1aaf3844214cb5a5e35f83e42.bindPopup(popup_12755a7d2cf7279e104eaca7d38d9f9b)
+        ;
+
+        
+    
+    
+            circle_marker_5e32aec1aaf3844214cb5a5e35f83e42.bindTooltip(
+                `<div>
+                     UAE-IX
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_985ecfacdf8fbe84a153a4ba52462701 = L.circleMarker(
+                [23.59, 58.59],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_10cd6e955cf2ab4d710213c57df5f5aa = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_6e6147381ff639a31e018edc6f87a22e = $(`<div id="html_6e6147381ff639a31e018edc6f87a22e" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>Equinix Muscat</b><br>         <span style='color:#888'>Muscat, Oman</span><br><br>         <span style='color:#1baf7a'><b>Transworld</b>: 10G</span><br>     </div>     </div>`)[0];
+                popup_10cd6e955cf2ab4d710213c57df5f5aa.setContent(html_6e6147381ff639a31e018edc6f87a22e);
+            
+        
+
+        circle_marker_985ecfacdf8fbe84a153a4ba52462701.bindPopup(popup_10cd6e955cf2ab4d710213c57df5f5aa)
+        ;
+
+        
+    
+    
+            circle_marker_985ecfacdf8fbe84a153a4ba52462701.bindTooltip(
+                `<div>
+                     Equinix Muscat
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7a14da2c407155ae360c3447bc509673 = L.circleMarker(
+                [23.62, 58.6],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_6e9620125198dd9817ed7ea53eae5ba5 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_54476478649df032575e7ce4ea925faa = $(`<div id="html_54476478649df032575e7ce4ea925faa" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>Oman-IX</b><br>         <span style='color:#888'>Muscat, Oman</span><br><br>         <span style='color:#1baf7a'><b>Transworld</b>: 10G</span><br>     </div>     </div>`)[0];
+                popup_6e9620125198dd9817ed7ea53eae5ba5.setContent(html_54476478649df032575e7ce4ea925faa);
+            
+        
+
+        circle_marker_7a14da2c407155ae360c3447bc509673.bindPopup(popup_6e9620125198dd9817ed7ea53eae5ba5)
+        ;
+
+        
+    
+    
+            circle_marker_7a14da2c407155ae360c3447bc509673.bindTooltip(
+                `<div>
+                     Oman-IX
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_64a04054270c9c42cda0f86d6033d5d6 = L.circleMarker(
+                [43.3, 5.37],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eda100", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_4f3c1ac944c3776b647c7d7f0e6c55bf = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7085c71a9b9c4f83288ec603d58aebbb = $(`<div id="html_7085c71a9b9c4f83288ec603d58aebbb" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>DE-CIX Marseille</b><br>         <span style='color:#888'>Marseille, France</span><br><br>         <span style='color:#eda100'><b>Cybernet</b>: 20G</span><br>     </div>     </div>`)[0];
+                popup_4f3c1ac944c3776b647c7d7f0e6c55bf.setContent(html_7085c71a9b9c4f83288ec603d58aebbb);
+            
+        
+
+        circle_marker_64a04054270c9c42cda0f86d6033d5d6.bindPopup(popup_4f3c1ac944c3776b647c7d7f0e6c55bf)
+        ;
+
+        
+    
+    
+            circle_marker_64a04054270c9c42cda0f86d6033d5d6.bindTooltip(
+                `<div>
+                     DE-CIX Marseille
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d1906921713142ba2f2f03c9c5564a26 = L.circleMarker(
+                [42.7, 23.32],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eda100", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_c53aa5c812b8c540e8048e9053f5d734 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_b79abdd38e31fe7e5a68270955e0426a = $(`<div id="html_b79abdd38e31fe7e5a68270955e0426a" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>NetIX</b><br>         <span style='color:#888'>Sofia, Bulgaria</span><br><br>         <span style='color:#eda100'><b>Cybernet</b>: 50G</span><br>     </div>     </div>`)[0];
+                popup_c53aa5c812b8c540e8048e9053f5d734.setContent(html_b79abdd38e31fe7e5a68270955e0426a);
+            
+        
+
+        circle_marker_d1906921713142ba2f2f03c9c5564a26.bindPopup(popup_c53aa5c812b8c540e8048e9053f5d734)
+        ;
+
+        
+    
+    
+            circle_marker_d1906921713142ba2f2f03c9c5564a26.bindTooltip(
+                `<div>
+                     NetIX
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_427260108f34cfed6b0d6fd69ca572c5 = L.circleMarker(
+                [24.86, 67.01],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1.5}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+        var popup_d004cf575bb5410b305cdf8fab22e5ec = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_6a6f2d7b5f6d9be8ca6b723720d6f908 = $(`<div id="html_6a6f2d7b5f6d9be8ca6b723720d6f908" style="width: 100.0%; height: 100.0%;">     <div style='font-family:sans-serif;font-size:13px;min-width:160px'>         <b>PIE Karachi (DE-CIX)</b><br>         <span style='color:#888'>Karachi, Pakistan</span><br><br>         <span style='color:#2a78d6'><b>PTCL</b>: 100G</span><br>     </div>     </div>`)[0];
+                popup_d004cf575bb5410b305cdf8fab22e5ec.setContent(html_6a6f2d7b5f6d9be8ca6b723720d6f908);
+            
+        
+
+        circle_marker_427260108f34cfed6b0d6fd69ca572c5.bindPopup(popup_d004cf575bb5410b305cdf8fab22e5ec)
+        ;
+
+        
+    
+    
+            circle_marker_427260108f34cfed6b0d6fd69ca572c5.bindTooltip(
+                `<div>
+                     PIE Karachi (DE-CIX)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b041709068a9784e30d6ab70359d8224 = L.marker(
+                [30.37, 69.34],
+                {
+}
+            ).addTo(map_2740f4977e7c0b29334c9f7d31e282d7);
+        
+    
+            var icon_dc4c4be6873665113a4dd6c4bbaa92ac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf06e2ef31d0ceb9ac78dbd11f73f1d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_db0c49878a2988984cbd253c9305517e = $(`<div id="html_db0c49878a2988984cbd253c9305517e" style="width: 100.0%; height: 100.0%;"><b>Pakistan</b><br>Home country</div>`)[0];
+                popup_cf06e2ef31d0ceb9ac78dbd11f73f1d5.setContent(html_db0c49878a2988984cbd253c9305517e);
+            
+        
+
+        marker_b041709068a9784e30d6ab70359d8224.bindPopup(popup_cf06e2ef31d0ceb9ac78dbd11f73f1d5)
+        ;
+
+        
+    
+    
+            marker_b041709068a9784e30d6ab70359d8224.bindTooltip(
+                `<div>
+                     Pakistan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b041709068a9784e30d6ab70359d8224.setIcon(icon_dc4c4be6873665113a4dd6c4bbaa92ac);
+            
+</script>
+</html>

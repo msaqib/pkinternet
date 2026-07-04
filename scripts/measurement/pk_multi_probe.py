@@ -35,49 +35,49 @@ from geo_utils import serving_location   # actual destination location helper
 
 load_dotenv()
 
-# ─────────────────────────────────────────────────────
-#  CONFIG — edit before running
-# ─────────────────────────────────────────────────────
+import json
+DNS_CACHE_FILE = "other/tranco_pk_resolved.json"
+
+def load_dns_cache():
+    if os.path.exists(DNS_CACHE_FILE):
+        with open(DNS_CACHE_FILE) as f:
+            return json.load(f)
+    return {}
+
+def save_dns_cache(cache):
+    with open(DNS_CACHE_FILE, "w") as f:
+        json.dump(cache, f, indent=2)
 
 API_KEY        = os.environ.get("RIPE_API_KEY", "your-api-key-here")
 
-# ── RUN NAME — edit before each run ───────────────────
-# Results will be saved to:
-# experiments/01_website_destinations/results/{RUN_NAME}/
-RUN_NAME       = "run_20260604_batch11"
+
+RUN_NAME = "run_all_sites"
+BATCH_START = 0
+BATCH_SIZE = None
+WEBSITES_FILE = "other/tranco_pk_domains.txt"
+PROBES = [
+    (60223, 23674, "Pakistan", "Nayatel ISB"),
+]
+
+
 # ─────────────────────────────────────────────────────
 
-# Path to websites list — relative to repo root
-# Run this script from the repo root:
-# python scripts/measurement/pk_multi_probe.py
-WEBSITES_FILE  = "data/pk_websites_list.csv"
 
 # ── PROBES — edit this list manually ──────────────────
 # Format: (probe_id, asn, city, description)
-PROBES = [
-    (1015679, 136174, "Pakistan", "LocalInternetProj01 (Transworld)"),
-    (1015210,  17557, "Pakistan", "AS17557 (PTCL)"),
-    (  62224,  38193, "Pakistan", "Zartash-Office (Transworld)"),
-    (  60223,  23674, "Pakistan", "PK_Inara (Nayatel)"),
-    (   7613, 152605, "Pakistan", "Z COM Networks Private Limited"),
-]
-# ─────────────────────────────────────────────────────
-
-# Slice of the target list to run in this batch
-# BATCH_START: 0-indexed offset into the CSV (0 = first target)
-# BATCH_SIZE:  how many targets to run (None = all remaining)
-# Examples:
-#   targets  1-20  →  BATCH_START = 0,  BATCH_SIZE = 20
-#   targets 21-40  →  BATCH_START = 20, BATCH_SIZE = 20
-#   targets 41-end →  BATCH_START = 40, BATCH_SIZE = None
-BATCH_START    = 90
-BATCH_SIZE     = 10
+# PROBES = [
+#     (1015679, 136174, "Pakistan", "LocalInternetProj01 (Transworld)"),
+#     (1015210,  17557, "Pakistan", "AS17557 (PTCL)"),
+#     (  62224,  38193, "Pakistan", "Zartash-Office (Transworld)"),
+#     (  60223,  23674, "Pakistan", "PK_Inara (Nayatel)"),
+#     (   7613, 152605, "Pakistan", "Z COM Networks Private Limited"),
+# ]
 
 # Wait between probe batches (seconds)
 BATCH_WAIT     =30
 
 # How long to wait for measurements to complete (seconds)
-RESULT_TIMEOUT = 3600
+RESULT_TIMEOUT = 7200
 
 # Output paths — built from RUN_NAME automatically
 TIMESTAMP      = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -106,10 +106,6 @@ HDR  = {
 # ─────────────────────────────────────────────────────
 
 def load_targets(filepath, batch_start=0, batch_size=None):
-    """
-    Read targets from CSV file.
-    Format: hostname, label, category
-    """
     targets = []
     with open(filepath, "r") as f:
         for line in f:
@@ -118,17 +114,20 @@ def load_targets(filepath, batch_start=0, batch_size=None):
                 continue
             parts = [p.strip() for p in line.split(",")]
             if len(parts) >= 3:
-                targets.append({
-                    "hostname": parts[0],
-                    "label":    parts[1],
-                    "category": parts[2],
-                })
-
+                hostname, label, category = parts[0], parts[1], parts[2]
+            else:
+                hostname = parts[0]
+                label = hostname.split('.')[0]
+                category = "unknown"
+            targets.append({
+                "hostname": hostname,
+                "label": label,
+                "category": category,
+            })
     targets = targets[batch_start:]
     if batch_size:
         targets = targets[:batch_size]
     return targets
-
 
 # ─────────────────────────────────────────────────────
 #  STEP 3 — DNS RESOLUTION
@@ -285,7 +284,11 @@ def wait_for_all(msm_ids, timeout=180):
                 # >=4 = terminal (4 Stopped, 5 Forced, 6 No suitable probes, 7 Failed).
                 if sid >= 4 or sname == "Stopped":
                     pending.remove(mid)
-                    (done if sname == "Stopped" else failed).add(mid)
+                    if sname == "Stopped":
+                        done.add(mid)
+                    else:
+                        failed.add(mid)
+                        print(f"\n  FAILED msm {mid}: status={sname} (id={sid})")
             except Exception:
                 pass
         if pending:
@@ -582,11 +585,11 @@ def main():
     print(f"  Results folder: {RESULTS_DIR}")
 
     # Credits check
-    r = requests.get(f"{BASE}/credits/", headers=HDR, timeout=10)
-    d = r.json()
-    balance = d.get("current_balance", "?")
-    print(f"\n  Credits available: {balance:,}" if isinstance(balance, int) else f"\n  Credits: {balance}")
-
+    # r = requests.get(f"{BASE}/credits/", headers=HDR, timeout=10)
+    # d = r.json()
+    # balance = d.get("current_balance", "?")
+    # print(f"\n  Credits available: {balance:,}" if isinstance(balance, int) else f"\n  Credits: {balance}")
+# skipping above credits check
     # Load probes from manual config
     print("\n[1] Probes loaded from config...")
     probes = [
@@ -620,21 +623,45 @@ def main():
         return
 
     # Resolve all hostnames first
+    # print("\n[3] Resolving hostnames...")
+    # resolved = []
+    # for t in targets:
+    #     ip, err = resolve(t["hostname"])
+    #     if err:
+    #         print(f"  ✗ {t['label']:<25} {t['hostname']} — {err}")
+    #     else:
+    #         t["resolved_ip"] = ip
+    #         resolved.append(t)
+    #         print(f"  ✓ {t['label']:<25} {t['hostname']} → {ip}")
+
+    # # Schedule measurements
+    # print(f"\n[4] Scheduling measurements ({len(probes)} probes x {len(resolved)} targets)...")
+    # scheduled = []
+    # Resolve all hostnames first
     print("\n[3] Resolving hostnames...")
+    dns_cache = load_dns_cache()
     resolved = []
+    new_resolutions = 0
     for t in targets:
+        if t["hostname"] in dns_cache:
+            t["resolved_ip"] = dns_cache[t["hostname"]]
+            resolved.append(t)
+            print(f"  ✓ {t['label']:<25} {t['hostname']} → {t['resolved_ip']} (cached)")
+            continue
         ip, err = resolve(t["hostname"])
         if err:
             print(f"  ✗ {t['label']:<25} {t['hostname']} — {err}")
         else:
             t["resolved_ip"] = ip
             resolved.append(t)
+            dns_cache[t["hostname"]] = ip
+            new_resolutions += 1
             print(f"  ✓ {t['label']:<25} {t['hostname']} → {ip}")
+    if new_resolutions:
+        save_dns_cache(dns_cache)
+        print(f"  ({new_resolutions} new resolutions cached)")
 
-    # Schedule measurements
-    print(f"\n[4] Scheduling measurements ({len(probes)} probes x {len(resolved)} targets)...")
     scheduled = []
-
     for probe in probes:
         for t in resolved:
             try:
@@ -645,10 +672,11 @@ def main():
                 )
                 scheduled.append((mid, probe, t))
                 print(f"  Probe {probe['probe_id']} - {t['label']:<20} ID: {mid}")
-                time.sleep(0.3)  # gentle rate limiting
+                time.sleep(1.0)  # gentle rate limiting
             except requests.HTTPError as e:
                 print(f"  ERROR Probe {probe['probe_id']} - {t['label']}: {e.response.status_code}")
 
+        
         time.sleep(BATCH_WAIT)
 
     # Wait for ALL measurements in parallel — one poll loop for everything

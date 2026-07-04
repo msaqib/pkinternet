@@ -1,0 +1,1282 @@
+Readable routes  —  pk_grouped_20260619_122202.csv
+75 traceroutes  ·  destination shown once per block (in the DEST header)
+
+==============================================================================
+ t2f.biz   —   T2F  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     167.71.216.51 · DigitalOcean, LLC (AS14061) · US · host did NOT reply (trace incomplete)
+ SERVED   Singapore, South West, SG   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.6   110.93.252.102     —         TWA (PK)  [registry]
+    4     16.6   110.93.252.246     —         TWA (PK)  [registry]
+    5     93.3   27.111.229.164     —         EQUINIX-AP (SG)  [registry]
+    6     93.6   143.244.224.210    —         DIGITALOCEAN-143-244-128-0  [registry]
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ t2f.biz   —   T2F  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     167.71.216.51 · DigitalOcean, LLC (AS14061) · US · host did NOT reply (trace incomplete)
+ SERVED   Singapore, South West, SG   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.9   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      3.2   172.31.5.170       —         (private/internal)
+    6     22.4   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.4   110.93.252.86      —         TWA (PK)  [registry]
+    8     22.3   110.93.252.136     —         TWA (PK)  [registry]
+    9    112.7   27.111.229.164     —         EQUINIX-AP (SG)  [registry]
+   10    100.2   143.244.224.210    —         DIGITALOCEAN-143-244-128-0  [registry]
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ t2f.biz   —   T2F  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     167.71.216.51 · DigitalOcean, LLC (AS14061) · US · host did NOT reply (trace incomplete)
+ SERVED   Singapore, South West, SG   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.8   10.102.76.1        —         (private/internal)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ t2f.biz   —   T2F  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     167.71.216.51 · DigitalOcean, LLC (AS14061) · US · host did NOT reply (trace incomplete)
+ SERVED   Singapore, South West, SG   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.1   172.17.0.1         —         (private/internal)
+    2      *     (no response)     
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ t2f.biz   —   T2F  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     167.71.216.51 · DigitalOcean, LLC (AS14061) · US · host did NOT reply (trace incomplete)
+ SERVED   Singapore, South West, SG   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   192.168.100.1      —         (private/internal)
+    2      1.8   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.6   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.9   110.93.254.40      —         TWA (PK)  [registry]
+    5     27.6   110.93.252.246     —         TWA (PK)  [registry]
+    6     97.1   27.111.229.164     —         EQUINIX-AP (SG)  [registry]
+    7    104.0   143.244.224.210    —         DIGITALOCEAN-143-244-128-0  [registry]
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ tanqeed.org   —   Tanqeed  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     216.222.199.167 · HostPapa (AS40092) · US · reached, host replied
+ SERVED   Los Angeles, California, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.6   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.0   110.93.254.66      —         TWA (PK)  [registry]
+    4     19.2   110.93.252.222     —         TWA (PK)  [registry]
+    5    113.1   110.93.252.95      —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7    135.0   154.54.39.225      AS174     Cogent Communications, LLC (US)
+    8    198.1   154.54.47.137      AS174     Cogent Communications, LLC (US)
+    9    220.7   154.54.169.178     AS174     Cogent Communications, LLC (US)
+   10    221.8   154.54.29.134      AS174     Cogent Communications, LLC (US)
+   11    238.0   154.54.40.249      AS174     Cogent Communications, LLC (US)
+   12    254.6   154.54.165.26      AS174     Cogent Communications, LLC (US)
+   13    260.7   154.54.166.58      AS174     Cogent Communications, LLC (US)
+   14    267.4   154.54.44.86       AS174     Cogent Communications, LLC (US)
+   15    268.6   154.54.29.246      AS174     Cogent Communications, LLC (US)
+   16    268.2   154.24.87.122      AS174     Cogent Communications, LLC (US)
+   17    268.1   38.32.68.15        AS174     Cogent Communications, LLC (US)
+   18      *     (no response)     
+   19    270.8   66.63.184.214      AS36352   HostPapa (US)
+   20      *     (no response)     
+   21      *     (no response)     
+   22    268.0   216.222.199.167    AS40092   HostPapa (US)   <<< DESTINATION
+
+==============================================================================
+ tanqeed.org   —   Tanqeed  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     216.222.199.167 · HostPapa (AS40092) · US · reached, host replied
+ SERVED   Los Angeles, California, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.18.1       —         (private/internal)
+    2      3.1   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.5   172.27.0.29        —         (private/internal)
+    4      3.2   172.27.0.22        —         (private/internal)
+    5      3.2   172.31.5.170       —         (private/internal)
+    6     22.9   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.0   110.93.252.86      —         TWA (PK)  [registry]
+    8     23.4   110.93.252.224     —         TWA (PK)  [registry]
+    9    148.4   110.93.252.175     —         TWA (PK)  [registry]
+   10      *     (no response)     
+   11    129.8   154.54.39.225      AS174     Cogent Communications, LLC (US)
+   12    203.0   154.54.47.137      AS174     Cogent Communications, LLC (US)
+   13    218.3   154.54.169.178     AS174     Cogent Communications, LLC (US)
+   14    225.8   154.54.29.134      AS174     Cogent Communications, LLC (US)
+   15    252.1   154.54.40.249      AS174     Cogent Communications, LLC (US)
+   16    263.5   154.54.165.26      AS174     Cogent Communications, LLC (US)
+   17    271.3   154.54.166.58      AS174     Cogent Communications, LLC (US)
+   18    272.3   154.54.44.86       AS174     Cogent Communications, LLC (US)
+   19    283.1   154.54.29.34       AS174     Cogent Communications, LLC (US)
+   20    274.4   154.24.87.118      AS174     Cogent Communications, LLC (US)
+   21    985.7   38.104.230.213     AS174     Cogent Communications, LLC (US)
+   22      *     (no response)     
+   23    272.2   66.63.184.214      AS36352   HostPapa (US)
+   24      *     (no response)     
+   25      *     (no response)     
+   26    267.3   216.222.199.167    AS40092   HostPapa (US)   <<< DESTINATION
+
+==============================================================================
+ tanqeed.org   —   Tanqeed  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     216.222.199.167 · HostPapa (AS40092) · US · reached, host replied
+ SERVED   Los Angeles, California, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   10.102.76.1        —         (private/internal)
+    2      0.4   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    276.1   216.222.199.167    AS40092   HostPapa (US)   <<< DESTINATION
+
+==============================================================================
+ tanqeed.org   —   Tanqeed  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     216.222.199.167 · HostPapa (AS40092) · US · reached, host replied
+ SERVED   Los Angeles, California, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2    266.8   216.222.199.167    AS40092   HostPapa (US)   <<< DESTINATION
+
+==============================================================================
+ tanqeed.org   —   Tanqeed  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     216.222.199.167 · HostPapa (AS40092) · US · reached, host replied
+ SERVED   Los Angeles, California, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      1.6   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.4   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.0   110.93.254.40      —         TWA (PK)  [registry]
+    5     18.2   110.93.252.222     —         TWA (PK)  [registry]
+    6    115.3   110.93.252.95      —         TWA (PK)  [registry]
+    7      *     (no response)     
+    8    129.1   154.54.39.225      AS174     Cogent Communications, LLC (US)
+    9    209.1   154.54.47.137      AS174     Cogent Communications, LLC (US)
+   10    215.0   154.54.169.178     AS174     Cogent Communications, LLC (US)
+   11    223.3   154.54.29.134      AS174     Cogent Communications, LLC (US)
+   12    246.4   154.54.40.249      AS174     Cogent Communications, LLC (US)
+   13    256.3   154.54.165.26      AS174     Cogent Communications, LLC (US)
+   14    265.0   154.54.166.58      AS174     Cogent Communications, LLC (US)
+   15    269.5   154.54.44.86       AS174     Cogent Communications, LLC (US)
+   16    279.8   154.54.29.34       AS174     Cogent Communications, LLC (US)
+   17    270.0   154.24.87.118      AS174     Cogent Communications, LLC (US)
+   18    279.9   38.32.68.13        AS174     Cogent Communications, LLC (US)
+   19      *     (no response)     
+   20    278.5   66.63.184.214      AS36352   HostPapa (US)
+   21      *     (no response)     
+   22      *     (no response)     
+   23    284.9   216.222.199.167    AS40092   HostPapa (US)   <<< DESTINATION
+
+==============================================================================
+ tanzeem.org   —   Tanzeem  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     108.167.140.94 · Oracle Corporation (AS31898) · US · reached, host replied
+ SERVED   Phoenix, Arizona, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.6   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.3   110.93.252.48      —         TWA (PK)  [registry]
+    4     33.9   110.93.252.136     —         TWA (PK)  [registry]
+    5    128.6   110.93.255.237     —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7    119.9   4.68.111.245       AS3356    Level 3 Parent, LLC (US)
+    8    267.0   4.69.219.58        AS3356    Level 3 Parent, LLC (US)
+    9    288.6   4.53.7.174         AS3356    Level 3 Parent, LLC (US)
+   10    260.0   69.195.64.113      AS46606   Unified Layer (US)
+   11    250.6   162.144.240.63     AS46606   Unified Layer (US)
+   12      *     (no response)     
+   13      *     (no response)     
+   14    282.3   108.167.140.94     AS31898   Oracle Corporation (US)   <<< DESTINATION
+
+==============================================================================
+ tanzeem.org   —   Tanzeem  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     108.167.140.94 · Oracle Corporation (AS31898) · US · reached, host replied
+ SERVED   Phoenix, Arizona, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   192.168.18.1       —         (private/internal)
+    2      4.6   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.6   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.170       —         (private/internal)
+    6     23.1   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.4   110.93.253.110     —         TWA (PK)  [registry]
+    8     23.6   110.93.252.246     —         TWA (PK)  [registry]
+    9    139.9   110.93.255.237     —         TWA (PK)  [registry]
+   10      *     (no response)     
+   11    132.4   4.68.111.245       AS3356    Level 3 Parent, LLC (US)
+   12    276.0   4.69.219.58        AS3356    Level 3 Parent, LLC (US)
+   13    261.4   4.53.7.174         AS3356    Level 3 Parent, LLC (US)
+   14    267.5   69.195.64.113      AS46606   Unified Layer (US)
+   15    258.2   162.144.240.59     AS46606   Unified Layer (US)
+   16      *     (no response)     
+   17      *     (no response)     
+   18    283.3   108.167.140.94     AS31898   Oracle Corporation (US)   <<< DESTINATION
+
+==============================================================================
+ tanzeem.org   —   Tanzeem  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     108.167.140.94 · Oracle Corporation (AS31898) · US · reached, host replied
+ SERVED   Phoenix, Arizona, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   10.102.76.1        —         (private/internal)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    275.4   108.167.140.94     AS31898   Oracle Corporation (US)   <<< DESTINATION
+
+==============================================================================
+ tanzeem.org   —   Tanzeem  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     108.167.140.94 · Oracle Corporation (AS31898) · US · reached, host replied
+ SERVED   Phoenix, Arizona, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2    282.7   108.167.140.94     AS31898   Oracle Corporation (US)   <<< DESTINATION
+
+==============================================================================
+ tanzeem.org   —   Tanzeem  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     108.167.140.94 · Oracle Corporation (AS31898) · US · reached, host replied
+ SERVED   Phoenix, Arizona, US   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2      1.8   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.0   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     21.0   110.93.252.200     —         TWA (PK)  [registry]
+    5     21.6   110.93.252.222     —         TWA (PK)  [registry]
+    6    118.4   110.93.252.175     —         TWA (PK)  [registry]
+    7      *     (no response)     
+    8    119.6   4.68.111.245       AS3356    Level 3 Parent, LLC (US)
+    9    293.0   4.69.219.58        AS3356    Level 3 Parent, LLC (US)
+   10    285.3   4.53.7.174         AS3356    Level 3 Parent, LLC (US)
+   11    274.5   69.195.64.113      AS46606   Unified Layer (US)
+   12    274.6   162.144.240.63     AS46606   Unified Layer (US)
+   13      *     (no response)     
+   14      *     (no response)     
+   15    267.8   108.167.140.94     AS31898   Oracle Corporation (US)   <<< DESTINATION
+
+==============================================================================
+ telegraph.co.uk   —   Telegraph  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     3.164.182.60 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Marseille, Provence-Alpes-Côte d'Azur, FR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.254.144     —         TWA (PK)  [registry]
+    4     16.4   110.93.252.136     —         TWA (PK)  [registry]
+    5    113.3   110.93.252.233     —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9    116.4   3.164.182.60       AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ telegraph.co.uk   —   Telegraph  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     3.164.182.60 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Marseille, Provence-Alpes-Côte d'Azur, FR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   192.168.18.1       —         (private/internal)
+    2      3.4   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.4   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      3.3   172.31.5.170       —         (private/internal)
+    6     23.0   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.2   110.93.253.110     —         TWA (PK)  [registry]
+    8     23.7   110.93.252.222     —         TWA (PK)  [registry]
+    9    149.0   110.93.253.73      —         TWA (PK)  [registry]
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13    118.2   3.164.182.60       AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ telegraph.co.uk   —   Telegraph  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     3.164.182.60 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Marseille, Provence-Alpes-Côte d'Azur, FR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   10.102.76.1        —         (private/internal)
+    2      0.5   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    118.6   3.164.182.60       AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ telegraph.co.uk   —   Telegraph  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     3.164.182.60 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Marseille, Provence-Alpes-Côte d'Azur, FR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2    122.5   3.164.182.60       AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ telegraph.co.uk   —   Telegraph  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     3.164.182.60 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Marseille, Provence-Alpes-Côte d'Azur, FR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2      1.6   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.4   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     20.6   110.93.254.66      —         TWA (PK)  [registry]
+    5     18.2   110.93.252.222     —         TWA (PK)  [registry]
+    6    118.4   110.93.255.11      —         TWA (PK)  [registry]
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10    124.9   3.164.182.60       AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ the.ismaili   —   The  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     104.20.46.229 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.252.48      —         TWA (PK)  [registry]
+    4     17.8   110.93.252.224     —         TWA (PK)  [registry]
+    5     17.2   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     16.3   104.20.46.229      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ the.ismaili   —   The  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     104.20.46.229 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      *     (no response)     
+    2      3.3   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.9   172.27.0.29        —         (private/internal)
+    4      2.4   172.27.0.22        —         (private/internal)
+    5      3.6   172.31.5.253       —         (private/internal)
+    6    122.4   172.31.5.106       —         (private/internal)
+    7      4.2   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.3   104.20.46.229      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ the.ismaili   —   The  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     104.20.46.229 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     22.9   104.20.46.229      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ the.ismaili   —   The  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     104.20.46.229 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2     30.4   104.20.46.229      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ the.ismaili   —   The  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     104.20.46.229 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      1.7   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.5   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.1   110.93.252.102     —         TWA (PK)  [registry]
+    5     18.0   110.93.252.222     —         TWA (PK)  [registry]
+    6     19.0   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     18.1   104.20.46.229      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thebachchaoproject.org   —   Thebachchaoproject  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     16.16.241.28 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Stockholm, Stockholm, SE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.2   110.93.254.66      —         TWA (PK)  [registry]
+    4     19.4   110.93.252.222     —         TWA (PK)  [registry]
+    5     33.1   110.93.252.61      —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ thebachchaoproject.org   —   Thebachchaoproject  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     16.16.241.28 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Stockholm, Stockholm, SE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      3.6   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.8   172.27.0.29        —         (private/internal)
+    4      3.5   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.170       —         (private/internal)
+    6     22.7   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.9   110.93.252.86      —         TWA (PK)  [registry]
+    8     22.8   110.93.252.224     —         TWA (PK)  [registry]
+    9     43.4   110.93.252.61      —         TWA (PK)  [registry]
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ thebachchaoproject.org   —   Thebachchaoproject  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     16.16.241.28 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Stockholm, Stockholm, SE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ thebachchaoproject.org   —   Thebachchaoproject  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     16.16.241.28 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Stockholm, Stockholm, SE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2      *     (no response)     
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ thebachchaoproject.org   —   Thebachchaoproject  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     16.16.241.28 · Amazon.com, Inc. (AS16509) · US · host did NOT reply (trace incomplete)
+ SERVED   Stockholm, Stockholm, SE   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      1.6   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.4   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.7   110.93.252.48      —         TWA (PK)  [registry]
+    5     18.3   110.93.252.224     —         TWA (PK)  [registry]
+    6     31.6   110.93.252.61      —         TWA (PK)  [registry]
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ thecurrent.pk   —   Thecurrent  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     172.67.214.95 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      5.7   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2     12.0   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.8   110.93.252.200     —         TWA (PK)  [registry]
+    4     26.9   110.93.252.246     —         TWA (PK)  [registry]
+    5     94.1   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    6     94.9   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    7    101.4   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    8     94.3   172.69.117.60      AS13335   Cloudflare, Inc. (US)
+    9     95.3   172.69.117.57      AS13335   Cloudflare, Inc. (US)
+   10     96.4   172.67.214.95      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thecurrent.pk   —   Thecurrent  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     172.67.214.95 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      *     (no response)     
+    2      3.3   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      3.3   172.31.5.253       —         (private/internal)
+    6    109.0   172.31.5.106       —         (private/internal)
+    7      3.8   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.5   172.67.214.95      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thecurrent.pk   —   Thecurrent  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     172.67.214.95 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     97.3   172.67.214.95      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thecurrent.pk   —   Thecurrent  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     172.67.214.95 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2    209.8   172.67.214.95      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thecurrent.pk   —   Thecurrent  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     172.67.214.95 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.5   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.3   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     22.8   110.93.254.66      —         TWA (PK)  [registry]
+    5     18.7   110.93.252.246     —         TWA (PK)  [registry]
+    6    103.3   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    7     99.2   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    8     95.7   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    9     94.1   172.69.117.39      AS13335   Cloudflare, Inc. (US)
+   10    932.2   172.69.117.107     AS13335   Cloudflare, Inc. (US)
+   11     93.5   172.67.214.95      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thediplomat.com   —   Thediplomat  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     104.26.11.220 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      9.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.0   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     20.0   110.93.252.200     —         TWA (PK)  [registry]
+    4     22.6   110.93.252.222     —         TWA (PK)  [registry]
+    5     22.5   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     19.5   104.26.11.220      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thediplomat.com   —   Thediplomat  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     104.26.11.220 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.18.1       —         (private/internal)
+    2      3.3   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.9   172.27.0.29        —         (private/internal)
+    4      2.3   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.253       —         (private/internal)
+    6    109.2   172.31.5.106       —         (private/internal)
+    7      4.4   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.6   104.26.11.220      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thediplomat.com   —   Thediplomat  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     104.26.11.220 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     23.2   104.26.11.220      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thediplomat.com   —   Thediplomat  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     104.26.11.220 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.1   172.17.0.1         —         (private/internal)
+    2    219.5   104.26.11.220      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thediplomat.com   —   Thediplomat  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     104.26.11.220 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.4   192.168.100.1      —         (private/internal)
+    2      1.6   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.7   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.0   110.93.252.48      —         TWA (PK)  [registry]
+    5     18.0   110.93.252.224     —         TWA (PK)  [registry]
+    6     19.8   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     18.7   104.26.11.220      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thefeministani.com   —   Thefeministani  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     172.67.175.192 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      7.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.254.144     —         TWA (PK)  [registry]
+    4     16.7   110.93.252.136     —         TWA (PK)  [registry]
+    5     91.0   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    6     92.3   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    7    140.8   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    8     91.6   172.69.117.60      AS13335   Cloudflare, Inc. (US)
+    9     92.5   172.69.117.79      AS13335   Cloudflare, Inc. (US)
+   10     91.6   172.67.175.192     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thefeministani.com   —   Thefeministani  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     172.67.175.192 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.6   192.168.18.1       —         (private/internal)
+    2      3.3   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.4   172.27.0.29        —         (private/internal)
+    4      3.4   172.27.0.22        —         (private/internal)
+    5      3.1   172.31.5.253       —         (private/internal)
+    6    218.2   172.31.5.106       —         (private/internal)
+    7      4.0   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.3   172.67.175.192     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thefeministani.com   —   Thefeministani  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     172.67.175.192 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     98.9   172.67.175.192     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thefeministani.com   —   Thefeministani  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     172.67.175.192 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.1   172.17.0.1         —         (private/internal)
+    2    207.3   172.67.175.192     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thefeministani.com   —   Thefeministani  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     172.67.175.192 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Kwai Chung, Kwai Tsing District, HK   (Cloudflare network — this probe's handoff 223.120.23.5; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   192.168.100.1      —         (private/internal)
+    2      1.5   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.2   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     20.9   110.93.252.200     —         TWA (PK)  [registry]
+    5     25.1   110.93.252.246     —         TWA (PK)  [registry]
+    6     99.3   223.121.3.97       AS58453   China Mobile International Limited (HK)
+    7    101.8   223.120.23.5       AS58453   China Mobile International Limited (HK)
+    8    111.0   162.158.160.111    AS13335   Cloudflare, Inc. (US)
+    9     96.0   172.69.117.60      AS13335   Cloudflare, Inc. (US)
+   10     97.1   172.69.117.51      AS13335   Cloudflare, Inc. (US)
+   11     96.6   172.67.175.192     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thenewhumanitarian.org   —   Thenewhumanitarian  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     104.20.25.129 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      6.8   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.0   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.2   110.93.254.144     —         TWA (PK)  [registry]
+    4     16.3   110.93.252.224     —         TWA (PK)  [registry]
+    5     17.0   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     16.9   104.20.25.129      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thenewhumanitarian.org   —   Thenewhumanitarian  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     104.20.25.129 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      *     (no response)     
+    2      3.1   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.6   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      3.3   172.31.5.253       —         (private/internal)
+    6      7.7   172.31.5.106       —         (private/internal)
+    7      4.0   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.2   104.20.25.129      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thenewhumanitarian.org   —   Thenewhumanitarian  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     104.20.25.129 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     22.8   104.20.25.129      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thenewhumanitarian.org   —   Thenewhumanitarian  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     104.20.25.129 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.1   172.17.0.1         —         (private/internal)
+    2     27.5   104.20.25.129      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ thenewhumanitarian.org   —   Thenewhumanitarian  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     104.20.25.129 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2      1.7   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.3   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.8   110.93.252.50      —         TWA (PK)  [registry]
+    5     17.9   110.93.252.224     —         TWA (PK)  [registry]
+    6     18.8   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     18.0   104.20.25.129      AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ torrentz.com   —   Torrentz  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     66.235.200.251 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.252.50      —         TWA (PK)  [registry]
+    4     16.3   110.93.252.224     —         TWA (PK)  [registry]
+    5     39.4   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     17.1   66.235.200.251     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ torrentz.com   —   Torrentz  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     66.235.200.251 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      3.3   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.27.0.29        —         (private/internal)
+    4      3.0   172.27.0.22        —         (private/internal)
+    5      3.1   172.31.5.253       —         (private/internal)
+    6    291.0   172.31.5.106       —         (private/internal)
+    7      3.7   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.5   66.235.200.251     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ torrentz.com   —   Torrentz  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     66.235.200.251 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.9   10.102.76.1        —         (private/internal)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     24.7   66.235.200.251     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ torrentz.com   —   Torrentz  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     66.235.200.251 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2     23.8   66.235.200.251     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ torrentz.com   —   Torrentz  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     66.235.200.251 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      3.1   192.168.100.1      —         (private/internal)
+    2      1.6   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.4   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.6   110.93.254.144     —         TWA (PK)  [registry]
+    5     18.4   110.93.252.224     —         TWA (PK)  [registry]
+    6     18.5   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     21.2   66.235.200.251     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ towleroad.com   —   Towleroad  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     162.159.135.42 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.3   110.93.254.40      —         TWA (PK)  [registry]
+    4     19.2   110.93.252.222     —         TWA (PK)  [registry]
+    5     16.8   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     17.0   162.159.135.42     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ towleroad.com   —   Towleroad  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     162.159.135.42 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Islamabad, Islamabad, PK   (Cloudflare network — this probe's handoff 203.175.65.67; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      6.0   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.2   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      3.7   172.31.5.253       —         (private/internal)
+    6     74.9   172.31.5.106       —         (private/internal)
+    7      4.3   203.175.65.67      AS23674   Nayatel (Pvt) Ltd (PK)
+    8      3.2   162.159.135.42     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ towleroad.com   —   Towleroad  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     162.159.135.42 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     23.9   162.159.135.42     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ towleroad.com   —   Towleroad  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     162.159.135.42 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2     22.8   162.159.135.42     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ towleroad.com   —   Towleroad  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     162.159.135.42 · Cloudflare, Inc. (AS13335) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Cloudflare network — this probe's handoff 110.93.192.198; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.100.1      —         (private/internal)
+    2      1.8   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      3.0   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     21.5   110.93.252.200     —         TWA (PK)  [registry]
+    5     22.1   110.93.252.222     —         TWA (PK)  [registry]
+    6     22.4   110.93.192.198     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     21.0   162.159.135.42     AS13335   Cloudflare, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ truthaboutbalochistan.blogspot.com   —   Truthaboutbalochistan  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     142.250.202.193 · Google LLC (AS15169) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Google network — this probe's handoff 110.93.252.246; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.7   110.93.252.102     —         TWA (PK)  [registry]
+    4     16.3   110.93.252.246     —         TWA (PK)  [registry]
+    5     28.5   72.14.209.108      AS15169   Google LLC (US)
+    6     31.4   216.239.41.83      AS15169   Google LLC (US)
+    7     29.2   192.178.87.255     AS15169   Google LLC (US)
+    8     31.6   142.250.202.193    AS15169   Google LLC (US)   <<< DESTINATION
+
+==============================================================================
+ truthaboutbalochistan.blogspot.com   —   Truthaboutbalochistan  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     142.250.202.193 · Google LLC (AS15169) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Google network — this probe's handoff 110.93.192.111; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   192.168.18.1       —         (private/internal)
+    2      2.9   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.2   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      3.2   172.31.5.170       —         (private/internal)
+    6     22.2   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.3   110.93.252.86      —         TWA (PK)  [registry]
+    8     22.7   110.93.252.136     —         TWA (PK)  [registry]
+    9     40.9   110.93.192.111     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+   10     40.7   216.239.41.83      AS15169   Google LLC (US)
+   11     48.0   192.178.87.255     AS15169   Google LLC (US)
+   12     40.4   142.250.202.193    AS15169   Google LLC (US)   <<< DESTINATION
+
+==============================================================================
+ truthaboutbalochistan.blogspot.com   —   Truthaboutbalochistan  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     142.250.202.193 · Google LLC (AS15169) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     37.1   142.250.202.193    AS15169   Google LLC (US)   <<< DESTINATION
+
+==============================================================================
+ truthaboutbalochistan.blogspot.com   —   Truthaboutbalochistan  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     142.250.202.193 · Google LLC (AS15169) · US · reached, host replied
+ ENTERS   (could not infer — trace filtered before the CDN; see RTT)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2     52.3   142.250.202.193    AS15169   Google LLC (US)   <<< DESTINATION
+
+==============================================================================
+ truthaboutbalochistan.blogspot.com   —   Truthaboutbalochistan  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     142.250.202.193 · Google LLC (AS15169) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Google network — this probe's handoff 110.93.252.246; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.9   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.0   110.93.252.102     —         TWA (PK)  [registry]
+    5     18.5   110.93.252.246     —         TWA (PK)  [registry]
+    6     32.4   72.14.209.108      AS15169   Google LLC (US)
+    7     31.7   216.239.41.83      AS15169   Google LLC (US)
+    8     32.6   192.178.87.255     AS15169   Google LLC (US)
+    9     30.0   142.250.202.193    AS15169   Google LLC (US)   <<< DESTINATION
+
+==============================================================================
+ uksresearch.com   —   Uksresearch  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     15.197.148.33 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Montreal, Quebec, CA   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1     23.1   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.0   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.254.144     —         TWA (PK)  [registry]
+    4     16.9   110.93.252.224     —         TWA (PK)  [registry]
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+  255     92.6   15.197.148.33      AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uksresearch.com   —   Uksresearch  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     15.197.148.33 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Montreal, Quebec, CA   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   192.168.18.1       —         (private/internal)
+    2      2.9   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.0   172.27.0.29        —         (private/internal)
+    4      3.1   172.27.0.22        —         (private/internal)
+    5      2.6   172.31.5.170       —         (private/internal)
+    6     22.4   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.2   110.93.252.106     —         TWA (PK)  [registry]
+    8     22.4   110.93.252.224     —         TWA (PK)  [registry]
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255    114.2   15.197.148.33      AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uksresearch.com   —   Uksresearch  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     15.197.148.33 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Montreal, Quebec, CA   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255    103.8   15.197.148.33      AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uksresearch.com   —   Uksresearch  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     15.197.148.33 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Montreal, Quebec, CA   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   172.17.0.1         —         (private/internal)
+    2     43.0   15.197.148.33      AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ uksresearch.com   —   Uksresearch  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     15.197.148.33 · Amazon.com, Inc. (AS16509) · US · reached, host replied
+ SERVED   Montreal, Quebec, CA   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2      3.5   70.70.71.137       AS6327    Shaw Communications (CA)
+    3     19.4   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.9   110.93.252.48      —         TWA (PK)  [registry]
+    5     17.8   110.93.252.224     —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+  255     93.9   15.197.148.33      AS16509   Amazon.com, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ urdu.tebyan.net   —   Urdu  (other)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     185.78.20.130 · Tebyan-e-Noor Cultural-Artistic Institute (AS48434) · IR · host did NOT reply (trace incomplete)
+ SERVED   Tehran, Tehran, IR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.6   110.93.254.40      —         TWA (PK)  [registry]
+    4     16.6   110.93.252.246     —         TWA (PK)  [registry]
+    5    147.6   149.14.211.241     AS174     Cogent Communications, LLC (US)
+    6    139.2   130.117.0.29       AS174     Cogent Communications, LLC (US)
+    7    147.1   130.117.1.1        AS174     Cogent Communications, LLC (US)
+    8    137.8   154.54.76.210      AS174     Cogent Communications, LLC (US)
+    9    138.4   154.54.12.114      AS174     Cogent Communications, LLC (US)
+   10    136.5   195.219.68.126     AS6453    TATA COMMUNICATIONS (AMERICA) INC (CA)
+   11    136.3   195.219.69.110     AS6453    TATA COMMUNICATIONS (AMERICA) INC (CA)
+   12    135.3   195.219.156.151    AS6453    TATA COMMUNICATIONS (AMERICA) INC (CA)
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ urdu.tebyan.net   —   Urdu  (other)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     185.78.20.130 · Tebyan-e-Noor Cultural-Artistic Institute (AS48434) · IR · host did NOT reply (trace incomplete)
+ SERVED   Tehran, Tehran, IR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.1   192.168.18.1       —         (private/internal)
+    2      3.0   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.9   172.27.0.29        —         (private/internal)
+    4      3.3   172.27.0.22        —         (private/internal)
+    5      3.5   172.31.5.170       —         (private/internal)
+    6     22.6   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.7   110.93.252.34      —         TWA (PK)  [registry]
+    8     22.6   110.93.252.246     —         TWA (PK)  [registry]
+    9    152.5   149.14.211.241     AS174     Cogent Communications, LLC (US)
+   10    142.3   130.117.0.29       AS174     Cogent Communications, LLC (US)
+   11    152.5   130.117.1.1        AS174     Cogent Communications, LLC (US)
+   12    144.5   154.54.76.210      AS174     Cogent Communications, LLC (US)
+   13    214.8   154.54.12.114      AS174     Cogent Communications, LLC (US)
+   14    201.4   195.219.68.126     AS6453    TATA COMMUNICATIONS (AMERICA) INC (CA)
+   15    201.2   195.219.69.110     AS6453    TATA COMMUNICATIONS (AMERICA) INC (CA)
+   16    202.1   195.219.87.1       AS6453    TATA COMMUNICATIONS (AMERICA) INC (CA)
+   17      *     (no response)     
+   18      *     (no response)     
+   19      *     (no response)     
+   20      *     (no response)     
+   21      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ urdu.tebyan.net   —   Urdu  (other)
+ SOURCE   probe 62224 · Transworld (AS38193) · Pakistan
+ DEST     185.78.20.130 · Tebyan-e-Noor Cultural-Artistic Institute (AS48434) · IR · host did NOT reply (trace incomplete)
+ SERVED   Tehran, Tehran, IR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ urdu.tebyan.net   —   Urdu  (other)
+ SOURCE   probe 1015210 · PTCL (AS17557) · Pakistan
+ DEST     185.78.20.130 · Tebyan-e-Noor Cultural-Artistic Institute (AS48434) · IR · host did NOT reply (trace incomplete)
+ SERVED   Tehran, Tehran, IR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.2   172.17.0.1         —         (private/internal)
+    2      *     (no response)     
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ urdu.tebyan.net   —   Urdu  (other)
+ SOURCE   probe 1015679 · AS136174 · Pakistan
+ DEST     185.78.20.130 · Tebyan-e-Noor Cultural-Artistic Institute (AS48434) · IR · host did NOT reply (trace incomplete)
+ SERVED   Tehran, Tehran, IR   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      3.3   70.70.71.137       AS6327    Shaw Communications (CA)
+    3      2.9   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.8   110.93.254.40      —         TWA (PK)  [registry]
+    5     18.7   110.93.252.246     —         TWA (PK)  [registry]
+    6    149.4   149.14.211.241     AS174     Cogent Communications, LLC (US)
+    7    139.5   130.117.0.29       AS174     Cogent Communications, LLC (US)
+    8    140.1   154.54.72.126      AS174     Cogent Communications, LLC (US)
+    9    140.1   154.54.59.53       AS174     Cogent Communications, LLC (US)
+   10    145.9   154.54.12.114      AS174     Cogent Communications, LLC (US)
+   11    138.1   195.219.68.126     AS6453    TATA COMMUNICATIONS (AMERICA) INC (CA)
+   12    137.9   195.219.69.110     AS6453    TATA COMMUNICATIONS (AMERICA) INC (CA)
+   13    141.2   195.219.156.151    AS6453    TATA COMMUNICATIONS (AMERICA) INC (CA)
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+   18      *     (no response)     
+  255      *     (no response)     

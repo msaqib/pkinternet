@@ -1,0 +1,124 @@
+Readable routes  —  pk_grouped_20260629_011546.csv
+6 traceroutes  ·  destination shown once per block (in the DEST header)
+
+==============================================================================
+ facebook.com   —   Facebook  (cdn_global)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     157.240.227.35 · Facebook, Inc. (AS32934) · US · reached, host replied
+ SERVED   Seeb, Muscat, OM   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.2   192.168.18.1       —         (private/internal)
+    2      3.5   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.9   172.27.0.29        —         (private/internal)
+    4      2.5   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.170       —         (private/internal)
+    6      3.0   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.1   110.93.252.34      —         TWA (PK)  [registry]
+    8     22.5   110.93.252.246     —         TWA (PK)  [registry]
+    9     39.7   157.240.81.186     AS32934   Facebook, Inc. (US)
+   10     37.0   129.134.98.20      AS32934   Facebook, Inc. (US)
+   11     36.1   129.134.91.26      AS32934   Facebook, Inc. (US)
+   12     38.5   163.77.188.31      —         FB-BLOCK (IE)  [registry]
+   13     36.7   157.240.227.35     AS32934   Facebook, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ facebook.com   —   Facebook  (cdn_global)
+ SOURCE   probe 1016126 · PTCL (AS17557) · Pakistan
+ DEST     157.240.227.35 · Facebook, Inc. (AS32934) · US · reached, host replied
+ SERVED   Seeb, Muscat, OM   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.10.1       —         (private/internal)
+    2     26.4   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3     25.7   10.253.5.94        —         (private/internal)
+    4     26.4   10.253.4.40        —         (private/internal)
+    5     25.5   10.253.4.6         —         (private/internal)
+    6     45.9   157.240.68.60      AS32934   Facebook, Inc. (US)
+    7     56.7   129.134.49.100     AS32934   Facebook, Inc. (US)
+    8     49.0   129.134.91.26      AS32934   Facebook, Inc. (US)
+    9     46.5   163.77.244.246     —         FB-BLOCK (IE)  [registry]
+   10     45.6   157.240.227.35     AS32934   Facebook, Inc. (US)   <<< DESTINATION
+
+==============================================================================
+ google.com   —   Google  (cdn_global)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     142.250.186.14 · Google LLC (AS15169) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Google network — this probe's handoff 110.93.252.246; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.8   192.168.18.1       —         (private/internal)
+    2      3.3   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.0   172.27.0.29        —         (private/internal)
+    4      2.5   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.170       —         (private/internal)
+    6      3.2   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.3   110.93.252.34      —         TWA (PK)  [registry]
+    8     23.0   110.93.252.246     —         TWA (PK)  [registry]
+    9     35.7   72.14.209.108      AS15169   Google LLC (US)
+   10     39.3   216.239.41.83      AS15169   Google LLC (US)
+   11     36.0   142.250.211.123    AS15169   Google LLC (US)
+   12     34.5   142.250.186.14     AS15169   Google LLC (US)   <<< DESTINATION
+
+==============================================================================
+ google.com   —   Google  (cdn_global)
+ SOURCE   probe 1016126 · PTCL (AS17557) · Pakistan
+ DEST     142.250.186.14 · Google LLC (AS15169) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Google network — this probe's handoff 39.39.0.1; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   192.168.10.1       —         (private/internal)
+    2     60.9   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3     25.9   10.253.5.94        —         (private/internal)
+    4     26.4   10.253.4.122       —         (private/internal)
+    5     26.3   10.253.4.22        —         (private/internal)
+    6     44.8   72.14.219.254      AS15169   Google LLC (US)
+    7     46.8   172.253.51.205     —         (private/internal)
+    8     45.1   192.178.98.246     AS15169   Google LLC (US)
+    9     49.8   142.251.225.199    AS15169   Google LLC (US)
+   10     49.2   192.178.105.71     AS15169   Google LLC (US)
+   11     50.3   142.250.211.123    AS15169   Google LLC (US)
+   12     49.1   142.250.186.14     AS15169   Google LLC (US)   <<< DESTINATION
+
+==============================================================================
+ youtube.com   —   YouTube  (cdn_global)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     142.250.186.238 · Google LLC (AS15169) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Google network — this probe's handoff 110.93.192.109; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.2   192.168.18.1       —         (private/internal)
+    2      3.3   100.89.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.9   172.27.0.29        —         (private/internal)
+    4      3.2   172.27.0.22        —         (private/internal)
+    5      2.6   172.31.5.170       —         (private/internal)
+    6      3.3   110.93.202.134     —         TWA (PK)  [registry]
+    7     23.0   110.93.252.34      —         TWA (PK)  [registry]
+    8     22.9   110.93.252.246     —         TWA (PK)  [registry]
+    9     36.6   110.93.192.109     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+   10     36.6   192.178.252.227    AS15169   Google LLC (US)
+   11     36.4   192.178.98.160     AS15169   Google LLC (US)
+   12     47.4   142.251.225.199    AS15169   Google LLC (US)
+   13     40.5   192.178.105.153    AS15169   Google LLC (US)
+   14     42.4   142.250.56.167     AS15169   Google LLC (US)
+   15     44.1   142.250.186.238    AS15169   Google LLC (US)   <<< DESTINATION
+
+==============================================================================
+ youtube.com   —   YouTube  (cdn_global)
+ SOURCE   probe 1016126 · PTCL (AS17557) · Pakistan
+ DEST     142.250.186.238 · Google LLC (AS15169) · US · reached, host replied
+ ENTERS   Karachi, Sindh, PK   (Google network — this probe's handoff 39.39.0.1; not necessarily where HTTP is served)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.10.1       —         (private/internal)
+    2     25.7   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3     25.7   10.253.5.94        —         (private/internal)
+    4     26.2   10.253.4.40        —         (private/internal)
+    5     26.2   10.253.4.4         —         (private/internal)
+    6     45.6   72.14.219.254      AS15169   Google LLC (US)
+    7     45.0   172.253.51.55      —         (private/internal)
+    8     44.9   192.178.98.160     AS15169   Google LLC (US)
+    9     50.4   142.251.225.199    AS15169   Google LLC (US)
+   10     49.2   192.178.105.71     AS15169   Google LLC (US)
+   11     49.4   74.125.253.75      AS15169   Google LLC (US)
+   12     49.8   142.250.186.238    AS15169   Google LLC (US)   <<< DESTINATION
