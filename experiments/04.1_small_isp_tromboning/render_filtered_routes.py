@@ -25,28 +25,40 @@ for b in csv.DictReader(open(os.path.join(R, "blocks_all.csv"), encoding="utf-8"
 want = {(r["target_ip"], r["source"]) for r in csv.DictReader(open(FILTER, encoding="utf-8"))}
 print(f"{len(want)} (ip, source) traces to render")
 
+# frozen verdicts from the canonical census CSV (avoid non-deterministic re-classify)
+frozen = {}
+for cr in csv.DictReader(open(glob.glob(os.path.join(RUN, "census_*.csv"))[0], encoding="utf-8")):
+    frozen[(int(cr["source_id"]), cr["target_ip"])] = cr
+
 src = glob.glob(os.path.join(RUN, "raw_*.json"))[0]
 snap = src + ".snap2"; shutil.copy(src, snap)
 raw = json.load(open(snap, encoding="utf-8")); os.remove(snap)
 
-items = []
+# dedup resume-duplicate measurements (raw has ~190 dup (probe,target) entries), keep last
+last = {}
 for res in raw.values():
     for r in res:
-        ip = r.get("dst_addr"); lbl = cs.SOURCES.get(r.get("prb_id"), r.get("prb_id"))
-        if (ip, str(lbl)) in want and ip in ip2blk:
-            items.append((ip, str(lbl), r))
+        last[(r.get("prb_id"), r.get("dst_addr"))] = r
+
+items = []
+for r in last.values():
+    ip = r.get("dst_addr"); lbl = cs.SOURCES.get(r.get("prb_id"), r.get("prb_id"))
+    if (ip, str(lbl)) in want and ip in ip2blk:
+        items.append((ip, str(lbl), r))
 items.sort(key=lambda x: (ip2blk[x[0]][1], x[0], x[1]))
 
 lines = [f"Exp 4.1 — filtered traceroutes: reached=True AND tromboned=True ({len(items)} traces)",
          "Live hosts reached via an international hairpin. '<<< LEAVES PK' = the exit hop.", ""]
 for ip, lbl, r in items:
+    v = frozen.get((r.get("prb_id"), ip))
+    if v is None:
+        continue
     asn, comp, prefix = ip2blk[ip]
-    v = cs.classify(r, asn)
     pr = TracerouteResult.get(r)
     lines.append("=" * 80)
     lines.append(f" {comp[:44]} (AS{asn})   ->   {ip}    [block {prefix}]")
     lines.append(f" SOURCE   probe {r.get('prb_id')} - {lbl}")
-    lines.append(f" VERDICT  TROMBONE   reached={pr.destination_ip_responded}   "
+    lines.append(f" VERDICT  TROMBONE   reached={v['reached_isp']}   "
                  f"exit={v['exit_name'] or '?'} ({v['exit_cc']})   transit={v['transit']}   "
                  f"maxRTT={v['max_rtt']}ms   evidence={v['evidence']}")
     lines.append("-" * 80)

@@ -30,6 +30,9 @@ findings/              Analysis writeups and the charts notebook
 - [1.2 — CDN Presence](experiments/01.2_cdn_presence/notes.md):
   Pings major content services (Netflix, Google, Meta, ...) per ISP to detect
   caches served from inside Pakistan.
+- [1.4 — PK100 Website Hosting Census](experiments/01.4_pk100_hosting/notes.md):
+  Classifies the top-100 Pakistani sites as CDN / Abroad / Pakistan (with the hosting
+  ISP), and traceroutes from Transworld to check where PK-hosted sites hairpin.
 - [02 — ISP Classification](experiments/02_isp_classification/notes.md):
   Classifying ISPs into PKIX Sets 1/2/3, with the roster, probe coverage, and the
   ~21-probe deployment plan (in progress).
@@ -40,6 +43,13 @@ findings/              Analysis writeups and the charts notebook
   Systematically detecting domestic traffic that hairpins abroad across an ISP's
   whole address space, via prefix-based target selection (TASS-adapted) and paced
   `tcptraceroute` (planning).
+- [4.1 — Small-ISP Tromboning Census](experiments/04.1_small_isp_tromboning/notes.md):
+  Scales Exp 04 to the whole small-ISP population — a complete block-level census of
+  every FLL ISP (747 announced /24s, 8 IPs each, 7 vantages). **Done: 18,260 traces.**
+- [06 — Submarine-Cable Outage](experiments/06_submarine_outage/notes.md):
+  Monitors routes during the SMW5 submarine-cable fault (Jul 2026) — ping + traceroute
+  every 15 min for 12 h from all 14 PK probes to a CDN/Abroad/PK sample, with a
+  time-series notebook (UTC→PKT). **Done.**
 
 ## Findings
 
@@ -55,10 +65,20 @@ findings/              Analysis writeups and the charts notebook
 - [3.1 — PTCL RTT Jumps & PTCL↔Transworld Peering](findings/03.1_ptcl_rtt_jumps.md):
   where PTCL paths jump RTT (access floor vs international exit) and that PTCL peers
   with Transworld domestically (100%) but never for abroad traffic (0%).
+- [1.4 — PK100 Website Hosting](findings/01.4_pk100_hosting.md):
+  where the top-100 sites are hosted (CDN/Abroad/Pakistan) by sector and ISP, plus the
+  gov sites that still hairpin ~200 ms from Transworld.
 - [04 — Path Tromboning across Worldcall](findings/04_path_tromboning_worldcall.md):
   31% of Worldcall's sampled /24s hairpin through Transworld → Equinix Singapore,
   while PTCL reaches the same IPs locally — so Transworld chooses the hairpin.
   Destination-dependent and time-variable (intra-/24 consistency not yet verified).
+- [4.1 — Small-ISP Tromboning Census](findings/04.1_small_isp_tromboning.md):
+  the complete census — **11% of small-ISP traces hairpin abroad**; the source ISP
+  dominates (Cybernet-Haripur 46%, PTCL-Karachi 38% vs 4–10% for others); Transworld
+  and PTCL split the hairpins; exits are China/US/Singapore.
+- [06 — SMW5 Submarine-Cable Outage](findings/06_submarine_outage.md):
+  a latency degradation (not a blackout) that eased over the window (shophive via PTCL
+  646→278 ms), with **local/PK-hosted traffic unaffected** — the resilience case for PKIX.
 
 ## Probe Setup
 

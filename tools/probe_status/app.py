@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Probe-status dashboard — which probes in the Google-Sheet roster are online on
-RIPE Atlas right now, grouped by section (Pi / hardware / existing).
+RIPE Atlas right now, grouped by section (Our Probes / Existing probes).
+On every refresh it also pulls each probe's RIPE Atlas label (description) + tags.
 
 Reads the roster live from a Google Sheet (share link -> CSV) server-side (no CORS),
 queries the public RIPE Atlas probes API for live status + first-connected, joins,
@@ -23,7 +24,17 @@ ID_COL = os.environ.get("ID_COL", "").strip()
 HOST   = os.environ.get("HOST", "127.0.0.1")     # set HOST=0.0.0.0 to share on your tailnet/LAN
 PORT   = int(os.environ.get("PORT", "5000"))
 RIPE   = "https://atlas.ripe.net/api/v2/probes/"
-GROUP_ORDER = ["Local Project (Pi) probes", "Hardware probes", "Existing probes"]
+GROUP_ORDER = ["Our Probes", "Existing probes"]
+
+# RIPE API key (optional) so our own probes' labels/descriptions are visible.
+KEY = os.environ.get("RIPE_API_KEY", "").strip()
+if not KEY:
+    try:
+        from dotenv import load_dotenv, find_dotenv
+        load_dotenv(find_dotenv())
+        KEY = os.environ.get("RIPE_API_KEY", "").strip()
+    except Exception:
+        pass
 
 app = Flask(__name__)
 
@@ -39,8 +50,8 @@ def csv_url(u):
 
 def fetch_roster():
     """Read the sheet, tolerating a blank/title row before the header and a leading
-    empty column. Tags each row with a __group__ from the section dividers
-    ('Hardware probes…', 'Already existing…'). Returns (rows[dict], fields[list])."""
+    empty column. Tags each row with a __group__ from the 'Existing probes' section
+    divider (everything before it is the Local Project pool). Returns (rows, fields)."""
     r = requests.get(csv_url(SHEET), timeout=20)
     r.raise_for_status()
     grid = list(csv.reader(io.StringIO(r.content.decode("utf-8-sig"))))
@@ -62,8 +73,6 @@ def fetch_roster():
             continue
         joined = " ".join(cells).lower()
         has_id = any(c.isdigit() and 5 <= len(c) <= 8 for c in cells)
-        if not has_id and "hardware" in joined:
-            section = "Hardware probes"; continue
         if not has_id and "existing" in joined:
             section = "Existing probes"; continue
         d = {h: (row[idx].strip() if idx < len(row) else "") for idx, h in cols}
@@ -100,8 +109,7 @@ PK_CITIES = ["Dera Ghazi Khan", "Rawalpindi", "Islamabad", "Faisalabad", "Gujran
 
 
 def city_of(row, addrc):
-    """City from the address (falls back to scanning the whole row, since some
-    hardware rows have the city in the ISP cell). LUMS -> Lahore."""
+    """City from the address (falls back to scanning the whole row). LUMS -> Lahore."""
     blob = (row.get(addrc, "") + " | " + " ".join(row.values())) if addrc else " ".join(row.values())
     for c in PK_CITIES:                                  # longest/specific names first
         if re.search(r"\b" + re.escape(c) + r"\b", blob, re.I):
@@ -111,30 +119,25 @@ def city_of(row, addrc):
     return ""
 
 
-def proj_name(row):
-    """LocalProjectNN from the probe's raslas-NN id (tailscale/DNS cell). Hardware /
-    existing probes have no raslas id -> no project name."""
-    for v in row.values():
-        m = re.search(r"raslas[-_]?(\d+)", str(v), re.I)
-        if m:
-            return f"LocalProject{int(m.group(1)):02d}"
-    return ""
-
-
 def ripe_status(ids):
     out = {}
     for i in range(0, len(ids), 100):
         chunk = ids[i:i + 100]
+        params = {"id__in": ",".join(chunk), "page_size": 100,
+                  "fields": "id,status,is_anchor,asn_v4,first_connected,description,tags,country_code"}
+        if KEY:
+            params["key"] = KEY                        # surfaces our own probes' labels
         try:
-            r = requests.get(RIPE, params={"id__in": ",".join(chunk),
-                "fields": "id,status,is_anchor,asn_v4,first_connected", "page_size": 100}, timeout=25)
+            r = requests.get(RIPE, params=params, timeout=25)
             if not r.ok:
                 continue
             for p in r.json().get("results", []):
                 st = p.get("status") or {}
                 out[str(p["id"])] = {"status": st.get("name"), "since": st.get("since"),
                     "asn": p.get("asn_v4"), "anchor": p.get("is_anchor"),
-                    "first_connected": p.get("first_connected")}
+                    "first_connected": p.get("first_connected"),
+                    "ripe_label": (p.get("description") or "").strip(),
+                    "tags": [t.get("name") or t.get("slug") for t in (p.get("tags") or [])]}
         except Exception:
             pass
     return out
@@ -167,15 +170,15 @@ def api_status():
         status = info.get("status")
         online = status == "Connected"
         ever = bool(info.get("first_connected"))
-        # deployed: Pi -> has a RIPE id ; hardware/existing -> has ever connected to RIPE
+        # deployed: Local Project pool -> has a RIPE id ; Existing -> has ever connected
         deployed = registered if group == GROUP_ORDER[0] else ever
         disp = status or ("no RIPE ID" if not registered else "unknown")
-        if group == "Hardware probes" and disp == "Abandoned":
-            disp = "not configured"             # never set up, not "abandoned"
+        if registered and not ever and disp in ("Abandoned", "Never Connected", "unknown"):
+            disp = "not configured"                    # has an ID but never came online
         out.append({
-            "group": group, "proj": proj_name(r), "id": pid or "—",
+            "group": group, "id": pid or "—",
             "label": (r.get(volc, "") if volc else ""), "isp": (r.get(ispc, "") if ispc else ""),
-            "city": city_of(r, addrc), "status": disp,
+            "ripe_label": info.get("ripe_label", ""), "city": city_of(r, addrc), "status": disp,
             "online": online, "registered": registered, "deployed": deployed,
             "since": info.get("since"), "asn": info.get("asn"), "anchor": info.get("anchor"),
             "mismatch": deployed and not online,        # deployed but not connected
@@ -224,7 +227,7 @@ PAGE = """
 let SORTK={}, ASC={};
 function fmt(s){return s?new Date(s).toLocaleString():"";}
 function table(gi,rows){
- const cols=[["online","Status"],["proj","Project"],["id","Probe ID"],["label","Label"],
+ const cols=[["online","Status"],["ripe_label","RIPE label"],["id","Probe ID"],["label","Label"],
    ["isp","ISP"],["city","City"],["deployed","Deployed"],["since","Since"]];
  let h='<table><thead><tr>'+cols.map(c=>`<th data-g="${gi}" data-k="${c[0]}"`
    +(c[0]==="since"?' title="Time the probe entered its current RIPE status (Connected/Disconnected) — i.e. how long it has been in that state"':'')
@@ -236,12 +239,19 @@ function table(gi,rows){
   let cls=!r.online?"off":""; if(r.mismatch)cls+=" mis";
   h+=`<tr class="${cls}">
    <td><span class="dot ${dot}"></span>${r.status}${r.anchor?" ⚓":""}</td>
-   <td><b>${r.proj||""}</b></td><td>${r.id}</td><td>${r.label||""}</td><td>${r.isp||""}</td>
+   <td><b>${r.ripe_label||""}</b></td><td>${r.id}</td><td>${r.label||""}</td><td>${r.isp||""}</td>
    <td>${r.city||""}</td>
    <td>${r.deployed?'<span class="dep">✓ deployed</span>':'<span class="nodep">— not deployed</span>'}${r.mismatch?' <span class="tag">⚠ but offline</span>':''}</td>
    <td>${fmt(r.since)}</td></tr>`;
  }
  return h+'</tbody></table>';
+}
+function render(){ const j=window._data; if(!j)return;
+ let html=""; j.groups.forEach((g,gi)=>{
+  html+=`<h2>${g.name}<span class="gsum">${g.summary.online}/${g.summary.total} online · ${g.summary.deployed} deployed`
+    +(g.summary.mismatch?` · <span style="color:#e6a700">${g.summary.mismatch} deployed-but-offline</span>`:``)+`</span></h2>`+table(gi,g.rows);});
+ document.getElementById("groups").innerHTML=html;
+ document.querySelectorAll("th").forEach(th=>th.onclick=()=>{const gi=th.dataset.g,k=th.dataset.k;ASC[gi]=(SORTK[gi]===k)?!ASC[gi]:true;SORTK[gi]=k;render();});
 }
 async function load(){
  try{
@@ -254,26 +264,11 @@ async function load(){
     <div class="card" style="border-color:#2ecc71">Online<b style="color:#2ecc71">${o.online}</b></div>
     <div class="card" style="border-color:#888">Deployed<b>${o.deployed}</b></div>
     <div class="card" style="border-color:#e6a700">Deployed but offline<b style="color:#e6a700">${o.mismatch}</b></div>`;
-  let html="";
-  j.groups.forEach((g,gi)=>{
-   html+=`<h2>${g.name}<span class="gsum">${g.summary.online}/${g.summary.total} online · ${g.summary.deployed} deployed`
-     +(g.summary.mismatch?` · <span style="color:#e6a700">${g.summary.mismatch} deployed-but-offline</span>`:``)+`</span></h2>`;
-   html+=table(gi,g.rows);
-  });
-  document.getElementById("groups").innerHTML=html;
-  document.querySelectorAll("th").forEach(th=>th.onclick=()=>{
-    const gi=th.dataset.g,k=th.dataset.k; ASC[gi]=(SORTK[gi]===k)?!ASC[gi]:true; SORTK[gi]=k; render();});
   window._data=j;
+  render();
   document.getElementById("upd").textContent=new Date().toLocaleTimeString();
   document.getElementById("idc").textContent="id col: "+j.id_col;
  }catch(err){document.getElementById("err").innerHTML='<div class="err">'+err+'</div>';}
-}
-function render(){ const j=window._data; if(!j)return;
- let html=""; j.groups.forEach((g,gi)=>{
-  html+=`<h2>${g.name}<span class="gsum">${g.summary.online}/${g.summary.total} online · ${g.summary.deployed} deployed`
-    +(g.summary.mismatch?` · <span style="color:#e6a700">${g.summary.mismatch} deployed-but-offline</span>`:``)+`</span></h2>`+table(gi,g.rows);});
- document.getElementById("groups").innerHTML=html;
- document.querySelectorAll("th").forEach(th=>th.onclick=()=>{const gi=th.dataset.g,k=th.dataset.k;ASC[gi]=(SORTK[gi]===k)?!ASC[gi]:true;SORTK[gi]=k;render();});
 }
 load();setInterval(load,60000);
 </script></body></html>

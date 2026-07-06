@@ -15,7 +15,7 @@ per-hop RTT deltas, flag the max-delta hop (the link that introduces the delay),
 and mark 2-3x spikes vs the per-series baseline (first rounds). International RTT
 should spike while local RTT stays flat - the submarine-cut signature.
 """
-import os, sys, csv, json, glob, socket, shutil, collections
+import os, sys, csv, json, glob, socket, shutil, statistics, collections
 from datetime import datetime, timezone, timedelta
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -137,21 +137,55 @@ def _hop_rtts(pr):
     return out
 
 
+def _clean(s):
+    """strip commas/quotes/newlines so a field can never shift CSV columns."""
+    return str(s or "").replace(",", " ").replace('"', "").replace("\n", " ").strip()
+
+
 def fetch():
     meta = json.load(open(MJSON))
-    start = meta["created"].rstrip("Z")
+
+    # --- ping: clean end-to-end RTT per (probe, host, 15-min round) ---
+    # only counts rounds where the destination actually replied (rtt is not None),
+    # so a silent target can't poison the baseline with a near-router RTT.
+    ping = collections.defaultdict(dict)          # (label, host) -> {round_idx: rtt}
+    for host, mid in meta["ping"].items():
+        try:
+            ok, results = AtlasResultsRequest(msm_id=mid).create()
+        except Exception:
+            continue
+        if not ok:
+            continue
+        for r in results:
+            lbl = str(PROBES.get(r.get("prb_id"), r.get("prb_id")))
+            try:
+                pg = PingResult.get(r)
+            except Exception:
+                continue
+            if pg.rtt_median is not None:             # destination answered this round
+                rk = int(round(r.get("timestamp", 0) / INTERVAL))
+                ping[(lbl, host)][rk] = round(pg.rtt_median, 1)
+
+    # baseline per (probe, host) = median of the earliest up-to-3 valid pings, >= 2 ms
+    base = {}
+    for k, d in ping.items():
+        vals = [v for _, v in sorted(d.items()) if v >= 2.0][:3]
+        if vals:
+            base[k] = round(statistics.median(vals), 1)
+
+    # --- traceroute: path, hop-delta, tromboning, reached (joined to ping by round) ---
     rows = []            # per (probe, target, round)
-    traces = []          # for routes txt: (cat, host, label, sagan result, verdict)
+    traces = []          # for routes txt: (cat, host, label, when, sagan result, verdict)
     for host, mid in meta["trace"].items():
         cat = meta["target_cat"][host]; ip = meta["target_ip"][host]
         try:
-            ok, results = AtlasResultsRequest(msm_id=mid, start=start).create()
+            ok, results = AtlasResultsRequest(msm_id=mid).create()
         except Exception as e:
             print(f"  {host}: {e}"); continue
         if not ok:
             continue
         for r in results:
-            lbl = PROBES.get(r.get("prb_id"), r.get("prb_id"))
+            lbl = str(PROBES.get(r.get("prb_id"), r.get("prb_id")))
             try:
                 pr = TracerouteResult.get(r); v = cs.classify(r, "0")
             except Exception:
@@ -162,36 +196,27 @@ def fetch():
             for (i0, r0, ip0, a0, n0, c0), (i1, r1, ip1, a1, n1, c1) in zip(hops, hops[1:]):
                 d = r1 - r0
                 if d > best[0]:
-                    best = (d, f"{n0[:14]}({c0})", f"{n1[:14]}({c1})")
-            when = datetime.fromtimestamp(r.get("timestamp", 0), timezone.utc)
+                    best = (d, f"{_clean(n0)[:14]}({c0})", f"{_clean(n1)[:14]}({c1})")
+            ts_r = r.get("timestamp", 0)
+            rk = int(round(ts_r / INTERVAL))
+            when = datetime.fromtimestamp(ts_r, timezone.utc)
+            prtt = ping.get((lbl, host), {}).get(rk, "")     # clean end-to-end RTT, same round
+            b = base.get((lbl, host))
+            spike = round(prtt / b, 1) if (prtt != "" and b) else ""
             rows.append(dict(time=when.strftime("%Y-%m-%d %H:%M"), probe=lbl, cat=cat, target=host,
                              target_ip=ip, reached=pr.destination_ip_responded,
-                             dest_rtt=(round(pr.last_median_rtt, 1) if pr.last_median_rtt else ""),
-                             max_rtt=v["max_rtt"], tromboned=(v["status"] == "trombone"),
-                             exit=(v["exit_name"] or v["exit_cc"]) if v["status"] == "trombone" else "",
+                             ping_rtt=prtt, baseline_rtt=(b if b is not None else ""), spike_x=spike,
+                             trace_max_rtt=v["max_rtt"], tromboned=(v["status"] == "trombone"),
+                             exit=_clean(v["exit_name"] or v["exit_cc"]) if v["status"] == "trombone" else "",
                              max_hop_delta=round(best[0], 1), delta_link=f"{best[1]}->{best[2]}" if best[1] else ""))
-            traces.append((cat, host, str(lbl), when, pr, v))
+            traces.append((cat, host, lbl, when, pr, v))
 
     if not rows:
         print("no results yet (measurements need a few minutes to produce a first round)."); return
     ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
 
-    # baseline = median dest_rtt of the earliest round per (probe,target); flag 2-3x spikes
-    series = collections.defaultdict(list)
-    for x in rows:
-        if x["dest_rtt"] != "":
-            series[(x["probe"], x["target"])].append((x["time"], x["dest_rtt"]))
-    base = {}
-    for k, v in series.items():
-        vals = [d for _, d in sorted(v)][:2]           # first two rounds as baseline
-        base[k] = sum(vals) / len(vals) if vals else None
-    for x in rows:
-        b = base.get((x["probe"], x["target"]))
-        x["baseline_rtt"] = round(b, 1) if b else ""
-        x["spike_x"] = round(x["dest_rtt"] / b, 1) if (b and x["dest_rtt"] != "") else ""
-
-    cols = ["time", "probe", "cat", "target", "target_ip", "reached", "dest_rtt", "baseline_rtt",
-            "spike_x", "max_rtt", "max_hop_delta", "delta_link", "tromboned", "exit"]
+    cols = ["time", "probe", "cat", "target", "target_ip", "reached", "ping_rtt", "baseline_rtt",
+            "spike_x", "trace_max_rtt", "max_hop_delta", "delta_link", "tromboned", "exit"]
     out_csv = os.path.join(OUT, f"outage_{ts}.csv")
     with open(out_csv, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=cols); w.writeheader(); w.writerows(rows)

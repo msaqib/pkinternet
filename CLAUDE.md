@@ -60,7 +60,10 @@ submarine-cable cuts.
 | `experiments/02_isp_classification/` | Exp 02: 20-probe deployment plan (PKIX set classification). Also holds the PTCL↔Transworld peering probe (`ptcl_peering.py`, modes `peering`/`hosted`) backing finding 3.1. |
 | `experiments/04_path_tromboning/` | Exp 04: systematic path-tromboning detection across an ISP's whole address space. Pipeline: `enumerate_prefixes.py <ASN>` (RIPEstat announced prefixes) → `responsiveness_sweep.py` (find live IPs/prefix) → `tromboning_sweep.py` (TCP/80 Paris traceroute + 3-signal RTT-robust detector). `trace_from_probes.py` = ad-hoc traceroute to one target from named probes (RQ4). Built on **ripe-atlas-cousteau + sagan**. |
 | `experiments/03_longitudinal_routing/` | Exp 03: 8 probes → 10 sites, traceroute every 15 min + ping companion over days; path/RTT change over time (`trace_monitor.py`). Committed output is a normalized star schema (`results/<run>/normalized/dim_*`+`fact_*` CSVs) + a `routes_*.txt`; `watch` also writes a local-only Prometheus textfile (`live/<run>/exp03_live.prom`) for Grafana. Probe identity lives in one `PROBE_META` map (labels `isp.city (ASN)`). |
-| `findings/` | Analysis writeups (01, 01.1, 01.2, 03, **3.1 PTCL↔Transworld**, **04 Worldcall tromboning**) + charts notebook |
+| `experiments/04.1_small_isp_tromboning/` | Exp 4.1: complete block-level tromboning census of every FLL small ISP (`census_sweep.py`; 747 /24s × 8 IPs × 7 probes = 18,260 traces). Canonical output `results/run_*/census_*.csv` + `isp_tromboning.csv`; derived tables (`make_ip_status_table.py`) and route files (`render_{tromboning,filtered,all}_routes.py`) read the **census CSV as the frozen verdict** (re-classifying raw drifts, and raw has ~190 resume-duplicates). |
+| `experiments/06_submarine_outage/` | Exp 06: SMW5 outage monitor (`outage_monitor.py` — server-side periodic ping+traceroute, 15 min × 12 h, 14 probes → CDN/Abroad/PK sample). `build_timeseries.py` → `results/timeseries.csv`; `rtt_timeseries.ipynb` plots RTT-over-time per site/probe (UTC→PKT). |
+| `tools/probe_status/` | Flask dashboard: Google-Sheet probe roster vs live RIPE Atlas status, two sections (**Our Probes** / Existing), pulls each probe's RIPE label+tags on refresh. |
+| `findings/` | Analysis writeups (01, 01.1, 01.2, **1.4 PK100 hosting**, 03, **3.1 PTCL↔Transworld**, **04 Worldcall tromboning**, **4.1 small-ISP census**, **06 SMW5 outage**) + charts notebook |
 
 ---
 
@@ -420,6 +423,35 @@ Local paths stay in-PK via a **Cogent PoP inside Pakistan** (`149.40.227.134`).
   intra-/24 consistency is unverified, and per-flow/time variance is real (an IP
   flipped local↔abroad minutes apart). The intra-block test (many IPs in one /24) is
   the next step.
+
+### Small-ISP tromboning census — Exp 4.1 (complete, 2026-07-03)
+
+See `findings/04.1_small_isp_tromboning.md`. Scaled Exp 04 to every FLL small ISP
+(747 /24s × 8 IPs × 7 probes = **18,260 traces**).
+- **~11% hairpin abroad, ~85% local** (2,002 trombone / 15,451 local / 807 inconclusive).
+- **The source ISP dominates:** trombone rate is driven by *where you measure from* —
+  **Cybernet-Haripur 46%, PTCL-Karachi 38%** vs **4–10%** for Nova/Z-Com/Orbit/Cybernet-Khi
+  and **Nayatel 4%** (cleanest). Same Cybernet ISP = 46% from Haripur but 10% from Karachi →
+  per-PoP, not just per-ISP.
+- **Transwo­rld (589) ≈ PTCL (566)** split the attributable hand-offs abroad; exits are
+  **China (347) > US (259) > Singapore (107)**.
+- **Intra-block consistency 82%** (of source×block pairs uniform across their 8 IPs) — a /24
+  is a usable routing atom ~4/5 of the time (answers the Exp 04 open question).
+- **Consistency note:** the census CSV is canonical; the raw checkpoint holds ~190
+  resume-duplicate measurements and `hop_geo` re-classification drifts (live lookups), so all
+  derived tables/routes are keyed off the frozen census CSV verdict.
+
+### Submarine-cable outage — Exp 06 (SMW5, Jul 2026)
+
+See `findings/06_submarine_outage.md`. 14 probes → CDN/Abroad/PK sample, 15 min × 12 h.
+- **A latency degradation, not a blackout** — international RTT ran 2–6× and erratic;
+  median stayed ~baseline because monitoring began *after* the outage was active.
+- **It eased over the window** (first-vs-last is the right lens): worst paths recovered
+  sharply (shophive via PTCL **646→278 ms**), improving even into peak hours.
+- **No cable-restore reroute** — path changes were load-balancing within the same transit
+  (same exit country); the SMW5-era detour's congestion cleared (a splice takes days).
+- **Local/PK-hosted traffic was unaffected** — the resilience argument for PKIX. One local
+  anomaly: `pbs.gov.pk` spiked chaotically ~08:00–10:00 PKT across all probes (separate event).
 
 ### PKIX status
 

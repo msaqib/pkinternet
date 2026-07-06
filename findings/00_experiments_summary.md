@@ -39,10 +39,13 @@ A few terms used below:
 | **1.1** | Does per-ISP DNS (GeoDNS) change the hosting picture? | done | Only 8 of 103 sites give different answers per ISP, so Exp 01's single DNS lookup was valid for about 92% of sites. |
 | **1.2** | Is the big global content (Google, Meta, etc.) cached inside Pakistan? | done | Mostly no. It is reached at regional distance, not from inside Pakistan. Only Cloudflare and X were served locally, and only on Nayatel. |
 | **1.3** | What does Nayatel's traffic actually pass through? | done | About 40% of Nayatel paths use an international operator (the foreign-hosted tail); about 59% bypass it with direct peering. Nayatel is multi-homed. |
+| **1.4** | Where are the top-100 Pakistani sites hosted (CDN / abroad / PK), and by which ISP? | done | ~60% Pakistan-hosted, ~31% CDN, ~8% abroad; government/education stay in-country, and a block of gov sites still hairpins ~200 ms from Transworld. |
 | **02** | Classify ISPs by whether they use PKIX, and plan probe coverage. | planning / deploying | Sets 1/2/3 built from the PTA roadshow deck plus Exp 01; plan is about 21 new probes plus 5 existing plus volunteers. |
-| **03** | Does the route and RTT to a site change over time? | 24h done, 48h running | Local sites 2 to 40 ms versus offshore 130 to 200 ms. No daily (diurnal) cycle and stable routes, so the inefficiency is structural, not congestion. |
+| **03** | Does the route and RTT to a site change over time? | 24h + 48h done | Local sites 2 to 40 ms versus offshore 130 to 200 ms. No daily (diurnal) cycle and stable routes, so the inefficiency is structural, not congestion. |
 | **3.1** | Where do PTCL paths jump in RTT, and does PTCL peer with Transworld? | done | A ~26 ms access floor then a +80–200 ms international exit; PTCL peers with Transworld **domestically** (100%) but never for abroad traffic (0%) — verified by direct probe-to-probe test. |
 | **04** | How much of an ISP's address space hairpins (trombones) abroad, systematically? | Worldcall done | 31% of Worldcall's 52 /24s trombone to **Equinix Singapore via Transworld**; the same IPs are reached **locally by PTCL** — so a domestic route exists and Transworld chooses the hairpin. Prefix-sampled (TASS-style), RTT-physics detector. |
+| **4.1** | How much does *every* small ISP's address space hairpin, nationally? | done | Complete census: **11% of 18,260 traces hairpin abroad**; the **source ISP dominates** (Cybernet-Haripur 46%, PTCL-Karachi 38% vs 4–10% for the rest); Transworld and PTCL split the hairpins; exits are China/US/Singapore. |
+| **06** | What happens to routes during a submarine-cable outage? | done | SMW5 fault: a **latency degradation, not a blackout** — international RTT 2–6× and erratic, **easing over the window** (shophive via PTCL 646→278 ms), while **local/PK-hosted traffic was unaffected**. The resilience case for PKIX. |
 
 ---
 
@@ -144,15 +147,66 @@ round, which matters for multi-homed or campus probes that can switch ISP.
 
 ---
 
+## Experiment 4.1: Small-ISP tromboning census (the national map)
+
+*(`experiments/04.1_small_isp_tromboning/`, writeup `findings/04.1_small_isp_tromboning.md`.)*
+
+Where Exp 04 proved the method on one ISP (Worldcall), Exp 4.1 scales it to the **whole
+small-ISP population** — a complete, systematic census of **every announced /24 of every
+small Pakistani ISP** (747 blocks, 8 spread IPs each, from 7 Pakistani vantages), asking
+for each: does a packet to that block stay in Pakistan or hairpin abroad, and if abroad,
+through whom and to where.
+
+- **Headline:** of **18,260 traces, ~11% hairpin abroad** and ~85% stay local. So most
+  small-ISP space is reachable in-country, but a real, concentrated slice trombones.
+- **The source ISP dominates the outcome** — far more than the destination. Measuring
+  *from* **Cybernet-Haripur (46%)** and **PTCL-Karachi (38%)** hairpins most small ISPs;
+  every other vantage routes mostly local (4–10%). Nayatel is the cleanest. The same
+  Cybernet ISP hairpins 46% from Haripur but only 10% from Karachi — so it is a
+  per-PoP/per-source-router property, not just per-ISP.
+- **Transworld and PTCL split the hairpins almost evenly** (589 vs 566 of the attributable
+  hand-offs abroad) — the two licensed international operators execute nearly all of it.
+- **Exits are China-heavy, then US, then Singapore** — more scattered than Worldcall's
+  single Equinix-Singapore exit, reflecting the different transits' international paths.
+- **"Per-prefix" is mostly clean:** 82% of (source, block) pairs give a uniform verdict
+  across their 8 IPs, so a /24 is a usable routing atom ~4/5 of the time (the open Exp 04
+  question, now measured).
+
+## Experiment 06: Routing during a submarine-cable outage (the resilience test)
+
+*(`experiments/06_submarine_outage/`, writeup `findings/06_submarine_outage.md`.)*
+
+During the **SMW5 submarine-cable fault (Jul 2026)**, we monitored ping + traceroute every
+15 minutes for 12 hours from all 14 Pakistani probes to a balanced CDN/Abroad/PK sample.
+
+- **It was a latency degradation, not a blackout** — traffic was rerouted onto longer
+  surviving paths, so international RTTs ran 2–6× and erratic while connectivity held.
+- **The outage eased over the window** — comparing each site's first vs last measurement
+  (the right lens, since our baseline was captured *during* the outage), the worst-hit
+  paths recovered sharply (e.g. shophive.com via PTCL **646 → 278 ms**). It improved even
+  though the later readings fell in peak business hours, so it is genuine easing.
+- **No cable-restore reroute** — path changes were load-balancing across parallel links of
+  the *same* transit (same exit country), i.e. congestion on the SMW5-era detour clearing,
+  not a repaired cable (a splice takes days).
+- **Local/PK-hosted traffic was unaffected** — domestic sites stayed flat and low
+  throughout. That is the point: a cable cut badly hurts the offshore-hosted majority but
+  barely touches anything hosted in Pakistan and exchanged locally — the resilience case
+  for PKIX.
+
+---
+
 ## The through-line
 
 Exp 01 establishes where Pakistani content lives (mostly offshore, so PKIX is
-underused). Exps 1.1, 1.2, and 1.3 reinforce and explain that picture (the DNS lookup
-is valid, big content is not cached locally, and they show why Nayatel is fast).
-Exp 02 plans the probe coverage needed to classify ISPs by their PKIX use. Exp 03 adds
-the time axis and shows the offshore penalty is stable and structural, so the fix is
-local hosting and better peering through PKIX, not more bandwidth. That is the case
-this project is building, with data, for using PKIX.
+underused). Exps 1.1, 1.2, 1.3, and 1.4 reinforce and explain that picture (the DNS
+lookup is valid, big content is not cached locally, Nayatel is fast, and the top-100
+hosting split confirms the offshore tilt). Exp 02 plans the probe coverage needed to
+classify ISPs by their PKIX use. Exp 03 adds the time axis and shows the offshore penalty
+is stable and structural. Exps 04 and 4.1 turn hairpinning into a measured, national map —
+who hairpins whom, through which LDI, to where — and show a domestic route usually exists
+but isn't chosen. Exp 06 closes the loop on resilience: during a real cable cut, offshore
+traffic degrades 2–6× while locally-hosted traffic is untouched. Together they build the
+data case: the fix is local hosting and active peering through PKIX, not more bandwidth.
 
 ---
 
