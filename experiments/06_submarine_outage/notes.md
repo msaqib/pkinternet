@@ -89,9 +89,24 @@ A submarine cut with reroute produces a **specific pattern, not a blackout**:
 python experiments/06_submarine_outage/outage_monitor.py schedule   # start periodic measurements
 python experiments/06_submarine_outage/outage_monitor.py fetch      # pull results -> CSV + routes txt
 python experiments/06_submarine_outage/outage_monitor.py stop       # stop early
+python experiments/06_submarine_outage/build_timeseries.py          # -> results/timeseries.csv (per-round ping RTT)
+python experiments/06_submarine_outage/outage_impact.py             # -> results/outage_impact.md (RTT/jitter/hops/loss Δ%)
+# rtt_timeseries.ipynb -> RTT-over-time graphs per site/probe (UTC->PKT)
 ```
 Output: `results/measurements.json` (ids), `results/outage_<ts>.csv` (per round:
-probe, target, RTT, tromboned, exit), and `results/routes_outage_<ts>.txt`.
+probe, target, RTT, tromboned, exit), `results/routes_outage_<ts>.txt`,
+`results/timeseries.csv`, `results/outage_impact.md`, and `results/figures/*.png`.
+
+## Result (2026-07-03)
+
+The SMW5 outage was a **latency degradation, not a blackout**, and it **eased over the
+12 h window** (worst paths recovered, e.g. shophive via PTCL 646→278 ms). Quantified
+(outage-peak first 3 h vs recovered last 3 h, international targets): **avg RTT +2%,
+jitter +31%, path length ~flat (−5%), loss ~flat** — i.e. the fault hit as **instability,
+not a mean-latency step**, concentrated on **PTCL-sourced paths (RTT +12%, jitter +50%)**,
+with **local/PK traffic unaffected**. Path changes were load-balancing within the same
+transit (same exit country), not a cable-restore reroute. See
+`findings/06_submarine_outage.md` and `results/outage_impact.md`.
 
 ## Status
 

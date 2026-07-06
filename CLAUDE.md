@@ -448,6 +448,9 @@ See `findings/06_submarine_outage.md`. 14 probes → CDN/Abroad/PK sample, 15 mi
   median stayed ~baseline because monitoring began *after* the outage was active.
 - **It eased over the window** (first-vs-last is the right lens): worst paths recovered
   sharply (shophive via PTCL **646→278 ms**), improving even into peak hours.
+- **Quantified (peak vs recovered, international): +2% mean RTT, +31% jitter, flat path
+  length** — hit as *instability*, not a latency step; concentrated on PTCL (RTT +12%,
+  jitter +50%), local unaffected. See `experiments/06_submarine_outage/outage_impact.py`.
 - **No cable-restore reroute** — path changes were load-balancing within the same transit
   (same exit country); the SMW5-era detour's congestion cleared (a splice takes days).
 - **Local/PK-hosted traffic was unaffected** — the resilience argument for PKIX. One local

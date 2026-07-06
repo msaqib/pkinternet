@@ -100,6 +100,27 @@ txt). On the affected paths the largest jump lands on the **international egress
 leg onto the surviving/UAE path — and differs by probe (a PTCL egress link vs a Transworld
 egress link show up as different delaying hops).
 
+### 8. The impact quantified — it hit as *instability*, not a latency step
+Comparing the **outage peak (first 3 h)** to the **recovered state (last 3 h)** — the only
+baseline we have, since monitoring began mid-outage — for **international** targets
+(CDN+Abroad), pooled across all probe–target pairs (`outage_impact.py`):
+
+| metric | outage → recovered | change |
+|---|---|---|
+| **Average RTT** | 148 → 145 ms | **+2%** |
+| **Jitter** (per-pair RTT stddev) | 13.6 → 10.3 ms | **+31%** |
+| **Path length** (hops) | 41 → 44 | **−5%** (flat) |
+| **Packet loss** | 10% → 11% | ~flat |
+
+So the outage's signature was **increased variability, not a uniform latency rise**: the
+mean RTT barely moved (+2%) but **jitter jumped +31%**, and **path length did not grow** —
+confirming Finding 5 (no rerouting onto longer paths). The damage was **concentrated on
+PTCL-sourced paths** (RTT **+12%**, jitter **+50%**) and on real servers abroad
+(Abroad-target jitter **+67%** vs CDN **+11%**); **local/PK targets showed no increase**
+(the control). *Caveat:* pooled means understate the peak (a few paths swung 400–650 ms
+but average out), and with no true pre-event baseline the increase vs a **normal** day is
+likely larger. Full breakdown: `results/outage_impact.md`.
+
 ## Why this matters for PKIX
 
 This is the clearest practical form of the project's argument: during a submarine cut,
@@ -127,5 +148,6 @@ measured case for local hosting + active PKIX peering as *resilience*, not just 
 python experiments/06_submarine_outage/outage_monitor.py schedule   # register periodic measurements
 python experiments/06_submarine_outage/outage_monitor.py fetch       # -> outage_*.csv + routes_outage_*.txt
 python experiments/06_submarine_outage/build_timeseries.py           # -> results/timeseries.csv
+python experiments/06_submarine_outage/outage_impact.py              # -> results/outage_impact.md (RTT/jitter/hops/loss Δ%)
 # then run experiments/06_submarine_outage/rtt_timeseries.ipynb for the graphs (UTC->PKT)
 ```

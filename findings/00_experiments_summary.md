@@ -181,6 +181,10 @@ During the **SMW5 submarine-cable fault (Jul 2026)**, we monitored ping + tracer
 
 - **It was a latency degradation, not a blackout** — traffic was rerouted onto longer
   surviving paths, so international RTTs ran 2–6× and erratic while connectivity held.
+- **Quantified, it hit as instability not a latency step** — outage-peak vs recovered,
+  international targets: **average RTT only +2%, but jitter +31%** and **path length flat**;
+  concentrated on **PTCL-sourced paths (RTT +12%, jitter +50%)**, with local traffic
+  unaffected. (No pre-event baseline, so the true rise vs a normal day is likely larger.)
 - **The outage eased over the window** — comparing each site's first vs last measurement
   (the right lens, since our baseline was captured *during* the outage), the worst-hit
   paths recovered sharply (e.g. shophive.com via PTCL **646 → 278 ms**). It improved even

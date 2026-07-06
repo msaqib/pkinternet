@@ -78,7 +78,8 @@ findings/              Analysis writeups and the charts notebook
   and PTCL split the hairpins; exits are China/US/Singapore.
 - [06 — SMW5 Submarine-Cable Outage](findings/06_submarine_outage.md):
   a latency degradation (not a blackout) that eased over the window (shophive via PTCL
-  646→278 ms), with **local/PK-hosted traffic unaffected** — the resilience case for PKIX.
+  646→278 ms); quantified as **+31% jitter / +2% mean RTT / flat path length** on
+  international paths, with **local/PK-hosted traffic unaffected** — the resilience case for PKIX.
 
 ## Probe Setup
 
