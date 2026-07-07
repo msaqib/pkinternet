@@ -1,0 +1,2005 @@
+# Candidate website pool -- from data/Local Internet Efficiency.pdf + all Tranco .pk sites.
+# Columns: website,hosting,isp_cdn,tranco_rank   (hosting = Pakistani|Abroad|CDN)
+# '#' lines are category headers/comments. Pick a subset into targets.csv for measurement.
+website,hosting,isp_cdn,tranco_rank
+
+# ===== Telco [CDN 2 · Abroad 0 · PK 4] =====
+jazz.com.pk,CDN,Cloudflare,43844
+telenor.com,CDN,Microsoft/Azure,110575
+ufone.com,Pakistani,Pakistan Telecommuication company limited,150410
+zong.com.pk,Pakistani,ESS,39944
+ptcl.com.pk,Pakistani,Pakistan Telecommunication Company Limited,157665
+sims.pk,Pakistani,Nayatel (Pvt) Ltd,95473
+
+# ===== ISPs [CDN 2 · Abroad 7 · PK 8 · unresolved 2] =====
+ptclflashfiber.com,Pakistani,Pakistan Telecommunication Company Limited,818899
+aa-networks.net,Abroad,Leaseweb NL (NL),
+alpinepk.net,Abroad,Namecheap  Inc. (NL),
+amazonfiber.com.pk,Abroad,FranTech Solutions (LU),
+anatel.com.pk,Abroad,HOSTINGER IN (IN),
+ascontel.net,Abroad,IONOS SE (US),
+nayatel.com,Pakistani,Nayatel (Pvt) Ltd,47880
+cyber.net.pk,Pakistani,Cyber Internet Services (Private) Limited,28243
+wateen.com,Abroad,HOSTINGER ID (ID),217891
+multinet.com.pk,Pakistani,Multinet Broadband,
+connect.com.pk,unresolved,,
+ebonenet.com,Pakistani,Ebone Network (Pvt) Ltd,107805
+nexlinx.net.pk,Pakistani,Nexlinx,139438
+transworld.com.pk,Abroad,Namecheap  Inc. (US),
+super.net.pk,Pakistani,Supernet 1,221980
+ntc.net.pk,Pakistani,Cyber Internet Services (Private) Limited,28360
+wancom.net.pk,CDN,Cloudflare,173018
+optix.com.pk,unresolved,,
+telenor.com.pk,CDN,Cloudflare,219081
+
+# ===== Energy (DISCO) [CDN 1 · Abroad 2 · PK 8] =====
+fesco.com.pk,Pakistani,PITC,580385
+gepco.com.pk,Pakistani,PITC,203453
+hazeco.com.pk,Abroad,Contabo GmbH (FR),
+hesco.gov.pk,Pakistani,PITC,788359
+iesco.com.pk,Pakistani,CIS Islamabad,226466
+lesco.gov.pk,Pakistani,Nexlinx,183747
+mepco.com.pk,Pakistani,PITC,
+pesco.com.pk,CDN,Cloudflare,
+qesco.com.pk,Pakistani,PITC,
+sepco.com.pk,Pakistani,PITC,
+ke.com.pk,Abroad,ManagedWay (US),173002
+
+# ===== News [CDN 45 · Abroad 26 · PK 4] =====
+merafm.com,Abroad,InMotion Hosting  Inc. (US),
+dailyintekhab.pk,Abroad,Contabo GmbH (GB),
+global.ptv.com.pk,CDN,Cloudflare,
+dailyibrat.com,Abroad,netcup GmbH (AT),
+cityfm89.com,CDN,Cloudflare,
+mashriqtv.pk,CDN,Cloudflare,470836
+ummat.net,CDN,Cloudflare,83530
+jasarat.com,CDN,Google,495548
+herald.dawn.com,CDN,Cloudflare,
+dailykhabrain.com.pk,Abroad,Hostinger International Limited (LT),152967
+thefrontierpost.com,CDN,Cloudflare,312904
+thefridaytimes.com,Abroad,Hetzner Online GmbH (FI),158809
+a-sports.tv,CDN,Cloudflare,335412
+dunya.com.pk,Pakistani,TW OBJ,160441
+geosuper.tv,CDN,Cloudflare,291513
+nation.com.pk,Abroad,Hetzner Online GmbH (FI),39646
+pakistantoday.com.pk,CDN,Cloudflare,35891
+dailypakistan.com.pk,Abroad,Hetzner Online GmbH (FI),51303
+aaj.tv,CDN,Cloudflare,134524
+urdupoint.com,CDN,Cloudflare,31689
+thenews.com.pk,CDN,Cloudflare,18680
+brecorder.com,CDN,Cloudflare,31890
+jang.com.pk,CDN,Cloudflare,8110
+dailytimes.com.pk,CDN,Cloudflare,34553
+tribune.com.pk,CDN,Cloudflare,13272
+dawn.com,CDN,Cloudflare,6556
+enews.hamariweb.com,CDN,Cloudflare,
+bolnews.com,CDN,Cloudflare,147256
+express.pk,CDN,Cloudflare,58206
+pakshowbiz.com,Abroad,Oracle Corporation (US),
+emeatribune.com,CDN,AWS,
+awamiweb.com,Abroad,Hostinger International Limited (LT),
+chitraltimes.com,CDN,Cloudflare,
+thefinancialdaily.com,CDN,Cloudflare,
+dailythepatriot.com,Abroad,HOSTINGER IN (IN),
+lhrtimes.com,Abroad,Hetzner Online GmbH (FI),
+urdu.geo.tv,CDN,Cloudflare,
+dailyqudrat.pk,CDN,Cloudflare,656948
+urdu.nayadaur.tv,Abroad,Hetzner Online GmbH (FI),
+yesurdu.com,Abroad,O2switch Sarl (FR),
+bolnewsurdu.com,Abroad,Hetzner Online GmbH (DE),
+arynews.tv,CDN,Cloudflare,32521
+independenturdu.com,CDN,Cloudflare,467638
+urdu.dunyanews.tv,Pakistani,Multinet Broadband,
+24urdu.com,Abroad,Hetzner Online GmbH (FI),697992
+dailyausaf.com,CDN,Cloudflare,357591
+pni.net.pk,CDN,Cloudflare,
+urdu.92newshd.tv,CDN,Cloudflare,
+naibaat.pk,Abroad,Hetzner Online GmbH (FI),590461
+pakistanchristianpost.com,Abroad,Hetzner Online GmbH (DE),
+paktribune.com,CDN,Cloudflare,428884
+pakistangulfeconomist.com,Abroad,Hostinger International Limited (LT),
+dunyanews.tv,Pakistani,Multinet Broadband,61597
+pakistanlink.org,Abroad,WEBSITEWELCOME.COM (US),
+arabnews.pk,CDN,Cloudflare,115337
+92newshd.tv,CDN,Cloudflare,864165
+thecurrent.pk,CDN,Cloudflare,
+propakistani.pk,CDN,Cloudflare,39209
+journalismpakistan.com,CDN,Cloudflare,892110
+inp.net.pk,Abroad,Hetzner Online GmbH (FI),965563
+dailynewspk.com,CDN,AWS,
+gnnhd.tv,Pakistani,Gourmet Foods,649145
+dawnnews.tv,CDN,Cloudflare,380879
+customnews.pk,Abroad,InMotion Hosting  Inc. (US),
+24newshd.tv,Abroad,Hetzner Online GmbH (FI),254133
+timesofislamabad.com,CDN,Cloudflare,520870
+publicnews.com,Abroad,Hetzner Online GmbH (FI),
+pakistannews.net,CDN,AWS,
+neonews.pk,Abroad,Hetzner Online GmbH (FI),
+aiknewshd.tv,CDN,Cloudflare,
+lahorenews.tv,Abroad,Digital LLC (US),698360
+dialoguepakistan.com,CDN,Cloudflare,
+hq.com.pk,CDN,Cloudflare,
+thepakistan.pk,CDN,Cloudflare,
+soontimes.pk,Abroad,Hostinger International Limited (LT),
+
+# ===== E-commerce [CDN 67 · Abroad 7 · PK 0] =====
+daraz.pk,Abroad,Alibaba (US) Technology Co.  Ltd. (SG),5979
+naheed.pk,CDN,AWS,65746
+servis.pk,CDN,Cloudflare,88370
+libertybooks.com,CDN,Cloudflare,132098
+khazanay.pk,CDN,Cloudflare,175712
+samsung.com,Abroad,SamsungSDS Inc. (KR),94
+priceoye.pk,CDN,Cloudflare,9438
+whatmobile.com.pk,CDN,Cloudflare,21341
+saya.pk,CDN,Cloudflare,9371
+junaidjamshed.com,CDN,Cloudflare,10269
+zellbury.com,CDN,Cloudflare,9822
+edenrobe.com,CDN,Cloudflare,23017
+stylo.pk,CDN,Cloudflare,22137
+nishatlinen.com,CDN,Cloudflare,9973
+gulahmedshop.com,CDN,Cloudflare,63182
+outfitters.com.pk,CDN,Cloudflare,83839
+beechtree.pk,CDN,Cloudflare,21551
+nutrifactor.com.pk,CDN,Cloudflare,82477
+jenpharm.com,CDN,Cloudflare,86037
+exportleftovers.com,CDN,Cloudflare,66349
+dawlance.com.pk,Abroad,Vodafone Net Iletisim Hizmetleri A.S. (TR),86815
+sapphireonline.pk,Abroad,easyDNS Technologies  Inc. (CA),9831
+limelight.pk,CDN,Cloudflare,10615
+khaadi.com,CDN,AWS CloudFront,22433
+breakout.com.pk,CDN,Cloudflare,90736
+audionic.co,CDN,Cloudflare,88406
+ndure.com,CDN,Cloudflare,82535
+engine.com.pk,CDN,Cloudflare,87906
+bachaaparty.com,CDN,Cloudflare,60688
+mistore.pk,CDN,Cloudflare,80717
+crossstitch.pk,CDN,Cloudflare,84930
+alfatah.pk,CDN,Cloudflare,70640
+bonanzasatrangi.com,CDN,Cloudflare,74067
+czone.com.pk,CDN,Cloudflare,552131
+asimjofa.com,CDN,Cloudflare,83526
+metro-online.pk,Abroad,WHG Hosting Services Ltd (SG),556388
+bata.com.pk,CDN,Cloudflare,84915
+unze.com.pk,CDN,Cloudflare,87301
+chasevalue.pk,CDN,Cloudflare,76212
+paklap.pk,CDN,Cloudflare,178170
+alkaramstudio.com,CDN,Cloudflare,67384
+haier.com,Abroad,IDC  China Telecommunications Corporation (CN),26822
+shopecs.com,CDN,Cloudflare,85421
+zahcomputers.pk,CDN,Cloudflare,520826
+mariab.pk,CDN,Cloudflare,83520
+peekaboo.guru,CDN,Cloudflare,346563
+generation.com.pk,CDN,Cloudflare,198954
+alladin.pk,CDN,Cloudflare,209133
+alfamall.com,CDN,AWS,598079
+saeedghani.pk,CDN,Cloudflare,84648
+diners.com.pk,CDN,Cloudflare,91639
+eezepc.com,CDN,Cloudflare,423549
+zeenwoman.com,CDN,Cloudflare,82003
+minnieminors.com,CDN,Cloudflare,86453
+cougar.com.pk,CDN,Cloudflare,612891
+logoofficial.com,CDN,Cloudflare,91746
+cliveshoes.com,CDN,Cloudflare,72975
+ronin.pk,CDN,Cloudflare,209734
+w11stop.com,CDN,Cloudflare,170942
+sanasafinaz.com,CDN,Cloudflare,85333
+myvitaminstore.pk,CDN,Cloudflare,449550
+wellshop.pk,Abroad,Namecheap  Inc. (US),395905
+telemart.pk,CDN,Cloudflare,441765
+xcessorieshub.com,CDN,Cloudflare,593751
+scentsnstories.pk,CDN,Cloudflare,66738
+phonecase.pk,CDN,Cloudflare,167571
+motifz.com.pk,CDN,Cloudflare,180276
+surmawala.pk,CDN,Cloudflare,662974
+furorjeans.com,CDN,Cloudflare,198947
+tclpakistan.com,CDN,AWS,212755
+mega.pk,CDN,Cloudflare,158359
+insignia.com.pk,CDN,Cloudflare,86346
+gracestore.pk,CDN,Cloudflare,89866
+urbansole.com.pk,CDN,Cloudflare,205688
+
+# ===== Airlines [CDN 3 · Abroad 2 · PK 0] =====
+piac.com.pk,CDN,Cloudflare,108094
+airblue.com,CDN,Cloudflare,76915
+sereneair.com,Abroad,Namecheap  Inc. (US),
+airsial.com,Abroad,Namecheap  Inc. (US),178333
+flyjinnah.com,CDN,Microsoft/Azure,172361
+
+# ===== Bus / Public Transport [CDN 0 · Abroad 4 · PK 1] =====
+daewoo.com.pk,Abroad,Hetzner Online GmbH (DE),608094
+niaziexpress.com.pk,Abroad,WHG Hosting Services Ltd (US),
+skyways.pk,Abroad,20i Limited (GB),
+roadmaster.pk,Pakistani,Pakistan Telecommuication company limited,
+faisalmovers.com,Abroad,Hostinger MY (MY),780572
+
+# ===== Insurance [CDN 5 · Abroad 5 · PK 3] =====
+asiainsurance.com.pk,Abroad,Hetzner Online GmbH (FI),
+efulife.com,Pakistani,EFU LIFE Assurance Ltd,567489
+atlas.pk,Abroad,pair Networks (US),761144
+statelife.com.pk,CDN,Cloudflare,569756
+jubileelife.com,Abroad,Oracle Corporation (AE),
+pakqatar.com.pk,Abroad,Hetzner Online GmbH (FI),814085
+tplinsurance.com,Pakistani,Cyber Internet Services Pakistan,
+pral.com.pk,Pakistani,Federal Board of Revenue,
+igiinsurance.com.pk,CDN,Cloudflare,
+theunitedinsurance.com,CDN,Cloudflare,833662
+adamjeelife.com,CDN,Cloudflare,
+smartchoice.pk,CDN,AWS,
+efuhemayahtakaful.com,Abroad,Tiggee LLC (US),
+
+# ===== Courts [CDN 2 · Abroad 2 · PK 1] =====
+bhc.gov.pk,Abroad,Unified Layer (US),
+sindhhighcourt.gov.pk,CDN,Cloudflare,196767
+lhc.gov.pk,Pakistani,Punjab Information Technology Board,333207
+peshawarhighcourt.gov.pk,Abroad,Hetzner Online GmbH (DE),442350
+supremecourt.gov.pk,CDN,Akamai,329665
+
+# ===== Banks [CDN 21 · Abroad 5 · PK 3 · unresolved 3] =====
+jazzcash.com.pk,CDN,Cloudflare,56837
+easypaisa.com.pk,CDN,AWS,144365
+abl.com,CDN,Cloudflare,282373
+askaribank.com.pk,CDN,Cloudflare,485756
+bankalhabib.com,CDN,Microsoft/Azure,140127
+bankalfalah.com,CDN,Microsoft/Azure,145031
+burjbankltd.com,Abroad,Yancy Limited (US),
+bop.com.pk,CDN,Imperva/Incapsula,342519
+bok.com.pk,Abroad,Liquid Web  L.L.C (US),528024
+citibank.com,CDN,Akamai,13013
+dibpak.com,CDN,Cloudflare,947986
+fwbl.com.pk,CDN,Cloudflare,
+faysalbank.com,CDN,Cloudflare,262071
+hbl.com,CDN,Imperva/Incapsula,135967
+habibmetro.com,Abroad,Dosarrest Internet Security LTD (US),592105
+habibbank.com,CDN,AWS,556780
+jsbl.com,CDN,Cloudflare,361490
+khushhalibank.com.pk,CDN,AWS CloudFront,
+kasb.com,Abroad,DigitalOcean  LLC (US),
+mcb.com.pk,CDN,Sucuri,276384
+meezanbank.com,CDN,Cloudflare,55784
+nibpk.com,CDN,AWS,
+sbp.org.pk,CDN,Cloudflare,83531
+standardchartered.com.pk,Abroad,Vercara  LLC (US),
+pak.samba.com,unresolved,,
+silkbank.com.pk,Pakistani,Cyber Internet Services Pakistan,
+soneribank.com,CDN,Cloudflare,976750
+summitbank.com.pk,unresolved,,
+tameerbank.com,CDN,AWS,
+unionbank.com.pk,unresolved,,
+ubldirect.com,Pakistani,United Bank Limited,428966
+ztbl.com.pk,Pakistani,Cyber Internet Services (Private) Limited,853941
+
+# ===== Chinese/HK (PK-hosted infra via S.B Link Network) [CDN 0 · Abroad 0 · PK 4] =====
+cntv.cn,Pakistani,Gerrys Information Technology (PVT) Ltd,7936
+youth.cn,Pakistani,Gerrys Information Technology (PVT) Ltd,13948
+toptop.net,Pakistani,Gerrys Information Technology (PVT) Ltd,17707
+flashget.com,Pakistani,Gerrys Information Technology (PVT) Ltd,20258
+
+# ===== Government / Education (PK-hosted, ISP noted in source) [CDN 0 · Abroad 0 · PK 4] =====
+vu.edu.pk,Pakistani,HEC,1860
+pitc.com.pk,Pakistani,PITC,1876
+punjabpolice.gov.pk,Pakistani,Punjab Information Technology Board,9830
+punjab.gov.pk,Pakistani,Punjab Information Technology Board,15695
+#
+
+# ################## Tranco .pk additions (categorized by sub-TLD) ##################
+
+# ===== Tranco .pk: Government [CDN 31 · Abroad 9 · PK 83 · unresolved 1] =====
+bisp.gov.pk,CDN,Cloudflare,9859
+nadra.gov.pk,CDN,Akamai,19243
+weboc.gov.pk,Pakistani,Cyber Internet Services Pakistan,22846
+hec.gov.pk,Pakistani,HEC,41326
+fbr.gov.pk,Pakistani,Federal Board of Revenue,46852
+mofa.gov.pk,Pakistani,National Telecommunication Corporation,50073
+pta.gov.pk,Pakistani,National Telecommunication Corporation,61712
+dgip.gov.pk,Pakistani,National Telecommunication Corporation,78805
+beoe.gov.pk,CDN,Cloudflare,80021
+fia.gov.pk,Pakistani,National Telecommunication Corporation,80830
+punjab-zameen.gov.pk,Pakistani,Punjab Land Records Authority,82132
+fpsc.gov.pk,Pakistani,National Telecommunication Corporation,82408
+pshealthpunjab.gov.pk,Pakistani,NEXLINX,82618
+njp.gov.pk,Pakistani,National Telecommunication Corporation,85360
+ep.gov.pk,Pakistani,Nayatel (Pvt) Ltd,86235
+sindheducation.gov.pk,Abroad,OVH SAS (CA),92841
+apnaghar.gov.pk,CDN,Cloudflare,93799
+pave.gov.pk,Pakistani,Punjab Information Technology Board,95129
+pitb.gov.pk,Pakistani,Punjab Information Technology Board,105814
+kp.gov.pk,Pakistani,National Telecommunication Corporation,129768
+radio.gov.pk,CDN,Cloudflare,152348
+psw.gov.pk,Pakistani,Pakistan Single Window,152909
+sindhpolice.gov.pk,CDN,Cloudflare,165190
+joinpakarmy.gov.pk,Pakistani,COMSATS,167941
+balochistan.gov.pk,CDN,Cloudflare,169558
+secp.gov.pk,CDN,Cloudflare,176147
+ajk.gov.pk,CDN,Cloudflare,178981
+kppsc.gov.pk,Abroad,Hetzner Online GmbH (DE),186459
+pakrailways.gov.pk,CDN,Cloudflare,199096
+joinpaknavy.gov.pk,CDN,Cloudflare,207981
+epads.gov.pk,Pakistani,Pakistan Telecommuication company limited,208609
+kppolice.gov.pk,CDN,Cloudflare,208990
+fgei.gov.pk,CDN,Cloudflare,214798
+lmis.gov.pk,Pakistani,National Telecom Corporation,215730
+ajkpsc.gov.pk,Pakistani,PTCL ITI Future Connect 79,227593
+sco.gov.pk,Pakistani,Micronet,243678
+pmd.gov.pk,CDN,Cloudflare,244550
+na.gov.pk,Pakistani,National Telecommunication Corporation,258457
+pbs.gov.pk,Pakistani,National Telecom Corporation,264994
+finance.gov.pk,CDN,Cloudflare,282401
+paknavy.gov.pk,CDN,Cloudflare,288229
+spsc.gov.pk,Pakistani,Gemnet Enterprise Solutions Pvt Ltd,290190
+pakistan.gov.pk,Pakistani,Cyber Internet Services (Private) Limited,322125
+ecp.gov.pk,Pakistani,Pakistan Telecommuication company limited,340618
+pap.gov.pk,Pakistani,PITB RO,350963
+sindh.gov.pk,Pakistani,National Telecommunication Corporation,353152
+dra.gov.pk,Pakistani,COMSATS,370105
+navttc.gov.pk,CDN,Cloudflare,376231
+wapda.gov.pk,Pakistani,PITC,386457
+pakrail.gov.pk,Pakistani,National Telecommunication Corporation,402582
+senate.gov.pk,Pakistani,National Telecommunication Corporation,414171
+shc.gov.pk,CDN,Cloudflare,418551
+pakpost.gov.pk,Pakistani,Cyber Internet Services (Private) Limited,420583
+kpese.gov.pk,Pakistani,National Telecommunication Corporation,422317
+agripunjab.gov.pk,Pakistani,Punjab Information Technology Board,439762
+cda.gov.pk,Pakistani,Multinet 125-107/24,443209
+pmyp.gov.pk,Pakistani,National Telecommunication Corporation,443229
+paf.gov.pk,Pakistani,National Telecommunication Corporation,444933
+savings.gov.pk,Pakistani,National Telecommunication Corporation,497267
+mod.gov.pk,Pakistani,Cyber Internet Services (Private) Limited,502758
+islamabadpolice.gov.pk,Pakistani,National Telecommunication Corporation,507095
+punjabhec.gov.pk,CDN,Cloudflare,513514
+rescue.gov.pk,Abroad,Internap Holding LLC (US),517976
+weather.gov.pk,CDN,Cloudflare,519819
+ihc.gov.pk,Pakistani,National Telecommunication Corporation,529873
+cabinet.gov.pk,Pakistani,National Telecommunication Corporation,536939
+oec.gov.pk,Pakistani,Nayatel (Pvt) Ltd,540873
+eobi.gov.pk,Pakistani,COMSATS,541803
+nitb.gov.pk,Pakistani,Cyber Internet Services (Private) Limited,553934
+lgkp.gov.pk,Pakistani,National Telecommunication Corporation,565966
+ipo.gov.pk,Pakistani,Punjab Information Technology Board,582634
+pid.gov.pk,Pakistani,COMSATS,615425
+commerce.gov.pk,CDN,Cloudflare,620136
+citizenportal.gov.pk,Pakistani,National Telecommunication Corporation,634899
+mlc.gov.pk,CDN,Cloudflare,635988
+pakistanrangerssindh.gov.pk,Pakistani,Micronet,636235
+pnmc.gov.pk,CDN,Cloudflare,636332
+establishment.gov.pk,Pakistani,National Telecommunication Corporation,639791
+pedokp.gov.pk,Pakistani,National Telecommunication Corporation,650986
+tdap.gov.pk,CDN,Cloudflare,655213
+tourism.gov.pk,Pakistani,Cyber Internet Services (Private) Limited,662176
+scp.gov.pk,CDN,Cloudflare,668477
+elearn.gov.pk,Pakistani,PITB RO,668728
+cpec.gov.pk,Pakistani,National Telecommunication Corporation,694396
+mohtasib.gov.pk,Pakistani,Cyber Internet Services (Private) Limited,699419
+pccc.gov.pk,Abroad,GoDaddy.com  LLC (US),702705
+eprocure.gov.pk,Pakistani,Pakistan Telecommuication company limited,704545
+paa.gov.pk,Pakistani,Pakistan Telecommuication company limited,705896
+ppra.gov.pk,Pakistani,Pakistan Telecommuication company limited,705932
+eoc.gov.pk,Pakistani,Nayatel (Pvt) Ltd,721112
+pc.gov.pk,Pakistani,National Telecommunication Corporation,725201
+csd.gov.pk,CDN,Cloudflare,742039
+anf.gov.pk,Pakistani,National Telecommunication Corporation,746096
+adrspunjab.gov.pk,CDN,Cloudflare,756982
+balochistanpolice.gov.pk,Pakistani,PTCL ITI Karachi 3,762494
+cmu.gov.pk,Pakistani,Nayatel (Pvt) Ltd,770706
+efan.gov.pk,Pakistani,PITB RO,777695
+eoffice.gov.pk,unresolved,,778866
+healthkp.gov.pk,Pakistani,National Telecommunication Corporation,788043
+islamabadexcise.gov.pk,Pakistani,Cyber Internet Services (Private) Limited,792406
+joinasf.gov.pk,CDN,Cloudflare,794308
+karachipolice.gov.pk,Abroad,Hostinger International Limited (ID),795592
+kpdata.gov.pk,Pakistani,WideBand Communications(Pvt)Ltd,797708
+kpst.gov.pk,Pakistani,National Telecommunication Corporation,797742
+mohw.gov.pk,Pakistani,Cyber Internet Services (Private) Limited,806431
+nhmp.gov.pk,Pakistani,Cyber Internet Services (Private) Limited,810199
+opmispunjab.gov.pk,Abroad,,812910
+pbm.gov.pk,Pakistani,National Telecommunication Corporation,814977
+peshawarhcmb.gov.pk,Pakistani,Pakistan Telecommuication company limited,815493
+pifra.gov.pk,Pakistani,Cyber Internet Services (Private) Limited,816153
+pmrugb.gov.pk,Abroad,HOSTINGER US (US),817054
+ptpkp.gov.pk,CDN,Cloudflare,818928
+swkpk.gov.pk,Pakistani,National Telecommunication Corporation,831251
+wpdgb.gov.pk,Abroad,Limestone Networks (US),842467
+ndma.gov.pk,Pakistani,Pakistan Telecommuication company limited,847212
+pmhealthprogram.gov.pk,CDN,Akamai,878786
+surveyofpakistan.gov.pk,Pakistani,Cyber Internet Services (Private) Limited,881037
+molaw.gov.pk,Pakistani,Cyber Internet Services (Private) Limited,884517
+mofept.gov.pk,Pakistani,Cyber Internet Services (Private) Limited,889323
+kppra.gov.pk,Pakistani,National Telecommunication Corporation,891923
+pspc.gov.pk,Pakistani,National Telecommunication Corporation,916696
+sindhhealth.gov.pk,Abroad,DigitalOcean  LLC (US),933716
+punjablaws.gov.pk,Pakistani,PITB RO,970327
+pof.gov.pk,CDN,Cloudflare,982214
+
+# ===== Tranco .pk: Education [CDN 78 · Abroad 55 · PK 44 · unresolved 1] =====
+fbise.edu.pk,CDN,Cloudflare,10881
+aiou.edu.pk,Pakistani,HEC,19302
+lums.edu.pk,Abroad,,39878
+pu.edu.pk,Pakistani,HEC,53105
+nust.edu.pk,CDN,Cloudflare,56232
+comsats.edu.pk,CDN,Cloudflare,59476
+pesrp.edu.pk,Pakistani,Nexlinx,65655
+nu.edu.pk,Pakistani,COMSATS,69369
+superior.edu.pk,CDN,Cloudflare,69463
+cpsp.edu.pk,Pakistani,HEC,70696
+uol.edu.pk,CDN,Cloudflare,70779
+uhs.edu.pk,CDN,Cloudflare,75874
+ucp.edu.pk,CDN,Cloudflare,78237
+usindh.edu.pk,Abroad,Hetzner Online GmbH (DE),79024
+banuri.edu.pk,CDN,Cloudflare,81258
+cust.edu.pk,CDN,Cloudflare,86070
+bisegrw.edu.pk,CDN,Cloudflare,86254
+bisemultan.edu.pk,Pakistani,Mobilink GSM,87821
+uog.edu.pk,Abroad,Hetzner Online GmbH (DE),88399
+mul.edu.pk,Abroad,Liquid Web  L.L.C (US),88978
+pefsis.edu.pk,Pakistani,PTCL Triple Play Project,95138
+uoel.edu.pk,CDN,AWS,95759
+uaar.edu.pk,CDN,Cloudflare,96724
+bbise.edu.pk,Pakistani,Wateen Telecom Limited,102173
+riphah.edu.pk,CDN,Cloudflare,114151
+qau.edu.pk,Pakistani,HEC,120026
+muet.edu.pk,CDN,Cloudflare,129126
+neduet.edu.pk,unresolved,,134996
+umt.edu.pk,CDN,Cloudflare,135746
+bahria.edu.pk,Pakistani,HEC,136893
+gudgk.edu.pk,CDN,Cloudflare,140103
+iba.edu.pk,CDN,Sucuri,148651
+uet.edu.pk,CDN,Cloudflare,152048
+pieas.edu.pk,Pakistani,HEC,159734
+iqra.edu.pk,Pakistani,Iqra University,161571
+duhs.edu.pk,CDN,Microsoft/Azure,161933
+uaf.edu.pk,Pakistani,COMSATS,165073
+abasynisb.edu.pk,CDN,Cloudflare,171077
+gcuf.edu.pk,CDN,Microsoft/Azure,173561
+bisesahiwal.edu.pk,CDN,Cloudflare,174730
+gcu.edu.pk,CDN,Sucuri,177547
+hu.edu.pk,CDN,Cloudflare,189116
+uoh.edu.pk,Abroad,Hetzner Online GmbH (DE),192344
+bisefsd.edu.pk,CDN,Cloudflare,194735
+etea.edu.pk,Pakistani,Orient Express LDI Limited,201321
+paf-iast.edu.pk,CDN,Cloudflare,202760
+gift.edu.pk,CDN,AWS,203870
+bisesargodha.edu.pk,Pakistani,CMPak Limited,209947
+bisep.edu.pk,CDN,Cloudflare,213969
+cu.edu.pk,CDN,Cloudflare,214314
+iulms.edu.pk,Pakistani,Iqra University,215354
+kfueit.edu.pk,Pakistani,NTC LHR F-51/1 Dynamic BRAS,226455
+biselrk.edu.pk,Abroad,HOSTINGER MY (MY),227733
+numl.edu.pk,Pakistani,HEC,230948
+pectaa.edu.pk,Abroad,WHG Hosting Services Ltd (US),240660
+iiu.edu.pk,CDN,Cloudflare,278505
+bnu.edu.pk,Pakistani,NEXLINX,283995
+iub.edu.pk,Pakistani,HEC,294518
+fccollege.edu.pk,CDN,Cloudflare,319641
+bzu.edu.pk,Abroad,Hetzner Online GmbH (DE),320642
+ue.edu.pk,Abroad,Hetzner Online GmbH (FI),321654
+eduvision.edu.pk,CDN,Cloudflare,322437
+au.edu.pk,CDN,Cloudflare,332549
+hbs.edu.pk,Abroad,Enix Ltd (GB),338357
+giki.edu.pk,Pakistani,Pakistan Telecommuication company limited,339768
+uvas.edu.pk,Abroad,HOSTINGER (SG),340898
+uop.edu.pk,Pakistani,HEC,354886
+uettaxila.edu.pk,CDN,Cloudflare,374457
+kmu.edu.pk,CDN,Cloudflare,383180
+szabist.edu.pk,Pakistani,HEC,383813
+zu.edu.pk,CDN,Cloudflare,384473
+su.edu.pk,CDN,Cloudflare,385287
+ntu.edu.pk,CDN,Cloudflare,386442
+uok.edu.pk,Pakistani,National Telecommunication Corporation,395271
+uob.edu.pk,Abroad,,396959
+iobm.edu.pk,Abroad,HOSTINGER US (US),405086
+stmu.edu.pk,CDN,Cloudflare,422711
+alqadir.edu.pk,Abroad,Hetzner Online GmbH (DE),428046
+ric.edu.pk,CDN,Cloudflare,432461
+kinnaird.edu.pk,Abroad,netcup GmbH (DE),463415
+iba-suk.edu.pk,Pakistani,HEC,464344
+biek.edu.pk,Abroad,Contabo GmbH (FR),467438
+lcwu.edu.pk,Abroad,UK Dedicated Servers Limited (GB),476651
+fui.edu.pk,CDN,Cloudflare,478814
+iiui.edu.pk,Abroad,Namecheap  Inc. (US),505304
+ist.edu.pk,CDN,Cloudflare,505474
+itu.edu.pk,Abroad,HOSTINGER SG (SG),508028
+hamdard.edu.pk,Abroad,LiquidNet US LLC (US),509141
+qurtuba.edu.pk,Abroad,Hetzner Online GmbH (DE),517098
+lumhs.edu.pk,Abroad,GoDaddy.com  LLC (US),518333
+habib.edu.pk,CDN,AWS,520467
+bisedgkhan.edu.pk,Abroad,Tier.Net Technologies LLC (US),524798
+lgu.edu.pk,CDN,Cloudflare,532983
+szabist-isb.edu.pk,Pakistani,HEC,549506
+salu.edu.pk,Pakistani,HEC,550370
+duet.edu.pk,Abroad,Limestone Networks (US),555488
+ssuet.edu.pk,Abroad,FortressITX (DE),571139
+numspak.edu.pk,CDN,Cloudflare,571429
+juw.edu.pk,Abroad,TierPoint  LLC (US),575346
+thecityschool.edu.pk,CDN,Cloudflare,581704
+biseatd.edu.pk,Abroad,Namecheap  Inc. (US),599084
+uos.edu.pk,CDN,Cloudflare,602396
+csn.edu.pk,Pakistani,PTCL ITI Lahore 7,602541
+imsciences.edu.pk,CDN,Cloudflare,604227
+ndu.edu.pk,Pakistani,National Telecommunication Corporation,606704
+ibcc.edu.pk,CDN,Cloudflare,607569
+kiet.edu.pk,CDN,Cloudflare,607770
+bisebwp.edu.pk,Pakistani,Pakistan Telecommuication company limited,610540
+riphahfsd.edu.pk,Abroad,Host Europe GmbH (GB),611370
+awkum.edu.pk,CDN,Cloudflare,623496
+kpbte.edu.pk,Pakistani,LINKdotNET Telecom Limited,626004
+dsu.edu.pk,CDN,Google,630408
+pac.edu.pk,CDN,Cloudflare,634054
+bisekt.edu.pk,CDN,Cloudflare,634739
+isp.edu.pk,CDN,Cloudflare,635557
+kohat.edu.pk,Pakistani,HEC,635744
+beaconhouse.edu.pk,CDN,Cloudflare,654179
+tuf.edu.pk,CDN,Cloudflare,659605
+cuiatd.edu.pk,CDN,Cloudflare,662600
+seecs.edu.pk,Pakistani,HEC,664261
+bnbwu.edu.pk,CDN,Sucuri,666388
+lahoreschool.edu.pk,Abroad,Hetzner Online GmbH (DE),668284
+scholastic.edu.pk,Abroad,HOSTINGER (SG),672869
+isra.edu.pk,Pakistani,Gemnet Enterprise Solutions Pvt Ltd,714488
+bisemdn.edu.pk,Abroad,Hetzner Online GmbH (FI),723983
+giu.edu.pk,CDN,Cloudflare,730981
+nca.edu.pk,Abroad,HostDime.com  Inc. (US),731047
+mmi.edu.pk,Abroad,DigitalOcean  LLC (SG),732602
+ayubmed.edu.pk,Abroad,Liquid Web  L.L.C (US),733315
+must.edu.pk,CDN,Cloudflare,743812
+smiu.edu.pk,Abroad,HostGator.com LLC (US),744471
+beaconlightacademy.edu.pk,CDN,AWS,744510
+biserawalpindi.edu.pk,CDN,Cloudflare,746580
+rihs.edu.pk,Pakistani,LINKdotNET Telecom Limited,747851
+aror.edu.pk,CDN,Microsoft/Azure,760401
+aust.edu.pk,Pakistani,LINKdotNET Telecom Limited,761391
+baraniinstitute.edu.pk,CDN,Cloudflare,762721
+bgnu.edu.pk,Abroad,Hetzner Online GmbH (DE),764372
+bisedik.edu.pk,Abroad,Hetzner Online GmbH (DE),764991
+bisemalakand.edu.pk,Abroad,Hetzner Online AG (DE),764992
+bisess.edu.pk,Abroad,20i Limited (GB),764994
+brightvision.edu.pk,Abroad,Namecheap  Inc. (US),766470
+bsek.edu.pk,Abroad,Hetzner Online GmbH (DE),766662
+cuiwah.edu.pk,Pakistani,COMSATS,772668
+fuuast.edu.pk,CDN,Cloudflare,783415
+ilmauniversity.edu.pk,Abroad,org.interserver.net (US),790911
+jdihs.edu.pk,CDN,Cloudflare,793493
+kasbit.edu.pk,Abroad,GoDaddy.com  LLC (SG),795706
+lnh.edu.pk,Abroad,Contabo GmbH (FR),800517
+maju.edu.pk,Pakistani,Wateen Telecom Limited,802558
+millenniumschools.edu.pk,Pakistani,CIS Islamabad,805438
+ngss.edu.pk,Abroad,Hetzner Online GmbH (FI),810163
+pbte.edu.pk,Pakistani,Punjab Information Technology Board,814984
+pef.edu.pk,Pakistani,National Telecom Corporation,815174
+pgc.edu.pk,CDN,Cloudflare,815666
+pmei.edu.pk,Abroad,GoDaddy.com  LLC (US),817037
+pmfpunjab.edu.pk,Pakistani,Punjab Information Technology Board,817038
+quest.edu.pk,Pakistani,HEC,819761
+rills.edu.pk,Abroad,Hostinger MY (MY),821930
+rmur.edu.pk,Abroad,Hetzner Online GmbH (FI),822161
+szabmu.edu.pk,CDN,Cloudflare,831419
+ubas.edu.pk,CDN,Cloudflare,836811
+ucs.edu.pk,CDN,Cloudflare,836891
+unique.edu.pk,Abroad,GD MASS Network (FR),837637
+upr.edu.pk,Abroad,Oracle Corporation (US),837962
+zueb.edu.pk,CDN,Cloudflare,845698
+bims.edu.pk,Abroad,Hostinger International Limited (SG),870543
+case.edu.pk,Pakistani,COMSATS,871082
+dps.edu.pk,CDN,Cloudflare,872285
+sundarstem.edu.pk,Abroad,The Constant Company (SG),880980
+uchenab.edu.pk,Abroad,Hostinger International Limited (US),882033
+uetmardan.edu.pk,Abroad,GoDaddy.com  LLC (US),882058
+stbb.edu.pk,CDN,Cloudflare,884252
+tu.edu.pk,CDN,Cloudflare,921202
+fjwu.edu.pk,CDN,Cloudflare,926007
+kemu.edu.pk,Abroad,Hostinger International Limited (SG),955028
+uo.edu.pk,CDN,AWS,979372
+pct.edu.pk,CDN,Cloudflare,982944
+
+# ===== Tranco .pk: Commercial [CDN 200 · Abroad 114 · PK 27 · unresolved 7] =====
+google.com.pk,CDN,Google,3963
+ogomovies1.com.pk,CDN,Cloudflare,10087
+olx.com.pk,CDN,AWS CloudFront,14547
+watch-movies.com.pk,CDN,Cloudflare,22080
+psx.com.pk,Abroad,Dosarrest Internet Security LTD (US),62082
+host.com.pk,Abroad,Oracle Corporation (US),64504
+tes.com.pk,CDN,Cloudflare,75628
+express.com.pk,CDN,Cloudflare,77218
+borjan.com.pk,CDN,Cloudflare,86723
+batik.com.pk,CDN,Cloudflare,88769
+missrose.com.pk,CDN,Cloudflare,89907
+capcutapkdownload.com.pk,Abroad,PUSHPKT OU (EE),90451
+almirah.com.pk,CDN,Cloudflare,90509
+zarr.com.pk,CDN,Cloudflare,93345
+castleapk.com.pk,Abroad,PUSHPKT OU (NL),93989
+cll.com.pk,Pakistani,NEXLINX,94036
+maxfun.com.pk,Abroad,,94860
+hushpuppies.com.pk,CDN,Cloudflare,96908
+app.com.pk,CDN,Cloudflare,97113
+simosa.com.pk,CDN,Cloudflare,98794
+plinko.com.pk,CDN,Cloudflare,119140
+ubuy.com.pk,CDN,Cloudflare,134881
+ypel.com.pk,CDN,Cloudflare,150492
+nbp.com.pk,CDN,Cloudflare,156541
+logon.com.pk,Pakistani,Logon Broadband Pvt. Limited,158595
+pcb.com.pk,CDN,Cloudflare,170868
+kkn.com.pk,Pakistani,AMBITIONS COMMUNICATION SYSTEM (SMC-PRIVATE) LIMITED,171971
+japanelectronics.com.pk,CDN,Cloudflare,172779
+springs.com.pk,CDN,Cloudflare,180453
+ssgc.com.pk,unresolved,,184179
+royaltag.com.pk,CDN,Cloudflare,185074
+mepco-it.com.pk,Pakistani,PITC,193482
+shell.com.pk,CDN,Microsoft/Azure,193651
+rollover.com.pk,CDN,Cloudflare,194978
+atlashonda.com.pk,CDN,Sucuri,197220
+herbiotics.com.pk,CDN,Cloudflare,198970
+miniclub.com.pk,CDN,Cloudflare,199693
+colgate-palmolive.com.pk,unresolved,,208413
+calza.com.pk,CDN,Cloudflare,209617
+alahmar.com.pk,Abroad,Hostinger International Limited (US),213640
+cocobee.com.pk,CDN,Cloudflare,214197
+dakkhana.com.pk,Pakistani,Nayatel (Pvt) Ltd,214362
+gepcoerp.com.pk,Pakistani,Pakistan Telecommuication company limited,214973
+hrd1902.com.pk,Pakistani,HEC,215205
+mgacs.com.pk,Pakistani,Connect Communication,215983
+moltyfoam.com.pk,CDN,Cloudflare,216060
+ourelitehealth.com.pk,CDN,Cloudflare,216421
+apkjackpot.com.pk,Abroad,Namecheap  Inc. (US),227628
+castleapp.com.pk,CDN,Cloudflare,227792
+datacorporation.com.pk,CDN,Cloudflare,227884
+ipaddress.com.pk,CDN,Cloudflare,232717
+mostbet.com.pk,CDN,AWS,248678
+kknetworks.com.pk,Pakistani,KK Networks (Pvt) Ltd.,252690
+shopatshams.com.pk,CDN,Cloudflare,263604
+jazzesl.com.pk,Pakistani,Nayatel (Pvt) Ltd,277572
+nawaiwaqt.com.pk,Abroad,Hetzner Online GmbH (FI),294028
+generations.com.pk,CDN,Cloudflare,307694
+twinkl.com.pk,CDN,Imperva/Incapsula,324877
+zcomnetworks.com.pk,Pakistani,Z COM NETWORKS,326580
+armored.com.pk,Abroad,UK Dedicated Servers Limited (GB),347924
+minutemirror.com.pk,CDN,Cloudflare,350039
+hblibank.com.pk,CDN,Imperva/Incapsula,354625
+rawayat.com.pk,CDN,Cloudflare,356521
+elb.com.pk,Pakistani,Z COM NETWORKS,371462
+apkshoot.com.pk,CDN,Cloudflare,372065
+phoneworld.com.pk,CDN,Cloudflare,373441
+youtube.com.pk,CDN,Google,383314
+connectel.com.pk,Abroad,OVH SAS (US),393449
+alfatah.com.pk,Abroad,Hostinger International Limited (ID),395212
+readings.com.pk,CDN,AWS CloudFront,400219
+tgtstore.com.pk,CDN,Cloudflare,410687
+oup.com.pk,Abroad,Hetzner Online GmbH (FI),428926
+apkshoots.com.pk,CDN,Cloudflare,432686
+home360.com.pk,CDN,Cloudflare,445673
+homenet.com.pk,Abroad,OVH SAS (AU),448896
+sngpl.com.pk,Pakistani,Wateen Telecom Limited,450507
+honda.com.pk,CDN,Cloudflare,465788
+dailyaaj.com.pk,CDN,Cloudflare,467050
+babiesworld.com.pk,CDN,Cloudflare,472401
+onic.com.pk,CDN,Cloudflare,475445
+thesiswritinghelp.com.pk,Abroad,Hostinger International Limited (GB),485009
+medicalstore.com.pk,CDN,Cloudflare,496446
+dogar.com.pk,CDN,Cloudflare,503389
+dnd.com.pk,CDN,Cloudflare,525890
+charaghdinrice.com.pk,Abroad,Hetzner Online GmbH (DE),526719
+ptv.com.pk,CDN,Cloudflare,533233
+opendata.com.pk,CDN,AWS,541449
+islamabadairport.com.pk,Pakistani,Pakistan Telecommuication company limited,542722
+max.com.pk,Abroad,Hostinger International Limited (GB),545852
+brandedcutpieces.com.pk,CDN,Cloudflare,546547
+pgf.com.pk,Abroad,SoftLayer (US),549696
+fasttel.com.pk,Abroad,Namecheap  Inc. (US),552423
+extremesportswear.com.pk,Abroad,Namecheap  Inc. (US),554462
+qeemat.com.pk,CDN,Cloudflare,557463
+sundaybazar.com.pk,CDN,Cloudflare,560694
+vs.com.pk,CDN,Cloudflare,560714
+almumtaz.com.pk,CDN,Cloudflare,560917
+accountancy.com.pk,CDN,Cloudflare,562423
+mgmotors.com.pk,Abroad,Hetzner Online GmbH (DE),564516
+pakhome.com.pk,Abroad,FranTech Solutions (LU),566282
+albaraka.com.pk,CDN,Sucuri,566495
+essentia.com.pk,CDN,Cloudflare,582099
+philips.com.pk,CDN,Cloudflare,584302
+lahoreairport.com.pk,Pakistani,Pakistan Telecommuication company limited,588109
+metroshoes.com.pk,Pakistani,COMSATS,592654
+tanabana.com.pk,CDN,Cloudflare,593439
+monark.com.pk,CDN,Cloudflare,593842
+broadwaypizza.com.pk,CDN,AWS,596636
+shifa.com.pk,CDN,Cloudflare,597497
+safrinskincare.com.pk,CDN,Cloudflare,597987
+thehijabeez.com.pk,CDN,Cloudflare,598249
+lifestyle-collection.com.pk,CDN,Cloudflare,599957
+nlc.com.pk,CDN,Cloudflare,600016
+ijc.com.pk,Abroad,WEBSITEWELCOME.COM (US),603101
+callcourier.com.pk,Pakistani,Gerrys Information Technology (PVT) Ltd,613351
+list.com.pk,CDN,Cloudflare,613780
+ffc.com.pk,CDN,Cloudflare,615451
+dominos.com.pk,CDN,AWS,616528
+laptab.com.pk,Abroad,Hostinger International Limited (LT),618850
+hianime.com.pk,CDN,Cloudflare,620065
+gotest.com.pk,CDN,Cloudflare,625335
+skmei.com.pk,CDN,Cloudflare,629601
+trovit.com.pk,Abroad,COLT Technology Services Group Limited (ES),629621
+ppl.com.pk,CDN,AWS,629900
+apricot.com.pk,CDN,Cloudflare,633903
+goldenpearl.com.pk,CDN,Cloudflare,634018
+dex.com.pk,Abroad,Alibaba (US) Technology Co.  Ltd. (SG),635026
+glaxydollars.com.pk,Abroad,WHG Hosting Services Ltd (US),635311
+okla.com.pk,Abroad,GoDaddy.com  LLC (US),636183
+qalamkar.com.pk,CDN,Cloudflare,636402
+recruitments.com.pk,CDN,Cloudflare,636451
+sapphirestudio.com.pk,CDN,Cloudflare,636545
+mns.com.pk,CDN,Cloudflare,641679
+watchprice.com.pk,Abroad,Ultahost  Inc. (NL),659099
+tulips.com.pk,CDN,Cloudflare,662978
+powerhouseexpress.com.pk,CDN,Cloudflare,663507
+mustaqbel.com.pk,Abroad,Oracle Corporation (US),667207
+boe.com.pk,CDN,Cloudflare,668005
+pagalworld.com.pk,CDN,Cloudflare,668116
+skygames.com.pk,CDN,Cloudflare,668153
+ipcgamess.com.pk,unresolved,,676865
+miraalrestaurant.com.pk,CDN,Cloudflare,679331
+hub.com.pk,CDN,Cloudflare,679587
+wbm.com.pk,CDN,Cloudflare,684068
+ntdc.com.pk,unresolved,,686489
+paradigmshift.com.pk,CDN,Cloudflare,689557
+nuinternet.com.pk,Abroad,OVH SAS (GB),691854
+purchaser.com.pk,CDN,Cloudflare,693467
+flickbizz.com.pk,Pakistani,INNOKAT (PVT.) LIMITED,697482
+charcoal.com.pk,CDN,Cloudflare,698797
+cssprep.com.pk,CDN,Cloudflare,703951
+cdcaccess.com.pk,CDN,Cloudflare,705545
+hustlenholla.com.pk,CDN,Cloudflare,705722
+bankislami.com.pk,CDN,Cloudflare,709290
+humsub.com.pk,CDN,Cloudflare,716145
+qict.com.pk,unresolved,,722516
+islamabadpost.com.pk,CDN,Cloudflare,729886
+hostpro.com.pk,Abroad,WHG Hosting Services Ltd (SG),733597
+ubl.com.pk,Pakistani,Linkdotnet Telecom Limited,739787
+pk365.com.pk,Abroad,Namecheap  Inc. (HK),746392
+friendscables.com.pk,Abroad,Hostinger International Limited (LT),747643
+wisemarket.com.pk,CDN,AWS,749280
+multipec.com.pk,Abroad,Interserver  Inc (US),749574
+0gomovies.com.pk,CDN,Cloudflare,751194
+123movies.com.pk,Abroad,IP Connect Inc (NL),751503
+3pattibonuszone.com.pk,CDN,Cloudflare,752835
+3pattigoldgame.com.pk,Abroad,OVH SAS (DE),752838
+666-wgame.com.pk,Abroad,Namecheap  Inc. (US),753779
+6666d.com.pk,Abroad,OVH SAS (CA),753781
+666p.com.pk,Abroad,Namecheap (US),753807
+777-ad.com.pk,Abroad,OVH SAS (FR),754285
+777cx.com.pk,Abroad,OVH SAS (PL),754333
+92pkr.com.pk,Abroad,Namecheap  Inc. (US),755507
+999.com.pk,CDN,Cloudflare,755655
+aaenterprises.com.pk,Abroad,Namecheap  Inc. (US),756168
+adore.com.pk,CDN,Cloudflare,756953
+ajtraders.com.pk,CDN,Cloudflare,757728
+alaqsa.com.pk,Abroad,WHG Hosting Services Ltd (US),757961
+allpkrgames.com.pk,CDN,Cloudflare,758325
+aof.com.pk,Abroad,1515 ROUNDTABLE DR PROPERTY  LLC (US),759552
+apkamazon.com.pk,CDN,Cloudflare,759681
+apkcheers.com.pk,Abroad,OVH SAS (FR),759687
+apkearn.com.pk,Abroad,Namecheap  Inc. (US),759691
+apkjeeto.com.pk,Abroad,Namecheap (US),759703
+applepakistan.com.pk,Abroad,Namecheap  Inc. (US),759875
+ar999.com.pk,Abroad,Namecheap  Inc. (US),760063
+asktech.com.pk,Pakistani,Nayatel (Pvt) Ltd,760758
+baroque.com.pk,CDN,Cloudflare,762787
+bet939app.com.pk,CDN,Cloudflare,764024
+bioaqua.com.pk,CDN,Cloudflare,764875
+booksvilla.com.pk,CDN,Cloudflare,765917
+burgeroclock.com.pk,CDN,Cloudflare,766936
+butterfly.com.pk,CDN,Cloudflare,767045
+californiapizza.com.pk,CDN,Cloudflare,767502
+cartonhouse.com.pk,Abroad,HOSTINGER (SG),768104
+chemistry.com.pk,CDN,Cloudflare,769315
+crimson.com.pk,CDN,Cloudflare,772307
+currenwatches.com.pk,CDN,Cloudflare,772751
+dcode.com.pk,CDN,Microsoft/Azure,773696
+dhaga.com.pk,CDN,Cloudflare,774502
+dhanak.com.pk,CDN,Cloudflare,774516
+dreamnet.com.pk,CDN,Cloudflare,776010
+durafoam.com.pk,CDN,Cloudflare,776401
+efashion.com.pk,CDN,Cloudflare,777697
+elegantyou.com.pk,CDN,Cloudflare,778126
+enc.com.pk,Pakistani,PITC,778620
+esspl.com.pk,CDN,Cloudflare,779441
+fantasygms.com.pk,CDN,Cloudflare,780696
+farahtalibaziz.com.pk,CDN,Cloudflare,780718
+fg.com.pk,unresolved,,781328
+fikrfree.com.pk,Abroad,Huawei International Pte. LTD (SG),781467
+forex.com.pk,CDN,Cloudflare,782486
+freshbasket.com.pk,CDN,Cloudflare,782916
+fullstop.com.pk,CDN,Cloudflare,783191
+g555app.com.pk,CDN,Cloudflare,783576
+gamenow.com.pk,Abroad,DigitalOcean  LLC (SG),783894
+gamestop.com.pk,CDN,Cloudflare,783943
+gdl.com.pk,Abroad,OVH SAS (CA),784356
+hajwarinetzone.com.pk,Abroad,WholeSale Internet (US),787455
+heritagejewels.com.pk,CDN,Cloudflare,788314
+highnoon.com.pk,Pakistani,Wateen Telecom Limited,788561
+hydrisupermarket.com.pk,CDN,Cloudflare,789971
+hyundaipower.com.pk,CDN,Cloudflare,790019
+iescoebill.com.pk,CDN,Cloudflare,790638
+imtiaz.com.pk,CDN,Akamai,791152
+iwc.com.pk,CDN,Cloudflare,792748
+jalalsons.com.pk,CDN,Google,793156
+joystickicelolly.com.pk,CDN,Cloudflare,794463
+jw8game.com.pk,Abroad,OVH SAS (DE),794922
+k666.com.pk,Abroad,Namecheap  Inc. (US),795097
+kaprang.com.pk,CDN,Cloudflare,795578
+kayseria.com.pk,CDN,Cloudflare,795838
+kb.com.pk,Pakistani,Pakistan Telecommuication company limited,795870
+kdramasmaza.com.pk,CDN,Cloudflare,795948
+keduplicatebill.com.pk,CDN,Cloudflare,795974
+kjunction.com.pk,CDN,Cloudflare,796972
+kk333.com.pk,Abroad,SpectraIP B.V. (NL),796980
+laservision.com.pk,Abroad,wix com inc (US),798967
+login.com.pk,CDN,Cloudflare,800651
+londonbridge.com.pk,CDN,Cloudflare,800838
+masoodstore.com.pk,CDN,Cloudflare,803351
+mcsol.com.pk,Abroad,Unlimited Web Hosting UK LTD (GB),803974
+mnptracking.com.pk,Abroad,Hetzner Online GmbH (DE),806144
+mocciani.com.pk,CDN,Cloudflare,806279
+mrstore.com.pk,CDN,Cloudflare,807303
+mulphilog.com.pk,Abroad,HostGator.com LLC (US),807583
+mygsm.com.pk,Abroad,Hostinger International Limited (LT),808271
+n999.com.pk,Abroad,Namecheap  Inc. (US),808844
+naeemelectronics.com.pk,unresolved,,808913
+navigator.com.pk,Pakistani,GCS (Private) Limited,809352
+netmirror.com.pk,Abroad,Telkom Internet LTD (AZ),809775
+nexton.com.pk,CDN,Cloudflare,810076
+npcn.com.pk,Abroad,Interserver  Inc (US),811055
+onedegree.com.pk,CDN,Cloudflare,812450
+orient.com.pk,CDN,Cloudflare,813131
+oxford.com.pk,CDN,Cloudflare,813647
+pakarmy.com.pk,CDN,Cloudflare,814057
+paksuzuki.com.pk,CDN,Cloudflare,814096
+pbc.com.pk,Abroad,GoDaddy.com  LLC (SG),814968
+pel.com.pk,CDN,Cloudflare,815208
+pharmahealth.com.pk,CDN,Cloudflare,815821
+philipspersonalcare.com.pk,CDN,Cloudflare,815885
+pifraregistration.com.pk,Abroad,OVH SAS (CA),816154
+pizzamax.com.pk,Abroad,Unified Layer (US),816424
+pk8888.com.pk,Abroad,Namecheap  Inc. (US),816468
+pkapps.com.pk,Abroad,HOSTINGER (SG),816473
+pkrbet.com.pk,Abroad,OVH SAS (DE),816504
+postextracking.com.pk,Abroad,SpectraIP B.V. (NL),817757
+psosahulat.com.pk,Pakistani,Pakistan State Oil Company Limited,818854
+ptclspeed.com.pk,CDN,Cloudflare,818900
+q789.com.pk,Abroad,Namecheap  Inc. (US),819350
+rangrasiya.com.pk,CDN,Cloudflare,820478
+revoo-ev.com.pk,Abroad,Alibaba.com Singapore E-Commerce Private Limited (DE),821687
+rollnoslip.com.pk,Abroad,HOSTINGER IN (IN),822369
+safoora.com.pk,CDN,Cloudflare,823506
+sageleather.com.pk,CDN,Cloudflare,823529
+sapt.com.pk,CDN,Microsoft/Azure,824157
+savourfoods.com.pk,CDN,Google,824454
+seccap.com.pk,CDN,Cloudflare,824942
+selecto.com.pk,CDN,Cloudflare,825183
+seran.com.pk,CDN,Cloudflare,825411
+serenepharma.com.pk,Abroad,Hetzner Online GmbH (FI),825423
+simtek.com.pk,Abroad,GoDaddy.com  LLC (US),826956
+sindhbank.com.pk,CDN,Google,826987
+skfans.com.pk,Abroad,Hostinger International Limited (LT),827414
+skinsciences.com.pk,CDN,Cloudflare,827452
+supers9game.com.pk,CDN,AWS,830792
+trafficsigntest.com.pk,Abroad,Contabo GmbH (FR),835369
+ullu.com.pk,Abroad,KnownSRV Ltd. (NL),837260
+unitedmotorcycle.com.pk,Abroad,Namecheap  Inc. (US),837682
+vidmateapp.com.pk,CDN,Cloudflare,839505
+wc777.com.pk,Abroad,Namecheap  Inc. (US),841202
+x-777.com.pk,Abroad,Namecheap  Inc. (US),842688
+y888.com.pk,Abroad,SpectraIP B.V. (NL),843876
+yacinetvs.com.pk,CDN,Cloudflare,843916
+yadea.com.pk,Abroad,Hetzner Online GmbH (FI),843920
+zed.com.pk,CDN,Cloudflare,845132
+zh888.com.pk,Abroad,OVH SAS (CA),845289
+zs-999.com.pk,Abroad,OVH SAS (AU),845661
+3dm.com.pk,Abroad,HOSTINGER (SG),848735
+nipponpaint.com.pk,CDN,Sucuri,857555
+zerodegree.com.pk,CDN,Cloudflare,863279
+777-cb.com.pk,CDN,Cloudflare,868930
+777.com.pk,Abroad,Namecheap  Inc. (SG),868931
+apkbloom.com.pk,Abroad,Namecheap  Inc. (HK),869719
+e-bike.com.pk,CDN,Cloudflare,872384
+easytoearn.com.pk,Abroad,WHG Hosting Services Ltd (US),872444
+gepcobill.com.pk,CDN,Cloudflare,873613
+h-555.com.pk,CDN,Cloudflare,873988
+m666.com.pk,CDN,Cloudflare,876347
+mepcobillz.com.pk,CDN,Cloudflare,876792
+pakngos.com.pk,Abroad,WHG Hosting Services Ltd (US),878304
+pk3.com.pk,Abroad,HOSTINGER BR (BR),878714
+pkrgame.com.pk,CDN,Cloudflare,878721
+sidathyder.com.pk,Abroad,InMotion Hosting  Inc (US),880342
+tiensmember.com.pk,Abroad,Contabo GmbH (FR),881566
+zongengage.com.pk,Abroad,velia.net Internetdienste GmbH (FR),883373
+leadpakistan.com.pk,Abroad,Hetzner Online GmbH (DE),888063
+callperks.com.pk,CDN,Cloudflare,904277
+careers635.com.pk,Pakistani,Pakistan Telecommuication company limited,904351
+citaevcharger.com.pk,Abroad,Hetzner Online GmbH (FI),904783
+css-pitb.com.pk,Abroad,Hostinger International Limited (LT),905153
+css-pitc.com.pk,Abroad,Hostinger International Limited (LT),905155
+ct999apk.com.pk,CDN,Cloudflare,905156
+fist.com.pk,Abroad,Hostinger International Limited (LT),907199
+gamez.com.pk,Abroad,OVH SAS (FI),907744
+insta.com.pk,Abroad,Interserver  Inc (US),909638
+n7.com.pk,CDN,Cloudflare,914035
+npftas.com.pk,Abroad,Hostinger International Limited (LT),914585
+p999apk.com.pk,CDN,Cloudflare,915224
+pakrummyapp.com.pk,CDN,Cloudflare,915463
+punjabprogram.com.pk,Abroad,Hostinger International Limited (LT),916753
+readinfo.com.pk,CDN,Cloudflare,917333
+suigas.com.pk,CDN,Cloudflare,919713
+x5555.com.pk,Abroad,OVH SAS (FR),922801
+ultimate-solution.com.pk,Abroad,Contabo GmbH (FR),936786
+winnet.com.pk,Abroad,20i Limited (GB),942309
+businesstrends.com.pk,CDN,Cloudflare,949176
+techlogic.com.pk,Abroad,Contabo GmbH (FR),958600
+jobs.com.pk,CDN,Cloudflare,960297
+crowngroup.com.pk,CDN,Cloudflare,966545
+sehat.com.pk,CDN,Cloudflare,967761
+globalconnectsynergy.com.pk,Pakistani,GCS (Private) Limited,971258
+zamaka.com.pk,CDN,Cloudflare,979223
+dongfang.com.pk,Abroad,A2 Hosting  Inc. (US),985733
+hadielectronics.com.pk,Abroad,HOSTINGER ID (ID),988525
+digitalsystems.com.pk,Abroad,Hetzner Online GmbH (DE),991675
+ainakpoint.com.pk,Abroad,HOSTINGER US (US),991722
+
+# ===== Tranco .pk: Network/ISP [CDN 20 · Abroad 18 · PK 13 · unresolved 6] =====
+ptcl.net.pk,unresolved,,14908
+link.net.pk,unresolved,,26618
+connect.net.pk,Pakistani,Connect Communication Karachi,52685
+worldcall.net.pk,Abroad,HOSTINGER US (US),96365
+comsats.net.pk,Pakistani,COMSATS,101013
+glory-casino.net.pk,CDN,Cloudflare,121930
+multi.net.pk,Pakistani,Multinet Broadband,140173
+aviator.net.pk,CDN,Cloudflare,152352
+stp.net.pk,unresolved,,157729
+dsl.net.pk,unresolved,,159370
+fiberish.net.pk,CDN,Cloudflare,174431
+sts.net.pk,CDN,AWS,178369
+ebone.net.pk,CDN,Cloudflare,194876
+zefoy.net.pk,CDN,Cloudflare,210684
+fscobill.net.pk,CDN,Cloudflare,214891
+getlinks.net.pk,Abroad,GoDaddy.com  LLC (SG),214979
+brain.net.pk,Abroad,Hetzner Online GmbH (US),236785
+gointernet.net.pk,Pakistani,Logon Broadband Pvt. Limited,247522
+prime.net.pk,Abroad,20i Limited (US),263287
+pknic.net.pk,CDN,Cloudflare,364193
+cubexs.net.pk,unresolved,,370127
+ges.net.pk,Pakistani,Gemnet Enterprise Solutions Pvt Ltd,373193
+nwnetworks.net.pk,Pakistani,TRANSWORLD ASSOCIATES (PVT) LIMITED,373579
+microtech.net.pk,Abroad,Hostinger International Limited (LT),380414
+galaxy.net.pk,Pakistani,Galaxy Broadband (pvt.) Ltd.,393636
+waves.net.pk,Abroad,OVH SAS (CA),456665
+nasstecairnet.net.pk,Abroad,Namecheap (US),470907
+lmp.net.pk,Pakistani,Login.Me (Pvt) Ltd,487275
+snms.net.pk,Abroad,Oracle Corporation (US),522696
+dnt.net.pk,Abroad,Leaseweb Singapore Pte. Ltd. (US),624892
+simowner.net.pk,Abroad,Hostinger International Limited (ID),628831
+nation.net.pk,Pakistani,Connect Communication Karachi,636094
+stn.net.pk,Abroad,Unified Layer (US),657488
+geo.net.pk,Pakistani,Digicom Pakistan (private) Limited,679648
+idc.net.pk,CDN,Google,727218
+accesson.net.pk,Abroad,Oracle Corporation (US),756567
+alburakinternet.net.pk,CDN,Cloudflare,758002
+betrupees.net.pk,CDN,Cloudflare,764196
+cnicinformation.net.pk,CDN,Cloudflare,770741
+cosmic.net.pk,Pakistani,Connect Communication Karachi,771851
+falconbroadband.net.pk,Abroad,Namecheap  Inc. (US),780598
+gbn.net.pk,Pakistani,Gemnet Enterprise Solutions Pvt Ltd,784286
+jj77.net.pk,Abroad,OVH SAS (FR),793936
+mst.net.pk,Pakistani,Delta Networks,807413
+npcn.net.pk,Abroad,Interserver  Inc (US),811056
+pak-game.net.pk,CDN,Cloudflare,814043
+pak92.net.pk,CDN,Cloudflare,814050
+pkr98game.net.pk,CDN,Cloudflare,816500
+bn55.net.pk,Abroad,SpectraIP B.V. (NL),870645
+game.net.pk,CDN,Cloudflare,873474
+lucky33.net.pk,Abroad,HOSTINGER US (US),876278
+winpkr.net.pk,CDN,Cloudflare,882846
+apnakhetapnarozgar.net.pk,CDN,Cloudflare,902122
+bet939.net.pk,Abroad,Abelohost BV (NL),903208
+zt777.net.pk,CDN,Cloudflare,923673
+whatmobiles.net.pk,CDN,Cloudflare,950483
+my.net.pk,unresolved,,977393
+
+# ===== Tranco .pk: Organization [CDN 21 · Abroad 24 · PK 6] =====
+nts.org.pk,CDN,Cloudflare,81193
+pts.org.pk,Pakistani,Cyber Internet Services (Private) Limited,91647
+chickenroad.org.pk,CDN,Cloudflare,119898
+icap.org.pk,CDN,Microsoft/Azure,165385
+shaukatkhanum.org.pk,CDN,Cloudflare,166907
+ahpc.org.pk,Pakistani,COMSATS,213609
+ots.org.pk,CDN,Cloudflare,231040
+pec.org.pk,CDN,Cloudflare,265619
+spin.org.pk,Abroad,WHG Hosting Services Ltd (SG),285619
+fims.org.pk,CDN,Cloudflare,366191
+nepra.org.pk,CDN,Cloudflare,368966
+pide.org.pk,CDN,Cloudflare,383372
+jpma.org.pk,Abroad,Hetzner Online GmbH (DE),394886
+reap.org.pk,CDN,Cloudflare,459232
+akhuwat.org.pk,CDN,Microsoft/Azure,494071
+psdf.org.pk,Pakistani,Million Web Services Private Limited,571631
+epr.org.pk,CDN,Cloudflare,598361
+ctsp.org.pk,Abroad,Hetzner Online GmbH (DE),634960
+gbappsup.org.pk,Abroad,Telkom Internet LTD (AZ),635270
+88ef.org.pk,Abroad,OVH SAS (CA),755193
+fauji.org.pk,Pakistani,Nayatel (Pvt) Ltd,780919
+hecgovt.org.pk,Abroad,SpectraIP B.V. (NL),788095
+hunarmandpunjab.org.pk,Abroad,HOSTINGER ID (ID),789863
+jjwin.org.pk,Abroad,OVH SAS (CA),793969
+ke.org.pk,CDN,AWS,795953
+nrsp.org.pk,Abroad,DigitalOcean  LLC (NL),811091
+patel-hospital.org.pk,CDN,Cloudflare,814726
+pkli.org.pk,CDN,Cloudflare,816483
+ptea.org.pk,Abroad,WHG Hosting Services Ltd (GB),818906
+readinfos.org.pk,Abroad,Hostinger International Limited (LT),820803
+sets.org.pk,Abroad,Contabo GmbH (FR),825611
+shaadi.org.pk,Abroad,WHG Hosting Services Ltd (SG),825914
+srso.org.pk,Abroad,Hetzner Online GmbH (FI),829479
+tih.org.pk,Abroad,ZETTA (BG),834018
+zc777.org.pk,CDN,Cloudflare,845098
+apnakhetapnarozgar.org.pk,Abroad,Hostinger International Limited (LT),869727
+npf.org.pk,CDN,Cloudflare,877866
+picashow.org.pk,CDN,Cloudflare,878650
+sses.org.pk,Pakistani,Pakistan Telecommuication company limited,880789
+sts.org.pk,Pakistani,Multinet Broadband,880907
+ogra.org.pk,CDN,Cloudflare,898278
+eef.org.pk,Abroad,WHG Hosting Services Ltd (US),906468
+fia.org.pk,Abroad,Hostinger International Limited (LT),907051
+iesco.org.pk,CDN,AWS,909365
+nap.org.pk,Abroad,Hostinger International Limited (LT),914174
+nbdp.org.pk,Abroad,Hostinger International Limited (LT),914224
+npftas.org.pk,Abroad,Hostinger International Limited (LT),914586
+muslimaid.org.pk,Abroad,Hostinger International Limited (LT),935574
+thejaps.org.pk,Abroad,Contabo GmbH (FR),947129
+issi.org.pk,CDN,Cloudflare,993512
+pspo.org.pk,Abroad,WHG Hosting Services Ltd (SG),997396
+
+# ===== Tranco .pk: .pk (direct) [CDN 531 · Abroad 190 · PK 33 · unresolved 16] =====
+streamed.pk,Abroad,Ddos-guard LTD (RU),19197
+nationalbroadband.pk,CDN,Cloudflare,23618
+npftas.pk,CDN,Cloudflare,23763
+pknic.pk,Abroad,,26181
+defence.pk,CDN,Cloudflare,41313
+foodpanda.pk,CDN,Cloudflare,43602
+freelancer.pk,CDN,AWS,48163
+annas-archive.pk,Abroad,IQWeb FZ-LLC (BZ),52065
+rozee.pk,CDN,Cloudflare,52324
+laam.pk,CDN,Google,56105
+moviebox.pk,CDN,AWS CloudFront,59798
+marham.pk,CDN,Cloudflare,61903
+bunkr.pk,Abroad,ByteFlare LTD (SC),69684
+psca.gop.pk,Pakistani,Punjab Safe City Authority,71839
+plinko.pk,CDN,Cloudflare,78945
+digiskills.pk,Pakistani,HEC,79267
+dvago.pk,CDN,Cloudflare,80061
+sastaticket.pk,CDN,Cloudflare,81111
+siasat.pk,CDN,Cloudflare,81181
+postex.pk,CDN,Cloudflare,82034
+highfy.pk,CDN,Cloudflare,85119
+preetpret.pk,CDN,Cloudflare,85216
+topup.pk,Abroad,Garena Online Pte Ltd (SG),86150
+ppsc.gop.pk,Pakistani,Punjab Information Technology Board,87199
+baroque.pk,CDN,Cloudflare,87408
+desicinemas.pk,CDN,Cloudflare,88324
+tjwholesale.pk,CDN,Cloudflare,89748
+movieboxapp.pk,CDN,Cloudflare,93440
+excise.gos.pk,Pakistani,Pakistan Telecommuication company limited,93557
+alhassan.pk,CDN,Cloudflare,93761
+cxtreme.pk,Pakistani,Cyber Internet Services (Private) Limited,94090
+districtcourtssindh.gos.pk,CDN,Cloudflare,94152
+dmasti.pk,Pakistani,Ebone Network (Pvt) Ltd,94160
+niazitv.pk,CDN,Cloudflare,95029
+sjp.gos.pk,CDN,Cloudflare,95481
+watcho.pk,Abroad,,95843
+pulse.gop.pk,Pakistani,Wateen Telecom Limited,101545
+checksimowner.pk,CDN,Cloudflare,103468
+mepcobillfinder.pk,CDN,Cloudflare,103861
+telenorbank.pk,CDN,AWS,117768
+jobz.pk,CDN,Cloudflare,124507
+ihosting.pk,Abroad,WHG Hosting Services Ltd (US),125597
+healthwire.pk,CDN,Cloudflare,135346
+ccptraffickyc.pk,CDN,Cloudflare,135733
+saleemfabrics.pk,CDN,Cloudflare,137059
+dlhd.pk,Abroad,Sino Worldwide Trading Limited (NL),141356
+dwatson.pk,CDN,Cloudflare,142670
+myservice.pk,CDN,Cloudflare,143237
+bookme.pk,Abroad,Aceville Pte.ltd. (SG),148289
+nureh.pk,CDN,Cloudflare,150294
+solarpanelinfo.pk,Abroad,HOSTINGER IN (IN),154674
+gari.pk,CDN,Cloudflare,163033
+instacare.pk,CDN,Microsoft/Azure,163268
+sarmaaya.pk,CDN,Cloudflare,169277
+supermeal.pk,CDN,Microsoft/Azure,174089
+freestreams-live1d.pk,Abroad,Shinjiru Technology Sdn Bhd (MY),177353
+babyplanet.pk,CDN,Cloudflare,178611
+pmdc.pk,Pakistani,National Telecommunication Corporation,180743
+kkmart.pk,CDN,Cloudflare,181053
+sapphirestudios.pk,CDN,Cloudflare,181767
+skyscanner.pk,CDN,AWS,183620
+sharptel.pk,Abroad,Hetzner (DE),187534
+freestreams-live1c.pk,Abroad,Shinjiru Technology Sdn Bhd (MY),187945
+medishop.pk,CDN,Cloudflare,188339
+qistbazaar.pk,CDN,Cloudflare,189823
+gold.pk,CDN,Cloudflare,193331
+joinanf.pk,Pakistani,National Telecommunication Corporation,193399
+mostbett.pk,CDN,AWS,195192
+polkadots.pk,CDN,Cloudflare,199108
+faisalfabrics.pk,CDN,Cloudflare,200458
+jazmin.pk,CDN,Cloudflare,202239
+silaikarhai.pk,CDN,Cloudflare,203145
+theavocado.pk,CDN,Cloudflare,206229
+mbasics.pk,CDN,Cloudflare,206251
+spsc.gos.pk,Pakistani,Gemnet Enterprise Solutions Pvt Ltd,207038
+sonic.pk,Pakistani,Mobilink GSM,209691
+blinkbroadband.pk,Pakistani,Logon Broadband Pvt. Limited,211297
+vanya.pk,CDN,Cloudflare,212066
+abwholesale.pk,CDN,Cloudflare,213561
+chilltime.pk,Abroad,,214140
+chinyere.pk,CDN,Cloudflare,214141
+farashaonline.pk,CDN,Cloudflare,214772
+femalechoice.pk,CDN,Cloudflare,214792
+hcloud.pk,CDN,Cloudflare,215122
+idealancy.pk,CDN,Cloudflare,215250
+layers.pk,CDN,Cloudflare,215670
+ramsha.pk,CDN,Cloudflare,216806
+telenrquiztoday.pk,CDN,Cloudflare,217526
+telequiztoday.pk,CDN,Cloudflare,217527
+utopiaindustries.pk,CDN,AWS,217775
+waada.pk,CDN,Google,217871
+wasap-plus.pk,CDN,Cloudflare,217887
+x666game.pk,Abroad,Namecheap  Inc. (US),217985
+youngmasti.pk,Abroad,,218091
+zapatla.pk,CDN,Cloudflare,218126
+zarif.pk,CDN,Cloudflare,218127
+zouq.pk,Abroad,Psychz Networks (US),218156
+timespan.pk,Abroad,Enix Ltd (GB),218454
+wego.pk,CDN,Cloudflare,219402
+market.pk,Abroad,DigitalOcean  LLC (NL),219919
+royalwrist.pk,CDN,Cloudflare,221825
+exitbase.pk,Abroad,Hostinger IN (IN),222705
+cloudy.pk,CDN,Cloudflare,223467
+katran.pk,CDN,Cloudflare,223636
+bisebwp.pk,Pakistani,PTCL ITI Lahore 11,224176
+breakin.pk,CDN,Cloudflare,227754
+lescoebillcheck.pk,CDN,Cloudflare,228408
+mytelenoranswertoday.pk,CDN,Cloudflare,228577
+senorita.pk,CDN,Cloudflare,228961
+styka.pk,CDN,Cloudflare,229065
+urge.pk,CDN,Cloudflare,229245
+pdma.gob.pk,Abroad,Handy Networks (US),232401
+ebillmepco.pk,CDN,Cloudflare,233199
+simownerss.pk,CDN,Cloudflare,234281
+safwa.pk,CDN,Cloudflare,238949
+simownersdetails.pk,CDN,Cloudflare,239265
+techjuice.pk,Abroad,Leaseweb UK Limited (GB),240799
+jazztv.pk,Pakistani,PMCL Transit,242232
+playtube.pk,CDN,Cloudflare,242799
+result.pk,CDN,Cloudflare,243736
+eatoye.pk,CDN,Cloudflare,246906
+ayanshop.pk,Abroad,Hostinger International Limited (LT),250003
+piratemedia.pk,Abroad,AVA HOST SRL (MD),263133
+sparkbroadband.pk,Pakistani,Logon Broadband Pvt. Limited,272378
+easyhost.pk,CDN,Cloudflare,279060
+tejar.pk,CDN,Cloudflare,279628
+nlthub.pk,CDN,Cloudflare,280658
+mobilewale.pk,Abroad,Hostinger International Limited (LT),281814
+reviewit.pk,CDN,Cloudflare,283747
+networld.pk,Pakistani,Fariya Networks 150,284271
+bausch.pk,CDN,Imperva/Incapsula,291352
+skyhost.pk,Abroad,Contabo GmbH (FR),291733
+techmanistan.pk,CDN,Cloudflare,295447
+webhoster.pk,CDN,Cloudflare,299939
+8thclassresults2026.pk,CDN,Cloudflare,302291
+shoppingbag.pk,CDN,Cloudflare,303385
+idmpakistan.pk,CDN,Cloudflare,316198
+tenderservice.pk,CDN,Cloudflare,319084
+dvdplanetstore.pk,CDN,Cloudflare,321392
+nightynight.pk,CDN,Cloudflare,336888
+techarc.pk,CDN,Cloudflare,347882
+arysahulatbazar.pk,CDN,Cloudflare,351411
+petsmall.pk,Abroad,Hostinger International Limited (SG),358479
+thenews.pk,CDN,Cloudflare,358791
+shopforever.pk,Abroad,Hostinger International Limited (LT),363223
+aminaismail.pk,Abroad,Hostinger International Limited (LT),370928
+bluehosting.pk,Abroad,Hetzner Online GmbH (FI),374990
+movi.pk,CDN,Cloudflare,381762
+ccstore.pk,CDN,Cloudflare,386370
+enic.pk,Abroad,WHG Hosting Services Ltd (SG),392622
+mylink.pk,unresolved,,399537
+prowebhosting.pk,Abroad,Hetzner Online GmbH (FI),400200
+tune.pk,CDN,Cloudflare,400582
+amaleaked.pk,Abroad,IQWeb FZ-LLC (AE),402212
+primaxtech.pk,Abroad,Contabo GmbH (FR),403331
+pakprice.pk,CDN,Cloudflare,404114
+clasf.pk,CDN,Cloudflare,405124
+realproperty.pk,CDN,Cloudflare,405421
+saaf.pk,CDN,Cloudflare,410123
+ishopping.pk,CDN,Cloudflare,411381
+trackhub.pk,CDN,Cloudflare,413521
+dawaai.pk,CDN,Google,413680
+humnews.pk,CDN,Cloudflare,414307
+youtube.pk,CDN,Google,415137
+apollosports.pk,CDN,Cloudflare,415773
+juglo.pk,CDN,Cloudflare,418147
+ding.pk,unresolved,,418646
+shopon.pk,CDN,Cloudflare,419552
+britishcouncil.pk,CDN,Akamai,424224
+myshop.pk,CDN,Cloudflare,425256
+kalee.pk,Abroad,HOSTINGER (SG),427751
+gkp.pk,unresolved,,428283
+contactnumbers.pk,CDN,Cloudflare,429606
+helloworld.pk,Pakistani,Pakistan Telecommuication company limited,429622
+allurebeauty.pk,CDN,Cloudflare,435553
+saffana.pk,CDN,Cloudflare,437735
+noacss.pk,Abroad,Unified Layer (US),438957
+zipper.pk,CDN,Cloudflare,450519
+1winbet.pk,Abroad,DigitalOcean  LLC (DE),450606
+scouted-today.pk,Abroad,Ddos-guard LTD (RU),452746
+mepcoebillcheck.pk,CDN,Cloudflare,454617
+nazarr.pk,CDN,Cloudflare,455497
+livestreamtv.pk,CDN,Cloudflare,458413
+businesslist.pk,CDN,Cloudflare,458568
+nestle.pk,CDN,AWS,462667
+dmarket.pk,CDN,Cloudflare,462941
+crane.pk,CDN,Cloudflare,463873
+fashioncentral.pk,CDN,Cloudflare,464554
+speedonline.pk,unresolved,,470064
+vegas.pk,Abroad,Hetzner Online GmbH (DE),470089
+toyzone.pk,CDN,Cloudflare,470796
+aysonline.pk,CDN,Cloudflare,474727
+class9.pk,Abroad,IONOS SE (US),479758
+mepcoonline.pk,Abroad,HOSTINGER MY (MY),480013
+kandns.pk,Abroad,Hostinger International Limited (LT),481567
+binfahad.pk,CDN,Cloudflare,482426
+digilog.pk,CDN,Cloudflare,485202
+glowton.pk,Abroad,Hostinger International Limited (US),490070
+carrefour.pk,CDN,Akamai,492019
+autoline24.pk,Abroad,Hetzner (DE),492471
+blingspot.pk,CDN,Cloudflare,497220
+partysharty.pk,CDN,Cloudflare,498778
+lamudi.pk,unresolved,,502930
+bakraonline.pk,CDN,Cloudflare,508313
+warsafabric.pk,CDN,Cloudflare,511226
+elegante.pk,CDN,Cloudflare,512380
+shop-kandns.pk,Abroad,Hostinger International Limited (ID),513074
+glisten.pk,CDN,Cloudflare,514160
+pehnawastore.pk,CDN,Cloudflare,514674
+derma.pk,CDN,Cloudflare,520093
+starlet.pk,CDN,Cloudflare,521500
+computerzone.pk,CDN,Cloudflare,524014
+sehgalmotors.pk,CDN,Cloudflare,524225
+allmytech.pk,CDN,Cloudflare,524930
+mobilemall.pk,CDN,Cloudflare,527385
+buyzar.pk,CDN,Cloudflare,527722
+gulmahal.pk,CDN,Cloudflare,530487
+machineryline.pk,Abroad,Hetzner (DE),533267
+dsmonline.pk,CDN,AWS,536793
+subhanelectronics.pk,CDN,Cloudflare,538549
+meerzah.pk,CDN,Cloudflare,539684
+ancient.pk,Abroad,Namecheap  Inc. (US),551862
+koyal.pk,CDN,AWS,553581
+petsone.pk,CDN,Cloudflare,555182
+vmart.pk,CDN,Cloudflare,556468
+apkzone.pk,Abroad,Hetzner Online GmbH (DE),557726
+sadapay.pk,CDN,Cloudflare,558231
+ameena.pk,CDN,Cloudflare,560597
+gobazar.pk,CDN,Cloudflare,560631
+hopkicks.pk,Abroad,Hetzner Online GmbH (FI),560636
+thebabyworld.pk,CDN,Cloudflare,560698
+toycompany.pk,CDN,Cloudflare,560891
+losha.pk,CDN,Cloudflare,560986
+ramza.pk,CDN,Cloudflare,561461
+doctorbookshop.pk,Abroad,Hetzner Online GmbH (FI),561620
+eveen.pk,CDN,Cloudflare,564393
+beautygirl.pk,CDN,Cloudflare,564419
+isms.pk,CDN,Cloudflare,568029
+novelshub.pk,CDN,Cloudflare,568788
+kidsreading.pk,Abroad,HOSTINGER ID (ID),574726
+optix.pk,Abroad,Namecheap  Inc. (US),578376
+chemistdirect.pk,CDN,Cloudflare,578683
+pkjob.pk,CDN,Cloudflare,579312
+faizasaqlain.pk,CDN,Cloudflare,580299
+khasmart.pk,Abroad,Hostinger International Limited (LT),582589
+discountstore.pk,CDN,Cloudflare,582653
+jobsalert.pk,CDN,Cloudflare,584046
+scap.pk,CDN,Cloudflare,584479
+cozmetica.pk,CDN,Cloudflare,586078
+megathriftstore.pk,CDN,Cloudflare,587068
+besharam.pk,Abroad,HOSTINGER (SG),587269
+no777games.pk,CDN,Cloudflare,587746
+reana.pk,CDN,Cloudflare,588528
+cari.pk,Abroad,Hetzner Online GmbH (DE),591044
+ainak.pk,CDN,Sucuri,591236
+aneelas.pk,CDN,Cloudflare,591288
+dablew.pk,CDN,Cloudflare,591676
+peachmart.pk,CDN,Cloudflare,592953
+forex.pk,CDN,Cloudflare,595506
+pakwatan.pk,CDN,Cloudflare,596300
+dealmarkaz.pk,CDN,Cloudflare,596459
+naukriupdate.pk,Abroad,WHG Hosting Services Ltd (GB),597438
+wearium.pk,CDN,Cloudflare,598042
+babiesstore.pk,CDN,Cloudflare,598085
+hondazone.pk,Abroad,HOSTINGER SG (SG),598152
+nayatel.pk,unresolved,,599896
+vapebazaar.pk,CDN,Cloudflare,601380
+bakehouse.pk,CDN,Cloudflare,602317
+planetjunior.pk,CDN,Cloudflare,606296
+propertymanzil.pk,Abroad,Hetzner Online GmbH (FI),607408
+newbooksnbooks.pk,CDN,Cloudflare,607825
+onlinebookshop.pk,CDN,Cloudflare,611445
+bk999.pk,unresolved,,615026
+lori.pk,CDN,Cloudflare,615588
+cttcacademy.pk,CDN,Cloudflare,616051
+sabaq.pk,CDN,Google,620470
+sin88.pk,CDN,Cloudflare,622269
+freemeteo.pk,Abroad,Hetzner Online GmbH (DE),623370
+mohsinsaeedfabrics.pk,CDN,Cloudflare,627267
+dragontiger.pk,CDN,Cloudflare,627286
+mostbetonline.pk,CDN,Cloudflare,627680
+xeemart.pk,CDN,Cloudflare,629385
+herbiotics.pk,CDN,Cloudflare,629540
+missrose.pk,CDN,Cloudflare,629571
+rangolistore.pk,CDN,Cloudflare,629592
+theentertainer.pk,CDN,Cloudflare,629613
+amts.pk,Abroad,Hetzner Online GmbH (DE),629646
+studentstore.pk,CDN,Cloudflare,629772
+sunainatextile.pk,CDN,Cloudflare,629913
+admin.gok.pk,CDN,Cloudflare,634484
+bpsc.gob.pk,CDN,Cloudflare,634793
+climateinternship.pk,CDN,Cloudflare,634910
+dailywholesale.pk,CDN,Cloudflare,634981
+dls.gos.pk,CDN,Cloudflare,635045
+evee.pk,Abroad,DigitalOcean  LLC (SG),635147
+gcuonline.pk,Abroad,DigitalOcean  LLC (US),635273
+joinpakarmyjobs.pk,Abroad,Hostinger International Limited (LT),635642
+kashaf.pk,CDN,Cloudflare,635690
+libasghar.pk,Abroad,Psychz Networks (US),635816
+metroev.pk,Abroad,A2 Hosting  Inc. (US),635960
+miniso.pk,CDN,Cloudflare,635972
+sindhzameen.gos.pk,Pakistani,National Telecom Corporation,636604
+studentcare.pk,Abroad,Contabo GmbH (FR),636698
+vatt.gob.pk,Abroad,OVH SAS (CA),636954
+ecasiocentre.pk,CDN,Cloudflare,640656
+dwatsoncosmetics.pk,CDN,Cloudflare,646577
+happysteppy.pk,Abroad,Namecheap  Inc. (US),648701
+paknaukri.pk,unresolved,,650794
+jcpsp.pk,Pakistani,HEC,655775
+tobacs.pk,CDN,Cloudflare,656524
+speedsports.pk,CDN,Cloudflare,657071
+savys.pk,CDN,Cloudflare,658744
+allgovtjobz.pk,CDN,Cloudflare,660413
+friendshome.pk,CDN,Cloudflare,662807
+autostore.pk,CDN,Cloudflare,663358
+humdum.pk,CDN,Cloudflare,663430
+intimatefashions.pk,CDN,Cloudflare,663435
+jackednutrition.pk,CDN,Cloudflare,663438
+khayest.pk,CDN,Cloudflare,663449
+hf-store.pk,Abroad,Hostinger International Limited (LT),663724
+theperfumeclub.pk,CDN,Cloudflare,664717
+thrift.pk,CDN,Cloudflare,666539
+petpoint.pk,Abroad,Hostinger International Limited (ID),666573
+srb.gos.pk,Pakistani,Supernet 1,666731
+mobile-phone.pk,CDN,Cloudflare,667077
+shoestreet.pk,CDN,Cloudflare,668150
+elyscents.pk,CDN,Cloudflare,668557
+mirari.pk,CDN,Cloudflare,668619
+dwphome.pk,CDN,Cloudflare,668726
+smarttech.pk,Abroad,WHG Hosting Services Ltd (SG),671769
+shoppingjin.pk,Abroad,Hetzner Online GmbH (DE),674151
+mispl.pk,Abroad,Hetzner Online GmbH (DE),674264
+mulphico.pk,Abroad,Liquid Web  L.L.C (US),675801
+hamdard.pk,Abroad,Turnkey Internet Inc. (US),679189
+1ball.pk,Abroad,Alexhost SRL (MD),681980
+tripbookly.pk,Abroad,OVH SAS (DE),682364
+superhost.pk,Abroad,Hetzner Online GmbH (DE),684094
+grocerapp.pk,CDN,AWS CloudFront,686481
+eminent.pk,CDN,Cloudflare,687450
+metro.pk,CDN,Akamai,691623
+rios.pk,CDN,Cloudflare,691654
+toolsmart.pk,CDN,Cloudflare,691681
+shesgotleaks.pk,Abroad,Ddos-guard LTD (RU),692082
+chabee.pk,CDN,Cloudflare,696075
+bagx.pk,CDN,Cloudflare,697174
+homducts.pk,CDN,Cloudflare,697198
+pakstyle.pk,CDN,Cloudflare,697713
+1ststep.pk,CDN,Cloudflare,697991
+alhamdtech.pk,CDN,Cloudflare,698024
+amdhouse.pk,Abroad,Hostinger International Limited (ID),698032
+techmatched.pk,CDN,Cloudflare,698656
+xiaomistore.pk,CDN,Cloudflare,700006
+branches.pk,Abroad,Oracle Corporation (US),700442
+drhassanoncologist.pk,CDN,Cloudflare,702096
+almas.pk,CDN,Cloudflare,703858
+aodour.pk,CDN,Cloudflare,703865
+asadautos.pk,CDN,Cloudflare,703872
+campus.pk,Abroad,Interserver  Inc (US),703920
+haseebarts.pk,CDN,Cloudflare,704044
+hinz.pk,CDN,Cloudflare,704049
+nuvari.pk,CDN,Cloudflare,704196
+urbanbeauty.pk,CDN,Cloudflare,704376
+zeesy.pk,CDN,Cloudflare,704420
+azureofficial.pk,CDN,Cloudflare,704835
+bioshop.pk,CDN,Cloudflare,704850
+clickable.pk,CDN,Cloudflare,705561
+imports.pk,CDN,Cloudflare,705735
+mightycart.pk,CDN,Cloudflare,705840
+mystyle.pk,CDN,Cloudflare,705859
+vapebar.pk,CDN,Cloudflare,707533
+selfskincare.pk,Abroad,Hostinger International Limited (LT),715191
+cinemakick.pk,Abroad,LeaseWeb Netherlands B.V. (NL),716136
+aboutphone.pk,CDN,Cloudflare,719055
+pectaaresult.pk,Abroad,Hostinger International Limited (LT),720063
+linkshop.pk,CDN,Cloudflare,722645
+deen.pk,Abroad,Namecheap  Inc. (US),722997
+dgcs.gos.pk,Pakistani,Punjab Information Technology Board,723900
+bandana.pk,CDN,Cloudflare,728749
+toynix.pk,CDN,Cloudflare,733025
+katib.pk,CDN,Cloudflare,733670
+rozzana.pk,CDN,Cloudflare,734475
+visiontelecom.pk,Abroad,Hetzner Online GmbH (DE),734704
+webx.pk,CDN,Cloudflare,738904
+riderz.pk,Abroad,GTHost (FR),739544
+onic.pk,CDN,Cloudflare,740671
+funsies.pk,CDN,Cloudflare,742218
+johra.pk,CDN,Cloudflare,742402
+mosafir.pk,CDN,Cloudflare,742612
+saharonline.pk,CDN,Cloudflare,742855
+asraderm.pk,CDN,Cloudflare,743265
+junaidtech.pk,CDN,Cloudflare,743658
+kamalsolar.pk,CDN,Cloudflare,743669
+kissanghar.pk,CDN,Cloudflare,743680
+smarthealer.pk,CDN,Cloudflare,744030
+starcity.pk,CDN,Cloudflare,744047
+techglobe.pk,CDN,Cloudflare,744074
+urdunovelsghar.pk,CDN,Cloudflare,744127
+visahq.pk,CDN,AWS,744152
+h555.pk,Abroad,Namecheap  Inc. (US),744996
+aneela.pk,CDN,AWS,745323
+thotbb.pk,Abroad,Ddos-guard LTD (RU),746117
+5gbet.pk,CDN,Cloudflare,753612
+777sxgameapp.pk,Abroad,Namecheap  Inc. (US),754381
+92beddingstore.pk,CDN,Cloudflare,755504
+accesson.pk,Abroad,,756568
+adalatonline.pk,CDN,Cloudflare,756785
+adour.pk,CDN,Cloudflare,756958
+ahmedperfumes.pk,CDN,Cloudflare,757465
+ajkpolice.gok.pk,CDN,Cloudflare,757711
+ajmal.pk,CDN,Cloudflare,757716
+akarpunjabgovt.pk,Abroad,HOSTINGER IN (IN),757784
+alizeh.pk,CDN,Cloudflare,758189
+allinonestore.pk,CDN,Cloudflare,758281
+anex.pk,CDN,Cloudflare,759143
+antstore.pk,CDN,Cloudflare,759496
+apms.pk,Pakistani,COMSATS,759747
+applemac.pk,Abroad,PHOENIX NAP  LLC. (NL),759874
+asifaandnabeel.pk,CDN,Cloudflare,760726
+astore.pk,CDN,Cloudflare,760925
+astorebags.pk,CDN,Cloudflare,760926
+astrohope.pk,Abroad,PrivateSystems Networks (US),760960
+auroracloset.pk,CDN,Cloudflare,761376
+ayzel.pk,CDN,Cloudflare,761944
+baapparels.pk,CDN,Cloudflare,762186
+balochistankissan.gob.pk,Abroad,Hetzner Online GmbH (DE),762493
+banoqabil.pk,CDN,AWS,762684
+barqraftar.pk,Abroad,DigitalOcean  LLC (US),762789
+bavari.pk,CDN,Cloudflare,762957
+beechtreebargains.pk,CDN,Cloudflare,763418
+beme.pk,CDN,Cloudflare,763583
+benazirharicard.gos.pk,Abroad,Hetzner Online GmbH (DE),763592
+beyourself.pk,CDN,Cloudflare,764295
+bilalmarth7.pk,CDN,Cloudflare,764730
+bluebirdarts.pk,CDN,Cloudflare,765410
+branighty.pk,CDN,Cloudflare,766312
+branny.pk,CDN,Cloudflare,766314
+bullprofit.pk,unresolved,,766879
+carrera.pk,CDN,Cloudflare,768060
+checkbills.pk,CDN,Cloudflare,769262
+checkyourbill.pk,CDN,Cloudflare,769283
+cinestar.pk,CDN,Google,769868
+class11.pk,Abroad,Hostinger International Limited (LT),770244
+clearpathortho.pk,Abroad,DigitalOcean  LLC (US),770306
+cocoon.pk,CDN,Cloudflare,770836
+colorshow.pk,CDN,Cloudflare,771076
+ct7777.pk,Abroad,OVH SAS (FI),772547
+culturalfusion.pk,CDN,Cloudflare,772685
+darazcenter.pk,Abroad,HOSTINGER IN (IN),773385
+darvaza.pk,CDN,Cloudflare,773447
+dazlogistics.pk,unresolved,,773630
+dealsera.pk,CDN,Cloudflare,773784
+dealsexpress.pk,CDN,Cloudflare,773785
+deluxefootwear.pk,CDN,Cloudflare,774024
+digidokaan.pk,CDN,Cloudflare,774727
+dlportal.pk,unresolved,,775271
+dnstore.pk,CDN,Cloudflare,775350
+dollarsmart.pk,CDN,Cloudflare,775519
+domain.pk,Abroad,Hetzner Online GmbH (DE),775533
+dyot.pk,CDN,Cloudflare,776542
+e-challancheck.pk,CDN,Cloudflare,776598
+ebill.pk,Pakistani,Ebone Network (Pvt) Ltd,777144
+eduhelps.pk,Abroad,Hostinger International Limited (LT),777568
+eduportal.pk,CDN,Cloudflare,777600
+elan.pk,CDN,Cloudflare,778015
+elitestore.pk,CDN,Cloudflare,778254
+emap.pk,CDN,Cloudflare,778409
+ent365.pk,Abroad,,778799
+eschool.pk,Abroad,WEBSITEWELCOME.COM (US),779232
+estationers.pk,Abroad,New Dream Network (US),779466
+eveon.pk,Abroad,WHG Hosting Services Ltd (US),779813
+evoucher.pk,Abroad,Hostinger International Limited (IN),779906
+expostore.pk,CDN,Cloudflare,780074
+faisalmoverz.pk,CDN,Cloudflare,780573
+faizanmotorsports.pk,CDN,Cloudflare,780577
+fashionflare.pk,CDN,Cloudflare,780823
+fastex.pk,Abroad,Contabo GmbH (FR),780864
+feathers.pk,CDN,Cloudflare,781073
+fgeijobs.pk,Abroad,Hostinger International Limited (LT),781339
+finance.gob.pk,CDN,Cloudflare,781586
+fineur.pk,CDN,Cloudflare,781659
+fivo.pk,CDN,Cloudflare,781866
+flaship.pk,CDN,Cloudflare,781956
+flormar.pk,CDN,Cloudflare,782131
+flourishundergarments.pk,CDN,Cloudflare,782138
+focusclothing.pk,CDN,Cloudflare,782286
+footsteps.pk,CDN,Cloudflare,782431
+footystream.pk,CDN,Cloudflare,782438
+forextrading.pk,CDN,Cloudflare,782489
+freejobs.pk,Abroad,Hostinger International Limited (SG),782848
+fulfillkaro.pk,CDN,Cloudflare,783154
+funmax.pk,Pakistani,Fariya Networks,783298
+funstream.pk,Pakistani,Fiber Beam Pvt Ltd,783314
+gamcamedical.pk,CDN,Google,783831
+garderobe.pk,CDN,Cloudflare,784126
+girlgroup.pk,CDN,Cloudflare,785183
+glowbeauty.pk,CDN,Cloudflare,785438
+goldstarjewellers.pk,Abroad,Hostinger International Limited (LT),785849
+gomilaintersole.pk,CDN,Cloudflare,785920
+governmentjob.pk,CDN,Cloudflare,786152
+graceup.pk,CDN,Cloudflare,786261
+groupslink.pk,CDN,Cloudflare,786586
+groupslinks.pk,CDN,Cloudflare,786587
+gulaal.pk,CDN,Cloudflare,786977
+h55game.pk,Abroad,Namecheap (US),787267
+hamzamothercare.pk,CDN,Cloudflare,787536
+hazecobills.pk,CDN,Cloudflare,787882
+heelsshoes.pk,CDN,Cloudflare,788104
+heeriye.pk,CDN,Cloudflare,788107
+hindidubbedmovies.pk,CDN,Cloudflare,788655
+historicalpoint.pk,CDN,Cloudflare,788763
+homage.pk,CDN,Cloudflare,789093
+home.gop.pk,unresolved,,789099
+homelo.pk,CDN,Cloudflare,789131
+honhaarjawan.pk,CDN,AWS,789256
+icasiostore.pk,Abroad,Hostinger International Limited (LT),790333
+identityservices.pk,CDN,Cloudflare,790513
+iescobill.pk,Abroad,Contabo GmbH (FR),790637
+ijazjewllerymahal.pk,CDN,Cloudflare,790794
+imtiazautos.pk,CDN,Cloudflare,791153
+imtiazbikerzstudio.pk,CDN,Cloudflare,791154
+instaworld.pk,CDN,AWS,791772
+interwood.pk,CDN,Cloudflare,791952
+jaancollection.pk,CDN,Cloudflare,792960
+jacquard.pk,CDN,Cloudflare,793001
+jadeno.pk,CDN,Cloudflare,793008
+jadeonline.pk,CDN,Cloudflare,793009
+jollylolly.pk,CDN,Cloudflare,794349
+julke.pk,CDN,Cloudflare,794735
+kamaliamart.pk,CDN,Cloudflare,795426
+karobari.pk,Abroad,Hostinger MY (MY),795663
+kasheesboutique.pk,CDN,Cloudflare,795711
+katmoviehd.pk,CDN,Cloudflare,795762
+kemeistore.pk,CDN,Cloudflare,796059
+kenwoodpakistan.pk,CDN,Cloudflare,796120
+keonlinebill.pk,CDN,Cloudflare,796138
+kharianpigeons.pk,Abroad,Contabo GmbH (FR),796359
+kidsmania.pk,CDN,Cloudflare,796500
+kikocosmetics.pk,CDN,Cloudflare,796549
+ktrade.pk,Abroad,Internap Holding LLC (US),797986
+labcloud.pk,Abroad,Hetzner Online GmbH (FI),798468
+lda.gop.pk,CDN,Cloudflare,799231
+lilcubs.pk,CDN,Cloudflare,799994
+linky.pk,CDN,Cloudflare,800170
+littleplanet.pk,CDN,Cloudflare,800299
+littlezclub.pk,CDN,Cloudflare,800305
+loyi.pk,CDN,Cloudflare,801292
+luxoraa.pk,CDN,Cloudflare,801725
+mahnur.pk,CDN,Cloudflare,802439
+majesticchef.pk,CDN,Cloudflare,802545
+masti4u.pk,Abroad,,803418
+medlifehealthcares.pk,Abroad,HOSTINGER SG (SG),804248
+mehakposh.pk,CDN,Cloudflare,804443
+mentr.pk,CDN,Cloudflare,804629
+mepcobillcheck.pk,CDN,Cloudflare,804659
+metallicshome.pk,CDN,Cloudflare,804821
+movies123.pk,Abroad,SIA VEESP (LV),807035
+mpcl.pk,Abroad,Hostinger International Limited (LT),807135
+mtpi.pk,CDN,Cloudflare,807465
+myhcm.pk,Abroad,Limestone Networks (US),808284
+myhomestyle.pk,CDN,Cloudflare,808305
+naqoosh.pk,CDN,Cloudflare,809174
+netgate.pk,CDN,Cloudflare,809760
+nextbroadband.pk,Abroad,20i Limited (US),810057
+novelistan.pk,Abroad,Hostinger International Limited (LT),810991
+ocio.pk,CDN,Cloudflare,811662
+olim.pk,CDN,Cloudflare,812222
+onlinesalestore.pk,unresolved,,812663
+optp.pk,Abroad,Oracle Corporation (US),812985
+oralmax.pk,CDN,Cloudflare,813019
+organicpicks.pk,CDN,Cloudflare,813118
+pakmobizone.pk,Abroad,20i Limited (GB),814081
+paksupergame.pk,CDN,Cloudflare,814095
+pakwingames.pk,CDN,Cloudflare,814102
+parishay.pk,CDN,Cloudflare,814510
+peachrepublic.pk,CDN,Cloudflare,815103
+pescobillonline.pk,Abroad,Hostinger International Limited (IN),815490
+pesconlinebill.pk,CDN,Cloudflare,815491
+pessi.gop.pk,Abroad,OVH SAS (GB),815504
+petspark.pk,CDN,Cloudflare,815589
+pfa.gop.pk,CDN,Cloudflare,815614
+phf.gop.pk,Pakistani,Punjab Information Technology Board,815868
+physioshop.pk,CDN,Google,816032
+pinkpetals.pk,CDN,Cloudflare,816265
+pinpack.pk,CDN,Cloudflare,816275
+pk1947.pk,Abroad,Namecheap (US),816449
+pk365game.pk,CDN,Cloudflare,816453
+plussize.pk,CDN,Cloudflare,817006
+priceit.pk,CDN,Cloudflare,818201
+protees.pk,CDN,Cloudflare,818705
+pyariwalls.pk,CDN,Cloudflare,819281
+qadrigadgets.pk,CDN,Cloudflare,819393
+radstore.pk,CDN,Cloudflare,820192
+redragonzone.pk,CDN,Cloudflare,821136
+remington.pk,CDN,Cloudflare,821356
+rewarisweetmart.pk,CDN,Cloudflare,821699
+rilancio.pk,CDN,Cloudflare,821927
+rocketcourier.pk,Abroad,Hetzner Online GmbH (FI),822258
+royalxcasinoapk5.pk,Abroad,SpectraIP B.V. (NL),822657
+safina.pk,CDN,Cloudflare,823501
+sanitary.pk,Abroad,GoDaddy.com  LLC (SG),824000
+sapphirecreative.pk,CDN,Cloudflare,824148
+sarazcollection.pk,CDN,Cloudflare,824191
+scarfsnscarf.pk,CDN,Cloudflare,824593
+sesky.pk,Abroad,5G NETWORK OPERATIONS PTY LTD (AU),825569
+shemale.pk,CDN,Cloudflare,826062
+shopsabroso.pk,CDN,Cloudflare,826403
+simsim.pk,Pakistani,Multinet 125-88/24,826952
+sindhjobs.pk,Abroad,Hostinger International Limited (LT),826988
+sitarastudio.pk,CDN,Cloudflare,827255
+skillsider.pk,Abroad,Hostinger International Limited (SG),827433
+skinkit.pk,CDN,Cloudflare,827449
+skywaysonline.pk,Abroad,A2 Hosting  Inc. (US),827615
+smartcargo-apx.pk,Abroad,Hetzner Online GmbH (FI),827861
+smartcargo-vtr.pk,Abroad,Hetzner Online GmbH (FI),827862
+smarteshop.pk,CDN,Cloudflare,827892
+smta.gos.pk,Abroad,Hetzner Online GmbH (FI),828120
+sngplbil.pk,CDN,Cloudflare,828199
+sogohomestore.pk,CDN,Cloudflare,828397
+solarpanelprices.pk,CDN,Cloudflare,828464
+solhut.pk,CDN,AWS,828484
+sphf.gos.pk,Abroad,Internap Holding LLC (US),829047
+splashberry.pk,CDN,Cloudflare,829158
+sprinkles.pk,CDN,Cloudflare,829352
+stationers.pk,CDN,Cloudflare,829815
+sunsolar.pk,Abroad,HOSTINGER-SG (SG),830605
+swissmiss.pk,CDN,Cloudflare,831238
+taanabaana.pk,CDN,Cloudflare,831601
+tarteeb.pk,CDN,Cloudflare,832141
+teleanswertoday.pk,CDN,AWS,832650
+testmaker.pk,Abroad,Hetzner Online GmbH (FI),832993
+tevta.gop.pk,Pakistani,ITI Karachi Multinet,833024
+textilehouse.pk,CDN,Cloudflare,833052
+tftheft.pk,Pakistani,PITC,833079
+tgmstore.pk,CDN,Cloudflare,833122
+thefabricstore.pk,CDN,Cloudflare,833345
+theproteinfactory.pk,CDN,Cloudflare,833572
+ticketwala.pk,CDN,Cloudflare,833861
+tifl.pk,CDN,Cloudflare,833972
+tomiwatches.pk,CDN,Cloudflare,834682
+toysinpakistan.pk,Abroad,Hostinger US (US),835220
+tplpower.pk,Pakistani,Pakistan Telecommuication company limited,835249
+traintracking.pk,CDN,Cloudflare,835399
+trax.pk,Pakistani,Mobilink GSM,835562
+trego.pk,CDN,Cloudflare,835602
+trueclean.pk,CDN,Cloudflare,835885
+turbolight.pk,CDN,Cloudflare,836353
+tutoria.pk,Abroad,DigitalOcean  LLC (US),836439
+tyrepoint.pk,CDN,Cloudflare,836650
+udhaar.pk,CDN,AWS,836919
+ukfashions.pk,CDN,Cloudflare,837196
+urbanseller.pk,CDN,Cloudflare,838046
+vapemall.pk,CDN,Cloudflare,838720
+wasalhr.pk,Pakistani,NEXLINX,841043
+westpoint.pk,CDN,Cloudflare,841584
+winrupeesapp.pk,CDN,Cloudflare,842021
+winstore.pk,unresolved,,842037
+worldlinkisp.pk,Pakistani,Wateen Telecom Limited,842392
+wowbags.pk,CDN,Cloudflare,842437
+x111gameapp.pk,Abroad,Namecheap  Inc. (US),842713
+xmed.pk,Abroad,OVH SAS (CA),843121
+xoxostore.pk,CDN,Cloudflare,843493
+y888games.pk,Abroad,OVH SAS (DE),843878
+y999.pk,Abroad,Namecheap  Inc. (US),843886
+y999gameapp.pk,Abroad,Namecheap  Inc. (US),843887
+yards.pk,CDN,Cloudflare,844040
+yourmart.pk,Abroad,WHG Hosting Services Ltd (SG),844494
+yumi.pk,CDN,Cloudflare,844678
+yumtreats.pk,CDN,Cloudflare,844684
+zaha.pk,CDN,Cloudflare,844923
+zahrastores.pk,CDN,Cloudflare,844938
+zamaschool.pk,CDN,AWS,844980
+zing.pk,CDN,Cloudflare,845380
+zubi.pk,CDN,Cloudflare,845694
+toystorepakistan.pk,CDN,Cloudflare,847263
+suchtv.pk,CDN,Cloudflare,848590
+dotz.pk,Abroad,OVH SAS (CA),851558
+digikhata.pk,CDN,Cloudflare,853045
+curl.pk,CDN,Cloudflare,854742
+testinstruments.pk,CDN,Cloudflare,860775
+shopids.pk,CDN,Cloudflare,863254
+shadiyana.pk,CDN,Cloudflare,866780
+lahorebooks.pk,Abroad,Oracle Corporation (US),867394
+2sstore.pk,CDN,Cloudflare,868762
+98-pkr.pk,Abroad,Namecheap  Inc. (US),869068
+arfragrances.pk,CDN,Cloudflare,869789
+babybazar.pk,CDN,Cloudflare,870106
+bloon.pk,CDN,Cloudflare,870622
+chte.gob.pk,Abroad,Namecheap  Inc. (US),871316
+chunkncheese.pk,CDN,Cloudflare,871319
+dermacospakistan.pk,Abroad,Hostinger International Limited (LT),872022
+haseenlibas.pk,CDN,Cloudflare,874092
+histreet.pk,CDN,Cloudflare,874253
+homeindoor.pk,CDN,Cloudflare,874318
+iqorganicsolution.pk,CDN,Cloudflare,874820
+leshop.pk,CDN,Cloudflare,875989
+lucky-pkr.pk,CDN,Cloudflare,876275
+mepcowapdabills.pk,Abroad,Hostinger International Limited (LT),876793
+neonsquare.pk,CDN,Cloudflare,877612
+ordinarypakistan.pk,Abroad,Telepoint (BG),878159
+p999.pk,CDN,Cloudflare,878269
+pashafabrics.pk,CDN,Cloudflare,878413
+petxpress.pk,Abroad,WHG Hosting Services Ltd (GB),878569
+pumpitup.pk,CDN,Cloudflare,879112
+scentyou.pk,CDN,Cloudflare,879992
+soshades.pk,CDN,Cloudflare,880681
+steamshop.pk,CDN,Cloudflare,880848
+tamaam.pk,Abroad,Hostinger International Limited (LT),881180
+tiraz.pk,CDN,Cloudflare,881619
+wehome.pk,CDN,Cloudflare,882753
+youthacademy.pk,CDN,Cloudflare,883211
+zaviyaa.pk,CDN,Cloudflare,883296
+zc777-game.pk,Abroad,Namecheap (US),883303
+darazmart.pk,CDN,Cloudflare,894666
+homeshopping.pk,CDN,Cloudflare,897336
+hostinger.pk,CDN,Cloudflare,897791
+288win.pk,Abroad,Namecheap  Inc. (US),900341
+388winapp.pk,Abroad,Namecheap  Inc. (US),900519
+588wingames.pk,Abroad,Namecheap  Inc. (US),900729
+alphax.pk,CDN,Cloudflare,901823
+asanquran.pk,CDN,Cloudflare,902282
+barkatx.pk,CDN,Cloudflare,902835
+bcgm.pk,CDN,Cloudflare,902960
+checksimownerdetails.pk,Abroad,Hostinger International Limited (LT),904628
+clubpkgame.pk,CDN,Cloudflare,904874
+eurobit.pk,Abroad,Hostinger International Limited (LT),906756
+glossifix.pk,CDN,Cloudflare,908091
+gmlaw.pk,Abroad,Hostinger International Limited (LT),908109
+gulnaar.pk,CDN,Cloudflare,908399
+jobify.pk,CDN,Cloudflare,910248
+khizaan.pk,CDN,Cloudflare,910904
+malbusaat.pk,CDN,Cloudflare,912627
+meclaytrading.pk,unresolved,,913017
+npftasjobs.pk,Abroad,Hostinger International Limited (LT),914587
+onlinebillchecker.pk,Abroad,Hostinger International Limited (US),914959
+onlinebills.pk,CDN,Cloudflare,914960
+pakistanschemes.pk,Abroad,Hostinger International Limited (LT),915452
+ptclab.pk,Abroad,Contabo GmbH (FR),916706
+rajabbutt.pk,CDN,Cloudflare,917086
+rarestore.pk,CDN,Cloudflare,917254
+redstars.pk,unresolved,,917384
+secureteen.pk,CDN,AWS,918429
+sngplbillcheck.pk,Abroad,Namecheap  Inc. (US),919241
+we999app.pk,Abroad,Namecheap  Inc. (US),922459
+zarajahan.pk,CDN,Cloudflare,923506
+royalelectric.pk,Abroad,Limestone Networks (US),929808
+pakbyte.pk,CDN,Cloudflare,945395
+cheaphosting.pk,Abroad,Hetzner Online GmbH (DE),946307
+cmpunjabrashancard.pk,CDN,Cloudflare,948792
+reading.pk,CDN,Cloudflare,950343
+allrugo.pk,CDN,Cloudflare,954987
+darlink.pk,Abroad,HOSTINGER-SG (SG),956009
+city21.pk,Abroad,Hewlett Packard Enterprise Company (US),956201
+mhsourcing.pk,Abroad,Hostinger International Limited (LT),959124
+bookshub.pk,CDN,Cloudflare,960471
+wenews.pk,CDN,Cloudflare,962152
+gutx.pk,Abroad,Web Werks India Pvt. Ltd. (IN),964207
+emaila.pk,Abroad,Contabo GmbH (FR),965389
+leyjao.pk,Abroad,HOSTINGER IN (IN),967274
+khanaan.pk,CDN,Cloudflare,968354
+hotelmetropolemurree.pk,CDN,Cloudflare,968857
+carbuddy.pk,Abroad,Enix Ltd (GB),969272
+kafka.pk,CDN,Cloudflare,970490
+tjmart.pk,Abroad,Hostinger International Limited (SG),976660
+accsys.pk,Abroad,20i Limited (GB),985577
+buysolar.pk,Abroad,Oracle Corporation (US),985666
+abdulwaheed.pk,Abroad,Interserver  Inc (US),986635
+homify.pk,CDN,AWS,991585
+awamiawaz.pk,Abroad,Hetzner Online GmbH (FI),994011
+sacollection.pk,Abroad,Hetzner Online GmbH (DE),994889
+caseon.pk,CDN,Cloudflare,998706
+#
+
+# ===== Hosts (ISP / CDN) by number of sites  [177 unique hosts, 1781 sites] =====
+# Cloudflare: 927
+# Hetzner Online GmbH: 72
+# Hostinger International Limited: 68
+# Namecheap  Inc.: 45
+# AWS: 45
+# National Telecommunication Corporation: 35
+# OVH SAS: 28
+# HEC: 21
+# Pakistan Telecommuication company limited: 20
+# WHG Hosting Services Ltd: 20
+# Cyber Internet Services (Private) Limited: 18
+# Contabo GmbH: 18
+# Google: 16
+# Microsoft/Azure: 14
+# Punjab Information Technology Board: 12
+# DigitalOcean  LLC: 12
+# COMSATS: 12
+# PITC: 11
+# Oracle Corporation: 11
+# Nayatel (Pvt) Ltd: 10
+# GoDaddy.com  LLC: 10
+# Akamai: 8
+# Sucuri: 8
+# HOSTINGER IN: 7
+# 20i Limited: 7
+# HOSTINGER: 7
+# AWS CloudFront: 6
+# Wateen Telecom Limited: 6
+# Interserver  Inc: 6
+# Namecheap: 6
+# SpectraIP B.V.: 6
+# Multinet Broadband: 5
+# Imperva/Incapsula: 5
+# Gerrys Information Technology (PVT) Ltd: 5
+# Gemnet Enterprise Solutions Pvt Ltd: 5
+# HOSTINGER US: 5
+# HOSTINGER ID: 4
+# Unified Layer: 4
+# Liquid Web  L.L.C: 4
+# NEXLINX: 4
+# National Telecom Corporation: 4
+# PITB RO: 4
+# Limestone Networks: 4
+# Logon Broadband Pvt. Limited: 4
+# Ddos-guard LTD: 4
+# Ebone Network (Pvt) Ltd: 3
+# Nexlinx: 3
+# WEBSITEWELCOME.COM: 3
+# Hostinger MY: 3
+# Cyber Internet Services Pakistan: 3
+# Internap Holding LLC: 3
+# Mobilink GSM: 3
+# Enix Ltd: 3
+# HOSTINGER SG: 3
+# LINKdotNET Telecom Limited: 3
+# A2 Hosting  Inc.: 3
+# Connect Communication Karachi: 3
+# Hetzner: 3
+# Pakistan Telecommunication Company Limited: 2
+# FranTech Solutions: 2
+# IONOS SE: 2
+# Supernet 1: 2
+# CIS Islamabad: 2
+# InMotion Hosting  Inc.: 2
+# netcup GmbH: 2
+# Alibaba (US) Technology Co.  Ltd.: 2
+# Federal Board of Revenue: 2
+# Dosarrest Internet Security LTD: 2
+# Micronet: 2
+# Iqra University: 2
+# HOSTINGER MY: 2
+# UK Dedicated Servers Limited: 2
+# HostGator.com LLC: 2
+# PUSHPKT OU: 2
+# Z COM NETWORKS: 2
+# GCS (Private) Limited: 2
+# Telkom Internet LTD: 2
+# IQWeb FZ-LLC: 2
+# Shinjiru Technology Sdn Bhd: 2
+# Psychz Networks: 2
+# HOSTINGER-SG: 2
+# ESS: 1
+# Leaseweb NL: 1
+# ManagedWay: 1
+# TW OBJ: 1
+# O2switch Sarl: 1
+# Gourmet Foods: 1
+# Digital LLC: 1
+# SamsungSDS Inc.: 1
+# Vodafone Net Iletisim Hizmetleri A.S.: 1
+# easyDNS Technologies  Inc.: 1
+# IDC  China Telecommunications Corporation: 1
+# EFU LIFE Assurance Ltd: 1
+# pair Networks: 1
+# Tiggee LLC: 1
+# Yancy Limited: 1
+# Vercara  LLC: 1
+# United Bank Limited: 1
+# Punjab Land Records Authority: 1
+# Pakistan Single Window: 1
+# PTCL ITI Future Connect 79: 1
+# Multinet 125-107/24: 1
+# PTCL ITI Karachi 3: 1
+# WideBand Communications(Pvt)Ltd: 1
+# PTCL Triple Play Project: 1
+# Orient Express LDI Limited: 1
+# CMPak Limited: 1
+# NTC LHR F-51/1 Dynamic BRAS: 1
+# LiquidNet US LLC: 1
+# Tier.Net Technologies LLC: 1
+# FortressITX: 1
+# TierPoint  LLC: 1
+# PTCL ITI Lahore 7: 1
+# Host Europe GmbH: 1
+# HostDime.com  Inc.: 1
+# Hetzner Online AG: 1
+# org.interserver.net: 1
+# GD MASS Network: 1
+# The Constant Company: 1
+# AMBITIONS COMMUNICATION SYSTEM (SMC-PRIVATE) LIMITED: 1
+# Connect Communication: 1
+# KK Networks (Pvt) Ltd.: 1
+# SoftLayer: 1
+# COLT Technology Services Group Limited: 1
+# Ultahost  Inc.: 1
+# INNOKAT (PVT.) LIMITED: 1
+# Linkdotnet Telecom Limited: 1
+# IP Connect Inc: 1
+# 1515 ROUNDTABLE DR PROPERTY  LLC: 1
+# Huawei International Pte. LTD: 1
+# WholeSale Internet: 1
+# wix com inc: 1
+# Unlimited Web Hosting UK LTD: 1
+# Pakistan State Oil Company Limited: 1
+# Alibaba.com Singapore E-Commerce Private Limited: 1
+# KnownSRV Ltd.: 1
+# HOSTINGER BR: 1
+# InMotion Hosting  Inc: 1
+# velia.net Internetdienste GmbH: 1
+# TRANSWORLD ASSOCIATES (PVT) LIMITED: 1
+# Galaxy Broadband (pvt.) Ltd.: 1
+# Login.Me (Pvt) Ltd: 1
+# Leaseweb Singapore Pte. Ltd.: 1
+# Digicom Pakistan (private) Limited: 1
+# Delta Networks: 1
+# Abelohost BV: 1
+# Million Web Services Private Limited: 1
+# ZETTA: 1
+# ByteFlare LTD: 1
+# Punjab Safe City Authority: 1
+# Garena Online Pte Ltd: 1
+# Sino Worldwide Trading Limited: 1
+# Aceville Pte.ltd.: 1
+# Hostinger IN: 1
+# PTCL ITI Lahore 11: 1
+# Handy Networks: 1
+# Leaseweb UK Limited: 1
+# PMCL Transit: 1
+# AVA HOST SRL: 1
+# Fariya Networks 150: 1
+# Turnkey Internet Inc.: 1
+# Alexhost SRL: 1
+# LeaseWeb Netherlands B.V.: 1
+# GTHost: 1
+# PHOENIX NAP  LLC.: 1
+# PrivateSystems Networks: 1
+# New Dream Network: 1
+# Fariya Networks: 1
+# Fiber Beam Pvt Ltd: 1
+# SIA VEESP: 1
+# 5G NETWORK OPERATIONS PTY LTD: 1
+# Multinet 125-88/24: 1
+# ITI Karachi Multinet: 1
+# Hostinger US: 1
+# Telepoint: 1
+# Hewlett Packard Enterprise Company: 1
+# Web Werks India Pvt. Ltd.: 1
+# (unresolved, no host: 36)
