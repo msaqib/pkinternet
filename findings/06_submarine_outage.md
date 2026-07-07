@@ -109,7 +109,7 @@ baseline we have, since monitoring began mid-outage — for **international** ta
 |---|---|---|
 | **Average RTT** | 148 → 145 ms | **+2%** |
 | **Jitter** (per-pair RTT stddev) | 13.6 → 10.3 ms | **+31%** |
-| **Path length** (hops) | 41 → 44 | **−5%** (flat) |
+| **Path length** (hops, filtered/Docker probes excluded) | 28.6 → 30.0 | **−5%** (flat) |
 | **Packet loss** | 10% → 11% | ~flat |
 
 So the outage's signature was **increased variability, not a uniform latency rise**: the
@@ -117,9 +117,11 @@ mean RTT barely moved (+2%) but **jitter jumped +31%**, and **path length did no
 confirming Finding 5 (no rerouting onto longer paths). The damage was **concentrated on
 PTCL-sourced paths** (RTT **+12%**, jitter **+50%**) and on real servers abroad
 (Abroad-target jitter **+67%** vs CDN **+11%**); **local/PK targets showed no increase**
-(the control). *Caveat:* pooled means understate the peak (a few paths swung 400–650 ms
-but average out), and with no true pre-event baseline the increase vs a **normal** day is
-likely larger. Full breakdown: `results/outage_impact.md`.
+(the control). The finding is **robust to the RTT definition**: recomputed on **min-of-N**
+RTT (the framework standard) rather than the mean, the RTT change is **+0%** and jitter
+**+24%** — same conclusion. *Caveat:* pooled means understate the peak (a few paths swung
+400–650 ms but average out), and with no true pre-event baseline the increase vs a
+**normal** day is likely larger. Full breakdown: `results/outage_impact.md`.
 
 ## Why this matters for PKIX
 

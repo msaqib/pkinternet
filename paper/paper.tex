@@ -93,6 +93,23 @@ path). We flag these throughout. Targets vary per experiment: the top-100 Pakist
 (hosting), 8 spread IPs in every announced /24 of every small ISP (tromboning census), a fixed
 local/offshore panel (longitudinal), and a balanced CDN/Abroad/PK sample during the outage.
 
+\textbf{Measurement framework and its evolution.} Our mature framework---used from the
+tromboning experiments onward---creates measurements with the official RIPE Atlas libraries
+(cousteau/sagan), uses \textbf{TCP/80 Paris traceroute} for the path (ICMP is heavily filtered
+in Pakistani networks and undercounts responses---in our first ISP only $12/52$ targets replied
+to ICMP) with a \textbf{ping} companion for end-to-end RTT (the \textbf{min-of-$N$} for a
+noise-free level; jitter as the round-to-round standard deviation), and classifies routing
+with the RTT-physics detector of Sec.~\ref{sec:detect}. Our four key indicators follow prior IXP work~\cite{dibartolomeo2015}:
+\textbf{RTT, hop count, jitter, and packet loss}. We are candid that the early experiments
+(hosting and the longitudinal pilot) \emph{predate} this framework: they hand-rolled the REST
+API with ICMP Paris traceroute, a single-packet RTT, and geo-IP classification. Where those
+runs feed a quantitative comparison we \textbf{re-derive RTT as min-of-$N$ and re-classify
+routing with the RTT-physics detector from the archived raw results}; differences that cannot
+be recomputed (an ICMP path is not a TCP path; a probe absent from a past run cannot be added)
+are flagged in place. A single \emph{uniform} four-indicator, per-ISP comparison across all
+vantages is therefore reserved for the longitudinal panel (Sec.~\ref{sec:conclusion}), the only
+run that carries all four indicators from every probe under one method.
+
 \section{Method: an RTT-Physics Tromboning Detector}
 \label{sec:detect}
 \textbf{The problem with geo-IP.} Registration country lies at exactly the hops that matter. A
@@ -117,6 +134,12 @@ of the hop-by-hop RTTs. We report this agreement before quoting any rate.
 
 \section{Where Pakistani Content Lives}
 \label{sec:host}
+\emph{Provenance: a DNS + ASN hosting snapshot from a legacy experiment; hosting location is a
+name/registration property (geo-IP), distinct from the RTT-proven routing analysis of later
+sections. The legacy traceroutes are single-packet ICMP, so we do not retro-fit the RTT-physics
+detector onto them; routing to these targets is re-verified under the uniform panel
+(Sec.~\ref{sec:conclusion}).}
+
 Combining our two hosting censuses (91 sites; top-100), across \textbf{172 sites} we find
 \textbf{$60\%$ hosted in Pakistan, $31\%$ on an anycast CDN} (almost all Cloudflare)
 \textbf{and $8\%$ on a real server abroad} (Fig.~\ref{fig:hosting}). The split is strongly
@@ -212,6 +235,10 @@ a snapshot rate that our planned repeat rounds will report as a range.}
 
 \section{The Latency Cost and the Unused Local Path}
 \label{sec:penalty}
+\emph{Provenance: this is the longitudinal \textbf{pilot} (legacy ICMP Paris + ping, RTT
+re-derived as min-of-$N$); the uniform, per-ISP four-indicator version is deferred to the
+longitudinal panel (Sec.~\ref{sec:conclusion}).}
+
 The hairpin has a price, and it is stable. Re-tracing a fixed panel every 15~minutes over days,
 local Pakistani sites sit at $2$--$40$\,ms while two banks sit at $127$\,ms (MCB, served from
 Singapore) and $200$\,ms (HBL, New Jersey)---a $3$--$9\times$ penalty that holds on every ISP.
@@ -252,15 +279,17 @@ offshore-hosted majority and barely touches anything hosted in Pakistan and exch
 \begin{table}[t]
   \centering
   \caption{SMW5 outage impact, international targets: outage peak (first 3\,h) vs recovered
-  (last 3\,h). No pre-event baseline, so the true rise vs a normal day is likely larger.}
+  (last 3\,h). No pre-event baseline, so the true rise vs a normal day is likely larger.
+  Robust to the RTT definition: on min-of-$N$ RTT the change is $+0\%$ / jitter $+24\%$ ---
+  same conclusion. Hop counts exclude ICMP-filtered / container probes.}
   \label{tab:impact}
   \begin{tabular}{lcc}
     \toprule
     Metric & Outage $\to$ recovered & Change \\
     \midrule
-    Average RTT   & $148 \to 145$\,ms   & $+2\%$ \\
+    Mean RTT      & $148 \to 145$\,ms   & $+2\%$ \\
     Jitter        & $13.6 \to 10.3$\,ms & $\mathbf{+31\%}$ \\
-    Path length   & $41 \to 44$ hops    & ${\sim}$flat \\
+    Path length   & $28.6 \to 30.0$ hops & ${\sim}$flat \\
     Packet loss   & $10\% \to 11\%$     & ${\sim}$flat \\
     \bottomrule
   \end{tabular}
@@ -282,15 +311,18 @@ quantify forex saved: RIPE Atlas cannot see byte volume, so we report latency an
 and leave a traffic-weighted cost estimate to future work.
 
 \section{Conclusion and Future Work}
+\label{sec:conclusion}
 Measured from inside Pakistan, the country's Internet exchange is underused in a way that is
 visible on the wire and costly to users: ${\sim}40\%$ of top content is offshore, $11\%$ of
 small-ISP space is reachable only by hairpinning abroad, the hairpin is a routing choice with a
 stable $3$--$9\times$ latency penalty, and it forfeits resilience during a cable fault. The
 local path exists but is not taken. \textbf{Next:} repeat the census over days to range-bound
-the $11\%$ and separate per-host from time-flipping routing; run a 20-day, all-probe
-longitudinal panel over CDN/Abroad/PK sites and known tromboning IPs to produce per-ISP RTT
-distributions, diurnal and weekly stability, and a normal-day baseline that captures the next
-cable fault with a true before/during/after.
+the $11\%$ and separate per-host from time-flipping routing; and run a \textbf{20-day,
+all-probe longitudinal panel} over CDN/Abroad/PK sites and known tromboning IPs, under the
+single mature framework, to deliver the \textbf{uniform four-indicator (RTT, hop count, jitter,
+loss) per-ISP comparison} that our earlier snapshots cannot support, plus diurnal and weekly
+stability and a normal-day baseline that captures the next cable fault with a true
+before/during/after.
 
 \section*{Acknowledgment}
 Supported by the APNIC Foundation and supervised by Dr.\ Saqib Ilyas at LUMS. Measurements use

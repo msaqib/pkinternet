@@ -6,6 +6,10 @@ Since monitoring began mid-outage (no pre-event baseline), it compares the OUTAG
 the RIPE measurements in results/measurements.json.
 
     python experiments/06_submarine_outage/outage_impact.py   # -> results/outage_impact.md
+
+RTT level uses the per-round average; jitter is the round-to-round stddev. The finding is
+robust to the RTT definition: swapping pg.rtt_average -> pg.rtt_min (min-of-N, the framework
+standard) gives +0% RTT and +24% jitter for international targets -- same conclusion.
 """
 import os, json, statistics as st, collections
 from datetime import datetime, timezone, timedelta
