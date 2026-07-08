@@ -36,6 +36,7 @@ TRACE_INTERVAL = int(os.environ.get("TRACE_INTERVAL", "3600"))   # 60 min
 PING_INTERVAL  = int(os.environ.get("PING_INTERVAL", "1800"))    # 30 min
 DURATION_DAYS  = float(os.environ.get("DURATION_DAYS", "7"))
 WATCH_EVERY    = int(os.environ.get("WATCH_EVERY", "1800"))      # fetch cadence in watch mode
+TRACE_ONLY     = os.environ.get("PANEL_TRACE_ONLY", "") == "1"   # skip the ping (halves measurements; fits caps)
 RIPE_PROBES    = "https://atlas.ripe.net/api/v2/probes/"
 HOP_EXCLUDE    = {7764, 62224, 1015210}  # ICMP-filtered / Docker-opaque: hop counts unreliable
 PK_ASN = {17557: "ptcl", 45595: "ptcl-bb", 38193: "transworld", 135407: "tes", 9541: "cybernet",
@@ -98,7 +99,8 @@ def schedule():
                         interval=TRACE_INTERVAL, description=f"exp07 trace {cls} {host}")
         pg = Ping(af=4, target=ip, packets=3, interval=PING_INTERVAL,
                   description=f"exp07 ping {cls} {host}")
-        for kind, spec in (("trace", tr), ("ping", pg)):
+        specs = [("trace", tr)] + ([] if TRACE_ONLY else [("ping", pg)])
+        for kind, spec in specs:
             ok, resp = AtlasCreateRequest(key=pk.API_KEY, measurements=[spec], sources=[src],
                                           is_oneoff=False, start_time=start, stop_time=stop).create()
             if ok:

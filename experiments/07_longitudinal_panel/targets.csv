@@ -1,21 +1,101 @@
-class,target
-# Website list only (no canaries, no IP blocks). class in {CDN, Abroad, Pakistan}.
-# REPLACE / EXTEND with the incoming Tranco -> .pk -> CISA website list.
-# Seeded from Exp 06 as a runnable starting point.
-CDN,telenor.com.pk
-CDN,shophive.com
-CDN,aku.edu
-CDN,express.com.pk
-CDN,outfitters.com.pk
-CDN,telemart.pk
-Abroad,wateen.com
-Abroad,daraz.pk
-Abroad,alfatah.com.pk
-Abroad,dailypakistan.com.pk
-Abroad,sapphireonline.pk
-Pakistan,isra.edu.pk
-Pakistan,punjab.gov.pk
-Pakistan,nab.gov.pk
-Pakistan,pbs.gov.pk
-Pakistan,maju.edu.pk
-Pakistan,yansrhr.org
+class,target,cisa_sector,isp_cdn,tranco_rank
+Pakistan,careers635.com.pk,Commercial Facilities,Pakistan Telecommuication company limited,904351
+Pakistan,cxtreme.pk,Commercial Facilities,Cyber Internet Services (Private) Limited,94090
+Pakistan,dgcs.gos.pk,Commercial Facilities,Punjab Information Technology Board,723900
+Pakistan,digiskills.pk,Commercial Facilities,HEC,79267
+Pakistan,dunyanews.tv,Commercial Facilities,Multinet Broadband,61597
+Pakistan,enc.com.pk,Commercial Facilities,PITC,778620
+Pakistan,excise.gos.pk,Commercial Facilities,Pakistan Telecommuication company limited,93557
+Pakistan,gnnhd.tv,Commercial Facilities,Gourmet Foods,649145
+Pakistan,hrd1902.com.pk,Commercial Facilities,HEC,215205
+Pakistan,kknetworks.com.pk,Commercial Facilities,KK Networks (Pvt) Ltd.,252690
+Pakistan,logon.com.pk,Commercial Facilities,Logon Broadband Pvt. Limited,158595
+Pakistan,mgacs.com.pk,Commercial Facilities,Connect Communication,215983
+Pakistan,networld.pk,Commercial Facilities,Fariya Networks 150,284271
+Pakistan,phf.gop.pk,Commercial Facilities,Punjab Information Technology Board,815868
+Pakistan,psca.gop.pk,Commercial Facilities,Punjab Safe City Authority,71839
+Pakistan,sonic.pk,Commercial Facilities,Mobilink GSM,209691
+Pakistan,sparkbroadband.pk,Commercial Facilities,Logon Broadband Pvt. Limited,272378
+Pakistan,tevta.gop.pk,Commercial Facilities,ITI Karachi Multinet,833024
+Pakistan,toptop.net,Commercial Facilities,Gerrys Information Technology (PVT) Ltd,17707
+Pakistan,trax.pk,Commercial Facilities,Mobilink GSM,835562
+Pakistan,urdu.dunyanews.tv,Commercial Facilities,Multinet Broadband,61597
+Pakistan,worldlinkisp.pk,Commercial Facilities,Wateen Telecom Limited,842392
+Pakistan,youth.cn,Commercial Facilities,Gerrys Information Technology (PVT) Ltd,13948
+Pakistan,zcomnetworks.com.pk,Commercial Facilities,Z COM NETWORKS,326580
+CDN,apkamazon.com.pk,Commercial Facilities,Cloudflare,759681
+CDN,auroracloset.pk,Commercial Facilities,Cloudflare,761376
+CDN,burgeroclock.com.pk,Commercial Facilities,Cloudflare,766936
+CDN,businesslist.pk,Commercial Facilities,Cloudflare,458568
+CDN,digikhata.pk,Commercial Facilities,Cloudflare,853045
+CDN,dogar.com.pk,Commercial Facilities,Cloudflare,503389
+CDN,historicalpoint.pk,Commercial Facilities,Cloudflare,788763
+CDN,honda.com.pk,Commercial Facilities,Cloudflare,465788
+CDN,logoofficial.com,Commercial Facilities,Cloudflare,91746
+CDN,meerzah.pk,Commercial Facilities,Cloudflare,539684
+CDN,mepcoebillcheck.pk,Commercial Facilities,Cloudflare,454617
+CDN,motifz.com.pk,Commercial Facilities,Cloudflare,180276
+CDN,pesconlinebill.pk,Commercial Facilities,Cloudflare,815491
+CDN,pinkpetals.pk,Commercial Facilities,Cloudflare,816265
+CDN,reading.pk,Commercial Facilities,Cloudflare,950343
+CDN,sarazcollection.pk,Commercial Facilities,Cloudflare,824191
+CDN,skyscanner.pk,Commercial Facilities,AWS,183620
+CDN,supermeal.pk,Commercial Facilities,Microsoft/Azure,174089
+CDN,thefrontierpost.com,Commercial Facilities,Cloudflare,312904
+CDN,urbanbeauty.pk,Commercial Facilities,Cloudflare,704376
+CDN,vidmateapp.com.pk,Commercial Facilities,Cloudflare,839505
+CDN,wbm.com.pk,Commercial Facilities,Cloudflare,684068
+CDN,zarajahan.pk,Commercial Facilities,Cloudflare,923506
+CDN,zing.pk,Commercial Facilities,Cloudflare,845380
+Abroad,588wingames.pk,Commercial Facilities,Namecheap  Inc. (US),900729
+Abroad,777sxgameapp.pk,Commercial Facilities,Namecheap  Inc. (US),754381
+Abroad,apkzone.pk,Commercial Facilities,Hetzner Online GmbH (DE),557726
+Abroad,enic.pk,Commercial Facilities,WHG Hosting Services Ltd (SG),392622
+Abroad,hopkicks.pk,Commercial Facilities,Hetzner Online GmbH (FI),560636
+Abroad,hostpro.com.pk,Commercial Facilities,WHG Hosting Services Ltd (SG),733597
+Abroad,insta.com.pk,Commercial Facilities,Interserver  Inc (US),909638
+Abroad,nawaiwaqt.com.pk,Commercial Facilities,Hetzner Online GmbH (FI),294028
+Abroad,pessi.gop.pk,Commercial Facilities,OVH SAS (GB),815504
+Abroad,pgf.com.pk,Commercial Facilities,SoftLayer (US),549696
+Abroad,publicnews.com,Commercial Facilities,Hetzner Online GmbH (FI),
+Abroad,scouted-today.pk,Commercial Facilities,Ddos-guard LTD (RU),452746
+Pakistan,galaxy.net.pk,Communications,Galaxy Broadband (pvt.) Ltd.,393636
+Pakistan,gbn.net.pk,Communications,Gemnet Enterprise Solutions Pvt Ltd,784286
+Pakistan,topcity-1.com,Communications,"NAYATEL-PK - Nayatel (Pvt) Ltd, PK",
+CDN,glory-casino.net.pk,Communications,Cloudflare,121930
+CDN,idc.net.pk,Communications,Google,727218
+CDN,wancom.net.pk,Communications,Cloudflare,173018
+Abroad,en.dailypakistan.com.pk,Communications,"LEASEWEB-DE-FRA-10 - Leaseweb Deutschland GmbH, DE",51303
+Pakistan,bbise.edu.pk,Education,Wateen Telecom Limited,102173
+Pakistan,iub.edu.pk,Education,HEC,294518
+Pakistan,iulms.edu.pk,Education,Iqra University,215354
+Pakistan,pefsis.edu.pk,Education,PTCL Triple Play Project,95138
+CDN,bnbwu.edu.pk,Education,Sucuri,666388
+CDN,ibcc.edu.pk,Education,Cloudflare,607569
+CDN,uos.edu.pk,Education,Cloudflare,602396
+CDN,zu.edu.pk,Education,Cloudflare,384473
+Abroad,duet.edu.pk,Education,Limestone Networks (US),555488
+Abroad,uvas.edu.pk,Education,HOSTINGER (SG),340898
+Pakistan,mepco.com.pk,Energy,PITC,
+CDN,pesco.com.pk,Energy,Cloudflare,
+Abroad,ke.com.pk,Energy,ManagedWay (US),173002
+Pakistan,efulife.com,Financial Services,EFU LIFE Assurance Ltd,567489
+Pakistan,ztbl.com.pk,Financial Services,Cyber Internet Services (Private) Limited,853941
+CDN,khushhalibank.com.pk,Financial Services,AWS CloudFront,
+CDN,mcb.com.pk,Financial Services,Sucuri,276384
+Pakistan,cmu.gov.pk,Government Services & Facilities,Nayatel (Pvt) Ltd,770706
+Pakistan,epads.gov.pk,Government Services & Facilities,Pakistan Telecommuication company limited,208609
+Pakistan,fgeha.gov.pk,Government Services & Facilities,Cyber Internet Services (Private) Limited,
+Pakistan,sindh.gov.pk,Government Services & Facilities,National Telecommunication Corporation,353152
+CDN,ajk.gov.pk,Government Services & Facilities,Cloudflare,178981
+CDN,joinasf.gov.pk,Government Services & Facilities,Cloudflare,794308
+CDN,paknavy.gov.pk,Government Services & Facilities,Cloudflare,288229
+CDN,pnmc.gov.pk,Government Services & Facilities,Cloudflare,636332
+Abroad,gbappsup.org.pk,Government Services & Facilities,Telkom Internet LTD (AZ),635270
+Abroad,kppsc.gov.pk,Government Services & Facilities,Hetzner Online GmbH (DE),186459
+Abroad,ptea.org.pk,Government Services & Facilities,WHG Hosting Services Ltd (GB),818906
+Pakistan,cpsp.edu.pk,Healthcare & Public Health,HEC,70696
+CDN,gamcamedical.pk,Healthcare & Public Health,Google,783831
+Abroad,serenepharma.com.pk,Healthcare & Public Health,Hetzner Online GmbH (FI),825423
+Pakistan,roadmaster.pk,Transportation Systems,Pakistan Telecommuication company limited,
+CDN,airblue.com,Transportation Systems,Cloudflare,76915
