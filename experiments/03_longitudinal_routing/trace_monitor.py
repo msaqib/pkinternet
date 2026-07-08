@@ -88,6 +88,13 @@ PING_PACKETS      = 3        # packets per ping -> loss + jitter
 # Needs working git auth on this machine (SSH deploy key, or a cached HTTPS token).
 AUTO_PUSH = True
 
+# Resolve each target hostname ON THE PROBE (via its own ISP resolver) instead of once
+# centrally. True captures per-ISP GeoDNS (a different IP per ISP): each round's dst_addr
+# -> target_ip is then the probe's OWN resolved IP, so target_ip can vary by probe.
+# False (default) resolves once here and sends every probe the SAME IP, so any RTT/path
+# difference is pure routing, not different probes hitting different servers.
+RESOLVE_ON_PROBE = False
+
 # Canonical probe identity - the SINGLE source of truth: probe_id -> (isp, city_code, asn).
 # The clean label "isp.city (ASN)" (e.g. "nova.lhe (AS136174)") is built from this and used
 # everywhere: the normalized dim_probe table, the routes report, and the live .prom metrics.
@@ -291,12 +298,14 @@ def _post_measurement(payload, tries=4):
     raise last
 
 
-def create_periodic(probe_ids, target_ip, description, start, stop):
+def create_periodic(probe_ids, target, description, start, stop, on_probe=False):
     """One PERIODIC ICMP Paris traceroute from ALL probe_ids (same shape as Exp 01's
-    one-off, but is_oneoff=False + interval, so RIPE fires it every INTERVAL_SEC)."""
+    one-off, but is_oneoff=False + interval, so RIPE fires it every INTERVAL_SEC).
+    `target` is a pre-resolved IP when on_probe is False, or the hostname when
+    on_probe is True (each probe then resolves it via its own ISP resolver)."""
     payload = {
         "definitions": [{
-            "target":           target_ip,
+            "target":           target,
             "description":      description,
             "type":             "traceroute",
             "protocol":         "ICMP",
@@ -306,7 +315,7 @@ def create_periodic(probe_ids, target_ip, description, start, stop):
             "max_hops":         32,
             "size":             48,
             "dont_fragment":    True,
-            "resolve_on_probe": False,
+            "resolve_on_probe": on_probe,
             "interval":         INTERVAL_SEC,
         }],
         "probes":      _probes_block(probe_ids),
@@ -317,18 +326,19 @@ def create_periodic(probe_ids, target_ip, description, start, stop):
     return _post_measurement(payload)
 
 
-def create_ping(probe_ids, target_ip, description, start, stop):
-    """One PERIODIC ping (1/min) from ALL probe_ids - the RTT/jitter/loss companion."""
+def create_ping(probe_ids, target, description, start, stop, on_probe=False):
+    """One PERIODIC ping (1/min) from ALL probe_ids - the RTT/jitter/loss companion.
+    `target` is an IP (on_probe False) or a hostname resolved per probe (on_probe True)."""
     payload = {
         "definitions": [{
-            "target":           target_ip,
+            "target":           target,
             "description":      description,
             "type":             "ping",
             "af":               4,
             "packets":          PING_PACKETS,
             "size":             48,
             "interval":         PING_INTERVAL_SEC,
-            "resolve_on_probe": False,
+            "resolve_on_probe": on_probe,
         }],
         "probes":      _probes_block(probe_ids),
         "is_oneoff":   False,
@@ -354,7 +364,8 @@ def schedule():
     ping_rounds = DURATION_HOURS * 3600 // PING_INTERVAL_SEC if PING_COMPANION else 0
     est = len(TARGETS) * rounds * nprb * 20 + len(TARGETS) * ping_rounds * nprb * PING_PACKETS
     print(f"  ping companion: {'ON (1/min)' if PING_COMPANION else 'off'}   "
-          f"auto-push: {'ON' if AUTO_PUSH else 'off'}")
+          f"auto-push: {'ON' if AUTO_PUSH else 'off'}   "
+          f"DNS: {'per-probe (captures GeoDNS)' if RESOLVE_ON_PROBE else 'central (one IP/target)'}")
     print(f"  est. credits: ~{est:,}  (make sure your RIPE balance covers this)\n")
 
     # attended run -> confirm the spend (skip with EXP03_YES=1 for automation)
@@ -379,12 +390,15 @@ def schedule():
             json.dump(state, f, indent=2)
 
     for t in TARGETS:
-        ip, err = resolve(t["hostname"])
-        if err:
+        ip, err = resolve(t["hostname"])                # central resolve: validation + logging
+        if err and not RESOLVE_ON_PROBE:
             print(f"  x {t['label']:<16} {t['hostname']} - DNS failed: {err}")
             continue
+        # what RIPE traces: the hostname (each probe resolves it) or the one central IP
+        target = t["hostname"] if RESOLVE_ON_PROBE else ip
         try:
-            mid = create_periodic(probe_ids, ip, f"{t['label']} (exp03)", start, stop)
+            mid = create_periodic(probe_ids, target, f"{t['label']} (exp03)", start, stop,
+                                   on_probe=RESOLVE_ON_PROBE)
         except requests.HTTPError as e:
             print(f"  x {t['label']:<16} HTTP {e.response.status_code}: {e.response.text[:120]}")
             continue
@@ -398,12 +412,14 @@ def schedule():
         if PING_COMPANION:
             try:
                 entry["ping_msm_id"] = create_ping(
-                    probe_ids, ip, f"{t['label']} ping (exp03)", start, stop)
+                    probe_ids, target, f"{t['label']} ping (exp03)", start, stop,
+                    on_probe=RESOLVE_ON_PROBE)
                 _save()
             except Exception as e:
                 print(f"  ! {t['label']:<16} ping POST failed (trace {mid} kept): {e}")
         pinfo = f" + ping {entry['ping_msm_id']}" if entry["ping_msm_id"] else " (no ping)"
-        print(f"  ok {t['label']:<16} {t['hostname']:<24} {ip:<16} trace {mid}{pinfo}")
+        ipdisp = (ip or "(per-probe)") if RESOLVE_ON_PROBE else ip
+        print(f"  ok {t['label']:<16} {t['hostname']:<24} {ipdisp:<16} trace {mid}{pinfo}")
         time.sleep(0.3)
 
     _save()

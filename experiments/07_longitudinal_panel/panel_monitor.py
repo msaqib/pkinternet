@@ -32,11 +32,23 @@ from ripe.atlas.cousteau import (Traceroute, Ping, AtlasSource, AtlasCreateReque
                                  AtlasStopRequest, AtlasResultsRequest)
 from ripe.atlas.sagan import TracerouteResult, PingResult
 
-TRACE_INTERVAL = int(os.environ.get("TRACE_INTERVAL", "3600"))   # 60 min
-PING_INTERVAL  = int(os.environ.get("PING_INTERVAL", "1800"))    # 30 min
-DURATION_DAYS  = float(os.environ.get("DURATION_DAYS", "7"))
-WATCH_EVERY    = int(os.environ.get("WATCH_EVERY", "1800"))      # fetch cadence in watch mode
-TRACE_ONLY     = os.environ.get("PANEL_TRACE_ONLY", "") == "1"   # skip the ping (halves measurements; fits caps)
+# ============================ CONFIG — edit these ============================
+TRACEROUTE_EVERY_MIN = 60      # run one traceroute per target every N minutes
+PING_EVERY_MIN       = 30      # run one ping per target every N minutes
+DURATION_DAYS        = 7       # how many days the whole run lasts
+WATCH_EVERY_MIN      = 30      # how often the `watch` loop pulls new results
+TRACE_ONLY           = False   # True = skip pings (halves the measurement count; fits RIPE caps)
+# (env vars TRACEROUTE_EVERY_MIN / PING_EVERY_MIN / DURATION_DAYS / WATCH_EVERY_MIN /
+#  PANEL_TRACE_ONLY override the values above if set, e.g. for the server.)
+# ============================================================================
+TRACEROUTE_EVERY_MIN = int(os.environ.get("TRACEROUTE_EVERY_MIN", TRACEROUTE_EVERY_MIN))
+PING_EVERY_MIN       = int(os.environ.get("PING_EVERY_MIN", PING_EVERY_MIN))
+DURATION_DAYS        = float(os.environ.get("DURATION_DAYS", DURATION_DAYS))
+WATCH_EVERY_MIN      = int(os.environ.get("WATCH_EVERY_MIN", WATCH_EVERY_MIN))
+TRACE_ONLY           = (os.environ.get("PANEL_TRACE_ONLY", "1" if TRACE_ONLY else "0") == "1")
+TRACE_INTERVAL = TRACEROUTE_EVERY_MIN * 60     # seconds (RIPE expects seconds)
+PING_INTERVAL  = PING_EVERY_MIN * 60
+WATCH_EVERY    = WATCH_EVERY_MIN * 60
 RIPE_PROBES    = "https://atlas.ripe.net/api/v2/probes/"
 HOP_EXCLUDE    = {7764, 62224, 1015210}  # ICMP-filtered / Docker-opaque: hop counts unreliable
 PK_ASN = {17557: "ptcl", 45595: "ptcl-bb", 38193: "transworld", 135407: "tes", 9541: "cybernet",

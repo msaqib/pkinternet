@@ -248,14 +248,11 @@ The default 100 sites × (traceroute + ping) at 1 h / 30 min = **200 measurement
 credits/day, 108k results/day**, which breaks the 100-measurement, 1M-credit/day and
 100k-result/day caps. Choose one:
 - **Full panel** — first email `atlas@ripe.net` to raise the caps, then run as-is.
-- **Fits-the-caps (no request)** — traceroute-only, every 2 h. Set env vars before scheduling:
-  ```bash
-  export TRACE_INTERVAL=7200      # 2 h
-  export PANEL_TRACE_ONLY=1       # (once added) skip the ping
-  ```
-  → 100 measurements, ~540k credits/day, 18k results/day. *(Trace-only flag is a small
-  code change — see Status.)*
-- Other levers: `DURATION_DAYS`, `PING_INTERVAL`, fewer probes/sites.
+- **Fits-the-caps (no request)** — traceroute-only, every 2 h. Edit the **CONFIG block at the
+  top of `panel_monitor.py`**: set `TRACEROUTE_EVERY_MIN = 120` and `TRACE_ONLY = True`
+  (or `export TRACEROUTE_EVERY_MIN=120 PANEL_TRACE_ONLY=1`). → 100 measurements,
+  ~540k credits/day, 18k results/day.
+- Other levers (same CONFIG block): `DURATION_DAYS`, `PING_EVERY_MIN`, or fewer probes/sites.
 
 ### 4. Schedule the run
 ```bash
