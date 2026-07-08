@@ -12,8 +12,9 @@ watch loop can restart freely. LOCAL ONLY - this tool never touches git.
     python panel_monitor.py fetch         # one-off pull
     python panel_monitor.py stop          # stop measurements early
 
-Env: RIPE_API_KEY (from .env). Optional: DURATION_DAYS, WATCH_EVERY (s), TRACE_INTERVAL,
-PING_INTERVAL.
+Config: the CONFIG block at the top (frequencies in minutes, duration in days). Env vars
+RIPE_API_KEY, DURATION_DAYS, TRACEROUTE_EVERY_MIN, PING_EVERY_MIN, WATCH_EVERY_MIN,
+PANEL_TRACE_ONLY override it.
 """
 import os, sys, csv, json, time, socket, glob
 from datetime import datetime, timezone, timedelta

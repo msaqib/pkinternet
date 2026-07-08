@@ -28,7 +28,8 @@ Produce the definitive longitudinal dataset that answers, uniformly and per-ISP:
   peer at PKIX better than those that don't? → per-ISP KPI distributions to local vs offshore vs
   CDN targets.
 - **RQ2 (same-ISP consistency):** do customers of the *same* ISP get similar service? → variance
-  across the multiple probes we have per ISP (Cybernet ×3, Nayatel ×2, PTCL ×3).
+  across the multiple probes we have per ISP (Cybernet ×3, Nayatel ×2, PTCL ×3). Add normalization across cities for the same ISP
+  
 - **Tromboning intermittency:** how stable is a trombone verdict over 7 days (per-host vs
   time-flipping — the open Exp 04 question); complements Exp 4.2.
 - **Diurnal / weekly structure:** does the offshore penalty have a time-of-day or weekday cycle?
@@ -113,19 +114,26 @@ machinery:
 Because the measurements are server-side periodic, the collection continues on RIPE even if the
 watch process is restarted; `watch`/`fetch` only gather results. Nothing leaves the server.
 
-## Cost estimate (7 days, ~15 probes, 100 websites)
+## Cost & limits (7 days, ~15 probes, 100 websites)
 
-100 websites × 15 probes: traceroute = 15 × 100 × 168 rounds ≈ **252k traceroutes**; ping =
-15 × 100 × 336 ≈ **504k pings**. Credits ≈ ~6.3M (traceroute) + ~2.5M (ping) ≈ **~8.8M (~16%)** of
-the ~54M balance. Scales linearly with the live probe count. **Monitor the burn**; levers: fewer
-sites, ping-only for the ICMP-filtered probes (7764, 62224).
+Per-result cost: traceroute 30 credits, ping 3 credits.
 
-**⚠ Concurrency limit.** 100 targets × (trace + ping) = **200 periodic measurements**, which
-exceeds RIPE Atlas's default **100 concurrent-measurement** cap. Mitigations, in order of
-preference: (a) request a limit increase for the account; (b) schedule in **two waves** (e.g. all
-traceroutes first, pings second — or split the target list); (c) drop the separate ping and take
-RTT from the traceroute's destination reply; (d) reduce to ≤50 targets. `schedule` should check the
-account's running-measurement count and warn before creating measurements.
+| Our account quota | Full-panel usage | OK? |
+|---|---|---|
+| Daily credit spend **10,000,000/day** | trace 15·100·24·30 = 1.08M + ping 15·100·48·3 = 0.22M ≈ **1.3M/day** | ✅ far under |
+| Daily result flow **1,000,000/day** | 36k trace + 72k ping ≈ **108k/day** | ✅ far under |
+| **Parallel measurements 100** | 100 sites × (trace + ping) = **200** | ❌ **the one blocker** |
+| Probes/measurement 1000 | 15 | ✅ |
+| Measurements/target 25 | 2 | ✅ |
+
+7-day total ≈ **9M credits**. The daily credit and result-flow caps are 10× bigger than needed —
+**the only binding limit is the 100 parallel-measurement cap** (200 needed). A limit increase has
+been **requested from RIPE**; once granted (≥200) the full both-together panel runs as designed.
+
+**Until the increase lands**, run the caps-fitting fallback: **traceroute-only** (halves to 100
+measurements) at any cadence — set `TRACE_ONLY = True` in the CONFIG block. Traceroute still yields
+path + destination RTT, so it keeps both signals. (No need to reduce cadence for credits/results —
+those caps are not binding.)
 
 ## Outputs (local only — never pushed)
 
@@ -243,16 +251,16 @@ print(len(m.discover_probes()),'probes |', collections.Counter(c for c,_,_ in m.
 PY
 ```
 
-### 3. Pick a mode that fits the RIPE caps (see *Cost estimate* above)
-The default 100 sites × (traceroute + ping) at 1 h / 30 min = **200 measurements, ~1.3M
-credits/day, 108k results/day**, which breaks the 100-measurement, 1M-credit/day and
-100k-result/day caps. Choose one:
-- **Full panel** — first email `atlas@ripe.net` to raise the caps, then run as-is.
-- **Fits-the-caps (no request)** — traceroute-only, every 2 h. Edit the **CONFIG block at the
-  top of `panel_monitor.py`**: set `TRACEROUTE_EVERY_MIN = 120` and `TRACE_ONLY = True`
-  (or `export TRACEROUTE_EVERY_MIN=120 PANEL_TRACE_ONLY=1`). → 100 measurements,
-  ~540k credits/day, 18k results/day.
-- Other levers (same CONFIG block): `DURATION_DAYS`, `PING_EVERY_MIN`, or fewer probes/sites.
+### 3. Pick a mode (only the 100 parallel-measurement cap matters — see *Cost & limits* above)
+The default 100 sites × (traceroute + ping) = **200 measurements**, over the **100** parallel cap.
+Credits (~1.3M/day) and results (~108k/day) are far under our 10M and 1M daily quotas, so cadence
+is *not* a concern. Two modes:
+- **Full panel (once the limit increase lands)** — leave the CONFIG defaults (`TRACE_ONLY = False`,
+  60 min / 30 min). Both ping + traceroute, all 100 sites, 7 days, 200 measurements.
+- **Fallback until then** — set `TRACE_ONLY = True` in the CONFIG block → 100 measurements
+  (traceroute only, which still gives path + destination RTT). Keep the hourly cadence; no need to
+  slow it down.
+- Other levers (same CONFIG block): `DURATION_DAYS`, `TRACEROUTE_EVERY_MIN`, `PING_EVERY_MIN`.
 
 ### 4. Schedule the run
 ```bash
@@ -286,25 +294,28 @@ kill "$(cat results/watch.pid)"                                    # stop the ba
 ```
 The run also **auto-stops after 7 days**; you can then do a final `fetch`.
 
-### Environment variables
-| var | default | meaning |
+### Config (edit the CONFIG block at the top of `panel_monitor.py`; env vars override)
+| setting / env var | default | meaning |
 |---|---|---|
-| `RIPE_API_KEY` | (from `.env`) | RIPE Atlas key |
-| `DURATION_DAYS` | 7 | run length |
-| `TRACE_INTERVAL` | 3600 | seconds between traceroutes |
-| `PING_INTERVAL` | 1800 | seconds between pings |
-| `WATCH_EVERY` | 1800 | seconds between `watch` fetches |
+| `RIPE_API_KEY` (env / `.env`) | — | RIPE Atlas key |
+| `DURATION_DAYS` | 7 | run length in days |
+| `TRACEROUTE_EVERY_MIN` | 60 | minutes between traceroutes |
+| `PING_EVERY_MIN` | 30 | minutes between pings |
+| `WATCH_EVERY_MIN` | 30 | minutes between `watch` fetches |
+| `TRACE_ONLY` / `PANEL_TRACE_ONLY` | False / 0 | skip pings (100 measurements, fits the cap) |
 
 ## Status
 
-**Planned — target set finalised.** `panel_monitor.py` is **built** (`schedule`/`watch`/`fetch`/
-`stop`, live PK-probe discovery, TCP/80 traceroute + ping, four-KPI fetch, no git). `targets.csv`
-is the **final 100-site stratified sample** (40 Pakistan / 40 CDN / 20 Abroad, sector-proportional
-— see *Targets* above; source `data/pk_100_final_v2.csv`). The 1,781-site candidate pool
-(`site_candidates.csv`) is retained as context. **Next:** resolve the **200-measurement vs
-100-concurrent-cap** issue (request a limit increase, or schedule in two waves), then `schedule` +
-`watch` on the external server to start the 7-day clock. Priority: start soon so it can catch the
-next outage with a real baseline.
+**Ready to launch — waiting on the parallel-measurement limit.** `panel_monitor.py` is **built and
+tested** (`schedule`/`watch`/`fetch`/`stop`, editable CONFIG block, live PK-probe discovery, TCP/80
+traceroute + ping, four-KPI fetch, no git; one-off 15-probe test: all 15 reported both in ~90 s).
+`targets.csv` is the **final 100-site stratified sample** (40 Pakistan / 40 CDN / 20 Abroad,
+sector-proportional; source `data/pk_100_final_v2.csv`). **The only blocker is the 100
+parallel-measurement cap** (the panel needs 200) — a limit increase has been **requested from
+RIPE**; daily credit (~1.3M vs 10M quota) and result-flow (~108k vs 1M) are well within limits.
+**Next:** once the limit is raised, `schedule` + `watch` on the server for the full both-together
+7-day run; until then, `TRACE_ONLY = True` runs at 100 measurements. Start ASAP to catch the next
+outage with a real baseline.
 
 
 ## Candidate website list
