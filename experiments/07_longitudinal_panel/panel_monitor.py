@@ -90,6 +90,17 @@ def load_targets():
     return out
 
 
+def running_measurements():
+    """Current count of the account's ongoing measurements (for the preflight check)."""
+    try:
+        r = requests.get("https://atlas.ripe.net/api/v2/measurements/my/",
+                         params={"status": 2, "page_size": 1},
+                         headers={"Authorization": "Key " + pk.API_KEY}, timeout=20)
+        return r.json().get("count", 0) if r.ok else 0
+    except Exception:
+        return -1
+
+
 def schedule():
     if os.path.exists(MJSON):
         print("measurements.json exists - stop/remove before re-scheduling."); return
@@ -97,6 +108,21 @@ def schedule():
     targets = load_targets()
     if not probes or not targets:
         print("need probes and targets to schedule."); return
+
+    # --- preflight: don't half-create a run that busts the parallel-measurement cap ---
+    ntypes = 1 if TRACE_ONLY else 2
+    n_new = len(targets) * ntypes
+    cap = int(os.environ.get("PANEL_PARALLEL_CAP", "100"))
+    running = running_measurements()
+    print(f"plan: {len(targets)} targets x {ntypes} type(s) = {n_new} measurements to {len(probes)} "
+          f"probes; currently {running} running; parallel cap = {cap}.")
+    if running >= 0 and running + n_new > cap and os.environ.get("PANEL_FORCE") != "1":
+        print(f"ABORT: {running} + {n_new} exceeds the {cap} parallel-measurement cap. Options:\n"
+              f"  - wait for the RIPE limit increase, then set PANEL_PARALLEL_CAP={running + n_new} and re-run;\n"
+              f"  - set TRACE_ONLY=True in CONFIG (halves to {len(targets)} measurements);\n"
+              f"  - PANEL_FORCE=1 to proceed anyway (excess measurements will be rejected by RIPE).")
+        return
+
     src = AtlasSource(type="probes", value=",".join(str(p) for p in probes), requested=len(probes))
     start = datetime.utcnow() + timedelta(minutes=1)
     stop = start + timedelta(days=DURATION_DAYS)

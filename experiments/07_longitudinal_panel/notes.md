@@ -264,13 +264,21 @@ is *not* a concern. Two modes:
 
 ### 4. Schedule the run
 ```bash
+# after RIPE raises the parallel cap to >=200:
+export PANEL_PARALLEL_CAP=200
 python experiments/07_longitudinal_panel/panel_monitor.py schedule
 ```
-Discovers all live PK probes, reads `targets.csv`, creates the server-side periodic
-measurements for the 7-day window, and writes `results/measurements.json`. It prints each
-measurement id as it is created. **Run this once.** (Verified with a one-off 15-probe test to
-`airblue.com`: first results in ~20 s, **all 15 probes reported both traceroute and ping within
-~90 s**; the ICMP-filtered PTCL anchor 7764 lost its ping and stalled at 2 hops, as expected.)
+Discovers all live PK probes, reads `targets.csv`, and creates the server-side periodic
+measurements for the 7-day window (writes `results/measurements.json`, printing each measurement
+id). **Run this once.**
+
+**Preflight guard:** `schedule` first prints the plan (`N targets × K types = M measurements`,
+current running count, cap) and **aborts without creating anything** if `M` would exceed the cap
+(default 100, override with `PANEL_PARALLEL_CAP`). So running it *before* the limit increase is
+safe — it just reports and stops. To proceed: raise `PANEL_PARALLEL_CAP` once RIPE bumps the limit,
+or set `TRACE_ONLY = True` (100 measurements), or `PANEL_FORCE=1` to bypass the check. *(Verified:
+one-off 15-probe test to `airblue.com` returned all 15 probes' traceroute + ping in ~90 s; and the
+guard correctly aborts the 200-measurement plan under the 100 cap, creating nothing.)*
 
 ### 5. Start the background collector
 ```bash
@@ -303,6 +311,8 @@ The run also **auto-stops after 7 days**; you can then do a final `fetch`.
 | `PING_EVERY_MIN` | 30 | minutes between pings |
 | `WATCH_EVERY_MIN` | 30 | minutes between `watch` fetches |
 | `TRACE_ONLY` / `PANEL_TRACE_ONLY` | False / 0 | skip pings (100 measurements, fits the cap) |
+| `PANEL_PARALLEL_CAP` (env) | 100 | preflight abort threshold; set to your raised RIPE cap |
+| `PANEL_FORCE` (env) | 0 | 1 = bypass the preflight guard |
 
 ## Status
 
