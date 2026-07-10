@@ -262,7 +262,28 @@ is *not* a concern. Two modes:
   slow it down.
 - Other levers (same CONFIG block): `DURATION_DAYS`, `TRACEROUTE_EVERY_MIN`, `PING_EVERY_MIN`.
 
-### 4. Schedule the run
+### 3b. Two-account launch (the chosen plan — fits the 100 cap, keeps BOTH signals)
+Since the parallel-measurement cap (100) is **per account**, split by measurement *type* across two
+credit-sharing accounts: **account A runs all 100 traceroutes, account B all 100 pings** → 100
+measurements each (at the cap), the same `targets.csv`, and the merged result is identical to the
+full single-account panel. `PANEL_INSTANCE` namespaces outputs so both can even run on one host.
+```bash
+# Account A — traceroutes  (its own key)
+export PANEL_RIPE_KEY=<A-key> PANEL_TRACE_ONLY=1 PANEL_INSTANCE=a PANEL_PARALLEL_CAP=100
+python experiments/07_longitudinal_panel/panel_monitor.py schedule
+nohup python experiments/07_longitudinal_panel/panel_monitor.py watch > results/a/watch.log 2>&1 &
+
+# Account B — pings  (its own key; same targets.csv)
+export PANEL_RIPE_KEY=<B-key> PANEL_PING_ONLY=1 PANEL_INSTANCE=b PANEL_PARALLEL_CAP=100
+python experiments/07_longitudinal_panel/panel_monitor.py schedule
+nohup python experiments/07_longitudinal_panel/panel_monitor.py watch > results/b/watch.log 2>&1 &
+```
+Outputs land in `results/a/` (traceroutes) and `results/b/` (pings); **merge them at analysis**
+(join on probe + target + timestamp). Both accounts discover the same live PK probes, so the data
+is consistent. (`PANEL_RIPE_KEY` overrides the `.env` key per account; `TARGETS_FILE` can point at
+a different list if you'd rather split by site instead of by type.)
+
+### 4. Schedule the run (single-account, if the cap gets raised)
 ```bash
 # after RIPE raises the parallel cap to >=200:
 export PANEL_PARALLEL_CAP=200
@@ -311,21 +332,26 @@ The run also **auto-stops after 7 days**; you can then do a final `fetch`.
 | `PING_EVERY_MIN` | 30 | minutes between pings |
 | `WATCH_EVERY_MIN` | 30 | minutes between `watch` fetches |
 | `TRACE_ONLY` / `PANEL_TRACE_ONLY` | False / 0 | skip pings (100 measurements, fits the cap) |
+| `PING_ONLY` / `PANEL_PING_ONLY` | False / 0 | only pings (100 measurements; account B) |
 | `PANEL_PARALLEL_CAP` (env) | 100 | preflight abort threshold; set to your raised RIPE cap |
 | `PANEL_FORCE` (env) | 0 | 1 = bypass the preflight guard |
+| `PANEL_INSTANCE` (env) | — | namespaces outputs to `results/<instance>/` (multi-account) |
+| `PANEL_RIPE_KEY` (env) | (from `.env`) | per-account key override (multi-account) |
+| `TARGETS_FILE` (env) | `targets.csv` | use a different target list (e.g. a site-split half) |
 
 ## Status
 
-**Ready to launch — waiting on the parallel-measurement limit.** `panel_monitor.py` is **built and
-tested** (`schedule`/`watch`/`fetch`/`stop`, editable CONFIG block, live PK-probe discovery, TCP/80
-traceroute + ping, four-KPI fetch, no git; one-off 15-probe test: all 15 reported both in ~90 s).
-`targets.csv` is the **final 100-site stratified sample** (40 Pakistan / 40 CDN / 20 Abroad,
-sector-proportional; source `data/pk_100_final_v2.csv`). **The only blocker is the 100
-parallel-measurement cap** (the panel needs 200) — a limit increase has been **requested from
-RIPE**; daily credit (~1.3M vs 10M quota) and result-flow (~108k vs 1M) are well within limits.
-**Next:** once the limit is raised, `schedule` + `watch` on the server for the full both-together
-7-day run; until then, `TRACE_ONLY = True` runs at 100 measurements. Start ASAP to catch the next
-outage with a real baseline.
+**Ready to launch — two-account plan.** `panel_monitor.py` is **built and tested**
+(`schedule`/`watch`/`fetch`/`stop`, editable CONFIG block, live PK-probe discovery, TCP/80
+traceroute + ping, four-KPI fetch, preflight parallel-cap guard, no git; one-off 15-probe test:
+all 15 reported both in ~90 s). `targets.csv` is the **final 100-site stratified sample** (40
+Pakistan / 40 CDN / 20 Abroad, sector-proportional; source `data/pk_100_final_v2.csv`). The 100
+parallel-measurement cap could not be raised, so we **split across two credit-sharing accounts by
+measurement type** (account A = traceroutes, B = pings — 100 each, both signals, merged at
+analysis; see §3b). Credit (~1.3M/day vs 10M) and result-flow (~108k vs 1M) quotas are fine.
+**Next:** create the second account's **Atlas measurement key** (atlas.ripe.net/keys), then run the
+two instances per §3b to start the 7-day clock. Start ASAP to catch the next outage with a real
+baseline.
 
 
 ## Candidate website list

@@ -20,9 +20,11 @@ import os, sys, csv, json, time, socket, glob
 from datetime import datetime, timezone, timedelta
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, "results"); os.makedirs(OUT, exist_ok=True)
+INSTANCE = os.environ.get("PANEL_INSTANCE", "").strip()   # namespace outputs for multi-account runs
+OUT = os.path.join(HERE, "results", INSTANCE) if INSTANCE else os.path.join(HERE, "results")
+os.makedirs(OUT, exist_ok=True)
 MJSON = os.path.join(OUT, "measurements.json")
-TARGETS_CSV = os.path.join(HERE, "targets.csv")
+TARGETS_CSV = os.environ.get("TARGETS_FILE", os.path.join(HERE, "targets.csv"))
 
 sys.path.insert(0, os.path.join(HERE, "..", "..", "scripts", "measurement"))
 import pk_multi_probe as pk
@@ -38,15 +40,19 @@ TRACEROUTE_EVERY_MIN = 60      # run one traceroute per target every N minutes
 PING_EVERY_MIN       = 30      # run one ping per target every N minutes
 DURATION_DAYS        = 7       # how many days the whole run lasts
 WATCH_EVERY_MIN      = 30      # how often the `watch` loop pulls new results
-TRACE_ONLY           = False   # True = skip pings (halves the measurement count; fits RIPE caps)
-# (env vars TRACEROUTE_EVERY_MIN / PING_EVERY_MIN / DURATION_DAYS / WATCH_EVERY_MIN /
-#  PANEL_TRACE_ONLY override the values above if set, e.g. for the server.)
+TRACE_ONLY           = False   # True = only traceroutes (100 measurements; e.g. account A)
+PING_ONLY            = False   # True = only pings       (100 measurements; e.g. account B)
+# Env overrides (server / multi-account): TRACEROUTE_EVERY_MIN, PING_EVERY_MIN, DURATION_DAYS,
+# WATCH_EVERY_MIN, PANEL_TRACE_ONLY, PANEL_PING_ONLY, PANEL_INSTANCE, PANEL_RIPE_KEY,
+# TARGETS_FILE, PANEL_PARALLEL_CAP, PANEL_FORCE.
 # ============================================================================
 TRACEROUTE_EVERY_MIN = int(os.environ.get("TRACEROUTE_EVERY_MIN", TRACEROUTE_EVERY_MIN))
 PING_EVERY_MIN       = int(os.environ.get("PING_EVERY_MIN", PING_EVERY_MIN))
 DURATION_DAYS        = float(os.environ.get("DURATION_DAYS", DURATION_DAYS))
 WATCH_EVERY_MIN      = int(os.environ.get("WATCH_EVERY_MIN", WATCH_EVERY_MIN))
 TRACE_ONLY           = (os.environ.get("PANEL_TRACE_ONLY", "1" if TRACE_ONLY else "0") == "1")
+PING_ONLY            = (os.environ.get("PANEL_PING_ONLY", "1" if PING_ONLY else "0") == "1")
+KEY = os.environ.get("PANEL_RIPE_KEY") or pk.API_KEY   # per-account key for multi-account runs
 TRACE_INTERVAL = TRACEROUTE_EVERY_MIN * 60     # seconds (RIPE expects seconds)
 PING_INTERVAL  = PING_EVERY_MIN * 60
 WATCH_EVERY    = WATCH_EVERY_MIN * 60
@@ -95,7 +101,7 @@ def running_measurements():
     try:
         r = requests.get("https://atlas.ripe.net/api/v2/measurements/my/",
                          params={"status": 2, "page_size": 1},
-                         headers={"Authorization": "Key " + pk.API_KEY}, timeout=20)
+                         headers={"Authorization": "Key " + KEY}, timeout=20)
         return r.json().get("count", 0) if r.ok else 0
     except Exception:
         return -1
@@ -110,7 +116,7 @@ def schedule():
         print("need probes and targets to schedule."); return
 
     # --- preflight: don't half-create a run that busts the parallel-measurement cap ---
-    ntypes = 1 if TRACE_ONLY else 2
+    ntypes = 1 if (TRACE_ONLY or PING_ONLY) else 2
     n_new = len(targets) * ntypes
     cap = int(os.environ.get("PANEL_PARALLEL_CAP", "100"))
     running = running_measurements()
@@ -138,9 +144,11 @@ def schedule():
                         interval=TRACE_INTERVAL, description=f"exp07 trace {cls} {host}")
         pg = Ping(af=4, target=ip, packets=3, interval=PING_INTERVAL,
                   description=f"exp07 ping {cls} {host}")
-        specs = [("trace", tr)] + ([] if TRACE_ONLY else [("ping", pg)])
+        specs = ([("ping", pg)] if PING_ONLY else
+                 [("trace", tr)] if TRACE_ONLY else
+                 [("trace", tr), ("ping", pg)])
         for kind, spec in specs:
-            ok, resp = AtlasCreateRequest(key=pk.API_KEY, measurements=[spec], sources=[src],
+            ok, resp = AtlasCreateRequest(key=KEY, measurements=[spec], sources=[src],
                                           is_oneoff=False, start_time=start, stop_time=stop).create()
             if ok:
                 meta[kind][host] = resp["measurements"][0]
@@ -157,7 +165,7 @@ def stop():
     for kind in ("trace", "ping"):
         for host, mid in meta[kind].items():
             try:
-                AtlasStopRequest(msm_id=mid, key=pk.API_KEY).create(); print(f"  stopped {mid} ({host})")
+                AtlasStopRequest(msm_id=mid, key=KEY).create(); print(f"  stopped {mid} ({host})")
             except Exception as e:
                 print(f"  {mid}: {e}")
 
