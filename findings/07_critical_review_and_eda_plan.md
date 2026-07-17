@@ -143,6 +143,13 @@ Ordered; each step names the technique and the question it answers. Inputs: merg
   rate.
 - **ICMP-survivorship check:** trace-derived dest RTT for the 22 ping-blocked PK sites vs the 18
   responders — is the ping panel biased?
+- **PKIX/PIE peering-LAN scan (extends Sameera's Exp 08 to panel scale):** search every hop of all
+  ~160k panel traceroutes for the exchanges' peering-LAN prefixes — **PIE Karachi
+  `58.181.127.0/24`, PKIX Lahore `100.128.0.0/24`** (add other PKIX sites' LANs if identified). A
+  hop in those ranges is a physical fingerprint that the packet crossed the exchange fabric; Exp 08
+  found zero in ~a dozen targeted traces, and this scan answers the same question over a week ×
+  16 probes × 100 sites. Also add these LANs as flagged annotations in `geo.py annotate`. Expected
+  result (either way, quotable): "N of 160k traces traversed an exchange."
 
 ### Stage 4 — The inferential comparisons (RQ1/RQ2 proper)
 - **RQ1 table:** per-ISP median (CI) of each KPI to each class — the uniform four-indicator

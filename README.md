@@ -46,10 +46,31 @@ findings/              Analysis writeups and the charts notebook
 - [4.1 — Small-ISP Tromboning Census](experiments/04.1_small_isp_tromboning/notes.md):
   Scales Exp 04 to the whole small-ISP population — a complete block-level census of
   every FLL ISP (747 announced /24s, 8 IPs each, 7 vantages). **Done: 18,260 traces.**
+- [05 — BGP Validation](findings/05_BGProuting.md):
+  Cross-checks traceroute-observed AS paths against RIPEstat BGP data and bgp.he.net
+  peer tables — **78/80 unique ISP-site paths consistent** with public peering.
 - [06 — Submarine-Cable Outage](experiments/06_submarine_outage/notes.md):
   Monitors routes during the SMW5 submarine-cable fault (Jul 2026) — ping + traceroute
   every 15 min for 12 h from all 14 PK probes to a CDN/Abroad/PK sample, with a
   time-series notebook (UTC→PKT). **Done.**
+- [6.1 — SMW5 in the Control Plane](experiments/06.1_submarine_hegemony/notes.md):
+  Daily AS-hegemony time series across the fault window — did any *logical* (BGP)
+  dependencies move when the cable broke, or did networks endure congestion on the same
+  paths? Extends Exp 06 with global routing data.
+- [07 — Longitudinal Panel (flagship)](experiments/07_longitudinal_panel/notes.md):
+  7-day uniform panel from all connected PK probes to a frozen 100-site stratified
+  sample (40 PK / 40 CDN / 20 Abroad): TCP/80 Paris traceroute hourly + ping every
+  30 min, run as server-side periodic measurements split across two accounts. Analysis
+  methodology (speed-of-light latency ratio, physics-verified locations, per-ISP CDN
+  treatment) in [analysis/METHODOLOGY.md](experiments/07_longitudinal_panel/analysis/METHODOLOGY.md).
+- [08 — CDN Peering at PIE Karachi](experiments/08_CDN/findings.md) *(Sameera)*:
+  Does traffic between IXP members actually cross the exchange fabric? Peering-LAN
+  fingerprinting shows PIE Karachi and PKIX Lahore are **bypassed by their own members**
+  (private bilateral links instead), and ACE CDN RTT varies 23→255 ms across ISPs.
+- [09 — AS Hegemony](experiments/09_as_hegemony/notes.md):
+  The PTCL/Transworld duopoly quantified from **global BGP data** (IIJ IHR): **90% of
+  the 291 BGP-visible Pakistani networks depend on PTCL or TWA for the majority of
+  their routes**; per-ISP scores independently confirm our traceroute findings.
 
 ## Findings
 

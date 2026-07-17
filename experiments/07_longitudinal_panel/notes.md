@@ -418,6 +418,12 @@ sector-proportional; source `data/pk_100_final_v2.csv`). Credit (~1.3M/day vs 10
 then merge `results/a` + `results/b` and start analysis (per-ISP KPI CDFs, diurnal/weekly, trombone
 intermittency, and — if a cable fault landed in the window — event-vs-baseline).
 
+**Queued analysis — PKIX/PIE peering-LAN scan (from Sameera's Exp 08):** scan every hop of the
+week's traceroutes for the exchange peering LANs (PIE Karachi `58.181.127.0/24`, PKIX Lahore
+`100.128.0.0/24`). A hop in those prefixes proves the packet crossed the exchange fabric; Exp 08
+found none in targeted traces — this repeats the test at panel scale (~160k traces). See
+`findings/07_critical_review_and_eda_plan.md` (Stage 3).
+
 
 ## Candidate website list
 

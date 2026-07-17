@@ -2,6 +2,11 @@
 
 **Author:** Rayan Atif
 
+> **Extension:** Exp 6.1 (`../06.1_submarine_hegemony/`) replays the same event in the
+> **control plane** — daily AS-hegemony (global BGP dependency) curves across the fault window,
+> testing whether any logical dependencies moved (Exp 06 saw only same-transit load-balancing in
+> the data plane).
+
 ## The event
 
 **SMW5 (SEA-ME-WE 5) submarine-cable fault**, reported by PTA on **2 Jul 2026**.

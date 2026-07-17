@@ -153,3 +153,16 @@ python experiments/06_submarine_outage/build_timeseries.py           # -> result
 python experiments/06_submarine_outage/outage_impact.py              # -> results/outage_impact.md (RTT/jitter/hops/loss Δ%)
 # then run experiments/06_submarine_outage/rtt_timeseries.ipynb for the graphs (UTC->PKT)
 ```
+
+
+## Control-plane addendum (Exp 6.1, added 2026-07-17)
+
+Daily AS-hegemony series (global BGP, IIJ IHR) across 15 Jun-10 Jul answer what the 12-hour
+data-plane window could not: **did any logical dependencies move during the fault?** Verdict:
+downstream Pakistani networks' dependency on PTCL/TWA stayed essentially frozen through 2 Jul
+(Orbit pinned at TWA=1.0; Nayatel/NTC/Nova/Cybernet flat) with one transient exception (Fasttel
+briefly swapped PTCL->TWA majority and reverted within ~3 days), while the operators' own foreign
+upstream mix visibly shifted around the fault (PTCL: Level3/Hurricane down, a new Cogent
+dependency appearing after; TWA: transient spikes). **The adaptation happened above the duopoly,
+not below it** - users rode out the fault on unchanged routes while the operators absorbed it
+upstream. Details: `experiments/06.1_submarine_hegemony/notes.md`.
