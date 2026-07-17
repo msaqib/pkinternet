@@ -72,7 +72,7 @@ submarine-cable cuts.
 | `site_collection/` | Tranco tooling: `get_tranco.py`, `.pk` filtering, DNS/ASN resolution + hosting classification (`classify_pk_hosting.py`) — produced the Exp 07 candidate pool (`site_candidates.csv`, 1,781 sites). |
 | `scripts/processtraces/`, `scripts/processtraces2/` | Team-member ad-hoc notebooks (ping/trace EDA on Exp 03 data: hop timeseries, anomaly spikes, heatmaps). Not part of the canonical pipeline. |
 | `tools/probe_status/` | Flask dashboard: Google-Sheet probe roster vs live RIPE Atlas status, two sections (**Our Probes** / Existing), pulls each probe's RIPE label+tags on refresh. |
-| `findings/` | Analysis writeups (01, 01.1, 01.2, **1.4 PK100 hosting**, 03, **3.1 PTCL↔Transworld**, **04 Worldcall tromboning**, **4.1 small-ISP census**, **06 SMW5 outage**) + charts notebook |
+| `findings/` | Analysis writeups (01, 01.1, 01.2, **1.4 PK100 hosting**, 03, **3.1 PTCL↔Transworld**, **04 Worldcall tromboning**, **4.1 small-ISP census**, **05 BGP validation**, **06 SMW5 outage**, **6.1 SMW5 control-plane**, **07 panel preliminary** + the 07 critical-review/EDA plan, **09 AS hegemony**) + charts notebook |
 
 ---
 

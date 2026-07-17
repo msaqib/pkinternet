@@ -72,10 +72,26 @@ through each foreign carrier?"*; unfiltered data):
 | Omantel | 4.4% | 3.9% | 4.6% |
 | **Hurricane Electric** | **2%** | **20.5%** ⬆⬆ | 2.3% |
 
-PTCL shows the same pattern more faintly (Hurricane 0% → 14% → 0% on 1–2 Jul). The **churn
-percentages below are this table compressed to one number** — the total movement between
-carriers: on 2 Jul, ~21 of every 100 world-routes to TWA arrived via a different carrier than the
-week before.
+**Leg 2 — PTCL → the world** (unfiltered; note the much smaller magnitudes — PTCL reaches most of
+the world by *peering*, so no single carrier holds a large share of paths to it; its dependency is
+diffuse):
+
+| PTCL's foreign carriers | before (28–30 Jun) | 1 Jul | **2 Jul (fault)** | 3 Jul |
+|---|--:|--:|--:|--:|
+| **Hurricane Electric** | **0%** | **14.2%** ⬆ | **14.2%** ⬆ | 0% |
+| Etisalat | 2.1% | 7.4% ⬆ | 5.8% | 1.6% |
+| Arelion | 2.5% | 1.1% | 7.1% ⬆ | 0% |
+| Level3 | 4.3% | 2.3% | 1.0% | 0.3% |
+| Cogent | 0.8% | 0.1% | 0.9% | 0.3% |
+
+The robust PTCL signal is the **Hurricane appearance (0 → 14.2%) on exactly the two fault days**,
+mirroring TWA; Etisalat's rise into the fault and Arelion's 2 Jul spike are supporting but small;
+Level3's slide began *before* the fault and is not attributed to it. Both operators' carrier mixes
+are plotted side-by-side in `results/fig_operators_upstreams.png`.
+
+The **churn percentages below are these tables compressed to one number** — the total movement
+between carriers: on 2 Jul, ~21 of every 100 world-routes to TWA (and ~13.5 to PTCL) arrived via
+a different carrier than the week before.
 
 ### Quantified route changes — how much, when, where, who
 

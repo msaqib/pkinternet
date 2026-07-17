@@ -83,6 +83,10 @@ findings/              Analysis writeups and the charts notebook
   whether Netflix/Google/Meta/etc. are served from caches inside Pakistan.
 - [1.3 — Nayatel Routing](findings/01.3_nayatel_routes.md):
   per-destination breakdown of what Nayatel transits (LDI vs direct peering).
+- [03 — Longitudinal Routing (48 h)](findings/03_longitudinal_routing_48h.md):
+  path/RTT change over time from the 48-hour run (see also the
+  [24 h](findings/03_longitudinal_routing_24h.md) and
+  [initial](findings/03_longitudinal_routing_analysis.md) write-ups).
 - [3.1 — PTCL RTT Jumps & PTCL↔Transworld Peering](findings/03.1_ptcl_rtt_jumps.md):
   where PTCL paths jump RTT (access floor vs international exit) and that PTCL peers
   with Transworld domestically (100%) but never for abroad traffic (0%).
@@ -101,6 +105,18 @@ findings/              Analysis writeups and the charts notebook
   a latency degradation (not a blackout) that eased over the window (shophive via PTCL
   646→278 ms); quantified as **+31% jitter / +2% mean RTT / flat path length** on
   international paths, with **local/PK-hosted traffic unaffected** — the resilience case for PKIX.
+- [6.1 — SMW5 in the Control Plane](findings/06.1_submarine_hegemony.md):
+  the same fault in global BGP — downstream dependencies **frozen** (one 2-day exception),
+  while the operators re-carriered **~21%/13.5%** of their world paths for ~48 h (Hurricane
+  surge, Cogent collapse): the duopoly absorbed the fault upstream.
+- [07 — Longitudinal Panel, preliminary](findings/07_longitudinal_panel_preliminary.md):
+  latency-vs-physics from the partial window — Abroad 2.5× (control), Pakistan 2.9× with a
+  10–30× tail, CDN bimodal 8.4×; 40 wrong geo-IP locations caught by physics; per-ISP CDN
+  peering scores (Nayatel 85% local → PTCL 0%). Full-week update pending.
+- [09 — AS Hegemony](findings/09_as_hegemony.md):
+  the duopoly from global BGP: **90% of BGP-visible Pakistani networks depend on PTCL or
+  Transworld for the majority of their paths** (medians: TWA 0.50, PTCL 0.17); per-ISP
+  dependencies independently confirm the traceroute findings.
 
 ## Probe Setup
 
