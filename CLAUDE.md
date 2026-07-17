@@ -61,7 +61,13 @@ submarine-cable cuts.
 | `experiments/04_path_tromboning/` | Exp 04: systematic path-tromboning detection across an ISP's whole address space. Pipeline: `enumerate_prefixes.py <ASN>` (RIPEstat announced prefixes) → `responsiveness_sweep.py` (find live IPs/prefix) → `tromboning_sweep.py` (TCP/80 Paris traceroute + 3-signal RTT-robust detector). `trace_from_probes.py` = ad-hoc traceroute to one target from named probes (RQ4). Built on **ripe-atlas-cousteau + sagan**. |
 | `experiments/03_longitudinal_routing/` | Exp 03: 8 probes → 10 sites, traceroute every 15 min + ping companion over days; path/RTT change over time (`trace_monitor.py`). Committed output is a normalized star schema (`results/<run>/normalized/dim_*`+`fact_*` CSVs) + a `routes_*.txt`; `watch` also writes a local-only Prometheus textfile (`live/<run>/exp03_live.prom`) for Grafana. Probe identity lives in one `PROBE_META` map (labels `isp.city (ASN)`). |
 | `experiments/04.1_small_isp_tromboning/` | Exp 4.1: complete block-level tromboning census of every FLL small ISP (`census_sweep.py`; 747 /24s × 8 IPs × 7 probes = 18,260 traces). Canonical output `results/run_*/census_*.csv` + `isp_tromboning.csv`; derived tables (`make_ip_status_table.py`) and route files (`render_{tromboning,filtered,all}_routes.py`) read the **census CSV as the frozen verdict** (re-classifying raw drifts, and raw has ~190 resume-duplicates). |
+| `experiments/05_BGProuting/` | Exp 05: BGP validation of traceroute AS paths (`bgp_validate.py`, `bgp_cross_reference.py`) vs RIPEstat bgp-state + bgp.he.net peer tables. **78/80 unique ISP-site paths consistent** with public peering after multi-level checks; 2 benign anomalies. See `findings/05_BGProuting.md`. |
 | `experiments/06_submarine_outage/` | Exp 06: SMW5 outage monitor (`outage_monitor.py` — server-side periodic ping+traceroute, 15 min × 12 h, 14 probes → CDN/Abroad/PK sample). `build_timeseries.py` → `results/timeseries.csv`; `rtt_timeseries.ipynb` plots RTT-over-time per site/probe (UTC→PKT). |
+| `experiments/07_longitudinal_panel/` | **Exp 07 (FLAGSHIP, LIVE): 7-day uniform panel** — all connected PK probes → frozen 100-site stratified sample (`targets.csv`: 40 PK / 40 CDN / 20 Abroad, CISA-sector proportional). TCP/80 Paris traceroute hourly + ping every 30 min, **server-side periodic measurements split across two accounts by type** (A=100 traces → `results/a/`, B=100 pings → `results/b/`; per-account 100-parallel cap). Launched 2026-07-11, auto-stops 2026-07-18; watchers in tmux on `ispl02`. **After the run: `dump_raw.py` once** for the archival raw JSON (re-fetchable anytime, no credits). `panel_monitor.py` = schedule/watch/fetch/stop; `notes.md` = full design + runbook. |
+| `experiments/07_longitudinal_panel/analysis/` | Exp 07 analysis: **`METHODOLOGY.md`** (vantage roster §0 → distance §1 → km→ms §2 → dimensionless latency ratio §3 → geo-IP caveats §4 → reading the plots §8 → **CDN per-ISP treatment §9** + Appendix A geolocation methods, Appendix B multilateration spec) and **`geo.py`** (subcommands `distances` / `locate` / `relocate` / `ratio` / `cdn`). Key methods: Haversine distance, speed-of-light floor (fibre ≈ d/100 ms), **physics arbiter** (ping < vacuum floor ⇒ geo-IP proven wrong — caught 37/78 sites incl. 34 CDNs "in Toronto"), per-ISP CDN locality score. |
+| `paper/` | Paper drafts: `paper.tex` (IEEEtran, full multi-experiment story), `aintec_panel.tex` (**ACM/AINTEC '26, Exp 07 standalone**, results scaffolded `\pending`), `exp07_panel.tex` (IEEE variant), `draft.md`, style/structure notes (`style_notes_ixp.md` = Di Bartolomeo ISCC'15 template, `style_notes_p1.md` = IMC register, `paper_structure.md`, `experiment_consistency.md`), `make_figures.py`. |
+| `site_collection/` | Tranco tooling: `get_tranco.py`, `.pk` filtering, DNS/ASN resolution + hosting classification (`classify_pk_hosting.py`) — produced the Exp 07 candidate pool (`site_candidates.csv`, 1,781 sites). |
+| `scripts/processtraces/`, `scripts/processtraces2/` | Team-member ad-hoc notebooks (ping/trace EDA on Exp 03 data: hop timeseries, anomaly spikes, heatmaps). Not part of the canonical pipeline. |
 | `tools/probe_status/` | Flask dashboard: Google-Sheet probe roster vs live RIPE Atlas status, two sections (**Our Probes** / Existing), pulls each probe's RIPE label+tags on refresh. |
 | `findings/` | Analysis writeups (01, 01.1, 01.2, **1.4 PK100 hosting**, 03, **3.1 PTCL↔Transworld**, **04 Worldcall tromboning**, **4.1 small-ISP census**, **06 SMW5 outage**) + charts notebook |
 
@@ -182,6 +188,20 @@ Disconnected (can't measure): AS38264 Wateen ×4, AS45773 PERN ×2, others.
 **ICMP-filtered probes** (62224, 7764) hide their path and report bogus
 1000 ms+ dest RTTs (ICMP-error-generation delay) — **use ping (min-of-N) for a real
 RTT**, and the unfiltered TES probe (1016153) to *see* a Transworld path.
+
+**Exp 07 panel roster (17 scheduled 2026-07-11; authoritative table in
+`experiments/07_longitudinal_panel/analysis/METHODOLOGY.md §0`).** New IDs beyond the table above:
+64078 (TES, Lahore), 64722 (TES, Karachi), 65892 (Nayatel, Lahore), 1014872 (Fasttel, Islamabad),
+1015491, 1016393 (PTCL, N. Punjab), 1016431 (NTC, Karachi). **Three corrections (verified against
+the RIPE probe API):**
+- **1015491 is mislabelled "AS13335"** in measurements.json — real ASN **AS152605 (Z-Com)**; never
+  treat it as a Cloudflare vantage (fixed via `LABEL_FIX` in `analysis/geo.py`).
+- **1016036 (Cybernet) has a placeholder coordinate (30.0, 70.0)** and a 22 ms access floor, so it
+  can't be re-located by latency → **excluded from all distance analysis**
+  (`EXCLUDE_FROM_DISTANCE`). Earlier docs called it "Haripur" — unverified.
+- **1016431 (NTC) returned no data** during the panel (offline).
+Per-probe **access floors** (min RTT to any PK site) range 0.2–25.6 ms; subtract before per-ISP
+ratio comparisons (1016126 ≈ 25.6 ms, 1016036 ≈ 22 ms, 64535 ≈ 18.3 ms, 1016393 ≈ 14.8 ms).
 
 **Batching:** With 5 probes × 100 sites = 500 measurements, RIPE Atlas hits its
 100-concurrent-measurement limit. Current settings: `BATCH_WAIT = 30` (seconds
@@ -456,6 +476,36 @@ See `findings/06_submarine_outage.md`. 14 probes → CDN/Abroad/PK sample, 15 mi
 - **Local/PK-hosted traffic was unaffected** — the resilience argument for PKIX. One local
   anomaly: `pbs.gov.pk` spiked chaotically ~08:00–10:00 PKT across all probes (separate event).
 
+### BGP validation — Exp 05 (48-h window, Jun 2026)
+
+See `findings/05_BGProuting.md`. Traceroute-observed AS paths cross-checked against RIPEstat
+bgp-state + bgp.he.net peer tables (multi-level: direct peer, or peer-of-peer within 3 hops):
+**78/80 unique ISP-site paths fully consistent** with public peering. Most RIPEstat matches are
+"partial" (private peering isn't re-advertised globally) — expected, not anomalous. Two benign
+exceptions: Cybernet→MCB via undocumented AS20773 (stable across 90 rounds — a private Arelion
+downstream), and one transient Nayatel→MCB round via GoDaddy (1/191 rounds). Validates the
+traceroute data's integrity; also confirms Nayatel reaches CDNs via Transworld's direct
+Cloudflare peering.
+
+### Exp 07 preliminary analysis (partial 3-day ping data; re-run after 2026-07-18)
+
+From `experiments/07_longitudinal_panel/analysis/` (methods in `METHODOLOGY.md`, code `geo.py`):
+- **Latency ratio** (measured RTT ÷ speed-of-light theoretical, dimensionless; unicast only):
+  **Pakistan median 6.5× with a tail to ~100×; Abroad median 2.6×, tight.** Domestic routing is
+  relatively *further* from physics than international. (Caveats: tiny PK floors inflate the
+  ratio; some "PK" sites are actually offshore.)
+- **Physics arbiter:** measured ping < vacuum-light floor to the geo-IP location ⇒ location proven
+  wrong. **37/78 sites failed** (34/40 CDN "in Toronto/Ottawa", + 3 PK intra-country) — all
+  actually local. `phf.gop.pk` (Punjab govt, tagged PITB) confirmed genuinely US-hosted
+  (~233 ms from every probe, consistent with geo-IP Coral Springs); `toptop.net`, `youth.cn`,
+  `efulife.com` also offshore despite "Pakistan" class.
+- **CDN per-ISP locality score** (anycast has no single location — each ISP reaches its own PoP;
+  score = % of CDN sites reached <15 ms): **Nayatel 85% local (median 3 ms) → Cybernet 41% → TES
+  20% → everyone else 0% — PTCL worst (median 136 ms)**. Same content ~40× slower by ISP choice;
+  independent of ISP size — it's local peering (the Set-2/3 story, now quantified per ISP).
+- **22 of 40 PK-class sites block ICMP ping** (mostly .gov.pk/.edu.pk) — no RTT in the ping panel;
+  fill from the TCP/80 traceroute half (results/a) at analysis.
+
 ### PKIX status
 
 Source: PTA presentation by Ahmed Bakht Baloch (Director Cybersecurity PTA),
@@ -615,6 +665,22 @@ COMSATS at ~3ms — suggesting direct local peering with these networks in Islam
   credits. Measurement descriptions are `"<probe_id>→<label>"`, which maps each
   result back to its probe and target. (Used to salvage batch8 when PTCL was
   offline.)
+- **Quotas learned during Exp 07 (actual account dashboard):** the caps are
+  **100 simultaneous measurements PER ACCOUNT** (the only binding limit),
+  10M credits/day spend, 1M results/day, 1000 probes/measurement, 25
+  periodic + 25 one-off per target. Cost per result: ping 3 cr, traceroute
+  30 cr. **Credits are per-account — there is NO shared pool**; "sharing" is a
+  manual transfer between accounts (tested: a create from a 0-balance account
+  fails even when a linked account holds millions).
+- **Two-account pattern (Exp 07):** to run >100 concurrent measurements, split
+  **by measurement type** across two accounts (A = all traceroutes, B = all
+  pings) against the same target list; namespace outputs (`PANEL_INSTANCE`) and
+  merge at analysis on (probe, target, timestamp) — identical to an uncapped
+  single account.
+- **Server-side periodic measurements** (`is_oneoff=False`, start/stop window)
+  run on RIPE's infrastructure regardless of the local host; a `watch`/fetch
+  loop can die and restart freely with no data loss. Raw JSON is retrievable
+  per msm-id forever, at zero credit cost.
 - CSV files are written `encoding="utf-8"` — geolocation city names contain
   non-ASCII characters (e.g. `ā`) that crash the default Windows cp1252 codec.
 

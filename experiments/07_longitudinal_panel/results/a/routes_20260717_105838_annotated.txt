@@ -1,0 +1,23 @@
+Exp 07 - latest traceroute per (probe, target)  [1600 traces]
+TCP/80 Paris. '<<< high RTT' = hop >=40ms (likely off-PK). VERDICT from RTT-physics.
+
+====================================================================================
+ [Abroad] 588wingames.pk -> 66.29.148.121    probe 1015491 - AS13335.1015491   2026-07-15 22:04 PKT
+ VERDICT TROMBONE  exit=SG  transit=Transworld  maxRTT=358.5ms
+------------------------------------------------------------------------------------
+  hop   rtt(ms)   ip
+    1      14.0   192.168.100.1    private                                   
+    2      13.9   157.20.147.2     AS152605 ZCOMNETWORKS-AS-AP - Z COM NETWO 
+    3       3.8   103.151.47.121   AS152605 ZCOMNETWORKS-AS-AP - Z COM NETWO 
+    4       2.6   110.93.205.184   AS38193 TWA-AS-AP - Transworld Associate  
+    5      23.8   110.93.254.66    AS? [registry] TWA                        
+    6      24.3   110.93.252.246   AS? [registry] TWA                        
+    7     103.5   27.111.228.4     AS? [registry] EQUINIX-AP                 <<< high RTT
+    8     104.6   202.127.73.43    AS4637 ASN-TELSTRA-GLOBAL - Telstra Glo   <<< high RTT
+    9      *      (no response)
+   10      *      (no response)
+   11      *      (no response)
+   12      *      (no response)
+   13      *      (no response)
+  255     358.5   66.29.148.121    AS22612 NAMECHEAP-NET - Namecheap, Inc. [US]<<< high RTT
+

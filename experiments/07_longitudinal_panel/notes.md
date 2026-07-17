@@ -1,6 +1,6 @@
 # Experiment 07 — The PKIX-underuse longitudinal panel (flagship)
 
-**Author:** Rayan Atif · **Status:** planned (not yet launched)
+**Author:** Rayan Atif · **Status:** 🟢 LIVE — launched **2026-07-11**, auto-stops **2026-07-18 ~16:55 PKT** (two-account split running on `ispl02`)
 
 The **canonical, uniform** experiment. Every earlier experiment drifted on vantages, protocol,
 RTT definition, and metric set (see `paper/experiment_consistency.md`); Exp 07 fixes all of them
@@ -139,9 +139,14 @@ those caps are not binding.)
 
 A per-round **panel** row: `(ts_utc, ts_pkt, probe_id, probe, isp, target, class, rtt_min,
 hop_count, loss, tromboned, exit_cc, transit)`.
-- `results/measurements.json` — the periodic measurement IDs.
-- `results/panel_<ts>.csv` — the long-format series (appended by `watch`, or built by `fetch`).
-- `results/routes_<ts>.txt` — readable traces (standing rule).
+- `results/<instance>/measurements.json` — the periodic measurement IDs (the **index** — back up).
+- `results/<instance>/panel_<ts>.csv` — **distilled** long-format series (`rtt_min`, `loss`,
+  `hop_count`, `tromboned`, `exit_cc`, `transit`); rewritten each fetch but cumulative (each fetch
+  re-pulls all results since launch).
+- `results/<instance>/routes_<ts>.txt` — readable traces (standing rule).
+- `results/<instance>/raw_<ts>.json.gz` — **raw untouched RIPE JSON**, produced by `dump_raw.py`
+  (run once after the 7-day window — see §3c). Not written during the run; recoverable any time from
+  the measurement IDs, no credits.
 - Derived later: per-ISP KPI CDFs, diurnal/weekly decompositions, per-(probe,target)
   trombone-fraction over time.
 
@@ -262,26 +267,85 @@ is *not* a concern. Two modes:
   slow it down.
 - Other levers (same CONFIG block): `DURATION_DAYS`, `TRACEROUTE_EVERY_MIN`, `PING_EVERY_MIN`.
 
-### 3b. Two-account launch (the chosen plan — fits the 100 cap, keeps BOTH signals)
-Since the parallel-measurement cap (100) is **per account**, split by measurement *type* across two
-credit-sharing accounts: **account A runs all 100 traceroutes, account B all 100 pings** → 100
-measurements each (at the cap), the same `targets.csv`, and the merged result is identical to the
-full single-account panel. `PANEL_INSTANCE` namespaces outputs so both can even run on one host.
-```bash
-# Account A — traceroutes  (its own key)
-export PANEL_RIPE_KEY=<A-key> PANEL_TRACE_ONLY=1 PANEL_INSTANCE=a PANEL_PARALLEL_CAP=100
-python experiments/07_longitudinal_panel/panel_monitor.py schedule
-nohup python experiments/07_longitudinal_panel/panel_monitor.py watch > results/a/watch.log 2>&1 &
+### 3b. Two-account launch — THE ACTUAL DEPLOYED PLAN (fits the 100 cap, keeps BOTH signals)
+Since the parallel-measurement cap (100) is **per account**, we split by measurement *type* across two
+credit-sharing accounts: **account A (Saqib's key, in `.env`) runs all 100 traceroutes, account B
+(Rayan's key, in `~/panel_ripe_key`) runs all 100 pings** → 100 measurements each (at the cap), the
+same `targets.csv`, and the merged result is identical to the full single-account panel.
+`PANEL_INSTANCE` namespaces outputs to `results/a/` and `results/b/` so both run on the one host.
+Credits are **per-account** (RIPE has no shared pool — "sharing" is a manual transfer; B was topped
+up to 2M by transfer from A).
 
-# Account B — pings  (its own key; same targets.csv)
-export PANEL_RIPE_KEY=<B-key> PANEL_PING_ONLY=1 PANEL_INSTANCE=b PANEL_PARALLEL_CAP=100
-python experiments/07_longitudinal_panel/panel_monitor.py schedule
-nohup python experiments/07_longitudinal_panel/panel_monitor.py watch > results/b/watch.log 2>&1 &
+**Step 1 — schedule both (run once each; creates the server-side periodic measurements):**
+```bash
+cd ~/pkinternet && source .venv/bin/activate
+
+# Account A — 100 traceroutes (key comes from .env)
+PANEL_TRACE_ONLY=1 PANEL_INSTANCE=a PANEL_PARALLEL_CAP=100 \
+  python experiments/07_longitudinal_panel/panel_monitor.py schedule
+
+# Account B — 100 pings (key from ~/panel_ripe_key via PANEL_RIPE_KEY)
+PANEL_RIPE_KEY="$(cat ~/panel_ripe_key)" PANEL_PING_ONLY=1 PANEL_INSTANCE=b PANEL_PARALLEL_CAP=100 \
+  python experiments/07_longitudinal_panel/panel_monitor.py schedule
 ```
+Each prints its plan (`100 targets × 1 type(s) = 100 measurements`), then a line per site, then
+`scheduled 100 periodic measurements … saved results/{a,b}/measurements.json`. *(Cosmetic: the
+`scheduling … (trace+ping)` log line is a stale label — single-type mode really creates only the one
+type, as the `1 type(s)` count and per-line `trace`/`ping` prefix confirm. The Python-3.8
+`CryptographyDeprecationWarning` is harmless.)*
+
+**Step 2 — start the two watchers in tmux (so they survive SSH disconnect):**
+```bash
+# Traceroute watcher
+tmux new -s watch_a
+#   inside tmux:
+cd ~/pkinternet && source .venv/bin/activate
+PANEL_TRACE_ONLY=1 PANEL_INSTANCE=a PANEL_PARALLEL_CAP=100 \
+  python experiments/07_longitudinal_panel/panel_monitor.py watch
+#   detach (leaves it running):  Ctrl-b  then  d       <-- a KEY COMBO, not text to type
+
+# Ping watcher
+tmux new -s watch_b
+#   inside tmux:
+cd ~/pkinternet && source .venv/bin/activate
+PANEL_RIPE_KEY="$(cat ~/panel_ripe_key)" PANEL_PING_ONLY=1 PANEL_INSTANCE=b PANEL_PARALLEL_CAP=100 \
+  python experiments/07_longitudinal_panel/panel_monitor.py watch
+#   detach:  Ctrl-b  then  d
+```
+
+**Managing / watching on the server (any time, from a fresh SSH session):**
+```bash
+tmux ls                          # should list watch_a and watch_b -> both alive
+tmux attach -t watch_a           # peek at live output; detach again with Ctrl-b then d
+ls -lt experiments/07_longitudinal_panel/results/a/   # traceroute CSV + routes.txt piling up
+ls -lt experiments/07_longitudinal_panel/results/b/   # ping CSV
+```
+**Golden rule:** to *leave a watcher running*, detach with **`Ctrl-b` then `d`** — never `Ctrl-C`
+(that kills it). If a watcher dies, the RIPE measurements keep running server-side; only the local
+CSV harvesting pauses until you restart that watcher.
+
 Outputs land in `results/a/` (traceroutes) and `results/b/` (pings); **merge them at analysis**
 (join on probe + target + timestamp). Both accounts discover the same live PK probes, so the data
 is consistent. (`PANEL_RIPE_KEY` overrides the `.env` key per account; `TARGETS_FILE` can point at
 a different list if you'd rather split by site instead of by type.)
+
+### 3c. ⏰ REMINDER — pull the raw results after the run (2026-07-18)
+The `watch`/`fetch` CSVs are **distilled** (per-round `rtt_min`, `loss`, `hop_count`, `tromboned`,
+`exit_cc`, `transit`) and are **overwritten each cycle** — but each fetch re-pulls *all* results
+since launch, so the single latest `panel_*.csv` is cumulative/complete. The **raw RIPE JSON is not
+archived to disk**; it lives permanently on RIPE's servers, keyed by the measurement IDs saved in
+`results/a/measurements.json` + `results/b/measurements.json`. It is re-fetchable any time, **no
+credits spent, no expiry.**
+
+**After the window closes (on/after 2026-07-18), do one raw pull** — this is the archival dataset:
+```bash
+cd ~/pkinternet && source .venv/bin/activate
+python experiments/07_longitudinal_panel/dump_raw.py        # -> results/{a,b}/raw_*.json.gz
+```
+`dump_raw.py` reads both `measurements.json` files and writes gzipped raw JSON for all 200
+measurements — the untouched RIPE output, independent of RIPE staying reachable.
+**Do not lose the two `measurements.json` files** — they are the index of measurement IDs; back them
+up somewhere off-server as a safeguard.
 
 ### 4. Schedule the run (single-account, if the cap gets raised)
 ```bash
@@ -341,17 +405,18 @@ The run also **auto-stops after 7 days**; you can then do a final `fetch`.
 
 ## Status
 
-**Ready to launch — two-account plan.** `panel_monitor.py` is **built and tested**
-(`schedule`/`watch`/`fetch`/`stop`, editable CONFIG block, live PK-probe discovery, TCP/80
-traceroute + ping, four-KPI fetch, preflight parallel-cap guard, no git; one-off 15-probe test:
-all 15 reported both in ~90 s). `targets.csv` is the **final 100-site stratified sample** (40
-Pakistan / 40 CDN / 20 Abroad, sector-proportional; source `data/pk_100_final_v2.csv`). The 100
-parallel-measurement cap could not be raised, so we **split across two credit-sharing accounts by
-measurement type** (account A = traceroutes, B = pings — 100 each, both signals, merged at
-analysis; see §3b). Credit (~1.3M/day vs 10M) and result-flow (~108k vs 1M) quotas are fine.
-**Next:** create the second account's **Atlas measurement key** (atlas.ripe.net/keys), then run the
-two instances per §3b to start the 7-day clock. Start ASAP to catch the next outage with a real
-baseline.
+**🟢 LIVE — launched 2026-07-11 on `ispl02`; auto-stops 2026-07-18 ~16:55 PKT.** Deployed as the
+two-account split (§3b): **account A = 100 traceroutes** (`results/a/`), **account B = 100 pings**
+(`results/b/`), both under the per-account 100-parallel cap, both scheduled and confirmed
+(`measurements.json` written for each; msm ids 189032884…189033055 traceroutes, 189033057…189033220
+pings). Both watchers run in tmux (`watch_a`, `watch_b`) harvesting distilled CSVs every 30 min.
+`targets.csv` is the **final 100-site stratified sample** (40 Pakistan / 40 CDN / 20 Abroad,
+sector-proportional; source `data/pk_100_final_v2.csv`). Credit (~1.3M/day vs 10M) and result-flow
+(~108k vs 1M) quotas are comfortable; B was funded to 2M by transfer from A.
+
+**⏰ Next action (on/after 2026-07-18):** run `dump_raw.py` for the archival raw JSON pull (§3c),
+then merge `results/a` + `results/b` and start analysis (per-ISP KPI CDFs, diurnal/weekly, trombone
+intermittency, and — if a cable fault landed in the window — event-vs-baseline).
 
 
 ## Candidate website list

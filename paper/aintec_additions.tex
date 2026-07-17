@@ -1,0 +1,171 @@
+% ============================================================================
+% aintec_additions.tex — paste-ready blocks for aintec_panel (AINTEC '26 draft)
+% Each block states WHERE it goes. Figures needed in figures/:
+%   ratio_cdf_all3.png, cdn_heatmap.png   (from experiments/07_longitudinal_panel/analysis/figures/)
+% ============================================================================
+
+
+% ----------------------------------------------------------------------------
+% BLOCK 1 — add at the END of §3.1 Site Selection (after "…produces identical output.")
+% ----------------------------------------------------------------------------
+\paragraph{Location verification.}
+Because the hosting classification above rests on geo-IP, we verify it against physics once
+measurements are available: no reply can arrive faster than light in vacuum would need for the
+round trip to a site's claimed location, so any measured RTT below that bound proves the claimed
+location wrong. Applied to the first days of the panel, this test invalidated the registered
+locations of 34 of the 40 CDN-class sites (anycast addresses whose registration city is, e.g.,
+Toronto, yet which answer Pakistani probes in under 3\,ms) and corrected six unicast sites: three
+sites classed as Pakistani-hosted were in fact far from every probe (nearest ping over 200\,ms,
+consistent with their US and Singapore geo-IP) and are reclassified as Abroad, and three sites
+whose claimed city was physically impossible were relocated by latency multilateration, using each
+probe's RTT as a distance bound. The corrected hosting split is therefore 37 Pakistani, 40 CDN,
+and 23 Abroad, and all per-class results below use the corrected classes. We treat this not as a
+flaw in the sample but as a finding in its own right---among the misclassified sites is a
+provincial government service hosted in the United States---and as independent validation that
+registration-based location data cannot be trusted at exactly the addresses this study cares
+about.
+
+
+% ----------------------------------------------------------------------------
+% BLOCK 2 — §3.2 Vantage Points: replace the sentence
+%   "…at the launch of the week-long run reported here this comprised 17 probes."
+% with the following text (and keep the rest of the subsection as is)
+% ----------------------------------------------------------------------------
+% ...at the launch of the week-long run reported here this comprised 17 probes, of which 16
+% returned data (one probe, on the state operator NTC, was offline throughout). We additionally
+% verified each probe's metadata against the platform API at analysis time rather than trusting
+% run-time labels: one probe's stored label carried a wrong autonomous-system number and was
+% corrected (it is a Z-Com vantage), and one probe declares a placeholder coordinate and is
+% excluded from all distance-based analysis while its round-trip times, which remain valid, are
+% retained elsewhere.
+
+
+% ----------------------------------------------------------------------------
+% BLOCK 3 — NEW subsection. Insert AFTER §3.3 Measurement Design,
+% BEFORE §3.4 Tromboning Classification.
+% ----------------------------------------------------------------------------
+\subsection{The Latency Ratio}
+\label{sec:ratio}
+To compare connections fairly across distances, we normalise each measured round-trip time by the
+fastest round trip physics allows for that connection, giving a dimensionless \emph{latency
+ratio}: a value of $1$ means the path performs at its physical limit, and a value of $k$ means the
+connection takes $k$ times longer than the best possible. Because the ratio is unitless it can be
+pooled across near and far sites and plotted as a distribution, and we retain the hosting class of
+every site so the distributions can be sliced by type. The theoretical minimum differs by class.
+
+For \textbf{unicast sites} (the Pakistani and Abroad classes, one physical server each), the
+minimum is set by geography. With the probe and server coordinates, the great-circle distance $d$
+follows from the Haversine formula, and light in optical fibre covers it at
+$v_f = c/1.468 \approx 204{,}200$\,km/s, so
+\begin{equation}
+  \mathit{RTT}_{\min} \;=\; \frac{2d}{v_f} \;\approx\; \frac{d~[\mathrm{km}]}{102}~\mathrm{ms},
+  \qquad
+  \text{ratio} \;=\; \frac{\mathit{RTT}_{\mathrm{measured}}}{\mathit{RTT}_{\min}},
+\end{equation}
+where $\mathit{RTT}_{\mathrm{measured}}$ is the minimum ping over the window (noise only ever adds
+delay, so the minimum best approximates the true path latency). Probe coordinates come from the
+platform API; server coordinates from the verified geo-IP of the measured address
+(\S3.1). Pairs closer than 30\,km are excluded from the ratio---the denominator approaches zero
+and the quotient degenerates---and are reported directly in milliseconds instead (their median in
+our data is 6\,ms, i.e.\ same-city delivery is healthy).
+
+For \textbf{CDN sites} no single server location exists: the same anycast address is served from
+different points of presence for different ISPs, and its registered location is provably wrong
+(\S3.1). We therefore define the theoretical minimum \emph{empirically}: the best RTT that any
+Pakistani probe achieves to that site. This floor is attainable by construction---any ISP could
+peer with the best-performing network, at the exchange this paper is about, and match its
+path---so the ratio
+\begin{equation}
+  \text{ratio}_{\mathrm{CDN}} \;=\;
+  \frac{\mathit{RTT}_{\mathrm{measured}}(\mathrm{probe}, s)}
+       {\min_{\mathrm{all\ probes}} \mathit{RTT}_{\mathrm{measured}}(\cdot\,, s)}
+\end{equation}
+measures exactly what an ISP loses by not peering. It contains no distance and no geo-IP; the
+best-connected ISP scores $1$ and defines the frontier.
+
+
+% ----------------------------------------------------------------------------
+% BLOCK 4 — §4 Results: REPLACE the current section intro paragraph
+% ("The week-long run reported here is in collection…") with the following,
+% then insert the two new subsections 4.1 and 4.2 BEFORE the existing RQ1
+% subsection (which becomes 4.3; RQ2 -> 4.4; RQ3 -> 4.5, no text changes).
+% ----------------------------------------------------------------------------
+The week-long run is in collection at the time of writing; its window closes on 18~July~2026,
+after which the traceroute and ping halves are merged on probe, site, and round, and the three
+analyses the panel is designed for---one per research question---are computed on the full week
+(\S\ref{sec:rq1}--\S\ref{sec:rq3} below). Ahead of that, we report two supporting analyses from a
+snapshot taken three days into the window. They serve two purposes: they exercise the full
+pipeline of \S3 end to end, and---because every number below is a minimum over rounds, which
+additional days can only tighten---they establish stable baselines that the full-week results will
+refine rather than overturn. Both are labelled preliminary.
+
+\subsection{Preliminary: Latency Ratio by Site Type}
+\label{sec:prelim-ratio}
+Figure~\ref{fig:ratio-cdf} shows the distribution of the latency ratio (\S\ref{sec:ratio}) for the
+507 probe--site connections to unicast sites with a ping response and the 617 connections to CDN
+sites, as cumulative distribution functions. Three observations stand out. First, connections to
+\emph{foreign} sites are the control group the metric needs: their ratios are tight (median
+2.5$\times$, none beyond ${\sim}7\times$), showing what ordinary routing achieves when it works.
+Second, connections to \emph{Pakistani} sites match that typical performance (median 2.9$\times$)
+but roughly a third of them tail out to 10--30$\times$---inefficiency that, given the control
+group, cannot be blamed on ordinary Internet overhead and sits exactly where domestic detours
+live; the full-week traceroutes attribute these paths in \S\ref{sec:rq1}. Third, the \emph{CDN}
+curve is bimodal: about a third of ISP--site pairs sit at ${\approx}1\times$ (those ISPs ride the
+locally peered path and define the floor), while roughly a quarter exceed 40$\times$. Access to
+anycast content is effectively binary---an ISP either peers locally or hauls the traffic to a
+distant point of presence---which previews the cross-section of the next subsection. One caveat
+qualifies the Pakistani curve: 22 of the 40 Pakistani-class sites drop ICMP and are absent here;
+they will be filled in from the TCP traceroute half of the panel, whose final hop the web servers
+must answer.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{ratio_cdf_all3.png}
+  \caption{Latency ratio by site type (snapshot, first three days). For Pakistani and Abroad sites
+  the theoretical minimum is straight fibre over the verified great-circle distance; for CDN sites
+  it is the best RTT any Pakistani probe achieves (\S\ref{sec:ratio}). Foreign sites are uniform;
+  Pakistani sites carry a long tail; CDN access is bimodal.}
+  \label{fig:ratio-cdf}
+\end{figure}
+
+\subsection{Preliminary: The CDN Cross-Section---the Local Path Exists}
+\label{sec:prelim-cdn}
+RQ3 asks whether a local path exists for traffic that nonetheless leaves the country, and answers
+it longitudinally, through verdicts that flip over the week. The CDN measurements already answer
+the same question \emph{cross-sectionally}. Figure~\ref{fig:cdn-heatmap} shows, for each ISP and
+each CDN-hosted site, how close the point of presence that serves that ISP is: local
+($<$15\,ms), regional (15--50\,ms), or far ($>$50\,ms), thresholds we calibrated in earlier
+cache-presence work. The rows order themselves into a peering ranking: the best-peered network
+reaches 85\% of CDN content locally at a median of 3\,ms, two others reach 41\% and 20\%, and the
+remaining six ISPs---including the largest operator---reach essentially none of it locally,
+with medians up to 136\,ms. Expressed with the CDN ratio of \S\ref{sec:ratio}, the median cost of
+non-peering ranges from $2\times$ (second-best network) to $52\times$ (the largest operator): the
+same national content, in some cases military and provincial-government sites, is tens of times
+slower depending only on which ISP a citizen uses. The columns separate causes: sites red across
+\emph{every} row are far because of their own offshore fronting (no peering can fix them), whereas
+columns green for well-peered ISPs and red for the rest quantify precisely the local path that
+exists and is not taken. This is the paper's thesis in cross-section; the longitudinal version
+follows on the full week in \S\ref{sec:rq3}.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{cdn_heatmap.png}
+  \caption{CDN access grid (snapshot, best probe per ISP). Green: served from a local PoP
+  ($<$15\,ms); amber: regional (15--50\,ms); red: far ($>$50\,ms). Rows form a peering ranking;
+  solid-red columns are sites fronted offshore for every ISP.}
+  \label{fig:cdn-heatmap}
+\end{figure}
+
+% ----------------------------------------------------------------------------
+% BLOCK 5 — labels to add on the existing RQ subsections (for the cross-refs above):
+%   \subsection{Extent and Attribution of Tromboning (RQ1)}\label{sec:rq1}
+%   \subsection{The Latency Cost and Its Stability (RQ2)}\label{sec:rq2}
+%   \subsection{Existence of a Local Path (RQ3)}\label{sec:rq3}
+% Also in §4.4 (RQ2), add one sentence at the end:
+%   "The preliminary ratio distributions of \S\ref{sec:prelim-ratio} are the partial-window
+%    baseline this analysis refines: the full week adds the diurnal decomposition and the
+%    per-ISP split, and a path-only variant that subtracts each probe's measured last-mile
+%    floor (on the snapshot, the Pakistani median falls from 2.9x to 1.9x, below the foreign
+%    2.4x, indicating the typical domestic route is efficient and the cost lives in the
+%    access overhead and the tail)."
+% ----------------------------------------------------------------------------
