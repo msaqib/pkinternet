@@ -106,8 +106,14 @@ changed intermediary**. Computed from the **unfiltered** operator pull
 | **PTCL** | 11.9% | **13.5%** | 3.9% | 5.6% |
 
 - **How much:** on the fault day, **~21% of all paths to Transworld and ~13.5% of paths to PTCL
-  changed carrier** — vs a normal-day churn of ~2–6%. A 3–10× spike, dominated by the swing onto
-  Hurricane Electric (TWA: +18.3 pp) and away from Cogent (−11.7 pp) and Sparkle (−3.9 pp).
+  changed carrier**, dominated by the swing onto Hurricane Electric (TWA: +18.3 pp) and away from
+  Cogent (−11.7 pp) and Sparkle (−3.9 pp). **Magnitude caveat (Exp 6.1.1, W3a):** against an
+  8-week baseline this size of churn is elevated but *not unprecedented* — TWA's fault day ranks
+  #3 of 56 days (z=+1.8; a larger event hit both operators on 30 May — decomposed in Exp 6.1.1 as a one-day
+  Hurricane-interconnect loss coincident with a severe Lahore storm/power event), and
+  PTCL's total churn is within its noisy norm. The attribution therefore rests on the
+  **fingerprint** (both operators onto the same substitute carrier on the same two days, 48-h
+  recovery, coincident with the documented fault), not on raw magnitude.
 - **When:** PTCL's churn was already elevated on **1 Jul** (11.9%) — again suggesting the fault
   predates the 2 Jul announcement; both operators normalized by **3 Jul**.
 - **Where:** at the operators' interconnects with foreign carriers — physically the
@@ -116,11 +122,12 @@ changed intermediary**. Computed from the **unfiltered** operator pull
 - **Who it affects — downstream (26–30 Jun baseline → 2 Jul):** **1 of 8** probe ISPs changed
   materially (**Fasttel**, PTCL 0.74 → 0.46, TWA 0.26 → 0.54, i.e. ~28 pp of its paths switched
   gate); the other **7 of 8 moved ≤ 5 pp** (Orbit/TES/Z-Com pinned at TWA = 1.00; Nova 0.88 flat;
-  Nayatel 0.72 → 0.73; Cybernet 0.12 flat; NTC 0.72 → 0.67 modest). But *indirectly*, everyone
-  riding the operators was affected: per Exp 09, TWA is the majority dependency for most Pakistani
-  networks (median 0.50), so **the 21% carrier churn silently re-routed part of the international
-  path of most of the country's networks** — their own dependencies unchanged, the roads beyond
-  the gate swapped under them.
+  Nayatel 0.72 → 0.73; Cybernet 0.12 flat; NTC 0.72 → 0.67 modest). **At national scale (Exp 6.1.1): 98.5%
+  of 273 gate-dependent PK networks held their majority gate; 4 switched; ~4% re-balanced.** And
+  *indirectly*, everyone riding the operators was affected: per Exp 09, TWA is the majority
+  dependency for most Pakistani networks (median 0.50), so **the 21% carrier churn silently
+  re-routed part of the international path of most of the country's networks** — their own
+  dependencies unchanged, the roads beyond the gate swapped under them.
 
 ### Are these physical cables? (mechanism, stated carefully)
 
@@ -219,6 +226,14 @@ python hegemony_timeseries.py            # pull + CSV + figure
 - `results/fig_hegemony_smw5.png` — per-origin curves, fault date marked; top panel = probe ISPs'
   PTCL/TWA dependency, bottom = the operators' upstream mix.
 - Verdict paragraph here + cross-links into `findings/06_submarine_outage.md`.
+
+## Robustness programme → Experiment 6.1.1
+
+The caveats above are being closed systematically in **Exp 6.1.1**
+(`../06.1.1_smw5_robustness/`): churn-anomaly baseline (15 May–10 Jul), population-scale
+downstream scan (all PK origins), placebo operators, independent fault-onset clocks (PK anchor
+builtins, IODA, Cloudflare Radar), and APNIC user-weighting. Its results replace the
+corresponding caveats here as they land.
 
 ## Future work — enabled by the physical-layer mapping (with the exact asks)
 

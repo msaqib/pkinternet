@@ -5,6 +5,7 @@ Exp 07 — geolocation & distance toolkit. One script, three subcommands (see ME
   python geo.py distances            # probe -> website great-circle distances     -> distances.csv
   python geo.py locate [targets...]  # compare 5 geolocation methods on a few sites (default sample)
   python geo.py relocate             # physics arbiter: geo-IP vs latency, per site -> relocate.csv
+  python geo.py hops                  # annotate EVERY unique hop IP in the raw archive -> hop_annotations.csv
 
 Read-only lookups only: RIPE Atlas probe API (public, no key, 0 credits) + ip-api geo-IP (cached).
 Never touches the running measurements.
@@ -502,6 +503,7 @@ def hop_info(ip):
     if ip in _acache:
         return _acache[ip]
     out = {"asn": "", "holder": "", "cc": ""}
+    net_error = False  # a network failure must NOT poison the cache with a blank (re-run repairs)
     try:
         j = requests.get("https://stat.ripe.net/data/network-info/data.json",
                          params={"resource": ip}, timeout=15).json()
@@ -513,7 +515,7 @@ def hop_info(ip):
             out["holder"] = (k.get("data", {}).get("holder") or "")[:32]
         time.sleep(0.15)
     except Exception:
-        pass
+        net_error = True
     if not out["asn"]:
         # unannounced in BGP (e.g. Transworld backbone, Equinix egress) -> RDAP registry name
         try:
@@ -523,11 +525,50 @@ def hop_info(ip):
             out["cc"] = out["cc"] or (j.get("country") or "")
             time.sleep(0.15)
         except Exception:
-            pass
+            net_error = True
     g = _icache.get(ip) or {}
     out["cc"] = g.get("cc", "")
-    _acache[ip] = out; _save(ASN_CACHE, _acache)
+    # cache a genuine answer, or a definitive "no data" (both requests returned) — but never a
+    # blank produced by a dropped connection, so a later re-run retries only the network gaps.
+    if not (net_error and not out["asn"] and not out["holder"]):
+        _acache[ip] = out; _save(ASN_CACHE, _acache)
     return out
+
+
+def cmd_hops(args):
+    """Full-coverage hop annotation: extract EVERY unique hop IP across all traces in the raw
+    archive (not just the latest-snapshot routes.txt) and resolve each to ASN | operator | cc.
+    Complete IP->owner table so no router on any path variation is unlabelled. Reuses hop_info's
+    per-IP cache, so it is resumable and cheap after a partial run.
+        python geo.py hops [raw_a_*.json.gz]   (default: newest results/a/raw_a_*.json.gz)"""
+    import glob as _g, gzip
+    src = args[0] if args else max(_g.glob(os.path.join(RESULTS, "a", "raw_a_*.json.gz")))
+    raw = json.load(gzip.open(src, "rt", encoding="utf-8"))
+    ips = set()
+    for mid, results in raw.items():
+        if mid == "_meta":
+            continue
+        for r in results:
+            for hop in r.get("result", []):
+                for pkt in hop.get("result", []):
+                    frm = pkt.get("from")
+                    if frm and not _is_private(frm):
+                        ips.add(frm)
+    ips = sorted(ips)
+    print(f"{os.path.basename(src)}: {len(ips):,} unique public hop IPs to annotate")
+    rows, done = [], 0
+    for ip in ips:
+        h = hop_info(ip)
+        rows.append({"ip": ip, "asn": h["asn"], "holder": h["holder"], "cc": h["cc"]})
+        done += 1
+        if done % 100 == 0:
+            print(f"  {done}/{len(ips)} ...")
+    miss = sum(1 for r in rows if not r["asn"] and not r["holder"])
+    with open(os.path.join(HERE, "hop_annotations.csv"), "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=["ip", "asn", "holder", "cc"])
+        w.writeheader(); w.writerows(rows)
+    print(f"wrote hop_annotations.csv ({len(rows):,} IPs; {miss} still unresolved"
+          f"{' - re-run to retry network gaps' if miss else ''})")
 
 
 def cmd_annotate(args):
@@ -577,6 +618,8 @@ if __name__ == "__main__":
         cmd_cdn()
     elif cmd == "correct":
         cmd_correct()
+    elif cmd == "hops":
+        cmd_hops(sys.argv[2:])
     elif cmd == "annotate":
         cmd_annotate(sys.argv[2:])
     else:
