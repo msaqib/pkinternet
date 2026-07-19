@@ -106,10 +106,92 @@ producing short, steady paths, and Transworld being a gate itself (fewer hops to
 quality is an **ISP property**, not just a destination property — the same finding as the small-ISP
 tromboning census (Exp 4.1), now with the time axis confirming it.
 
+## Mechanics: HOW exactly the paths change (hop-level, from the raw archive)
+
+Everything above used the coarse per-trace signature. This section re-derives the change story
+from the **actual hop sequences** of all 222,944 traces (`.paths_series.json`, built from the raw
+archive + `hop_annotations.csv`), and defines precisely what we label a "change".
+
+### The labels, and why (three layers, strictest last)
+
+| Layer | definition | consecutive-round change rate |
+|---|---|--:|
+| **IP-path** | the literal sequence of responding hop IPs | **42.8%** |
+| **AS-path** | IP-path mapped to ASNs, consecutive duplicates collapsed | **11.9%** |
+| **Genuine AS re-route** | AS-path changed AND the responding IPs are *not* a projection of the other round's (i.e. not explainable by hops merely failing to answer) | **5.5%** |
+
+Why the layering matters — two honesty corrections it forces:
+1. **Most IP-level churn is not routing change.** The panel runs Paris traceroute with 16 flow
+   IDs; RIPE rotates the ID between rounds, so consecutive rounds deliberately sample *different
+   ECMP branches* of the same route. The 42.8% therefore mostly measures **path diversity**
+   (parallel load-balanced branches that exist simultaneously), not temporal change.
+2. **53% of AS-path changes are visibility artifacts.** ASes "vanish" from a path when their
+   routers ICMP-rate-limit (their hops become `*`) and "reappear" when they answer again — no
+   packet took a different road. Filtering these (the projection test above) leaves the genuine
+   re-route rate: **5.5% of hourly rounds; 782/1600 pairs (49%) genuinely re-routed at AS level
+   at least once in the week** — the defensible version of the coarse "81% of pairs changed".
+
+### Where the paths change
+
+First-differing-hop distribution over all IP-path changes: **hops 3–5 carry 78.5%** of all
+divergence (hop 3: 26.6%, hop 4: 24.4%, hop 5: 27.5%). Hops 1–2 (access/CPE: 3.3%) and hops ≥8
+(the foreign segment: <10%) are stable. **The instability lives almost entirely in the domestic
+aggregation/backbone layer and the handoff into transit — the exact layer an IXP would replace.**
+Once a path is out of the country, it barely changes; before the gate, it changes constantly.
+
+### What kind of changes (the 12,234 genuine re-routes)
+
+| kind | share | meaning |
+|---|--:|---|
+| segment reorder/change | 48% | different domestic backbone segment between same endpoints |
+| **detour inserted** | **20%** | an extra AS appears mid-path (trombone/interconnect onset) |
+| **detour removed** | **20%** | that AS drops out again |
+| substitution (A→B) | 12% | a different AS replaces another — incl. the PTCL↔TWA gate flips |
+
+Insertions and removals are near-perfectly symmetric (2,496 vs 2,492) — detours **breathe** on/off
+rather than accumulate. Pair-level dynamics confirm it: pairs hold a median of just **2 distinct
+AS-paths** for the whole week, **96% of changing pairs return to a previously-seen state**
+(oscillation, not migration), and state dwell time is median 1 round / mean 8 h — a two-state
+flap, not an evolving route.
+
+### Two live examples (11–12 Jul, from the archive)
+
+**Gate substitution — Fasttel → cxtreme.pk (Cybernet-hosted), one hour apart:**
+```
+12:00Z ... -> PTCL AS17557 -> PTCL-bb AS9557 -> ... -> CYBERNET AS9541   (via gate 1)
+13:00Z ... -> TWA AS38193 -> TWA backbone (unannounced) -> CYBERNET AS9541  (via gate 2)
+```
+Fasttel multihomes; its egress flips between the duopoly gates hour to hour — same destination,
+same probe, different gate. (This is the mechanism behind §2's 26 gate-flip pairs.)
+
+**Detour insertion — Orbit → careers635.com.pk, one hour apart:**
+```
+01:01Z ... Orbit -> 172.29.244.9 -> TWA backbone -> dest
+02:01Z ... Orbit -> 172.29.244.9 -> COGENT AS174 -> TWA backbone -> dest
+```
+A Cogent hop materializes mid-path — and at domestic RTT: this is **Cogent's Pakistan PoP fabric**
+(known from Exp 01/1.3) being toggled into the interconnect, not a trip abroad. A caution the
+AS-level view needs: *AS-foreign ≠ geographically foreign*; the RTT-physics verdict, not the hop's
+registry, decides country (which is exactly why the trombone detector is RTT-based).
+
+### What the mechanics add to the takeaways
+
+- The volatility is **structural ECMP diversity plus a two-state domestic flap**, concentrated at
+  hops 3–5 — the pre-gate layer. International segments are stable; Pakistan's contribution to a
+  path is the unstable part.
+- The honest headline pair: **49% of pairs genuinely re-route at AS level within a week** (not
+  81%, which includes ECMP sampling and visibility artifacts), and **5.5% of hour-pairs** see a
+  genuine AS-route change.
+- Detour breathing (20%+20%) is the hourly-scale mechanism behind trombone intermittency: the
+  same detour toggles in and out, consistent with traffic engineering across gate/interconnect
+  fabrics (incl. Cogent's PK PoP) rather than persistent misrouting.
+
 ## Takeaways for the paper
 
-1. Domestic routing to PK sites is **dynamic** (81% of paths change over a week) — strengthens the
-   "instability/load-balancing" framing over "static misconfiguration."
+1. Domestic routing to PK sites is **dynamic** — 81% of pairs change by coarse signature; the
+   artifact-corrected figure to quote: **49% of pairs genuinely re-route at AS level within the
+   week** (see Mechanics) — strengthens the "instability/load-balancing" framing over "static
+   misconfiguration."
 2. The **gate choice itself flips** (PTCL↔TWA on the same pair) — the duopoly routing is not
    deterministic.
 3. The hairpin RTT cost is **bimodal**: cheap for load-balanced flips, expensive for structural

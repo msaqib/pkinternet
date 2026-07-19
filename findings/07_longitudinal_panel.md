@@ -86,8 +86,11 @@ exit everywhere) — the expected control result; sector doesn't matter once you
 
 ## 3. Route dynamics over the week (summary of `analysis/route_changes.md`)
 
-- **81% of the 1,600 (probe,target) pairs changed route** during the week (≥5,466 distinct coarse
-  path signatures); only 19% kept one route.
+- **81% of the 1,600 (probe,target) pairs changed route** during the week by coarse signature;
+  hop-level analysis (route_changes.md §Mechanics) refines this honestly: **49% of pairs genuinely
+  re-route at AS level** (the rest is ECMP branch-sampling and hop-visibility artifacts), with
+  divergence concentrated at **hops 3–5 — the domestic pre-gate layer an IXP would replace**;
+  detours breathe on/off (96% oscillation) rather than migrate.
 - **45% of PK pairs flip trombone state**; even the **gate flips** (PTCL↔TWA, same pair, 26×).
 - Diurnal signal is mild (12.6% trough → 16.0% evening peak): tromboning is **structural, not
   congestion-driven**.
