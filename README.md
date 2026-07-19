@@ -113,10 +113,11 @@ findings/              Analysis writeups and the charts notebook
   the same fault in global BGP — downstream dependencies **frozen** (one 2-day exception),
   while the operators re-carriered **~21%/13.5%** of their world paths for ~48 h (Hurricane
   surge, Cogent collapse): the duopoly absorbed the fault upstream.
-- [07 — Longitudinal Panel, preliminary](findings/07_longitudinal_panel_preliminary.md):
-  latency-vs-physics from the partial window — Abroad 2.5× (control), Pakistan 2.9× with a
-  10–30× tail, CDN bimodal 8.4×; 40 wrong geo-IP locations caught by physics; per-ISP CDN
-  peering scores (Nayatel 85% local → PTCL 0%). Full-week update pending.
+- [07 — Longitudinal Panel (full week)](findings/07_longitudinal_panel.md):
+  the flagship's complete results — international paths never exceed 10× the physics floor while
+  **24% of domestic paths do**; **14.3% steady-state tromboning** (81% of routes change within the
+  week); **banking is the worst-routed sector** (79% trombone, 103 ms domestic); CDN locality is
+  an ISP lottery (Nayatel 85% → PTCL 0%); TWA's backbone (125/143 routers) invisible to BGP.
 - [09 — AS Hegemony](findings/09_as_hegemony.md):
   the duopoly from global BGP: **90% of BGP-visible Pakistani networks depend on PTCL or
   Transworld for the majority of their paths** (medians: TWA 0.50, PTCL 0.17); per-ISP

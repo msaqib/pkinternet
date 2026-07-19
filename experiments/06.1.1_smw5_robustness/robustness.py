@@ -4,6 +4,7 @@ Exp 6.1.1 - robustness checks for the SMW5 control-plane findings (see notes.md)
 
   python robustness.py baseline     # W3a: operators' day-over-day churn, 15 May - 10 Jul
   python robustness.py population   # W4: all PK origins, majority-gate switches in the fault window
+  python robustness.py placebo      # W3b: same churn metric on non-PK operators (controls)
 
 IHR API rules (learned in Exp 09/6.1): both timebin bounds required, range < 7 days, no `format`
 param; never cache partial pulls; operator-level analysis always unfiltered.
@@ -58,6 +59,74 @@ def fetch(origin, gte, lte, asn=None):
         print(f"  ! AS{origin} {gte[:10]}: {e}")
         return None
     return rows
+
+
+# ============================ W3b: placebo controls ============================
+# CAREFUL placebo design (revises the notes' first suggestion): Omantel and SLT are SMW5
+# *consortium members* (Oman and Sri Lanka are SMW5 landings), so they are NOT clean placebos -
+# they are FAULT-LOCALITY tests (same cable, other branches: flat churn on 1-2 Jul => the fault
+# was branch-local to Pakistan). True placebos must have no SMW5 involvement at all:
+# NTC Nepal (landlocked, terrestrial transit only) and VNPT Vietnam (AAG/APG/AAE-1/IA, no SMW5).
+PLACEBOS = [
+    (8529,  "Omantel",    "smw5-other-branch"),
+    (9329,  "SLT",        "smw5-other-branch"),
+    (23752, "NTC-Nepal",  "non-smw5"),
+    (45899, "VNPT",       "non-smw5"),
+]
+
+
+def _daily_churn(origin, cache, cache_path, t0, t1):
+    """Day-over-day churn series for one origin (same metric as W3a), cached, unfiltered."""
+    daily = defaultdict(list)                        # (date, transit) -> [hege]
+    for gte, lte in _chunks(t0, t1):
+        key = f"{origin}:{gte[:10]}"
+        if key in cache:
+            rows = cache[key]
+        else:
+            rows = fetch(origin, gte, lte)
+            if rows is None:
+                print(f"  skipping uncached failed chunk {key}"); continue
+            rows = [[x["timebin"][:10], int(x["asn"]), float(x["hege"])]
+                    for x in rows if int(x["asn"]) != origin]
+            cache[key] = rows
+            json.dump(cache, open(cache_path, "w", encoding="utf-8"))
+        for d, asn, h in rows:
+            daily[(d, asn)].append(h)
+    mean = defaultdict(dict)
+    for (d, asn), v in daily.items():
+        mean[d][asn] = sum(v) / len(v)
+    dates = sorted(mean)
+    out = []
+    for i in range(1, len(dates)):
+        d0, d1 = dates[i - 1], dates[i]
+        allt = set(mean[d0]) | set(mean[d1])
+        out.append((d1, 0.5 * sum(abs(mean[d1].get(t, 0) - mean[d0].get(t, 0)) for t in allt)))
+    return out
+
+
+def cmd_placebo():
+    import statistics as st
+    CACHE = os.path.join(HERE, ".cache_placebo.json")
+    cache = _load(CACHE)
+    T0, T1 = "2026-06-15T00:00:00", "2026-07-10T23:59:59"   # 6.1's window, brackets the fault
+    rows_out = []
+    for asn, name, role in PLACEBOS:
+        series = _daily_churn(asn, cache, CACHE, T0, T1)
+        if not series:
+            print(f"AS{asn} {name}: NO DATA"); continue
+        vals = [c for _, c in series]
+        mu, sd = st.mean(vals), (st.pstdev(vals) or 1e-9)
+        fault = {d: c for d, c in series if d in ("2026-07-02", "2026-07-03")}
+        rank = {d: 1 + sum(1 for _, c in series if c > fc) for d, fc in fault.items()}
+        print(f"\n=== {name} (AS{asn}, {role}): {len(vals)} days, mean {mu:.3f}, sd {sd:.3f} ===")
+        for d, c in sorted(fault.items()):
+            print(f"  {d}  churn={c:.3f}  z={(c - mu) / sd:+.1f}  rank {rank[d]}/{len(vals)}")
+        for d, c in series:
+            rows_out.append(dict(date=d, asn=asn, name=name, role=role, churn=round(c, 4)))
+    with open(os.path.join(RES, "placebo_churn.csv"), "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=["date", "asn", "name", "role", "churn"])
+        w.writeheader(); w.writerows(rows_out)
+    print("\nwrote results/placebo_churn.csv")
 
 
 # ============================ W3a: churn baseline ============================
@@ -202,5 +271,7 @@ if __name__ == "__main__":
         cmd_baseline()
     elif cmd == "population":
         cmd_population()
+    elif cmd == "placebo":
+        cmd_placebo()
     else:
         print(__doc__)

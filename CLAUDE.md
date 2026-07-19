@@ -329,6 +329,23 @@ filtering throughout. Destination-level data usable; no routing path visible.
 
 ---
 
+## Analysis discipline: never exit an analysis early
+
+Incomplete-looking data (blocked hops, `* * *` runs, unresolved `?` fields,
+NaN RTTs, filtered pings) is **not** a reason to stop or skip an analysis — it
+is itself data. The rule, always:
+1. Run the analysis **end to end** on everything that IS present.
+2. **Quantify the incompleteness** (how many rows/hops/pairs affected, which
+   probes/targets drive it) instead of gesturing at it.
+3. State explicitly which inferences the gaps do and do not threaten, and
+   report the finding with those bounds — never "the data is too incomplete to
+   analyze". Partial visibility with quantified bounds is a result; an
+   abandoned analysis is not. (Established after Exp 07: `?` exits, ICMP-blocked
+   hops and hop-255 rows all looked like blockers but each was quantifiable and
+   none invalidated the headline results.)
+
+---
+
 ## Key Pakistani ASNs
 
 | ASN | Operator | Notes |
