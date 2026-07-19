@@ -469,7 +469,10 @@ country and returned. The rate is governed far more by the vantage than by the d
 source ISP it spans an order of magnitude, from 3.2\% (Transworld, itself a gateway) and 9.7\%
 (Nayatel, the best-peered network) through 10--13\% (TES, Nova, Zcom, Orbit) and 22--25\%
 (Cybernet, Fasttel) to \textbf{30.6\% for PTCL}, the largest operator
-(Figure~\ref{fig:panel-source}). Attribution follows the duopoly structure: among traces where the
+(Figure~\ref{fig:panel-source}). The vantage effect persists \emph{within} ISPs: the two PTCL
+vantages trombone at 46\% (Mianwali) versus 27\% (Karachi), and the two Cybernet vantages at 34\%
+(Haripur) versus 11\% (Karachi)---customers of the same operator receive materially different
+routing depending on the city they connect from. Attribution follows the duopoly structure: among traces where the
 hand-off is resolvable, Transworld carries 2,773 hairpins and PTCL 1,721, with Cybernet's own
 upstream fabric (2,066) and TES (739) behind them; 2,716 hairpinned traces traverse only
 unresponsive or unannounced boundary hops and cannot be attributed---though no third international
@@ -486,7 +489,7 @@ all 222,944 traces against the peering-LAN prefixes of PKIX Lahore and PIE Karac
 to domestic destinations detoured through Singapore or the United States---each one a path the
 exchange exists to serve.
 \begin{figure}[t]\centering\includegraphics[width=\columnwidth]{fig_trombone_by_isp.pdf}
-  \caption{Tromboning rate per source ISP over the full week.}\label{fig:panel-source}\end{figure}
+  \caption{Tromboning rate per vantage (ISP and city) over the full week, PK-hosted sites only.}\label{fig:panel-source}\end{figure}
 
 \subsection{The Latency Cost and Its Stability (RQ2)}
 \label{sec:rq2}
