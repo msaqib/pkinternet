@@ -4,10 +4,6 @@
 \usepackage{amsmath,amssymb}
 \graphicspath{{figures/}}
 
-% Marker for results that land only after the 7-day run completes (2026-07-18).
-% Remove this macro and its uses once the merged dataset is in and the numbers are filled.
-\newcommand{\pending}{\textbf{[pending: 7-day run completes 2026-07-18]}}
-
 %% Conference info — update when you have the official details from AINTEC
 \acmConference[AINTEC '26]{Proceedings of the 21st Asian Internet Engineering Conference}{December 1--3, 2026}{Taipei, Taiwan}
 \acmYear{2026}
@@ -39,9 +35,16 @@ grounded in round-trip-time physics rather than unreliable geo-IP. The uniform, 
 lets us report, on equal terms and per ISP, how much domestic traffic trombones abroad and through
 which transit operators, what latency this costs and whether the cost is structural or diurnal,
 and---from routing verdicts that flip between local and hairpinned across the week---whether a
-domestic path exists for the traffic that nonetheless leaves the country. \pending{} The recurring
-finding of the broader study is that the local path exists but is not taken, and that PKIX is the
-instrument that would take it.
+domestic path exists for the traffic that nonetheless leaves the country. Over 204,384 analysed
+traceroutes we find that 15.1\% of traces to Pakistani-hosted sites leave the country and return,
+at rates from 3\% to 31\% depending on the source ISP; that international paths never exceed
+$10\times$ the speed-of-light floor while 24\% of domestic paths do; that the penalty is
+structural, varying under 3 percentage points across the day; that the same anycast content is a
+median $12.7\times$ slower on the worst-peered major ISP than on the best; and that 83\% of the
+probe--site pairs that ever hairpin are also served domestically on other rounds of the same
+week---direct evidence that the local path exists and is not taken. Not one of the week's traces
+crossed either of the country's exchange fabrics. The finding of the study is that the local path
+exists but is not taken, and that PKIX is the instrument that would take it.
 \end{abstract}
 
 %%
@@ -95,18 +98,107 @@ Our findings show that the penalty is real, structural, and unevenly distributed
 
 
 \section{Background}
-Di Bartolomeo et al.~\cite{dibartolomeo2015} compare IXP vs upstream paths for Italian ISPs
-using RIPE Atlas and controlled BGP announcements, finding IXP paths give better, more stable
-latency and preserve traffic locality; our study mirrors their vantage (national probes $\to$
-national targets) and their locality-as-sovereignty framing, but replaces hand-picked targets
-with a \emph{complete prefix census} and a detector that does not trust geo-IP. Gupta et
-al.~\cite{gupta2014} show African ISPs that do not peer locally send domestic traffic
-\emph{detouring through Europe}---precisely the tromboning we measure in Pakistan.
-Prefix-based target selection follows the selective-scanning approach~\cite{klick2016}: all IPs
-in an announced prefix share one BGP route, so a few IPs per block is routing-complete.
-Large-IXP studies ~\cite{ager2012,chatzis2013} motivate why peering matters. We built on RIPEs Atlas~\cite{ripeatlas}, RIPEstat ~\cite{ripestat} and Team Cymru with an RDAP fallback for ASN
-and registry resolution.
 
+The value of local peering is well established in developed markets, where it is
+treated as a question of latency optimization rather than routing survival.
+Di Bartolomeo et al.~\cite{dibartolomeo2015} compare IXP versus upstream transit
+paths for Italian ISPs using RIPE Atlas measurements combined with controlled BGP
+announcements, and find that IXP paths deliver both lower and more stable latency
+while preserving traffic locality, that is, keeping domestic traffic on domestic
+infrastructure rather than routing it through an intermediate network abroad.
+
+Large-IXP studies of mature exchanges such as DE-CIX and AMS-IX~\cite{ager2012,
+chatzis2013} motivate why this matters at scale: peering density at a handful
+of major European and Asian exchanges is treated as a settled proxy for a healthy,
+cost-efficient domestic internet. Our study borrows Di Bartolomeo et al.'s
+vantage-point design (national probes measuring national targets) and their framing
+of locality as a form of network sovereignty, but departs from their hand-picked
+target list in favor of a complete, reproducibly sampled prefix census, and replaces
+geo-IP-based path classification, which we show to be unreliable at exactly the
+addresses this question depends on, with a detector grounded in RTT physics.
+
+This same failure mode, an exchange point that exists but is not used to capacity,
+recurs whenever the literature turns to the developing world, suggesting it is
+structural rather than incidental. Gupta et al.~\cite{gupta2014} measure
+interdomain paths between residential access networks and local Google cache
+infrastructure across Africa and find that 66.8\% of these paths leave the continent
+entirely, detouring through Europe before returning to a destination that was never
+far away. They attribute this to two distinct failures that we observe jointly in
+Pakistan: local ISPs are frequently altogether absent from their national IXP, and,
+more tellingly, even ISPs that are physically present and connected at the exchange
+frequently fail to establish bilateral peering sessions with one another. Correcting
+for this via emulated path replacement compresses African intra-continental latency
+to a floor of roughly 30~ms, a number that echoes PKIX's own published figures of
+1 to 31~ms through the exchange against 100 to 144~ms for the international
+alternative~\cite{pta2026}.
+
+Edmundson et al.~\cite{edmundson2016characterizing}
+show that peering infrastructure alone cannot fix tromboning where the underlying
+content is not domestically hosted at all: more than half of Brazil's and Kenya's
+most popular domestic websites resolve to servers in the United States or United
+Kingdom, and roughly 13\% and 50\% of measured paths in those countries respectively
+trombone through those jurisdictions as a direct consequence, a hosting-driven
+detour that persists regardless of local IXP investment. This motivates our own
+three-way hosting classification (\S 3.1): a domestic exchange only resolves
+tromboning for traffic that is domestically hosted to begin with, and our finding
+that CDN-fronted Pakistani sites are tromboned in a bimodal, all-or-nothing pattern
+(\S 4.2) is consistent with their account of hosting geography, not peering alone,
+as a binding constraint.
+
+\'{O} Briain et al.~\cite{obriain2017rebuilding} trace a
+landlocked instance of the same problem in Uganda, where the national exchange grew
+from three participants in 2001 to only 24 by 2017, before a switching-fabric
+upgrade and the onboarding of Akamai's CDN pushed peak traffic from roughly
+300~Mb/s to over 2~Gb/s within a single year, evidence that underuse responds
+directly to deliberate investment, not merely the exchange's existence.
+Lui~\cite{lui2021costings} documents an equivalent pattern in the South Pacific:
+island nations already connected to New Zealand via submarine cable still see a
+weighted average latency of 44.21~ms absent a functioning subregional exchange,
+falling by 64\%, to 15.99~ms, once a hybrid IXP model coordinates traffic properly.
+Lui's central finding is methodological rather than technical, since co-locating
+hardware at a shared facility does not by itself produce peering.
+
+Unlike Uganda's
+landlocked dependence on a small number of submarine cable landings abroad,
+Pakistan has direct coastal access via Karachi, so the mechanism producing
+tromboning here sits closer to Gupta et al.'s and Edmundson et al.'s hosting- and
+peering-driven accounts than to a pure geographic-isolation problem.
+
+That gap is not solely a coordination failure, and treating it as a pure
+engineering problem risks understating why it persists. Pakistan's international
+gateway market is a legal duopoly: only PTCL and Transworld hold international
+gateway licences, and every other domestic ISP purchases upstream connectivity
+from one of the two~\cite{pacra2023twa}. Gonzalez~\cite{gonzalez2026peering}
+documents that PTCL's partial 2006 privatization, a 26\% stake sold to Etisalat,
+did not produce a decline in wholesale gateway pricing in the years that followed,
+in sharp contrast to Pakistan's mobile retail sector, where genuine competitive
+entry by Telenor, Jazz, and Zong over the same period drove rapid price declines.
+
+This asymmetry is consistent with the broader soft-budget-constraint literature:
+incumbents facing limited competitive discipline at the specific market layer that
+matters have correspondingly limited incentive to pass through efficiency gains,
+regardless of the physical capacity or infrastructure already available to them.
+Opalinski et al.~\cite{opalinski2024quest} extend this account to the physical
+layer and show it is not confined to commercial incentives alone: Pakistan's
+international connectivity is concentrated almost entirely at a small number of
+Karachi landing stations operated by the same two gateway licensees, while
+cross-border terrestrial alternatives, despite Pakistan sharing borders with India,
+Afghanistan, and Iran, remain commercially unused for reasons of state security
+policy rather than engineering cost; a Lahore to Amritsar terrestrial fiber link,
+commissioned in 2008, has to date never carried commercial traffic. The routing
+pattern we measure and the physical topology underneath it are therefore both
+downstream of the same small set of gateway-controlling actors.
+
+Finally, our measurement design itself builds on established practice for
+reasoning about large, partially observable topologies under resource constraints.
+Prefix-based target selection follows the selective-scanning
+principle~\cite{klick2016}: because every IP address within a single
+announced BGP prefix shares one route, a handful of representative addresses per
+block is sufficient for routing-complete coverage without exhaustively scanning
+every host. We combine this with RIPE Atlas~\cite{ripeatlas} as our
+active-measurement platform, RIPEstat for prefix and routing metadata, and
+Team Cymru bulk WHOIS with an RDAP fallback for ASN and registry resolution where
+WHOIS data is stale or unavailable.
 \section{Methodology}
 \subsection{Site Selection}
 \label{sec:sites}
@@ -172,7 +264,7 @@ The full pipeline is available in the project repository. Running the three scri
 Because the hosting classification above rests on geo-IP, we verify it against physics once
 measurements are available: no reply can arrive faster than light in vacuum would need for the
 round trip to a site's claimed location, so any measured RTT below that bound proves the claimed
-location wrong. Applied to the first days of the panel, this test invalidated the registered
+location wrong. Applied to the panel, this test invalidated the registered
 locations of 34 of the 40 CDN-class sites (anycast addresses whose registration city is, e.g.,
 Toronto, yet which answer Pakistani probes in under 3\,ms) and corrected six unicast sites: three
 sites classed as Pakistani-hosted were in fact far from every probe (nearest ping over 200\,ms,
@@ -185,24 +277,12 @@ provincial government service hosted in the United States---and as independent v
 registration-based location data cannot be trusted at exactly the addresses this study cares
 about.
 
+This is consistent with known limits of geolocation databases more broadly: Huffaker et al. [Huffaker, 2011] compare public and commercial geolocation services and find that accuracy degrades sharply below the country level, with metro- and city-level lookups substantially less reliable than coarse country-level classification — precisely the granularity our tromboning classification depends on, since a CDN anycast address registered to the correct country but the wrong city, or a unicast server whose registered city is merely implausible rather than wrong, would not be caught by a country-level check alone. This motivates verifying location against RTT physics directly (above) rather than relying on any geolocation database, however granular its claimed resolution.
+
+
+
 \subsection{Vantage Points}
-We measure from the RIPE Atlas probes connected within Pakistani networks at the time of the run,
-enumerated live from the platform API (country code PK, connected status) rather than from a fixed
-list, so that the vantage set reflects whichever probes are actually online; at the launch of the
-week-long run reported here this comprised 17 probes, of which 16 returned data (one probe, on the
-state operator NTC, was offline throughout). We additionally verified each probe's metadata against
-the platform API at analysis time rather than trusting run-time labels: one probe's stored label
-carried a wrong autonomous-system number and was corrected (it is a Z-Com vantage), and one probe
-declares a placeholder coordinate and is excluded from all distance-based analysis while its
-round-trip times, which remain valid, are retained elsewhere. The probes span both licensed
-international operators and a range of their downstream ISPs---PTCL and Transworld together with
-its retail arm, alongside Cybernet, Nayatel, Nova, Orbit, and Z-Com among others---and, crucially
-for RQ2, several ISPs contribute more than one probe and in more than one city, which is what lets
-us ask whether the customers of a single ISP receive the same service. Three probes require care:
-two are ICMP-filtered, so their intermediate hops do not respond and only their ping RTT is
-trustworthy, and one runs inside a container that exposes only two hops. We retain the round-trip
-time these probes report, since it remains valid, but exclude them from any hop-count statistic,
-and we flag them wherever they enter an analysis rather than dropping them silently.
+We measure from the RIPE Atlas probes connected within Pakistani networks at the time of the run, enumerated live from the platform API rather than from a fixed list, so that the vantage set reflects whichever probes are actually online. We verified each probe's metadata against the platform API at analysis time: one probe carried a wrong autonomous-system label and was corrected as a Z-Com vantage, and one probe (Cybernet Haripur, AS9541) declares a placeholder coordinate and is excluded from all distance-based analysis while its round-trip times remain valid and are retained for trombone classification. Transworld (Lahore, AS38193) is fully ICMP-filtered, no intermediate hops respond, so we retain its ping RTT for latency analysis but exclude it from all hop-count and path-based analyses. Nayatel (Islamabad) shows a median hop count of 255 across most traceroute rounds, indicating destinations frequently did not reply to its traces; its ping RTT remains valid and is used for RTT analysis. Several ISPs contribute more than one probe across multiple cities: Cybernet, Nayatel, PTCL, and TES each have two or more vantage points, enabling within-ISP comparisons across locations.
 
 \subsection{Measurement Design}
 Against each of the 100 sites we run two complementary measurements. A TCP traceroute to port~80
@@ -212,11 +292,9 @@ run continuously for a seven-day window. We use TCP to port~80 rather than ICMP 
 ICMP is heavily filtered in Pakistani networks---on an earlier target only 12 of 52 destinations
 answered ICMP at all---whereas a web server on port~80 is far more likely to reply, and we use
 Paris-style traceroute, which holds constant the header fields a load balancer hashes on, so that a
-change in the observed path is a genuine reroute and not an artefact of multipath forwarding. From
-the ping series we take round-trip time to be the \emph{minimum} of the packets in a round rather
-than the mean, because network noise is one-directional---a packet can be delayed by queuing but
-never delivered faster than the path physically allows---so the minimum is the cleanest estimate of
-the true latency. We report jitter as the standard deviation of RTT across rounds and packet loss as
+change in the observed path is a genuine reroute and not an artefact of multipath forwarding.
+
+We report jitter as the standard deviation of RTT across rounds and packet loss as
 the fraction of probe packets that go unanswered; together with hop count from the traceroute, these
 give the four indicators used throughout, matching the metric set of prior IXP measurement
 work~\cite{dibartolomeo2015}.
@@ -226,12 +304,27 @@ fixed start and stop, so that collection continues on the platform's own infrast
 of our host and a local collector can be restarted without loss of data. RIPE Atlas caps the number
 of simultaneously running measurements at one hundred per account; because one hundred sites each
 require both a traceroute and a ping, the run needs two hundred concurrent measurements, which we
-accommodate by splitting it across two credit-sharing accounts \emph{by measurement type}---one
+accommodate by splitting it across two accounts \emph{by measurement type}---one
 account carrying all one hundred traceroutes and the other all one hundred pings, against the
 identical site list and the same live-discovered probes. As the split is by type rather than by
 site, the merged dataset is identical to what a single unconstrained account would have collected.
 The credit and result-volume ceilings are an order of magnitude above what the run consumes, so
 concurrency, not cost, is the only binding limit.
+
+\subsection{Data Cleaning}
+
+The seven-day panel (11--18 July 2026) produced 222,944 traceroute rows and 445,749 ping rows;
+17 probes were scheduled, of which 16 returned data---the NTC probe (1016431) was offline
+throughout the run and is excluded from all results. After the exclusions below, 204,384
+traceroute rows and 313,276 ping rows from 14 probes enter analysis. The active probes span nine
+Pakistani ISPs across seven cities: Cybernet (Haripur, Karachi $\times$2), Nayatel (Islamabad
+$\times$2), Nova (Lahore), Orbit (Faisalabad), PTCL (Karachi, Mianwali), TES/Transworld Home
+(Rawalpindi, Karachi), Transworld (Lahore), Fasttel (Islamabad), and Zcom (Lahore), covering both
+licensed international gateway operators and seven downstream ISPs.
+
+Two probes are excluded from analysis. Probe 1015491 carries an erroneous ASN label (AS13335, Cloudflare) but is in fact a Z-Com (AS152605) vantage co-located in Lahore with probe 7613; it is excluded as a mislabelled duplicate. Probe 7764 (PTCL Lahore) recorded 90\% packet loss throughout the run and is excluded from all RTT and trombone analyses; because a blinded trace defaults to a non-trombone verdict, retaining this probe would also systematically understate its ISP's hairpin rate. Probe 1016393 (PTCL Mianwali) disconnected on July 17 but contributed six days of valid data and is retained with a note.
+
+The raw panel contains one row per measurement round per probe per target, with ping and traceroute rows stored together and distinguished by a \texttt{kind} column. For RTT analysis we use ping rows and drop any row where \texttt{rtt\_min} is NaN, corresponding to rounds with 100\% packet loss. For hop count analysis we exclude traceroute rows where \texttt{hop\_count} = 255, indicating the destination never replied. Rows where the transit ASN is unresolvable are retained for trombone classification since the verdict is derived from RTT physics independently of ASN resolution. For the per-probe-site trombone fraction analysis we restrict to pairs with at least 50 rounds to ensure a statistically reliable estimate. We use the minimum ping RTT across all rounds as the primary latency measure, since queuing and processing overhead only add delay and the minimum is the cleanest approximation of true path latency~\cite{dibartolomeo2015}.
 
 \subsection{The Latency Ratio}
 \label{sec:ratio}
@@ -256,7 +349,7 @@ delay, so the minimum best approximates the true path latency). Probe coordinate
 platform API; server coordinates from the verified geo-IP of the measured address
 (\S\ref{sec:sites}). Pairs closer than 30\,km are excluded from the ratio---the denominator
 approaches zero and the quotient degenerates---and are reported directly in milliseconds instead
-(their median in our data is 6\,ms, i.e.\ same-city delivery is healthy).
+(their median in our data is 5.6\,ms, i.e.\ same-city delivery is healthy).
 
 For \textbf{CDN sites} no single server location exists: the same anycast address is served from
 different points of presence for different ISPs, and its registered location is provably wrong
@@ -299,45 +392,48 @@ comparable across ISPs and over time.
 
 \section{Results}
 \label{sec:results}
-The week-long run is in collection at the time of writing; its window closes on 18~July~2026,
-after which the traceroute and ping halves are merged on probe, site, and round, and the three
-analyses the panel is designed for---one per research question---are computed on the full week
-(\S\ref{sec:rq1}--\S\ref{sec:rq3} below). Ahead of that, we report two supporting analyses from a
-snapshot taken three days into the window. They serve two purposes: they exercise the full
-pipeline of \S3 end to end, and---because every number below is a minimum over rounds, which
-additional days can only tighten---they establish stable baselines that the full-week results will
-refine rather than overturn. Both are labelled preliminary.
+The week-long run completed on 18~July~2026; the traceroute and ping halves are merged on probe,
+site, and round, and all results below are computed on the full, cleaned week (\S3.4): 204,384
+traceroutes and 313,276 pings from 14 probes. The week was event-free---no cable fault or
+publicly reported routing incident overlaps the window, and the daily tromboning rate varies only
+between 14.5\% and 15.9\%---so the numbers below describe the steady state of Pakistani routing
+rather than an anomaly, and they double as the normal-day baseline for future event studies. We
+first present two normalised cross-sections (the latency ratio and the CDN grid), then the three
+analyses the panel was designed for, one per research question.
 
-\subsection{Preliminary: Latency Ratio by Site Type}
+\subsection{Latency Ratio by Site Type}
 \label{sec:prelim-ratio}
 Figure~\ref{fig:ratio-cdf} shows the distribution of the latency ratio (\S\ref{sec:ratio}) for the
-507 probe--site connections to unicast sites with a ping response and the 617 connections to CDN
+447 probe--site connections to unicast sites with a ping response and the 546 connections to CDN
 sites, as cumulative distribution functions. Three observations stand out. First, connections to
 \emph{foreign} sites are the control group the metric needs: their ratios are tight (median
-2.5$\times$, none beyond ${\sim}7\times$), showing what ordinary routing achieves when it works.
-Second, connections to \emph{Pakistani} sites match that typical performance (median 2.9$\times$)
-but roughly a third of them tail out to 10--30$\times$---inefficiency that, given the control
-group, cannot be blamed on ordinary Internet overhead and sits exactly where domestic detours
-live; the full-week traceroutes attribute these paths in \S\ref{sec:rq1}. Third, the \emph{CDN}
-curve is bimodal: about a third of ISP--site pairs sit at ${\approx}1\times$ (those ISPs ride the
-locally peered path and define the floor), while roughly a quarter exceed 40$\times$. Access to
-anycast content is effectively binary---an ISP either peers locally or hauls the traffic to a
-distant point of presence---which previews the cross-section of the next subsection. One caveat
-qualifies the Pakistani curve: 22 of the 40 Pakistani-class sites drop ICMP and are absent here;
-they will be filled in from the TCP traceroute half of the panel, whose final hop the web servers
-must answer.
+2.46$\times$, none beyond ${\sim}7\times$), showing what ordinary routing achieves when it works.
+Second, connections to \emph{Pakistani} sites match that typical performance at the median
+(2.88$\times$) but carry a heavy tail: 24\% of pairs exceed 10$\times$, reaching
+31$\times$---inefficiency that, given the control group, cannot be blamed on ordinary Internet
+overhead and sits exactly where domestic detours live; the traceroutes attribute these paths in
+\S\ref{sec:rq1}. Put directly: \emph{not one} international path in the dataset exceeds 10$\times$
+the physical floor, while a quarter of domestic paths do. Third, the \emph{CDN} curve is bimodal:
+27\% of ISP--site pairs sit at ${\lesssim}1.5\times$ (those ISPs ride the locally peered path and
+define the floor), while 23\% exceed 40$\times$. Access to anycast content is effectively
+binary---an ISP either peers locally or hauls the traffic to a distant point of presence---which
+previews the cross-section of the next subsection. One caveat qualifies the Pakistani curve: 19 of
+the 37 Pakistani-class sites drop ICMP entirely and are absent from the ratio; their \emph{paths}
+are still fully covered by the TCP traceroute half, so the tromboning results below include them,
+and since the ping-silent sites skew toward government and corporate hosts, the responding subset
+likely understates rather than overstates domestic inefficiency.
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=\columnwidth]{ratio_cdf_all3.png}
-  \caption{Latency ratio by site type (snapshot, first three days). For Pakistani and Abroad sites
+  \caption{Latency ratio by site type (full week). For Pakistani and Abroad sites
   the theoretical minimum is straight fibre over the verified great-circle distance; for CDN sites
   it is the best RTT any Pakistani probe achieves (\S\ref{sec:ratio}). Foreign sites are uniform;
   Pakistani sites carry a long tail; CDN access is bimodal.}
   \label{fig:ratio-cdf}
 \end{figure}
 
-\subsection{Preliminary: The CDN Cross-Section---the Local Path Exists}
+\subsection{The CDN Cross-Section---the Local Path Exists}
 \label{sec:prelim-cdn}
 RQ3 asks whether a local path exists for traffic that nonetheless leaves the country, and answers
 it longitudinally, through verdicts that flip over the week. The CDN measurements already answer
@@ -345,21 +441,22 @@ the same question \emph{cross-sectionally}. Figure~\ref{fig:cdn-heatmap} shows, 
 each CDN-hosted site, how close the point of presence that serves that ISP is: local
 ($<$15\,ms), regional (15--50\,ms), or far ($>$50\,ms), thresholds we calibrated in earlier
 cache-presence work. The rows order themselves into a peering ranking: the best-peered network
-reaches 85\% of CDN content locally at a median of 3\,ms, two others reach 41\% and 20\%, and the
-remaining six ISPs---including the largest operator---reach essentially none of it locally,
-with medians up to 136\,ms. Expressed with the CDN ratio of \S\ref{sec:ratio}, the median cost of
-non-peering ranges from $2\times$ (second-best network) to $52\times$ (the largest operator): the
-same national content, in some cases military and provincial-government sites, is tens of times
-slower depending only on which ISP a citizen uses. The columns separate causes: sites red across
-\emph{every} row are far because of their own offshore fronting (no peering can fix them), whereas
-columns green for well-peered ISPs and red for the rest quantify precisely the local path that
-exists and is not taken. This is the paper's thesis in cross-section; the longitudinal version
-follows on the full week in \S\ref{sec:rq3}.
+reaches 85\% of CDN content locally at a median of 2.7\,ms, two others reach 41\% and 21\%, and
+the remaining six ISPs---including the largest operator---reach essentially none of it locally,
+with median RTTs of 91--130\,ms. Expressed with the CDN ratio of \S\ref{sec:ratio}, the median
+cost of non-peering ranges from $2\times$ (second-best network) to $12.7\times$ (the largest
+operator), and the worst quarter of ISP--site pairs exceed $40\times$: the same national content,
+in some cases military and provincial-government sites, is ten to forty times slower depending
+only on which ISP a citizen uses. The columns separate causes: sites red across \emph{every} row
+are far because of their own offshore fronting (no peering can fix them), whereas columns green
+for well-peered ISPs and red for the rest quantify precisely the local path that exists and is not
+taken. This is the paper's thesis in cross-section; the longitudinal version follows in
+\S\ref{sec:rq3}.
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=\columnwidth]{cdn_heatmap.png}
-  \caption{CDN access grid (snapshot, best probe per ISP). Green: served from a local PoP
+  \caption{CDN access grid (full week, best probe per ISP). Green: served from a local PoP
   ($<$15\,ms); amber: regional (15--50\,ms); red: far ($>$50\,ms). Rows form a peering ranking;
   solid-red columns are sites fronted offshore for every ISP.}
   \label{fig:cdn-heatmap}
@@ -367,69 +464,93 @@ follows on the full week in \S\ref{sec:rq3}.
 
 \subsection{Extent and Attribution of Tromboning (RQ1)}
 \label{sec:rq1}
-For each ISP we will report the fraction of its traces to Pakistani-hosted sites that leave the
-country, broken down both by the transit operator that performs the hand-off abroad and by the exit
-country at which the path leaves. Because the panel measures every hour for a week rather than once,
-it separates an ISP that hairpins persistently from one that does so only intermittently, and
-because it measures from every connected probe, it tests whether the outcome is governed more by the
-vantage---the ISP, and even the specific point of presence one measures from---than by the
-destination. We present the per-ISP rates as a ranked bar chart and the hand-off attribution as a
-stacked breakdown by transit operator and exit country, the direct analogue of the
-foreign-AS-traversal figure in prior IXP work~\cite{dibartolomeo2015}.
-% \begin{figure}[t]\centering\includegraphics[width=\columnwidth]{fig_panel_trombone_by_isp.png}
-%   \caption{Tromboning rate per source ISP, with transit/exit attribution.}\label{fig:panel_source}\end{figure}
-\emph{Reserved:} per-ISP trombone rate; transit (PTCL/Transworld) and exit-country attribution. \pending
+Across the week, \textbf{15.1\%} of the 75,600 analysed traces to Pakistani-hosted sites left the
+country and returned. The rate is governed far more by the vantage than by the destination: per
+source ISP it spans an order of magnitude, from 3.2\% (Transworld, itself a gateway) and 9.7\%
+(Nayatel, the best-peered network) through 10--13\% (TES, Nova, Zcom, Orbit) and 22--25\%
+(Cybernet, Fasttel) to \textbf{30.6\% for PTCL}, the largest operator
+(Figure~\ref{fig:panel-source}). Attribution follows the duopoly structure: among traces where the
+hand-off is resolvable, Transworld carries 2,773 hairpins and PTCL 1,721, with Cybernet's own
+upstream fabric (2,066) and TES (739) behind them; 2,716 hairpinned traces traverse only
+unresponsive or unannounced boundary hops and cannot be attributed---though no third international
+carrier exists for them to hide behind. The exit geography is concentrated: Singapore (3,740
+traces, dominated by an Equinix egress) and the United States (1,750) account for nearly all
+resolvable exits, with Hong Kong a distant third (167). By sector, the stakes invert importance:
+\emph{Financial Services is the worst-routed sector in the country}---85.6\% of traces to
+Pakistani-hosted banking sites hairpin, led by the state agricultural bank at 86\%---followed by
+Government Services (27.6\%, driven almost entirely by one federal housing-authority site that
+hairpins on 89\% of rounds), while the sectors that operate their own networks, Communications and
+Healthcare, barely trombone at all ($<$2\%). Finally, the exchange itself: scanning every hop of
+all 222,944 traces against the peering-LAN prefixes of PKIX Lahore and PIE Karachi finds
+\textbf{zero} traces crossing either exchange fabric during the entire week, while 11,756 traces
+to domestic destinations detoured through Singapore or the United States---each one a path the
+exchange exists to serve.
+\begin{figure}[t]\centering\includegraphics[width=\columnwidth]{fig_trombone_by_isp.pdf}
+  \caption{Tromboning rate per source ISP over the full week.}\label{fig:panel-source}\end{figure}
 
 \subsection{The Latency Cost and Its Stability (RQ2)}
 \label{sec:rq2}
-We will present the distribution of round-trip time for local versus hairpinned traces as cumulative
-distribution functions, both pooled and per ISP, so that the cost of tromboning is expressed as a
-full distribution rather than a single mean; a clean separation between the two curves is the
-quantitative statement of the penalty. Because the measurement spans a full week at fine cadence, we
-then decompose that penalty by time of day and day of week to test whether it is a fixed structural
-cost or one that rises with evening congestion. A flat profile would show the penalty to be a
+The penalty separates cleanly in cross-section: the median minimum RTT of a local trace to a
+Pakistani-hosted site is 24.5\,ms against 104.3\,ms for a hairpinned one
+(Figure~\ref{fig:panel-cdf}). That gap, however, conflates two populations---structurally
+hairpinned far sites versus structurally local near ones---so we also report the \emph{causal}
+number: for the probe--site pairs that flip between verdicts within the week and have RTT in both
+states, the within-pair penalty of taking the hairpin is a median of just $+0.7$\,ms but a mean of
+$+14.5$\,ms, a heavily skewed distribution. Most flips are near-free equal-cost detours; the cost
+of tromboning is concentrated in the persistently hairpinned pairs sitting at ${\sim}100$\,ms
+against a ${\sim}25$\,ms local norm. The temporal decomposition confirms the penalty is structural
+rather than congestive: the hourly tromboning rate varies only from 13.6\% (06:00 PKT) to 16.5\%
+(23:00 PKT)---under 3 percentage points around the clock---and the daily rate stays within
+14.5--15.9\% across all seven days. A flat profile of this kind shows the penalty to be a
 consequence of where content is hosted and how it is routed, not of load, and therefore that the
-remedy is local hosting and peering rather than additional capacity; a pronounced cycle would
-instead localise when the cost is worst. The preliminary ratio distributions of
-\S\ref{sec:prelim-ratio} are the partial-window baseline this analysis refines: the full week adds
-the diurnal decomposition and the per-ISP split, and a path-only variant that subtracts each
-probe's measured last-mile floor (on the snapshot, the Pakistani median falls from 2.9$\times$ to
-1.9$\times$, below the foreign 2.4$\times$, indicating the typical domestic route is efficient and
-the cost lives in the access overhead and the tail).
-% \begin{figure}[t]\centering\includegraphics[width=\columnwidth]{fig_panel_rtt_cdf.png}
-%   \caption{CDF of min-of-$N$ RTT, local vs hairpinned traces.}\label{fig:panel_cdf}\end{figure}
-\emph{Reserved:} RTT CDF (local vs hairpinned, pooled and per ISP); diurnal/weekly penalty curve. \pending
+remedy is local hosting and peering rather than additional capacity. (On a three-day snapshot, a
+path-only variant that subtracts each probe's measured last-mile floor moved the Pakistani median
+from 2.9$\times$ to 1.9$\times$, below the foreign 2.4$\times$, indicating the typical domestic
+route is efficient and the inefficiency lives in the access overhead and the tail.)
+\begin{figure}[t]\centering\includegraphics[width=\columnwidth]{fig_local_vs_hairpin_cdf.pdf}
+  \caption{CDF of min-of-$N$ RTT to Pakistani-hosted sites, local vs hairpinned traces.}\label{fig:panel-cdf}\end{figure}
 
 \subsection{Existence of a Local Path (RQ3)}
 \label{sec:rq3}
-Finally, for every Pakistani-hosted site that ever trombones we will report the fraction of the
-week's rounds in which its verdict is local rather than hairpinned. A site whose verdict flips
-between the two over the window is direct evidence that a domestic path exists and is sometimes
-taken, so that the international detour on the remaining rounds is a routing \emph{choice} rather
-than a necessity; a site that trombones on every round, by contrast, indicates no usable local path
-from that vantage. Classifying each site as persistently local, persistently hairpinned, or flapping
-turns the question of whether the local path exists into a measured quantity, and it lets us state
-the tromboning rate as a range across the week rather than as a single fragile snapshot.
-\emph{Reserved:} per-site verdict-flip fraction; persistently-local / persistently-hairpinned / flapping counts. \pending
+Of the 444 probe--site pairs on Pakistani-hosted sites with at least 50 rounds, 211 (48\%) are
+persistently local, 40 (9\%) are persistently hairpinned, and 193 (43\%) \emph{flap}: the same
+probe reaching the same site is served domestically on some rounds and via a foreign detour on
+others, within the same week. Stated as RQ3 demands: \textbf{83\% of the pairs that ever trombone
+are also served by a domestic path during the week}---for the overwhelming majority of hairpinning
+traffic, the international detour is a routing choice, not a necessity. The site-level view is
+starker still: every one of the 37 Pakistani-hosted sites was hairpinned on at least one round
+from at least one vantage, 35 of 37 flap, and only two sites are hairpinned on more than 90\% of
+rounds---the sites for which no usable local path may exist. The choice extends to the gate
+itself: 23 pairs were handed to \emph{both} PTCL and Transworld at different times in the week for
+the same destination. Hop-level analysis of consecutive rounds localises the mechanics: 78\% of
+path divergence occurs at hops 3--5---the domestic aggregation and pre-gateway layer, the exact
+segment an exchange would replace---detours toggle on and off symmetrically rather than migrating
+(96\% of changing pairs return to a previously observed route), and 49\% of all pairs genuinely
+re-route at the AS level at least once during the week. The tromboning rate is therefore best
+stated as a stable weekly range, 14.5--15.9\%, produced not by a fixed set of broken routes but by
+a continuously flapping choice between a local path and a foreign one.
 
 \section{Discussion}
-The measurement is built to support one argument, and its shape is already visible in the design. If
-the penalty for reaching domestic content over an international detour is large and, as we expect,
-stable across the day, then it is not a capacity problem that more bandwidth would solve but a
-routing and hosting problem that local exchange would; and if the same destinations are reached
-locally on some rounds and abroad on others, then the domestic path plainly exists and is simply not
-being chosen. PKIX is the instrument that would choose it. The exchange is already present in three
-cities with dozens of connected members, and its own figures put inter-ISP latency through the
-exchange one to two orders of magnitude below the international alternative~\cite{pta2026}; the gap
-our measurements probe is therefore not between the status quo and a network that must be built, but
-between the status quo and one that must be \emph{used}. In the language of a three-set framing---
-networks absent from the exchange, networks present but not exchanging routes, and networks actively
-peering---the tromboning we measure is a picture of the first two behaviours at national scale, and
-moving networks into the third is a matter of configuration and commercial willingness rather than
-construction. The preliminary cross-section of \S\ref{sec:prelim-cdn} already shows what moving
-between sets is worth: the same anycast content is a median $52\times$ slower on the largest
-operator than on the best-peered network in the same country, a gap closable by peering rather
-than by capacity.
+The measurement was built to support one argument, and the full week bears it out. The penalty for
+reaching domestic content over an international detour is large where it is structural and, as
+measured, stable across the day---under 3 percentage points of diurnal variation---so it is not a
+capacity problem that more bandwidth would solve but a routing and hosting problem that local
+exchange would; and since 83\% of the probe--site pairs that ever hairpin are served domestically
+on other rounds of the same week, the domestic path plainly exists and is simply not being chosen.
+PKIX is the instrument that would choose it. The exchange is already present in three cities with
+dozens of connected members, and its own figures put inter-ISP latency through the exchange one to
+two orders of magnitude below the international alternative~\cite{pta2026}; our own data-plane
+scan finds not a single one of 222,944 traces crossing either of the country's exchange fabrics in
+a week. The gap our measurements expose is therefore not between the status quo and a network that
+must be built, but between the status quo and one that must be \emph{used}. In the language of a
+three-set framing---networks absent from the exchange, networks present but not exchanging routes,
+and networks actively peering---the tromboning we measure is a picture of the first two behaviours
+at national scale, and moving networks into the third is a matter of configuration and commercial
+willingness rather than construction. The CDN cross-section of \S\ref{sec:prelim-cdn} shows what
+moving between sets is worth: the same anycast content is a median $12.7\times$ slower on the
+largest operator than on the best-peered network in the same country---and more than $40\times$
+slower for the worst quarter of ISP--site pairs---a gap closable by peering rather than by
+capacity.
 
 The same structure explains the resilience concern that motivates the study. Because
 internationally-routed traffic depends on a small number of submarine cables reached through the two
@@ -448,22 +569,20 @@ we treat the CDN class accordingly and do not read a local edge as proof of loca
 
 \section{Conclusion}
 Measured from inside the country, Pakistan's internet routing sends a substantial share of domestic
-traffic abroad even though a domestic exchange exists to keep it home. This paper has presented the
-design of a week-long, uniform measurement from every connected Pakistani vantage to a fixed,
-reproducibly sampled set of one hundred sites, together with a geo-IP-independent classifier for
-detecting when a path leaves the country, built to answer three questions: how much traffic
-trombones and through whom, what that costs and whether the cost is structural, and whether a local
-path exists for the traffic that takes the detour. The measurement is in collection; its results,
-reported per ISP and over the full week, will quantify the extent, the cost, and the avoidability of
-the detour. Preliminary analyses from the first days already validate the pipeline and preview the
-answer: foreign sites are reached uniformly near the physical optimum, domestic sites carry a long
-inefficiency tail, and the same CDN content varies by a factor of fifty between well-peered and
-poorly-peered ISPs. The throughline is that the remedy is already in place: Pakistan does not need
-to build new infrastructure to keep its traffic local; it needs to use the exchange it has. Beyond
-this run, the same framework extends to a longer horizon, to repeated measurement that ranges the
-tromboning rate over time, and---by holding a continuous normal-day baseline---to capturing the
-next cable fault as a clean before-during-after rather than, as before, against an already-degraded
-state.
+traffic abroad even though a domestic exchange exists to keep it home. Over a week of uniform
+measurement from every connected Pakistani vantage to a fixed, reproducibly sampled set of one
+hundred sites, classified by a geo-IP-independent detector, we find that 15.1\% of traces to
+domestically-hosted sites leave the country and return---at 3\% from the best-routed ISP and 31\%
+from the largest; that international paths never exceed ten times the speed-of-light floor while a
+quarter of domestic paths do; that the penalty is structural, not diurnal; that the same CDN
+content varies by more than an order of magnitude between well-peered and poorly-peered ISPs; and
+that 83\% of the probe--site pairs that ever hairpin are also served domestically within the same
+week, while not one of the week's 222,944 traces crossed either of the country's exchange fabrics.
+The throughline is that the remedy is already in place: Pakistan does not need to build new
+infrastructure to keep its traffic local; it needs to use the exchange it has. Beyond this run,
+the same framework extends to a longer horizon, to repeated measurement that ranges the tromboning
+rate over time, and---by holding a continuous normal-day baseline---to capturing the next cable
+fault as a clean before-during-after rather than, as before, against an already-degraded state.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references}

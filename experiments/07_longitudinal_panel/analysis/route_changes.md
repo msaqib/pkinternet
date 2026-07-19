@@ -1,5 +1,10 @@
 # Exp 07 — Route-change analysis (which routes change, and how)
 
+**Roster note:** this document analyses the **full 16-probe panel**; the paper and findings
+quote the 14-probe analysis roster (excl. probes 7764 + 1015491), where e.g. the PK trombone
+rate is 15.1% (not 14.3%) and PTCL's rate is 30.6% (not 17.4% — probe 7764's blinded traces
+default to non-trombone and masked PTCL's true rate).
+
 **Data:** full-week trace panel (`results/a/panel_20260718_195946.csv`, 222,944 traces,
 11–18 Jul 2026, 16 probes × 100 targets) joined to the ping panel for RTT. Classes are the
 physics-corrected split (`targets_corrected.csv`). "PK-hosted" = 37 corrected-Pakistan targets.

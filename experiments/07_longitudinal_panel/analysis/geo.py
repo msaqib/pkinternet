@@ -114,11 +114,16 @@ def isp_of(pid, label):
     return LABEL_FIX.get(pid) or (label.split(".")[0] if "." in label else label)
 
 
+EXCLUDE_PROBES = {7764, 1015491}   # 7764: 90% loss; 1015491: mislabelled Z-Com duplicate of 7613.
+                                   # Aligns geo.py with the notebook/paper's 14-probe roster.
+
+
 def load_panel_rtt():                     # {target: {probe_id: min_rtt_ms}}  (min-of-N ping)
     import pandas as pd
     panel = max(f for f in os.listdir(os.path.join(RESULTS, "b")) if f.startswith("panel_"))
     df = pd.read_csv(os.path.join(RESULTS, "b", panel))
     df = df[df["kind"] == "ping"].dropna(subset=["rtt_min"])
+    df = df[~df["probe_id"].isin(EXCLUDE_PROBES)]
     rtt = {}
     for (t, pid), v in df.groupby(["target", "probe_id"])["rtt_min"].min().items():
         rtt.setdefault(t, {})[int(pid)] = float(v)

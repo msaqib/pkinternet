@@ -6,7 +6,10 @@ Paris traceroutes** (hourly) + **445,749 pings** (half-hourly), split across two
 (A=traces, B=pings). Classes are **physics-corrected** (`analysis/targets_corrected.csv`): 37
 Pakistan / 40 CDN / 23 Abroad — the arbiter moved 3 design-time "Pakistan" sites to Abroad
 (`youth.cn`, `toptop.net`, `phf.gop.pk`: nearest PK probe 77–206 ms, physically impossible) and
-relocated 3 geo-IP-impossible cities. Supersedes `07_longitudinal_panel_preliminary.md`.
+relocated 3 geo-IP-impossible cities. Supersedes `07_longitudinal_panel_preliminary.md`. Headline analysis numbers use the **14-probe
+analysis roster** (excludes the mislabelled Z-Com duplicate and the 90%-loss PTCL probe — the
+latter's blinded traces default to non-trombone and would understate PTCL); §1's descriptive
+table spans all 16 reporting probes.
 
 ---
 
@@ -33,8 +36,8 @@ class:
 | ping RTT median / p90 (ms) | **25.6 / 96** | 78.8 / 206 | 163.1 / 286 |
 | trace confirms destination | 82% | 79% | 80% |
 | median hops | 10 | 10 | 13 |
-| path exits PK | **14.3% = trombone** | 46.6% | 82.6% |
-| latency ratio (measured ÷ physics floor) | **2.87× median, p90 14.9×, 24% >10×** | 8.86× vs best-observed | **2.46× median, p90 4.2×, 0% >10×** |
+| path exits PK | **15.1% = trombone** (analysis roster) | 46.6% | 82.6% |
+| latency ratio (measured ÷ physics floor) | **2.88× median, p90 14.9×, 24% >10×** | 8.43× vs best-observed | **2.46× median, p90 4.2×, 0% >10×** |
 
 **Abroad (the control).** Foreign sites behave exactly as global routing should: 82.6% of paths
 visibly exit (the remainder are ICMP-blind, not local), 13 hops, 163 ms median — and **not one
@@ -42,8 +45,8 @@ probe-site pair exceeds 10× the physical floor**. The international system is n
 
 **Pakistan.** Domestic sites are 6× closer in milliseconds (25.6 vs 163) but **further from
 physics**: median 2.87× and a heavy tail — 24% of pairs above 10×, worst 31×. The tail is the
-tromboning: **14.3% of traces to PK-hosted sites leave the country and come back** (exits:
-Singapore ≫ US > HK; carried by Transworld 2,917 and PTCL 1,793 of attributed hairpins). The
+tromboning: **15.1% of traces to PK-hosted sites leave the country and come back** (exits:
+Singapore ≫ US > HK; carried by Transworld 2,773 and PTCL 1,721 of attributed hairpins). The
 comparison that matters: *a quarter of domestic paths are worse, relative to distance, than the
 worst international path in the entire dataset.*
 
@@ -59,22 +62,22 @@ local (median 3.7 ms, 2 hops) → Cybernet-KHI 41% → everyone else **0% local*
 
 | Sector | sites | ping median (ms) | **trombone %** |
 |---|--:|--:|--:|
-| **Financial Services** | 2 | **103.1** | **79.2%** |
-| **Government Services & Facilities** | 4 | 22.8 | **26.0%** |
-| Energy | 1 | (ping-blocked) | 23.8% |
-| Transportation | 1 | (ping-blocked) | 9.6% |
-| Commercial Facilities | 21 | 24.4 | 9.5% |
-| Education | 4 | 33.7 | 6.2% |
-| Communications | 3 | 26.4 | 1.9% |
-| Healthcare | 1 | 24.9 | 1.8% |
+| **Financial Services** | 2 | **103.1** | **85.6%** |
+| **Government Services & Facilities** | 4 | 22.8 | **27.6%** |
+| Energy | 1 | (ping-blocked) | 25.8% |
+| Transportation | 1 | (ping-blocked) | 9.9% |
+| Commercial Facilities | 21 | 24.4 | 10.0% |
+| Education | 4 | 33.7 | 6.5% |
+| Communications | 3 | 26.4 | 1.8% |
+| Healthcare | 1 | 24.9 | 1.9% |
 
 - **Banking is the worst-routed sector in Pakistan.** ZTBL (the state agricultural bank) hairpins
   **86.4%** of the time; EFU Life 72%. Median RTT to PK-hosted financial sites is **103 ms —
   worse than the CDN class** and 4× the domestic norm, for sites that are *in the country*.
-- **Government averages 26%**, driven by fgeha.gov.pk at **89.2%** (a federal housing authority
+- **Government averages 27.6%**, driven by fgeha.gov.pk at **89.2%** (a federal housing authority
   whose domestic visitors route via Singapore). The other gov sites are mostly clean — so this is
   a *fixable, site-level* failure, not a systemic gov property.
-- The bulk of the web (Commercial, 21 sites) trombones at 9.5% — real but far lower; and the
+- The bulk of the web (Commercial, 21 sites) trombones at 10.0% — real but far lower; and the
   sectors that run their own networks (Communications, Healthcare-PITC) barely trombone at all.
 - Hosting correlation: the three worst sites are hosted on **Cybernet (2) and self-hosted EFU** —
   reached from other ISPs via the foreign hairpin, echoing Exp 4.1's Cybernet finding.
@@ -91,11 +94,13 @@ exit everywhere) — the expected control result; sector doesn't matter once you
   re-route at AS level** (the rest is ECMP branch-sampling and hop-visibility artifacts), with
   divergence concentrated at **hops 3–5 — the domestic pre-gate layer an IXP would replace**;
   detours breathe on/off (96% oscillation) rather than migrate.
-- **45% of PK pairs flip trombone state**; even the **gate flips** (PTCL↔TWA, same pair, 26×).
+- **43% of ≥50-round PK pairs flap** (48% persistently local, 9% persistently hairpinned) —
+  **83% of pairs that ever trombone are also served locally in the same week**; even the **gate
+  flips** (PTCL↔TWA, same pair, 23×).
 - Diurnal signal is mild (12.6% trough → 16.0% evening peak): tromboning is **structural, not
   congestion-driven**.
-- The *flip itself* is nearly free (within-pair median +0.7 ms); the cost lives in the **77
-  always-tromboned pairs (~100 ms vs ~25 ms local)**.
+- The *flip itself* is nearly free (within-pair median +0.7 ms); the cost lives in the **40
+  persistently-hairpinned pairs (~100 ms vs ~25 ms local)**.
 - Volatility is an ISP property: PTCL/Fasttel flip ~100%/92% of their PK pairs; Nayatel/TWA are
   the most stable — same ISP ranking as CDN locality.
 
@@ -130,7 +135,7 @@ conclusion stands — **the exchanges are bypassed at national scale, not just i
 
 1. **The tail, not the median, is the story**: international routing never exceeds 10× physics;
    a quarter of domestic paths do. PKIX's case is the tail.
-2. **Tromboning is real, dynamic, and duopoly-carried**: 14.3% steady-state, flipping hour to
+2. **Tromboning is real, dynamic, and duopoly-carried**: 15.1% steady-state, flipping hour to
    hour, exiting via Singapore on TWA/PTCL — with the gate itself non-deterministic.
 3. **Sector stakes are inverted from importance**: banking and a federal gov site are the worst
    routed; commodity commercial sites the best.
