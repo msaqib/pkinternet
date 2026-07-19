@@ -10,7 +10,9 @@ Of the 1,600 (probe, target) pairs, **only 304 (19%) kept a single stable route 
 The other **1,296 (81%) changed** — different carrier, exit, hop count, or trombone state across
 the 7 days. Over the week we see **≥ 5,466 distinct coarse route-signatures** (transit AS │ exit
 country │ trombone │ hop-count), a *lower bound* on true path diversity. Routing to Pakistani
-destinations is dynamic, not a fixed misconfiguration.
+destinations is dynamic, not a fixed misconfiguration. (These are the *coarse-signature* figures —
+the §Mechanics section decomposes them and the artifact-corrected number to quote is **49% of
+pairs genuinely re-routing at AS level**.)
 
 ## 1. What changes (share of the 1,600 pairs whose value varies over the week)
 

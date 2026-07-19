@@ -166,7 +166,7 @@ read the number.
 | what it is | one real machine in PK | one real machine overseas | same IP served from many PoPs |
 | location method | geo-IP, physics-verified | geo-IP, corroborated | **none exists** — per-ISP PoP instead |
 | theoretical min | straight fibre over distance | straight fibre over distance | **best RTT any PK probe achieves** |
-| this run's median | 2.9× | 2.5× | 8.4× |
+| full-week median | 2.87× | 2.46× | 8.86× |
 
 **Pakistan-class sites**
 - **Location:** hostname → the measured server IP (`measurements.json`) → **ip-api geo-IP** (city
@@ -177,9 +177,9 @@ read the number.
 - **Formula:** `d = Haversine(probe, site)`; `theoretical = 2·d / v_fibre (≈ d/102 ms)`;
   `ratio = measured_min ÷ theoretical`. Only for pairs **≥ 30 km** apart — same-city pairs are
   reported in plain ms (theoretical ≈ 0 makes the division degenerate).
-- **How to read:** 1× = a dead-straight private fibre. Median **2.9×** = the typical domestic
-  connection takes ~3× the physics time (normal Internet overhead). The **10–30× tail** = routes
-  taking real detours (hairpins/poor peering) — the finding.
+- **How to read:** 1× = a dead-straight private fibre. Median **2.87×** (full week) = the typical
+  domestic connection takes ~3× the physics time (normal Internet overhead). The **10–30× tail**
+  (24% of pairs above 10×) = routes taking real detours (hairpins/poor peering) — the finding.
 
 **Abroad-class sites**
 - **Location:** same method — measured IP → ip-api. A slow ping can never *disprove* a far location
@@ -188,8 +188,8 @@ read the number.
   being *consistent* with the distance. Includes the 3 re-classed ex-"PK" sites at their geo-IP
   locations.
 - **Formula:** identical to Pakistan (distance-based straight-fibre floor, ≥ 30 km trivially true).
-- **How to read:** this class is the **control group**. Median **2.5×**, everything within ~7× —
-  what routing looks like when it works. Any class doing worse than this is underperforming
+- **How to read:** this class is the **control group**. Median **2.46×** (full week), everything
+  within ~7× — what routing looks like when it works. Any class doing worse than this is underperforming
   ordinary international transit.
 
 **CDN-class sites**
@@ -385,9 +385,10 @@ ratio_vs_best(probe, site) = min_RTT(probe → site) ÷ min over all probes of m
 - **1.0 = at the frontier** (this ISP defines or matches the best path); large = what the ISP loses
   by not peering. It is dimensionless, so **CDN joins the PK/Abroad curves on one CDF**
   (`figures/ratio_cdf_all3.png`), with the caption noting the two floor definitions.
-- This run: pooled CDN median **8.4×**; per-ISP medians = a **peering-inefficiency score**:
-  Nayatel 1.0 → Cybernet 2.0 → mid-pack ~8 → Fasttel 50, PTCL 52. The CDF's shape is bimodal
-  (~35 % at ≈1×, a long plateau, ~23 % beyond 40×): peering is effectively binary.
+- Full week: pooled CDN median **8.86×**; per-ISP medians = a **peering-inefficiency score**:
+  Nayatel 1.1 → Cybernet 2.0 → mid-pack 7.7–9.8 (Nova/Zcom/Orbit/TWA/TES) → Fasttel 10.8,
+  PTCL 12.6. The CDF's shape is bimodal (~25 % at ≲1.5×, a long plateau, ~23 % beyond 40×):
+  peering is effectively binary.
 - Caveats: the benchmark includes the best probe's own last-mile (conservative); for sites that are
   far for *everyone* (US-WAF/Sucuri), the best is itself ~100 ms, so all ISPs score ≈1 — correct
   under this definition (no peering could improve those; the heatmap's red columns catch them).

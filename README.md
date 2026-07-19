@@ -115,8 +115,8 @@ findings/              Analysis writeups and the charts notebook
   surge, Cogent collapse): the duopoly absorbed the fault upstream.
 - [07 — Longitudinal Panel (full week)](findings/07_longitudinal_panel.md):
   the flagship's complete results — international paths never exceed 10× the physics floor while
-  **24% of domestic paths do**; **14.3% steady-state tromboning** (81% of routes change within the
-  week); **banking is the worst-routed sector** (79% trombone, 103 ms domestic); CDN locality is
+  **24% of domestic paths do**; **14.3% steady-state tromboning** (49% of pairs genuinely
+  re-route at AS level within the week); **banking is the worst-routed sector** (79% trombone, 103 ms domestic); CDN locality is
   an ISP lottery (Nayatel 85% → PTCL 0%); TWA's backbone (125/143 routers) invisible to BGP.
 - [09 — AS Hegemony](findings/09_as_hegemony.md):
   the duopoly from global BGP: **90% of BGP-visible Pakistani networks depend on PTCL or
