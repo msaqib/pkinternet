@@ -44,13 +44,18 @@ OUT_HTML     = 'experiments/07_longitudinal_panel/analysis/figures/routing_map.h
 V_VAC = 299.792  # km/ms, speed of light in vacuum
 EARTH_R = 6371.0  # km, mean Earth radius
 
-# Prefixes RIPEstat whois independently confirms are NOT where ip-api.com
-# claims (checked 2026-07 for this map) — override rather than drop, since we
-# have real ground truth for these specific, already-documented blocks.
+# Prefixes RIPEstat whois / PTR hostname independently confirms are NOT where
+# ip-api.com claims (checked 2026-07 for this map) — override rather than drop,
+# since we have real ground truth for these specific, already-documented blocks.
 KNOWN_LOCATIONS = {
     '27.111.228.': (1.290, 103.850, 'Equinix Singapore'),
     '27.111.230.': (1.290, 103.850, 'Equinix Singapore'),
     '27.111.231.': (1.290, 103.850, 'Equinix Singapore'),
+    # ip-api claims Sydney/New York; GSL Networks' own PTR hostnames say
+    # otherwise — 206.148.27.1/.2 -> "mct-eqxmc1" (Equinix Muscat).
+    '206.148.27.': (23.610, 58.590, 'Equinix Muscat (GSL, via PTR)'),
+    # 206.148.22.141 -> "sg-eqxsg3-cr7" (Equinix Singapore), same GSL entity.
+    '206.148.22.': (1.290, 103.850, 'Equinix Singapore (GSL, via PTR)'),
 }
 
 
