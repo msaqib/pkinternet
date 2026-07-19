@@ -66,6 +66,44 @@ preflight probe-status check).
 
 ---
 
+## The IP-ownership blind spot — why "no embedded cache found" isn't "no cache exists"
+
+The GGC detection method above works by checking who **owns** the IP address of each hop: if a hop
+right before the Google/Meta ASN belonged to a Pakistani ISP's own address space, that would be the
+traceroute signature of an embedded cache. We found zero such hops — that's the basis of the
+headline claim above.
+
+**But IP ownership and physical location are two separate things.** A cache box can be physically
+installed inside an ISP's building while still using an IP address registered to Google/Meta's own
+address space, not the ISP's — a common real-world CDN deployment pattern. From outside, that setup
+is *indistinguishable* from a genuine international hop: the ASN reads Google/Meta either way. So
+"zero Pakistani-owned hops in front of Google/Meta" proves **no cache numbered out of the ISP's own
+address space** — it does not prove **no physical cache in Pakistan at all**.
+
+**The RTT evidence doesn't resolve this ambiguity, but it doesn't rule the possibility out either —
+worth being precise about, since it's the strongest lead for an operator conversation:**
+
+| Target | Lowest RTT observed | Probe | Consistent with in-PK presence? |
+|---|---|---|---|
+| google.com | **14.9 ms** | TES (Karachi) | Yes — well under the 50 ms "stayed in PK" threshold (CLAUDE.md RTT table), but too high to prove same-building co-location (<5 ms) |
+| youtube.com | 19.3 ms | TES (Karachi) / Cybernet (Karachi) | Yes, same reasoning |
+| facebook.com | 17.2 ms | TES (Karachi) | Yes, same reasoning |
+| instagram.com | 17.0 ms | TES (Karachi) | Yes, same reasoning |
+| akamai.com | 78.5 ms | TES (Karachi) | **No** — squarely in "left Pakistan" territory by the same threshold, no ambiguity |
+
+Google's and Meta's Karachi RTTs (15–20 ms) are fast enough to be consistent with genuine
+in-country presence by this project's own RTT-interpretation table, but not fast enough to prove
+co-location inside the specific probing ISP's building. That gap — a regional-but-just-outside-PK
+vantage vs. a physically-in-PK-but-vendor-numbered box — is exactly what traceroute + geo-IP cannot
+resolve on its own. Akamai shows no such ambiguity: its RTT floor (78 ms+) is unambiguously abroad.
+
+**What this means in practice:** the right question for a network operator is not "do you think
+Google/Meta cache in Pakistan" — it's **"is there a Google/Meta caching appliance physically
+installed in your network, regardless of what IP range it uses?"** That's the one thing only they
+can answer; see Next Steps below.
+
+---
+
 ## Per-ISP handoff (corrected from a first-pass read of the routes file)
 
 | ISP (probe) | Handoff to CDN | Evidence |
@@ -160,16 +198,23 @@ cross-checks:
 
 ## Next steps
 
-1. **Confirm Google's real regional PoP.** Traceroute + geo-IP can't resolve
-   it; needs an HTTP-capable vantage (e.g. a cloud VM in-region, or a public
+1. **Ask a network operator directly whether Google/Meta have a physical
+   caching appliance installed in their network** — regardless of what IP
+   range it uses. This is the one question that resolves the IP-ownership
+   blind spot above; traceroute data cannot answer it on its own. TES and
+   Cybernet (Karachi) are the vantages that showed the fastest, most
+   plausible RTTs (15–20 ms) and are the natural ISPs to ask first.
+2. **If no operator confirms an in-country cache, confirm Google's real
+   regional PoP location another way.** Traceroute + geo-IP can't resolve it;
+   needs an HTTP-capable vantage (e.g. a cloud VM in-region, or a public
    looking-glass) to get a `/generate_204`-style or equivalent server
    signature, the same way `/cdn-cgi/trace` was used for Cloudflare.
-2. **Re-run once StormFiber/Optix/Telenor probes are available** — the
+3. **Re-run once StormFiber/Optix/Telenor probes are available** — the
    current 10-ISP panel found zero embedded caches, but those are exactly the
    ISPs most likely to host one per Exp 1.2's caveat.
-3. **Chase the Nayatel→Akamai dead-end** (stops at a Japan/WIDE-registered hop
+4. **Chase the Nayatel→Akamai dead-end** (stops at a Japan/WIDE-registered hop
    without reaching Akamai) with a manual `mtr`/traceroute from that vantage.
-4. **Re-run Orbit (Faisalabad)** once probe 64535 reconnects.
+5. **Re-run Orbit (Faisalabad)** once probe 64535 reconnects.
 
 ---
 
