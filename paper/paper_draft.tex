@@ -203,7 +203,7 @@ WHOIS data is stale or unavailable.
 \subsection{Site Selection}
 \label{sec:sites}
 
-We assembled a candidate pool of 1,814 Pakistani websites from three sources. First, we filtered the Tranco top-1 million domain ranking list~\cite{tranco} for domains ending in \texttt{.pk}, yielding 1,522 candidates. Tranco aggregates traffic data from Alexa, Majestic, Umbrella, and Quantcast and is designed for reproducible network measurement research. Second, we cross-referenced the Pakistan Telecommunication Authority's published list of licensed ISP operators to identify ISP corporate websites, retaining 86 valid domains after DNS resolution and manual verification. Third, we added healthcare sector sites and six PK-hosted sites identified during ASN lookup that were absent from the Tranco slice.
+We assembled a candidate pool of 1,781 unique Pakistani websites from three sources. First, we filtered the Tranco top-1 million domain ranking list~\cite{tranco} for domains ending in \texttt{.pk}; Tranco aggregates traffic data from Alexa, Majestic, Umbrella, and Quantcast and is designed for reproducible network measurement research, and 1,708 of the pooled domains carry a Tranco rank. Second, we cross-referenced the Pakistan Telecommunication Authority's published list of licensed ISP operators to identify ISP corporate websites, retaining the domains that survived DNS resolution and manual verification. Third, we added healthcare sector sites and six PK-hosted sites identified during ASN lookup that were absent from the Tranco slice.
 
 Each site was classified into one of three hosting categories. A site is \textit{Pakistani} if its IP resolves to a Pakistani ASN (country code PK) via Team Cymru bulk WHOIS lookup. It is \textit{CDN-hosted} if it resolves to a major content delivery network such as Cloudflare, Akamai, or Alibaba regardless of geographic location. It is \textit{Abroad} if it resolves to a foreign ASN that is not a CDN. Classification was performed programmatically using \texttt{socket.gethostbyname()} for DNS resolution followed by Team Cymru DNS-based ASN lookup.
 
@@ -267,7 +267,7 @@ round trip to a site's claimed location, so any measured RTT below that bound pr
 location wrong. Applied to the panel, this test invalidated the registered
 locations of 34 of the 40 CDN-class sites (anycast addresses whose registration city is, e.g.,
 Toronto, yet which answer Pakistani probes in under 3\,ms) and corrected six unicast sites: three
-sites classed as Pakistani-hosted were in fact far from every probe (nearest ping over 200\,ms,
+sites classed as Pakistani-hosted were in fact far from every probe (nearest ping 77--206\,ms,
 consistent with their US and Singapore geo-IP) and are reclassified as Abroad, and three sites
 whose claimed city was physically impossible were relocated by latency multilateration, using each
 probe's RTT as a distance bound. The corrected hosting split is therefore 37 Pakistani, 40 CDN,
@@ -282,7 +282,7 @@ This is consistent with known limits of geolocation databases more broadly: Huff
 
 
 \subsection{Vantage Points}
-We measure from the RIPE Atlas probes connected within Pakistani networks at the time of the run, enumerated live from the platform API rather than from a fixed list, so that the vantage set reflects whichever probes are actually online. We verified each probe's metadata against the platform API at analysis time: one probe carried a wrong autonomous-system label and was corrected as a Z-Com vantage, and one probe (Cybernet Haripur, AS9541) declares a placeholder coordinate and is excluded from all distance-based analysis while its round-trip times remain valid and are retained for trombone classification. Transworld (Lahore, AS38193) is fully ICMP-filtered, no intermediate hops respond, so we retain its ping RTT for latency analysis but exclude it from all hop-count and path-based analyses. Nayatel (Islamabad) shows a median hop count of 255 across most traceroute rounds, indicating destinations frequently did not reply to its traces; its ping RTT remains valid and is used for RTT analysis. Several ISPs contribute more than one probe across multiple cities: Cybernet, Nayatel, PTCL, and TES each have two or more vantage points, enabling within-ISP comparisons across locations.
+We measure from the RIPE Atlas probes connected within Pakistani networks at the time of the run, enumerated live from the platform API rather than from a fixed list, so that the vantage set reflects whichever probes are actually online. We verified each probe's metadata against the platform API at analysis time rather than trusting run-time labels (one mislabelled probe surfaced this way and is handled in \S3.4), and one probe (Cybernet Haripur, AS9541) declares a placeholder coordinate and is excluded from all distance-based analysis while its round-trip times remain valid and are retained for trombone classification. Transworld (Lahore, AS38193) is fully ICMP-filtered, no intermediate hops respond, so we retain its ping RTT for latency analysis but exclude it from all hop-count and path-based analyses. Nayatel (Islamabad) shows a median hop count of 255 across most traceroute rounds, indicating destinations frequently did not reply to its traces; its ping RTT remains valid and is used for RTT analysis. Several ISPs contribute more than one probe across multiple cities: Cybernet, Nayatel, PTCL, and TES each have two or more vantage points, enabling within-ISP comparisons across locations.
 
 \subsection{Measurement Design}
 Against each of the 100 sites we run two complementary measurements. A TCP traceroute to port~80
@@ -322,7 +322,7 @@ $\times$2), Nova (Lahore), Orbit (Faisalabad), PTCL (Karachi, Mianwali), TES/Tra
 (Rawalpindi, Karachi), Transworld (Lahore), Fasttel (Islamabad), and Zcom (Lahore), covering both
 licensed international gateway operators and seven downstream ISPs.
 
-Two probes are excluded from analysis. Probe 1015491 carries an erroneous ASN label (AS13335, Cloudflare) but is in fact a Z-Com (AS152605) vantage co-located in Lahore with probe 7613; it is excluded as a mislabelled duplicate. Probe 7764 (PTCL Lahore) recorded 90\% packet loss throughout the run and is excluded from all RTT and trombone analyses; because a blinded trace defaults to a non-trombone verdict, retaining this probe would also systematically understate its ISP's hairpin rate. Probe 1016393 (PTCL Mianwali) disconnected on July 17 but contributed six days of valid data and is retained with a note.
+Two probes are excluded from analysis. Probe 1015491 carries an erroneous ASN label (AS13335, Cloudflare) but is in fact a Z-Com (AS152605) vantage co-located in Lahore with probe 7613; it is excluded as a mislabelled duplicate. Probe 7764 (PTCL Lahore) recorded 90\% packet loss throughout the run and is excluded from all RTT and trombone analyses; because a blinded trace defaults to a non-trombone verdict, retaining this probe would also systematically understate its ISP's hairpin rate. Probe 1016393 (PTCL Mianwali) was connected intermittently---at full rate for the first two days (11--12 July), then sporadically through the end of the window---and is retained, flagged wherever it enters per-vantage results.
 
 The raw panel contains one row per measurement round per probe per target, with ping and traceroute rows stored together and distinguished by a \texttt{kind} column. For RTT analysis we use ping rows and drop any row where \texttt{rtt\_min} is NaN, corresponding to rounds with 100\% packet loss. For hop count analysis we exclude traceroute rows where \texttt{hop\_count} = 255, indicating the destination never replied. Rows where the transit ASN is unresolvable are retained for trombone classification since the verdict is derived from RTT physics independently of ASN resolution. For the per-probe-site trombone fraction analysis we restrict to pairs with at least 50 rounds to ensure a statistically reliable estimate. We use the minimum ping RTT across all rounds as the primary latency measure, since queuing and processing overhead only add delay and the minimum is the cleanest approximation of true path latency~\cite{dibartolomeo2015}.
 
@@ -470,9 +470,12 @@ source ISP it spans an order of magnitude, from 3.2\% (Transworld, itself a gate
 (Nayatel, the best-peered network) through 10--13\% (TES, Nova, Zcom, Orbit) and 22--25\%
 (Cybernet, Fasttel) to \textbf{30.6\% for PTCL}, the largest operator
 (Figure~\ref{fig:panel-source}). The vantage effect persists \emph{within} ISPs: the two PTCL
-vantages trombone at 46\% (Mianwali) versus 27\% (Karachi), and the two Cybernet vantages at 34\%
-(Haripur) versus 11\% (Karachi)---customers of the same operator receive materially different
-routing depending on the city they connect from. Attribution follows the duopoly structure: among traces where the
+vantages trombone at 46\% (Mianwali; an intermittent probe, so this rate rests on a thinner
+window---\S3.4) versus 27\% (Karachi), and the two Cybernet vantages at 34\% (Haripur) versus
+11\% (Karachi)---customers of the same operator receive materially different routing depending on
+the city they connect from.
+
+Attribution follows the duopoly structure: among traces where the
 hand-off is resolvable, Transworld carries 2,773 hairpins and PTCL 1,721, with Cybernet's own
 upstream fabric (2,066) and TES (739) behind them; 2,716 hairpinned traces traverse only
 unresponsive or unannounced boundary hops and cannot be attributed---though no third international
@@ -498,8 +501,8 @@ Pakistani-hosted site is 24.5\,ms against 104.3\,ms for a hairpinned one
 (Figure~\ref{fig:panel-cdf}). That gap, however, conflates two populations---structurally
 hairpinned far sites versus structurally local near ones---so we also report the \emph{causal}
 number: for the probe--site pairs that flip between verdicts within the week and have RTT in both
-states, the within-pair penalty of taking the hairpin is a median of just $+0.7$\,ms but a mean of
-$+14.5$\,ms, a heavily skewed distribution. Most flips are near-free equal-cost detours; the cost
+states, the within-pair penalty of taking the hairpin is a median of just $+0.5$\,ms but a mean of
+$+15.3$\,ms across the 121 such pairs, a heavily skewed distribution. Most flips are near-free equal-cost detours; the cost
 of tromboning is concentrated in the persistently hairpinned pairs sitting at ${\sim}100$\,ms
 against a ${\sim}25$\,ms local norm. The temporal decomposition confirms the penalty is structural
 rather than congestive: the hourly tromboning rate varies only from 13.6\% (06:00 PKT) to 16.5\%
@@ -518,7 +521,7 @@ route is efficient and the inefficiency lives in the access overhead and the tai
 Of the 444 probe--site pairs on Pakistani-hosted sites with at least 50 rounds, 211 (48\%) are
 persistently local, 40 (9\%) are persistently hairpinned, and 193 (43\%) \emph{flap}: the same
 probe reaching the same site is served domestically on some rounds and via a foreign detour on
-others, within the same week. Stated as RQ3 demands: \textbf{83\% of the pairs that ever trombone
+others, within the same week. In the terms RQ3 poses: \textbf{83\% of the pairs that ever trombone
 are also served by a domestic path during the week}---for the overwhelming majority of hairpinning
 traffic, the international detour is a routing choice, not a necessity. The site-level view is
 starker still: every one of the 37 Pakistani-hosted sites was hairpinned on at least one round

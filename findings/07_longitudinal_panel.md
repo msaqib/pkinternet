@@ -99,8 +99,9 @@ exit everywhere) — the expected control result; sector doesn't matter once you
   flips** (PTCL↔TWA, same pair, 23×).
 - Diurnal signal is mild (12.6% trough → 16.0% evening peak): tromboning is **structural, not
   congestion-driven**.
-- The *flip itself* is nearly free (within-pair median +0.7 ms); the cost lives in the **40
-  persistently-hairpinned pairs (~100 ms vs ~25 ms local)**.
+- The *flip itself* is nearly free (within-pair median +0.5 ms, mean +15.3, n=121 on the
+  analysis roster); the cost lives in the **40 persistently-hairpinned pairs (~100 ms vs ~25 ms
+  local)**.
 - Volatility is an ISP property: PTCL/Fasttel flip ~100%/92% of their PK pairs; Nayatel/TWA are
   the most stable — same ISP ranking as CDN locality.
 
