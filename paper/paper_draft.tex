@@ -36,13 +36,13 @@ lets us report, on equal terms and per ISP, how much domestic traffic trombones 
 which transit operators, what latency this costs and whether the cost is structural or diurnal,
 and---from routing verdicts that flip between local and hairpinned across the week---whether a
 domestic path exists for the traffic that nonetheless leaves the country. Over 204,384 analysed
-traceroutes we find that 15.1\% of traces to Pakistani-hosted sites leave the country and return,
-at rates from 3\% to 31\% depending on the source ISP; that international paths never exceed
-$10\times$ the speed-of-light floor while 24\% of domestic paths do; that the penalty is
-structural, varying under 3 percentage points across the day; that the same anycast content is a
-median $12.7\times$ slower on the worst-peered major ISP than on the best; and that 83\% of the
-probe--site pairs that ever hairpin are also served domestically on other rounds of the same
-week---direct evidence that the local path exists and is not taken. The finding of the study is
+traceroutes we find that international paths never exceed $10\times$ the speed-of-light floor
+while 24\% of domestic paths do; that 15.1\% of traces to Pakistani-hosted sites leave the
+country and return (3--31\% by source ISP, and 86\% for state banking sites); that the same
+anycast content is a median $12.7\times$ slower on the worst-peered major ISP than on the best;
+that the penalty is structural, varying under 3 percentage points across the day; and that 83\%
+of the probe--site pairs that ever hairpin are also served domestically on other rounds of the
+same week---direct evidence that the local path exists and is not taken. The finding of the study is
 that the local path exists but is not taken, and that PKIX is the instrument that would take it.
 \end{abstract}
 
@@ -83,7 +83,7 @@ Pakistan has 116 million internet users~\cite{datareportal2025pk}, yet a student
 
 The problem has a specific structure. Only two operators hold international gateway licences in Pakistan: PTCL and Transworld~\cite{pacra2023twa}. Every other ISP purchases upstream connectivity from one of them. When two Pakistani ISPs want to exchange traffic, they do so by peering, which means establishing a direct connection to hand off packets to each other rather than sending them through a third party. An internet exchange point provides a shared physical location where many networks can peer at once, avoiding the need for each pair to arrange a separate connection. Without peering at such an exchange, two ISPs in the same city will still route traffic through one of the two international operators, and those operators frequently send it abroad before it comes back. This is called traffic tromboning, and its consequences go beyond wasted milliseconds. When submarine cables fail, as they did during the SMW5 fault in July 2026 and six times in a single year in 2022~\cite{opalinski2024quest}, internationally-routed traffic degrades while locally-exchanged traffic is untouched. The country's dependence on foreign transit creates a resilience gap that a functioning exchange would close.
 
-PKIX's own published figures show inter-ISP latency dropping from 100--144\,ms internationally to 1--31\,ms through the exchange~\cite{pta2026}. And yet the PKIX route server (AS140307) does not appear in a single BGP path we observe to Pakistani networks. The exchange is built, connected, and capable. It is simply not being used for most of the traffic that could benefit from it.
+PKIX's own published figures show inter-ISP latency dropping from 100--144\,ms internationally to 1--31\,ms through the exchange~\cite{pta2026}. And yet, across a week of hop-level measurement from inside the country, not one of 222,944 traceroutes to Pakistani destinations crosses either of its peering fabrics. The exchange is built, connected, and capable. It is simply not being used for most of the traffic that could benefit from it.
 
 This paper measures the consequences of that underuse using active measurements from RIPE Atlas probes distributed across Pakistani ISPs. We run traceroutes and pings over a week-long window to 100 Pakistani websites spanning government, education, banking, news, and other sectors, and we classify each path using an RTT-physics detector that does not rely on geo-IP. Our three research questions are:
 
@@ -177,8 +177,9 @@ This asymmetry is consistent with the broader soft-budget-constraint literature:
 incumbents facing limited competitive discipline at the specific market layer that
 matters have correspondingly limited incentive to pass through efficiency gains,
 regardless of the physical capacity or infrastructure already available to them.
-Opalinski et al.~\cite{opalinski2024quest} extend this account to the physical
-layer and show it is not confined to commercial incentives alone: Pakistan's
+Opalinski et al., in AINTEC~2024 work on this same country's physical
+layer~\cite{opalinski2024quest}, extend this account and show it is not confined to commercial
+incentives alone: Pakistan's
 international connectivity is concentrated almost entirely at a small number of
 Karachi landing stations operated by the same two gateway licensees, while
 cross-border terrestrial alternatives, despite Pakistan sharing borders with India,
@@ -372,7 +373,11 @@ the hops that matter. Two of the addresses that appear most often in Pakistani p
 registered to Canada and a Cogent block registered to the United States---in fact sit physically in
 Pakistan and answer in about two milliseconds, so a country-of-registration test would misread them
 as foreign; conversely, a genuinely foreign exit, such as Transworld's egress at an exchange in
-Singapore, is frequently unannounced in BGP and carries no reliable country at all. We therefore
+Singapore, is frequently unannounced in BGP and carries no reliable country at all. This is not an
+edge case: of the 143 distinct Transworld routers our traces traverse, 125 answer from address
+space unannounced in BGP and resolvable only through registry records---the operator's domestic
+backbone is effectively invisible to control-plane measurement, which is itself a reason this
+study is conducted in the data plane. We therefore
 classify by RTT physics. A trace is judged to have left Pakistan if any responding hop that is not
 in the country answers at 40\,ms or more, or if the RTT jumps by at least 60\,ms between consecutive
 hops, or if any hop answers at 70\,ms or more; a trace whose maximum RTT stays below 45\,ms is
@@ -514,8 +519,8 @@ Pakistani-hosted site is 24.5\,ms against 104.3\,ms for a hairpinned one
 hairpinned far sites versus structurally local near ones---so we also report the \emph{causal}
 number: for the probe--site pairs that flip between verdicts within the week and have RTT in both
 states, the within-pair penalty of taking the hairpin is a median of just $+0.5$\,ms but a mean of
-$+15.3$\,ms across the 121 such pairs, a heavily skewed distribution. We state the implication
-plainly rather than leave it to the reader: for the flapping majority the detour itself is nearly
+$+15.3$\,ms across the 121 such pairs, a heavily skewed distribution. Stated directly, against
+the paper's own emphasis: for the flapping majority the detour itself is nearly
 latency-free, so the \emph{latency} case against tromboning rests on the structural minority---the
 persistently hairpinned pairs sitting at ${\sim}100$\,ms against a ${\sim}25$\,ms local norm---and
 on the CDN gap of \S\ref{sec:prelim-cdn}, where the measured cost is large. What the near-free
@@ -561,11 +566,15 @@ measured, stable across the day---under 3 percentage points of diurnal variation
 capacity problem that more bandwidth would solve but a routing and hosting problem that local
 exchange would; and since 83\% of the probe--site pairs that ever hairpin are served domestically
 on other rounds of the same week, the domestic path plainly exists and is simply not being chosen.
-PKIX is the instrument that would choose it. The exchange is already present in three cities with
+The exchange is already present in three cities with
 dozens of connected members, and its own figures put inter-ISP latency through the exchange one to
-two orders of magnitude below the international alternative~\cite{pta2026}; our own data-plane
-scan finds not a single one of 222,944 traces crossing either of the country's exchange fabrics in
-a week. The gap our measurements expose is therefore not between the status quo and a network that
+two orders of magnitude below the international alternative~\cite{pta2026}. Our own data supply
+the same counterfactual without leaning on the exchange's self-reported figures: for the 193
+flapping pairs, the local-verdict rounds of the \emph{same} probe--site pair measure the domestic
+alternative directly (${\sim}25$\,ms against ${\sim}100$\,ms for the structural hairpins), and
+for persistently hairpinned sites the best RTT observed from any other Pakistani ISP to the same
+site bounds what peering could achieve---the frontier construction of \S\ref{sec:ratio}, applied
+to domestic content. The gap our measurements expose is therefore not between the status quo and a network that
 must be built, but between the status quo and one that must be \emph{used}. In the language of a
 three-set framing---networks absent from the exchange, networks present but not exchanging routes,
 and networks actively peering---the tromboning we measure is a picture of the first two behaviours
@@ -579,8 +588,11 @@ capacity.
 The same structure explains the resilience concern that motivates the study. Because
 internationally-routed traffic depends on a small number of submarine cables reached through the two
 licensed gateways, a cable fault degrades precisely the traffic that need not have gone abroad,
-while traffic hosted and exchanged domestically is untouched; the July~2026 SMW5 fault, during which
-international paths grew erratic while local ones held, is a concrete instance. A functioning
+while traffic hosted and exchanged domestically is untouched. The July~2026 SMW5 fault is a
+concrete, measured instance: in companion measurements we ran through the fault window from the
+same vantages, international paths showed a 31\% rise in jitter and elevated tail latency (one
+site degrading to 646\,ms before recovering) while paths to domestically-hosted content showed
+no comparable degradation. A functioning
 exchange narrows this exposure directly, by keeping domestic traffic domestic.
 
 Three limitations bound these claims. First, our vantages are fixed-broadband RIPE Atlas probes,
@@ -607,8 +619,7 @@ quarter of domestic paths do; that the penalty is structural, not diurnal; that 
 content varies by more than an order of magnitude between well-peered and poorly-peered ISPs; and
 that 83\% of the probe--site pairs that ever hairpin are also served domestically within the same
 week, while not one of the week's 222,944 traces crossed either of the country's exchange fabrics.
-The throughline is that the remedy is already in place: Pakistan does not need to build new
-infrastructure to keep its traffic local; it needs to use the exchange it has. Beyond this run,
+The remedy is already in place; what our measurements document is the cost of not using it. Beyond this run,
 the same framework extends to a longer horizon, to repeated measurement that ranges the tromboning
 rate over time, and---by holding a continuous normal-day baseline---to capturing the next cable
 fault as a clean before-during-after rather than, as before, against an already-degraded state.
