@@ -113,6 +113,16 @@ None of these gaps touches the headline results: the 0%-vs-24% tail asymmetry (p
 responders), the 14.3% trombone rate (trace-based, robust to 255s), the sector ranking (both), or
 the per-ISP CDN lottery (ping + trace agree).
 
+## 4b. The IXP null result (panel-scale cross-check of Exp 08)
+
+Scanning all 906 observed routers (and thereby all 222,944 traces) against the exchange
+fingerprints from Exp 08 — PKIX Lahore `58.181.127.0/24`, PIE Karachi `100.128.0.0/24`:
+**zero traces crossed either exchange's peering fabric, the entire week.** Meanwhile 11,756
+traces to PK-hosted sites went out via Singapore/US and back — every one a pair that an exchange
+exists to serve. Caveat (per §4): ~45% of traces have blind middle hops, so fabric hops could in
+principle hide there; but combined with Exp 08's direct member-path evidence, the convergent
+conclusion stands — **the exchanges are bypassed at national scale, not just in spot checks.**
+
 ## 5. What Exp 07 (A+B together) establishes
 
 1. **The tail, not the median, is the story**: international routing never exceeds 10× physics;
