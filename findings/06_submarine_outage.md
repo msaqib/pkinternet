@@ -51,7 +51,11 @@ rounds) captured the **degraded** state. Measuring each RTT against that baselin
 therefore looked flat (spike ≈ 1.0×) and *hid* the recovery. Comparing the **first round
 vs the last round** for the same (probe, target) is the correct lens and reveals the
 trend. *(Methodological lesson: with no pre-event baseline, use first-vs-last, not
-ratio-vs-first.)*
+ratio-vs-first.)* **Since quantified (Exp 6.1.1, W5):** an independent RTT source (RIPE
+Atlas's own worldwide anchor mesh, not run by us) puts the true onset at **1 Jul 17:00
+PKT** — meaning the fault had already been running for roughly **32 hours** before this
+experiment's monitoring window began (01:26 PKT, 3 Jul). "Already active" was the right
+call; it is no longer a guess.
 
 ### 3. Clear recovery over the 12 h
 Same site, same probe, first → last round — the worst-hit paths (all via **PTCL**)
@@ -135,7 +139,9 @@ measured case for local hosting + active PKIX peering as *resilience*, not just 
 
 - **Single 12 h window, and it started after the outage was already active** — there is
   **no pre-event baseline**, so absolute recovery magnitude vs a "healthy" day is inferred,
-  not measured. A longer/earlier capture would strengthen this.
+  not measured. A longer/earlier capture would strengthen this. **Partially closed** by the
+  independent-vantage addendum below: a separate dataset now supplies exactly that missing
+  baseline, from before the fault started.
 - **Ratio (`spike_x`) over-weights low-baseline local targets** — a PK site at 4 ms
   baseline hitting 28 ms reads as "28×" but is only +24 ms. For real degradation, rank by
   **absolute ms** (as the first-vs-last table does), not by ratio.
@@ -166,3 +172,46 @@ upstream mix visibly shifted around the fault (PTCL: Level3/Hurricane down, a ne
 dependency appearing after; TWA: transient spikes). **The adaptation happened above the duopoly,
 not below it** - users rode out the fault on unchanged routes while the operators absorbed it
 upstream. Details: `experiments/06.1_submarine_hegemony/notes.md`.
+
+## Independent-vantage addendum (Exp 6.1.1, added 2026-07-20)
+
+This experiment's biggest structural weakness was always **no pre-event baseline** - the 12 h
+window started mid-outage, so "how much worse" could only be inferred from within-window recovery,
+not measured against a known-healthy state. Exp 6.1.1's W5 check (built for an unrelated purpose -
+independently confirming when the fault started) happened to supply exactly that missing baseline,
+from a source we don't operate: RIPE Atlas's own worldwide anchor mesh (~1,000 external vantage
+points that continuously ping Pakistan's two RIPE Atlas anchors, in Lahore, as part of the
+platform's own infrastructure). Pulled 28 Jun - 4 Jul - three clean days before the fault, the
+fault day, and two days after:
+
+| Date | Z-Com anchor median RTT | Z-Com anchor loss |
+|---|--:|--:|
+| 28 Jun - 1 Jul (baseline) | 176.5 +/- 1.9 ms | ~1.5% |
+| **2 Jul (fault)** | **211.2 ms (peak 323.9)** | **7.3%** |
+| 3-4 Jul (recovered) | ~174 ms | ~1.5% |
+
+Three things this closes or sharpens for Exp 06:
+
+1. **The missing baseline, closed.** ~176 ms / ~1.5% loss is now a measured, independently-sourced
+   "healthy" reference - not inferred from within a window that started already-degraded. Caveat
+   #1 above is downgraded from open to partially closed.
+2. **"Already active" is now a number.** The anchor data's onset (1 Jul, 17:00 PKT) means the fault
+   had been running for **~32 hours** before this experiment's window even opened - quantifying
+   Finding 2's qualitative observation exactly.
+3. **Finding 5's "not a repaired cable" inference is independently corroborated.** Finding 5 used
+   *this* experiment's own hop-path data to argue the recovery was congestion easing on the same
+   detour, not a physical splice. The anchor mesh - a completely different measurement system -
+   shows the same signature (RTT/loss both fully back to baseline within ~36 h, far faster than a
+   real subsea repair) from independent infrastructure, using a different method (global RTT
+   distribution, not local hop tracing). Two independent methods agreeing narrows the "not proven"
+   in Finding 5 to a much smaller gap.
+
+**What it does not close:** this is still a *different anchor* (Z-Com, AS152605) than the
+PTCL-centric paths this experiment's own worst-hit targets rode (shophive/telemart/balochistan,
+all via PTCL) - the PTCL anchor in the same pull showed only a marginal effect, consistent with
+PTCL's more diffuse, peering-based international reach (see Exp 6.1's notes) rather than
+contradicting this experiment's PTCL-specific findings. And the anchor pull itself only runs to
+5 Jul, so it doesn't extend recovery-tracking past that point (Exp 07's later, fully clean week of
+11-18 Jul is separate, out-of-band evidence that things stayed normal, not a continuation of this
+signal). Full detail, including the operational-recovery-vs-physical-repair distinction stated
+carefully: `experiments/06.1.1_smw5_robustness/notes.md` (W5 and its addendum).

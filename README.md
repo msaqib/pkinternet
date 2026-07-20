@@ -114,6 +114,9 @@ findings/              Analysis writeups and the charts notebook
   a latency degradation (not a blackout) that eased over the window (shophive via PTCL
   646→278 ms); quantified as **+31% jitter / +2% mean RTT / flat path length** on
   international paths, with **local/PK-hosted traffic unaffected** — the resilience case for PKIX.
+  Independently confirmed (Exp 6.1.1): RIPE Atlas's own external anchor mesh supplies the missing
+  pre-fault baseline, pins the true onset to **32 h before this experiment's window even opened**,
+  and corroborates the "congestion easing, not cable repair" recovery read from a second method.
 - [6.1 — SMW5 in the Control Plane](findings/06.1_submarine_hegemony.md):
   the same fault in global BGP — downstream dependencies **frozen** (one 2-day exception),
   while the operators re-carriered **~21%/13.5%** of their world paths for ~48 h (Hurricane
