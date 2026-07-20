@@ -254,6 +254,58 @@ our own IHR reading — RIPE's global anchor mesh, run by ~1,000 vantage points 
 shows the same 1 Jul onset. IODA's null result is retained as a documented, principled non-finding
 (wrong instrument for a degradation) rather than evidence against the timeline.
 
+### W5 addendum — recovery timeline: what "recovered" does and doesn't mean
+
+**Question asked (2026-07-20, follow-up to W5):** the anchor data proves *onset*. Does the same
+data show the full arc — before, during, and a genuine after — and does "recovered" mean the cable
+was fixed, or something narrower?
+
+**What we already had, no new fetch needed.** W5's anchor pull (`data/ripe_anchor_rtt_agg_zcom_as152605.json`,
+`data/ripe_anchor_rtt_agg_ptcl_as17557.json`) already spans 28 Jun–4 Jul — three clean days before,
+the fault day, and three days after — so the full before/during/after arc was sitting in data we'd
+already collected, just not yet read that way. Re-read as a day-by-day table:
+
+| Date | Z-Com median RTT | Z-Com loss | PTCL median RTT |
+|---|--:|--:|--:|
+| 28 Jun | 176.4 ms | 1.6% | 174.2 ms |
+| 29 Jun | 176.2 ms | 1.5% | 176.3 ms |
+| 30 Jun | 176.8 ms | 1.6% | 176.6 ms |
+| 1 Jul | 177.0 ms | 1.5% | 177.6 ms |
+| **2 Jul** | **211.2 ms (peak 323.9)** | **7.3%** | 180.2 ms |
+| **3 Jul** | **173.4 ms** | 1.5% | 180.5 ms |
+| 4 Jul | 175.5 ms | 1.4% | 179.4 ms |
+
+**What this proves:** for the Z-Com anchor, RTT and loss are indistinguishable from baseline again
+by **3 July** — full recovery inside roughly 24–36 hours of the 1 Jul 17:00 PKT onset established
+in W5. That is a genuine, independently-collected "after," not an assumption.
+
+**What this does NOT prove — and why that distinction matters.** "Recovered" here means the
+*measured RTT/loss returned to normal*, which is a statement about traffic successfully finding a
+working path again — it says nothing about whether the physical submarine cable itself was fixed
+in that window. This is not a hypothetical caveat; it's already an established, separately-verified
+finding from Exp 06 (`findings/06_submarine_outage.md`): that experiment traced the recovered
+traffic hop-by-hop and found it stayed on the **same rerouted transit** used during the fault
+(e.g. the same alternate Etisalat ingress), not a switch back to the original SMW5 path — direct
+evidence the recovery was "congestion/latency easing on the existing detour, not a switch back to
+a repaired cable (a splice takes days [to weeks, for a real subsea repair])." So: **the network's
+operational response was fast (reroute, stabilize, ~36 h); the physical repair timeline is a
+separate, slower process our data cannot see and does not claim to.** Any write-up of this should
+keep "routing recovered" and "cable repaired" as two different claims.
+
+**Supporting, out-of-band evidence for sustained normalcy (a different dataset, not part of W5):**
+Exp 07's full 7-day panel (11–18 Jul, a completely separate traceroute/ping dataset collected more
+than a week after the fault) found the entire week **event-free** — daily tromboning rate held a
+tight 14.5–15.9% band with no outlier days. This doesn't extend the anchor-mesh signal itself (that
+pull stops 5 Jul; there is an honest **gap, 5–11 Jul, with no anchor-mesh evidence either way** in
+this project), but it is independent confirmation from a different measurement system that
+whatever was happening 1–3 Jul had fully settled well before the later panel began. Decided not to
+extend the anchor pull to close that 5–11 Jul gap directly (would need a new fetch); the two
+existing datasets already bracket it well enough for the claims being made.
+
+**Where this is used:** operational-recovery timing only — "routing stabilized within ~36 hours of
+onset." Never cited as evidence of repair completion; that claim is not made anywhere in this
+project.
+
 ### W4 — population scan (complete, 2026-07-18; 454/455 origins)
 
 | | count | share |
