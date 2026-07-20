@@ -94,9 +94,16 @@ exit everywhere) — the expected control result; sector doesn't matter once you
   re-route at AS level** (the rest is ECMP branch-sampling and hop-visibility artifacts), with
   divergence concentrated at **hops 3–5 — the domestic pre-gate layer an IXP would replace**;
   detours breathe on/off (96% oscillation) rather than migrate.
-- **43% of ≥50-round PK pairs flap** (48% persistently local, 9% persistently hairpinned) —
-  **83% of pairs that ever trombone are also served locally in the same week**; even the **gate
-  flips** (PTCL↔TWA, same pair, 23×).
+- **43% of ≥50-round PK pairs flap** (48% persistently local, 9% persistently hairpinned) **by
+  verdict** — but a flipped RTT-physics verdict alone doesn't prove the route changed. Checking the
+  actual AS-path behind every hairpin flag: only **77 of 233 ever-trombone pairs (33%) show a
+  confirmed route change**; the other 156 (67%) never show one — every hairpin flag they ever get
+  coincides with an unchanged path, consistent with RTT-threshold noise (concentrated on
+  Transworld/Z-Com, 0% confirmed each — full detail and worked examples in
+  `experiments/07_longitudinal_panel/analysis/evidence_rq3_flapping.md`). Within the confirmed-33%,
+  the same pairs are also served locally elsewhere in the week — real route-level evidence of
+  choice for that population — including the **gate flips** (PTCL↔TWA, same pair, 23×), which are
+  unambiguous since the two carriers are different ASNs.
 - Diurnal signal is mild (12.6% trough → 16.0% evening peak): tromboning is **structural, not
   congestion-driven**.
 - The *flip itself* is nearly free (within-pair median +0.5 ms, mean +15.3, n=121 on the

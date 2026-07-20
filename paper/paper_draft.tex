@@ -40,9 +40,11 @@ traceroutes we find that international paths never exceed $10\times$ the speed-o
 while 24\% of domestic paths do; that 15.1\% of traces to Pakistani-hosted sites leave the
 country and return (3--31\% by source ISP, and 86\% for state banking sites); that the same
 anycast content is a median $12.7\times$ slower on the worst-peered major ISP than on the best;
-that the penalty is structural, varying under 3 percentage points across the day; and that 83\%
-of the probe--site pairs that ever hairpin are also served domestically on other rounds of the
-same week---direct evidence that the local path exists and is not taken. The finding of the study is
+that the penalty is structural, varying under 3 percentage points across the day; and that for a
+third of the probe--site pairs that ever hairpin, the hairpin is confirmed not just by latency but
+by a change in the actual route, and those same pairs are also served over a domestic route
+elsewhere in the week---route-level evidence that the detour is a choice, not a necessity, for at
+least this population. The finding of the study is
 that the local path exists but is not taken, and that PKIX is the instrument that would take it.
 \end{abstract}
 
@@ -542,30 +544,38 @@ route is efficient and the inefficiency lives in the access overhead and the tai
 \subsection{Existence of a Local Path (RQ3)}
 \label{sec:rq3}
 Of the 444 probe--site pairs on Pakistani-hosted sites with at least 50 rounds, 211 (48\%) are
-persistently local, 40 (9\%) are persistently hairpinned, and 193 (43\%) \emph{flap}: the same
-probe reaching the same site is served domestically on some rounds and via a foreign detour on
-others, within the same week. In the terms RQ3 poses: \textbf{83\% of the pairs that ever trombone
-are also served by a domestic path during the week}---for the overwhelming majority of hairpinning
-traffic, the international detour is a routing choice, not a necessity. The site-level view is
-starker still: every one of the 37 Pakistani-hosted sites was hairpinned on at least one round
-from at least one vantage, 35 of 37 flap, and only two sites are hairpinned on more than 90\% of
-rounds---the sites for which no usable local path may exist. The choice extends to the gate
-itself: 23 pairs were handed to \emph{both} PTCL and Transworld at different times in the week for
-the same destination. Hop-level analysis of consecutive rounds localises the mechanics: 78\% of
-path divergence occurs at hops 3--5---the domestic aggregation and pre-gateway layer, the exact
-segment an exchange would replace---detours toggle on and off symmetrically rather than migrating
-(96\% of changing pairs return to a previously observed route), and 49\% of all pairs genuinely
-re-route at the AS level at least once during the week. The tromboning rate is therefore best
-stated as a stable weekly range, 14.5--15.9\%, produced not by a fixed set of broken routes but by
-a continuously flapping choice between a local path and a foreign one.
+persistently local, 40 (9\%) are persistently hairpinned, and 193 (43\%) \emph{flap} by verdict:
+the RTT-physics classifier returns a different call on some rounds than others for the same
+probe--site pair. A flipped verdict alone is not sufficient evidence that the underlying route
+changed---our classifier decides from latency, and latency has ordinary jitter---so we checked the
+actual hop-level path (ASN sequence, not just RTT) behind every flip. Of the 233 pairs that ever
+receive a hairpin verdict, \textbf{77 (33\%) show at least one round where the route itself is
+confirmed to differ}---a different sequence of networks carrying the traffic, not merely a
+slower reading on the same path; for the remaining 156 pairs, every hairpin verdict they ever
+receive coincides with an unchanged route, consistent with threshold noise rather than rerouting.
+Within the confirmed-genuine population, the same conclusion RQ3 asks for holds: these pairs are
+also served over a domestic route elsewhere in the week, direct route-level evidence that the
+detour is a choice, not a necessity, for that population. The choice extends to the gate itself:
+23 pairs were handed to \emph{both} PTCL and Transworld at different times in the week for the
+same destination---an unambiguous case, since the two carriers are different ASNs. Hop-level
+analysis of the confirmed route changes localises the mechanics: divergence concentrates at hops
+3--5---the domestic aggregation and pre-gateway layer, the exact segment an exchange would
+replace---detours toggle on and off symmetrically rather than migrating (96\% of changing pairs
+return to a previously observed route), and 49\% of all pairs genuinely re-route at the AS level
+at least once during the week (a broader population and a looser per-pair test than the
+233-pair figure above; the two are not the same measurement). The tromboning rate is therefore
+best stated as a stable weekly range, 14.5--15.9\%, produced not by a fixed set of broken routes
+but by routes that some of the time genuinely change carrier, and some of the time only appear to
+because of measurement noise on an unchanged path---both of which we can now tell apart.
 
 \section{Discussion}
 The measurement was built to support one argument, and the full week bears it out. The penalty for
 reaching domestic content over an international detour is large where it is structural and, as
 measured, stable across the day---under 3 percentage points of diurnal variation---so it is not a
 capacity problem that more bandwidth would solve but a routing and hosting problem that local
-exchange would; and since 83\% of the probe--site pairs that ever hairpin are served domestically
-on other rounds of the same week, the domestic path plainly exists and is simply not being chosen.
+exchange would; and since, for the population whose hairpin we can confirm at the route level
+rather than from latency alone, the same pairs are served domestically on other rounds of the same
+week, the domestic path plainly exists and is simply not always being chosen.
 The exchange is already present in three cities with
 dozens of connected members, and its own figures put inter-ISP latency through the exchange one to
 two orders of magnitude below the international alternative~\cite{pta2026}. Our own data supply
@@ -617,8 +627,10 @@ domestically-hosted sites leave the country and return---at 3\% from the best-ro
 from the largest; that international paths never exceed ten times the speed-of-light floor while a
 quarter of domestic paths do; that the penalty is structural, not diurnal; that the same CDN
 content varies by more than an order of magnitude between well-peered and poorly-peered ISPs; and
-that 83\% of the probe--site pairs that ever hairpin are also served domestically within the same
-week, while not one of the week's 222,944 traces crossed either of the country's exchange fabrics.
+that for a third of the probe--site pairs that ever hairpin, the hairpin is confirmed by a change
+in the actual route and not just in measured latency, and those same pairs are also served
+domestically within the same week, while not one of the week's 222,944 traces crossed either of
+the country's exchange fabrics.
 The remedy is already in place; what our measurements document is the cost of not using it. Beyond this run,
 the same framework extends to a longer horizon, to repeated measurement that ranges the tromboning
 rate over time, and---by holding a continuous normal-day baseline---to capturing the next cable

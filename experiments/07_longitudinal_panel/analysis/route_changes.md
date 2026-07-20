@@ -46,7 +46,12 @@ to the **same** foreign exit (see §4).
 
 The PTCL↔Transworld flips matter most for the thesis: a domestic path's *choice of gate* is not
 fixed — the same customer→site pair is handed to different transit providers at different times,
-consistent with the load-balancing/instability seen in Exp 06's data plane.
+consistent with the load-balancing/instability seen in Exp 06's data plane. **This transit-column
+evidence is robust in a way the RTT-verdict "flapping" stat is not** — `transit` is read off the
+actual hop path, so a PTCL↔Transworld change here is a real, different ASN, not a threshold
+artifact. See `evidence_rq3_flapping.md` for the check that found most *verdict* flips (the
+trombone/local call) are RTT-threshold noise on an unchanged path, and why only 33% of ever-hairpin
+pairs — not 83% — have a confirmed route change behind the flip.
 
 ## 3. Over time
 
