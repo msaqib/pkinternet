@@ -9,9 +9,13 @@ scripts/measurement/.geo_cache.json
 
 # Exp03 live Prometheus textfiles (local-only, server-side for Grafana)
 experiments/03_longitudinal_routing/live/
+<<<<<<< Updated upstream
 
 # Exp 07 raw RIPE archives — large and re-fetchable for free via dump_raw.py (never expire)
 experiments/07_longitudinal_panel/results/*/raw_*.json.gz
 
 # Regenerable IHR API response caches (results CSVs hold the findings; re-pull via robustness.py)
 experiments/06.1.1_smw5_robustness/.cache_*.json
+=======
+.env
+>>>>>>> Stashed changes
