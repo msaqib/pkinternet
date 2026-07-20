@@ -107,13 +107,16 @@ changed intermediary**. Computed from the **unfiltered** operator pull
 
 - **How much:** on the fault day, **~21% of all paths to Transworld and ~13.5% of paths to PTCL
   changed carrier**, dominated by the swing onto Hurricane Electric (TWA: +18.3 pp) and away from
-  Cogent (−11.7 pp) and Sparkle (−3.9 pp). **Magnitude caveat (Exp 6.1.1, W3a):** against an
-  8-week baseline this size of churn is elevated but *not unprecedented* — TWA's fault day ranks
-  #3 of 56 days (z=+1.8; a larger event hit both operators on 30 May — decomposed in Exp 6.1.1 as a one-day
-  Hurricane-interconnect loss coincident with a severe Lahore storm/power event), and
-  PTCL's total churn is within its noisy norm. The attribution therefore rests on the
-  **fingerprint** (both operators onto the same substitute carrier on the same two days, 48-h
-  recovery, coincident with the documented fault), not on raw magnitude.
+  Cogent (−11.7 pp) and Sparkle (−3.9 pp). **Robustness (Exp 6.1.1, W3a+W3b): the churn-magnitude
+  claim is retracted.** A placebo test against four control operators — including two (Nepal,
+  Vietnam) with zero SMW5 exposure — showed the same elevated-churn ranking on 1–3 Jul for
+  *everyone tested*, even after correcting for a global IHR data gap on those days. The elevation
+  is a worldwide phenomenon our method cannot attribute to Pakistan or SMW5, so no claim is made
+  on churn size or ranking. What the placebo test *does* confirm, specifically: the size of the
+  **swing onto Hurricane Electric** — TWA +9.1 pp, PTCL +7.1 pp, and SLT (itself an SMW5 landing
+  country) +13.2 pp — is 2–8× larger than the two confirmed non-SMW5 controls (NTC-Nepal +1.5 pp,
+  VNPT +3.8 pp), a placebo-tested, carrier-specific fingerprint rather than a magnitude argument.
+  Full detail in `06.1.1_smw5_robustness/notes.md` (W3b).
 - **When:** PTCL's churn was already elevated on **1 Jul** (11.9%) — again suggesting the fault
   predates the 2 Jul announcement; both operators normalized by **3 Jul**.
 - **Where:** at the operators' interconnects with foreign carriers — physically the
@@ -140,9 +143,10 @@ degraded or died → the BGP sessions/announcements over them were withdrawn or 
 the world's routers re-selected paths via the interconnects that remained (Hurricane's) → the
 hegemony shares moved. **The 2 Jul churn spike is the BGP shadow of a physical failure.**
 Honest limits: there is no public mapping of which carrier rides which cable, so we cannot name
-the cable behind each shifted interconnect — the attribution rests on the timing coincidence
-(churn 3–10× baseline exactly on the fault dates, both operators, same substitute carrier) plus
-the known mechanism, not on direct observation of the fibre.
+the cable behind each shifted interconnect — the attribution rests on the placebo-tested
+Hurricane-swing fingerprint (both operators onto the same substitute carrier, at a magnitude
+2–8× larger than confirmed non-SMW5 controls, on the same two days) plus the known mechanism,
+not on churn magnitude (retracted, Exp 6.1.1 W3b) or on direct observation of the fibre.
 
 **What is public vs. what we'd need (the cable-mapping question):**
 - *Public (coarse):* cable → Pakistani operator. The AINTEC'24 paper states Karachi's 6 submarine

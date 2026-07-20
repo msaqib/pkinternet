@@ -57,10 +57,15 @@ findings/              Analysis writeups and the charts notebook
   Daily AS-hegemony time series across the fault window — did any *logical* (BGP)
   dependencies move when the cable broke, or did networks endure congestion on the same
   paths? Extends Exp 06 with global routing data.
-- [6.1.1 — SMW5 Robustness](experiments/06.1.1_smw5_robustness/notes.md):
-  Systematically closes 6.1's caveats — churn-anomaly baseline (8 weeks), a
-  population-scale scan of all PK origins for gate switches during the fault,
-  placebo operators, and independent fault-onset clocks.
+- [6.1.1 — SMW5 Robustness](experiments/06.1.1_smw5_robustness/notes.md) **(done)**:
+  Systematically closed 6.1's caveats. Headline results: a placebo test (4 control
+  operators, incl. two with zero SMW5 exposure) forced the retraction of the
+  churn-*magnitude* claim as a global artifact, but confirmed a Hurricane-Electric
+  swing 2–8× larger in SMW5-exposed operators; **99.63%** of Pakistan's ~42M
+  estimated internet users (APNIC-weighted) were on networks whose gate never
+  moved; and RIPE Atlas's own worldwide anchor mesh **independently confirms**
+  the fault predated the PTA announcement (a 78σ RTT/loss spike from 1 Jul
+  17:00 PKT).
 - [07 — Longitudinal Panel (flagship)](experiments/07_longitudinal_panel/notes.md):
   7-day uniform panel from all connected PK probes to a frozen 100-site stratified
   sample (40 PK / 40 CDN / 20 Abroad): TCP/80 Paris traceroute hourly + ping every
