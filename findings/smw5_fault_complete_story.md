@@ -126,6 +126,23 @@ allows: the network rerouted around the fault and stabilized quickly; nothing in
 data shows the cable itself being physically repaired in this window, and the fast recovery speed
 is itself evidence against that reading.**
 
+**A small, honestly-weak supporting example, at the individual-trace level.** Carrier-level
+traceroute data lets this be checked directly for a handful of real paths, not just in aggregate.
+Only **two (probe, target) pairs in the whole Exp 06 dataset ever routed via Hurricane Electric**
+during the 12-hour window — both from the same single probe, Cybernet, to `alfatah.com.pk` and
+`wateen.com` — and both stayed on Hurricane for all 144 rounds, start to finish, never switching
+away within the window. Their RTT did fall substantially while staying on that same path (313.6 ms
+→ 194.2 ms, and 312.5 ms → 192.0 ms — roughly −38%), which is at least consistent with "the same
+detour got less congested," the same conclusion reached above by two stronger, independent methods.
+**This should not be over-weighted:** it is one ISP's view of two paths, not a national picture of
+what Hurricane carried, and it did not show what a switch-back would look like, because no
+switch-back happened inside our own window. That absence is itself informative, but points to a
+gap rather than confirming the mechanism: Exp 06's window (01:27–13:20 PKT, 3 Jul) sits inside what
+Exp 6.1's BGP data calls "after" — the operators' Hurricane share had already fallen back to ~2%
+by then — so this project's own traceroutes never observed the actual carrier-swing peak (likely
+late 1 Jul into 2 Jul) at all. The trace-level data confirms recovery was already well underway by
+the time we were watching; it cannot speak to the peak itself.
+
 ---
 
 ## Act 4 — Settling: the following weeks
