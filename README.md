@@ -121,6 +121,11 @@ findings/              Analysis writeups and the charts notebook
   the same fault in global BGP — downstream dependencies **frozen** (one 2-day exception),
   while the operators re-carriered **~21%/13.5%** of their world paths for ~48 h (Hurricane
   surge, Cogent collapse): the duopoly absorbed the fault upstream.
+- [SMW5 — the complete story](findings/smw5_fault_complete_story.md):
+  every experiment on the fault (06, 6.1, 6.1.1, cross-checked against 07 and 09), assembled
+  into one sourced, day-by-day timeline — onset 32 h before the announcement, ~42M users'
+  exposure by gateway, the reroute-not-repair recovery, and the placebo test that retracted
+  one claim and strengthened another.
 - [07 — Longitudinal Panel (full week)](findings/07_longitudinal_panel.md):
   the flagship's complete results — international paths never exceed 10× the physics floor while
   **24% of domestic paths do**; **15.1% steady-state tromboning** (49% of pairs genuinely
