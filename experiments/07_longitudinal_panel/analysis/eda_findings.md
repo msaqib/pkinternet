@@ -25,17 +25,6 @@ finding for RQ2). But the RTT evidence behind it looks partly like noise:
   that line, repeatedly, looks like the same failure mode without quite
   crossing the documented threshold.
 
-**Not entirely new:** `findings/07_critical_review_and_eda_plan.md` already
-lists 1016393 as a "high-floor probe" in a *planned* robustness check
-(§EDA plan item, excluding 1016126/1016393/64535) — but that's a to-do, not
-a resolved diagnosis, and per `findings/07_longitudinal_panel.md`, 1016393 is
-**still in the 14-probe headline analysis roster** (only 7764 and 1015491 are
-excluded there). So this is actionable against numbers currently being cited.
-
-**Suggested next step:** re-run the robustness check already on file (exclude
-1016393, or re-derive its trombone verdicts using ASN/path evidence instead
-of the RTT-jump heuristic) and see how much PTCL's headline trombone rate
-moves.
 
 ---
 
@@ -68,15 +57,6 @@ isn't *provably* impossible the way a Toronto/Mountain-View-style case is.
    A second IP on the same path, `206.148.22.141`, decodes to `sg-eqxsg3` =
    Equinix Singapore (ip-api had called it "New York").
 
-**Fix applied:** `routing_map.py` now has a `KNOWN_LOCATIONS` override table
-(hardcoded, RDAP/PTR-verified) for hops resolved this way — currently the
-`27.111.228/230/231.x` Equinix Singapore block and `206.148.27.x` /
-`206.148.22.x` GSL/Equinix Muscat+Singapore — plus a general physics-arbiter
-pass (same vacuum-floor method as `geo.py`'s target-site arbiter) that drops
-any *other* hop whose claimed location is disprovable, rather than plotting
-it somewhere false. Net effect on one map build: **39 hop-occurrences
-corrected to a verified location, 32 unique IPs dropped** as physically
-impossible.
 
 **Reusable takeaway:** ip-api geolocation on backbone/carrier hops is often
 just the company's registration city, and the physics floor alone won't
@@ -86,7 +66,7 @@ routers with real airport/facility codes (`mct`, `sg`, `lax`, etc.).
 
 ---
 
-## 3. `efulife.com` may be misclassified as "offshore" — counter-evidence found
+## 3. `efulife.com` may be misclassified as "offshore"
 
 `findings/07_critical_review_and_eda_plan.md` and `findings/07_longitudinal_panel.md`
 both currently list `efulife.com` as one of the sites the physics arbiter
@@ -109,16 +89,6 @@ contradict that:
    A 4.7ms RTT is not compatible with an offshore server — this isn't a
    one-off snapshot fluke, it holds across the entire panel week.
 
-**Open question, not yet resolved:** why did the physics arbiter call this
-offshore if 3 probes get a clean sub-25ms delivery? Best guess: the arbiter's
-"nearest PK probe" computation dropped the Cybernet cluster for some reason
-— possibly related to the known bad-coordinate exclusion for probe 1016036
-(`EXCLUDE_FROM_DISTANCE`, METHODOLOGY.md §0), though that alone doesn't
-explain excluding 1016143/1016154 too. **Needs someone to check `geo.py
-relocate`'s actual per-vantage breakdown for this specific host** before
-changing anything — this note documents the contradicting evidence, not a
-confirmed fix.
-
 **Why it matters if true:** a confirmed-domestic site that 10+ of 16 probes
 still hairpin internationally to reach is a *stronger* example for the
 thesis than an offshore one — it's exactly the "unnecessary tromboning to a
@@ -133,7 +103,7 @@ Scanned all `[Pakistan]`-class TROMBONE traces for ones crossing ≥2 distinct
 foreign countries: **60 traces qualify** (out of 640 Pakistan-class traces in
 the snapshot). Full hop-by-hop deep-dive done on three:
 
-### `efulife.com` (see §3 — genuinely PK-hosted, per above)
+### `efulife.com` 
 ```
 PTCL edge → PTCL internal
 → Cogent (US-registered), leased to GSL Networks
