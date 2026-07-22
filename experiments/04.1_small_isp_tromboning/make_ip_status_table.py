@@ -2,7 +2,7 @@
 """
 Exp 4.1 - build a hierarchical status table from the CANONICAL census CSV:
 one row per (ISP -> block -> target IP -> source probe) with status
-(trombone / local / inconclusive), reached (reached the destination ISP's
+(trombone_hop / trombone_rtt / local / inconclusive), reached (reached the destination ISP's
 network), and a tromboned flag. Reads the deduped census_*.csv (not the raw
 checkpoint, which contains resume-duplicate measurements).
 
@@ -17,7 +17,7 @@ census = sorted(glob.glob(os.path.join(RUN, "census_*.csv")))[-1]
 
 rows = []
 for r in csv.DictReader(open(census, encoding="utf-8")):
-    trombone = r["status"] == "trombone"
+    trombone = r["status"] in ("trombone_hop", "trombone_rtt")
     rows.append(dict(asn="AS" + r["asn"], isp=r["company"], block=r["prefix"],
                      target_ip=r["target_ip"], source=r["source"], status=r["status"],
                      reached=(r["reached_isp"] == "True"), tromboned=trombone,

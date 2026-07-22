@@ -6,7 +6,7 @@ Google operates three distinct types of infrastructure relevant to Pakistani ISP
 
 **Data Centers** serve as the core compute layer where Gmail, Search, and YouTube processing actually happen. There are very few of these globally and none in Pakistan.
 
-**Edge Points of Presence (PoPs)** are where Google peers with ISPs via BGP. The `216.239.x.x` hops observed in our traceroutes are Google's PoP routers at these peering points. They are physically located in regional hubs such as Dubai or Muscat but their IP addresses are registered to Mountain View, California — a known geo-IP limitation for anycast infrastructure.
+**Edge Points of Presence (PoPs)** are where Google peers with ISPs via BGP. The `216.239.x.x` hops observed in our traceroutes are Google's PoP routers at these peering points. They are physically located in regional hubs such as Dubai or Muscat but their IP addresses are registered to Mountain View, California, a known geo-IP limitation for anycast infrastructure.
 
 **Google Global Cache (GGC)** nodes are small servers that Google installs directly inside ISP networks, serving cached content such as YouTube videos without traffic ever leaving the ISP's own infrastructure. A GGC node would appear as a Pakistani-registered ASN hop immediately before the first Google ASN hop in a traceroute. Our experiment found zero such nodes across all 10 responding probes.
 
@@ -66,14 +66,14 @@ preflight probe-status check).
 
 ---
 
-## The IP-ownership blind spot — why "no embedded cache found" isn't "no cache exists"
+## The IP-ownership blind spot: why "no embedded cache found" isn't "no cache exists"
 
 The GGC detection method above works by checking who **owns** the IP address of each hop: if a hop
 right before the Google/Meta ASN belonged to a Pakistani ISP's own address space, that would be the
 traceroute signature of an embedded cache. We found zero such hops — that's the basis of the
 headline claim above.
 
-**But IP ownership and physical location are two separate things.** A cache box can be physically
+But IP ownership and physical location are two separate things. A cache box can be physically
 installed inside an ISP's building while still using an IP address registered to Google/Meta's own
 address space, not the ISP's — a common real-world CDN deployment pattern. From outside, that setup
 is *indistinguishable* from a genuine international hop: the ASN reads Google/Meta either way. So
@@ -93,18 +93,17 @@ worth being precise about, since it's the strongest lead for an operator convers
 
 Google's and Meta's Karachi RTTs (15–20 ms) are fast enough to be consistent with genuine
 in-country presence by this project's own RTT-interpretation table, but not fast enough to prove
-co-location inside the specific probing ISP's building. That gap — a regional-but-just-outside-PK
+co-location inside the specific probing ISP's building. That gap, a regional-but-just-outside-PK
 vantage vs. a physically-in-PK-but-vendor-numbered box — is exactly what traceroute + geo-IP cannot
 resolve on its own. Akamai shows no such ambiguity: its RTT floor (78 ms+) is unambiguously abroad.
 
-**What this means in practice:** the right question for a network operator is not "do you think
-Google/Meta cache in Pakistan" — it's **"is there a Google/Meta caching appliance physically
+**What to find out:**  "is there a Google/Meta caching appliance physically
 installed in your network, regardless of what IP range it uses?"** That's the one thing only they
 can answer; see Next Steps below.
 
 ---
 
-## Per-ISP handoff (corrected from a first-pass read of the routes file)
+## Per-ISP handoff
 
 | ISP (probe) | Handoff to CDN | Evidence |
 |---|---|---|
@@ -138,40 +137,6 @@ only registration says a location and physics rules it out (Google;
 
 ---
 
-## Corrections to a first read of the routes file
-
-An initial pass over `routes_full_20260719_003828.txt` produced a simpler
-version of this story that doesn't fully hold up against RDAP + geolocation
-cross-checks:
-
-1. **"Cybernet uses Transworld to reach Google" — not supported.** Cybernet
-   shows no AS38193 or `110.93.x.x` hop anywhere in any of its 5 traces; the
-   two ambiguous (Cymru-unresolved) hops resolve via RDAP to `CYBERNET-PK`
-   itself. Cybernet should not be grouped with TES/Zcom/Nova/Fasttel(partial)
-   as "via Transworld."
-2. **"Fasttel routes through PTCL at hop 4" — only half true.** Fasttel's
-   hop 4 is PTCL (AS17557) for Facebook/Instagram/Akamai, but **Transworld**
-   (AS38193) for Google/YouTube, in the same run. Fasttel is multihomed and
-   picks upstream per destination.
-3. **"Nayatel: all intermediate hops filtered" — not universal.** True for
-   4 of 5 targets, but the Facebook trace exposes Nayatel's own AS23674
-   backbone edge. The Akamai trace is a dead-end (stops at a Japan-registered
-   hop before reaching Akamai), which is a data gap, not evidence either way.
-4. **City labels ("Muscat", "Fujairah") aren't present in raw
-   traceroute/ASN data** — they were inferences. Cross-checked against
-   `ip-api.com` + RTT physics: the Oman/Muscat claim holds for **Meta**, but
-   there is no equivalent confirmation for **Google** — its "Mountain View"
-   registration is physically impossible at the observed RTT and should not
-   be replaced with an unconfirmed city guess in the paper.
-5. **"No ISP shows hops staying within their own ASN before hitting Google" —
-   contradicted by Cybernet**, whose entire pre-CDN path stays on AS9541. The
-   defensible version of the GGC conclusion is: **no CDN-owned IP was ever
-   observed inside a Pakistani-registered ASN** (i.e. no on-net cache), which
-   holds regardless of whether the ISP's own backbone or a transit carrier
-   delivers the packet to that off-net CDN edge.
-
----
-
 ## Caveats
 
 - **Transworld probe (62224) RTTs are an artifact.** Its ICMP filtering means
@@ -193,28 +158,6 @@ cross-checks:
   reliability ranking as the rest of this project (HTTP `colo`/trace >
   traceroute handoff + RTT > bare IP geolocation). Used here only where RTT
   physics independently agrees.
-
----
-
-## Next steps
-
-1. **Ask a network operator directly whether Google/Meta have a physical
-   caching appliance installed in their network** — regardless of what IP
-   range it uses. This is the one question that resolves the IP-ownership
-   blind spot above; traceroute data cannot answer it on its own. TES and
-   Cybernet (Karachi) are the vantages that showed the fastest, most
-   plausible RTTs (15–20 ms) and are the natural ISPs to ask first.
-2. **If no operator confirms an in-country cache, confirm Google's real
-   regional PoP location another way.** Traceroute + geo-IP can't resolve it;
-   needs an HTTP-capable vantage (e.g. a cloud VM in-region, or a public
-   looking-glass) to get a `/generate_204`-style or equivalent server
-   signature, the same way `/cdn-cgi/trace` was used for Cloudflare.
-3. **Re-run once StormFiber/Optix/Telenor probes are available** — the
-   current 10-ISP panel found zero embedded caches, but those are exactly the
-   ISPs most likely to host one per Exp 1.2's caveat.
-4. **Chase the Nayatel→Akamai dead-end** (stops at a Japan/WIDE-registered hop
-   without reaching Akamai) with a manual `mtr`/traceroute from that vantage.
-5. **Re-run Orbit (Faisalabad)** once probe 64535 reconnects.
 
 ---
 

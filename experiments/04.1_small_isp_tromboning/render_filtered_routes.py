@@ -58,7 +58,7 @@ for ip, lbl, r in items:
     lines.append("=" * 80)
     lines.append(f" {comp[:44]} (AS{asn})   ->   {ip}    [block {prefix}]")
     lines.append(f" SOURCE   probe {r.get('prb_id')} - {lbl}")
-    lines.append(f" VERDICT  TROMBONE   reached={v['reached_isp']}   "
+    lines.append(f" VERDICT  {v['status'].upper()}   reached={v['reached_isp']}   "
                  f"exit={v['exit_name'] or '?'} ({v['exit_cc']})   transit={v['transit']}   "
                  f"maxRTT={v['max_rtt']}ms   evidence={v['evidence']}")
     lines.append("-" * 80)

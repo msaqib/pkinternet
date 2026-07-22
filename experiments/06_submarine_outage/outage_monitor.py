@@ -206,8 +206,10 @@ def fetch():
             rows.append(dict(time=when.strftime("%Y-%m-%d %H:%M"), probe=lbl, cat=cat, target=host,
                              target_ip=ip, reached=pr.destination_ip_responded,
                              ping_rtt=prtt, baseline_rtt=(b if b is not None else ""), spike_x=spike,
-                             trace_max_rtt=v["max_rtt"], tromboned=(v["status"] == "trombone"),
-                             exit=_clean(v["exit_name"] or v["exit_cc"]) if v["status"] == "trombone" else "",
+                             trace_max_rtt=v["max_rtt"],
+                             tromboned=(v["status"] in ("trombone_hop", "trombone_rtt")),
+                             exit=_clean(v["exit_name"] or v["exit_cc"])
+                             if v["status"] in ("trombone_hop", "trombone_rtt") else "",
                              max_hop_delta=round(best[0], 1), delta_link=f"{best[1]}->{best[2]}" if best[1] else ""))
             traces.append((cat, host, lbl, when, pr, v))
 

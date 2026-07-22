@@ -209,7 +209,8 @@ def write_outputs(jobs, results, asn, probe, run_dir, ts):
             exit_cc = "?"; transit_asn, transit_name = jump_asn, jump_name
             evidence = f"rtt_jump={max_jump:.0f} max_rtt={max_rtt:.0f}"
         trombones = bool(exit_hop) or evidence.startswith("rtt")
-        status = ("trombone" if trombones else
+        status = ("trombone_hop" if exit_hop else
+                  "trombone_rtt" if trombones else
                   "local" if (reached_isp or (max_rtt and max_rtt < LOCAL_CEIL))
                   else "inconclusive")
         rows.append(dict(prefix=prefix, target_ip=ip,

@@ -315,16 +315,23 @@ concurrency, not cost, is the only binding limit.
 
 \subsection{Data Cleaning}
 
-The seven-day panel (11--18 July 2026) produced 222,944 traceroute rows and 445,749 ping rows;
-17 probes were scheduled, of which 16 returned data---the NTC probe (1016431) was offline
-throughout the run and is excluded from all results. After the exclusions below, 204,384
-traceroute rows and 313,276 ping rows from 14 probes enter analysis. The active probes span nine
-Pakistani ISPs across seven cities: Cybernet (Haripur, Karachi $\times$2), Nayatel (Islamabad
-$\times$2), Nova (Lahore), Orbit (Faisalabad), PTCL (Karachi, Mianwali), TES/Transworld Home
-(Rawalpindi, Karachi), Transworld (Lahore), Fasttel (Islamabad), and Zcom (Lahore), covering both
-licensed international gateway operators and seven downstream ISPs.
+The seven-day panel (11--18 July 2026) produced 222,944 traceroute rows and 445,749 ping rows
+across 17 scheduled probes. Three probes are excluded from analysis. The NTC probe (1016431) was
+offline throughout the run and returned no data at all. Probe 1015491 carries an erroneous ASN
+label (AS13335, Cloudflare) but is in fact a Z-Com (AS152605) vantage co-located in Lahore with
+probe 7613, and is excluded as a mislabelled duplicate. Probe 7764 (PTCL Lahore) recorded 90\%
+packet loss throughout the run and is excluded from all RTT and trombone analyses; because a
+blinded trace defaults to a non-trombone verdict, retaining this probe would also systematically
+understate its ISP's hairpin rate. The remaining 14 probes contribute 204,384 traceroute rows and
+313,276 ping rows to analysis. The active probes span nine Pakistani ISPs across seven cities:
+Cybernet (Haripur, Karachi $\times$2), Nayatel (Islamabad $\times$2), Nova (Lahore), Orbit
+(Faisalabad), PTCL (Karachi, Mianwali), TES/Transworld Home (Rawalpindi, Karachi), Transworld
+(Lahore), Fasttel (Islamabad), and Zcom (Lahore), covering both licensed international gateway
+operators and seven downstream ISPs.
 
-Two probes are excluded from analysis. Probe 1015491 carries an erroneous ASN label (AS13335, Cloudflare) but is in fact a Z-Com (AS152605) vantage co-located in Lahore with probe 7613; it is excluded as a mislabelled duplicate. Probe 7764 (PTCL Lahore) recorded 90\% packet loss throughout the run and is excluded from all RTT and trombone analyses; because a blinded trace defaults to a non-trombone verdict, retaining this probe would also systematically understate its ISP's hairpin rate. Probe 1016393 (PTCL Mianwali) was connected intermittently---at full rate for the first two days (11--12 July), then sporadically through the end of the window---and is retained, flagged wherever it enters per-vantage results.
+Among these 14, probe 1016393 (PTCL Mianwali) was connected intermittently---at full rate for the
+first two days (11--12 July), then sporadically through the end of the window---and is retained,
+flagged wherever it enters per-vantage results.
 
 The raw panel contains one row per measurement round per probe per target, with ping and traceroute rows stored together and distinguished by a \texttt{kind} column. For RTT analysis we use ping rows and drop any row where \texttt{rtt\_min} is NaN, corresponding to rounds with 100\% packet loss. For hop count analysis we exclude traceroute rows where \texttt{hop\_count} = 255, indicating the destination never replied. Rows where the transit ASN is unresolvable are retained for trombone classification since the verdict is derived from RTT physics independently of ASN resolution. For the per-probe-site trombone fraction analysis we restrict to pairs with at least 50 rounds to ensure a statistically reliable estimate. We use the minimum ping RTT across all rounds as the primary latency measure, since queuing and processing overhead only add delay and the minimum is the cleanest approximation of true path latency~\cite{dibartolomeo2015}.
 

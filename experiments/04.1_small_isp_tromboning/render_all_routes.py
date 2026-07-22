@@ -52,7 +52,9 @@ for r in last.values():
 items.sort(key=lambda x: (x[0], x[2], x[3], str(x[4])))   # by ISP, prefix, ip, probe
 
 lines = [f"Exp 4.1 — ALL census traceroutes (small-ISP census, complete {RUN})",
-         f"{len(items)} traces  (local {counts['local']}, trombone {counts['trombone']}, "
+         f"{len(items)} traces  (local {counts['local']}, "
+         f"trombone {counts['trombone_hop']+counts['trombone_rtt']} "
+         f"[hop-confirmed {counts['trombone_hop']}, rtt-only {counts['trombone_rtt']}], "
          f"inconclusive {counts['inconclusive']}).  Verdicts = the census's frozen classification.",
          "'<<< high RTT' marks a hop >=40ms (likely off-PK). Per-hop operator names are in "
          "routes_tromboning_*.txt / routes_filtered_reached_tromboned_*.txt.", ""]
@@ -62,7 +64,7 @@ for comp, asn, prefix, ip, prb, v, r in items:
     lines.append(f" {comp[:44]} (AS{asn})   ->   {ip}    [block {prefix}]")
     lines.append(f" SOURCE   probe {prb} - {SRC.get(prb, prb)}")
     extra = (f"   exit={v['exit_name'] or '?'} ({v['exit_cc']})   transit={v['transit']}"
-             if v["status"] == "trombone" else "")
+             if v["status"] in ("trombone_hop", "trombone_rtt") else "")
     lines.append(f" VERDICT  {v['status'].upper()}   reached={v['reached_isp']}   "
                  f"maxRTT={v['max_rtt']}ms{extra}   evidence={v['evidence']}")
     lines.append("-" * 80)

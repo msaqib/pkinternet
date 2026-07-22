@@ -178,8 +178,12 @@ def _hopcount(pr):
     return last
 
 
-def fetch():
-    """Pull all results so far -> panel_<ts>.csv (rewritten) + routes_<ts>.txt."""
+def fetch(stable=False):
+    """Pull all results so far -> a panel CSV + routes txt.
+    stable=True (used by watch()): overwrite one current panel_<ts>.csv / routes_<ts>.txt
+      each cycle, so a live run doesn't pile up files.
+    stable=False (manual one-off `fetch`): never delete existing files - write a fresh
+      panel_updated_<ts>.csv / routes_updated_<ts>.txt alongside whatever's already there."""
     meta = json.load(open(MJSON))
     P = meta["probes"]
     rows, latest_trace = [], {}   # panel rows; latest trace per (probe,host) for routes txt
@@ -199,7 +203,7 @@ def fetch():
                              kind="ping", probe_id=r.get("prb_id"), probe=P.get(str(r.get("prb_id")), r.get("prb_id")),
                              target=host, cls=cls, rtt_min=(round(pg.rtt_min, 1) if pg.rtt_min is not None else ""),
                              loss=(round(1 - rcvd / sent, 3) if sent else ""), hop_count="", tromboned="",
-                             exit_cc="", transit=""))
+                             status="", exit_cc="", transit=""))
     for host, mid in meta["trace"].items():
         cls = meta["class"][host]
         try:
@@ -217,7 +221,8 @@ def fetch():
                              ts_pkt=pkt(datetime.fromtimestamp(ts, timezone.utc)).strftime("%Y-%m-%d %H:%M:%S"),
                              kind="trace", probe_id=prb, probe=P.get(str(prb), prb), target=host, cls=cls,
                              rtt_min="", loss="", hop_count=(_hopcount(pr) if prb not in HOP_EXCLUDE else ""),
-                             tromboned=(v["status"] == "trombone"), exit_cc=v["exit_cc"], transit=v["transit"]))
+                             tromboned=(v["status"] in ("trombone_hop", "trombone_rtt")),
+                             status=v["status"], exit_cc=v["exit_cc"], transit=v["transit"]))
             key = (str(P.get(str(prb), prb)), host)
             if key not in latest_trace or ts > latest_trace[key][0]:
                 latest_trace[key] = (ts, cls, host, prb, pr, v)
@@ -227,11 +232,13 @@ def fetch():
     rows.sort(key=lambda x: (x["target"], str(x["probe"]), x["ts_utc"]))
     ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     cols = ["ts_utc", "ts_pkt", "kind", "probe_id", "probe", "target", "cls", "rtt_min", "loss",
-            "hop_count", "tromboned", "exit_cc", "transit"]
-    # rewrite a single current panel file (keep it stable across watch cycles)
-    for old in glob.glob(os.path.join(OUT, "panel_*.csv")):
-        os.remove(old)
-    out_csv = os.path.join(OUT, f"panel_{ts}.csv")
+            "hop_count", "tromboned", "status", "exit_cc", "transit"]
+    if stable:
+        for old in glob.glob(os.path.join(OUT, "panel_*.csv")):
+            os.remove(old)
+        out_csv = os.path.join(OUT, f"panel_{ts}.csv")
+    else:
+        out_csv = os.path.join(OUT, f"panel_updated_{ts}.csv")
     with open(out_csv, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=cols); w.writeheader(); w.writerows(rows)
 
@@ -254,9 +261,12 @@ def fetch():
                     and cs.FOREIGN_RTT_FLOOR <= rtt <= cs.QUEUE_CEIL) else "")
             lines.append(f"  {hop.index:>3}   {('%.1f'%rtt) if rtt is not None else '':>7}   {ipx:<16}{mark}")
         lines.append("")
-    for old in glob.glob(os.path.join(OUT, "routes_*.txt")):
-        os.remove(old)
-    out_txt = os.path.join(OUT, f"routes_{ts}.txt")
+    if stable:
+        for old in glob.glob(os.path.join(OUT, "routes_*.txt")):
+            os.remove(old)
+        out_txt = os.path.join(OUT, f"routes_{ts}.txt")
+    else:
+        out_txt = os.path.join(OUT, f"routes_updated_{ts}.txt")
     open(out_txt, "w", encoding="utf-8").write("\n".join(lines) + "\n")
 
     nping = sum(1 for x in rows if x["kind"] == "ping"); ntr = len(rows) - nping
@@ -272,7 +282,7 @@ def watch():
     print(f"watch: fetching every {WATCH_EVERY//60} min until {pkt(stop_at):%Y-%m-%d %H:%M} PKT. Ctrl-C to stop.")
     while True:
         try:
-            fetch()
+            fetch(stable=True)
         except Exception as e:
             print(f"  fetch error: {e}")
         if datetime.now(timezone.utc) >= stop_at + timedelta(hours=1):

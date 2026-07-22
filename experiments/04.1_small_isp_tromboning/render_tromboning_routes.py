@@ -42,7 +42,7 @@ for r in last.values():
     v = frozen.get((prb, ip))
     if v is None or ip not in ip2blk:
         continue
-    if v["status"] == "trombone":
+    if v["status"] in ("trombone_hop", "trombone_rtt"):
         asn, comp, prefix = ip2blk[ip]
         items.append((comp, asn, prefix, ip, prb, v, r))
 
@@ -50,13 +50,14 @@ items.sort(key=lambda x: (x[0], x[2], x[3], str(x[4])))   # by ISP, prefix, ip, 
 
 lines = [f"Exp 4.1 — TROMBONING traceroutes (small-ISP census, complete {RUN})",
          f"{len(items)} hairpinning traces. '<<< LEAVES PK' marks where the packet exits Pakistan.",
-         "Detector: foreign hop (RTT>=40ms) OR RTT jump>=60ms OR max hop RTT>=70ms.", ""]
+         "VERDICT is TROMBONE_HOP (a foreign hop actually resolved, RTT>=40ms - hard evidence) or "
+         "TROMBONE_RTT (no foreign hop seen; inferred from RTT jump>=60ms OR max hop RTT>=70ms alone).", ""]
 for comp, asn, prefix, ip, prb, v, r in items:
     pr = TracerouteResult.get(r)
     lines.append("=" * 80)
     lines.append(f" {comp[:44]} (AS{asn})   ->   {ip}    [block {prefix}]")
     lines.append(f" SOURCE   probe {prb} - {SRC.get(prb, prb)}")
-    lines.append(f" VERDICT  TROMBONE   reached={v['reached_isp']}   "
+    lines.append(f" VERDICT  {v['status'].upper()}   reached={v['reached_isp']}   "
                  f"exit={v['exit_name'] or '?'} ({v['exit_cc']})   "
                  f"transit={v['transit']}   maxRTT={v['max_rtt']}ms   evidence={v['evidence']}")
     lines.append("-" * 80)

@@ -52,8 +52,13 @@ def block_ips(prefix, k):
 
 
 def classify(res, isp_asn):
-    """Exp 04 RTT-physics detector -> dict(status, evidence, exit_cc, exit_name,
-    transit, max_rtt, reached_isp)."""
+    """Exp 04 detector -> dict(status, evidence, exit_cc, exit_name,
+    transit, max_rtt, reached_isp).
+    status splits trombones into two evidence tiers, per Dr Ilyas's request
+    (an RTT jump alone could be congestion, not a route leaving PK):
+      trombone_hop - a hop actually resolved to a foreign IP (hard evidence)
+      trombone_rtt - no foreign hop seen, inferred from RTT jump/ceiling alone
+      local / inconclusive - unchanged."""
     pr = TracerouteResult.get(res)
     exit_cc = exit_name = transit = ""
     max_rtt = 0.0; prev = None; max_jump = 0.0; prev_pk = ""; reached = False
@@ -79,12 +84,13 @@ def classify(res, isp_asn):
         if a and a not in ARTIFACT_ASN and (cc == "PK" or (rtt is not None and rtt < FOREIGN_RTT_FLOOR)):
             prev_pk = LDI.get(a, a)
     if exit_cc:
-        ev = "foreign_hop"; trombone = True
+        ev = "foreign_hop"; ttype = "hop"
     elif max_jump >= JUMP_THRESH or max_rtt >= HIGH_RTT:
-        ev = f"rtt(jump={max_jump:.0f},max={max_rtt:.0f})"; trombone = True; exit_cc = "?"
+        ev = f"rtt(jump={max_jump:.0f},max={max_rtt:.0f})"; ttype = "rtt"; exit_cc = "?"
     else:
-        ev = ""; trombone = False
-    status = ("trombone" if trombone else
+        ev = ""; ttype = ""
+    status = ("trombone_hop" if ttype == "hop" else
+              "trombone_rtt" if ttype == "rtt" else
               "local" if (reached or (max_rtt and max_rtt < LOCAL_CEIL)) else "inconclusive")
     return dict(status=status, evidence=ev, exit_cc=exit_cc, exit_name=exit_name,
                 transit=transit or "?", max_rtt=round(max_rtt, 1) if max_rtt else "",
@@ -223,24 +229,31 @@ def main():
     for r in rows:
         by_block[(r["asn"], r["prefix"])][r["source"]].append(r["status"])
     # per-ISP trombone rate (block trombones from a source if ANY ip trombones)
-    isp = defaultdict(lambda: defaultdict(lambda: [0, 0]))  # asn->source->[tromb_blocks, total_blocks]
+    # [tromb_blocks, hop_blocks, rtt_blocks, total_blocks] - tromb_blocks is the
+    # union of hop+rtt, so the headline rate is unchanged by the split.
+    isp = defaultdict(lambda: defaultdict(lambda: [0, 0, 0, 0]))
     consistency = [0, 0]   # [consistent_blocks, total_block-source pairs with >1 ip]
     for (asn, prefix), srcs in by_block.items():
         for s, statuses in srcs.items():
-            t = sum(1 for x in statuses if x == "trombone")
-            isp[asn][s][1] += 1
-            if t: isp[asn][s][0] += 1
+            any_hop = any(x == "trombone_hop" for x in statuses)
+            any_rtt = any(x == "trombone_rtt" for x in statuses)
+            isp[asn][s][3] += 1
+            if any_hop or any_rtt: isp[asn][s][0] += 1
+            if any_hop: isp[asn][s][1] += 1
+            if any_rtt: isp[asn][s][2] += 1
             if len(statuses) > 1:
                 consistency[1] += 1
                 if len(set(statuses)) == 1: consistency[0] += 1
 
     with open(os.path.join(run_dir, "isp_tromboning.csv"), "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f); w.writerow(["asn", "company", "source", "trombone_blocks", "total_blocks", "pct"])
+        w = csv.writer(f)
+        w.writerow(["asn", "company", "source", "trombone_blocks", "trombone_hop_blocks",
+                    "trombone_rtt_blocks", "total_blocks", "pct"])
         for asn in sorted(isp):
             comp = next(b["company"] for b in blocks if b["asn"] == asn)
             for s in sorted(isp[asn]):
-                tb, tot = isp[asn][s]
-                w.writerow([asn, comp, s, tb, tot, f"{100*tb/tot:.0f}" if tot else 0])
+                tb, hb, rb, tot = isp[asn][s]
+                w.writerow([asn, comp, s, tb, hb, rb, tot, f"{100*tb/tot:.0f}" if tot else 0])
 
     # ---- summary ----
     print(f"\n=== Exp 4.1 census summary ({len(rows)} traceroutes w/ data) ===")
@@ -250,14 +263,15 @@ def main():
     if consistency[1]:
         print(f"  intra-block consistency: {consistency[0]}/{consistency[1]} "
               f"({100*consistency[0]/consistency[1]:.0f}%) of (block,source) had all IPs agree")
-    print("  per source: trombone blocks / total")
-    persrc = defaultdict(lambda: [0, 0])
+    print("  per source: trombone blocks (hop-confirmed / rtt-only) / total")
+    persrc = defaultdict(lambda: [0, 0, 0, 0])
     for asn in isp:
         for s in isp[asn]:
-            persrc[s][0] += isp[asn][s][0]; persrc[s][1] += isp[asn][s][1]
+            for i in range(4):
+                persrc[s][i] += isp[asn][s][i]
     for s in sorted(persrc):
-        tb, tot = persrc[s]
-        print(f"    {s:14} {tb:>4}/{tot:<4}  ({100*tb/tot:.0f}%)" if tot else f"    {s}: 0")
+        tb, hb, rb, tot = persrc[s]
+        print(f"    {s:14} {tb:>4}/{tot:<4}  ({100*tb/tot:.0f}%)  [hop {hb}, rtt {rb}]" if tot else f"    {s}: 0")
     print(f"  wrote {run_dir}/census_{ts}.csv + isp_tromboning.csv")
 
 
