@@ -414,27 +414,73 @@ def cmd_cdn():
     print("\nper-ISP CDN access (how often a CDN is reached LOCALLY):")
     print(summ.to_string(index=False))
 
-    # figure: 100%-stacked bar per ISP (local / regional / distant)
+    # figure: 100%-stacked bar per ISP (local / regional / distant), ISPs on the x-axis,
+    # left-to-right in the same best-to-worst peering order as the printed ranking above.
     GREEN, AMBER, RED = "#1baf7a", "#eda100", "#e34948"
     INK2, GRID, SURF = "#52514e", "#e1e0d9", "#fcfcfb"
     plt.rcParams.update({"figure.facecolor": SURF, "axes.facecolor": SURF, "savefig.facecolor": SURF,
                          "axes.edgecolor": "#c3c2b7", "font.family": "sans-serif", "font.size": 10,
                          "xtick.color": INK2, "ytick.color": INK2})
-    fig, ax = plt.subplots(figsize=(8.2, max(4, 0.42 * len(summ))))
-    labs = summ.isp[::-1]
-    loc, reg, dis = summ.pct_local[::-1], summ.pct_regional[::-1], summ.pct_distant[::-1]
-    ax.barh(labs, loc, color=GREEN, label="local (<15 ms)")
-    ax.barh(labs, reg, left=loc, color=AMBER, label="regional (15–50 ms)")
-    ax.barh(labs, dis, left=loc + reg, color=RED, label="distant (>50 ms)")
-    for i, (l, m) in enumerate(zip(loc, summ.median_rtt[::-1])):
-        ax.text(101, i, f"{l:.0f}% local · med {m:.0f} ms", va="center", fontsize=8, color=INK2)
-    ax.set_xlim(0, 100); ax.set_xlabel("share of CDN sites reached, by distance of the serving PoP (%)")
+    fig, ax = plt.subplots(figsize=(max(6.5, 0.9 * len(summ)), 5.4))
+    labs = summ.isp
+    loc, reg, dis = summ.pct_local, summ.pct_regional, summ.pct_distant
+    ax.bar(labs, loc, color=GREEN, label="local (<15 ms)")
+    ax.bar(labs, reg, bottom=loc, color=AMBER, label="regional (15–50 ms)")
+    ax.bar(labs, dis, bottom=loc + reg, color=RED, label="distant (>50 ms)")
+    for i, (l, m) in enumerate(zip(loc, summ.median_rtt)):
+        ax.text(i, 102, f"{l:.0f}%\nmed {m:.0f} ms", ha="center", va="bottom", fontsize=7.5, color=INK2)
+    ax.set_ylim(0, 112); ax.set_ylabel("share of CDN sites reached, by distance of the serving PoP (%)")
     ax.set_title("CDN access by ISP — how much content is served locally vs far", pad=12)
-    ax.legend(frameon=False, ncol=3, fontsize=8.5, loc="upper center", bbox_to_anchor=(0.5, -0.11))
+    plt.setp(ax.get_xticklabels(), rotation=35, ha="right")
+    ax.legend(frameon=False, ncol=3, fontsize=8.5, loc="upper center", bbox_to_anchor=(0.5, -0.24))
     fig.tight_layout()
     fig.savefig(os.path.join(HERE, "figures", "cdn_by_isp.png"), dpi=160, bbox_inches="tight")
     plt.close(fig)
     print("\nwrote figures/cdn_by_isp.png")
+
+    # table: per-site BEST case across all ISPs -- "sometimes near/regional (best case)" vs
+    # "always far" (no ISP, however well-peered, reaches this site under 50 ms).
+    best = d.loc[d.groupby("site")["min_rtt_ms"].idxmin(), ["site", "min_rtt_ms", "pop_class"]]
+    best = best.rename(columns={"min_rtt_ms": "best_rtt_ms", "pop_class": "best_case"})
+    n_sites = len(best)
+    order = ["distant", "regional", "local"]
+    label = {"distant": "always far (no ISP reaches it <50 ms)",
+              "regional": "sometimes regional (best case 15-50 ms)",
+              "local": "sometimes near (best case <15 ms)"}
+    counts = best["best_case"].value_counts().reindex(order).fillna(0).astype(int)
+    print(f"\nCDN sites by best-case reachability (closest any of the {summ.isp.nunique()} ISPs "
+          f"gets, out of {n_sites} CDN sites):")
+    for k in order:
+        names = best.loc[best.best_case == k, "site"].tolist()
+        example = ", ".join(names[:5]) + (f", +{len(names)-5} more" if len(names) > 5 else "")
+        print(f"  {label[k]:42s} {counts[k]:3d} / {n_sites} ({100*counts[k]/n_sites:4.1f}%)  e.g. {example}")
+    best["best_case"] = pd.Categorical(best["best_case"], categories=order, ordered=True)
+    best.sort_values(["best_case", "best_rtt_ms"]).to_csv(
+        os.path.join(HERE, "cdn_site_bestcase.csv"), index=False)
+    print("wrote cdn_site_bestcase.csv")
+
+    # figure: single 100%-stacked bar over all 39 CDN sites, by best-case reachability.
+    # Companion to cdn_by_isp.png (per-ISP), this one is per-SITE: does *any* ISP peer well
+    # enough to reach it locally, regardless of which ISP the citizen happens to be on.
+    fig, ax = plt.subplots(figsize=(7.5, 1.9))
+    pct = {k: 100 * counts[k] / n_sites for k in order}
+    left = 0
+    for k, color, lab in [("distant", RED, "always far"),
+                           ("regional", AMBER, "sometimes regional (best case)"),
+                           ("local", GREEN, "sometimes near (best case)")]:
+        ax.barh(["all CDN sites"], pct[k], left=left, color=color,
+                label=f"{lab} — {counts[k]} ({pct[k]:.0f}%)")
+        if pct[k] > 3:
+            ax.text(left + pct[k] / 2, 0, f"{pct[k]:.0f}%", ha="center", va="center",
+                    fontsize=9, color="white", fontweight="bold")
+        left += pct[k]
+    ax.set_xlim(0, 100); ax.set_xlabel("share of the 39 CDN-hosted sites (%)")
+    ax.set_yticks([]); ax.set_title("Is a local path available at all? (best PoP across all ISPs, per site)", pad=10, fontsize=11)
+    ax.legend(frameon=False, fontsize=8, loc="upper center", ncol=1, bbox_to_anchor=(1.32, 1.05))
+    fig.tight_layout()
+    fig.savefig(os.path.join(HERE, "figures", "cdn_site_bestcase.png"), dpi=160, bbox_inches="tight")
+    plt.close(fig)
+    print("wrote figures/cdn_site_bestcase.png")
 
 
 # ================================ subcommand: correct ================================
