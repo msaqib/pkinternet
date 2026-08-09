@@ -414,29 +414,43 @@ def cmd_cdn():
     print("\nper-ISP CDN access (how often a CDN is reached LOCALLY):")
     print(summ.to_string(index=False))
 
-    # figure: 100%-stacked bar per ISP (local / regional / distant), ISPs on the x-axis,
-    # left-to-right in the same best-to-worst peering order as the printed ranking above.
+    # figure: grouped bars per ISP (local / regional / distant side by side, all from a shared
+    # zero baseline), ISPs on the x-axis, left-to-right in the same best-to-worst peering order
+    # as the printed ranking above. Switched from a 100%-stacked bar after review: stacking makes
+    # the bottom segment (local) easy to compare across ISPs but hides the middle segment
+    # (regional), since its baseline shifts with every bar's local share — grouped bars give
+    # every segment its own shared zero baseline, so regional-vs-regional is now a fair read too.
     GREEN, AMBER, RED = "#1baf7a", "#eda100", "#e34948"
     INK2, GRID, SURF = "#52514e", "#e1e0d9", "#fcfcfb"
     plt.rcParams.update({"figure.facecolor": SURF, "axes.facecolor": SURF, "savefig.facecolor": SURF,
                          "axes.edgecolor": "#c3c2b7", "font.family": "sans-serif", "font.size": 10,
                          "xtick.color": INK2, "ytick.color": INK2})
-    fig, ax = plt.subplots(figsize=(max(6.5, 0.9 * len(summ)), 5.4))
-    labs = summ.isp
-    loc, reg, dis = summ.pct_local, summ.pct_regional, summ.pct_distant
-    ax.bar(labs, loc, color=GREEN, label="local (<15 ms)")
-    ax.bar(labs, reg, bottom=loc, color=AMBER, label="regional (15–50 ms)")
-    ax.bar(labs, dis, bottom=loc + reg, color=RED, label="distant (>50 ms)")
-    for i, (l, m) in enumerate(zip(loc, summ.median_rtt)):
-        ax.text(i, 102, f"{l:.0f}%\nmed {m:.0f} ms", ha="center", va="bottom", fontsize=7.5, color=INK2)
-    ax.set_ylim(0, 112); ax.set_ylabel("share of CDN sites reached, by distance of the serving PoP (%)")
+    fig, ax = plt.subplots(figsize=(max(7.5, 1.05 * len(summ)), 5.6))
+    labs = list(summ.isp)
+    loc, reg, dis = summ.pct_local.to_numpy(), summ.pct_regional.to_numpy(), summ.pct_distant.to_numpy()
+    x = np.arange(len(labs))
+    w = 0.27
+    bars_loc = ax.bar(x - w, loc, w, color=GREEN, label="local (<15 ms)")
+    bars_reg = ax.bar(x,     reg, w, color=AMBER, label="regional (15–50 ms)")
+    bars_dis = ax.bar(x + w, dis, w, color=RED,   label="distant (>50 ms)")
+    for bars in (bars_loc, bars_reg, bars_dis):
+        for b in bars:
+            h = b.get_height()
+            if h >= 1:
+                ax.text(b.get_x() + b.get_width() / 2, h + 1.5, f"{h:.0f}%",
+                        ha="center", va="bottom", fontsize=7, color=INK2)
+    for i, m in enumerate(summ.median_rtt):
+        ax.text(i, 108, f"median {m:.0f} ms", ha="center", va="bottom", fontsize=7.8,
+                color=INK2, style="italic")
+    ax.set_ylim(0, 118); ax.set_ylabel("share of that ISP's CDN connections (%)")
+    ax.set_xticks(x, labs)
     ax.set_title("CDN access by ISP — how much content is served locally vs far", pad=12)
     plt.setp(ax.get_xticklabels(), rotation=35, ha="right")
-    ax.legend(frameon=False, ncol=3, fontsize=8.5, loc="upper center", bbox_to_anchor=(0.5, -0.24))
+    ax.legend(frameon=False, ncol=3, fontsize=8.5, loc="upper center", bbox_to_anchor=(0.5, -0.22))
     fig.tight_layout()
     fig.savefig(os.path.join(HERE, "figures", "cdn_by_isp.png"), dpi=160, bbox_inches="tight")
     plt.close(fig)
-    print("\nwrote figures/cdn_by_isp.png")
+    print("\nwrote figures/cdn_by_isp.png (grouped-bar version)")
 
     # table: per-site BEST case across all ISPs -- "sometimes near/regional (best case)" vs
     # "always far" (no ISP, however well-peered, reaches this site under 50 ms).
