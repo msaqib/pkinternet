@@ -1,0 +1,288 @@
+==============================================================================
+ztbl.com.pk -- Pattern 2 anomaly: confirmed foreign hop present, but RTT
+exceeds the classifier's 500ms queue-noise cutoff, so it gets excluded and
+the round falls back to the RTT-alone signal instead of a hop-confirmed one.
+Generated from results/a/raw_a_20260730_192718.json.gz, all 14 matching
+rounds shown below (all from PTCL/Mianwali, probe 1016393, an intermittent
+vantage per CLAUDE.md).
+==============================================================================
+
+### Reference round: a CONFIRMED hairpin for this same site (for comparison) ###
+SOURCE: probe 7613 (zcom.7613)   DEST: ztbl.com.pk   round: 2026-07-16 00:02 UTC
+verdict -> type1(hop-only)=trombone_hop   type2(current paper, RTT-inclusive)=trombone_hop   (reference: clean confirmed hairpin)
+------------------------------------------------------------------------------
+  hop   1: 157.20.147.17    rtt=     0.278 ms  asn=152605 cc=PK  ZCOMNETWORKS-AS-AP - Z COM NETWORKS, PK
+  hop   2: 110.93.205.184   rtt=     0.539 ms  asn=38193  cc=PK  TWA-AS-AP - Transworld Associates (Pvt.) Ltd., PK
+  hop   3: 110.93.254.66    rtt=    23.092 ms  asn=-      cc=PK  TWA
+  hop   4: 110.93.252.246   rtt=    20.416 ms  asn=-      cc=PK  TWA
+  hop   5: 27.111.228.157   rtt=    99.657 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN]
+  hop   6: 2.21.120.114     rtt=    99.579 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN]
+  hop   7: 72.52.21.194     rtt=   273.038 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN]
+  hop   8: 192.168.51.90    rtt=    272.65 ms  asn=-      cc=-   RFC1918
+  hop   9: 192.168.201.6    rtt=   273.819 ms  asn=-      cc=-   RFC1918
+  hop  10: 172.16.54.3      rtt=   198.381 ms  asn=-      cc=-   RFC1918
+  hop  11: 175.107.33.22    rtt=   199.861 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK
+  hop  12: 203.101.184.80   rtt=   202.816 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK
+
+### Reference round: a clean LOCAL round for this same site (for comparison) ###
+SOURCE: probe 62224 (transworld.62224)   DEST: ztbl.com.pk   round: 2026-07-16 01:59 UTC
+verdict -> type1(hop-only)=local   type2(current paper, RTT-inclusive)=local   (reference: clean local)
+------------------------------------------------------------------------------
+  hop   1: 10.102.76.1      rtt=     1.345 ms  asn=-      cc=-   RFC1918
+  hop   2: 172.25.3.14      rtt=     0.642 ms  asn=-      cc=-   RFC1918
+  hop   3: * * *  (no reply)
+  hop   4: 203.101.184.80   rtt=  1004.305 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+
+### All Pattern-2 anomaly rounds ###
+
+--- anomaly round 1 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-16 00:03 UTC
+verdict -> type1(hop-only)=inconclusive   type2(current paper, RTT-inclusive)=trombone_rtt   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=     0.838 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=    46.744 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+  hop   3: 10.253.9.146     rtt=    29.003 ms  asn=-      cc=-   RFC1918
+  hop   4: 10.253.4.74      rtt=    29.337 ms  asn=-      cc=-   RFC1918
+  hop   5: 10.253.4.24      rtt=   556.428 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   6: 27.111.228.157   rtt=   588.467 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   7: 2.21.120.169     rtt=     528.5 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   8: 72.52.21.194     rtt=   635.883 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   9: 192.168.51.90    rtt=    562.39 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  10: 192.168.201.6    rtt=   658.489 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  11: 172.16.54.3      rtt=   688.937 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  12: 175.107.33.22    rtt=   607.249 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  13: 203.101.184.80   rtt=   423.201 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK
+
+--- anomaly round 2 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-16 14:03 UTC
+verdict -> type1(hop-only)=inconclusive   type2(current paper, RTT-inclusive)=trombone_rtt   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=     0.849 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=   404.307 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+  hop   3: 10.253.9.146     rtt=   442.329 ms  asn=-      cc=-   RFC1918
+  hop   4: 10.253.4.74      rtt=   492.943 ms  asn=-      cc=-   RFC1918
+  hop   5: 10.253.4.24      rtt=   514.911 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   6: 27.111.228.157   rtt=   527.646 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   7: 2.21.120.59      rtt=   590.569 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   8: 72.52.21.194     rtt=   697.363 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   9: 192.168.51.90    rtt=   621.692 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  10: 192.168.201.6    rtt=   701.171 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  11: 172.16.54.3      rtt=   562.915 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  12: 175.107.33.22    rtt=   676.856 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  13: 203.101.184.80   rtt=   717.771 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+
+--- anomaly round 3 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-16 15:03 UTC
+verdict -> type1(hop-only)=inconclusive   type2(current paper, RTT-inclusive)=trombone_rtt   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=     0.872 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=   540.887 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   3: 10.253.9.146     rtt=   427.926 ms  asn=-      cc=-   RFC1918
+  hop   4: 10.253.4.74      rtt=   412.297 ms  asn=-      cc=-   RFC1918
+  hop   5: 10.253.4.24      rtt=   621.179 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   6: 27.111.228.157   rtt=   501.343 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   7: 2.21.120.187     rtt=   532.806 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   8: 72.52.25.142     rtt=   640.486 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   9: 192.168.51.90    rtt=   652.907 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  10: 192.168.201.6    rtt=   672.738 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  11: 172.16.54.3      rtt=   715.058 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  12: 175.107.33.22    rtt=   599.788 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  13: 203.101.184.80   rtt=   706.981 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+
+--- anomaly round 4 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-17 01:03 UTC
+verdict -> type1(hop-only)=trombone_hop   type2(current paper, RTT-inclusive)=trombone_hop   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=     0.829 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=    532.22 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   3: 10.253.9.146     rtt=   436.582 ms  asn=-      cc=-   RFC1918
+  hop   4: 10.253.4.74      rtt=   235.982 ms  asn=-      cc=-   RFC1918
+  hop   5: 10.253.4.24      rtt=   571.075 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   6: 27.111.228.157   rtt=   456.162 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN]
+  hop   7: 2.21.120.114     rtt=   512.432 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   8: 72.52.21.194     rtt=   230.999 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN]
+  hop   9: 192.168.51.90    rtt=   201.659 ms  asn=-      cc=-   RFC1918
+  hop  10: 192.168.201.6    rtt=   201.941 ms  asn=-      cc=-   RFC1918
+  hop  11: 172.16.54.3      rtt=   202.033 ms  asn=-      cc=-   RFC1918
+  hop  12: 175.107.33.22    rtt=   201.384 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK
+  hop  13: 203.101.184.80   rtt=   201.804 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK
+
+--- anomaly round 5 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-17 05:03 UTC
+verdict -> type1(hop-only)=inconclusive   type2(current paper, RTT-inclusive)=trombone_rtt   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=      0.89 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=   407.323 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+  hop   3: 10.253.9.150     rtt=   542.128 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   4: 10.253.4.52      rtt=   382.822 ms  asn=-      cc=-   RFC1918
+  hop   5: 10.253.4.2       rtt=   463.859 ms  asn=-      cc=-   RFC1918
+  hop   6: 27.111.228.157   rtt=   637.131 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   7: 2.21.120.90      rtt=   575.184 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   8: 72.52.21.194     rtt=   710.407 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   9: 192.168.51.90    rtt=   611.556 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  10: 192.168.201.6    rtt=   690.437 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  11: 172.16.54.3      rtt=   743.766 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  12: 175.107.33.22    rtt=   653.155 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  13: 203.101.184.80   rtt=   539.819 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+
+--- anomaly round 6 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-18 10:03 UTC
+verdict -> type1(hop-only)=inconclusive   type2(current paper, RTT-inclusive)=trombone_hop   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=     0.902 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=   622.913 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   3: 10.253.9.146     rtt=   335.493 ms  asn=-      cc=-   RFC1918
+  hop   4: 10.253.4.74      rtt=   369.119 ms  asn=-      cc=-   RFC1918
+  hop   5: 10.253.4.24      rtt=   505.502 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   6: 27.111.228.157   rtt=   552.641 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   7: 2.21.120.177     rtt=    439.93 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN]
+  hop   8: 72.52.25.142     rtt=   446.121 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN]
+  hop   9: 192.168.51.90    rtt=   530.884 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  10: 192.168.201.6    rtt=   556.778 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  11: 172.16.54.3      rtt=   573.541 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  12: 175.107.33.22    rtt=   695.718 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  13: 203.101.184.80   rtt=   623.466 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+
+--- anomaly round 7 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-15 00:03 UTC
+verdict -> type1(hop-only)=inconclusive   type2(current paper, RTT-inclusive)=trombone_rtt   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=      0.75 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=   408.565 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+  hop   3: 10.253.9.150     rtt=   466.184 ms  asn=-      cc=-   RFC1918
+  hop   4: 10.253.4.52      rtt=   548.047 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   5: * * *  (no reply)
+  hop   6: 27.111.228.157   rtt=   560.677 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   7: 2.21.120.120     rtt=   575.474 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   8: 72.52.21.194     rtt=   613.251 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   9: 192.168.51.90    rtt=   633.957 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  10: 192.168.201.6    rtt=   699.409 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  11: 172.16.54.3      rtt=   721.375 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  12: 175.107.33.22    rtt=   609.456 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  13: 203.101.184.80   rtt=    583.98 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+
+--- anomaly round 8 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-15 09:03 UTC
+verdict -> type1(hop-only)=inconclusive   type2(current paper, RTT-inclusive)=trombone_rtt   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=     0.837 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=   494.219 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+  hop   3: 10.253.9.150     rtt=   401.232 ms  asn=-      cc=-   RFC1918
+  hop   4: 10.253.4.52      rtt=   255.872 ms  asn=-      cc=-   RFC1918
+  hop   5: * * *  (no reply)
+  hop   6: 27.111.228.157   rtt=   563.086 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   7: 2.21.120.146     rtt=   615.859 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   8: 72.52.25.142     rtt=   729.685 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   9: 192.168.51.90    rtt=   502.849 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  10: 192.168.201.6    rtt=    496.69 ms  asn=-      cc=-   RFC1918
+  hop  11: 172.16.54.3      rtt=   599.118 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  12: 175.107.33.22    rtt=   680.255 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  13: 203.101.184.80   rtt=   592.708 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+
+--- anomaly round 9 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-15 12:03 UTC
+verdict -> type1(hop-only)=inconclusive   type2(current paper, RTT-inclusive)=trombone_hop   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=     0.821 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=   547.352 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   3: 10.253.9.146     rtt=   464.349 ms  asn=-      cc=-   RFC1918
+  hop   4: 10.253.4.74      rtt=    555.18 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   5: 10.253.4.24      rtt=   427.808 ms  asn=-      cc=-   RFC1918
+  hop   6: 27.111.228.157   rtt=   505.717 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   7: 2.21.120.90      rtt=   518.177 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   8: 72.52.25.142     rtt=   210.757 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN]
+  hop   9: 192.168.51.90    rtt=   211.489 ms  asn=-      cc=-   RFC1918
+  hop  10: 192.168.201.6    rtt=   213.137 ms  asn=-      cc=-   RFC1918
+  hop  11: 172.16.54.3      rtt=    215.32 ms  asn=-      cc=-   RFC1918
+  hop  12: 175.107.33.22    rtt=   212.241 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK
+  hop  13: 203.101.184.80   rtt=   212.226 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK
+
+--- anomaly round 10 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-15 18:03 UTC
+verdict -> type1(hop-only)=inconclusive   type2(current paper, RTT-inclusive)=trombone_rtt   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=     0.827 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=   353.649 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+  hop   3: 10.253.9.150     rtt=   405.234 ms  asn=-      cc=-   RFC1918
+  hop   4: 10.253.4.52      rtt=   465.174 ms  asn=-      cc=-   RFC1918
+  hop   5: 10.253.4.2       rtt=   506.307 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   6: 27.111.228.157   rtt=   603.917 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   7: 2.21.120.90      rtt=    660.03 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   8: 72.52.25.142     rtt=   578.867 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   9: 192.168.51.90    rtt=   636.925 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  10: 192.168.201.6    rtt=   589.786 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  11: 172.16.54.3      rtt=   567.518 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  12: 175.107.33.22    rtt=   664.002 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  13: 203.101.184.80   rtt=   692.676 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+
+--- anomaly round 11 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-15 23:03 UTC
+verdict -> type1(hop-only)=inconclusive   type2(current paper, RTT-inclusive)=trombone_rtt   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=     0.859 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=   477.785 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+  hop   3: 10.253.9.146     rtt=   499.814 ms  asn=-      cc=-   RFC1918
+  hop   4: 10.253.4.74      rtt=   543.343 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   5: 10.253.4.24      rtt=   502.963 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   6: 27.111.228.157   rtt=   576.853 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   7: 2.21.120.169     rtt=    501.23 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   8: 72.52.21.194     rtt=   620.873 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   9: 192.168.51.90    rtt=   590.983 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  10: 192.168.201.6    rtt=   621.354 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  11: 172.16.54.3      rtt=   699.026 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  12: 175.107.33.22    rtt=   722.093 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  13: 203.101.184.80   rtt=   623.325 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+
+--- anomaly round 12 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-14 15:03 UTC
+verdict -> type1(hop-only)=inconclusive   type2(current paper, RTT-inclusive)=trombone_hop   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=     0.916 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=   508.481 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   3: 10.253.9.146     rtt=   546.495 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   4: 10.253.4.74      rtt=   364.879 ms  asn=-      cc=-   RFC1918
+  hop   5: * * *  (no reply)
+  hop   6: 27.111.228.157   rtt=    539.79 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   7: 2.21.120.59      rtt=    487.48 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN]
+  hop   8: 72.52.21.194     rtt=    713.28 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   9: 192.168.51.90    rtt=   803.108 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  10: 192.168.201.6    rtt=   813.034 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  11: 172.16.54.3      rtt=   712.371 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  12: 175.107.33.22    rtt=   687.418 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  13: 203.101.184.80   rtt=   701.545 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+
+--- anomaly round 13 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-14 19:03 UTC
+verdict -> type1(hop-only)=trombone_hop   type2(current paper, RTT-inclusive)=trombone_hop   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=     0.884 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=   496.341 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+  hop   3: 10.253.9.150     rtt=   512.954 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   4: 10.253.4.52      rtt=   325.527 ms  asn=-      cc=-   RFC1918
+  hop   5: * * *  (no reply)
+  hop   6: 27.111.228.157   rtt=   483.376 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN]
+  hop   7: 2.21.120.146     rtt=   625.667 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   8: 72.52.21.194     rtt=   582.598 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   9: 192.168.51.90    rtt=   671.968 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  10: 192.168.201.6    rtt=   705.256 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  11: 172.16.54.3      rtt=   215.543 ms  asn=-      cc=-   RFC1918
+  hop  12: 175.107.33.22    rtt=   216.598 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK
+  hop  13: 203.101.184.80   rtt=   220.357 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK
+
+--- anomaly round 14 of 14 ---
+SOURCE: probe 1016393 (ptcl.1016393)   DEST: ztbl.com.pk   round: 2026-07-13 10:03 UTC
+verdict -> type1(hop-only)=inconclusive   type2(current paper, RTT-inclusive)=trombone_rtt   
+------------------------------------------------------------------------------
+  hop   1: 192.168.10.1     rtt=     0.898 ms  asn=-      cc=-   RFC1918
+  hop   2: 39.45.64.1       rtt=    54.616 ms  asn=17557  cc=PK  PKTELECOM-AS-PK - Pakistan Telecommunication Company Limited, PK
+  hop   3: 10.253.9.146     rtt=    34.501 ms  asn=-      cc=-   RFC1918
+  hop   4: 10.253.4.74      rtt=   117.142 ms  asn=-      cc=-   RFC1918
+  hop   5: * * *  (no reply)
+  hop   6: 27.111.228.157   rtt=   519.928 ms  asn=-      cc=SG  EQUINIX-AP  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   7: 2.21.120.208     rtt=   548.096 ms  asn=32787  cc=NL  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   8: 72.52.21.194     rtt=   815.736 ms  asn=32787  cc=US  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies, Inc., US  [FOREIGN] <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop   9: 192.168.51.90    rtt=   816.385 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  10: 192.168.201.6    rtt=   577.414 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  11: 172.16.54.3      rtt=   627.848 ms  asn=-      cc=-   RFC1918 <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  12: 175.107.33.22    rtt=   641.958 ms  asn=23888  cc=PK  NTC-AS-AP - National Telecommunication Corporation HQ,, PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check
+  hop  13: 203.101.184.80   rtt=   796.705 ms  asn=9541   cc=PK  CYBERNET-AP - Cyber Internet Services (Pvt) Ltd., PK <<< over 500ms queue-ceiling cutoff, EXCLUDED by both detectors' foreign check

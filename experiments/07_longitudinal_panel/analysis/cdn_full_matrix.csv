@@ -1,0 +1,547 @@
+isp,probe_id,site,min_rtt_ms,pop_class,ratio_vs_best,provider,mechanism,hop_count_responding,verdict,maxrtt
+zcom,7613,apkamazon.com.pk,91.3,distant,43.48,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,105.1
+nayatel,60223,apkamazon.com.pk,2.1,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.2
+transworld,62224,apkamazon.com.pk,94.7,distant,45.1,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.2
+tes,64078,apkamazon.com.pk,97.8,distant,46.57,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,103.9
+orbit,64535,apkamazon.com.pk,94.2,distant,44.86,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,101.6
+tes,64722,apkamazon.com.pk,78.2,distant,37.24,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.6
+nayatel,65892,apkamazon.com.pk,2.7,local,1.29,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.8
+fasttel,1014872,apkamazon.com.pk,202.4,distant,96.38,Cloudflare,via_foreign_transit_Level3/Lumen,11,TROMBONE,286.7
+nova,1015679,apkamazon.com.pk,92.7,distant,44.14,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,102.5
+cybernet,1016036,apkamazon.com.pk,22.8,regional,10.86,Cloudflare,via_foreign_transit_Omantel,11,TROMBONE,45.7
+ptcl,1016126,apkamazon.com.pk,264.1,distant,125.76,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,293.9
+cybernet,1016143,apkamazon.com.pk,4.5,local,2.14,Cloudflare,via_foreign_transit_Omantel,5,LOCAL,25.2
+cybernet,1016154,apkamazon.com.pk,3.6,local,1.71,Cloudflare,own_network_direct_registry,3,LOCAL,4.1
+ptcl,1016393,apkamazon.com.pk,269.3,distant,128.24,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,464.4
+zcom,7613,auroracloset.pk,15.7,regional,6.28,Cloudflare,via_Transworld_registry,5,LOCAL,16.3
+nayatel,60223,auroracloset.pk,2.5,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.4
+transworld,62224,auroracloset.pk,18.7,regional,7.48,Cloudflare,no_visible_handoff_short_path,3,LOCAL,22.9
+tes,64078,auroracloset.pk,22.4,regional,8.96,Cloudflare,own_network_direct_registry,7,LOCAL,23.9
+orbit,64535,auroracloset.pk,18.0,regional,7.2,Cloudflare,via_Transworld_registry,7,LOCAL,21.4
+tes,64722,auroracloset.pk,2.8,local,1.12,Cloudflare,own_network_direct_registry,6,LOCAL,3.6
+nayatel,65892,auroracloset.pk,2.9,local,1.16,Cloudflare,no_visible_handoff_short_path,3,LOCAL,4.2
+fasttel,1014872,auroracloset.pk,21.7,regional,8.68,Cloudflare,no_visible_handoff_short_path,6,TROMBONE,80.5
+nova,1015679,auroracloset.pk,17.4,regional,6.96,Cloudflare,via_Transworld_registry,6,LOCAL,18.4
+cybernet,1016036,auroracloset.pk,117.6,distant,47.04,Cloudflare,own_network_direct,8,TROMBONE,120.3
+ptcl,1016126,auroracloset.pk,25.3,regional,10.12,Cloudflare,own_network_direct,6,LOCAL,26.9
+cybernet,1016143,auroracloset.pk,99.2,distant,39.68,Cloudflare,own_network_direct_registry,4,TROMBONE,100.1
+cybernet,1016154,auroracloset.pk,108.6,distant,43.44,Cloudflare,own_network_direct_registry,3,TROMBONE,99.2
+ptcl,1016393,auroracloset.pk,25.4,regional,10.16,Cloudflare,own_network_direct,6,TROMBONE,451.1
+zcom,7613,burgeroclock.com.pk,16.0,regional,6.67,Cloudflare,via_Transworld,6,LOCAL,17.2
+nayatel,60223,burgeroclock.com.pk,2.4,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.1
+transworld,62224,burgeroclock.com.pk,20.2,regional,8.42,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.1
+tes,64078,burgeroclock.com.pk,21.8,regional,9.08,Cloudflare,own_network_direct,8,LOCAL,24.4
+orbit,64535,burgeroclock.com.pk,19.2,regional,8.0,Cloudflare,via_Transworld,9,LOCAL,21.2
+tes,64722,burgeroclock.com.pk,2.8,local,1.17,Cloudflare,own_network_direct,7,LOCAL,4.8
+nayatel,65892,burgeroclock.com.pk,3.0,local,1.25,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.4
+fasttel,1014872,burgeroclock.com.pk,22.1,regional,9.21,Cloudflare,via_PTCL(Paknet),9,LOCAL,29.8
+nova,1015679,burgeroclock.com.pk,17.6,regional,7.33,Cloudflare,via_Transworld,7,LOCAL,30.5
+cybernet,1016036,burgeroclock.com.pk,22.7,regional,9.46,Cloudflare,own_network_direct,8,LOCAL,25.8
+ptcl,1016126,burgeroclock.com.pk,25.3,regional,10.54,Cloudflare,own_network_direct,7,LOCAL,26.2
+cybernet,1016143,burgeroclock.com.pk,4.4,local,1.83,Cloudflare,own_network_direct_registry,4,LOCAL,4.7
+cybernet,1016154,burgeroclock.com.pk,4.0,local,1.67,Cloudflare,own_network_direct_registry,4,LOCAL,4.0
+ptcl,1016393,burgeroclock.com.pk,23.6,regional,9.83,Cloudflare,own_network_direct,7,TROMBONE,489.3
+zcom,7613,businesslist.pk,91.2,distant,38.0,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,172.6
+nayatel,60223,businesslist.pk,2.4,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.2
+transworld,62224,businesslist.pk,95.8,distant,39.92,Cloudflare,no_visible_handoff_short_path,3,LOCAL,0.9
+tes,64078,businesslist.pk,97.4,distant,40.58,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,103.9
+orbit,64535,businesslist.pk,93.3,distant,38.88,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,125.7
+tes,64722,businesslist.pk,78.2,distant,32.58,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.0
+nayatel,65892,businesslist.pk,2.8,local,1.17,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.9
+fasttel,1014872,businesslist.pk,127.6,distant,53.17,Cloudflare,via_foreign_transit_Level3/Lumen,11,TROMBONE,281.6
+nova,1015679,businesslist.pk,92.7,distant,38.62,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,108.0
+cybernet,1016036,businesslist.pk,22.8,regional,9.5,Cloudflare,own_network_direct,8,LOCAL,27.6
+ptcl,1016126,businesslist.pk,136.6,distant,56.92,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,293.9
+cybernet,1016143,businesslist.pk,4.3,local,1.79,Cloudflare,own_network_direct_registry,4,LOCAL,4.7
+cybernet,1016154,businesslist.pk,4.0,local,1.67,Cloudflare,own_network_direct_registry,3,LOCAL,4.0
+ptcl,1016393,businesslist.pk,131.3,distant,54.71,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,491.2
+zcom,7613,digikhata.pk,16.1,regional,6.44,Cloudflare,via_Transworld,6,LOCAL,17.1
+nayatel,60223,digikhata.pk,2.5,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.2
+transworld,62224,digikhata.pk,19.6,regional,7.84,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.3
+tes,64078,digikhata.pk,22.6,regional,9.04,Cloudflare,own_network_direct,8,LOCAL,23.9
+orbit,64535,digikhata.pk,18.4,regional,7.36,Cloudflare,via_Transworld,8,LOCAL,27.1
+tes,64722,digikhata.pk,2.7,local,1.08,Cloudflare,own_network_direct,7,LOCAL,3.6
+nayatel,65892,digikhata.pk,2.7,local,1.08,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.8
+fasttel,1014872,digikhata.pk,127.5,distant,51.0,Cloudflare,via_foreign_transit_Level3/Lumen,11,TROMBONE,281.1
+nova,1015679,digikhata.pk,17.1,regional,6.84,Cloudflare,via_Transworld,7,LOCAL,24.4
+cybernet,1016036,digikhata.pk,22.6,regional,9.04,Cloudflare,own_network_direct,8,LOCAL,25.6
+ptcl,1016126,digikhata.pk,130.0,distant,52.0,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,287.3
+cybernet,1016143,digikhata.pk,4.1,local,1.64,Cloudflare,own_network_direct_registry,4,LOCAL,4.8
+cybernet,1016154,digikhata.pk,4.0,local,1.6,Cloudflare,own_network_direct_registry,3,LOCAL,4.2
+ptcl,1016393,digikhata.pk,131.2,distant,52.48,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,467.5
+zcom,7613,dogar.com.pk,91.3,distant,33.81,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,155.6
+nayatel,60223,dogar.com.pk,2.7,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.1
+transworld,62224,dogar.com.pk,95.9,distant,35.52,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.2
+tes,64078,dogar.com.pk,98.0,distant,36.3,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,131.2
+orbit,64535,dogar.com.pk,95.0,distant,35.19,Cloudflare,via_foreign_transit_China Mobile Intl (HK),13,TROMBONE,100.2
+tes,64722,dogar.com.pk,78.0,distant,28.89,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.4
+nayatel,65892,dogar.com.pk,2.8,local,1.04,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.9
+fasttel,1014872,dogar.com.pk,201.0,distant,74.44,Cloudflare,via_PTCL,7,TROMBONE,217.4
+nova,1015679,dogar.com.pk,92.3,distant,34.19,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,107.3
+cybernet,1016036,dogar.com.pk,22.6,regional,8.37,Cloudflare,own_network_direct,8,LOCAL,25.7
+ptcl,1016126,dogar.com.pk,269.5,distant,99.81,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,293.6
+cybernet,1016143,dogar.com.pk,4.3,local,1.59,Cloudflare,own_network_direct_registry,4,LOCAL,4.6
+cybernet,1016154,dogar.com.pk,3.8,local,1.41,Cloudflare,own_network_direct_registry,3,LOCAL,4.1
+ptcl,1016393,dogar.com.pk,267.7,distant,99.15,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,462.7
+zcom,7613,historicalpoint.pk,94.9,distant,37.96,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,117.6
+nayatel,60223,historicalpoint.pk,2.5,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.8
+transworld,62224,historicalpoint.pk,94.7,distant,37.88,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.3
+tes,64078,historicalpoint.pk,97.7,distant,39.08,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,104.1
+orbit,64535,historicalpoint.pk,93.9,distant,37.56,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,147.8
+tes,64722,historicalpoint.pk,78.0,distant,31.2,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.4
+nayatel,65892,historicalpoint.pk,2.7,local,1.08,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.7
+fasttel,1014872,historicalpoint.pk,200.9,distant,80.36,Cloudflare,via_foreign_transit_Level3/Lumen,11,TROMBONE,270.1
+nova,1015679,historicalpoint.pk,92.6,distant,37.04,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,108.4
+cybernet,1016036,historicalpoint.pk,22.5,regional,9.0,Cloudflare,own_network_direct,8,LOCAL,26.2
+ptcl,1016126,historicalpoint.pk,262.7,distant,105.08,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,301.8
+cybernet,1016143,historicalpoint.pk,4.5,local,1.8,Cloudflare,own_network_direct_registry,4,LOCAL,4.7
+cybernet,1016154,historicalpoint.pk,3.5,local,1.4,Cloudflare,own_network_direct_registry,3,LOCAL,4.0
+ptcl,1016393,historicalpoint.pk,268.3,distant,107.32,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,459.3
+zcom,7613,honda.com.pk,16.3,regional,7.41,Cloudflare,via_Transworld,6,LOCAL,17.0
+nayatel,60223,honda.com.pk,2.2,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.8
+transworld,62224,honda.com.pk,19.9,regional,9.05,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.1
+tes,64078,honda.com.pk,22.3,regional,10.14,Cloudflare,own_network_direct,8,LOCAL,24.2
+orbit,64535,honda.com.pk,18.8,regional,8.55,Cloudflare,via_Transworld,8,LOCAL,22.1
+tes,64722,honda.com.pk,2.9,local,1.32,Cloudflare,own_network_direct,7,LOCAL,4.2
+nayatel,65892,honda.com.pk,3.1,local,1.41,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.4
+fasttel,1014872,honda.com.pk,22.0,regional,10.0,Cloudflare,via_PTCL(Paknet),9,LOCAL,28.0
+nova,1015679,honda.com.pk,17.0,regional,7.73,Cloudflare,via_Transworld,7,LOCAL,29.1
+cybernet,1016036,honda.com.pk,22.6,regional,10.27,Cloudflare,own_network_direct,8,LOCAL,26.4
+ptcl,1016126,honda.com.pk,25.5,regional,11.59,Cloudflare,own_network_direct,7,LOCAL,26.6
+cybernet,1016143,honda.com.pk,4.1,local,1.86,Cloudflare,own_network_direct_registry,4,LOCAL,4.8
+cybernet,1016154,honda.com.pk,3.4,local,1.55,Cloudflare,own_network_direct_registry,3,LOCAL,4.0
+ptcl,1016393,honda.com.pk,23.9,regional,10.86,Cloudflare,own_network_direct,7,LOCAL,28.9
+zcom,7613,logoofficial.com,16.1,regional,6.44,Cloudflare,via_Transworld_registry,5,LOCAL,16.2
+nayatel,60223,logoofficial.com,2.5,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.8
+transworld,62224,logoofficial.com,19.4,regional,7.76,Cloudflare,no_visible_handoff_short_path,3,LOCAL,22.2
+tes,64078,logoofficial.com,22.5,regional,9.0,Cloudflare,own_network_direct_registry,7,LOCAL,23.4
+orbit,64535,logoofficial.com,18.5,regional,7.4,Cloudflare,via_Transworld_registry,7,LOCAL,20.8
+tes,64722,logoofficial.com,2.8,local,1.12,Cloudflare,own_network_direct_registry,6,LOCAL,3.6
+nayatel,65892,logoofficial.com,2.6,local,1.04,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.3
+fasttel,1014872,logoofficial.com,22.2,regional,8.88,Cloudflare,via_PTCL,7,LOCAL,24.9
+nova,1015679,logoofficial.com,17.3,regional,6.92,Cloudflare,via_Transworld_registry,6,LOCAL,18.5
+cybernet,1016036,logoofficial.com,127.6,distant,51.04,Cloudflare,own_network_direct,8,TROMBONE,121.0
+ptcl,1016126,logoofficial.com,25.2,regional,10.08,Cloudflare,own_network_direct,5,LOCAL,27.0
+cybernet,1016143,logoofficial.com,99.4,distant,39.76,Cloudflare,own_network_direct_registry,4,TROMBONE,100.6
+cybernet,1016154,logoofficial.com,99.1,distant,39.64,Cloudflare,own_network_direct_registry,4,TROMBONE,99.4
+ptcl,1016393,logoofficial.com,28.4,regional,11.36,Cloudflare,own_network_direct,6,TROMBONE,362.7
+zcom,7613,meerzah.pk,15.7,regional,6.54,Cloudflare,via_Transworld_registry,5,LOCAL,16.3
+nayatel,60223,meerzah.pk,2.4,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.2
+transworld,62224,meerzah.pk,19.0,regional,7.92,Cloudflare,no_visible_handoff_short_path,3,LOCAL,23.1
+tes,64078,meerzah.pk,22.0,regional,9.17,Cloudflare,own_network_direct_registry,7,LOCAL,23.2
+orbit,64535,meerzah.pk,18.5,regional,7.71,Cloudflare,via_Transworld_registry,8,LOCAL,21.1
+tes,64722,meerzah.pk,2.4,local,1.0,Cloudflare,own_network_direct_registry,6,LOCAL,3.0
+nayatel,65892,meerzah.pk,2.7,local,1.13,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.5
+fasttel,1014872,meerzah.pk,21.5,regional,8.96,Cloudflare,via_PTCL,8,LOCAL,30.2
+nova,1015679,meerzah.pk,17.1,regional,7.13,Cloudflare,via_Transworld_registry,6,LOCAL,33.4
+cybernet,1016036,meerzah.pk,117.3,distant,48.88,Cloudflare,own_network_direct,8,TROMBONE,120.5
+ptcl,1016126,meerzah.pk,25.2,regional,10.5,Cloudflare,own_network_direct,6,LOCAL,26.0
+cybernet,1016143,meerzah.pk,99.1,distant,41.29,Cloudflare,own_network_direct_registry,4,TROMBONE,100.3
+cybernet,1016154,meerzah.pk,108.7,distant,45.29,Cloudflare,own_network_direct_registry,4,TROMBONE,99.5
+ptcl,1016393,meerzah.pk,27.6,regional,11.5,Cloudflare,own_network_direct,6,LOCAL,28.2
+zcom,7613,mepcoebillcheck.pk,91.0,distant,39.57,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,148.3
+nayatel,60223,mepcoebillcheck.pk,2.3,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.4
+transworld,62224,mepcoebillcheck.pk,95.0,distant,41.3,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.1
+tes,64078,mepcoebillcheck.pk,97.7,distant,42.48,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,103.8
+orbit,64535,mepcoebillcheck.pk,93.9,distant,40.83,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,122.2
+tes,64722,mepcoebillcheck.pk,78.1,distant,33.96,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.5
+nayatel,65892,mepcoebillcheck.pk,2.9,local,1.26,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.9
+fasttel,1014872,mepcoebillcheck.pk,202.9,distant,88.22,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,277.4
+nova,1015679,mepcoebillcheck.pk,96.4,distant,41.91,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,103.2
+cybernet,1016036,mepcoebillcheck.pk,23.1,regional,10.04,Cloudflare,own_network_direct,8,LOCAL,25.5
+ptcl,1016126,mepcoebillcheck.pk,265.5,distant,115.43,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,293.6
+cybernet,1016143,mepcoebillcheck.pk,4.3,local,1.87,Cloudflare,own_network_direct_registry,4,LOCAL,4.5
+cybernet,1016154,mepcoebillcheck.pk,3.8,local,1.65,Cloudflare,own_network_direct_registry,4,LOCAL,3.9
+ptcl,1016393,mepcoebillcheck.pk,269.4,distant,117.13,Cloudflare,via_foreign_transit_Level3/Lumen,8,TROMBONE,481.5
+zcom,7613,motifz.com.pk,15.7,regional,7.14,Cloudflare,via_Transworld_registry,5,LOCAL,16.4
+nayatel,60223,motifz.com.pk,2.2,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.8
+transworld,62224,motifz.com.pk,20.1,regional,9.14,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.6
+tes,64078,motifz.com.pk,21.9,regional,9.95,Cloudflare,own_network_direct_registry,7,LOCAL,23.3
+orbit,64535,motifz.com.pk,18.6,regional,8.45,Cloudflare,via_Transworld_registry,7,LOCAL,20.3
+tes,64722,motifz.com.pk,2.8,local,1.27,Cloudflare,own_network_direct_registry,6,LOCAL,3.4
+nayatel,65892,motifz.com.pk,2.9,local,1.32,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.4
+fasttel,1014872,motifz.com.pk,21.8,regional,9.91,Cloudflare,via_PTCL,8,LOCAL,28.3
+nova,1015679,motifz.com.pk,17.4,regional,7.91,Cloudflare,via_Transworld_registry,6,LOCAL,25.9
+cybernet,1016036,motifz.com.pk,117.5,distant,53.41,Cloudflare,own_network_direct,9,TROMBONE,130.1
+ptcl,1016126,motifz.com.pk,25.2,regional,11.45,Cloudflare,own_network_direct,6,LOCAL,26.7
+cybernet,1016143,motifz.com.pk,99.4,distant,45.18,Cloudflare,own_network_direct_registry,4,TROMBONE,100.0
+cybernet,1016154,motifz.com.pk,108.7,distant,49.41,Cloudflare,own_network_direct_registry,3,TROMBONE,108.8
+ptcl,1016393,motifz.com.pk,27.7,regional,12.59,Cloudflare,own_network_direct,6,TROMBONE,222.8
+zcom,7613,pesconlinebill.pk,91.3,distant,43.48,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,149.5
+nayatel,60223,pesconlinebill.pk,2.1,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.7
+transworld,62224,pesconlinebill.pk,95.2,distant,45.33,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.3
+tes,64078,pesconlinebill.pk,98.1,distant,46.71,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,103.8
+orbit,64535,pesconlinebill.pk,93.4,distant,44.48,Cloudflare,via_foreign_transit_China Mobile Intl (HK),13,TROMBONE,113.3
+tes,64722,pesconlinebill.pk,78.1,distant,37.19,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.7
+nayatel,65892,pesconlinebill.pk,2.7,local,1.29,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.4
+fasttel,1014872,pesconlinebill.pk,127.1,distant,60.52,Cloudflare,via_foreign_transit_Level3/Lumen,11,TROMBONE,274.9
+nova,1015679,pesconlinebill.pk,92.3,distant,43.95,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,101.0
+cybernet,1016036,pesconlinebill.pk,22.6,regional,10.76,Cloudflare,own_network_direct,8,LOCAL,25.2
+ptcl,1016126,pesconlinebill.pk,129.8,distant,61.81,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,287.1
+cybernet,1016143,pesconlinebill.pk,4.3,local,2.05,Cloudflare,own_network_direct_registry,4,LOCAL,4.8
+cybernet,1016154,pesconlinebill.pk,3.7,local,1.76,Cloudflare,own_network_direct_registry,3,LOCAL,3.8
+ptcl,1016393,pesconlinebill.pk,129.9,distant,61.86,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,482.3
+zcom,7613,pinkpetals.pk,91.9,distant,39.96,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,169.7
+nayatel,60223,pinkpetals.pk,2.3,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.3
+transworld,62224,pinkpetals.pk,94.2,distant,40.96,Cloudflare,no_visible_handoff_short_path,3,TROMBONE,96.5
+tes,64078,pinkpetals.pk,97.3,distant,42.3,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,104.0
+orbit,64535,pinkpetals.pk,93.8,distant,40.78,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,99.8
+tes,64722,pinkpetals.pk,78.1,distant,33.96,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.4
+nayatel,65892,pinkpetals.pk,3.1,local,1.35,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.8
+fasttel,1014872,pinkpetals.pk,200.3,distant,87.09,Cloudflare,via_foreign_transit_Level3/Lumen,11,TROMBONE,270.8
+nova,1015679,pinkpetals.pk,92.8,distant,40.35,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,117.4
+cybernet,1016036,pinkpetals.pk,22.3,regional,9.7,Cloudflare,via_foreign_transit_Omantel,10,TROMBONE,41.9
+ptcl,1016126,pinkpetals.pk,262.9,distant,114.3,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,294.0
+cybernet,1016143,pinkpetals.pk,4.5,local,1.96,Cloudflare,own_network_direct_registry,4,LOCAL,21.8
+cybernet,1016154,pinkpetals.pk,3.9,local,1.7,Cloudflare,own_network_direct_registry,3,LOCAL,5.8
+ptcl,1016393,pinkpetals.pk,268.2,distant,116.61,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,464.3
+zcom,7613,reading.pk,91.4,distant,33.85,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,165.1
+nayatel,60223,reading.pk,2.8,local,1.04,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.4
+transworld,62224,reading.pk,95.1,distant,35.22,Cloudflare,no_visible_handoff_short_path,3,TROMBONE,102.9
+tes,64078,reading.pk,98.3,distant,36.41,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,104.2
+orbit,64535,reading.pk,93.7,distant,34.7,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,133.5
+tes,64722,reading.pk,78.1,distant,28.93,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.3
+nayatel,65892,reading.pk,2.7,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.7
+fasttel,1014872,reading.pk,203.9,distant,75.52,Cloudflare,via_foreign_transit_Level3/Lumen,11,TROMBONE,278.6
+nova,1015679,reading.pk,92.3,distant,34.19,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,107.8
+cybernet,1016036,reading.pk,22.0,regional,8.15,Cloudflare,own_network_direct,8,LOCAL,25.8
+ptcl,1016126,reading.pk,276.9,distant,102.56,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,293.7
+cybernet,1016143,reading.pk,4.6,local,1.7,Cloudflare,own_network_direct_registry,4,LOCAL,4.6
+cybernet,1016154,reading.pk,3.3,local,1.22,Cloudflare,own_network_direct_registry,3,LOCAL,3.9
+ptcl,1016393,reading.pk,267.6,distant,99.11,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,458.5
+zcom,7613,sarazcollection.pk,15.7,regional,7.85,Cloudflare,via_Transworld_registry,5,LOCAL,16.3
+nayatel,60223,sarazcollection.pk,2.0,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,4.2
+transworld,62224,sarazcollection.pk,19.7,regional,9.85,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.1
+tes,64078,sarazcollection.pk,22.3,regional,11.15,Cloudflare,own_network_direct_registry,7,LOCAL,23.2
+orbit,64535,sarazcollection.pk,18.9,regional,9.45,Cloudflare,via_Transworld_registry,7,LOCAL,21.3
+tes,64722,sarazcollection.pk,2.9,local,1.45,Cloudflare,own_network_direct_registry,6,LOCAL,3.5
+nayatel,65892,sarazcollection.pk,2.7,local,1.35,Cloudflare,no_visible_handoff_short_path,3,LOCAL,4.2
+fasttel,1014872,sarazcollection.pk,21.6,regional,10.8,Cloudflare,via_PTCL,8,LOCAL,29.6
+nova,1015679,sarazcollection.pk,17.1,regional,8.55,Cloudflare,via_Transworld_registry,6,LOCAL,34.9
+cybernet,1016036,sarazcollection.pk,117.3,distant,58.65,Cloudflare,own_network_direct,8,TROMBONE,131.3
+ptcl,1016126,sarazcollection.pk,25.2,regional,12.6,Cloudflare,own_network_direct,6,LOCAL,26.4
+cybernet,1016143,sarazcollection.pk,99.3,distant,49.65,Cloudflare,own_network_direct_registry,4,TROMBONE,99.8
+cybernet,1016154,sarazcollection.pk,108.6,distant,54.3,Cloudflare,own_network_direct_registry,3,TROMBONE,108.9
+ptcl,1016393,sarazcollection.pk,25.7,regional,12.85,Cloudflare,own_network_direct,6,TROMBONE,494.4
+zcom,7613,skyscanner.pk,30.5,regional,1.68,Amazon,via_Transworld_registry,5,TROMBONE,91.4
+nayatel,60223,skyscanner.pk,40.1,regional,2.2,Amazon,no_visible_handoff_short_path,3,TROMBONE,41.2
+transworld,62224,skyscanner.pk,35.6,regional,1.96,Amazon,no_visible_handoff_short_path,3,LOCAL,1.1
+tes,64078,skyscanner.pk,37.6,regional,2.07,Amazon,own_network_direct_registry,7,TROMBONE,97.7
+orbit,64535,skyscanner.pk,34.5,regional,1.9,Amazon,via_Transworld_registry,7,TROMBONE,95.1
+tes,64722,skyscanner.pk,19.9,regional,1.09,Amazon,own_network_direct_registry,6,TROMBONE,79.0
+nayatel,65892,skyscanner.pk,39.5,regional,2.17,Amazon,no_visible_handoff_short_path,3,TROMBONE,42.1
+fasttel,1014872,skyscanner.pk,40.4,regional,2.22,Amazon,no_visible_handoff_short_path,5,TROMBONE,48.0
+nova,1015679,skyscanner.pk,34.0,regional,1.87,Amazon,via_Transworld_registry,6,TROMBONE,111.2
+cybernet,1016036,skyscanner.pk,37.3,regional,2.05,Amazon,own_network_direct,7,LOCAL,39.9
+ptcl,1016126,skyscanner.pk,43.7,regional,2.4,Amazon,own_network_direct,6,TROMBONE,45.3
+cybernet,1016143,skyscanner.pk,19.3,regional,1.06,Amazon,own_network_direct_registry,4,LOCAL,19.6
+cybernet,1016154,skyscanner.pk,18.2,regional,1.0,Amazon,own_network_direct_registry,4,LOCAL,19.0
+ptcl,1016393,skyscanner.pk,43.4,regional,2.38,Amazon,own_network_direct,5,TROMBONE,458.8
+zcom,7613,thefrontierpost.com,91.1,distant,36.44,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,156.1
+nayatel,60223,thefrontierpost.com,2.5,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.7
+transworld,62224,thefrontierpost.com,95.5,distant,38.2,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.3
+tes,64078,thefrontierpost.com,97.7,distant,39.08,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,103.7
+orbit,64535,thefrontierpost.com,93.4,distant,37.36,Cloudflare,via_foreign_transit_China Mobile Intl (HK),13,TROMBONE,148.0
+tes,64722,thefrontierpost.com,78.4,distant,31.36,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.0
+nayatel,65892,thefrontierpost.com,2.9,local,1.16,Cloudflare,no_visible_handoff_short_path,3,LOCAL,4.0
+fasttel,1014872,thefrontierpost.com,201.8,distant,80.72,Cloudflare,via_foreign_transit_Level3/Lumen,8,TROMBONE,144.9
+nova,1015679,thefrontierpost.com,92.5,distant,37.0,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,105.7
+cybernet,1016036,thefrontierpost.com,22.7,regional,9.08,Cloudflare,own_network_direct,8,LOCAL,26.4
+ptcl,1016126,thefrontierpost.com,269.0,distant,107.6,Cloudflare,via_foreign_transit_Level3/Lumen,8,TROMBONE,132.1
+cybernet,1016143,thefrontierpost.com,4.2,local,1.68,Cloudflare,own_network_direct_registry,4,LOCAL,4.6
+cybernet,1016154,thefrontierpost.com,3.9,local,1.56,Cloudflare,own_network_direct_registry,4,LOCAL,3.8
+ptcl,1016393,thefrontierpost.com,265.7,distant,106.28,Cloudflare,via_foreign_transit_Level3/Lumen,8,TROMBONE,488.3
+zcom,7613,urbanbeauty.pk,16.0,regional,6.96,Cloudflare,via_Transworld_registry,5,LOCAL,16.5
+nayatel,60223,urbanbeauty.pk,2.3,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.3
+transworld,62224,urbanbeauty.pk,19.2,regional,8.35,Cloudflare,no_visible_handoff_short_path,3,LOCAL,21.8
+tes,64078,urbanbeauty.pk,22.8,regional,9.91,Cloudflare,own_network_direct_registry,7,LOCAL,23.5
+orbit,64535,urbanbeauty.pk,18.4,regional,8.0,Cloudflare,via_Transworld_registry,7,LOCAL,21.1
+tes,64722,urbanbeauty.pk,2.6,local,1.13,Cloudflare,own_network_direct_registry,6,LOCAL,3.2
+nayatel,65892,urbanbeauty.pk,3.1,local,1.35,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.1
+fasttel,1014872,urbanbeauty.pk,22.6,regional,9.83,Cloudflare,via_PTCL,8,LOCAL,29.1
+nova,1015679,urbanbeauty.pk,16.9,regional,7.35,Cloudflare,via_Transworld_registry,6,LOCAL,18.5
+cybernet,1016036,urbanbeauty.pk,127.6,distant,55.48,Cloudflare,own_network_direct,8,TROMBONE,121.0
+ptcl,1016126,urbanbeauty.pk,25.1,regional,10.91,Cloudflare,own_network_direct,6,LOCAL,26.4
+cybernet,1016143,urbanbeauty.pk,99.1,distant,43.09,Cloudflare,own_network_direct_registry,4,TROMBONE,100.2
+cybernet,1016154,urbanbeauty.pk,98.4,distant,42.78,Cloudflare,own_network_direct_registry,4,TROMBONE,109.3
+ptcl,1016393,urbanbeauty.pk,27.6,regional,12.0,Cloudflare,own_network_direct,6,TROMBONE,393.1
+zcom,7613,vidmateapp.com.pk,91.9,distant,39.96,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,113.1
+nayatel,60223,vidmateapp.com.pk,2.3,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,2.9
+transworld,62224,vidmateapp.com.pk,95.8,distant,41.65,Cloudflare,no_visible_handoff_short_path,3,LOCAL,0.8
+tes,64078,vidmateapp.com.pk,98.1,distant,42.65,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,103.6
+orbit,64535,vidmateapp.com.pk,94.3,distant,41.0,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,102.6
+tes,64722,vidmateapp.com.pk,78.2,distant,34.0,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,176.0
+nayatel,65892,vidmateapp.com.pk,2.9,local,1.26,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.8
+fasttel,1014872,vidmateapp.com.pk,125.1,distant,54.39,Cloudflare,via_foreign_transit_Level3/Lumen,11,TROMBONE,279.3
+nova,1015679,vidmateapp.com.pk,92.8,distant,40.35,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,102.2
+cybernet,1016036,vidmateapp.com.pk,22.2,regional,9.65,Cloudflare,own_network_direct,9,LOCAL,26.1
+ptcl,1016126,vidmateapp.com.pk,136.3,distant,59.26,Cloudflare,via_foreign_transit_Level3/Lumen,8,TROMBONE,293.2
+cybernet,1016143,vidmateapp.com.pk,4.2,local,1.83,Cloudflare,own_network_direct_registry,4,LOCAL,4.6
+cybernet,1016154,vidmateapp.com.pk,4.1,local,1.78,Cloudflare,own_network_direct_registry,3,LOCAL,3.8
+ptcl,1016393,vidmateapp.com.pk,131.1,distant,57.0,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,492.7
+zcom,7613,wbm.com.pk,15.7,regional,5.81,Cloudflare,via_Transworld_registry,5,LOCAL,16.2
+nayatel,60223,wbm.com.pk,2.9,local,1.07,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.5
+transworld,62224,wbm.com.pk,19.3,regional,7.15,Cloudflare,no_visible_handoff_short_path,3,LOCAL,20.2
+tes,64078,wbm.com.pk,22.2,regional,8.22,Cloudflare,own_network_direct_registry,7,LOCAL,23.8
+orbit,64535,wbm.com.pk,19.1,regional,7.07,Cloudflare,via_Transworld_registry,7,LOCAL,21.0
+tes,64722,wbm.com.pk,2.7,local,1.0,Cloudflare,own_network_direct_registry,6,LOCAL,3.0
+nayatel,65892,wbm.com.pk,2.8,local,1.04,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.5
+fasttel,1014872,wbm.com.pk,22.1,regional,8.19,Cloudflare,via_PTCL,8,LOCAL,28.0
+nova,1015679,wbm.com.pk,17.4,regional,6.44,Cloudflare,via_Transworld_registry,6,LOCAL,20.7
+cybernet,1016036,wbm.com.pk,117.5,distant,43.52,Cloudflare,own_network_direct,9,TROMBONE,130.3
+ptcl,1016126,wbm.com.pk,25.2,regional,9.33,Cloudflare,own_network_direct,6,LOCAL,26.3
+cybernet,1016143,wbm.com.pk,99.2,distant,36.74,Cloudflare,own_network_direct_registry,4,TROMBONE,100.0
+cybernet,1016154,wbm.com.pk,108.4,distant,40.15,Cloudflare,own_network_direct_registry,3,TROMBONE,99.8
+ptcl,1016393,wbm.com.pk,26.2,regional,9.7,Cloudflare,own_network_direct,6,LOCAL,28.7
+zcom,7613,zarajahan.pk,15.7,regional,6.83,Cloudflare,via_Transworld_registry,5,LOCAL,16.5
+nayatel,60223,zarajahan.pk,2.3,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.2
+transworld,62224,zarajahan.pk,19.2,regional,8.35,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.1
+tes,64078,zarajahan.pk,22.0,regional,9.57,Cloudflare,own_network_direct_registry,7,LOCAL,23.4
+orbit,64535,zarajahan.pk,18.2,regional,7.91,Cloudflare,via_Transworld_registry,7,LOCAL,21.6
+tes,64722,zarajahan.pk,2.8,local,1.22,Cloudflare,own_network_direct_registry,6,LOCAL,3.5
+nayatel,65892,zarajahan.pk,2.7,local,1.17,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.9
+fasttel,1014872,zarajahan.pk,21.7,regional,9.43,Cloudflare,no_visible_handoff_short_path,6,LOCAL,30.4
+nova,1015679,zarajahan.pk,17.3,regional,7.52,Cloudflare,via_Transworld_registry,6,LOCAL,21.3
+cybernet,1016036,zarajahan.pk,117.5,distant,51.09,Cloudflare,own_network_direct,9,TROMBONE,120.7
+ptcl,1016126,zarajahan.pk,25.1,regional,10.91,Cloudflare,own_network_direct,6,LOCAL,26.6
+cybernet,1016143,zarajahan.pk,99.2,distant,43.13,Cloudflare,own_network_direct_registry,4,TROMBONE,110.2
+cybernet,1016154,zarajahan.pk,108.7,distant,47.26,Cloudflare,own_network_direct_registry,3,TROMBONE,119.6
+ptcl,1016393,zarajahan.pk,25.3,regional,11.0,Cloudflare,own_network_direct,6,TROMBONE,253.8
+zcom,7613,zing.pk,15.8,regional,6.87,Cloudflare,via_Transworld_registry,5,LOCAL,18.2
+nayatel,60223,zing.pk,2.3,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,4.5
+transworld,62224,zing.pk,19.4,regional,8.43,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.3
+tes,64078,zing.pk,22.0,regional,9.57,Cloudflare,own_network_direct_registry,7,LOCAL,23.2
+orbit,64535,zing.pk,18.1,regional,7.87,Cloudflare,via_Transworld_registry,7,LOCAL,21.5
+tes,64722,zing.pk,2.8,local,1.22,Cloudflare,own_network_direct_registry,6,LOCAL,3.4
+nayatel,65892,zing.pk,2.8,local,1.22,Cloudflare,no_visible_handoff_short_path,3,LOCAL,4.4
+fasttel,1014872,zing.pk,21.6,regional,9.39,Cloudflare,via_PTCL,8,LOCAL,29.5
+nova,1015679,zing.pk,17.1,regional,7.43,Cloudflare,via_Transworld_registry,6,TROMBONE,47.0
+cybernet,1016036,zing.pk,117.1,distant,50.91,Cloudflare,own_network_direct,8,TROMBONE,130.4
+ptcl,1016126,zing.pk,25.1,regional,10.91,Cloudflare,own_network_direct,6,LOCAL,26.8
+cybernet,1016143,zing.pk,99.6,distant,43.3,Cloudflare,own_network_direct_registry,4,TROMBONE,110.2
+cybernet,1016154,zing.pk,108.4,distant,47.13,Cloudflare,own_network_direct_registry,3,TROMBONE,109.1
+ptcl,1016393,zing.pk,27.5,regional,11.96,Cloudflare,own_network_direct,6,TROMBONE,54.8
+zcom,7613,glory-casino.net.pk,91.5,distant,41.59,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,106.6
+nayatel,60223,glory-casino.net.pk,2.2,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.5
+transworld,62224,glory-casino.net.pk,94.4,distant,42.91,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.3
+tes,64078,glory-casino.net.pk,97.5,distant,44.32,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,103.7
+orbit,64535,glory-casino.net.pk,94.7,distant,43.05,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,118.9
+tes,64722,glory-casino.net.pk,78.2,distant,35.55,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.4
+nayatel,65892,glory-casino.net.pk,2.8,local,1.27,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.1
+fasttel,1014872,glory-casino.net.pk,201.4,distant,91.55,Cloudflare,via_foreign_transit_Level3/Lumen,11,TROMBONE,273.7
+nova,1015679,glory-casino.net.pk,92.7,distant,42.14,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,109.3
+cybernet,1016036,glory-casino.net.pk,22.9,regional,10.41,Cloudflare,own_network_direct,8,LOCAL,26.7
+ptcl,1016126,glory-casino.net.pk,277.5,distant,126.14,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,294.1
+cybernet,1016143,glory-casino.net.pk,4.2,local,1.91,Cloudflare,own_network_direct_registry,4,LOCAL,4.6
+cybernet,1016154,glory-casino.net.pk,3.8,local,1.73,Cloudflare,own_network_direct_registry,3,LOCAL,5.2
+ptcl,1016393,glory-casino.net.pk,271.7,distant,123.5,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,314.8
+zcom,7613,idc.net.pk,137.0,distant,1.16,Google,via_foreign_transit_Seabone/TI Sparkle,9,TROMBONE,149.5
+nayatel,60223,idc.net.pk,133.5,distant,1.14,Google,no_visible_handoff_short_path,3,TROMBONE,145.7
+transworld,62224,idc.net.pk,149.9,distant,1.27,Google,no_visible_handoff_short_path,3,TROMBONE,141.2
+tes,64078,idc.net.pk,138.6,distant,1.18,Google,via_foreign_transit_Seabone/TI Sparkle,11,TROMBONE,150.2
+orbit,64535,idc.net.pk,136.2,distant,1.16,Google,via_foreign_transit_Seabone/TI Sparkle,11,TROMBONE,148.5
+tes,64722,idc.net.pk,122.2,distant,1.04,Google,via_foreign_transit_Seabone/TI Sparkle,10,TROMBONE,132.0
+nayatel,65892,idc.net.pk,134.0,distant,1.14,Google,no_visible_handoff_short_path,3,TROMBONE,142.5
+fasttel,1014872,idc.net.pk,137.1,distant,1.17,Google,via_foreign_transit_Seabone/TI Sparkle,9,TROMBONE,148.1
+nova,1015679,idc.net.pk,136.5,distant,1.16,Google,via_foreign_transit_Seabone/TI Sparkle,10,TROMBONE,152.1
+cybernet,1016036,idc.net.pk,135.7,distant,1.15,Google,own_network_direct,7,TROMBONE,139.5
+ptcl,1016126,idc.net.pk,137.3,distant,1.17,Google,via_foreign_transit_Arelion/Twelve99,10,TROMBONE,157.5
+cybernet,1016143,idc.net.pk,117.6,distant,1.0,Google,own_network_direct_registry,4,TROMBONE,129.0
+cybernet,1016154,idc.net.pk,127.0,distant,1.08,Google,own_network_direct_registry,4,TROMBONE,128.3
+ptcl,1016393,idc.net.pk,137.7,distant,1.17,Google,via_foreign_transit_Arelion/Twelve99,11,TROMBONE,449.7
+zcom,7613,wancom.net.pk,91.5,distant,35.19,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,157.4
+nayatel,60223,wancom.net.pk,2.8,local,1.08,Cloudflare,no_visible_handoff_short_path,3,LOCAL,4.0
+transworld,62224,wancom.net.pk,94.6,distant,36.38,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.2
+tes,64078,wancom.net.pk,97.1,distant,37.35,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,103.5
+orbit,64535,wancom.net.pk,94.4,distant,36.31,Cloudflare,via_foreign_transit_China Mobile Intl (HK),13,TROMBONE,119.0
+tes,64722,wancom.net.pk,78.3,distant,30.12,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,174.9
+nayatel,65892,wancom.net.pk,2.6,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,4.3
+fasttel,1014872,wancom.net.pk,202.2,distant,77.77,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,274.0
+nova,1015679,wancom.net.pk,92.9,distant,35.73,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,116.7
+cybernet,1016036,wancom.net.pk,22.5,regional,8.65,Cloudflare,own_network_direct,8,LOCAL,26.7
+ptcl,1016126,wancom.net.pk,262.7,distant,101.04,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,288.4
+cybernet,1016143,wancom.net.pk,4.4,local,1.69,Cloudflare,own_network_direct_registry,4,LOCAL,4.6
+cybernet,1016154,wancom.net.pk,4.0,local,1.54,Cloudflare,own_network_direct_registry,4,LOCAL,3.9
+ptcl,1016393,wancom.net.pk,262.4,distant,100.92,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,282.0
+zcom,7613,bnbwu.edu.pk,131.7,distant,1.26,Sucuri,no_cdn_hop_visible,11,TROMBONE,159.7
+nayatel,60223,bnbwu.edu.pk,128.0,distant,1.23,Sucuri,no_cdn_hop_visible,2,LOCAL,2.9
+transworld,62224,bnbwu.edu.pk,138.3,distant,1.33,Sucuri,no_visible_handoff_short_path,3,LOCAL,0.9
+tes,64078,bnbwu.edu.pk,134.1,distant,1.29,Sucuri,no_cdn_hop_visible,13,TROMBONE,229.1
+orbit,64535,bnbwu.edu.pk,131.0,distant,1.26,Sucuri,no_cdn_hop_visible,13,TROMBONE,167.9
+tes,64722,bnbwu.edu.pk,118.2,distant,1.13,Sucuri,no_cdn_hop_visible,12,TROMBONE,144.3
+nayatel,65892,bnbwu.edu.pk,188.7,distant,1.81,Sucuri,no_cdn_hop_visible,2,LOCAL,3.9
+fasttel,1014872,bnbwu.edu.pk,104.3,distant,1.0,Sucuri,no_cdn_hop_visible,9,TROMBONE,297.4
+nova,1015679,bnbwu.edu.pk,134.7,distant,1.29,Sucuri,no_cdn_hop_visible,12,TROMBONE,153.0
+cybernet,1016036,bnbwu.edu.pk,128.5,distant,1.23,Sucuri,no_cdn_hop_visible,12,TROMBONE,164.0
+ptcl,1016126,bnbwu.edu.pk,106.3,distant,1.02,Sucuri,no_cdn_hop_visible,6,TROMBONE,205.0
+cybernet,1016143,bnbwu.edu.pk,110.4,distant,1.06,Sucuri,no_cdn_hop_visible,7,TROMBONE,143.9
+cybernet,1016154,bnbwu.edu.pk,109.9,distant,1.05,Sucuri,no_cdn_hop_visible,6,TROMBONE,143.8
+ptcl,1016393,bnbwu.edu.pk,114.0,distant,1.09,Sucuri,no_cdn_hop_visible,7,TROMBONE,438.6
+zcom,7613,ibcc.edu.pk,16.3,regional,7.09,Cloudflare,via_Transworld,6,LOCAL,16.7
+nayatel,60223,ibcc.edu.pk,2.3,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.8
+transworld,62224,ibcc.edu.pk,18.9,regional,8.22,Cloudflare,no_visible_handoff_short_path,3,LOCAL,0.9
+tes,64078,ibcc.edu.pk,22.8,regional,9.91,Cloudflare,own_network_direct,8,LOCAL,24.2
+orbit,64535,ibcc.edu.pk,18.3,regional,7.96,Cloudflare,via_Transworld,9,LOCAL,21.5
+tes,64722,ibcc.edu.pk,2.8,local,1.22,Cloudflare,own_network_direct,7,LOCAL,4.0
+nayatel,65892,ibcc.edu.pk,2.9,local,1.26,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.5
+fasttel,1014872,ibcc.edu.pk,21.2,regional,9.22,Cloudflare,via_PTCL(Paknet),9,LOCAL,34.1
+nova,1015679,ibcc.edu.pk,17.4,regional,7.57,Cloudflare,via_Transworld,7,LOCAL,22.1
+cybernet,1016036,ibcc.edu.pk,22.8,regional,9.91,Cloudflare,own_network_direct,8,LOCAL,25.6
+ptcl,1016126,ibcc.edu.pk,25.5,regional,11.09,Cloudflare,own_network_direct,7,LOCAL,26.5
+cybernet,1016143,ibcc.edu.pk,4.2,local,1.83,Cloudflare,own_network_direct_registry,4,LOCAL,4.5
+cybernet,1016154,ibcc.edu.pk,3.6,local,1.57,Cloudflare,own_network_direct_registry,4,LOCAL,4.0
+ptcl,1016393,ibcc.edu.pk,24.9,regional,10.83,Cloudflare,own_network_direct,7,TROMBONE,441.4
+zcom,7613,uos.edu.pk,95.2,distant,39.67,Cloudflare,via_foreign_transit_China Mobile Intl (HK),9,TROMBONE,146.8
+nayatel,60223,uos.edu.pk,2.4,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.2
+transworld,62224,uos.edu.pk,94.8,distant,39.5,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.1
+tes,64078,uos.edu.pk,97.3,distant,40.54,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,108.4
+orbit,64535,uos.edu.pk,94.4,distant,39.33,Cloudflare,via_foreign_transit_China Mobile Intl (HK),13,TROMBONE,136.5
+tes,64722,uos.edu.pk,77.9,distant,32.46,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.6
+nayatel,65892,uos.edu.pk,2.9,local,1.21,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.9
+fasttel,1014872,uos.edu.pk,125.4,distant,52.25,Cloudflare,via_foreign_transit_Level3/Lumen,11,TROMBONE,279.1
+nova,1015679,uos.edu.pk,92.7,distant,38.62,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,99.1
+cybernet,1016036,uos.edu.pk,22.1,regional,9.21,Cloudflare,own_network_direct,8,LOCAL,28.3
+ptcl,1016126,uos.edu.pk,129.9,distant,54.13,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,286.9
+cybernet,1016143,uos.edu.pk,4.3,local,1.79,Cloudflare,own_network_direct_registry,4,LOCAL,4.4
+cybernet,1016154,uos.edu.pk,3.9,local,1.62,Cloudflare,own_network_direct_registry,3,LOCAL,4.2
+ptcl,1016393,uos.edu.pk,129.8,distant,54.08,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,423.0
+zcom,7613,zu.edu.pk,16.1,regional,6.71,Cloudflare,via_Transworld,6,LOCAL,17.0
+nayatel,60223,zu.edu.pk,2.4,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.3
+transworld,62224,zu.edu.pk,20.0,regional,8.33,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.1
+tes,64078,zu.edu.pk,22.0,regional,9.17,Cloudflare,own_network_direct,8,LOCAL,24.0
+orbit,64535,zu.edu.pk,19.0,regional,7.92,Cloudflare,via_Transworld,8,LOCAL,21.4
+tes,64722,zu.edu.pk,2.7,local,1.13,Cloudflare,own_network_direct,7,LOCAL,4.1
+nayatel,65892,zu.edu.pk,2.7,local,1.13,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.9
+fasttel,1014872,zu.edu.pk,127.1,distant,52.96,Cloudflare,no_visible_handoff_short_path,3,TROMBONE,138.1
+nova,1015679,zu.edu.pk,17.3,regional,7.21,Cloudflare,via_Transworld,7,LOCAL,39.6
+cybernet,1016036,zu.edu.pk,22.6,regional,9.42,Cloudflare,own_network_direct,8,LOCAL,26.4
+ptcl,1016126,zu.edu.pk,129.8,distant,54.08,Cloudflare,via_foreign_transit_Level3/Lumen,8,TROMBONE,131.9
+cybernet,1016143,zu.edu.pk,4.4,local,1.83,Cloudflare,own_network_direct_registry,4,LOCAL,4.6
+cybernet,1016154,zu.edu.pk,4.0,local,1.67,Cloudflare,own_network_direct_registry,3,LOCAL,3.9
+ptcl,1016393,zu.edu.pk,132.2,distant,55.08,Cloudflare,own_network_direct,7,TROMBONE,476.3
+zcom,7613,pesco.com.pk,91.1,distant,41.41,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,163.5
+nayatel,60223,pesco.com.pk,2.2,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.3
+transworld,62224,pesco.com.pk,96.4,distant,43.82,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.1
+tes,64078,pesco.com.pk,97.4,distant,44.27,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,103.7
+orbit,64535,pesco.com.pk,94.4,distant,42.91,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,100.2
+tes,64722,pesco.com.pk,78.1,distant,35.5,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.2
+nayatel,65892,pesco.com.pk,2.8,local,1.27,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.9
+fasttel,1014872,pesco.com.pk,202.5,distant,92.05,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,278.1
+nova,1015679,pesco.com.pk,92.7,distant,42.14,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,101.2
+cybernet,1016036,pesco.com.pk,22.5,regional,10.23,Cloudflare,own_network_direct,8,LOCAL,26.3
+ptcl,1016126,pesco.com.pk,272.4,distant,123.82,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,287.3
+cybernet,1016143,pesco.com.pk,4.4,local,2.0,Cloudflare,own_network_direct_registry,4,LOCAL,4.7
+cybernet,1016154,pesco.com.pk,4.0,local,1.82,Cloudflare,own_network_direct_registry,3,LOCAL,4.1
+ptcl,1016393,pesco.com.pk,267.0,distant,121.36,Cloudflare,via_foreign_transit_Level3/Lumen,9,LOCAL,31.5
+zcom,7613,khushhalibank.com.pk,225.4,distant,1.46,Amazon,via_domestic_artifact_Cogent(PK PoP),8,TROMBONE,275.5
+nayatel,60223,khushhalibank.com.pk,170.6,distant,1.1,Amazon,no_visible_handoff_short_path,3,TROMBONE,174.8
+transworld,62224,khushhalibank.com.pk,314.4,distant,2.03,Amazon,no_visible_handoff_short_path,3,LOCAL,1.1
+tes,64078,khushhalibank.com.pk,251.8,distant,1.63,Amazon,via_domestic_artifact_Cogent(PK PoP),10,TROMBONE,260.1
+orbit,64535,khushhalibank.com.pk,228.2,distant,1.47,Amazon,via_domestic_artifact_Cogent(PK PoP),10,TROMBONE,261.4
+tes,64722,khushhalibank.com.pk,282.9,distant,1.83,Amazon,via_domestic_artifact_Cogent(PK PoP),9,TROMBONE,299.6
+nayatel,65892,khushhalibank.com.pk,154.8,distant,1.0,Amazon,no_visible_handoff_short_path,3,TROMBONE,170.2
+fasttel,1014872,khushhalibank.com.pk,160.3,distant,1.04,Amazon,no_cdn_hop_visible,7,TROMBONE,133.6
+nova,1015679,khushhalibank.com.pk,309.0,distant,2.0,Amazon,via_domestic_artifact_Cogent(PK PoP),8,TROMBONE,312.9
+cybernet,1016036,khushhalibank.com.pk,318.4,distant,2.06,Amazon,via_domestic_artifact_Cogent(PK PoP),9,TROMBONE,314.9
+ptcl,1016126,khushhalibank.com.pk,156.6,distant,1.01,Amazon,via_foreign_transit_NTT America,7,TROMBONE,176.8
+cybernet,1016143,khushhalibank.com.pk,290.7,distant,1.88,Amazon,via_domestic_artifact_Cogent(PK PoP),6,TROMBONE,303.9
+cybernet,1016154,khushhalibank.com.pk,303.0,distant,1.96,Amazon,own_network_direct_registry,3,TROMBONE,392.1
+ptcl,1016393,khushhalibank.com.pk,170.4,distant,1.1,Amazon,via_foreign_transit_NTT America,6,LOCAL,28.2
+zcom,7613,mcb.com.pk,126.0,distant,1.26,Sucuri,no_cdn_hop_visible,11,TROMBONE,160.1
+nayatel,60223,mcb.com.pk,126.4,distant,1.27,Sucuri,no_cdn_hop_visible,2,LOCAL,3.1
+transworld,62224,mcb.com.pk,133.7,distant,1.34,Sucuri,no_visible_handoff_short_path,3,LOCAL,1.2
+tes,64078,mcb.com.pk,137.9,distant,1.38,Sucuri,no_cdn_hop_visible,13,TROMBONE,223.0
+orbit,64535,mcb.com.pk,130.9,distant,1.31,Sucuri,no_cdn_hop_visible,13,TROMBONE,156.9
+tes,64722,mcb.com.pk,113.6,distant,1.14,Sucuri,no_cdn_hop_visible,12,TROMBONE,140.7
+nayatel,65892,mcb.com.pk,99.9,distant,1.0,Sucuri,no_cdn_hop_visible,2,LOCAL,3.4
+fasttel,1014872,mcb.com.pk,104.5,distant,1.05,Sucuri,no_cdn_hop_visible,9,TROMBONE,206.3
+nova,1015679,mcb.com.pk,132.8,distant,1.33,Sucuri,no_cdn_hop_visible,12,TROMBONE,174.9
+cybernet,1016036,mcb.com.pk,138.6,distant,1.39,Sucuri,no_cdn_hop_visible,11,TROMBONE,164.5
+ptcl,1016126,mcb.com.pk,103.1,distant,1.03,Sucuri,no_cdn_hop_visible,7,TROMBONE,205.1
+cybernet,1016143,mcb.com.pk,110.5,distant,1.11,Sucuri,no_cdn_hop_visible,7,TROMBONE,144.4
+cybernet,1016154,mcb.com.pk,119.4,distant,1.2,Sucuri,no_cdn_hop_visible,6,TROMBONE,132.5
+ptcl,1016393,mcb.com.pk,131.9,distant,1.32,Sucuri,no_cdn_hop_visible,7,TROMBONE,351.5
+zcom,7613,ajk.gov.pk,90.8,distant,39.48,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,153.5
+nayatel,60223,ajk.gov.pk,2.3,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.5
+transworld,62224,ajk.gov.pk,95.3,distant,41.43,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.1
+tes,64078,ajk.gov.pk,97.4,distant,42.35,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,107.9
+orbit,64535,ajk.gov.pk,94.1,distant,40.91,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,168.4
+tes,64722,ajk.gov.pk,78.1,distant,33.96,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.3
+nayatel,65892,ajk.gov.pk,2.3,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,6.0
+fasttel,1014872,ajk.gov.pk,201.4,distant,87.57,Cloudflare,via_foreign_transit_Level3/Lumen,11,TROMBONE,272.7
+nova,1015679,ajk.gov.pk,92.5,distant,40.22,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,109.2
+cybernet,1016036,ajk.gov.pk,22.3,regional,9.7,Cloudflare,own_network_direct,8,LOCAL,26.5
+ptcl,1016126,ajk.gov.pk,269.3,distant,117.09,Cloudflare,via_foreign_transit_Level3/Lumen,8,TROMBONE,293.9
+cybernet,1016143,ajk.gov.pk,4.2,local,1.83,Cloudflare,own_network_direct_registry,4,LOCAL,4.7
+cybernet,1016154,ajk.gov.pk,3.9,local,1.7,Cloudflare,own_network_direct_registry,3,LOCAL,4.2
+ptcl,1016393,ajk.gov.pk,267.3,distant,116.22,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,331.5
+zcom,7613,joinasf.gov.pk,91.3,distant,39.7,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,146.2
+nayatel,60223,joinasf.gov.pk,2.3,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.0
+transworld,62224,joinasf.gov.pk,95.4,distant,41.48,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.3
+tes,64078,joinasf.gov.pk,98.3,distant,42.74,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,104.1
+orbit,64535,joinasf.gov.pk,94.2,distant,40.96,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,151.0
+tes,64722,joinasf.gov.pk,78.3,distant,34.04,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.2
+nayatel,65892,joinasf.gov.pk,3.0,local,1.3,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.4
+fasttel,1014872,joinasf.gov.pk,204.8,distant,89.04,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,292.4
+nova,1015679,joinasf.gov.pk,92.5,distant,40.22,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,118.5
+cybernet,1016036,joinasf.gov.pk,22.6,regional,9.83,Cloudflare,own_network_direct,9,LOCAL,25.8
+ptcl,1016126,joinasf.gov.pk,271.1,distant,117.87,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,294.3
+cybernet,1016143,joinasf.gov.pk,4.1,local,1.78,Cloudflare,own_network_direct_registry,4,LOCAL,4.7
+cybernet,1016154,joinasf.gov.pk,3.8,local,1.65,Cloudflare,own_network_direct_registry,3,LOCAL,4.3
+ptcl,1016393,joinasf.gov.pk,269.1,distant,117.0,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,286.7
+zcom,7613,paknavy.gov.pk,16.0,regional,6.4,Cloudflare,via_Transworld,6,TROMBONE,124.4
+nayatel,60223,paknavy.gov.pk,2.5,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.6
+transworld,62224,paknavy.gov.pk,20.2,regional,8.08,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.2
+tes,64078,paknavy.gov.pk,22.9,regional,9.16,Cloudflare,own_network_direct,8,TROMBONE,135.1
+orbit,64535,paknavy.gov.pk,18.5,regional,7.4,Cloudflare,via_Transworld,8,TROMBONE,129.6
+tes,64722,paknavy.gov.pk,3.0,local,1.2,Cloudflare,own_network_direct,7,TROMBONE,260.7
+nayatel,65892,paknavy.gov.pk,3.1,local,1.24,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.7
+fasttel,1014872,paknavy.gov.pk,21.7,regional,8.68,Cloudflare,via_PTCL(Paknet),8,LOCAL,29.6
+nova,1015679,paknavy.gov.pk,17.4,regional,6.96,Cloudflare,via_Transworld,7,TROMBONE,281.0
+cybernet,1016036,paknavy.gov.pk,23.3,regional,9.32,Cloudflare,own_network_direct,8,LOCAL,26.8
+ptcl,1016126,paknavy.gov.pk,25.4,regional,10.16,Cloudflare,own_network_direct,6,LOCAL,26.8
+cybernet,1016143,paknavy.gov.pk,4.4,local,1.76,Cloudflare,own_network_direct_registry,4,LOCAL,4.9
+cybernet,1016154,paknavy.gov.pk,3.7,local,1.48,Cloudflare,own_network_direct_registry,3,LOCAL,4.1
+ptcl,1016393,paknavy.gov.pk,25.1,regional,10.04,Cloudflare,own_network_direct,7,TROMBONE,193.7
+zcom,7613,pnmc.gov.pk,91.3,distant,38.04,Cloudflare,via_foreign_transit_China Mobile Intl (HK),10,TROMBONE,160.9
+nayatel,60223,pnmc.gov.pk,2.4,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,2.9
+transworld,62224,pnmc.gov.pk,95.3,distant,39.71,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.1
+tes,64078,pnmc.gov.pk,98.2,distant,40.92,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,104.0
+orbit,64535,pnmc.gov.pk,94.1,distant,39.21,Cloudflare,via_foreign_transit_China Mobile Intl (HK),12,TROMBONE,141.1
+tes,64722,pnmc.gov.pk,78.3,distant,32.62,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,175.0
+nayatel,65892,pnmc.gov.pk,2.7,local,1.13,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.8
+fasttel,1014872,pnmc.gov.pk,201.0,distant,83.75,Cloudflare,via_foreign_transit_Level3/Lumen,11,TROMBONE,273.3
+nova,1015679,pnmc.gov.pk,96.4,distant,40.17,Cloudflare,via_foreign_transit_China Mobile Intl (HK),11,TROMBONE,99.0
+cybernet,1016036,pnmc.gov.pk,22.0,regional,9.17,Cloudflare,via_foreign_transit_Omantel,10,TROMBONE,40.1
+ptcl,1016126,pnmc.gov.pk,276.8,distant,115.33,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,293.3
+cybernet,1016143,pnmc.gov.pk,4.2,local,1.75,Cloudflare,via_foreign_transit_Omantel,6,LOCAL,21.1
+cybernet,1016154,pnmc.gov.pk,3.8,local,1.58,Cloudflare,own_network_direct_registry,4,LOCAL,7.7
+ptcl,1016393,pnmc.gov.pk,265.1,distant,110.46,Cloudflare,via_foreign_transit_Level3/Lumen,9,TROMBONE,290.0
+zcom,7613,gamcamedical.pk,91.4,distant,1.18,Google,via_Transworld_registry,7,TROMBONE,93.1
+nayatel,60223,gamcamedical.pk,96.9,distant,1.25,Google,no_visible_handoff_short_path,3,TROMBONE,101.4
+transworld,62224,gamcamedical.pk,95.4,distant,1.23,Google,no_visible_handoff_short_path,3,LOCAL,1.1
+tes,64078,gamcamedical.pk,98.1,distant,1.27,Google,own_network_direct_registry,9,TROMBONE,99.7
+orbit,64535,gamcamedical.pk,94.8,distant,1.22,Google,via_Transworld_registry,9,TROMBONE,97.9
+tes,64722,gamcamedical.pk,78.7,distant,1.02,Google,own_network_direct_registry,7,TROMBONE,79.2
+nayatel,65892,gamcamedical.pk,98.3,distant,1.27,Google,no_visible_handoff_short_path,3,TROMBONE,100.9
+fasttel,1014872,gamcamedical.pk,96.7,distant,1.25,Google,via_Transworld_registry,8,TROMBONE,108.2
+nova,1015679,gamcamedical.pk,93.0,distant,1.2,Google,via_Transworld_registry,8,TROMBONE,94.6
+cybernet,1016036,gamcamedical.pk,256.3,distant,3.31,Google,own_network_direct,8,TROMBONE,198.1
+ptcl,1016126,gamcamedical.pk,107.5,distant,1.39,Google,other_unclassified,7,TROMBONE,226.5
+cybernet,1016143,gamcamedical.pk,77.4,distant,1.0,Google,own_network_direct_registry,6,TROMBONE,79.5
+cybernet,1016154,gamcamedical.pk,78.4,distant,1.01,Google,own_network_direct_registry,5,TROMBONE,79.3
+ptcl,1016393,gamcamedical.pk,102.2,distant,1.32,Google,other_unclassified,9,TROMBONE,489.8
+zcom,7613,airblue.com,16.1,regional,7.0,Cloudflare,via_Transworld,6,TROMBONE,121.6
+nayatel,60223,airblue.com,2.3,local,1.0,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.9
+transworld,62224,airblue.com,19.9,regional,8.65,Cloudflare,no_visible_handoff_short_path,3,LOCAL,1.0
+tes,64078,airblue.com,22.3,regional,9.7,Cloudflare,own_network_direct,8,LOCAL,24.5
+orbit,64535,airblue.com,19.1,regional,8.3,Cloudflare,via_Transworld,8,TROMBONE,126.5
+tes,64722,airblue.com,2.8,local,1.22,Cloudflare,own_network_direct,7,LOCAL,4.1
+nayatel,65892,airblue.com,2.6,local,1.13,Cloudflare,no_visible_handoff_short_path,3,LOCAL,3.7
+fasttel,1014872,airblue.com,21.2,regional,9.22,Cloudflare,via_PTCL(Paknet),7,LOCAL,29.2
+nova,1015679,airblue.com,16.9,regional,7.35,Cloudflare,via_Transworld,7,TROMBONE,283.4
+cybernet,1016036,airblue.com,22.7,regional,9.87,Cloudflare,own_network_direct,8,LOCAL,27.4
+ptcl,1016126,airblue.com,25.4,regional,11.04,Cloudflare,own_network_direct,7,LOCAL,27.5
+cybernet,1016143,airblue.com,4.2,local,1.83,Cloudflare,own_network_direct_registry,4,LOCAL,4.8
+cybernet,1016154,airblue.com,4.1,local,1.78,Cloudflare,own_network_direct_registry,3,LOCAL,4.4
+ptcl,1016393,airblue.com,24.7,regional,10.74,Cloudflare,own_network_direct,7,TROMBONE,244.4
