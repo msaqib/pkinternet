@@ -46,8 +46,8 @@ Exp 07 Nayatel CDN Local Delivery Rate / Median RTT	85.0% / 3.7 ms	findings/07_l
 Exp 07 PTCL CDN Local Delivery Rate / Median RTT	0.0% / 130–275 ms	findings/07_longitudinal_panel.md
 Exp 08.4 Tencent/ACE CDN RTT Disparity (PTCL-Nayatel vs Cybernet)	23 ms vs 255 ms (11x disparity)	experiments/08_CDN/findings.md
 Exp 07 Domestic Target Trombone Rate (Headline Baseline)	15.1% (11,449 / 75,600)	findings/07_longitudinal_panel.md
-Exp 07 Domestic Target Trombone Rate (Strict 5-Condition Lower Bound)	5.52% (4,170 / 75,600)	paper/running_draft_final_detector_corrections.md
-Exp 07 Domestic Target Trombone Rate (RTT-Corroborated Robustness Bound)	8.30% (6,275 / 75,600)	paper/running_draft_final_detector_corrections.md
+Exp 07 Domestic Target Trombone Rate (Strict 5-Condition Lower Bound)	5.52% (4,170 / 75,600)	experiments/07_longitudinal_panel/analysis/evidence_sweep_findings.md
+Exp 07 Domestic Target Trombone Rate (RTT-Corroborated Robustness Bound)	8.30% (6,275 / 75,600)	experiments/07_longitudinal_panel/analysis/evidence_supported_trombone.py
 Exp 4.1 Small-ISP Trombone Rate (Total Hairpin Traces)	11.0% (2,002 / 18,260)	findings/04.1_small_isp_tromboning.md
 Exp 4.1 Small-ISP Traces Entering Destination Network via Hairpin	325 (Brain Telecom: 182)	findings/04.1_small_isp_tromboning.md
 Exp 04 Worldcall Prefix Trombone Rate via Transworld to Equinix Singapore	31.0% (16 / 52 /24 blocks)	findings/04_path_tromboning_worldcall.md
@@ -55,17 +55,17 @@ Exp 4.1 Cybernet Haripur Source Trombone Rate	46.3% (260 / 562)	findings/04.1_sm
 Exp 4.1 PTCL Karachi Source Trombone Rate	38.4% (586 / 1,525)	findings/04.1_small_isp_tromboning.md
 Exp 4.1 Cybernet Karachi Source Trombone Rate	10.5% (218 / 2,084)	findings/04.1_small_isp_tromboning.md
 Exp 4.1 Nayatel Source Trombone Rate	4.0% (128 / 3,204)	findings/04.1_small_isp_tromboning.md
-Exp 07 Financial Services Trombone Rate (Strict / Baseline)	58.3% / 85.6%	paper/running_draft_final_detector_corrections.md
+Exp 07 Financial Services Trombone Rate (Strict / Baseline)	58.3% / 85.6%	paper/running_draft_detector_rules_final.md
 Exp 07 Financial Services Median Domestic Ping RTT	103.1–118.0 ms	findings/07_longitudinal_panel.md
 Exp 07 ZTBL Bank Trombone Rate	86.4%	findings/07_longitudinal_panel.md
 Exp 07 EFU Life Trombone Rate	72.0%	findings/07_longitudinal_panel.md
-Exp 07 Government Services Trombone Rate (Strict / Baseline)	14.6% / 27.6%	paper/running_draft_final_detector_corrections.md
+Exp 07 Government Services Trombone Rate (Strict / Baseline)	14.6% / 27.6%	paper/running_draft_detector_rules_final.md
 Exp 07 FGEHA Housing Authority Trombone Rate	89.2%	findings/07_longitudinal_panel.md
 Exp 07 Abroad Class Latency Ratio (Median / p90 / >10x)	2.46x / 4.20x / 0.0%	experiments/07_longitudinal_panel/analysis/ratio_corrected.csv
-Exp 07 Abroad Class Distance-RTT Correlation (R^2)	0.48	paper/running_draft_final_detector_corrections.md
+Exp 07 Abroad Class Distance-RTT Correlation (R^2)	0.48	paper/running_draft_latency_ratio_merge.md
 Exp 07 Pakistan Class Latency Ratio (Median / p90 / >10x)	2.88x–2.98x / 14.9x / 24.0%–26.6%	experiments/07_longitudinal_panel/analysis/ratio_corrected.csv
-Exp 07 Pakistan Class Latency Ratio Maximum Tail Peak	75.17x	paper/running_draft_final_detector_corrections.md
-Exp 07 Pakistan Class Distance-RTT Correlation (R^2)	0.022	paper/running_draft_final_detector_corrections.md
-Exp 07 Flapping Pairs Observed Locally in Other Rounds	44.8% (13 / 29)	paper/running_draft_final_detector_corrections.md
+Exp 07 Pakistan Class Latency Ratio Maximum Tail Peak	75.17x	experiments/07_longitudinal_panel/analysis/ratio_corrected.csv
+Exp 07 Pakistan Class Distance-RTT Correlation (R^2)	0.022	paper/running_draft_latency_ratio_merge.md
+Exp 07 Flapping Pairs Observed Locally in Other Rounds	44.8% (13 / 29)	paper/running_draft_pair_numbers_verification.md
 Exp 07 Confirmed Carrier Gate-Flips (PTCL <-> Transworld)	23	findings/07_longitudinal_panel.md
 Exp 07 Geo-IP Physics Violations Corrected by Arbiter	37 / 78 sites	experiments/07_longitudinal_panel/analysis/METHODOLOGY.md
