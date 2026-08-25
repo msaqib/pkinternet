@@ -729,11 +729,11 @@ from `.env` via `pk_multi_probe` (Exp 04 scripts import its ASN/RDAP helpers).
 
 ## AINTEC '26 paper draft (`paper/running_draft.tex`) — current state
 
-**Canonical file.** `paper/running_draft.tex` is the actively-worked ACM AINTEC '26
-standalone paper for Exp 07, not `aintec_panel.tex` or `paper.tex` (older, parallel,
-now-superseded drafts). The user edits it directly and concurrently with Claude Code
-sessions. Always re-read it fresh before citing line numbers or claiming a section's
-status; don't trust a prior read or this summary for exact current wording.
+**Canonical file.** `paper/running_draft.tex` is the actively-worked standalone paper
+for Exp 07, not `aintec_panel.tex` or `paper.tex` (older, parallel, now-superseded
+drafts). It is edited directly and concurrently, so always re-read it fresh before
+citing line numbers or claiming a section's status; don't trust a prior read or this
+summary for exact current wording.
 
 **Editing conventions inside the file.** `\hl{}` (yellow, via `\usepackage{soul}`)
 marks text changed during the detector-rewrite correction pass; `\hlnew{}` (orange,
@@ -772,8 +772,8 @@ and the Results section headings):
   (PTCL and ACE CDN both hold live BGP sessions there, but PTCL's actual traffic
   still uses a private link) and a CDN-exchange-membership gap note (only ACE CDN is
   a member of any Pakistani exchange; Cloudflare/Akamai/Google/Amazon aren't). Both
-  are new content this session, **not independently verified by Claude**, likely
-  sourced from Exp 08 but not checked against `experiments/08_CDN/findings.md`.
+  are recent additions and are **not independently verified**, likely sourced from
+  Exp 08 but not checked against `experiments/08_CDN/findings.md`.
 - §sec:prelim-cdn ("The CDN Cross-Section: the Local Path Exists") sits between RQ1
   and RQ2 as its own subsection, not itself RQ-numbered: whole-country CDN
   peering-gap context (median 2×–12.7×, tail >40×) plus the RTT-savings table
@@ -811,8 +811,8 @@ and the Results section headings):
   claim has no Methodology-section support; the scripts that produced it were never
   saved into the repo (scratchpad-only from earlier in this project's history).
 - `references.bib` does not exist anywhere in `paper/`. Every `\cite{}` will render
-  `[?]` and the reference list will be empty; not something Claude can generate
-  without the real bibliographic records.
+  `[?]` and the reference list will be empty. It cannot be reconstructed without the
+  real bibliographic records.
 - `fig_probe_panel.png` (the composited probe-map-plus-roster figure, built by
   `gen_combined_probe_figure.py`) surfaces a real, unreconciled data discrepancy:
   the map's own bubble labels (16 reporting probes, 6 cities, Lahore=7) don't match
