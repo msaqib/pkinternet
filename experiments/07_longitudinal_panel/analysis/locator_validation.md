@@ -22,7 +22,7 @@ It returns (among other fields) `colo=`, the IATA code of the specific
 Cloudflare data center that answered *this* request — an authoritative,
 independent signal RIPE Atlas probes can't produce themselves (they can't do
 HTTP). This is the same source already named as the gold standard in
-`CLAUDE.md`'s reliability ranking ("colo ... the HTTP truth").
+`METHODOLOGY.md`'s reliability ranking ("colo ... the HTTP truth").
 
 ## What was run
 

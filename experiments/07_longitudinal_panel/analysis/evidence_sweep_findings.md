@@ -193,7 +193,7 @@ method) for the remaining ~129 IPs Cymru couldn't answer (unannounced backbone /
 
 **Every single newly-confirmed hop at 20ms (naive) is "US".** Traced the specific IPs: the bulk
 of them (4,119→1,004 after the fix below) are `149.40.227.129`, AS174 (Cogent), which this
-project's own CLAUDE.md already documents as physically inside Pakistan (~2ms from a different
+project's own METHODOLOGY.md already documents as physically inside Pakistan (~2ms from a different
 Cogent PK PoP IP) despite US registration. The code's `ARTIFACT_ASN` set only contains Shaw
 (`{"6327"}`) — Cogent was never added, so it slips through the RTT floor by luck (its PK PoP
 normally answers under 40ms) rather than by an explicit exclusion. **This means the established,
@@ -204,7 +204,7 @@ Reran with Cogent added. The *remaining* 1,004 newly-confirmed-at-20ms hops (onl
 `trax.pk` and `sonic.pk`) all trace to `172.68.249.86`, confirmed via RIPEstat to be **AS13335,
 Cloudflare** — a second, different registration-vs-physical-location artifact (a local/regional
 Cloudflare PoP, ~22-25ms, mislabelled foreign purely because Cloudflare is US-registered; this
-matches CLAUDE.md's own documented Cloudflare-PoP-inequality finding).
+matches METHODOLOGY.md's own documented Cloudflare-PoP-inequality finding).
 
 **Conclusion: in every case checked, lowering the floor to 20ms did not surface a genuine nearby-
 foreign hop (no Oman, no Gulf country appeared at all). It resurfaced two different already-known

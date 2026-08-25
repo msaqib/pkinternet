@@ -1,4 +1,8 @@
-# Project Context for Claude Code
+# Project Methodology and Standing Context
+
+Standing reference for this repository: what the project measures, the conventions the
+analysis follows, and the non-obvious facts about Pakistani routing that the experiments
+rely on. Other files cite this one rather than restating it.
 
 ## What this project does
 

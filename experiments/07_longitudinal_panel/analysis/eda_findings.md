@@ -20,7 +20,7 @@ finding for RQ2). But the RTT evidence behind it looks partly like noise:
   (490.7, 491.2, 492.1, 492.7, 493.7, 494.1, 494.4, 495.5, 496.9, 497.5,
   498.0, 498.5, 498.9, 499.5, 499.8 — a near-linear progression right up
   against a ceiling).
-- CLAUDE.md already treats RTT >~500ms as an ICMP-generation-delay/queuing
+- METHODOLOGY.md already treats RTT >~500ms as an ICMP-generation-delay/queuing
   artifact, not real geography. This probe's values creeping right up to
   that line, repeatedly, looks like the same failure mode without quite
   crossing the documented threshold.
@@ -121,7 +121,7 @@ PTCL → Equinix Singapore (27.111.228.x)
 ```
 Both destination IPs (`203.101.184.78`, `.80`) sit in the **same /24** as
 `moitt.gov.pk`/`railways.gov.pk`, the Prolexic hairpin already documented in
-CLAUDE.md — this extends that pattern to at least 2 more government/state
+METHODOLOGY.md — this extends that pattern to at least 2 more government/state
 sites, confirmed structural (not a single-probe artifact) since it repeats
 across most of the panel.
 

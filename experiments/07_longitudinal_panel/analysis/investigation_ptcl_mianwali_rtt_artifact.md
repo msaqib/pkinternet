@@ -65,7 +65,7 @@ plausible shared physical path — produce `maxRTT` values that climb in an almo
 ramp from 249.9ms to 499.5ms, filling the range with no gaps, and **not one exceeds 500ms**.
 Genuinely independent network paths to unrelated servers do not do this by chance; a shared,
 external delay mechanism with a ceiling near 500ms does. This is consistent with — and sharpens —
-CLAUDE.md's existing documented caveat that RTTs above ~500ms on this pipeline are a **queuing /
+METHODOLOGY.md's existing documented caveat that RTTs above ~500ms on this pipeline are a **queuing /
 ICMP-error-generation artifact**, not real geography. (Ruled out one candidate explanation:
 target-list order in `targets.csv` is alphabetical and does not match this ordering, so it isn't a
 simple "later in the batch queue" effect from file order — the mechanism is per-round, not
@@ -155,7 +155,7 @@ independently, same probe, same week — would show it too (a bimodal RTT distri
 | All PK-class (1016393) | 1,539 | 758 | 49.3% |
 | Confirmed-real (ping ≥60ms, or independently known offshore) | 278 | 258 | 92.8% |
 | **Likely-artifact (ping <60ms all week)** | 607 | 212 | 34.9% |
-| Unconfirmed (target blocks ICMP ping — mostly `.gov.pk`/`.edu.pk`, per CLAUDE.md's known ping-silence pattern) | 654 | 288 | 44.0% |
+| Unconfirmed (target blocks ICMP ping — mostly `.gov.pk`/`.edu.pk`, per METHODOLOGY.md's known ping-silence pattern) | 654 | 288 | 44.0% |
 
 Removing just the 212 likely-artifact trombone flags from the numerator drops 1016393's overall
 rate from **49.3% → 35.5%** — still above PTCL-Karachi's 30.1%, but the gap shrinks by roughly

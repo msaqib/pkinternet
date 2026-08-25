@@ -43,7 +43,7 @@ Six distinct ISPs; Cybernet (AS9541) and PTCL (AS17557) each contribute two prob
 | 64535 | AS151983 | Orbit | Faisalabad | Proj# unconfirmed |
 
 (Canonical probe roster — including ICMP-filtered and disconnected probes — is the
-table in `CLAUDE.md` → *Probe configuration*. RIPE's API does not expose the
+table in `METHODOLOGY.md` → *Probe configuration*. RIPE's API does not expose the
 `LocalInternetProjNN` names, so both tables are maintained by hand.)
 
 Each result records the probe's **live-measured egress ASN** (`probe_asn`) alongside

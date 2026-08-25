@@ -2,16 +2,23 @@
 """Regenerate fig_trombone_by_isp.pdf and fig_local_vs_hairpin_cdf.pdf under the
 final 5-rule classifier, matching the exact style/layout of the original
 exp07_analysis.ipynb cells that produced them."""
+import os
 import pandas as pd
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-OUT = r"C:\Users\rayan\AppData\Local\Temp\claude\d--dev-projects-RA\4d2820c5-52a8-41cd-9661-f31116ae24de\scratchpad"
+# Inputs are the analysis CSVs beside this script; outputs are the figures the paper
+# includes. Both were previously a single hard-coded absolute temp directory, which
+# meant this script only ran on one machine.
+HERE = os.path.dirname(os.path.abspath(__file__))
+IN   = HERE
+OUT  = os.path.abspath(os.path.join(HERE, "..", "..", "..", "paper", "figures"))
+os.makedirs(OUT, exist_ok=True)
 
 # ---- fig_trombone_by_isp.pdf ----
-trace = pd.read_csv(f"{OUT}/final_classified_rounds.csv")
+trace = pd.read_csv(f"{IN}/final_classified_rounds.csv")
 trace["probe_label"] = trace["isp"] + "." + trace["probe_id"].astype(str)
 
 trombone_by_isp = (
@@ -39,7 +46,7 @@ plt.close()
 print("wrote fig_trombone_by_isp.pdf")
 
 # ---- fig_local_vs_hairpin_cdf.pdf ----
-m = pd.read_csv(f"{OUT}/rq2_merged.csv")
+m = pd.read_csv(f"{IN}/rq2_merged.csv")
 m["trombone"] = m["trombone"].astype(bool)
 BLUE, RED = "#2196F3", "#F44336"
 
