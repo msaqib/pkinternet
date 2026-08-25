@@ -8,6 +8,50 @@ The study uses traceroutes launched from Pakistani RIPE Atlas probes to determin
 - How traffic is routed across Pakistani ISPs
 - Whether traffic transits Pakistan's internet exchange point (PKIX) or exits the country unnecessarily
 
+## The paper
+
+The write-up lives in `paper/`.
+
+| File | What it is |
+|---|---|
+| **`paper/running_draft.tex`** | **The live paper.** Single source of truth. `acmart`, `sigconf`, anonymous. |
+| `paper/references_skeleton.bib` | Bibliography. |
+| `paper/figures/` | Every figure the paper includes. |
+| `paper/make_*.py` | The scripts that regenerate those figures from the experiment outputs. Nothing in `figures/` is hand-drawn. |
+| `paper/tab_sample.tex` | Generated sample table, produced by `make_sample_table.py`. |
+| `paper/paper_draft.tex` | Earlier standalone draft, still maintained upstream on `main`. Not the live paper. |
+| `paper/archive/` | Superseded drafts and working notes. Kept locally, **not** tracked (see `.gitignore`). |
+
+### Claims to evidence
+
+Every reported number is traceable without re-running a measurement:
+
+- **`FINDINGS.md`** — the findings, grouped by theme, each with its key numbers, the
+  experiment that produced them, and its caveats and failure modes.
+- **`EVIDENCE.tsv`** — one row per claim, resolving to the analysis file or paper section
+  that backs it.
+
+Start at `FINDINGS.md`, follow the experiment reference into `experiments/NN_*/`, and the
+per-experiment `notes.md` explains what was run and what came out.
+
+## Reproducing
+
+```bash
+python -m venv .venv
+. .venv/bin/activate          # Windows: .venv\Scriptsctivate
+pip install -r requirements.txt
+```
+
+Python 3.10+. Measurement scripts need a RIPE Atlas API key in `.env` as `ATLAS_API_KEY`
+(`.env` is gitignored — never commit it). Analysis and figure regeneration need no key;
+the experiment outputs are committed.
+
+`pybgpstream` is **not** installed by default: it needs the `libbgpstream` C library and
+will not build from pip alone. Only the BGP experiments (05, 09) import it.
+
+Large regenerable artefacts — raw RIPE archives, geolocation caches — are deliberately
+gitignored and re-fetchable; see `.gitignore` for what and why.
+
 ## Repository Structure
 
 ```
