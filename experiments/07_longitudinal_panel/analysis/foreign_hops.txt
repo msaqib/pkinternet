@@ -1,0 +1,44 @@
+FOREIGN-CLASSIFIED HOPS, Exp 07 panel, Pakistani-hosted targets
+==============================================================================
+distinct IPs classified foreign          : 76
+hop observations qualifying as foreign   : 10583
+of which were the FIRST foreign hop      : 4170 (these drive the verdicts)
+
+INCREMENTAL RTT over the preceding responding hop
+  samples 10571   median 75.7 ms   p10 -1.6   p90 182.6
+  negative increments: 23.0%  (next hop answered FASTER than the one before it,
+   which is impossible as a distance, so this is the noise floor of the measure)
+
+FOREIGN IXP PEERING-LAN MATCHES
+  27.111.228.157   Equinix Singapore            27.111.228.0/22  (2390 observations, 2388 as exit)
+  27.111.230.181   Equinix Singapore            27.111.228.0/22  (985 observations, 984 as exit)
+  27.111.230.138   Equinix Singapore            27.111.228.0/22  (168 observations, 168 as exit)
+  3 of 76 distinct IPs, 3543 of 10583 observations
+
+TOP 25 BY OBSERVATION COUNT
+ip               asn     cc   obs       rtt_med  incr_med      neg%  org / ixp
+27.111.228.157   AS      SG   2390         98.7      78.2      0.3%  Equinix Singapore
+72.52.25.142     AS32787 US   1447        274.3     175.5      0.2%  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-
+27.111.230.181   AS      SG   985          97.4      78.1      0.2%  Equinix Singapore
+72.52.21.194     AS32787 US   938         275.9     179.3      0.0%  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-
+2.21.120.144     AS32787 NL   321          96.8      -0.3     87.9%  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-
+2.21.120.114     AS32787 NL   316          97.4      -0.2     82.0%  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-
+2.21.120.154     AS32787 NL   251         105.9      -0.1     65.3%  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-
+2.21.120.171     AS32787 NL   237         124.0      12.9     24.1%  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-
+213.202.7.209    AS8529  AE   204         115.0      -0.2     68.1%  OMANTEL-AS - Zain Omantel Internationa
+206.148.27.235   AS7578  US   201         110.9      85.4      1.0%  GSL - Global Secure Layer, AU
+116.51.17.201    AS2914  SG   200         131.7     106.2      1.5%  NTT-DATA-2914 - NTT America, Inc., US
+93.186.133.54    AS6762  IT   198         193.3      61.5      1.5%  SEABONE-NET - TELECOM ITALIA SPARKLE S
+213.144.170.13   AS6762  IT   197         202.5      10.5      2.0%  SEABONE-NET - TELECOM ITALIA SPARKLE S
+213.144.176.160  AS6762  IT   196         192.0      -1.2     88.8%  SEABONE-NET - TELECOM ITALIA SPARKLE S
+2.21.120.122     AS32787 NL   192          92.9      -0.5     77.1%  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-
+2.21.120.146     AS32787 NL   192          98.1       0.1     43.8%  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-
+2.21.120.112     AS32787 NL   190          96.5      -4.0     95.8%  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-
+206.148.27.1     AS7578  US   173         182.3      63.7      2.9%  GSL - Global Secure Layer, AU
+27.111.230.138   AS      SG   168          99.3      95.2      0.0%  Equinix Singapore
+223.121.3.98     AS58453 HK   165          99.7     -95.6     73.3%  CMI-INT-HK - China Mobile Internationa
+2.21.120.208     AS32787 NL   163          96.5      -0.1     58.3%  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-
+134.0.219.250    AS8529  AE   161         115.2      -2.0     92.5%  OMANTEL-AS - Zain Omantel Internationa
+160.202.164.163  AS137409 NZ   97          113.9     -58.4     99.0%  GSLNETWORKS-AS-AP - GSL Networks Pty L
+2.21.120.177     AS32787 NL   92          119.0      -1.0     69.6%  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-
+2.21.120.90      AS32787 NL   92           78.8      -0.0     60.9%  PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-

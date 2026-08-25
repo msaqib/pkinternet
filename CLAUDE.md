@@ -69,7 +69,7 @@ submarine-cable cuts.
 | `experiments/07_longitudinal_panel/analysis/` | Exp 07 analysis: **`METHODOLOGY.md`** (vantage roster §0 → distance §1 → km→ms §2 → dimensionless latency ratio §3 → geo-IP caveats §4 → reading the plots §8 → **CDN per-ISP treatment §9** + Appendix A geolocation methods, Appendix B multilateration spec) and **`geo.py`** (subcommands `distances` / `locate` / `relocate` / `ratio` / `cdn`). Key methods: Haversine distance, speed-of-light floor (fibre ≈ d/100 ms), **physics arbiter** (ping < vacuum floor ⇒ geo-IP proven wrong — caught 37/78 sites incl. 34 CDNs "in Toronto"), per-ISP CDN locality score. |
 | `experiments/08_CDN/` | Exp 08 (Sameera): ACE CDN RTT from all probes (`ACE_CDN_run_all.py`) + targeted IXP checks — 08.1/08.2 PIE Karachi (PTCL+Nayatel → ACE CDN / Connect Communications), 08.3 PKIX Lahore (Z-Com+Nayatel → Transworld). |
 | `experiments/09_as_hegemony/` | Exp 09: **AS Hegemony** (Fontugne et al. metric via IIJ IHR public API) — quantifies the PTCL/TWA duopoly from **global BGP data**, independent of our probes. `hegemony.py deps` (per-origin dependencies, validates our traceroute transit findings — e.g. Orbit hege(TWA)=1.0, Nayatel PTCL 0.68/TWA 0.32/Cogent 0.17) + `rollup` (all ~220 PK ASes → % depending on the duopoly). API quirk: requires BOTH `timebin__gte` and `timebin__lte`; no `format` param. See `notes.md`. |
-| `paper/` | Paper drafts: `paper.tex` (IEEEtran, full multi-experiment story), `aintec_panel.tex` (**ACM/AINTEC '26, Exp 07 standalone**, results scaffolded `\pending`), `exp07_panel.tex` (IEEE variant), `draft.md`, style/structure notes (`style_notes_ixp.md` = Di Bartolomeo ISCC'15 template, `style_notes_p1.md` = IMC register, `paper_structure.md`, `experiment_consistency.md`), `make_figures.py`. |
+| `paper/` | **`running_draft.tex` is the canonical, actively-worked ACM AINTEC '26 draft** (Exp 07 standalone) — see the dedicated section below, not `aintec_panel.tex`/`exp07_panel.tex` (older, now-superseded parallel drafts). Also holds `paper.tex` (IEEEtran, full multi-experiment story), `draft.md`, style/structure notes (`style_notes_ixp.md` = Di Bartolomeo ISCC'15 template, `style_notes_p1.md` = IMC register, `paper_structure.md`, `experiment_consistency.md`), `make_figures.py`, and the `running_draft_*` corrections/planning `.md` files. |
 | `site_collection/` | Tranco tooling: `get_tranco.py`, `.pk` filtering, DNS/ASN resolution + hosting classification (`classify_pk_hosting.py`) — produced the Exp 07 candidate pool (`site_candidates.csv`, 1,781 sites). |
 | `scripts/processtraces/`, `scripts/processtraces2/` | Team-member ad-hoc notebooks (ping/trace EDA on Exp 03 data: hop timeseries, anomaly spikes, heatmaps). Not part of the canonical pipeline. |
 | `tools/probe_status/` | Flask dashboard: Google-Sheet probe roster vs live RIPE Atlas status, two sections (**Our Probes** / Existing), pulls each probe's RIPE label+tags on refresh. |
@@ -720,3 +720,146 @@ official libraries**: `ripe.atlas.cousteau` to create/fetch measurements
 `AtlasResultsRequest`) and `ripe.atlas.sagan` (`TracerouteResult`) to parse results.
 Use `.last_median_rtt` (not the deprecated `.last_rtt`). `RIPE_API_KEY` still comes
 from `.env` via `pk_multi_probe` (Exp 04 scripts import its ASN/RDAP helpers).
+
+---
+
+## AINTEC '26 paper draft (`paper/running_draft.tex`) — current state
+
+**Canonical file.** `paper/running_draft.tex` is the actively-worked ACM AINTEC '26
+standalone paper for Exp 07, not `aintec_panel.tex` or `paper.tex` (older, parallel,
+now-superseded drafts). The user edits it directly and concurrently with Claude Code
+sessions. Always re-read it fresh before citing line numbers or claiming a section's
+status; don't trust a prior read or this summary for exact current wording.
+
+**Editing conventions inside the file.** `\hl{}` (yellow, via `\usepackage{soul}`)
+marks text changed during the detector-rewrite correction pass; `\hlnew{}` (orange,
+custom command defined near the top of the preamble) marks a later, separate round of
+edits. Both are author-review markup, not meant to survive to camera-ready. Prior
+drafts of replaced text are conventionally kept as `%`-prefixed comments directly
+below the new text rather than deleted outright, both in the `.tex` file and in the
+corrections `.md` docs described below.
+
+**Direct-edit policy: default is NO direct edits.** The standing rule is "never edit
+`running_draft.tex` directly, route every correction through a separate `.md` file in
+`paper/` for the user to review and paste in themselves." Mid-session the user
+temporarily authorized direct edits for several rounds (detector-language cleanup,
+the RQ restructuring, LaTeX-error fixes, em-dash removal, table/figure consolidation),
+then explicitly reasserted the no-direct-edits default afterward ("no edits to be made
+on it"). Treat direct editing as opt-in per request, never the default, and confirm
+before assuming it's still wanted even if a recent session did it.
+
+**The tromboning detector** (§sec:detector, "Tromboning Classification"): a traceroute
+round is tromboned iff at least one responding hop satisfies ALL of: (1) resolves to a
+real, non-PK country; (2) is not a private IP; (3) its ASN is not in the artifact
+list, `{AS6327 Shaw, AS174 Cogent}`, both foreign-registered but physically inside
+Pakistan; (4) it actually responded (a timeout is skipped, never treated as foreign);
+(5) its RTT falls in [40ms, 500ms]. No independent RTT-only trigger exists. Headline:
+**5.52%** of 75,600 Pakistani-class traces trombone, reproducible from
+`raw_a_20260718_201113.json.gz` via `experiments/07_longitudinal_panel/analysis/
+final_classifier.py`.
+
+**Current RQ structure is 3 RQs, not the original 4** (changed this session, both the
+wording and the section structure, live in both the Introduction's `description` list
+and the Results section headings):
+- **RQ1** (§sec:rq1, "IXP Crossing"): does traffic cross PKIX/PIE? Zero of
+  200,292/218,480 traces crossed PKIX Lahore or PIE Karachi; PKIX Islamabad's and
+  PKIX Karachi's peering-LAN addressing couldn't be verified, no crossing claim is
+  made for those two. Also carries a PIE Karachi/ACE CDN route-server anecdote
+  (PTCL and ACE CDN both hold live BGP sessions there, but PTCL's actual traffic
+  still uses a private link) and a CDN-exchange-membership gap note (only ACE CDN is
+  a member of any Pakistani exchange; Cloudflare/Akamai/Google/Amazon aren't). Both
+  are new content this session, **not independently verified by Claude**, likely
+  sourced from Exp 08 but not checked against `experiments/08_CDN/findings.md`.
+- §sec:prelim-cdn ("The CDN Cross-Section: the Local Path Exists") sits between RQ1
+  and RQ2 as its own subsection, not itself RQ-numbered: whole-country CDN
+  peering-gap context (median 2×–12.7×, tail >40×) plus the RTT-savings table
+  (`tab:cdn-savings`), setting up RQ2's sharper same-city cut.
+- **RQ2** (§sec:rq2, "Similarity of User Experience Within a City"): same-city ISP
+  comparison for BOTH domestic and CDN content, the domestic half is new this
+  session, nothing compared domestic same-city latency across ISPs before. Karachi
+  domestic spread 2.9× (TES 14.0ms / Cybernet 18.1ms / PTCL 41.2ms), Lahore 1.4×;
+  CDN spread 29.8× Karachi / 34× Lahore, an order of magnitude larger, the sharpest
+  single finding of the whole restructuring (peering inequality bites hardest
+  specifically where no real local server exists to fall back on). Figure
+  `fig_rq2_same_city_domestic_vs_cdn.pdf`, built by `gen_rq2_same_city_figure.py`
+  from `rq2_same_city_domestic.py`'s output; that script's numbers were verified
+  before being trusted by reproducing two already-published figures exactly
+  (PTCL-Karachi 11.0% and Cybernet-Karachi 0.0% trombone rate).
+- **RQ3** (§sec:rq3, "Extent, Attribution, Cost, and the Local Path"): merges what
+  were three separate older RQs (extent/attribution, RTT cost, local-path
+  existence) into one subsection. Headline 5.52%, per-ISP breakdown, attribution
+  (3,779 of 4,170 confirmed hairpins attributable across 5 providers, 391
+  unattributed, verified this session against `final_classified_rounds.csv`'s
+  `handoff_isp` column, an earlier draft's "every single trace resolves to a
+  hand-off" claim was wrong), sector breakdown (Financial Services 58.3%,
+  Government 14.6%), the 5.52%-is-a-floor caveat (8.3% robustness check), the
+  local-vs-hairpin RTT gap (25.1ms/118.0ms), stability-over-time, and local-path
+  existence (415/16/13 pair split, 44.8% domestic-alternative share, concentrated
+  in 8 of 37 sites).
+- §sec:prelim-ratio ("Latency Ratio by Site Type") is a third "preliminary
+  cross-section" subsection, positioned AFTER RQ3, not before RQ1, independent of
+  the detector, driven by the corrected Haripur probe coordinate instead.
+
+**Known-open items, not yet resolved, worth checking before assuming clean:**
+- Abstract still says "55%" for Financial Services tromboning; the body (RQ3)
+  correctly says 58.3%. Never fixed.
+- Introduction's "37% of the 200k most popular domains" Tranco+RIPEstat-peering
+  claim has no Methodology-section support; the scripts that produced it were never
+  saved into the repo (scratchpad-only from earlier in this project's history).
+- `references.bib` does not exist anywhere in `paper/`. Every `\cite{}` will render
+  `[?]` and the reference list will be empty; not something Claude can generate
+  without the real bibliographic records.
+- `fig_probe_panel.png` (the composited probe-map-plus-roster figure, built by
+  `gen_combined_probe_figure.py`) surfaces a real, unreconciled data discrepancy:
+  the map's own bubble labels (16 reporting probes, 6 cities, Lahore=7) don't match
+  the roster table's actual per-city assignment (14 probes, 7 cities, Lahore=4).
+  Not resolved, the map's own generation script/data wasn't available to
+  investigate which side is right.
+- The Discussion's SMW5 fault paragraph still doesn't attribute itself to the
+  separate Exp 06 monitoring run ("in companion measurements we ran through the
+  fault window," no citation to Exp 06).
+- "Conversations with staff at a major Pakistani ISP" (CDN Cross-Section) is still
+  presented as plain fact, not flagged as anecdotal/unsourced.
+
+**Corrections/planning docs in `paper/`**, several items in each are now applied
+directly to `running_draft.tex`, check each doc's own "complete" markers since they
+may be stale relative to the live file:
+- `running_draft_final_detector_corrections.md` — the original, large corrections
+  doc from the detector-rewrite pass (items 1–15), plus a later pass (items 16–20)
+  fixing LaTeX bugs, old-classifier-comparison mentions, and content gaps. Mostly
+  applied.
+- `running_draft_external_references_audit.md` — audits every place the paper leans
+  on another experiment (Exp 1.2/04/06/08) or an anecdote instead of Exp 07's own
+  data. Two of its four items (SMW5 attribution, "Conversations with staff" framing)
+  are still not applied, see "Known-open items" above.
+- `running_draft_shortening_plan.md`, then superseded by
+  `running_draft_restructure_corrections.md` once the page-count problem got
+  reframed around the RQ merge rather than generic float-cutting. The restructure
+  doc's items 1–8 describe an *earlier* 3-RQ merge proposal that does not exactly
+  match what ended up live (the file went through an intermediate 4-RQ state before
+  the eventual RQ3+RQ4 merge was applied directly, not via that doc's exact drafted
+  text); items 9–12 do match the live file and were applied as drafted.
+- `running_draft_applied_changelog.md` — a changelog of one specific round of direct
+  edits (items 9–12 above only). Doesn't cover everything applied since (the
+  table/figure merges, the RQ3+RQ4 merge, LaTeX-error fixes, em-dash removal, the
+  probe-figure rebuild), treat as partial history, not authoritative for current
+  state.
+
+**New scripts in `experiments/07_longitudinal_panel/analysis/`** added this session:
+- `rq2_same_city_domestic.py` — the new domestic same-city cut, writes
+  `rq2_same_city_domestic.csv`.
+- `gen_rq2_same_city_figure.py` — generates `fig_rq2_same_city_domestic_vs_cdn.pdf`.
+- `gen_combined_probe_figure.py` — composites `fig_probe_map.png` and the probe
+  roster into `fig_probe_panel.png`, one genuine image, not a picture with a LaTeX
+  table stacked underneath it in the same float.
+
+**Figures currently referenced by the live draft, in `paper/figures/`**:
+`fig_probe_panel.png`, `fig_rq2_same_city_domestic_vs_cdn.pdf`,
+`fig_trombone_by_isp.pdf`, `fig_local_vs_hairpin_cdf.pdf`, `ratio_cdf_all3.png`,
+`fig_distance_regression_pk.png`, `fig_distance_regression_abroad.png`,
+`cdn_by_isp.png`. Tables live: `tab:cisa-sectors` (merged candidate-pool +
+sample-allocation), `tab:hosting-providers`, `tab:cdn-savings`, `tab:cdn-bestcase`.
+Cut from the draft this session: the tikz site-selection pipeline diagram, the
+packet-loss/jitter/hop-count figure (`fig_rtt_indicators.pdf`, paragraph kept, figure
+cut), the old separate `tab:sample-allocation` and `tab:probes` tables (both merged
+into other floats).

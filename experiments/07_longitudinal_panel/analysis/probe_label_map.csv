@@ -1,0 +1,16 @@
+label,isp,city,probe_id,in_traceroute_analysis,note
+A1,Cybernet,Haripur,1016036,yes,
+A2,Cybernet,Karachi,1016143,yes,
+A3,Cybernet,Karachi,1016154,yes,only 259 rounds
+B1,Fasttel,Islamabad,1014872,yes,
+C1,Nayatel,Islamabad,60223,yes,
+C2,Nayatel,Islamabad,65892,yes,platform coordinates say Lahore; Islamabad is the deployment record
+D1,Nova,Lahore,1015679,yes,
+E1,Orbit,Faisalabad,64535,yes,
+F1,PTCL,Karachi,1016126,yes,
+F2,PTCL,Mianwali,1016393,yes,only 1421 rounds
+F3,PTCL,Lahore,7764,no,ICMP-filtered; ping analysis only; excluded from traceroute
+G1,TES,Rawalpindi,64078,yes,platform coordinates say Lahore; Rawalpindi is the deployment record
+G2,TES,Karachi,64722,yes,
+H1,Transworld,Lahore,62224,yes,ICMP-filtered; reports first two hops then times out
+I1,Zcom,Lahore,7613,yes,

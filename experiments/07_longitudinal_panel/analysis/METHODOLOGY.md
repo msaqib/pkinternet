@@ -527,13 +527,21 @@ if some vantage is close; 20 ms ↔ ~2,043 km radius.
 ```
 for each vantage i:
     d_i     = Haversine(vantage_i, geoip_point)     # km to the geo-IP claim
-    floor_i = 2 · d_i / c                            # ms, VACUUM round-trip minimum
+    floor_i = 2 · d_i / v_fibre                      # ms, FIBRE round-trip minimum
     if t_i < floor_i:  geo-IP is IMPOSSIBLE          (Rule 6)
 ```
-**Rule 6 — use *vacuum* speed here** (the unbeatable limit): if a ping beats even the vacuum time to
-the geo-IP spot, the server *cannot* be there — a **proof**. (Fibre for realistic bounds in B.5;
-vacuum for impossibility proofs.) Verdict: any impossible vantage → **geo-IP wrong, latency wins**;
-else **consistent**. Record `worst_impossible_gap = min_i(t_i − floor_i)`; negative = the proof.
+**Rule 6 — use *fibre* speed here, the same floor as B.5** (changed 2026-07-22 from an earlier
+vacuum-based version, for consistency with the ratio in §3): if a ping beats even the realistic
+fibre-speed time to the geo-IP spot, the claimed location is not credible given how real signals
+travel — flagged as **impossible**. This is a *practical* impossibility check, not an absolute
+physical one (an unusually direct real path could in principle beat the fibre estimate without
+geo-IP being wrong) — the vacuum floor (`V_VAC`, still defined in `geo.py` but unused here) is
+the strictly unbeatable bound if a harder proof is ever needed. On the panel data, switching from
+vacuum to fibre adds 2 CDN sites to the flagged set (both geo-IP-registered to "Menifee, US" —
+the same registration-artifact pattern as the other 34) and changes no unicast-site verdicts:
+37/78 sites impossible under vacuum vs. **39/78 under fibre** (36 CDN + 3 Pakistan). Verdict: any
+impossible vantage → **geo-IP wrong, latency wins**; else **consistent**. Record
+`worst_impossible_gap = min_i(t_i − floor_i)`; negative = the proof.
 
 ## B.7 Worked example — `paknavy.gov.pk` (a CDN geo-IP put in "Toronto")
 
@@ -570,7 +578,7 @@ probe's RTT as its own answer instead of forcing one point.
 - **Requires a ping reply** — ICMP-blocked sites yield no constraint (use TCP-traceroute RTT later).
 
 ## B.10 Result of scaling to all sites (`geo.py relocate`)
-Of 78 sites with both geo-IP and a ping, **geo-IP is proven wrong for 37** (34 CDN + 3 PK), all
-actually **local**; the other 41 are **consistent** (geo-IP not ruled out and agreeing with latency).
-The physics arbiter decides every case: geo-IP is either impossible (latency wins, proven) or
-consistent (no conflict).
+Of 78 sites with both geo-IP and a ping, **geo-IP is flagged wrong for 39** (36 CDN + 3 PK, fibre
+floor — see B.6), all actually **local**; the other 39 are **consistent** (geo-IP not ruled out
+and agreeing with latency). The physics arbiter decides every case: geo-IP is either flagged
+impossible (latency wins) or consistent (no conflict).
