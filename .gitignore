@@ -26,6 +26,9 @@ paper/archive/
 # Exceeds GitHub's 100MB file limit — keep locally, don't track
 Related work/Annual Report 2025-25 Nov 25.pdf
 
+# Tranco library's own on-disk cache — 43MB, redownloads automatically, no reason to track
+site_collection/.tranco/
+
 # --- local-only working notes, never published (added 2026-08-25) ---
 CLAUDE.md
 AGENTS.md

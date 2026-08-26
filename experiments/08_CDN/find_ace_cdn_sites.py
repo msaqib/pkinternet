@@ -8,7 +8,7 @@ Run from pkinternet root:
 import json
 import dns.resolver
 
-INPUT_JSON = "../../site_collection/tranco_350k_resolved.json"
+INPUT_JSON = "../../site_collection/pipeline/outputs/tranco_350k_resolved.json"
 OUTPUT_TXT = "experiments/08_CDN/ace_cdn_sites.txt"
 TARGET_ASN = "139341"
 

@@ -36,7 +36,7 @@ from geo_utils import serving_location   # actual destination location helper
 load_dotenv()
 
 import json
-DNS_CACHE_FILE = "other/tranco_pk_resolved.json"
+DNS_CACHE_FILE = "site_collection/pipeline/outputs/tranco_pk_resolved.json"
 
 def load_dns_cache():
     if os.path.exists(DNS_CACHE_FILE):
@@ -54,7 +54,7 @@ API_KEY        = os.environ.get("RIPE_API_KEY", "your-api-key-here")
 RUN_NAME = "run_all_sites"
 BATCH_START = 0
 BATCH_SIZE = None
-WEBSITES_FILE = "other/tranco_pk_domains.txt"
+WEBSITES_FILE = "site_collection/pipeline/outputs/tranco_pk_domains.txt"
 PROBES = [
     (60223, 23674, "Pakistan", "Nayatel ISB"),
 ]
