@@ -10,20 +10,23 @@ The study uses traceroutes launched from Pakistani RIPE Atlas probes to determin
 
 ## Repository structure — where to find what
 
-**Start here if you want the results:** `extra/FINDINGS.md` → `extra/EVIDENCE.tsv` → the
-experiment's `notes.md`. See [Claims to evidence](#claims-to-evidence) below.
+**Start here — the flagship experiment:** [`experiments/07_longitudinal_panel/`](experiments/07_longitudinal_panel/notes.md).
+A 7-day uniform panel from every connected PK probe to a frozen 100-site stratified sample. This is
+the main result the paper is built on; its `notes.md` is the full runbook and its `analysis/` folder
+has the methodology and every figure script.
 
-**Start here if you want to run something:** `scripts/measurement/pk_multi_probe.py` (the main
-measurement script) or a specific `experiments/NN_*/` folder — each has its own `notes.md` runbook.
-
-**Start here for standing context** (conventions, ASNs, known measurement artifacts, what's
-already been established): [`experiments/01_website_destinations/METHODOLOGY.md`](experiments/01_website_destinations/METHODOLOGY.md).
-Other docs in this repo cite it rather than restating it.
+**Everything else:**
+- **All experiments:** `experiments/NN_*/`, one subfolder each, with its own `notes.md` runbook.
+- **Standing context** (conventions, ASNs, known measurement artifacts, what's already been
+  established): [`experiments/01_website_destinations/METHODOLOGY.md`](experiments/01_website_destinations/METHODOLOGY.md).
+  Other docs in this repo cite it rather than restating it.
+- **Claims to evidence** (every reported number traced to its source): see
+  [below](#claims-to-evidence).
+- **Running something:** `scripts/measurement/pk_multi_probe.py` is the main measurement script.
 
 ```
-extra/                 FINDINGS.md, EVIDENCE.tsv, CV-BULLETS.md — the claims-to-evidence trail
-findings/              Per-experiment analysis writeups + the charts notebook
 experiments/           One subfolder per experiment: notes.md, scripts, results/
+findings/              Per-experiment analysis writeups + the charts notebook
 scripts/measurement/   Core measurement scripts (pk_multi_probe, geo_utils, format_routes)
 data/                  Canonical input files: website list, ISP/FLL list, CDN targets, etc.
 site_collection/       Tranco-based site sampling that produced the Exp 07/paper candidate pool
