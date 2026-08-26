@@ -9,13 +9,28 @@ scripts/measurement/.geo_cache.json
 
 # Exp03 live Prometheus textfiles (local-only, server-side for Grafana)
 experiments/03_longitudinal_routing/live/
-<<<<<<< Updated upstream
 
 # Exp 07 raw RIPE archives — large and re-fetchable for free via dump_raw.py (never expire)
 experiments/07_longitudinal_panel/results/*/raw_*.json.gz
 
 # Regenerable IHR API response caches (results CSVs hold the findings; re-pull via robustness.py)
 experiments/06.1.1_smw5_robustness/.cache_*.json
-=======
-.env
->>>>>>> Stashed changes
+
+# --- regenerable caches / local scratch (added 2026-08-25) ---
+experiments/07_longitudinal_panel/analysis/.paths_series.json
+experiments/07_longitudinal_panel/analysis/.cache_probe_geo.json
+experiments/07_longitudinal_panel/analysis/_cymru_bulk_result.json
+experiments/07_longitudinal_panel/analysis/_backup_before_haripur_fix/
+paper/archive/
+
+# --- local-only working notes, never published (added 2026-08-25) ---
+CLAUDE.md
+AGENTS.md
+HANDOFF.md
+.claude/
+.cursor/
+.cursorrules
+.aider*
+.github/copilot-instructions.md
+.continue/
+.windsurfrules

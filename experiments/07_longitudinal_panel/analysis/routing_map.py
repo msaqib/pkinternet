@@ -39,7 +39,7 @@ OUT_HTML     = 'experiments/07_longitudinal_panel/analysis/figures/routing_map.h
 # location is physically impossible if the observed RTT is below the speed-of-
 # light-in-vacuum round-trip floor for that distance; such hops are either
 # corrected to an independently-verified real location (KNOWN_LOCATIONS, from
-# this project's own RDAP-confirmed findings — see CLAUDE.md / findings/04,
+# this project's own RDAP-confirmed findings — see METHODOLOGY.md / findings/04,
 # findings/10) or dropped from the plotted path rather than shown somewhere false.
 V_VAC = 299.792  # km/ms, speed of light in vacuum
 EARTH_R = 6371.0  # km, mean Earth radius

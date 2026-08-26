@@ -156,7 +156,7 @@ def fetch_result(msm_id):
 def check_probe_status(probes):
     """Query current RIPE Atlas connection status for all probes in one bulk
     call and split into (connected, disconnected). Probe connectivity
-    fluctuates (see CLAUDE.md), so this is checked live rather than hardcoded —
+    fluctuates (see METHODOLOGY.md), so this is checked live rather than hardcoded —
     scheduling a traceroute on a disconnected probe is what produces the
     'No suitable probes' failures."""
     ids = ",".join(str(p[0]) for p in probes)

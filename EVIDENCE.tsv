@@ -1,0 +1,71 @@
+claim	number	file_or_notebook_that_produces_it
+Exp 07 Longitudinal Panel Total Traceroutes	222,944	findings/07_longitudinal_panel.md
+Exp 07 Longitudinal Panel Total Pings	445,749	findings/07_longitudinal_panel.md
+Exp 07 Target Stratification (PK / CDN / Abroad)	37 / 40 / 23	experiments/07_longitudinal_panel/analysis/targets_corrected.csv
+Exp 07 Reporting Probe Vantages (Total / Core Analysis Roster)	16 / 14	findings/07_longitudinal_panel.md
+Exp 4.1 Small-ISP Census Total Traceroutes	18,260	experiments/04.1_small_isp_tromboning/results/run_20260627_192918/census_20260627_192918.csv
+Exp 4.1 Small-ISP Census Announced /24 Blocks Targeted / Responding	747 / 696	findings/04.1_small_isp_tromboning.md
+Exp 4.1 Small-ISP Census Total Targeted / Responding ISPs	48 / 45	findings/04.1_small_isp_tromboning.md
+Exp 4.1 Small-ISP Census Source Probes	7	findings/04.1_small_isp_tromboning.md
+Exp 01 Hosting Census Sites / Batches	91 / 10	findings/01_hosting_and_routing_analysis.md
+Exp 01 Hosting Census Foreign or CDN Percentage	~75%	findings/01_hosting_and_routing_analysis.md
+Exp 1.4 PK100 Hosting Split (PK / CDN / Abroad)	60% / 31% / 8%	findings/01.4_pk100_hosting.md
+Exp 1.1 Per-ISP DNS Resolution Divergence Sites	8 / 103 (~7.8%)	findings/01.1_dns_resolution_analysis.md
+Exp 05 BGP Validation Consistent AS Paths	78 / 80 (97.5%)	findings/05_BGProuting.md
+Exp 09 Global BGP Visible Pakistani ASNs	291	experiments/09_as_hegemony/results/pk_hegemony_rollup.csv
+Exp 09 ASNs Dependent on PTCL or TWA Majority (Hegemony >= 0.50)	89.7% (261 / 291)	findings/09_as_hegemony.md
+Exp 09 ASNs with Material Duopoly Dependency (Hegemony >= 0.10)	92.1%	findings/09_as_hegemony.md
+Exp 09 Median AS Hegemony (Transworld / PTCL)	0.50 / 0.17	findings/09_as_hegemony.md
+Exp 6.1.1 W1/W4 APNIC User Population on Duopoly-Majority ASNs	99.63% (~42.3M users)	findings/smw5_fault_complete_story.md
+Exp 6.1.1 W1/W4 User Share on PTCL-Majority ASNs	70.3% (29.6M users)	findings/smw5_fault_complete_story.md
+Exp 6.1.1 W1/W4 User Share on Transworld-Majority ASNs	29.7% (12.5M users)	findings/smw5_fault_complete_story.md
+Exp 4.1 International Transit Handoffs (Transworld / PTCL)	589 / 566	findings/04.1_small_isp_tromboning.md
+Exp 07 Unannounced Transworld Domestic Routers	125 / 143 (87.4%)	findings/07_longitudinal_panel.md
+Exp 6.1.1 W5 SMW5 Onset Time Prior to PTA Announcement	1 Jul 2026 17:00 PKT (~32 hours early)	findings/smw5_fault_complete_story.md
+Exp 6.1.1 W5 RIPE Anchor Peak Latency Sigma Spike	78-sigma	findings/smw5_fault_complete_story.md
+Exp 6.1.1 W5 Z-Com Anchor Peak RTT / Loss (vs 176ms / 1.5% baseline)	323.9 ms / 7.3%	data/ripe_anchor_rtt_agg_zcom_as152605.json
+Exp 6.1 Transworld BGP Re-carriering Share During SMW5	20.9%	findings/06.1_submarine_hegemony.md
+Exp 6.1 PTCL BGP Re-carriering Share During SMW5	13.5%	findings/06.1_submarine_hegemony.md
+Exp 6.1 Transworld Hurricane Electric Upstream Surge	2.0% -> 20.5%	findings/06.1_submarine_hegemony.md
+Exp 6.1 PTCL Hurricane Electric Upstream Surge	0.0% -> 14.2%	findings/06.1_submarine_hegemony.md
+Exp 6.1.1 W1 Users with Unchanged Upstream Gate During SMW5	99.63% (~42.1M users)	experiments/06.1.1_smw5_robustness/notes.md
+Exp 6.1.1 W4 Gate-Dependent ASNs Swapping Majority Gate During SMW5	4 / 273 (1.5%)	experiments/06.1.1_smw5_robustness/notes.md
+Exp 06 SMW5 Outage Monitor Probes / Targets / Duration	14 probes / 18 targets / 12 hours	findings/06_submarine_outage.md
+Exp 06 International Path Jitter Surge (Overall / PTCL Paths)	+31% / +50%	findings/06_submarine_outage.md
+Exp 06 Shophive via PTCL Latency Recovery Over 12h Window	646 ms -> 278 ms	findings/06_submarine_outage.md
+Exp 06 Path Invariance Rate Across Outage Window	159 / 252 pairs (63.1%)	findings/06_submarine_outage.md
+Exp 6.1.1 W3b Hurricane Electric Placebo Swing Multiplier in Exposed Operators	2x–8x larger	findings/smw5_fault_complete_story.md
+Exp 07 Longitudinal Panel Traces Crossing PKIX/PIE Shared Fabric	0 / 222,944	findings/07_longitudinal_panel.md
+Exp 07 Total Panel Hairpin Traces to Domestic PK Sites	11,756	findings/07_longitudinal_panel.md
+Exp 08.1 ACE CDN Traceroute Ingress Hop via PTCL Private Backbone	119.153.112.158	experiments/08_CDN/findings.md
+Exp 08.2 Connect Communications Traceroute Ingress Hop via PTCL Backbone	119.159.224.18	experiments/08_CDN/findings.md
+Exp 08.3 Z-Com to Transworld Direct Cross-Connect Hop / Latency	110.93.205.184 (17–20 ms)	experiments/08_CDN/findings.md
+Exp 10 On-Net Google Global Caches Across 10 ISPs	0	findings/07_longitudinal_panel.md
+Exp 07 Foreign CDN Fetch Percentage (Panel Vantages)	46.6%	findings/07_longitudinal_panel.md
+Exp 07 Nayatel CDN Local Delivery Rate / Median RTT	85.0% / 3.7 ms	findings/07_longitudinal_panel.md
+Exp 07 PTCL CDN Local Delivery Rate / Median RTT	0.0% / 130–275 ms	findings/07_longitudinal_panel.md
+Exp 08.4 Tencent/ACE CDN RTT Disparity (PTCL-Nayatel vs Cybernet)	23 ms vs 255 ms (11x disparity)	experiments/08_CDN/findings.md
+Exp 07 Domestic Target Trombone Rate (Headline Baseline)	15.1% (11,449 / 75,600)	findings/07_longitudinal_panel.md
+Exp 07 Domestic Target Trombone Rate (Strict 5-Condition Lower Bound)	5.52% (4,170 / 75,600)	experiments/07_longitudinal_panel/analysis/evidence_sweep_findings.md
+Exp 07 Domestic Target Trombone Rate (RTT-Corroborated Robustness Bound)	8.30% (6,275 / 75,600)	experiments/07_longitudinal_panel/analysis/evidence_supported_trombone.py
+Exp 4.1 Small-ISP Trombone Rate (Total Hairpin Traces)	11.0% (2,002 / 18,260)	findings/04.1_small_isp_tromboning.md
+Exp 4.1 Small-ISP Traces Entering Destination Network via Hairpin	325 (Brain Telecom: 182)	findings/04.1_small_isp_tromboning.md
+Exp 04 Worldcall Prefix Trombone Rate via Transworld to Equinix Singapore	31.0% (16 / 52 /24 blocks)	findings/04_path_tromboning_worldcall.md
+Exp 4.1 Cybernet Haripur Source Trombone Rate	46.3% (260 / 562)	findings/04.1_small_isp_tromboning.md
+Exp 4.1 PTCL Karachi Source Trombone Rate	38.4% (586 / 1,525)	findings/04.1_small_isp_tromboning.md
+Exp 4.1 Cybernet Karachi Source Trombone Rate	10.5% (218 / 2,084)	findings/04.1_small_isp_tromboning.md
+Exp 4.1 Nayatel Source Trombone Rate	4.0% (128 / 3,204)	findings/04.1_small_isp_tromboning.md
+Exp 07 Financial Services Trombone Rate (Strict / Baseline)	58.3% / 85.6%	paper/running_draft_detector_rules_final.md
+Exp 07 Financial Services Median Domestic Ping RTT	103.1–118.0 ms	findings/07_longitudinal_panel.md
+Exp 07 ZTBL Bank Trombone Rate	86.4%	findings/07_longitudinal_panel.md
+Exp 07 EFU Life Trombone Rate	72.0%	findings/07_longitudinal_panel.md
+Exp 07 Government Services Trombone Rate (Strict / Baseline)	14.6% / 27.6%	paper/running_draft_detector_rules_final.md
+Exp 07 FGEHA Housing Authority Trombone Rate	89.2%	findings/07_longitudinal_panel.md
+Exp 07 Abroad Class Latency Ratio (Median / p90 / >10x)	2.46x / 4.20x / 0.0%	experiments/07_longitudinal_panel/analysis/ratio_corrected.csv
+Exp 07 Abroad Class Distance-RTT Correlation (R^2)	0.48	paper/running_draft_latency_ratio_merge.md
+Exp 07 Pakistan Class Latency Ratio (Median / p90 / >10x)	2.88x–2.98x / 14.9x / 24.0%–26.6%	experiments/07_longitudinal_panel/analysis/ratio_corrected.csv
+Exp 07 Pakistan Class Latency Ratio Maximum Tail Peak	75.17x	experiments/07_longitudinal_panel/analysis/ratio_corrected.csv
+Exp 07 Pakistan Class Distance-RTT Correlation (R^2)	0.022	paper/running_draft_latency_ratio_merge.md
+Exp 07 Flapping Pairs Observed Locally in Other Rounds	44.8% (13 / 29)	paper/running_draft_pair_numbers_verification.md
+Exp 07 Confirmed Carrier Gate-Flips (PTCL <-> Transworld)	23	findings/07_longitudinal_panel.md
+Exp 07 Geo-IP Physics Violations Corrected by Arbiter	37 / 78 sites	experiments/07_longitudinal_panel/analysis/METHODOLOGY.md

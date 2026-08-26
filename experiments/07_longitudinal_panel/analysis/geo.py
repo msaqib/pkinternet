@@ -28,7 +28,8 @@ EPS = 0.5                        # ms, weighting guard
 
 # ---- vantage corrections (METHODOLOGY §0) ----
 LABEL_FIX = {1015491: "zcom"}            # RIPE asn_v4 = AS152605 (Z-Com); measurements.json mislabels "AS13335"
-EXCLUDE_FROM_DISTANCE = {1016036}        # placeholder coordinate (30.0,70.0); 22 ms access floor -> cannot re-locate
+EXCLUDE_FROM_DISTANCE = set()            # 1016036's placeholder (30.0,70.0) was corrected on the RIPE
+                                          # Atlas platform (now 34.0005,72.9285, Haripur) -- re-included
 
 
 # ================================ shared helpers ================================
@@ -259,7 +260,7 @@ def cmd_relocate():
             p = pcoord.get(pid)
             if not p:
                 continue
-            vac_floor = 2 * haversine_km(p["lat"], p["lon"], g["lat"], g["lon"]) / V_VAC
+            vac_floor = 2 * haversine_km(p["lat"], p["lon"], g["lat"], g["lon"]) / V_FIBER
             gap = obs - vac_floor
             worst_gap = gap if worst_gap is None else min(worst_gap, gap)
             if nearest is None or obs < nearest[1]:
@@ -524,7 +525,7 @@ def cmd_correct():
                 p = pcoord.get(pid)
                 if not p:
                     continue
-                floor = 2 * haversine_km(p["lat"], p["lon"], g["lat"], g["lon"]) / V_VAC
+                floor = 2 * haversine_km(p["lat"], p["lon"], g["lat"], g["lon"]) / V_FIBER
                 worst = min(worst, obs - floor) if worst is not None else obs - floor
                 if nearest is None or obs < nearest[1]:
                     nearest = (pid, obs)

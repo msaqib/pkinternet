@@ -33,7 +33,7 @@ CONTROL_IP = "115.186.61.254"    # Dr. Saqib's observed tromboning IP (positive 
 # A hop can only truly be abroad if its RTT is physically plausible for abroad:
 # PK -> Singapore ~60ms, -> Gulf ~30-50ms. Anything flagged "foreign" below this
 # floor is a mis-geolocation or a known artifact (e.g. the Nova probe's Shaw CPE
-# hop 70.70.x / AS6327, which CLAUDE.md documents is physically in Pakistan at
+# hop 70.70.x / AS6327, which METHODOLOGY.md documents is physically in Pakistan at
 # ~1.5ms). The RTT gate + artifact list keep those from masking the real exit.
 FOREIGN_RTT_FLOOR = 40.0
 ARTIFACT_ASN = {"6327"}          # Shaw (Nova-probe CPE, physically in PK)

@@ -85,7 +85,7 @@ worth being precise about, since it's the strongest lead for an operator convers
 
 | Target | Lowest RTT observed | Probe | Consistent with in-PK presence? |
 |---|---|---|---|
-| google.com | **14.9 ms** | TES (Karachi) | Yes — well under the 50 ms "stayed in PK" threshold (CLAUDE.md RTT table), but too high to prove same-building co-location (<5 ms) |
+| google.com | **14.9 ms** | TES (Karachi) | Yes — well under the 50 ms "stayed in PK" threshold (METHODOLOGY.md RTT table), but too high to prove same-building co-location (<5 ms) |
 | youtube.com | 19.3 ms | TES (Karachi) / Cybernet (Karachi) | Yes, same reasoning |
 | facebook.com | 17.2 ms | TES (Karachi) | Yes, same reasoning |
 | instagram.com | 17.0 ms | TES (Karachi) | Yes, same reasoning |
@@ -109,7 +109,7 @@ can answer; see Next Steps below.
 |---|---|---|
 | **Cybernet** (Haripur, Karachi) | **Own backbone (AS9541 / CYBERNET-PK) — no Transworld or PTCL hop visible for any of the 5 targets.** | All non-private hops before the CDN ASN resolve (via Cymru *and* RIPEstat RDAP) to `CYBERNET-PK`, e.g. `202.163.97.213`, `202.163.100.236`. |
 | **Fasttel** (Islamabad) | **Dual-transit, split by destination.** Google/YouTube hop 4 = `117.20.23.46` → **AS38193 Transworld**. Facebook/Instagram/Akamai hop 4 = `59.103.181.90` → **AS17557 PTCL**. | Same probe, same hop position, different upstream depending on target — Fasttel is multihomed and appears to route by destination AS. |
-| **Nayatel** (Islamabad, 2 probes) | Mostly **opaque** — ICMP-filtered past hop 2 for Google/YouTube/Instagram/Akamai (destination-only reply). Facebook is the exception: surfaces Nayatel's own backbone edge `203.175.65.67` (**AS23674**, matches the topology already documented in CLAUDE.md) before the Meta hop. | Akamai trace additionally **dead-ends** at a Japan-registered `202.12.27.33` (AS7500, WIDE/NSPIXP-2) without ever reaching an Akamai-registered hop — a measurement gap, not a routing conclusion. |
+| **Nayatel** (Islamabad, 2 probes) | Mostly **opaque** — ICMP-filtered past hop 2 for Google/YouTube/Instagram/Akamai (destination-only reply). Facebook is the exception: surfaces Nayatel's own backbone edge `203.175.65.67` (**AS23674**, matches the topology already documented in METHODOLOGY.md) before the Meta hop. | Akamai trace additionally **dead-ends** at a Japan-registered `202.12.27.33` (AS7500, WIDE/NSPIXP-2) without ever reaching an Akamai-registered hop — a measurement gap, not a routing conclusion. |
 | **Nova** (Lahore / TPCPL, AS136174) | **Transworld (AS38193)** at `110.93.212.161`, all 5 targets. | Consistent with the already-documented TPCPL→Transworld transit finding (Shaw/AS6327 hop-2 artifact also present, as expected). |
 | **PTCL** (Karachi) | **Own edge (AS17557)** at `39.39.0.1` direct to the CDN, all 5 targets — no other domestic ISP in the path. | Expected: PTCL is an LDI operator, not a Transworld customer. |
 | **TES** (Rawalpindi, Karachi; AS135407) | Own edge, then explicit **Transworld (AS38193)** hop (`110.93.200.204` / `110.93.192.x`), all 5 targets. | Matches TES-PL's documented role as Transworld's retail/home arm. |
@@ -129,7 +129,7 @@ can answer; see Next Steps below.
 | **Akamai** | `184.86.251.13` | Frankfurt, Germany | 155–277 ms | Yes, consistent with PK↔Europe. |
 
 This is the same "ASN registration ≠ physical location" trap already
-documented for Cloudflare/Toronto in CLAUDE.md — it applies identically to
+documented for Cloudflare/Toronto in METHODOLOGY.md — it applies identically to
 Google and Meta's backbone numbering here. Where geolocation *and* RTT physics
 agree (Meta's `157.240.81.186`/`.227.35`), treat the location as real; where
 only registration says a location and physics rules it out (Google;

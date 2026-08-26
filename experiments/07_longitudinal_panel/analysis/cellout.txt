@@ -1,0 +1,84 @@
+=== cell 15 ===
+# ── Trombone Rate by ISP — PK-hosted sites only ───────────────────────────────
+
+trombone_by_isp = (
+    pk_trace
+    .groupby(['probe_label'])['tromboned']
+    .mean()
+    .reset_index()
+    .rename(columns={'tromboned': 'trombone_rate'})
+    .sort_values('trombone_rate', ascending=False)
+)
+
+fig, ax = plt.subplots(figsize=(8, 5))
+bars = ax.barh(trombone_by_isp['probe_label'], 
+               trombone_by_isp['trombone_rate'] * 100,
+               color='steelblue', edgecolor='white')
+
+ax.set_xlabel('Trombone rate (% of rounds)', fontsize=11)
+ax.set_title('Tromboning Rate by ISP — PK-hosted Sites Only', fontsize=12)
+ax.grid(axis='x', alpha=0.3)
+ax.invert_yaxis()
+
+for bar, val in zip(bars, trombone_by_isp['trombone_rate'] * 100):
+    ax.text(val + 0.5, bar.get_y() + bar.get_height()/2,
+            f'{val:.0f}%', va='center', fontsize=8)
+
+plt.tight_layout()
+plt.savefig('figures/fig_trombone_by_isp.pdf', bbox_inches='tight')
+plt.show()
+
+=== cell 27 ===
+# ── RTT CDF — Local vs Hairpinned, Pooled ─────────────────────────────────────
+BLUE, RED = '#2196F3', '#F44336'
+
+fig, ax = plt.subplots(figsize=(8, 5))
+for troms, label, color in [(False, 'Local', BLUE), (True, 'Tromboned', RED)]:
+    vals = np.sort(local_vs_hairpin.loc[local_vs_hairpin['tromboned'] == troms, 'rtt_min'].dropna())
+    cdf = np.arange(1, len(vals) + 1) / len(vals)
+    ax.plot(vals, cdf, color=color, linewidth=2.2,
+            label=f'{label} (n={len(vals):,}, median={np.median(vals):.0f} ms)')
+
+ax.set_xlim(0, 300)
+ax.set_xlabel('RTT (ms)', fontsize=11)
+ax.set_ylabel('CDF', fontsize=11)
+ax.set_title('RTT CDF — Local vs Hairpinned Rounds, PK-hosted Sites (Pooled)', fontsize=12)
+ax.legend(fontsize=9)
+ax.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.savefig('figures/fig_local_vs_hairpin_cdf.pdf', bbox_inches='tight')
+plt.show()
+
+=== cell 28 ===
+# ── RTT CDF — Local vs Hairpinned, Per ISP ────────────────────────────────────
+probes_lvh = sorted(local_vs_hairpin['probe_label'].dropna().unique())
+ncols = 4
+nrows = (len(probes_lvh) + ncols - 1) // ncols
+
+fig, axes = plt.subplots(nrows, ncols, figsize=(16, nrows * 3), sharey=True)
+axes = axes.flatten()
+
+for i, probe in enumerate(probes_lvh):
+    ax = axes[i]
+    sub = local_vs_hairpin[local_vs_hairpin['probe_label'] == probe]
+    for troms, label, color in [(False, 'Local', BLUE), (True, 'Tromboned', RED)]:
+        vals = np.sort(sub.loc[sub['tromboned'] == troms, 'rtt_min'].dropna())
+        if len(vals) == 0:
+            continue
+        cdf = np.arange(1, len(vals) + 1) / len(vals)
+        ax.plot(vals, cdf, color=color, linewidth=1.5, label=label)
+    ax.set_title(probe, fontsize=8)
+    ax.set_xlim(0, 300)
+    ax.set_xlabel('RTT (ms)', fontsize=7)
+    ax.grid(True, alpha=0.3)
+    ax.legend(fontsize=6)
+
+for j in range(i + 1, len(axes)):
+    axes[j].set_visible(False)
+
+axes[0].set_ylabel('CDF', fontsize=9)
+fig.suptitle('RTT CDF — Local vs Hairpinned, Per ISP (PK-hosted Sites)', fontsize=12)
+plt.tight_layout()
+plt.savefig('figures/fig_local_vs_hairpin_cdf_per_isp.pdf', bbox_inches='tight')
+plt.show()
+

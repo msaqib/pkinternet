@@ -114,7 +114,7 @@ exit everywhere) — the expected control result; sector doesn't matter once you
 
 ## 4. Data completeness — quantified, and what it does not threaten
 
-Per the analysis-discipline rule (CLAUDE.md): gaps are quantified, not gestured at.
+Per the analysis-discipline rule (METHODOLOGY.md): gaps are quantified, not gestured at.
 
 | Gap | size | bounded consequence |
 |---|---|---|
