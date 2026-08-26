@@ -29,7 +29,7 @@ data/                  Canonical input files: website list, ISP/FLL list, CDN ta
 site_collection/       Tranco-based site sampling that produced the Exp 07/paper candidate pool
   pipeline/               The live scripts + their outputs (still read by other code)
   archive/                Superseded/abandoned/one-off scripts, kept for the record only
-paper/                  The paper: running_draft.tex, figures/, scripts/, references/
+paper/                  The paper: running_draft.tex, references.bib, figures/, scripts/
 tools/probe_status/     Flask dashboard for probe roster vs live RIPE Atlas status
 Related work/           Reference papers (PDFs) informing the related-work section
 ```
@@ -45,10 +45,11 @@ The write-up lives in `paper/`.
 | File | What it is |
 |---|---|
 | **`paper/running_draft.tex`** | **The live paper.** Single source of truth. `acmart`, `sigconf`, anonymous. |
-| `paper/references/references.bib` | Bibliography. |
+| `paper/references.bib` | Bibliography. Must stay directly in `paper/` — `\bibliography{references}` resolves relative to the `.tex` file. |
 | `paper/figures/` | Every figure the paper includes. |
 | `paper/scripts/make_*.py` | The scripts that regenerate those figures from the experiment outputs. Nothing in `figures/` is hand-drawn. |
 | `paper/tab_sample.tex` | Generated sample table, produced by `scripts/make_sample_table.py`. |
+| `paper/paper_draft.tex` | Earlier standalone draft. Not the live paper, kept for reference. |
 | `paper/supplementary/` | Supplementary notes referenced by the paper (probe data quality, cable-cut background). |
 | `paper/archive/` | Superseded drafts and working notes. Local-only, **not** tracked (see `.gitignore`). |
 
