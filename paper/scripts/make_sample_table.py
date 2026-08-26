@@ -6,7 +6,7 @@ two separate tables tab:hosting-providers and tab:cisa-sectors.
 
 Computed from source, not transcribed:
   experiments/07_longitudinal_panel/targets.csv        the 100 sampled sites
-  site_collection/site_candidates_cisa.csv             the 1,814-site pool
+  site_collection/pipeline/outputs/site_candidates_cisa.csv   the 1,814-site pool
 
 toptop.net and youth.cn are dropped, matching Data Cleaning, which leaves the
 98-site sample and 38 Pakistani-class sites (not 40).
@@ -21,7 +21,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TARGETS = os.path.join(ROOT, "experiments", "07_longitudinal_panel", "targets.csv")
-POOL = os.path.join(ROOT, "site_collection", "site_candidates_cisa.csv")
+POOL = os.path.join(ROOT, "site_collection", "pipeline", "outputs", "site_candidates_cisa.csv")
 OUT = os.path.join(ROOT, "paper", "tab_sample.tex")
 
 DROPPED = {"toptop.net", "youth.cn"}
