@@ -8,6 +8,36 @@ The study uses traceroutes launched from Pakistani RIPE Atlas probes to determin
 - How traffic is routed across Pakistani ISPs
 - Whether traffic transits Pakistan's internet exchange point (PKIX) or exits the country unnecessarily
 
+## Repository structure — where to find what
+
+**Start here if you want the results:** `extra/FINDINGS.md` → `extra/EVIDENCE.tsv` → the
+experiment's `notes.md`. See [Claims to evidence](#claims-to-evidence) below.
+
+**Start here if you want to run something:** `scripts/measurement/pk_multi_probe.py` (the main
+measurement script) or a specific `experiments/NN_*/` folder — each has its own `notes.md` runbook.
+
+**Start here for standing context** (conventions, ASNs, known measurement artifacts, what's
+already been established): [`experiments/01_website_destinations/METHODOLOGY.md`](experiments/01_website_destinations/METHODOLOGY.md).
+Other docs in this repo cite it rather than restating it.
+
+```
+extra/                 FINDINGS.md, EVIDENCE.tsv, CV-BULLETS.md — the claims-to-evidence trail
+findings/              Per-experiment analysis writeups + the charts notebook
+experiments/           One subfolder per experiment: notes.md, scripts, results/
+scripts/measurement/   Core measurement scripts (pk_multi_probe, geo_utils, format_routes)
+data/                  Canonical input files: website list, ISP/FLL list, CDN targets, etc.
+site_collection/       Tranco-based site sampling that produced the Exp 07/paper candidate pool
+  pipeline/               The live scripts + their outputs (still read by other code)
+  archive/                Superseded/abandoned/one-off scripts, kept for the record only
+paper/                  The paper: running_draft.tex, figures/, scripts/, references/
+tools/probe_status/     Flask dashboard for probe roster vs live RIPE Atlas status
+Related work/           Reference papers (PDFs) informing the related-work section
+```
+
+Every directory below `experiments/` and `site_collection/pipeline/` is load-bearing — something
+else in the repo reads from it. Everything under `*/archive/` is historical only; nothing imports
+or reads from it.
+
 ## The paper
 
 The write-up lives in `paper/`.
@@ -15,23 +45,25 @@ The write-up lives in `paper/`.
 | File | What it is |
 |---|---|
 | **`paper/running_draft.tex`** | **The live paper.** Single source of truth. `acmart`, `sigconf`, anonymous. |
-| `paper/references_skeleton.bib` | Bibliography. |
+| `paper/references/references.bib` | Bibliography. |
 | `paper/figures/` | Every figure the paper includes. |
-| `paper/make_*.py` | The scripts that regenerate those figures from the experiment outputs. Nothing in `figures/` is hand-drawn. |
-| `paper/tab_sample.tex` | Generated sample table, produced by `make_sample_table.py`. |
-| `paper/paper_draft.tex` | Earlier standalone draft, still maintained upstream on `main`. Not the live paper. |
-| `paper/archive/` | Superseded drafts and working notes. Kept locally, **not** tracked (see `.gitignore`). |
+| `paper/scripts/make_*.py` | The scripts that regenerate those figures from the experiment outputs. Nothing in `figures/` is hand-drawn. |
+| `paper/tab_sample.tex` | Generated sample table, produced by `scripts/make_sample_table.py`. |
+| `paper/supplementary/` | Supplementary notes referenced by the paper (probe data quality, cable-cut background). |
+| `paper/archive/` | Superseded drafts and working notes. Local-only, **not** tracked (see `.gitignore`). |
 
 ### Claims to evidence
 
 Every reported number is traceable without re-running a measurement:
 
-- **`FINDINGS.md`** — the findings, grouped by theme, each with its key numbers, the
+- **`extra/FINDINGS.md`** — the findings, grouped by theme, each with its key numbers, the
   experiment that produced them, and its caveats and failure modes.
-- **`EVIDENCE.tsv`** — one row per claim, resolving to the analysis file or paper section
+- **`extra/EVIDENCE.tsv`** — one row per claim, resolving to the analysis file or paper section
   that backs it.
+- **`extra/CV-BULLETS.md`** — the same findings condensed into CV/resume bullets, each one
+  citing back to `EVIDENCE.tsv`.
 
-Start at `FINDINGS.md`, follow the experiment reference into `experiments/NN_*/`, and the
+Start at `extra/FINDINGS.md`, follow the experiment reference into `experiments/NN_*/`, and the
 per-experiment `notes.md` explains what was run and what came out.
 
 ## Reproducing
@@ -51,15 +83,6 @@ will not build from pip alone. Only the BGP experiments (05, 09) import it.
 
 Large regenerable artefacts — raw RIPE archives, geolocation caches — are deliberately
 gitignored and re-fetchable; see `.gitignore` for what and why.
-
-## Repository Structure
-
-```
-scripts/measurement/   Python scripts (pk_multi_probe, geo_utils, format_routes)
-data/                  Input files (website list, ISP/FLL list)
-experiments/           One subfolder per experiment with notes and results
-findings/              Analysis writeups and the charts notebook
-```
 
 ## Experiments
 
@@ -184,5 +207,5 @@ findings/              Analysis writeups and the charts notebook
 
 Instructions for deploying a RIPE Atlas software probe on Raspberry Pi hardware:
 
-- [Raspberry Pi 2](pi2.md) (32-bit, build from source)
-- [Raspberry Pi 3 and later](pi3.md) (64-bit, official Debian package)
+- [Raspberry Pi 2](tools/probe_status/pi2.md) (32-bit, build from source)
+- [Raspberry Pi 3 and later](tools/probe_status/pi3.md) (64-bit, official Debian package)
