@@ -1,0 +1,252 @@
+kind,src_probe,src_label,dst_probe,dst_label,dst_ip,status,evidence,exit_name,exit_country,transit_name,max_rtt_ms,dest_rtt_ms,n_hops,reached,rtt_min_ms,rtt_avg_ms,packets_sent,packets_received,measurement_id
+trace,7613,zcom.lhe,60223,nayatel.isb,154.192.15.243,local,,,,,36.4,36.3,14,False,,,,,204225088
+trace,7613,zcom.lhe,62224,transworld.lhe,110.93.235.222,trombone_rtt,rtt_jump=1000 max_rtt=1002,(foreign hop not visible -- RTT evidence,?,TWA-AS-AP - Transworld A,1001.7,1001.7,8,True,,,,,204225091
+trace,7613,zcom.lhe,64078,tes.lhe,149.40.243.172,trombone_hop,foreign_hop,OMANTEL-AS - Zain Omantel International ,AE,TWA-AS-AP - Transworld A,151.3,151.0,15,False,,,,,204225095
+trace,7613,zcom.lhe,64722,tes.khi,119.73.97.135,local,,,,,16.8,17.0,11,False,,,,,204225096
+trace,7613,zcom.lhe,65892,nayatel.lhe,154.192.116.198,local,,,,,36.8,36.7,15,False,,,,,204225098
+trace,7613,zcom.lhe,1014872,fasttel.isb,103.189.68.92,local,,,,,36.6,36.7,12,False,,,,,204225100
+trace,7613,zcom.lhe,1015210,ptcl.khi,182.185.145.65,local,,,,,1.6,1.6,11,False,,,,,204225103
+trace,7613,zcom.lhe,1015679,nova.lhe,103.184.1.10,local,,,,,1.2,1.3,9,False,,,,,204225106
+trace,7613,zcom.lhe,1016036,cybernet.hrp,72.255.54.129,trombone_rtt,rtt_jump=78 max_rtt=94,(foreign hop not visible -- RTT evidence,?,TWA-AS-AP - Transworld A,94.0,92.2,12,False,,,,,204225109
+trace,7613,zcom.lhe,1016126,ptcl.khi,39.39.112.114,local,,,,,17.1,17.0,12,False,,,,,204225112
+trace,7613,zcom.lhe,1016143,cybernet.khi,103.244.174.231,trombone_rtt,rtt_jump=78 max_rtt=94,(foreign hop not visible -- RTT evidence,?,TWA-AS-AP - Transworld A,94.4,93.2,12,False,,,,,204225113
+trace,60223,nayatel.isb,7613,zcom.lhe,157.20.147.16,local,,,,,38.3,38.3,8,True,,,,,204225115
+trace,60223,nayatel.isb,62224,transworld.lhe,110.93.235.222,local,,,,,3.0,3.4,8,False,,,,,204225118
+trace,60223,nayatel.isb,64078,tes.lhe,149.40.243.172,local,,,,,3.7,1162.8,13,False,,,,,204225120
+trace,60223,nayatel.isb,64722,tes.khi,119.73.97.135,trombone_hop,foreign_hop,UAEIX-IXP-IPv4,AE,,40.7,40.7,8,False,,,,,204225122
+trace,60223,nayatel.isb,65892,nayatel.lhe,154.192.116.198,local,,,,,4.5,5.2,12,False,,,,,204225125
+trace,60223,nayatel.isb,1014872,fasttel.isb,103.189.68.92,local,,,,,3.2,3.8,8,False,,,,,204225126
+trace,60223,nayatel.isb,1015210,ptcl.khi,182.185.145.65,local,,,,,3.1,3.7,8,False,,,,,204225127
+trace,60223,nayatel.isb,1015679,nova.lhe,103.184.1.10,local,,,,,2.9,4.0,8,False,,,,,204225131
+trace,60223,nayatel.isb,1016036,cybernet.hrp,72.255.54.129,local,,,,,2.8,2.9,8,False,,,,,204225133
+trace,60223,nayatel.isb,1016126,ptcl.khi,39.39.112.114,local,,,,,2.6,2.9,8,False,,,,,204225134
+trace,60223,nayatel.isb,1016143,cybernet.khi,103.244.174.231,local,,,,,2.6,4.4,8,False,,,,,204225138
+trace,62224,transworld.lhe,7613,zcom.lhe,157.20.147.16,local,,,,,5.8,5.8,8,True,,,,,204225140
+trace,62224,transworld.lhe,60223,nayatel.isb,154.192.15.243,trombone_hop,foreign_hop,"NAYATEL-PK - Nayatel (Pvt) Ltd, PK",SC,,1002.9,1002.9,4,True,,,,,204225144
+trace,62224,transworld.lhe,64078,tes.lhe,149.40.243.172,local,,,,,1.5,0.7,8,False,,,,,204225146
+trace,62224,transworld.lhe,64722,tes.khi,119.73.97.135,local,,,,,1.3,1.3,8,False,,,,,204225148
+trace,62224,transworld.lhe,65892,nayatel.lhe,154.192.116.198,local,,,,,1.1,1.3,8,False,,,,,204225150
+trace,62224,transworld.lhe,1014872,fasttel.isb,103.189.68.92,trombone_rtt,rtt_jump=1008 max_rtt=1009,(foreign hop not visible -- RTT evidence,?,,1008.7,1008.7,4,True,,,,,204225155
+trace,62224,transworld.lhe,1015210,ptcl.khi,182.185.145.65,trombone_rtt,rtt_jump=1009 max_rtt=1009,(foreign hop not visible -- RTT evidence,?,,1009.3,1009.3,4,True,,,,,204225157
+trace,62224,transworld.lhe,1015679,nova.lhe,103.184.1.10,local,,,,,1.1,0.8,8,False,,,,,204225160
+trace,62224,transworld.lhe,1016036,cybernet.hrp,72.255.54.129,trombone_rtt,rtt_jump=995 max_rtt=996,(foreign hop not visible -- RTT evidence,?,,996.0,996.0,4,True,,,,,204225162
+trace,62224,transworld.lhe,1016126,ptcl.khi,39.39.112.114,local,,,,,0.9,1.5,8,False,,,,,204225164
+trace,62224,transworld.lhe,1016143,cybernet.khi,103.244.174.231,local,,,,,1.1,1.5,8,False,,,,,204225166
+trace,64078,tes.lhe,7613,zcom.lhe,157.20.147.16,local,,,,,38.9,39.0,7,True,,,,,204225168
+trace,64078,tes.lhe,60223,nayatel.isb,154.192.15.243,local,,,,,4.5,7.9,9,False,,,,,204225169
+trace,64078,tes.lhe,62224,transworld.lhe,110.93.235.222,trombone_rtt,rtt_jump=990 max_rtt=1031,(foreign hop not visible -- RTT evidence,?,HECPERN-AS-PK - PERN AS ,1030.5,1030.5,9,True,,,,,204225172
+trace,64078,tes.lhe,64722,tes.khi,119.73.97.135,local,,,,,28.4,28.4,12,False,,,,,204225174
+trace,64078,tes.lhe,65892,nayatel.lhe,154.192.116.198,local,,,,,3.8,3.9,9,False,,,,,204225175
+trace,64078,tes.lhe,1014872,fasttel.isb,103.189.68.92,local,,,,,3.9,3.8,11,False,,,,,204225176
+trace,64078,tes.lhe,1015210,ptcl.khi,182.185.145.65,local,,,,,23.3,24.2,10,False,,,,,204225178
+trace,64078,tes.lhe,1015679,nova.lhe,103.184.1.10,local,,,,,39.3,39.3,12,False,,,,,204225215
+trace,64078,tes.lhe,1016036,cybernet.hrp,72.255.54.129,trombone_rtt,rtt_jump=98 max_rtt=121,(foreign hop not visible -- RTT evidence,?,TES-PL-AS-AP - Trans Wor,120.5,120.5,19,False,,,,,204225217
+trace,64078,tes.lhe,1016126,ptcl.khi,39.39.112.114,local,,,,,23.5,23.5,10,False,,,,,204225219
+trace,64078,tes.lhe,1016143,cybernet.khi,103.244.174.231,local,,,,,23.2,23.2,10,False,,,,,204225222
+trace,64722,tes.khi,7613,zcom.lhe,157.20.147.16,local,,,,,18.9,19.1,7,True,,,,,204225224
+trace,64722,tes.khi,60223,nayatel.isb,154.192.15.243,local,,,,,22.9,22.9,12,False,,,,,204225227
+trace,64722,tes.khi,62224,transworld.lhe,110.93.235.222,trombone_rtt,rtt_jump=986 max_rtt=1007,(foreign hop not visible -- RTT evidence,?,TWA-AS-AP - Transworld A,1006.6,1006.6,9,True,,,,,204225228
+trace,64722,tes.khi,64078,tes.lhe,149.40.243.172,local,,,,,3.5,3.7,9,False,,,,,204225231
+trace,64722,tes.khi,65892,nayatel.lhe,154.192.116.198,local,,,,,23.9,24.0,12,False,,,,,204225234
+trace,64722,tes.khi,1014872,fasttel.isb,103.189.68.92,local,,,,,23.9,24.1,12,False,,,,,204225236
+trace,64722,tes.khi,1015210,ptcl.khi,182.185.145.65,local,,,,,19.6,20.4,12,False,,,,,204225240
+trace,64722,tes.khi,1015679,nova.lhe,103.184.1.10,local,,,,,20.3,20.6,12,False,,,,,204225245
+trace,64722,tes.khi,1016036,cybernet.hrp,72.255.54.129,local,,,,,4.2,4.3,11,False,,,,,204225248
+trace,64722,tes.khi,1016126,ptcl.khi,39.39.112.114,local,,,,,3.2,3.6,10,False,,,,,204225250
+trace,64722,tes.khi,1016143,cybernet.khi,103.244.174.231,local,,,,,4.4,5.2,11,False,,,,,204225254
+trace,65892,nayatel.lhe,7613,zcom.lhe,157.20.147.16,local,,,,,39.5,39.6,8,True,,,,,204225255
+trace,65892,nayatel.lhe,60223,nayatel.isb,154.192.15.243,local,,,,,5.1,5.3,12,False,,,,,204225257
+trace,65892,nayatel.lhe,62224,transworld.lhe,110.93.235.222,local,,,,,3.6,3.9,8,False,,,,,204225267
+trace,65892,nayatel.lhe,64078,tes.lhe,149.40.243.172,local,,,,,3.6,3.9,8,False,,,,,204225270
+trace,65892,nayatel.lhe,64722,tes.khi,119.73.97.135,local,,,,,4.1,4.8,8,False,,,,,204225271
+trace,65892,nayatel.lhe,1014872,fasttel.isb,103.189.68.92,local,,,,,4.7,5.8,8,False,,,,,204225275
+trace,65892,nayatel.lhe,1015210,ptcl.khi,182.185.145.65,local,,,,,2.4,3.6,8,False,,,,,204225277
+trace,65892,nayatel.lhe,1015679,nova.lhe,103.184.1.10,local,,,,,3.5,4.1,8,False,,,,,204225278
+trace,65892,nayatel.lhe,1016036,cybernet.hrp,72.255.54.129,local,,,,,3.3,3.3,8,False,,,,,204225281
+trace,65892,nayatel.lhe,1016126,ptcl.khi,39.39.112.114,local,,,,,3.5,3.6,8,False,,,,,204225282
+trace,65892,nayatel.lhe,1016143,cybernet.khi,103.244.174.231,local,,,,,3.1,3.6,8,False,,,,,204225284
+trace,1014872,fasttel.isb,7613,zcom.lhe,157.20.147.16,local,,,,,44.3,43.9,8,True,,,,,204225286
+trace,1014872,fasttel.isb,60223,nayatel.isb,154.192.15.243,local,,,,,10.2,8.5,15,False,,,,,204225288
+trace,1014872,fasttel.isb,62224,transworld.lhe,110.93.235.222,trombone_rtt,rtt_jump=994 max_rtt=1038,(foreign hop not visible -- RTT evidence,?,TWA-AS-AP - Transworld A,1038.3,1038.3,10,True,,,,,204225290
+trace,1014872,fasttel.isb,64078,tes.lhe,149.40.243.172,local,,,,,18.8,8.5,12,False,,,,,204225292
+trace,1014872,fasttel.isb,64722,tes.khi,119.73.97.135,local,,,,,28.6,31.1,14,False,,,,,204225294
+trace,1014872,fasttel.isb,65892,nayatel.lhe,154.192.116.198,local,,,,,9.9,4.5,16,False,,,,,204225295
+trace,1014872,fasttel.isb,1015210,ptcl.khi,182.185.145.65,local,,,,,17.4,18.4,14,False,,,,,204225298
+trace,1014872,fasttel.isb,1015679,nova.lhe,103.184.1.10,inconclusive,,,,,46.8,47.2,13,False,,,,,204225299
+trace,1014872,fasttel.isb,1016036,cybernet.hrp,72.255.54.129,local,,,,,29.6,30.5,12,False,,,,,204225301
+trace,1014872,fasttel.isb,1016126,ptcl.khi,39.39.112.114,local,,,,,29.4,30.6,14,False,,,,,204225303
+trace,1014872,fasttel.isb,1016143,cybernet.khi,103.244.174.231,local,,,,,29.5,30.0,13,False,,,,,204225304
+trace,1015210,ptcl.khi,7613,zcom.lhe,157.20.147.16,local,,,,,6.1,6.2,2,True,,,,,204225305
+trace,1015210,ptcl.khi,60223,nayatel.isb,154.192.15.243,local,,,,,0.2,0.2,7,False,,,,,204225306
+trace,1015210,ptcl.khi,62224,transworld.lhe,110.93.235.222,local,,,,,21.0,21.0,2,True,,,,,204225308
+trace,1015210,ptcl.khi,64078,tes.lhe,149.40.243.172,local,,,,,0.1,0.2,7,False,,,,,204225330
+trace,1015210,ptcl.khi,64722,tes.khi,119.73.97.135,local,,,,,0.1,0.1,7,False,,,,,204225332
+trace,1015210,ptcl.khi,65892,nayatel.lhe,154.192.116.198,local,,,,,0.1,0.1,7,False,,,,,204225333
+trace,1015210,ptcl.khi,1014872,fasttel.isb,103.189.68.92,local,,,,,0.1,0.1,7,False,,,,,204225334
+trace,1015210,ptcl.khi,1015679,nova.lhe,103.184.1.10,local,,,,,0.1,0.2,7,False,,,,,204225336
+trace,1015210,ptcl.khi,1016036,cybernet.hrp,72.255.54.129,local,,,,,0.2,0.2,7,False,,,,,204225340
+trace,1015210,ptcl.khi,1016126,ptcl.khi,39.39.112.114,local,,,,,0.2,0.2,7,False,,,,,204225341
+trace,1015210,ptcl.khi,1016143,cybernet.khi,103.244.174.231,local,,,,,0.2,0.3,7,False,,,,,204225343
+trace,1015679,nova.lhe,7613,zcom.lhe,157.20.147.16,local,,,,,2.5,2.8,5,True,,,,,204225344
+trace,1015679,nova.lhe,60223,nayatel.isb,154.192.15.243,local,,,,,39.0,38.0,15,False,,,,,204225345
+trace,1015679,nova.lhe,62224,transworld.lhe,110.93.235.222,trombone_rtt,rtt_jump=986 max_rtt=989,(foreign hop not visible -- RTT evidence,?,TWA-AS-AP - Transworld A,988.9,988.9,8,True,,,,,204225347
+trace,1015679,nova.lhe,64078,tes.lhe,149.40.243.172,local,,,,,37.7,37.8,12,False,,,,,204225348
+trace,1015679,nova.lhe,64722,tes.khi,119.73.97.135,local,,,,,18.8,18.8,12,False,,,,,204225349
+trace,1015679,nova.lhe,65892,nayatel.lhe,154.192.116.198,local,,,,,38.5,40.2,16,False,,,,,204225351
+trace,1015679,nova.lhe,1014872,fasttel.isb,103.189.68.92,local,,,,,39.4,38.5,13,False,,,,,204225352
+trace,1015679,nova.lhe,1015210,ptcl.khi,182.185.145.65,local,,,,,3.5,3.2,12,False,,,,,204225353
+trace,1015679,nova.lhe,1016036,cybernet.hrp,72.255.54.129,local,,,,,38.0,38.1,14,False,,,,,204225355
+trace,1015679,nova.lhe,1016126,ptcl.khi,39.39.112.114,local,,,,,19.5,18.7,13,False,,,,,204225356
+trace,1015679,nova.lhe,1016143,cybernet.khi,103.244.174.231,local,,,,,20.1,19.3,13,False,,,,,204225357
+trace,1016036,cybernet.hrp,7613,zcom.lhe,157.20.147.16,trombone_hop,foreign_hop,CMI-INT-HK - China Mobile International ,HK,CYBERNET-AP - Cyber Inte,195.1,113.5,16,True,,,,,204225359
+trace,1016036,cybernet.hrp,60223,nayatel.isb,154.192.15.243,local,,,,,25.4,23.9,14,False,,,,,204225360
+trace,1016036,cybernet.hrp,62224,transworld.lhe,110.93.235.222,trombone_rtt,rtt_jump=1002 max_rtt=1042,(foreign hop not visible -- RTT evidence,?,TWA-AS-AP - Transworld A,1042.2,1042.2,13,True,,,,,204225361
+trace,1016036,cybernet.hrp,64078,tes.lhe,149.40.243.172,trombone_hop,foreign_hop,EQUINIX-AP,SG,CYBERNET-AP - Cyber Inte,118.7,119.1,17,False,,,,,204225363
+trace,1016036,cybernet.hrp,64722,tes.khi,119.73.97.135,local,,,,,24.6,24.4,16,False,,,,,204225364
+trace,1016036,cybernet.hrp,65892,nayatel.lhe,154.192.116.198,local,,,,,24.9,24.0,15,False,,,,,204225366
+trace,1016036,cybernet.hrp,1014872,fasttel.isb,103.189.68.92,trombone_hop,foreign_hop,"COGENT-174 - Cogent Communications, LLC,",US,CYBERNET-AP - Cyber Inte,44.7,44.3,17,False,,,,,204225367
+trace,1016036,cybernet.hrp,1015210,ptcl.khi,182.185.145.65,trombone_rtt,rtt_jump=166 max_rtt=190,(foreign hop not visible -- RTT evidence,?,CYBERNET-AP - Cyber Inte,190.0,190.1,14,False,,,,,204225368
+trace,1016036,cybernet.hrp,1015679,nova.lhe,103.184.1.10,local,,,,,40.1,40.1,16,False,,,,,204225369
+trace,1016036,cybernet.hrp,1016126,ptcl.khi,39.39.112.114,trombone_rtt,rtt_jump=167 max_rtt=189,(foreign hop not visible -- RTT evidence,?,CYBERNET-AP - Cyber Inte,189.3,189.3,14,False,,,,,204225371
+trace,1016036,cybernet.hrp,1016143,cybernet.khi,103.244.174.231,local,,,,,23.2,23.0,12,False,,,,,204225372
+trace,1016126,ptcl.khi,7613,zcom.lhe,157.20.147.16,local,,,,,25.9,26.1,8,True,,,,,204225373
+trace,1016126,ptcl.khi,60223,nayatel.isb,154.192.15.243,local,,,,,33.7,32.1,16,False,,,,,204225375
+trace,1016126,ptcl.khi,62224,transworld.lhe,110.93.235.222,trombone_rtt,rtt_jump=1005 max_rtt=1030,(foreign hop not visible -- RTT evidence,?,TWA-AS-AP - Transworld A,1030.0,1030.0,10,True,,,,,204225376
+trace,1016126,ptcl.khi,64078,tes.lhe,149.40.243.172,local,,,,,28.8,29.1,13,False,,,,,204225377
+trace,1016126,ptcl.khi,64722,tes.khi,119.73.97.135,local,,,,,10.4,10.5,13,False,,,,,204225379
+trace,1016126,ptcl.khi,65892,nayatel.lhe,154.192.116.198,local,,,,,31.2,29.3,17,False,,,,,204225380
+trace,1016126,ptcl.khi,1014872,fasttel.isb,103.189.68.92,local,,,,,32.3,32.4,14,False,,,,,204225384
+trace,1016126,ptcl.khi,1015210,ptcl.khi,182.185.145.65,local,,,,,25.0,25.0,13,False,,,,,204225386
+trace,1016126,ptcl.khi,1015679,nova.lhe,103.184.1.10,trombone_hop,foreign_hop,"COGENT-174 - Cogent Communications, LLC,",US,TWA-AS-AP - Transworld A,124.6,113.8,13,False,,,,,204225387
+trace,1016126,ptcl.khi,1016036,cybernet.hrp,72.255.54.129,trombone_hop,foreign_hop,"NTT-DATA-2914 - NTT America, Inc., US",SG,PKTELECOM-AS-PK - Pakist,198.5,185.1,18,False,,,,,204225390
+trace,1016126,ptcl.khi,1016143,cybernet.khi,103.244.174.231,local,,,,,10.1,10.0,13,False,,,,,204233049
+trace,1016143,cybernet.khi,7613,zcom.lhe,157.20.147.16,trombone_rtt,rtt_jump=94 max_rtt=98,(foreign hop not visible -- RTT evidence,?,,97.6,97.9,9,True,,,,,204233051
+trace,1016143,cybernet.khi,60223,nayatel.isb,154.192.15.243,local,,,,,4.2,4.2,9,False,,,,,204233053
+trace,1016143,cybernet.khi,64078,tes.lhe,149.40.243.172,local,,,,,4.1,4.1,9,False,,,,,204250731
+trace,1016143,cybernet.khi,64722,tes.khi,119.73.97.135,local,,,,,4.2,4.3,9,False,,,,,204250738
+trace,1016143,cybernet.khi,65892,nayatel.lhe,154.192.116.198,local,,,,,25.3,25.6,17,False,,,,,204250741
+trace,1016143,cybernet.khi,1014872,fasttel.isb,103.189.68.92,local,,,,,5.1,4.2,9,False,,,,,204250742
+trace,1016143,cybernet.khi,1015210,ptcl.khi,182.185.145.65,trombone_hop,foreign_hop,"HURRICANE - Hurricane Electric LLC, US",US,,3787.7,93.2,11,False,,,,,204250746
+trace,1016143,cybernet.khi,1015679,nova.lhe,103.184.1.10,local,,,,,21.2,21.2,14,False,,,,,204250749
+trace,1016143,cybernet.khi,1016036,cybernet.hrp,72.255.54.129,local,,,,,4.2,4.4,9,False,,,,,204250755
+trace,1016143,cybernet.khi,1016126,ptcl.khi,39.39.112.114,local,,,,,5.3,5.3,13,False,,,,,204250761
+ping,7613,zcom.lhe,60223,nayatel.isb,154.192.15.243,no_reply,,,,,,,,,,,3,0,204250764
+ping,7613,zcom.lhe,62224,transworld.lhe,110.93.235.222,no_reply,,,,,,,,,,,3,0,204250771
+ping,7613,zcom.lhe,64078,tes.lhe,149.40.243.172,no_reply,,,,,,,,,,,3,0,204250777
+ping,7613,zcom.lhe,64722,tes.khi,119.73.97.135,no_reply,,,,,,,,,,,3,0,204250779
+ping,7613,zcom.lhe,65892,nayatel.lhe,154.192.116.198,no_reply,,,,,,,,,,,3,0,204250785
+ping,7613,zcom.lhe,1014872,fasttel.isb,103.189.68.92,no_reply,,,,,,,,,,,3,0,204250793
+ping,7613,zcom.lhe,1015210,ptcl.khi,182.185.145.65,ok,,,,,,,,,2.5,2.8,3,3,204250797
+ping,7613,zcom.lhe,1015679,nova.lhe,103.184.1.10,no_reply,,,,,,,,,,,3,0,204250801
+ping,7613,zcom.lhe,1016036,cybernet.hrp,72.255.54.129,no_reply,,,,,,,,,,,3,0,204250803
+ping,7613,zcom.lhe,1016126,ptcl.khi,39.39.112.114,ok,,,,,,,,,24.1,84.8,3,3,204250804
+ping,7613,zcom.lhe,1016143,cybernet.khi,103.244.174.231,no_reply,,,,,,,,,,,3,0,204250807
+ping,60223,nayatel.isb,7613,zcom.lhe,157.20.147.16,ok,,,,,,,,,38.7,38.8,3,3,204250809
+ping,60223,nayatel.isb,62224,transworld.lhe,110.93.235.222,no_reply,,,,,,,,,,,3,0,204250810
+ping,60223,nayatel.isb,64078,tes.lhe,149.40.243.172,no_reply,,,,,,,,,,,3,0,204250812
+ping,60223,nayatel.isb,64722,tes.khi,119.73.97.135,no_reply,,,,,,,,,,,3,0,204250814
+ping,60223,nayatel.isb,65892,nayatel.lhe,154.192.116.198,no_reply,,,,,,,,,,,3,0,204250815
+ping,60223,nayatel.isb,1014872,fasttel.isb,103.189.68.92,no_reply,,,,,,,,,,,3,0,204250816
+ping,60223,nayatel.isb,1015210,ptcl.khi,182.185.145.65,ok,,,,,,,,,12.1,12.6,3,3,204250818
+ping,60223,nayatel.isb,1015679,nova.lhe,103.184.1.10,no_reply,,,,,,,,,,,3,0,204250819
+ping,60223,nayatel.isb,1016036,cybernet.hrp,72.255.54.129,no_reply,,,,,,,,,,,3,0,204250820
+ping,60223,nayatel.isb,1016126,ptcl.khi,39.39.112.114,ok,,,,,,,,,33.0,33.2,3,3,204250822
+ping,60223,nayatel.isb,1016143,cybernet.khi,103.244.174.231,no_reply,,,,,,,,,,,3,0,204250824
+ping,62224,transworld.lhe,7613,zcom.lhe,157.20.147.16,ok,,,,,,,,,5.8,6.1,3,3,204250825
+ping,62224,transworld.lhe,60223,nayatel.isb,154.192.15.243,no_reply,,,,,,,,,,,3,0,204250827
+ping,62224,transworld.lhe,64078,tes.lhe,149.40.243.172,no_reply,,,,,,,,,,,3,0,204250841
+ping,62224,transworld.lhe,64722,tes.khi,119.73.97.135,no_reply,,,,,,,,,,,3,0,204250843
+ping,62224,transworld.lhe,65892,nayatel.lhe,154.192.116.198,no_reply,,,,,,,,,,,3,0,204250845
+ping,62224,transworld.lhe,1014872,fasttel.isb,103.189.68.92,no_reply,,,,,,,,,,,3,0,204250846
+ping,62224,transworld.lhe,1015210,ptcl.khi,182.185.145.65,ok,,,,,,,,,23.8,24.4,3,3,204250848
+ping,62224,transworld.lhe,1015679,nova.lhe,103.184.1.10,no_reply,,,,,,,,,,,3,0,204250852
+ping,62224,transworld.lhe,1016036,cybernet.hrp,72.255.54.129,no_reply,,,,,,,,,,,3,0,204250853
+ping,62224,transworld.lhe,1016126,ptcl.khi,39.39.112.114,ok,,,,,,,,,29.0,29.6,3,3,204250854
+ping,62224,transworld.lhe,1016143,cybernet.khi,103.244.174.231,no_reply,,,,,,,,,,,3,0,204250856
+ping,64078,tes.lhe,7613,zcom.lhe,157.20.147.16,ok,,,,,,,,,38.6,38.8,3,3,204250857
+ping,64078,tes.lhe,60223,nayatel.isb,154.192.15.243,no_reply,,,,,,,,,,,3,0,204250858
+ping,64078,tes.lhe,62224,transworld.lhe,110.93.235.222,no_reply,,,,,,,,,,,3,0,204250860
+ping,64078,tes.lhe,64722,tes.khi,119.73.97.135,no_reply,,,,,,,,,,,3,0,204250861
+ping,64078,tes.lhe,65892,nayatel.lhe,154.192.116.198,no_reply,,,,,,,,,,,3,0,204250863
+ping,64078,tes.lhe,1014872,fasttel.isb,103.189.68.92,no_reply,,,,,,,,,,,3,0,204250865
+ping,64078,tes.lhe,1015210,ptcl.khi,182.185.145.65,ok,,,,,,,,,41.7,42.2,3,3,204250866
+ping,64078,tes.lhe,1015679,nova.lhe,103.184.1.10,no_reply,,,,,,,,,,,3,0,204250874
+ping,64078,tes.lhe,1016036,cybernet.hrp,72.255.54.129,no_reply,,,,,,,,,,,3,0,204250875
+ping,64078,tes.lhe,1016126,ptcl.khi,39.39.112.114,ok,,,,,,,,,31.0,31.3,3,3,204250876
+ping,64078,tes.lhe,1016143,cybernet.khi,103.244.174.231,no_reply,,,,,,,,,,,3,0,204250878
+ping,64722,tes.khi,7613,zcom.lhe,157.20.147.16,ok,,,,,,,,,19.0,341.0,3,3,204250880
+ping,64722,tes.khi,60223,nayatel.isb,154.192.15.243,no_reply,,,,,,,,,,,3,0,204250881
+ping,64722,tes.khi,62224,transworld.lhe,110.93.235.222,no_reply,,,,,,,,,,,3,0,204250883
+ping,64722,tes.khi,64078,tes.lhe,149.40.243.172,no_reply,,,,,,,,,,,3,0,204250884
+ping,64722,tes.khi,65892,nayatel.lhe,154.192.116.198,no_reply,,,,,,,,,,,3,0,204250885
+ping,64722,tes.khi,1014872,fasttel.isb,103.189.68.92,no_reply,,,,,,,,,,,3,0,204250887
+ping,64722,tes.khi,1015210,ptcl.khi,182.185.145.65,ok,,,,,,,,,21.0,21.1,3,3,204250899
+ping,64722,tes.khi,1015679,nova.lhe,103.184.1.10,no_reply,,,,,,,,,,,3,0,204250900
+ping,64722,tes.khi,1016036,cybernet.hrp,72.255.54.129,no_reply,,,,,,,,,,,3,0,204250902
+ping,64722,tes.khi,1016126,ptcl.khi,39.39.112.114,ok,,,,,,,,,11.2,333.0,3,3,204250912
+ping,64722,tes.khi,1016143,cybernet.khi,103.244.174.231,no_reply,,,,,,,,,,,3,0,204250913
+ping,65892,nayatel.lhe,7613,zcom.lhe,157.20.147.16,ok,,,,,,,,,38.8,39.1,3,3,204250915
+ping,65892,nayatel.lhe,60223,nayatel.isb,154.192.15.243,no_reply,,,,,,,,,,,3,0,204250925
+ping,65892,nayatel.lhe,62224,transworld.lhe,110.93.235.222,no_reply,,,,,,,,,,,3,0,204250929
+ping,65892,nayatel.lhe,64078,tes.lhe,149.40.243.172,no_reply,,,,,,,,,,,3,0,204250931
+ping,65892,nayatel.lhe,64722,tes.khi,119.73.97.135,no_reply,,,,,,,,,,,3,0,204250940
+ping,65892,nayatel.lhe,1014872,fasttel.isb,103.189.68.92,no_reply,,,,,,,,,,,3,0,204250943
+ping,65892,nayatel.lhe,1015210,ptcl.khi,182.185.145.65,ok,,,,,,,,,12.8,13.0,3,3,204250948
+ping,65892,nayatel.lhe,1015679,nova.lhe,103.184.1.10,no_reply,,,,,,,,,,,3,0,204250958
+ping,65892,nayatel.lhe,1016036,cybernet.hrp,72.255.54.129,no_reply,,,,,,,,,,,3,0,204250961
+ping,65892,nayatel.lhe,1016126,ptcl.khi,39.39.112.114,ok,,,,,,,,,31.4,31.6,3,3,204250963
+ping,65892,nayatel.lhe,1016143,cybernet.khi,103.244.174.231,no_reply,,,,,,,,,,,3,0,204250964
+ping,1014872,fasttel.isb,7613,zcom.lhe,157.20.147.16,ok,,,,,,,,,44.1,47.0,3,3,204250965
+ping,1014872,fasttel.isb,60223,nayatel.isb,154.192.15.243,no_reply,,,,,,,,,,,3,0,204250971
+ping,1014872,fasttel.isb,62224,transworld.lhe,110.93.235.222,no_reply,,,,,,,,,,,3,0,204250977
+ping,1014872,fasttel.isb,64078,tes.lhe,149.40.243.172,no_reply,,,,,,,,,,,3,0,204250979
+ping,1014872,fasttel.isb,64722,tes.khi,119.73.97.135,no_reply,,,,,,,,,,,3,0,204250985
+ping,1014872,fasttel.isb,65892,nayatel.lhe,154.192.116.198,no_reply,,,,,,,,,,,3,0,204250991
+ping,1014872,fasttel.isb,1015210,ptcl.khi,182.185.145.65,ok,,,,,,,,,18.4,18.7,3,3,204250993
+ping,1014872,fasttel.isb,1015679,nova.lhe,103.184.1.10,no_reply,,,,,,,,,,,3,0,204251002
+ping,1014872,fasttel.isb,1016036,cybernet.hrp,72.255.54.129,no_reply,,,,,,,,,,,3,0,204251006
+ping,1014872,fasttel.isb,1016126,ptcl.khi,39.39.112.114,ok,,,,,,,,,38.9,39.7,3,3,204251007
+ping,1014872,fasttel.isb,1016143,cybernet.khi,103.244.174.231,no_reply,,,,,,,,,,,3,0,204251016
+ping,1015210,ptcl.khi,7613,zcom.lhe,157.20.147.16,ok,,,,,,,,,5.8,6.3,3,3,204251019
+ping,1015210,ptcl.khi,60223,nayatel.isb,154.192.15.243,no_reply,,,,,,,,,,,3,0,204251021
+ping,1015210,ptcl.khi,62224,transworld.lhe,110.93.235.222,no_reply,,,,,,,,,,,3,0,204251031
+ping,1015210,ptcl.khi,64078,tes.lhe,149.40.243.172,no_reply,,,,,,,,,,,3,0,204251094
+ping,1015210,ptcl.khi,64722,tes.khi,119.73.97.135,no_reply,,,,,,,,,,,3,0,204251096
+ping,1015210,ptcl.khi,65892,nayatel.lhe,154.192.116.198,no_reply,,,,,,,,,,,3,0,204251104
+ping,1015210,ptcl.khi,1014872,fasttel.isb,103.189.68.92,no_reply,,,,,,,,,,,3,0,204251108
+ping,1015210,ptcl.khi,1015679,nova.lhe,103.184.1.10,no_reply,,,,,,,,,,,3,0,204251111
+ping,1015210,ptcl.khi,1016036,cybernet.hrp,72.255.54.129,no_reply,,,,,,,,,,,3,0,204251117
+ping,1015210,ptcl.khi,1016126,ptcl.khi,39.39.112.114,ok,,,,,,,,,28.8,30.7,3,3,204251123
+ping,1015210,ptcl.khi,1016143,cybernet.khi,103.244.174.231,no_reply,,,,,,,,,,,3,0,204251126
+ping,1015679,nova.lhe,7613,zcom.lhe,157.20.147.16,no_result,,,,,,,,,,,,,204251132
+ping,1015679,nova.lhe,60223,nayatel.isb,154.192.15.243,no_result,,,,,,,,,,,,,204251140
+ping,1015679,nova.lhe,62224,transworld.lhe,110.93.235.222,no_result,,,,,,,,,,,,,204251143
+ping,1015679,nova.lhe,64078,tes.lhe,149.40.243.172,no_result,,,,,,,,,,,,,204251146
+ping,1015679,nova.lhe,64722,tes.khi,119.73.97.135,no_result,,,,,,,,,,,,,204251153
+ping,1015679,nova.lhe,65892,nayatel.lhe,154.192.116.198,no_result,,,,,,,,,,,,,204251159
+ping,1015679,nova.lhe,1014872,fasttel.isb,103.189.68.92,no_result,,,,,,,,,,,,,204251162
+ping,1015679,nova.lhe,1015210,ptcl.khi,182.185.145.65,no_result,,,,,,,,,,,,,204251169
+ping,1015679,nova.lhe,1016036,cybernet.hrp,72.255.54.129,no_result,,,,,,,,,,,,,204251174
+ping,1015679,nova.lhe,1016126,ptcl.khi,39.39.112.114,no_result,,,,,,,,,,,,,204251183
+ping,1015679,nova.lhe,1016143,cybernet.khi,103.244.174.231,no_result,,,,,,,,,,,,,204251193
+ping,1016036,cybernet.hrp,7613,zcom.lhe,157.20.147.16,ok,,,,,,,,,115.6,115.8,3,3,204251203
+ping,1016036,cybernet.hrp,60223,nayatel.isb,154.192.15.243,no_reply,,,,,,,,,,,3,0,204251218
+ping,1016036,cybernet.hrp,62224,transworld.lhe,110.93.235.222,no_reply,,,,,,,,,,,3,0,204251230
+ping,1016036,cybernet.hrp,64078,tes.lhe,149.40.243.172,no_reply,,,,,,,,,,,3,0,204251239
+ping,1016036,cybernet.hrp,64722,tes.khi,119.73.97.135,no_reply,,,,,,,,,,,3,0,204251252
+ping,1016036,cybernet.hrp,65892,nayatel.lhe,154.192.116.198,no_reply,,,,,,,,,,,3,0,204251260
+ping,1016036,cybernet.hrp,1014872,fasttel.isb,103.189.68.92,no_reply,,,,,,,,,,,3,0,204251270
+ping,1016036,cybernet.hrp,1015210,ptcl.khi,182.185.145.65,ok,,,,,,,,,198.2,198.7,3,3,204251276
+ping,1016036,cybernet.hrp,1015679,nova.lhe,103.184.1.10,no_reply,,,,,,,,,,,3,0,204251282
+ping,1016036,cybernet.hrp,1016126,ptcl.khi,39.39.112.114,ok,,,,,,,,,187.5,188.0,3,3,204251293
+ping,1016036,cybernet.hrp,1016143,cybernet.khi,103.244.174.231,no_reply,,,,,,,,,,,3,0,204251297
+ping,1016126,ptcl.khi,7613,zcom.lhe,157.20.147.16,ok,,,,,,,,,25.3,25.7,3,3,204251301
+ping,1016126,ptcl.khi,60223,nayatel.isb,154.192.15.243,no_reply,,,,,,,,,,,3,0,204251312
+ping,1016126,ptcl.khi,62224,transworld.lhe,110.93.235.222,no_reply,,,,,,,,,,,3,0,204251316
+ping,1016126,ptcl.khi,64078,tes.lhe,149.40.243.172,no_reply,,,,,,,,,,,3,0,204251322
+ping,1016126,ptcl.khi,64722,tes.khi,119.73.97.135,no_reply,,,,,,,,,,,3,0,204251335
+ping,1016126,ptcl.khi,65892,nayatel.lhe,154.192.116.198,no_reply,,,,,,,,,,,3,0,204251340
+ping,1016126,ptcl.khi,1014872,fasttel.isb,103.189.68.92,no_reply,,,,,,,,,,,3,0,204251346
+ping,1016126,ptcl.khi,1015210,ptcl.khi,182.185.145.65,ok,,,,,,,,,25.4,25.9,3,3,204251359
+ping,1016126,ptcl.khi,1015679,nova.lhe,103.184.1.10,no_reply,,,,,,,,,,,3,0,204251366
+ping,1016126,ptcl.khi,1016036,cybernet.hrp,72.255.54.129,no_reply,,,,,,,,,,,3,0,204251374

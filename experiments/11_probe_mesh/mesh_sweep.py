@@ -173,9 +173,9 @@ def launch(jobs_spec, kind, key):
         for src, dst, dst_ip in chunk:
             if kind == "trace":
                 m = Traceroute(af=4, target=dst_ip, protocol="TCP", port=80, paris=16,
-                               packets=3, description=f"exp11 mesh {src}->{dst}")
+                               packets=3, description=f"exp11 mesh {src} to {dst}")
             else:
-                m = Ping(af=4, target=dst_ip, packets=3, description=f"exp11 mesh {src}->{dst}")
+                m = Ping(af=4, target=dst_ip, packets=3, description=f"exp11 mesh {src} to {dst}")
             src_obj = AtlasSource(type="probes", value=str(src), requested=1)
             try:
                 ok, resp = AtlasCreateRequest(key=key, measurements=[m],
