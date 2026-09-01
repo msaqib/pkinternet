@@ -1,0 +1,97 @@
+<title>Same-City Latency Preview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Georgia&family=Courier+Prime&family=Arial&display=swap');
+  :root{--ink:#1B2A4A;--body:#3A4455;--muted:#93A6C4;--accent:#2F5FD1;--track:#DCE4F3;--cardbg:#EEF2FA;--cardbd:#DCE4F3;--bg:#FBFBF9;}
+  *{box-sizing:border-box;}
+  html,body{background:var(--bg);}
+  body{font-family:Arial,Helvetica,sans-serif;color:var(--body);display:flex;align-items:center;justify-content:center;padding:24px;min-height:100vh;}
+  .slide{position:relative;width:100%;max-width:1280px;aspect-ratio:1280/720;background:var(--bg);border:1px solid #eee;box-shadow:0 1px 3px rgba(11,37,69,.06),0 12px 32px rgba(11,37,69,.06);}
+  .abs{position:absolute;}
+  h1{font-family:Georgia,serif;font-weight:700;color:var(--ink);font-size:2.55vw;margin:0;}
+  .eyebrow{font-family:'Courier Prime',monospace;color:var(--muted);font-size:1.05vw;}
+  .sechead{font-family:'Courier Prime',monospace;font-weight:700;color:var(--ink);font-size:1.05vw;letter-spacing:.04em;}
+  .card{background:var(--cardbg);border-radius:8px;}
+  .stat{background:var(--cardbg);border-radius:8px;padding:0 3%;display:flex;flex-direction:column;justify-content:center;}
+  .stat .big{font-family:'Courier Prime',monospace;font-weight:700;color:var(--ink);font-size:2vw;}
+  .stat .subtxt{color:var(--muted);font-size:.9vw;}
+  .caption{color:var(--muted);font-style:italic;font-size:1.05vw;line-height:1.5;}
+  .sub{font-family:'Courier Prime',monospace;font-weight:700;color:var(--muted);font-size:.78vw;}
+  .isplbl{font-weight:700;color:var(--ink);font-size:.7vw;line-height:1.15;width:1.3in;}
+  .track{background:var(--track);border-radius:8px;}
+  .bar{background:var(--accent);border-radius:8px;}
+  .val{font-family:'Courier Prime',monospace;color:var(--body);font-size:.68vw;}
+  .note{color:var(--muted);font-style:italic;font-size:.62vw;}
+</style>
+<div class="slide">
+  <div class="abs eyebrow" style="left:6.75%;top:6.67%;">RQ2</div>
+  <div class="abs" style="left:6.75%;top:10.4%;"><h1>Same-City Latency:</h1></div>
+  <div class="abs sechead" style="left:6.75%;top:24.4%;">DOMESTIC CONTENT</div>
+  <div class="abs sechead" style="left:51.9%;top:24.4%;">CDN CONTENT</div>
+
+  <div class="abs card" style="left:6.75%;top:31.73%;width:41.40%;height:28.67%;"></div><div class="abs sub" style="left:8.85%;top:33.87%;">Karachi</div>
+<div class="abs isplbl" style="left:8.85%;top:36.40%;">ISP A</div>
+<div class="abs track" style="left:18.98%;top:36.71%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:18.98%;top:36.71%;width:6.88%;height:1.45%;"></div>
+<div class="abs val" style="left:35.03%;top:36.40%;">18.4 ms</div>
+<div class="abs isplbl" style="left:8.85%;top:39.07%;">ISP G</div>
+<div class="abs track" style="left:18.98%;top:39.38%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:18.98%;top:39.38%;width:7.59%;height:1.45%;"></div>
+<div class="abs val" style="left:35.03%;top:39.07%;">20.3 ms</div>
+<div class="abs isplbl" style="left:8.85%;top:41.73%;">ISP F</div>
+<div class="abs track" style="left:18.98%;top:42.04%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:18.98%;top:42.04%;width:15.45%;height:1.45%;"></div>
+<div class="abs val" style="left:35.03%;top:41.73%;">41.3 ms</div><div class="abs sub" style="left:8.85%;top:46.40%;">Lahore</div>
+<div class="abs isplbl" style="left:8.85%;top:48.93%;">ISP I</div>
+<div class="abs track" style="left:18.98%;top:49.24%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:18.98%;top:49.24%;width:11.18%;height:1.45%;"></div>
+<div class="abs val" style="left:35.03%;top:48.93%;">17.15 ms</div>
+<div class="abs isplbl" style="left:8.85%;top:51.60%;">ISP D</div>
+<div class="abs track" style="left:18.98%;top:51.91%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:18.98%;top:51.91%;width:11.90%;height:1.45%;"></div>
+<div class="abs val" style="left:35.03%;top:51.60%;">18.25 ms</div>
+<div class="abs isplbl" style="left:8.85%;top:54.27%;">ISP H</div>
+<div class="abs track" style="left:18.98%;top:54.58%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:18.98%;top:54.58%;width:13.49%;height:1.45%;"></div>
+<div class="abs val" style="left:35.03%;top:54.27%;">20.7 ms</div>
+<div class="abs isplbl" style="left:8.85%;top:56.93%;">ISP C</div>
+<div class="abs track" style="left:18.98%;top:57.24%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:18.98%;top:57.24%;width:15.45%;height:1.45%;"></div>
+<div class="abs val" style="left:35.03%;top:56.93%;">23.7 ms</div><div class="abs card" style="left:51.90%;top:31.73%;width:41.40%;height:28.67%;"></div><div class="abs sub" style="left:54.00%;top:33.87%;">Karachi</div>
+<div class="abs isplbl" style="left:54.00%;top:36.40%;">ISP A</div>
+<div class="abs track" style="left:64.13%;top:36.71%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:64.13%;top:36.71%;width:0.52%;height:1.45%;"></div>
+<div class="abs val" style="left:80.18%;top:36.40%;">4.4 ms (61.5%)</div>
+<div class="abs isplbl" style="left:54.00%;top:39.07%;">ISP G</div>
+<div class="abs track" style="left:64.13%;top:39.38%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:64.13%;top:39.38%;width:9.28%;height:1.45%;"></div>
+<div class="abs val" style="left:80.18%;top:39.07%;">78 ms (41%)</div>
+<div class="abs isplbl" style="left:54.00%;top:41.73%;">ISP F</div>
+<div class="abs track" style="left:64.13%;top:42.04%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:64.13%;top:42.04%;width:15.45%;height:1.45%;"></div>
+<div class="abs val" style="left:80.18%;top:41.73%;">129.8 ms (0%)</div><div class="abs sub" style="left:54.00%;top:46.40%;">Lahore</div>
+<div class="abs isplbl" style="left:54.00%;top:48.93%;">ISP C</div>
+<div class="abs track" style="left:64.13%;top:49.24%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:64.13%;top:49.24%;width:0.46%;height:1.45%;"></div>
+<div class="abs val" style="left:80.18%;top:48.93%;">2.8 ms (84.6%)</div>
+<div class="abs isplbl" style="left:54.00%;top:51.60%;">ISP I</div>
+<div class="abs track" style="left:64.13%;top:51.91%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:64.13%;top:51.91%;width:14.88%;height:1.45%;"></div>
+<div class="abs val" style="left:80.18%;top:51.60%;">91.1 ms (0%)</div>
+<div class="abs isplbl" style="left:54.00%;top:54.27%;">ISP D</div>
+<div class="abs track" style="left:64.13%;top:54.58%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:64.13%;top:54.58%;width:15.07%;height:1.45%;"></div>
+<div class="abs val" style="left:80.18%;top:54.27%;">92.3 ms (0%)</div>
+<div class="abs isplbl" style="left:54.00%;top:56.93%;">ISP H</div>
+<div class="abs track" style="left:64.13%;top:57.24%;width:15.45%;height:1.45%;"></div>
+<div class="abs bar" style="left:64.13%;top:57.24%;width:15.45%;height:1.45%;"></div>
+<div class="abs val" style="left:80.18%;top:56.93%;">94.6 ms (0%)</div>
+
+  <div class="abs stat" style="left:6.75%;top:60.7%;width:41.4%;height:13.3%;">
+    <div class="big">2.2x / 1.4x</div><div class="subtxt">Karachi / Lahore spread, domestic sites</div>
+  </div>
+  <div class="abs stat" style="left:51.9%;top:60.7%;width:41.4%;height:13.3%;">
+    <div class="big">29.8x / 34x</div><div class="subtxt">Karachi / Lahore spread, CDN sites</div>
+  </div>
+
+  <div class="abs caption" style="left:6.75%;top:76.7%;width:86.5%;">Cross-checked against Cloudflare's own edge for ISP C: 31 of 33 sites answered from a Pakistani point of presence, with 0 to 3 ms handshakes.</div>
+</div>

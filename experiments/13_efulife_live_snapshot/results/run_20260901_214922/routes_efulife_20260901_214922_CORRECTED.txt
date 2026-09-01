@@ -1,0 +1,99 @@
+Readable routes -- pk_grouped_efulife_20260901_214922.csv (CORRECTED COPY)
+9 traceroutes, live snapshot, 2026-09-01 21:49 -- destination shown once per block
+
+CORRECTIONS APPLIED (2026-09-01/02): only the PTCL Karachi trace (probe 1016126)
+touches disputed hops. The other 8 traces (Cybernet x3, PERN, Nayatel x2, TES, Nova,
+Z-Com) are all-domestic or clean single-country paths and are unchanged from the
+original file.
+
+Three international hops on the PTCL Karachi trace were re-checked hop-by-hop
+(reverse DNS on the exact IP and its real neighbors, plus RDAP/RIPE registration
+records), because the country label a lookup tool gives you is not the same thing
+as where the router physically sits. Two of three specific-location claims did not
+survive the check:
+
+  hop 6  (206.148.27.235)  was "Equinix Muscat"  -> RETRACTED, abroad but unconfirmed
+  hop 7  (206.148.22.141)  Equinix Singapore      -> HOLDS, confirmed on this exact IP
+  hop 8  (160.202.164.165) was "Los Angeles"      -> RETRACTED, abroad but unconfirmed
+  hops 10-13 (Zain Omantel) was "Muscat, Oman"    -> city retracted; COUNTRY (Oman)
+                                                      confirmed via RIPE's own
+                                                      registration record instead
+
+Full reasoning: edits/2026-09-01_eda_docs_gsl_muscat_correction.md and this
+conversation. Rule applied throughout: an ASN/company "country" field (from Team
+Cymru, ip-api, or an ASN's own registration) tells you who owns or routes an
+address, never where it physically sits. Only a descriptive PTR hostname on the
+EXACT ip, or a registrant's own explicit country field in the real per-block
+registration record, counts as evidence for this table. A neighboring IP's PTR
+does not transfer to IPs near it -- these operators number routers globally out
+of shared pools, not per physical site.
+
+==============================================================================
+ efulife.com   --   efulife  (Financial Services (n=1 case study))
+ SOURCE   probe 1016126 · PTCL (AS17557) · ptcl.1016126
+ DEST     103.154.196.33 · EFU LIFE Assurance Ltd (AS141008) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)                          verified location
+    1      1.2   192.168.10.1       --        (private/internal)
+    2      8.5   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited   Karachi, PK
+    3      8.7   10.253.5.94        --        (private/internal)
+    4      9.1   10.253.4.40        --        (private/internal)
+    5      9.3   10.253.4.2         --        (private/internal)
+    6     90.0   206.148.27.235     AS7578    Global Secure Layer (US per Cymru / AU per   ABROAD, exact site
+                                               older ip-api pass -- both unconfirmed)        UNCONFIRMED [1]
+    7     85.2   206.148.22.141     AS7578    Global Secure Layer                           Singapore, CONFIRMED
+                                                                                             (own PTR: sg-eqxsg3-cr7,
+                                                                                             checked 2026-07 and again
+                                                                                             2026-09-01, unchanged) [2]
+    8    194.6   160.202.164.165    AS137409  GSL Networks Pty LTD (NZ registration)        ABROAD, exact site
+                                                                                             UNCONFIRMED [3]
+    9      *     (no response)
+   10    197.6   213.202.6.194      AS8529    Zain Omantel International FZ-LLC (AE reg.)   OMAN, city
+                                                                                             UNCONFIRMED (not Muscat) [4]
+   11    199.0   213.202.6.202      AS8529    Zain Omantel International FZ-LLC             OMAN, city unconfirmed
+   12    203.2   134.0.219.250      AS8529    Zain Omantel International FZ-LLC             OMAN, city unconfirmed
+   13    202.1   213.202.7.209      AS8529    Zain Omantel International FZ-LLC             OMAN, city unconfirmed
+   14     88.3   192.168.5.37       --        (private/internal)
+   15     87.7   192.168.4.58       --        (private/internal)
+   16    104.8   192.168.200.38     --        (private/internal)
+   17     88.3   10.15.64.114       --        (private/internal)
+   18     88.7   124.29.240.218     AS9541    Cyber Internet Services (Pvt) Ltd. (Cybernet)  Karachi, PK
+   19     89.0   103.154.196.31     AS141008  EFU LIFE Assurance Ltd                         Karachi, PK
+   20     89.9   103.154.196.33     AS141008  EFU LIFE Assurance Ltd   <<< DESTINATION       Karachi, PK
+   21     89.0   103.154.196.33     AS141008  EFU LIFE Assurance Ltd   <<< DESTINATION       Karachi, PK
+
+[1] .235's own hostname is generic ("peering-edge.globalsecurelayer.com", no city
+    code). Its real neighbors (.225-.239 in the same /24) resolve to Ashburn US,
+    Adelaide AU, Seattle US, and Phoenix US -- four cities, two continents, one
+    block. "Muscat" in the original write-up came from a DIFFERENT pair of IPs
+    in this block (.1/.2), not from .235 itself; that PTR-block-extension doesn't
+    hold once the block is shown to be globally scattered.
+
+[2] The one hop on this whole international segment with a real, direct
+    confirmation: .141's own PTR says "sg-eqxsg3-cr7" (Equinix Singapore, SG3
+    facility), unchanged between the 2026-07 archive and a fresh check today.
+
+[3] Same failure mode as [1], worse: .165's real neighbors (.158-.172) resolve to
+    Brisbane, Sydney, Muscat, Singapore, Dallas, Frankfurt, and Phoenix -- six
+    countries in a 12-address span. "Los Angeles" was never a PTR finding at all;
+    it was raw, uncorrected ip-api.com output, the same kind of tool that already
+    got this operator's Sydney claim wrong elsewhere on this same path.
+
+[4] No PTR exists anywhere in either Omantel block used here (checked the exact
+    IPs and dozens of neighbors -- nothing). Team Cymru / older ip-api both say
+    AE (reading the operator's UAE free-zone company registration, "FZ-LLC").
+    RIPE's own raw registration record for both blocks (213.202.0.0/21 and
+    134.0.216.0/22) explicitly declares "country: OM" in the registrant's own
+    field -- the single most authoritative fact available here, and it disagrees
+    with the AE label. "Muscat" specifically (the city) is asserted nowhere: not
+    in the registration record (country only, no city field), not by any PTR,
+    and not even by RIPEstat's own quick geolocation tools (which say AE, not
+    Oman, if you ask them instead of reading the raw record).
+
+BOTTOM LINE: the PTCL Karachi trace to efulife.com still crosses at least three
+foreign hops before re-entering Pakistan through the same Cybernet doorway
+(124.29.240.218) every other probe in this snapshot also uses. What changed is
+precision, not the headline: one hop is solidly Singapore, one hop is solidly
+somewhere in Oman (not provably Muscat), and two hops are solidly "abroad,
+unidentified" rather than the specific cities first claimed.

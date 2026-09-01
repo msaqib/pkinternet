@@ -1,0 +1,85 @@
+<title>Calculations Slide Preview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Georgia&family=Courier+Prime&family=Arial&display=swap');
+  :root{
+    --ink:#1B2A4A; --body:#3A4455; --muted:#93A6C4; --accent:#2F5FD1;
+    --chipbg:#EEF2FA; --critical:#C8391F; --bg:#FBFBF9;
+  }
+  *{box-sizing:border-box;}
+  html,body{background:var(--bg);}
+  body{font-family:Arial,Helvetica,sans-serif;color:var(--body);display:flex;align-items:center;justify-content:center;padding:24px;min-height:100vh;}
+  .slide{position:relative;width:100%;max-width:1280px;aspect-ratio:1280/720;background:var(--bg);border:1px solid #eee;box-shadow:0 1px 3px rgba(11,37,69,.06),0 12px 32px rgba(11,37,69,.06);}
+  .abs{position:absolute;}
+  /* positions as % of 13.333in x 7.5in slide */
+  h1{font-family:Georgia,serif;font-weight:700;color:var(--ink);font-size:2.6vw;margin:0;}
+  .colhead{font-family:'Courier Prime',monospace;letter-spacing:.08em;color:var(--muted);font-size:1.05vw;}
+  .dot{width:.5vw;height:.5vw;border-radius:50%;background:var(--accent);}
+  .lead{font-weight:700;color:var(--ink);}
+  .txt{font-size:1.15vw;line-height:1.4;}
+  .callout{background:var(--chipbg);border-radius:10px;display:flex;flex-direction:column;justify-content:center;padding:0 1.2%;}
+  .callout .big{font-family:'Courier Prime',monospace;font-weight:700;color:var(--ink);font-size:2vw;}
+  .callout .sub{color:var(--muted);font-size:.95vw;}
+  .caption{color:var(--muted);font-style:italic;font-size:.78vw;text-align:center;}
+  .flag{color:var(--critical);font-family:'Courier Prime',monospace;font-weight:700;font-size:.72vw;text-align:center;}
+  .chip{border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--chipbg);}
+  .chip.crit{background:var(--critical);}
+  .chip .l1{font-weight:700;font-size:.82vw;color:var(--ink);}
+  .chip.crit .l1{color:#fff;}
+  .chip .l2{font-family:'Courier Prime',monospace;font-size:.82vw;color:var(--body);margin-top:.2vw;}
+  .chip.crit .l2{color:#fff;}
+  .arrow{color:var(--muted);font-weight:700;font-size:1.4vw;display:flex;align-items:center;justify-content:center;}
+
+  @keyframes popin{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(200,57,31,.45);}50%{box-shadow:0 0 0 6px rgba(200,57,31,0);}}
+  @media (prefers-reduced-motion: reduce){
+    .chip,.arrow,.flag{animation:none !important;}
+  }
+</style>
+
+<div class="slide">
+  <div class="abs" style="left:6.75%;top:7.3%;"><h1>Calculations:</h1></div>
+
+  <!-- LEFT COLUMN -->
+  <div class="abs colhead" style="left:6.75%;top:20%;">LATENCY RATIO</div>
+  <div class="abs dot" style="left:6.75%;top:28%;"></div>
+  <div class="abs txt" style="left:8.4%;top:25.6%;width:39.4%;"><span class="lead">Physics floor: </span>fastest RTT the distance allows, at the speed of light in fiber</div>
+  <div class="abs dot" style="left:6.75%;top:40.7%;"></div>
+  <div class="abs txt" style="left:8.4%;top:38.3%;width:39.4%;"><span class="lead">PK / Abroad sites: </span>floor from straight-line probe-to-server distance</div>
+  <div class="abs dot" style="left:6.75%;top:53.3%;"></div>
+  <div class="abs txt" style="left:8.4%;top:50.9%;width:39.4%;"><span class="lead">CDN sites: </span>floor is the best RTT any of our probes achieved to that site</div>
+  <div class="abs callout" style="left:6.75%;top:76%;width:41%;height:14.7%;">
+    <div class="big">ratio = RTT / floor</div>
+    <div class="sub">1x = physical limit, k = k times slower</div>
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="abs colhead" style="left:52.3%;top:20%;">TROMBONING CLASSIFICATION</div>
+  <div class="abs dot" style="left:52.3%;top:28%;"></div>
+  <div class="abs txt" style="left:53.9%;top:25.6%;width:39.4%;"><span class="lead">Scope: </span>Pakistani-hosted sites only; CDN/Abroad expected to exit anyway</div>
+  <div class="abs dot" style="left:52.3%;top:40.7%;"></div>
+  <div class="abs txt" style="left:53.9%;top:38.3%;width:39.4%;"><span class="lead">Rule: </span>tromboned if any hop belongs to a foreign-registered network</div>
+  <div class="abs dot" style="left:52.3%;top:53.3%;"></div>
+  <div class="abs txt" style="left:53.9%;top:50.9%;width:39.4%;"><span class="lead">Exceptions: </span>Shaw Communications &amp; Cogent IPs, foreign-registered but confirmed inside Pakistan by RTT</div>
+
+  <!-- NEW: traceroute example, animated hop flow -->
+  <div class="abs caption" style="left:52.3%;top:63%;width:41%;">Example traceroute (anonymised) &middot; verdict TROMBONE</div>
+
+  <div class="abs flag" style="left:66.9%;top:65.3%;width:11.6%;animation:popin .4s ease .75s both;">LEAVES PK</div>
+
+  <div class="abs chip" style="left:52.65%;top:68.7%;width:11.6%;height:5.6%;animation:popin .4s ease 0s both;">
+    <div class="l1">Source ISP (PK)</div><div class="l2">23.3 ms</div>
+  </div>
+  <div class="abs arrow" style="left:64.3%;top:68.7%;width:2.6%;height:5.6%;animation:popin .3s ease .4s both;">&rarr;</div>
+  <div class="abs chip crit" style="left:66.9%;top:68.7%;width:11.6%;height:5.6%;animation:popin .4s ease .55s both,pulse 1.6s ease 1.15s 2;">
+    <div class="l1">Foreign transit (US)</div><div class="l2">42.3 ms</div>
+  </div>
+  <div class="abs arrow" style="left:78.55%;top:68.7%;width:2.6%;height:5.6%;animation:popin .3s ease 1s both;">&rarr;</div>
+  <div class="abs chip" style="left:81.15%;top:68.7%;width:11.6%;height:5.6%;animation:popin .4s ease 1.15s both;">
+    <div class="l1">Destination ISP (PK)</div><div class="l2">42.0 ms</div>
+  </div>
+
+  <div class="abs callout" style="left:52.3%;top:76%;width:41%;height:14.7%;">
+    <div class="big">40 ms</div>
+    <div class="sub">minimum RTT to count a hop as foreign</div>
+  </div>
+</div>

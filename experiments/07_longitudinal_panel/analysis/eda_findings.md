@@ -43,26 +43,59 @@ doesn't clear the physics-arbiter's vacuum-floor test outright — Karachi to
 claimed-Sydney is ~11,000km, vacuum round-trip floor ≈73.5ms, so 110.8ms
 isn't *provably* impossible the way a Toronto/Mountain-View-style case is.
 
-**What settled it:**
+**What settled it (originally):**
 1. **A sibling IP contradicts it.** The same GSL entity's `160.202.164.165`
    geolocates to **Los Angeles** in the same database — one company, two
    wildly different ip-api answers. Consistent with both being an HQ/
    registration-address default rather than the router's real location.
-2. **Reverse DNS is authoritative here.** `dig -x` on `206.148.27.235` and
-   neighbouring IPs in the same /24 returns hostnames like
-   `po3.mct-eqxmc1-cr2.globalsecurelayer.com` — `mct` = Muscat's IATA code,
-   `eqxmc1` = Equinix Muscat facility 1. This is a first-party signal (the
-   network operator's own naming convention) — stronger than any third-party
-   geo-IP database. **The hop is in Muscat, Oman, not Sydney.**
-   A second IP on the same path, `206.148.22.141`, decodes to `sg-eqxsg3` =
-   Equinix Singapore (ip-api had called it "New York").
+2. **Reverse DNS is authoritative here, but only for the exact IP checked.**
+   `dig -x` on `206.148.27.1` and `.2`, two *other* addresses in the same
+   `/24`, returns hostnames like `po3.mct-eqxmc1-cr2.globalsecurelayer.com` —
+   `mct` = Muscat's IATA code, `eqxmc1` = Equinix Muscat facility 1. A real,
+   first-party signal, stronger than any third-party geo-IP database — but a
+   confirmation of `.1`/`.2`, not of `206.148.27.235`, the IP that actually
+   shows up in this trace.
 
+**Correction, 2026-09-01:** this section originally said `dig -x` on
+`206.148.27.235` itself returned the `mct-eqxmc1` hostname and concluded "the
+hop is in Muscat, Oman, not Sydney." That was wrong on the specific IP: `.235`
+resolves to the generic `peering-edge.globalsecurelayer.com`, no city code,
+nothing to disprove Sydney with directly. Re-checked by reverse-DNSing `.235`'s
+*actual* neighbors (`.225`-`.239`) instead of `.1`/`.2`: they resolve to
+Ashburn, Adelaide, Seattle, and Phoenix, four cities on two continents inside
+one `/24`. GSL numbers router interfaces out of shared global pools, not per
+physical site, so a `/24` carries no location information for this operator —
+`.1`/`.2` being in Muscat says nothing about where `.235` is.
 
-**Reusable takeaway:** ip-api geolocation on backbone/carrier hops is often
-just the company's registration city, and the physics floor alone won't
-always disprove it (unlike a consumer/CDN edge IP case). **`dig -x <ip>` is
-the stronger tool for carrier infrastructure** — operators name their own
-routers with real airport/facility codes (`mct`, `sg`, `lax`, etc.).
+**Revised verdict: `.235` is abroad (not Sydney — that was already established
+independently via the sibling-IP contradiction above, and the RTT jump to get
+there also rules out Pakistan), but its specific city is unconfirmed.** Not
+Muscat, not provably anywhere else either. `206.148.22.141`, a different IP on
+the same path, is unaffected by this correction: it decodes to `sg-eqxsg3` =
+Equinix Singapore directly on its own hostname (ip-api had called it "New
+York"), re-checked live on 2026-09-01 and unchanged.
+
+**Reusable takeaway (revised):** ip-api geolocation on backbone/carrier hops is
+often just the company's registration city, and the physics floor alone won't
+always disprove it (unlike a consumer/CDN edge IP case). `dig -x <ip>` is the
+stronger tool for carrier infrastructure, real airport/facility codes (`mct`,
+`sg`, `lax`, etc.) do show up — **but only trust it for the exact IP you dig,
+never extend a hit to that IP's neighbors or its whole `/24` without checking
+each one individually.** A block can, and here does, span multiple cities and
+continents under one operator. See
+`edits/2026-09-01_eda_docs_gsl_muscat_correction.md`.
+
+**Second correction, same date, same hop family:** bullet 1 above quotes
+`160.202.164.165` geolocating to "Los Angeles" per ip-api, used only to show
+ip-api contradicts itself, never claimed as verified, and it wasn't — no PTR
+check was ever run on this IP or its neighbors. Run now: `.165` itself has the
+generic `unknown.globalsecurelayer.com` hostname, and its real neighbors
+(`.158` Brisbane, `.160` Sydney, `.162` Muscat, `.164` Singapore, `.166`
+Dallas, `.168` Frankfurt, `.170`/`.172` Phoenix) span six countries in a
+12-address span. RDAP confirms `160.202.164.0/24` is one registered block
+("KEYSTONE"), not a single site, same story as `206.148.27.0/24`. **`.165` is
+abroad, exact city unconfirmed** ("Los Angeles" was never established and
+shouldn't be repeated as if it were).
 
 ---
 
@@ -106,7 +139,7 @@ the snapshot). Full hop-by-hop deep-dive done on three:
 ### `efulife.com` 
 ```
 PTCL edge → PTCL internal
-→ Cogent (US-registered), leased to GSL Networks
+→ GSL Networks/Global Secure Layer (abroad, exact site unconfirmed -- see §2 correction)
 → Zain-Omantel, Muscat, Oman (confirmed via RIPEstat + PTR)
 → Cybernet (PK) → EFU Life's own PK-registered block
 ```

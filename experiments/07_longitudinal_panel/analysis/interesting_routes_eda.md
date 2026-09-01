@@ -4,6 +4,12 @@ Auto-extracted from `results/a/routes_20260718_195946.txt` (Exp 07 panel, latest
 
 **Totals in this snapshot:** 124 Pakistan-class traces are TROMBONE out of 640 total. Of those, **37 cross 2+ distinct foreign countries**, 34 cross exactly 1, and 53 have no hop that resolved to a foreign country (unresolved/private hops only). Correction pass: **43 hop-occurrences fixed via KNOWN_LOCATIONS**, **43 hop-occurrences flagged physically-impossible** (RTT below the speed-of-light floor for the claimed city — shown inline below, not silently kept).
 
+**Correction, 2026-09-01 [†]:** every row below showing IP `206.148.27.235` as "Equinix Muscat (GSL, via PTR)" has been relabeled **"Abroad, site unconfirmed"**. That label came from extending a real PTR confirmation on two *different* IPs (`206.148.27.1`/`.2`) to the whole `/24` block. Re-checked: `.235`'s own hostname is generic (no city code), and its actual neighbors in that block resolve to Ashburn, Adelaide, Seattle, and Phoenix, four cities on two continents, so the block isn't single-site and the Muscat label doesn't transfer to `.235`. It's still confidently **abroad** (the RTT jump getting there, and the fact every directly-checked neighbor is abroad too, both rule out Pakistan) — just not confirmed to specifically be Muscat. Rows showing `206.148.27.1` itself (a different IP, hop 11 in the second `efulife.com` trace below) are unaffected; that one's PTR confirmation is direct and still holds.
+
+Same-day, same issue, one more row: `160.202.164.165` was shown below as "Los Angeles". That was never a PTR finding for this IP at all, it was `eda_findings.md` §2's raw, uncorrected `ip-api.com` guess, quoted there only to show `ip-api` contradicts itself between GSL addresses, not as a verified answer. Reverse-DNSing `.165`'s actual neighbors turns up Brisbane, Sydney, Muscat, Singapore, Dallas, Frankfurt, and Phoenix all within about 12 addresses, confirming (via APNIC RDAP) that the whole `160.202.164.0/24` block is one company-wide global pool, not a single site, exactly the same pattern as the `206.148.27.x` case. Relabeled **"Abroad, site unconfirmed"** too.
+
+See `edits/2026-09-01_eda_docs_gsl_muscat_correction.md` and `eda_findings.md` §2 for the full re-check on both hops.
+
 **Caveats before presenting these:**
 - **`toptop.net` and `youth.cn`** may actually be genuinely offshore sites mislabeled `[Pakistan]` class (flagged separately in `findings/07_longitudinal_panel.md`) — don't cite these as PKIX/hairpin evidence without checking that classification first.
 - **Probe `ptcl.1016393` (PTCL-Mianwali)** RTTs cluster suspiciously near a 490-500ms ceiling elsewhere in this dataset (`eda_findings.md` §1, likely an ICMP-delay artifact) — treat this probe's specific RTT numbers with caution; its path/hop sequence is still informative.
@@ -81,9 +87,9 @@ Verdict: **TROMBONE**, max RTT **119.2ms**, exit=US, transit AS=PTCL, foreign co
 | 3 | 25.7 | 10.253.5.94 | (unresolved) |  |  |
 | 4 | 25.9 | 10.253.4.122 | (unresolved) |  |  |
 | 5 | 27.5 | 10.253.4.24 | (unresolved) |  |  |
-| 6 | 110.8 | 206.148.27.235 | GSL - Global Secure Layer, AU |  | **Equinix Muscat (GSL, via PTR)** _(corrected)_ |
+| 6 | 110.8 | 206.148.27.235 | GSL - Global Secure Layer, AU |  | **Abroad, site unconfirmed [†]** |
 | 7 | 119.2 | 206.148.22.141 | GSL - Global Secure Layer, AU |  | **Equinix Singapore (GSL, via PTR)** _(corrected)_ |
-| 8 | 112.8 | 160.202.164.165 | GSLNETWORKS-AS-AP - GSL Networks Pty LTD | NZ | Los Angeles |
+| 8 | 112.8 | 160.202.164.165 | GSLNETWORKS-AS-AP - GSL Networks Pty LTD | NZ | **Abroad, site unconfirmed [†]** _(was "Los Angeles" -- that was raw, uncorrected ip-api output, never PTR-verified; see correction)_ |
 | 10 | 114.1 | 213.202.6.197 | OMANTEL-AS - Zain Omantel International  | AE | Muscat |
 | 11 | 111.8 | 134.0.220.234 | OMANTEL-AS - Zain Omantel International  | AE | Muscat |
 | 12 | 111.8 | 213.202.7.209 | OMANTEL-AS - Zain Omantel International  | AE | Muscat |
@@ -527,7 +533,7 @@ Verdict: **TROMBONE**, max RTT **430.4ms**, exit=US, transit AS=PTCL, foreign co
 | 2 | 6.2 | 39.45.64.1 | PKTELECOM-AS-PK - Pakistan Telecommunica | PK | Mianwali |
 | 3 | 10.2 | 10.253.9.146 | (unresolved) |  |  |
 | 4 | 27.9 | 10.253.4.74 | (unresolved) |  |  |
-| 6 | 430.4 | 206.148.27.235 | GSL - Global Secure Layer, AU |  | **Equinix Muscat (GSL, via PTR)** _(corrected)_ |
+| 6 | 430.4 | 206.148.27.235 | GSL - Global Secure Layer, AU |  | **Abroad, site unconfirmed [†]** |
 | 11 | 315.8 | 206.148.27.1 | GSL - Global Secure Layer, AU |  | **Equinix Muscat (GSL, via PTR)** _(corrected)_ |
 | 12 | 364.2 | 213.202.6.197 | OMANTEL-AS - Zain Omantel International  | AE | Muscat |
 | 13 | 284.6 | 134.0.220.234 | OMANTEL-AS - Zain Omantel International  | AE | Muscat |

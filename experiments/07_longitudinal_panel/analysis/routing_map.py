@@ -47,15 +47,32 @@ EARTH_R = 6371.0  # km, mean Earth radius
 # Prefixes RIPEstat whois / PTR hostname independently confirms are NOT where
 # ip-api.com claims (checked 2026-07 for this map) — override rather than drop,
 # since we have real ground truth for these specific, already-documented blocks.
+#
+# CORRECTION (2026-09-01, see edits/2026-09-01_routing_map_gsl_prefix_fix.md):
+# the two GSL entries below used to be whole-/24 prefixes ('206.148.27.',
+# '206.148.22.'), on the assumption that a /24 is one physical site. Re-checked
+# by reverse-DNSing every neighbor of the hop IPs actually seen in our traces:
+# 206.148.27.225-239 alone resolve to Ashburn, Adelaide, Seattle, AND Phoenix,
+# all in the same /24. GSL numbers router interfaces globally out of shared
+# blocks, not per-site, so a /24-wide match was silently mislabeling any other
+# IP in that block. Narrowed to exact-IP matches: only the specific addresses
+# whose OWN PTR hostname carries a city code are trusted, not their neighbors.
+# 206.148.27.235 (the IP that actually appears in the EFU Life trace) has a
+# generic, non-geographic hostname ('peering-edge') and is NOT one of the two
+# confirmed IPs below -- its real location is unknown and it now falls through
+# to the ip-api + physics check like any unverified IP, same as everything
+# else this override list doesn't cover.
 KNOWN_LOCATIONS = {
     '27.111.228.': (1.290, 103.850, 'Equinix Singapore'),
     '27.111.230.': (1.290, 103.850, 'Equinix Singapore'),
     '27.111.231.': (1.290, 103.850, 'Equinix Singapore'),
-    # ip-api claims Sydney/New York; GSL Networks' own PTR hostnames say
-    # otherwise — 206.148.27.1/.2 -> "mct-eqxmc1" (Equinix Muscat).
-    '206.148.27.': (23.610, 58.590, 'Equinix Muscat (GSL, via PTR)'),
-    # 206.148.22.141 -> "sg-eqxsg3-cr7" (Equinix Singapore), same GSL entity.
-    '206.148.22.': (1.290, 103.850, 'Equinix Singapore (GSL, via PTR)'),
+    # Exact IPs only (see correction note above) -- do NOT widen back to a
+    # prefix without re-verifying every address in the range first.
+    # 206.148.27.1/.2 -> "mct-eqxmc1" (Equinix Muscat), confirmed on the exact IP.
+    '206.148.27.1':   (23.610, 58.590, 'Equinix Muscat (GSL, via PTR on this exact IP)'),
+    '206.148.27.2':   (23.610, 58.590, 'Equinix Muscat (GSL, via PTR on this exact IP)'),
+    # 206.148.22.141 -> "sg-eqxsg3-cr7" (Equinix Singapore), confirmed on the exact IP.
+    '206.148.22.141': (1.290, 103.850, 'Equinix Singapore (GSL, via PTR on this exact IP)'),
 }
 
 
@@ -77,8 +94,16 @@ def resolve_hop_location(ip, hop_rtt, probe_lat, probe_lon, hop_geo):
     physics check: RTT must be >= the vacuum-speed-of-light round-trip floor
     for that distance. A claimed location closer to physically impossible
     than that is dropped rather than plotted."""
-    for prefix, (lat, lon, _label) in KNOWN_LOCATIONS.items():
-        if ip.startswith(prefix):
+    for key, (lat, lon, _label) in KNOWN_LOCATIONS.items():
+        # A key ending in '.' is a whole-/24 block match (e.g. '27.111.228.').
+        # A key with no trailing dot is a single exact IP (e.g. '206.148.27.1')
+        # -- matched with == rather than startswith(), which would otherwise
+        # also match '206.148.27.10', '.11', '.100'-'.199', etc. See the
+        # 2026-09-01 correction note above KNOWN_LOCATIONS: this distinction
+        # exists because a /24-wide match was found to silently mislabel
+        # unrelated IPs in the same block.
+        matched = ip.startswith(key) if key.endswith('.') else ip == key
+        if matched:
             PHYSICS_STATS['corrected_hits'] += 1
             return lat, lon
 

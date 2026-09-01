@@ -1,0 +1,211 @@
+<title>Website Selection Method</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --bg: #ffffff;
+    --card-bg: #f6f9fd;
+    --card-border: #e2eaf7;
+    --ink: #0b2545;
+    --body: #16325e;
+    --muted: #5b7699;
+    --accent: #174ba6;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); }
+  body {
+    font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+    color: var(--body);
+    display: flex; align-items: center; justify-content: center;
+    padding: 28px; min-height: 100vh;
+  }
+  .slide {
+    width: 100%; max-width: 1280px; aspect-ratio: 16/9;
+    background: var(--bg); border: 1px solid #eef2f8; border-radius: 6px;
+    padding: 4.4% 4.6% 3.2%;
+    display: flex; flex-direction: column;
+    box-shadow: 0 1px 3px rgba(11,37,69,0.06), 0 12px 32px rgba(11,37,69,0.06);
+  }
+  h1 {
+    font-family: 'Merriweather', Georgia, serif; font-weight: 900;
+    font-size: clamp(28px, 3.4vw, 44px); color: var(--ink);
+    margin: 0 0 12px; letter-spacing: -0.01em;
+  }
+  .rule { width: 96px; height: 6px; background: var(--accent); border-radius: 3px; margin-bottom: 3%; }
+
+  .body { flex: 1; display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 26px; min-height: 0; }
+  .left { display: flex; flex-direction: column; gap: 14px; min-height: 0; }
+  .right { display: flex; flex-direction: column; min-height: 0; }
+
+  .ovwrap { padding: 2px 0 6px; }
+  .ovlabel { font-size: 12.5px; font-weight: 600; fill: var(--ink); font-family: 'Inter', sans-serif; }
+  .ovnum   { font-size: 13.5px; font-weight: 700; fill: var(--ink); font-family: 'Inter', sans-serif; font-variant-numeric: tabular-nums; }
+
+  .card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 13px 16px; }
+  .card h2 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14.5px; color: var(--ink); margin: 0 0 3px; letter-spacing: -0.01em; }
+  .card p { font-size: 12px; line-height: 1.45; color: var(--body); margin: 0; }
+
+  .rightcard { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 14px 18px 10px; flex: 1; display: flex; flex-direction: column; min-height: 0; }
+  .rightcard h2 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14.5px; color: var(--ink); margin: 0 0 4px; }
+  .legend { display: flex; gap: 16px; margin-bottom: 4px; }
+  .legend span { font-size: 11px; color: var(--muted); font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 5px; }
+  .swatch { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
+
+  .chart-wrap { position: relative; flex: 1; min-height: 0; }
+  svg.sectors { width: 100%; height: 100%; overflow: visible; }
+  .seclabel { font-size: 11px; fill: var(--body); font-family: 'Inter', sans-serif; }
+  .secnum { font-size: 11.5px; font-weight: 700; fill: var(--ink); font-family: 'Inter', sans-serif; font-variant-numeric: tabular-nums; }
+  .rowhit { cursor: pointer; }
+
+  .tooltip {
+    position: absolute; pointer-events: none; background: var(--ink); color: #fff;
+    font-size: 11px; line-height: 1.5; padding: 7px 10px; border-radius: 6px;
+    transform: translate(-6px, -108%); white-space: nowrap; opacity: 0;
+    transition: opacity 0.1s ease; z-index: 5; font-variant-numeric: tabular-nums;
+  }
+  .tooltip.show { opacity: 1; }
+  .tooltip b { font-weight: 700; }
+  .tooltip .brk { color: #cfe0f7; }
+
+  .footer { margin-top: 10px; font-size: 10px; color: var(--muted); line-height: 1.4; }
+</style>
+
+<div class="slide">
+  <h1>Website Selection</h1>
+  <div class="rule"></div>
+
+  <div class="body">
+    <div class="left">
+      <svg class="ovwrap" viewBox="0 0 340 97" style="width:100%;height:auto;overflow:visible;">
+        
+      <g>
+        <text x="72" y="19.0" text-anchor="end" class="ovlabel">Pakistan</text>
+        <rect x="82" y="6" width="238" height="18" rx="4" fill="#EEF3FB"></rect><rect x="82" y="6" width="226.1" height="18" rx="4" fill="#2a78d6"></rect>
+        <text x="332" y="19.0" class="ovnum">38</text>
+      </g>
+      <g>
+        <text x="72" y="50.0" text-anchor="end" class="ovlabel">CDN</text>
+        <rect x="82" y="37" width="238" height="18" rx="4" fill="#EEF3FB"></rect><rect x="82" y="37" width="238.0" height="18" rx="4" fill="#eb6834"></rect>
+        <text x="332" y="50.0" class="ovnum">40</text>
+      </g>
+      <g>
+        <text x="72" y="81.0" text-anchor="end" class="ovlabel">Abroad</text>
+        <rect x="82" y="68" width="238" height="18" rx="4" fill="#EEF3FB"></rect><rect x="82" y="68" width="119.0" height="18" rx="4" fill="#1baf7a"></rect>
+        <text x="332" y="81.0" class="ovnum">20</text>
+      </g>
+      </svg>
+
+      <div class="card">
+        <h2>98 sites, 3 hosting classes</h2>
+        <p>Sampled from Tranco's top-1M .pk sites plus CISA sector sources.</p>
+      </div>
+      <div class="card">
+        <h2>Classified by owning ASN</h2>
+        <p>Each site's IP maps to a Pakistani ASN, a CDN ASN, or neither.</p>
+      </div>
+      <div class="card">
+        <h2>Hosting is concentrated</h2>
+        <p>Cloudflare leads CDN hosting. PTCL and HEC lead Pakistani hosting.</p>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="rightcard">
+        <h2>Sampled sites by CISA sector</h2>
+        <div class="legend">
+          <span><i class="swatch" style="background:#2a78d6"></i>Pakistani</span>
+          <span><i class="swatch" style="background:#eb6834"></i>CDN</span>
+          <span><i class="swatch" style="background:#1baf7a"></i>Abroad</span>
+        </div>
+        <div class="chart-wrap" id="chartWrap">
+          <svg class="sectors" viewBox="0 0 480 296" preserveAspectRatio="xMidYMid meet">
+            
+      <g class="srow" data-sector="Commercial Facilities" data-pool="1236" data-sampled="58" data-pk="22" data-cdn="24" data-abr="12" tabindex="0">
+        <text x="124" y="55.0" text-anchor="end" class="seclabel">Commercial Facilities</text>
+        <path d="M 135,42 H 237.44827586206895 V 60 H 135 A 3,3 0 0 1 132,57 V 45 A 3,3 0 0 1 135,42 Z" fill="#2a78d6"></path><path d="M 238.94827586206895,42 h 115.0344827586207 v 18 h -115.0344827586207 Z" fill="#eb6834"></path><path d="M 355.48275862068965,42 H 410.0 A 3,3 0 0 1 413.0,45 V 57 A 3,3 0 0 1 410.0,60 H 355.48275862068965 V 42 Z" fill="#1baf7a"></path>
+        <text x="424" y="55.0" class="secnum">58</text>
+        <rect x="130" y="40" width="338" height="32" fill="transparent" class="rowhit"></rect>
+      </g>
+      <g class="srow" data-sector="Govt. Services & Facilities" data-pool="182" data-sampled="11" data-pk="4" data-cdn="5" data-abr="2" tabindex="0">
+        <text x="124" y="87.0" text-anchor="end" class="seclabel">Govt. Services & Facilities</text>
+        <path d="M 135,74 H 151.17241379310346 V 92 H 135 A 3,3 0 0 1 132,89 V 77 A 3,3 0 0 1 135,74 Z" fill="#2a78d6"></path><path d="M 152.67241379310346,74 h 23.96551724137931 v 18 h -23.96551724137931 Z" fill="#eb6834"></path><path d="M 178.13793103448276,74 H 184.72413793103448 A 3,3 0 0 1 187.72413793103448,77 V 89 A 3,3 0 0 1 184.72413793103448,92 H 178.13793103448276 V 74 Z" fill="#1baf7a"></path>
+        <text x="424" y="87.0" class="secnum">11</text>
+        <rect x="130" y="72" width="338" height="32" fill="transparent" class="rowhit"></rect>
+      </g>
+      <g class="srow" data-sector="Education" data-pool="177" data-sampled="10" data-pk="4" data-cdn="4" data-abr="2" tabindex="0">
+        <text x="124" y="119.0" text-anchor="end" class="seclabel">Education</text>
+        <path d="M 135,106 H 151.17241379310346 V 124 H 135 A 3,3 0 0 1 132,121 V 109 A 3,3 0 0 1 135,106 Z" fill="#2a78d6"></path><path d="M 152.67241379310346,106 h 19.17241379310345 v 18 h -19.17241379310345 Z" fill="#eb6834"></path><path d="M 173.34482758620692,106 H 179.93103448275863 A 3,3 0 0 1 182.93103448275863,109 V 121 A 3,3 0 0 1 179.93103448275863,124 H 173.34482758620692 V 106 Z" fill="#1baf7a"></path>
+        <text x="424" y="119.0" class="secnum">10</text>
+        <rect x="130" y="104" width="338" height="32" fill="transparent" class="rowhit"></rect>
+      </g>
+      <g class="srow" data-sector="Communications" data-pool="138" data-sampled="7" data-pk="3" data-cdn="3" data-abr="1" tabindex="0">
+        <text x="124" y="151.0" text-anchor="end" class="seclabel">Communications</text>
+        <path d="M 135,138 H 146.3793103448276 V 156 H 135 A 3,3 0 0 1 132,153 V 141 A 3,3 0 0 1 135,138 Z" fill="#2a78d6"></path><path d="M 147.8793103448276,138 h 14.379310344827587 v 18 h -14.379310344827587 Z" fill="#eb6834"></path><path d="M 163.75862068965517,138 H 166.1551724137931 A 2.396551724137931,2.396551724137931 0 0 1 168.55172413793105,140.39655172413794 V 153.60344827586206 A 2.396551724137931,2.396551724137931 0 0 1 166.1551724137931,156 H 163.75862068965517 V 138 Z" fill="#1baf7a"></path>
+        <text x="424" y="151.0" class="secnum">7</text>
+        <rect x="130" y="136" width="338" height="32" fill="transparent" class="rowhit"></rect>
+      </g>
+      <g class="srow" data-sector="Financial Services" data-pool="42" data-sampled="4" data-pk="2" data-cdn="1" data-abr="1" tabindex="0">
+        <text x="124" y="183.0" text-anchor="end" class="seclabel">Financial Services</text>
+        <path d="M 135,170 H 141.58620689655172 V 188 H 135 A 3,3 0 0 1 132,185 V 173 A 3,3 0 0 1 135,170 Z" fill="#2a78d6"></path><path d="M 143.08620689655172,170 h 4.793103448275862 v 18 h -4.793103448275862 Z" fill="#eb6834"></path><path d="M 149.3793103448276,170 H 151.77586206896552 A 2.396551724137931,2.396551724137931 0 0 1 154.17241379310346,172.39655172413794 V 185.60344827586206 A 2.396551724137931,2.396551724137931 0 0 1 151.77586206896552,188 H 149.3793103448276 V 170 Z" fill="#1baf7a"></path>
+        <text x="424" y="183.0" class="secnum">4</text>
+        <rect x="130" y="168" width="338" height="32" fill="transparent" class="rowhit"></rect>
+      </g>
+      <g class="srow" data-sector="Healthcare & Public Health" data-pool="18" data-sampled="3" data-pk="1" data-cdn="1" data-abr="1" tabindex="0">
+        <text x="124" y="215.0" text-anchor="end" class="seclabel">Healthcare & Public Health</text>
+        <path d="M 134.39655172413794,202 H 136.79310344827587 V 220 H 134.39655172413794 A 2.396551724137931,2.396551724137931 0 0 1 132,217.60344827586206 V 204.39655172413794 A 2.396551724137931,2.396551724137931 0 0 1 134.39655172413794,202 Z" fill="#2a78d6"></path><path d="M 138.29310344827587,202 h 4.793103448275862 v 18 h -4.793103448275862 Z" fill="#eb6834"></path><path d="M 144.58620689655174,202 H 146.98275862068968 A 2.396551724137931,2.396551724137931 0 0 1 149.37931034482762,204.39655172413794 V 217.60344827586206 A 2.396551724137931,2.396551724137931 0 0 1 146.98275862068968,220 H 144.58620689655174 V 202 Z" fill="#1baf7a"></path>
+        <text x="424" y="215.0" class="secnum">3</text>
+        <rect x="130" y="200" width="338" height="32" fill="transparent" class="rowhit"></rect>
+      </g>
+      <g class="srow" data-sector="Energy" data-pool="11" data-sampled="3" data-pk="1" data-cdn="1" data-abr="1" tabindex="0">
+        <text x="124" y="247.0" text-anchor="end" class="seclabel">Energy</text>
+        <path d="M 134.39655172413794,234 H 136.79310344827587 V 252 H 134.39655172413794 A 2.396551724137931,2.396551724137931 0 0 1 132,249.60344827586206 V 236.39655172413794 A 2.396551724137931,2.396551724137931 0 0 1 134.39655172413794,234 Z" fill="#2a78d6"></path><path d="M 138.29310344827587,234 h 4.793103448275862 v 18 h -4.793103448275862 Z" fill="#eb6834"></path><path d="M 144.58620689655174,234 H 146.98275862068968 A 2.396551724137931,2.396551724137931 0 0 1 149.37931034482762,236.39655172413794 V 249.60344827586206 A 2.396551724137931,2.396551724137931 0 0 1 146.98275862068968,252 H 144.58620689655174 V 234 Z" fill="#1baf7a"></path>
+        <text x="424" y="247.0" class="secnum">3</text>
+        <rect x="130" y="232" width="338" height="32" fill="transparent" class="rowhit"></rect>
+      </g>
+      <g class="srow" data-sector="Transportation Systems" data-pool="10" data-sampled="2" data-pk="1" data-cdn="1" data-abr="0" tabindex="0">
+        <text x="124" y="279.0" text-anchor="end" class="seclabel">Transportation Systems</text>
+        <path d="M 134.39655172413794,266 H 136.79310344827587 V 284 H 134.39655172413794 A 2.396551724137931,2.396551724137931 0 0 1 132,281.6034482758621 V 268.3965517241379 A 2.396551724137931,2.396551724137931 0 0 1 134.39655172413794,266 Z" fill="#2a78d6"></path><path d="M 138.29310344827587,266 H 140.6896551724138 A 2.396551724137931,2.396551724137931 0 0 1 143.08620689655174,268.3965517241379 V 281.6034482758621 A 2.396551724137931,2.396551724137931 0 0 1 140.6896551724138,284 H 138.29310344827587 V 266 Z" fill="#eb6834"></path>
+        <text x="424" y="279.0" class="secnum">2</text>
+        <rect x="130" y="264" width="338" height="32" fill="transparent" class="rowhit"></rect>
+      </g>
+          </svg>
+          <div class="tooltip" id="tip"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">Source: this paper, Table 1 (candidate pool and sampled sites by CISA sector, n = 98 of 1,814 pool).</div>
+</div>
+
+<script>
+  const tip = document.getElementById('tip');
+  const wrap = document.getElementById('chartWrap');
+  document.querySelectorAll('.srow').forEach(function(g) {
+    function show(e) {
+      const sector = g.getAttribute('data-sector');
+      const pool = g.getAttribute('data-pool');
+      const sampled = g.getAttribute('data-sampled');
+      const pk = g.getAttribute('data-pk');
+      const cdn = g.getAttribute('data-cdn');
+      const abr = g.getAttribute('data-abr');
+      tip.innerHTML = '<b>' + sector + '</b><br>Pool ' + pool + ' &middot; sampled ' + sampled +
+        '<br><span class="brk">PK ' + pk + ' &middot; CDN ' + cdn + ' &middot; Abroad ' + abr + '</span>';
+      const wrapRect = wrap.getBoundingClientRect();
+      const hitRect = g.querySelector('.rowhit');
+      const svg = g.closest('svg');
+      const pt = svg.createSVGPoint();
+      pt.x = parseFloat(hitRect.getAttribute('x'));
+      pt.y = parseFloat(hitRect.getAttribute('y'));
+      const screenPt = pt.matrixTransform(svg.getScreenCTM());
+      tip.style.left = (screenPt.x - wrapRect.left) + 'px';
+      tip.style.top = (screenPt.y - wrapRect.top) + 'px';
+      tip.classList.add('show');
+    }
+    function hide() { tip.classList.remove('show'); }
+    g.addEventListener('mouseenter', show);
+    g.addEventListener('mouseleave', hide);
+    g.addEventListener('focus', show);
+    g.addEventListener('blur', hide);
+  });
+</script>
