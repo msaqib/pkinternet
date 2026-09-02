@@ -1,16 +1,18 @@
 import puppeteer from "puppeteer";
 import PuppeteerHar from "puppeteer-har";
 
-const [, , url, outFile] = process.argv;
+const [, , url, outFile, proxy] = process.argv;
 
 if (!url || !outFile) {
-    console.error("Usage: node capture-har.mjs <url> <output.har>");
+    console.error("Usage: node capture-har.mjs <url> <output.har> [socks5://127.0.0.1:1080]");
     process.exit(1);
 }
 
 const target = /^https?:\/\//i.test(url) ? url : `https://${url}`;
 
-const browser = await puppeteer.launch();
+const browser = await puppeteer.launch(
+    proxy ? { args: [`--proxy-server=${proxy}`] } : {}
+);
 const page = await browser.newPage();
 const har = new PuppeteerHar(page);
 

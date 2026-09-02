@@ -1,0 +1,62 @@
+[
+  {
+    "url": "https://pesconlinebill.pk/",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "DYNAMIC"
+      ]
+    },
+    "responseHeaders": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "a34d4b04fad8c570-MRS",
+      "content-encoding": "zstd",
+      "content-type": "text/html; charset=UTF-8",
+      "date": "Wed, 02 Sep 2026 14:44:30 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=aRmbrmQvt8%2FTyF8tij83uCJeoKj69ID9Sd%2Bq1NFL6Xn23Mvlb%2B4aDn%2FwNvMqdFGJRUWm4SbbwZ%2FHRiUwEe4fnjXQu2TbVDP0dUZEP4ieq%2BlsYPOKW6LhFSFJv2WnbbM%2BQoJv9ytNiwX428C%2FwOGUkg%3D%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfCacheStatus;desc=\"DYNAMIC\"\ncfEdge;dur=11,cfOrigin;dur=938",
+      "vary": "Accept-Encoding"
+    }
+  },
+  {
+    "url": "https://pesconlinebill.pk/favicon.ico",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "private, no-cache, no-store, must-revalidate, max-age=0",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "content-encoding": "zstd",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GowN2r5zkKpjkNRcIqwSp6jpbabZv19pyqjuJpVvJJlcEZwNgxu%2FL3kKoPLcr6Ih5lgy05fk1rhF5BIWi4cHcxzcesKc5osLT9H%2BW1xkxsgGF0xJ2ZpkMRX8ayOB2j%2Brl9VWDwxEpygHvUvCmZOENA%3D%3D\"}]}",
+      "cf-ray": "a34d4b0ccaf9c570-MRS",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 14:44:30 GMT",
+      "content-type": "text/html",
+      "server": "cloudflare"
+    }
+  }
+]

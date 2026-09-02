@@ -66,3 +66,45 @@ direct answer from them):
 - As elsewhere in this investigation, an AS-path in BGP is the *announced* route; it
   doesn't prove what fraction of actual customer traffic uses it vs. some other
   mechanism.
+
+## Important correction (2026-09-02): the "0" for Cybernet's own core block is very
+## likely a visibility gap, not evidence of no domestic peering
+
+**`124.29.240.0/24` showing 0 domestic peers in this BGP check directly contradicts our
+own traceroute data**, and the traceroute data should win. That block contains
+`124.29.240.218`, the exact router 8 of the 9 live RIPE Atlas probes (Cybernet, PERN,
+Nayatel x2, TES, Nova, Z-Com) reached *domestically*, no international hop involved, in
+this session's own live measurements. Real packets, sent from real Pakistani networks,
+proving domestic reachability, directly contradicts a BGP check claiming "0 domestic
+peers" for the block containing that exact IP.
+
+The resolution: **RIS and RouteViews only see BGP announcements from networks that
+directly peer with their own collectors, which are overwhelmingly large international
+carriers.** Small, domestic-only Pakistani ISPs (Nayatel, Nova, TES, PERN, Z-Com) mostly
+never plug into an RIS/RouteViews collector at all, so a real, working, purely-domestic
+route between two Pakistani networks can be completely invisible to these archives, not
+because it doesn't exist, but because nothing RIS is listening to happens to relay it.
+PTCL is the outlier in this dataset precisely because it's large enough that
+internationally-visible networks are likely to see a path running through it somewhere;
+smaller Pakistani ISPs essentially never get that kind of incidental visibility.
+
+**This means "0 domestic peers visible via RIS looking-glass" should be read as "no
+domestic peer visible from RIS's vantage points," not "no domestic peer exists."** For
+`124.29.240.0/24` specifically, we know the stronger claim is false, traceroute already
+disproved it. The three "0" rows in the table above (`124.29.240.0/24`, `175.107.204.0/24`,
+`153.117.0.0/16`) should be read with this limitation in mind; only `124.29.240.0/24` has
+been directly traceroute-checked (and shown to be domestically reachable via multiple
+ISPs), the other two "0" rows are unverified either way.
+
+**EFU Life's own finding is not weakened by this**, and it's worth being clear why: unlike
+this prefix-scope check, the EFU Life hairpin was established from *traceroute ground
+truth itself* (PTCL's own measured packets physically leaving the country), not inferred
+from BGP looking-glass visibility. Multiple independent vantage points (RIPE Atlas
+probes and Globalping probes, 5+ distinct ISPs) all converge on the identical single
+Cybernet hop with no alternate entry point ever observed, that is real, data-plane
+evidence of single-homing, not a BGP visibility artifact. The BGP check (RIS event
+history + RouteViews snapshots) *additionally* confirms this from the control-plane side,
+and the two independent evidence types agreeing is what makes the EFU Life finding solid.
+It's specifically the *prefix-scope* extension (checking other Cybernet blocks via BGP
+alone, with no traceroute cross-check) that turned out to be less reliable than presented,
+now corrected here.

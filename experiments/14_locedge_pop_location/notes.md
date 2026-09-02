@@ -72,10 +72,9 @@ not yet done.
 ## Next steps
 
 1. Run `run-batch.mjs` from here (Cybernet/Lahore) as one data point.
-2. Test that `npm i puppeteer puppeteer-har` actually installs and launches
-   on one Raspberry Pi (ARM) before assuming it scales to all of them —
-   Chromium is a much heavier dependency than the curl/dig-based scripts in
-   `08_CDN`/`10_local_cdn_reach`.
+2. ~~Test that `npm i puppeteer puppeteer-har` actually installs and
+   launches on one Raspberry Pi (ARM)~~ **done, 2026-09-02, see below —
+   partial success, one real blocker found.**
 3. If it runs cleanly on one Pi, repeat the batch across however many raslas
    Pis are online, keyed by ISP, and diff `pop`/`location` per site per ISP
    — same shape as `cloudflare_colo_confirmed.md`'s table, generalized past
@@ -84,6 +83,74 @@ not yet done.
    routed to (and whether it's a local cache hit) varies by ISP, the way
    `ajk.gov.pk` already did for Cloudflare (KHI/SIN split by ISP; PTCL alone
    routed to MCT).
+
+## Raspberry Pi test (raslas-01, 2026-09-02)
+
+Answering the open question from Dr. Ilyas's post directly: **partial
+success.** Puppeteer/Chromium is installable and Chromium itself runs on
+the Pi's ARM64, but headless navigation to a real HTTPS site currently
+hangs. Not yet a green light for the multi-Pi run.
+
+**What works:**
+- `raslas-01`/`02`/`04`/`05` all reachable now over the existing Tailscale
+  mesh (`msaqib@`), same nodes as `cloudflare_colo_confirmed.md`.
+- Puppeteer's own bundled-Chromium download doesn't support Linux/ARM64 at
+  all — moot here anyway, because **`/usr/bin/chromium` (v147) is already
+  installed** as part of the Pi's OS image. Used `puppeteer-core` (no
+  bundled browser) pointed at it via `executablePath`, so nothing needs to
+  be downloaded.
+- Installed a standalone Node v20.19.2 arm64 build into `~/nodejs` (24MB
+  download, 168MB unpacked) rather than Debian's `nodejs`/`npm` apt
+  packages, which pull in several hundred tiny `node-*` stub packages —
+  a bad fit for an **8GB SD card sitting at 91% full with only ~590MB free
+  to begin with.**
+- `npm i puppeteer-core puppeteer-har` → 107 packages, 61MB, 46s, once two
+  environment problems (below) were worked around.
+- Chromium launches and renders fine for a local page
+  (`chromium --headless=new ... about:blank` → clean DOM, instant).
+
+**Two distinct problems found and fixed along the way:**
+1. **Node's own networking hangs indefinitely** on any HTTPS request
+   (`npm install`, plain `https.get`) — traced to Node 20's Happy-Eyeballs
+   dual-stack connection logic (`autoSelectFamily`, on by default in Node
+   20) stalling against this Pi's network, which has no usable IPv6 route
+   (`curl -6` to any external host returns nothing, no fast failure).
+   **Fix:** `NODE_OPTIONS="--no-network-family-autoselection --dns-result-order=ipv4first"`.
+2. **`puppeteer-core`'s postinstall (`install.mjs`) still attempted a
+   browser download** despite not needing one, and briefly ran the SD card
+   to **100% full** before getting killed — genuinely risky on a Pi this
+   short on space, since it could affect whatever else this Pi runs.
+   **Fix:** `PUPPETEER_SKIP_DOWNLOAD=true` before `npm i`. Cleaned up
+   afterward (`rm -rf ~/.cache/puppeteer`); disk settled at 274MB free.
+
+**The unresolved blocker:** Chromium itself (invoked directly, no
+Puppeteer) hangs indefinitely (20s+, no output) navigating to a real
+external HTTPS site (`https://example.com`), even after: `--headless=new`,
+`--disable-background-networking`, `--disable-component-update`,
+`--disable-sync`, `--dns-over-https-mode=off`, and forcing DNS via
+`--host-resolver-rules="MAP example.com <literal IPv4>"` (which bypasses
+DNS for the target entirely). One `ss -tnp` snapshot mid-hang caught
+Chromium connected to a Google IP unrelated to the target site (likely
+some background service call independent of the disable flags tried), but
+disabling more of Chromome's background networking didn't fix it, and with
+`--host-resolver-rules` added, the process stopped opening **any**
+connection at all before the timeout. Root cause not yet isolated — could
+be the same IPv6 stack issue as Node's (Chromium has its own independent
+network stack, so Node's fix doesn't carry over), or something about how
+this Pi's firewall/DPI treats headless Chrome's traffic differently from
+`curl`. No stray processes or disk left behind; the Pi was left clean.
+
+**Bottom line for Dr. Ilyas:** the Pi has enough RAM (7.6GB) and CPU
+headroom, and does not need Puppeteer's own Chromium download since the OS
+image already ships one — but **disk space is a real constraint** (start
+around 90%+ full on an 8GB card before installing anything) and **headless
+Chromium's actual page navigation is currently broken on this Pi's network
+path**, independently of the Node-level networking bug already fixed. This
+needs to be resolved before a multi-Pi comparison is worth running; the
+Node fix does not carry over to Chromium since they have separate network
+stacks. Next: try `chromium --headless=new` in verbose/network-logging mode
+(`--enable-logging --v=1` or `--log-net-log=netlog.json`) to see exactly
+which host it's stuck contacting.
 
 ## Setup
 

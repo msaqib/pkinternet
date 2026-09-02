@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EFU Life Investigation</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --text: #eef0f4;
+    --muted: #9aa3b2;
+    --accent: #5fb4ff;
+    --good: #4caf7d;
+    --bad: #e5636b;
+    --border: #2a2f3a;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    overflow: hidden;
+  }
+  .deck { position: relative; width: 100vw; height: 100vh; }
+  section.slide {
+    position: absolute; inset: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6vh 8vw;
+  }
+  section.slide.active { display: flex; }
+  h1 { font-size: 2.4rem; margin: 0 0 0.3em 0; }
+  h2 { font-size: 2rem; margin: 0 0 0.6em 0; color: var(--accent); }
+  h3 { font-size: 1.3rem; margin: 1.2em 0 0.4em 0; color: var(--muted); font-weight: 600; }
+  p, li { font-size: 1.15rem; line-height: 1.5; }
+  .subtitle { color: var(--muted); font-size: 1.3rem; margin-top: 0.2em; }
+  .kicker { color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.6em; }
+  ul { padding-left: 1.2em; }
+  li { margin-bottom: 0.5em; }
+  table { border-collapse: collapse; width: 100%; margin-top: 0.5em; font-size: 1.05rem; }
+  th, td { text-align: left; padding: 0.5em 0.8em; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: 0.95rem; }
+  .tag { display: inline-block; padding: 0.15em 0.6em; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
+  .tag.good { background: rgba(76,175,125,0.15); color: var(--good); }
+  .tag.bad { background: rgba(229,99,107,0.15); color: var(--bad); }
+  .tag.warn { background: rgba(95,180,255,0.15); color: var(--accent); }
+  .big-stat { font-size: 4rem; font-weight: 700; color: var(--accent); line-height: 1; }
+  .big-stat + .stat-label { color: var(--muted); font-size: 1.2rem; margin-top: 0.3em; }
+  .stat-row { display: flex; gap: 4em; margin-top: 0.8em; }
+  code { background: var(--panel); padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.95em; border: 1px solid var(--border); }
+  pre { background: var(--panel); border: 1px solid var(--border); border-radius: 6px; padding: 1em; font-size: 1rem; overflow-x: auto; }
+  .path { color: var(--muted); font-size: 1.05rem; }
+  .path b { color: var(--text); }
+  .note { color: var(--muted); font-size: 0.95rem; margin-top: 1em; border-left: 3px solid var(--border); padding-left: 0.8em; }
+  .progress { position: fixed; bottom: 0; left: 0; height: 4px; background: var(--accent); transition: width 0.2s; }
+  .slidenum { position: fixed; bottom: 14px; right: 20px; color: var(--muted); font-size: 0.9rem; }
+  .hint { position: fixed; bottom: 14px; left: 20px; color: var(--muted); font-size: 0.85rem; }
+  .two-col { display: flex; gap: 3em; }
+  .two-col > div { flex: 1; }
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <section class="slide active">
+    <div class="kicker">Exp 13 &middot; Live Investigation</div>
+    <h1>EFU Life: One Door, Everyone Else Flies Abroad</h1>
+    <p class="subtitle">Re-checking the tromboning case study live, and testing Cybernet's claimed July 27 fix</p>
+    <p class="note">efulife.com &middot; AS141008 &middot; hosted in Karachi, single-homed to Cybernet (AS9541)</p>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">Background</div>
+    <h2>Why this site</h2>
+    <ul>
+      <li>Dr. Saqib flagged EFU Life as unusual: routing "trombones" from different ISPs, and is sometimes local</li>
+      <li>An earlier case study (Exp 07 panel data) found every ISP funnels through <b>one</b> Cybernet hop, no matter the route</li>
+      <li>Task: re-check this <b>live</b>, right now, with every currently-connected probe</li>
+      <li>Second task: Cybernet claims it fixed the routing on <b>July 27, 2026</b>. Check RIS and RouteViews for whether that's true</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">Method, part 1</div>
+    <h2>Live traceroute snapshot</h2>
+    <ul>
+      <li>Discovered every RIPE Atlas probe currently Connected with <code>country_code=PK</code></li>
+      <li>16 live probes found &rarr; one one-off traceroute each, to <code>efulife.com</code> (103.154.196.33)</li>
+      <li>9 of 16 returned results (7 failed on RIPE's side, a known live-discovery limitation)</li>
+      <li>Complemented with Globalping: 7 more Pakistani ISPs, none overlapping the RIPE roster except PTCL/Nayatel</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">Finding 1</div>
+    <h2>Every reachable probe hits the same door</h2>
+    <table>
+      <tr><th>Probe / ISP</th><th>max RTT</th><th>Path</th></tr>
+      <tr><td>Cybernet</td><td>23.8 ms</td><td><span class="tag good">domestic</span></td></tr>
+      <tr><td>PERN</td><td>24.4 ms</td><td><span class="tag good">domestic</span></td></tr>
+      <tr><td>Nayatel &times;2</td><td>25.9 / 26.0 ms</td><td><span class="tag good">domestic</span></td></tr>
+      <tr><td>TES</td><td>48.3 ms</td><td><span class="tag good">domestic</span></td></tr>
+      <tr><td>Nova</td><td>56.8 ms</td><td><span class="tag good">domestic</span></td></tr>
+      <tr><td>Z-Com</td><td>100.9 ms</td><td><span class="tag good">domestic</span>, slow</td></tr>
+      <tr><td>PTCL (Karachi)</td><td>203.2 ms</td><td><span class="tag bad">leaves the country</span></td></tr>
+      <tr><td>PTCL (Lahore)</td><td>no reply</td><td>known ICMP-filtered probe</td></tr>
+    </table>
+    <p class="note">Every single reachable trace, domestic or not, passes through <code>124.29.240.218</code> immediately before EFU Life. No exceptions, live, today.</p>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">Finding 2</div>
+    <h2>Globalping: it's not just PTCL</h2>
+    <table>
+      <tr><th>ISP</th><th>City</th><th>max RTT</th><th>Path</th></tr>
+      <tr><td>Sharp Telecom</td><td>Karachi</td><td><b>4.6 ms</b></td><td><span class="tag good">domestic</span> &mdash; fastest of the whole investigation</td></tr>
+      <tr><td>LEAP DIGITALS</td><td>Arifwala</td><td>43.5 ms</td><td><span class="tag good">domestic</span></td></tr>
+      <tr><td>IN CABLE INTERNET</td><td>Lahore</td><td>109.2 ms</td><td><span class="tag bad">hairpin</span></td></tr>
+      <tr><td>Fariya Networks</td><td>Karachi</td><td>120.5 ms</td><td><span class="tag bad">hairpin</span></td></tr>
+      <tr><td>FASTTEL BROADBAND</td><td>Rawalpindi</td><td>121.4 ms</td><td><span class="tag bad">hairpin</span></td></tr>
+      <tr><td>PTCL</td><td>Lahore</td><td>125.4 ms</td><td><span class="tag bad">hairpin</span></td></tr>
+      <tr><td>Nayatel</td><td>Islamabad</td><td>113.4 ms</td><td><span class="tag warn">domestic, but slow</span> &mdash; unexplained</td></tr>
+    </table>
+    <p class="note">4 of 7 ISPs hairpin through the identical GSL Singapore &rarr; Omantel chain. 3 of those 4 have no RIPE Atlas presence in this project at all, this is new.</p>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">Methodology detour</div>
+    <h2>Don't trust a "country" label</h2>
+    <ul>
+      <li>Three hops on PTCL's path were originally labeled Muscat, Los Angeles, and UAE</li>
+      <li>Checked each one's own reverse-DNS hostname and its real neighbors</li>
+      <li><b>Muscat</b>, retracted: the neighbors in that block span Ashburn, Adelaide, Seattle, Phoenix</li>
+      <li><b>Los Angeles</b>, retracted: never a PTR finding at all, an unverified geolocation-database guess</li>
+      <li><b>Singapore</b>, held up: its own hostname confirms it, unchanged from July to today</li>
+      <li><b>UAE &rarr; Oman</b>: RIPE's own registration record says <code>country: OM</code> directly. City still unconfirmed, not Muscat</li>
+    </ul>
+    <p class="note">Lesson: an ASN's registered country is paperwork about the company, not proof of where a router physically sits. Only a descriptive hostname on the exact IP, or the registry's own field, counts as evidence.</p>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">The July 27 question</div>
+    <h2>Did Cybernet's claimed fix actually happen?</h2>
+    <div class="two-col">
+      <div>
+        <h3>RIS (RIPE's BGP archive)</h3>
+        <ul>
+          <li>4,342 announcement events, July 1 &ndash; Aug 15</li>
+          <li>Every path ends <code>..., 9541, 141008</code>, before and after</li>
+          <li>No Pakistani ISP newly appears as a Cybernet peer around the date</li>
+        </ul>
+      </div>
+      <div>
+        <h3>RouteViews (independent archive)</h3>
+        <ul>
+          <li>Full routing snapshots, July 20 vs Aug 3</li>
+          <li>All 17 distinct paths seen: <b>byte-for-byte identical</b></li>
+          <li>Installed <code>bgpdump</code>, parsed raw MRT files directly</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Two independent archives agree: nothing changed. And live measurement today (Sept 1-2) still shows the same hairpin, five weeks later.</p>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">One real change found</div>
+    <h2>Something did change, just not this</h2>
+    <p class="path">Before July 27: GSL Networks had a <b>direct</b> peering session with Cybernet.</p>
+    <p class="path">After July 27: that direct session is gone. The <b>indirect</b> route (GSL &rarr; Omantel &rarr; Cybernet) is unchanged.</p>
+    <p style="margin-top:1em;">A real, specific infrastructure change, an international backbone adjustment between Cybernet and GSL. Not a domestic fix. Doesn't help any Pakistani ISP.</p>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">Why is PTCL slower now than in July?</div>
+    <h2>119ms &rarr; 203ms, same path, one exact spot</h2>
+    <pre>hop 7  Singapore    119.2 &rarr; 85.2 ms   (got FASTER)
+hop 8  GSL, unknown 112.8 &rarr; 194.6 ms  (+82ms, THE jump)
+hop 10 Omantel      114.1 &rarr; 197.6 ms  (stays elevated)</pre>
+    <p>Everything before this hop got faster. Everything after carries the same +83&ndash;91ms offset. The BGP path is proven identical, so this isn't a route change, it's the same announced path landing on different physical hardware at one specific, identity-unstable address.</p>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">Scoping the problem</div>
+    <h2>Is this EFU-specific, or Cybernet-wide?</h2>
+    <ul>
+      <li>EFU Life isn't technically "a Cybernet prefix", it has its own ASN (141008), Cybernet is only its transit</li>
+      <li>Checked Cybernet's own 957 announced blocks (customers without their own ASN) instead</li>
+      <li>First spot-check (5 blocks): 3 showed zero domestic peering, 2 showed heavy PTCL peering</li>
+      <li>But one of the "zero" blocks contains the gatekeeper IP itself, which <b>8 of 9 probes reached domestically</b></li>
+    </ul>
+    <p class="note tag warn" style="display:block; padding:0.6em;">Contradiction caught: BGP said "no domestic peer," traceroute proved otherwise. Resolution next slide.</p>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">Important correction</div>
+    <h2>BGP archives have a blind spot</h2>
+    <p>RIS and RouteViews only hear announcements from networks that peer directly with their own collectors, mostly large international carriers.</p>
+    <p>A small, domestic-only Pakistani ISP can have a perfectly real link to Cybernet that never touches anything RIS is listening to. Invisible, not nonexistent.</p>
+    <p>PTCL shows up because it's large enough that some internationally-visible network likely sees a path through it. Smaller ISPs mostly can't get that visibility, regardless of how real their domestic link is.</p>
+    <p class="note">EFU Life's own finding is unaffected: it comes from traceroute ground truth (real packets from many ISPs, all converging on one hop), not from BGP visibility alone.</p>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">The full census</div>
+    <h2>952 of Cybernet's blocks, checked</h2>
+    <div class="stat-row">
+      <div>
+        <div class="big-stat">30.6%</div>
+        <div class="stat-label">of blocks (291 of 952) show a Pakistani ISP directly upstream of Cybernet</div>
+      </div>
+      <div>
+        <div class="big-stat">100%</div>
+        <div class="stat-label">of that 30.6% is PTCL. No other Pakistani ISP ever appeared</div>
+      </div>
+    </div>
+    <p class="note">Read with the visibility-gap caveat: 291 is a floor, not a ceiling, small domestic-only peers could still exist among the other 69.4% and simply not be visible to RIS/RouteViews.</p>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">Where things stand</div>
+    <h2>Summary</h2>
+    <ul>
+      <li>EFU Life is single-homed to Cybernet, confirmed by both traceroute (data plane) and BGP (control plane)</li>
+      <li>Non-Cybernet ISPs reach it only via an international hairpin through GSL Networks (Singapore) and a Zain Omantel block (Oman)</li>
+      <li>That pattern isn't PTCL-specific: 4 of 7 Globalping-checked ISPs show the identical chain</li>
+      <li>No evidence in RIS or RouteViews that Cybernet's claimed July 27 fix changed anything</li>
+      <li>Cybernet does peer domestically with PTCL for a real share of its own address space (roughly 31% of blocks checked), just not for EFU Life's</li>
+      <li>Several city-level geolocation claims from the earlier write-up didn't survive re-verification and were corrected</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">Open questions</div>
+    <h2>What's still unresolved</h2>
+    <ul>
+      <li>Why does EFU Life's block, and Cybernet's own core block, fall outside the PTCL peering session while other blocks don't?</li>
+      <li>Is that a deliberate filter, a commercial tier distinction, or historical inconsistency?</li>
+      <li>What's actually behind Nayatel's unexplained slow-but-domestic Globalping reading?</li>
+      <li>Worth extending the RouteViews check to its other collectors, only one was used here</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">Reference</div>
+    <h2>Where everything lives</h2>
+    <ul>
+      <li><code>experiments/13_efulife_live_snapshot/</code> &mdash; live snapshot script, results, all write-ups</li>
+      <li><code>bgp_july27_investigation.md</code>, <code>cybernet_prefix_scope_check.md</code>, <code>nine_probe_snapshot_summary.md</code></li>
+      <li><code>cybernet_prefix_census.py</code> &mdash; reusable script for the 957-block check</li>
+      <li><code>edits/</code> &mdash; every correction made to prior project files, logged with before/after and reasoning</li>
+    </ul>
+  </section>
+
+</div>
+<div class="progress" id="progress"></div>
+<div class="slidenum" id="slidenum"></div>
+<div class="hint">&larr; &rarr; or click to navigate</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let i = 0;
+  function show(n) {
+    slides[i].classList.remove('active');
+    i = (n + slides.length) % slides.length;
+    slides[i].classList.add('active');
+    document.getElementById('progress').style.width = ((i+1)/slides.length*100) + '%';
+    document.getElementById('slidenum').textContent = (i+1) + ' / ' + slides.length;
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') show(i+1);
+    if (e.key === 'ArrowLeft') show(i-1);
+  });
+  document.getElementById('deck').addEventListener('click', e => {
+    const rect = document.getElementById('deck').getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    show(x > rect.width/2 ? i+1 : i-1);
+  });
+  show(0);
+</script>
+</body>
+</html>
