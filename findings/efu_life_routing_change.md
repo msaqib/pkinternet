@@ -298,8 +298,37 @@ exactly the failure mode `experiment_10/10.3` was built to catch.
 
 # METHODS — exactly which data calls were used
 
-Everything below is **RIPEstat**, which is RIPE NCC's query layer over their **RIS (Routing
-Information Service)** route-collector fleet. All free, no API key, no rate limit hit.
+## First, the three names — they are not three sources
+
+| Name | What it actually is |
+|---|---|
+| **RIPE RIS** | The real thing — a network of machines that record the internet's routing. Run by RIPE NCC in Amsterdam. |
+| **RIPEstat** | Just the website/API used to *ask RIS questions*. **Same data, easier access.** Not a separate source. |
+| **RouteViews** | A **completely separate** collector network doing the same job, run by the University of Oregon. |
+
+**Every number in this investigation came from RIS**, queried through RIPEstat. RouteViews was used
+once, for a single check.
+
+RIS and RouteViews do the same job; the only difference is **who volunteers to feed them**:
+
+| | RIPE RIS | RouteViews |
+|---|---|---|
+| Networks feeding it | ~1,434 | ~1,918 |
+| **Pakistani networks feeding it** | **1 — PTCL** | **0** |
+
+A network may feed one, both, or neither, so they are two independent samples of the same thing.
+
+**What RIS answered:** is EFU Life single-homed · was the prefix ever withdrawn · which upstream
+carried it before vs after · is it RPKI-valid · who owns each hop address.
+
+**What RouteViews answered, once:** *is any Pakistani network feeding a collector at all?* This
+mattered because the claim being made was "no Pakistani network is visible in BGP" — checking only
+RIS would have left that half-verified. RouteViews has zero Pakistani peers, so the claim holds
+across both fleets, which is what the task card meant by "check RIS and RouteViews."
+
+
+
+All free, no API key, no rate limit hit.
 
 ## The BGP comparison
 
