@@ -1,0 +1,191 @@
+Readable routes  —  pk_grouped_efulife_20260901_214922.csv
+9 traceroutes  ·  destination shown once per block (in the DEST header)
+
+==============================================================================
+ efulife.com   —   efulife  (Financial Services (n=1 case study))
+ SOURCE   probe 7613 · Z-Com (AS152605) · zcom.7613
+ DEST     103.154.196.33 · EFU LIFE Assurance Ltd (AS141008) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      6.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.252.102     —         TWA (PK)  [registry]
+    4      *     (no response)     
+    5    100.9   192.168.76.193     —         (private/internal)
+    6     93.0   192.168.200.38     —         (private/internal)
+    7     94.7   10.15.64.114       —         (private/internal)
+    8     94.0   124.29.240.218     AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    9     94.8   103.154.196.31     AS141008  EFU LIFE Assurance Ltd (PK)
+   10     92.7   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+   11     93.4   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+
+==============================================================================
+ efulife.com   —   efulife  (Financial Services (n=1 case study))
+ SOURCE   probe 7764 · PTCL (AS17557) · ptcl.7764
+ DEST     103.154.196.33 · EFU LIFE Assurance Ltd (AS141008) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   203.135.63.1       AS17557   Pakistan Telecommunication Company Limited (PK)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ efulife.com   —   efulife  (Financial Services (n=1 case study))
+ SOURCE   probe 60223 · Nayatel (AS23674) · nayatel.60223
+ DEST     103.154.196.33 · EFU LIFE Assurance Ltd (AS141008) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.18.1       —         (private/internal)
+    2      2.8   100.89.32.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.2   172.27.0.29        —         (private/internal)
+    4      2.5   172.27.0.22        —         (private/internal)
+    5      2.9   172.31.5.170       —         (private/internal)
+    6      2.7   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.5   110.93.253.110     —         TWA (PK)  [registry]
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12     24.2   124.29.240.218     AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+   13     24.7   103.154.196.31     AS141008  EFU LIFE Assurance Ltd (PK)
+   14     25.9   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+   15     24.8   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+
+==============================================================================
+ efulife.com   —   efulife  (Financial Services (n=1 case study))
+ SOURCE   probe 62224 · PERN (AS45773) · pern.62224
+ DEST     103.154.196.33 · EFU LIFE Assurance Ltd (AS141008) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   10.102.76.1        —         (private/internal)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     24.4   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+
+==============================================================================
+ efulife.com   —   efulife  (Financial Services (n=1 case study))
+ SOURCE   probe 64078 · AS135407 · tes.64078
+ DEST     103.154.196.33 · EFU LIFE Assurance Ltd (AS141008) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.101.1      —         (private/internal)
+    2      1.6   192.168.18.1       —         (private/internal)
+    3      3.9   45.249.11.241      AS135407  Trans World Enterprise Services (Private) Limited (PK)
+    4      3.7   119.63.137.130     —         TWA (PK)  [registry]
+    5     23.5   110.93.253.110     —         TWA (PK)  [registry]
+    6     25.8   119.63.137.61      —         TWA (PK)  [registry]
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10     26.5   124.29.240.218     AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+   11     26.7   103.154.196.31     AS141008  EFU LIFE Assurance Ltd (PK)
+   12     48.3   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+   13     26.4   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+
+==============================================================================
+ efulife.com   —   efulife  (Financial Services (n=1 case study))
+ SOURCE   probe 65761 · Cybernet (AS9541) · cybernet.65761
+ DEST     103.154.196.33 · EFU LIFE Assurance Ltd (AS141008) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.0.1        —         (private/internal)
+    2      6.7   192.168.1.1        —         (private/internal)
+    3     18.4   10.15.234.230      —         (private/internal)
+    4      3.1   10.15.248.89       —         (private/internal)
+    5     13.2   10.15.248.177      —         (private/internal)
+    6      3.0   10.15.248.129      —         (private/internal)
+    7     19.7   192.168.200.229    —         (private/internal)
+    8     19.3   192.168.200.38     —         (private/internal)
+    9     19.6   10.15.64.114       —         (private/internal)
+   10     19.7   124.29.240.218     AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+   11     20.5   103.154.196.31     AS141008  EFU LIFE Assurance Ltd (PK)
+   12     23.8   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+   13     20.0   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+
+==============================================================================
+ efulife.com   —   efulife  (Financial Services (n=1 case study))
+ SOURCE   probe 65892 · Nayatel (AS23674) · nayatel.65892
+ DEST     103.154.196.33 · EFU LIFE Assurance Ltd (AS141008) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.5   192.168.18.1       —         (private/internal)
+    2      6.3   100.114.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.4   172.27.0.53        —         (private/internal)
+    4      3.4   172.16.90.245      —         (private/internal)
+    5      3.7   172.31.5.206       —         (private/internal)
+    6      3.6   172.31.5.170       —         (private/internal)
+    7      4.0   110.93.202.134     —         TWA (PK)  [registry]
+    8     23.5   110.93.253.110     —         TWA (PK)  [registry]
+    9     25.3   119.63.137.61      —         TWA (PK)  [registry]
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13     25.9   124.29.240.218     AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+   14     25.6   103.154.196.31     AS141008  EFU LIFE Assurance Ltd (PK)
+   15     26.0   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+   16     25.4   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+
+==============================================================================
+ efulife.com   —   efulife  (Financial Services (n=1 case study))
+ SOURCE   probe 1015679 · AS136174 · nova.1015679
+ DEST     103.154.196.33 · EFU LIFE Assurance Ltd (AS141008) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      3.2   192.168.100.1      —         (private/internal)
+    2      9.1   70.70.81.9         AS6327    Shaw Communications (CA)
+    3      9.6   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     35.0   110.93.254.66      —         TWA (PK)  [registry]
+    5      *     (no response)     
+    6     48.0   192.168.76.189     —         (private/internal)
+    7     29.3   192.168.200.34     —         (private/internal)
+    8     35.0   10.15.64.114       —         (private/internal)
+    9     47.4   124.29.240.218     AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+   10     48.3   103.154.196.31     AS141008  EFU LIFE Assurance Ltd (PK)
+   11     56.8   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+   12     55.5   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+
+==============================================================================
+ efulife.com   —   efulife  (Financial Services (n=1 case study))
+ SOURCE   probe 1016126 · PTCL (AS17557) · ptcl.1016126
+ DEST     103.154.196.33 · EFU LIFE Assurance Ltd (AS141008) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.10.1       —         (private/internal)
+    2      8.5   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3      8.7   10.253.5.94        —         (private/internal)
+    4      9.1   10.253.4.40        —         (private/internal)
+    5      9.3   10.253.4.2         —         (private/internal)
+    6     90.0   206.148.27.235     AS7578    Global Secure Layer (US)
+    7     85.2   206.148.22.141     AS7578    Global Secure Layer (US)
+    8    194.6   160.202.164.165    AS137409  GSL Networks Pty LTD (NZ)
+    9      *     (no response)     
+   10    197.6   213.202.6.194      AS8529    Zain Omantel International FZ-LLC (AE)
+   11    199.0   213.202.6.202      AS8529    Zain Omantel International FZ-LLC (AE)
+   12    203.2   134.0.219.250      AS8529    Zain Omantel International FZ-LLC (AE)
+   13    202.1   213.202.7.209      AS8529    Zain Omantel International FZ-LLC (AE)
+   14     88.3   192.168.5.37       —         (private/internal)
+   15     87.7   192.168.4.58       —         (private/internal)
+   16    104.8   192.168.200.38     —         (private/internal)
+   17     88.3   10.15.64.114       —         (private/internal)
+   18     88.7   124.29.240.218     AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+   19     89.0   103.154.196.31     AS141008  EFU LIFE Assurance Ltd (PK)
+   20     89.9   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION
+   21     89.0   103.154.196.33     AS141008  EFU LIFE Assurance Ltd (PK)   <<< DESTINATION

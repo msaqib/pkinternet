@@ -1,0 +1,157 @@
+Trello task 04 — EFU Life (103.154.196.33) post-'fix' traceroutes
+Measured 2026-09-02. RIPE Atlas msm 207091280 (TCP/80 Paris traceroute) + 207091281 (ping).
+Pre-fix comparison: pkinternet/experiments/07_longitudinal_panel/analysis/case_study_efulife_cybernet_gatekeeper.md
+'<<< LEAVES PK' marks a hop geolocating outside Pakistan with RTT >= 40 ms.
+
+==============================================================================
+ Cybernet Karachi   probe 1016143   ping min = 5.175518 ms
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator
+    1      1.3   192.168.18.1     -         RFC1918
+    2      4.0   202.163.100.236  -         unannounced
+    3      4.0   10.15.15.122     -         RFC1918
+    4      *     (no response)
+    5      *     (no response)
+    6      5.3   10.15.64.114     -         RFC1918
+    7      *     (no response)
+    8      4.8   103.154.196.31   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+    9      *     (no response)
+   10      5.9   103.154.196.33   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+
+==============================================================================
+ Nova Lahore   probe 1015679   ping min = 20.417739 ms
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator
+    1      0.4   192.168.100.1    -         RFC1918
+    2      1.4   70.70.81.9       AS6327    SHAW - Shaw Communications
+    3      2.3   110.93.212.161   AS38193   TWA-AS-AP - Transworld Associates (Pvt.)
+    4     18.6   110.93.252.200   -         unannounced
+    5      *     (no response)
+    6     19.7   192.168.76.189   -         RFC1918
+    7        -   192.168.100.1    -         RFC1918
+    8     20.1   10.15.64.114     -         RFC1918
+    9     20.3   124.29.240.218   AS9541    CYBERNET-AP - Cyber Internet Services (P
+   10     19.9   103.154.196.31   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+   11      *     (no response)
+   12     21.4   103.154.196.33   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+
+==============================================================================
+ Transworld Lahore   probe 62224   ping min = 24.460446 ms
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator
+    1      0.9   10.102.76.1      -         RFC1918
+    2      0.8   172.25.3.14      -         RFC1918
+    3      *     (no response)
+    4    684.5   103.154.196.33   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+
+==============================================================================
+ Nayatel Islamabad   probe 60223   ping min = 25.02364 ms
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator
+    1      1.2   192.168.18.1     -         RFC1918
+    2      2.9   100.89.32.1      -         unannounced
+    3      *     (no response)
+    4      *     (no response)
+    5        -   192.168.18.1     -         RFC1918
+    6      *     (no response)
+    7      *     (no response)
+  255     25.5   103.154.196.33   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+
+==============================================================================
+ Cybernet Haripur   probe 1016036   ping min = 25.857831 ms
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator
+    1      0.7   192.168.1.1      -         RFC1918
+    2      2.1   203.101.189.254  AS9541    CYBERNET-AP - Cyber Internet Services (P
+    3      *     (no response)
+    4      *     (no response)
+    5     23.1   192.168.200.178  -         RFC1918
+    6     23.4   10.15.64.114     -         RFC1918
+    7     23.3   124.29.240.218   AS9541    CYBERNET-AP - Cyber Internet Services (P
+    8     23.9   103.154.196.31   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+    9      *     (no response)
+   10     24.5   103.154.196.33   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+
+==============================================================================
+ TES Rawalpindi   probe 64078   ping min = 26.546734 ms
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator
+    1      0.6   192.168.101.1    -         RFC1918
+    2      1.4   192.168.18.1     -         RFC1918
+    3      3.7   45.249.11.241    AS135407  TES-PL-AS-AP - Trans World Enterprise Se
+    4      3.8   119.63.137.130   -         unannounced
+    5     24.3   110.93.252.84    -         unannounced
+    6     27.7   119.63.137.61    -         unannounced
+    7      *     (no response)
+    8      *     (no response)
+    9      *     (no response)
+   10     25.4   124.29.240.218   AS9541    CYBERNET-AP - Cyber Internet Services (P
+   11     26.7   103.154.196.31   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+   12      *     (no response)
+   13     26.2   103.154.196.33   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+
+==============================================================================
+ Nayatel Islamabad-2   probe 65892   ping min = 26.623019 ms
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator
+    1      1.0   192.168.18.1     -         RFC1918
+    2      3.5   100.114.224.1    -         unannounced
+    3      *     (no response)
+    4      *     (no response)
+    5        -   192.168.18.1     -         RFC1918
+    6      *     (no response)
+    7      *     (no response)
+  255     26.4   103.154.196.33   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+
+==============================================================================
+ PTCL Karachi   probe 1016126   ping min = 88.7572 ms
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator
+    1      1.0   192.168.10.1     -         RFC1918
+    2      8.7   39.39.0.1        AS17557   PKTELECOM-AS-PK - Pakistan Telecommunica
+    3      8.3   10.253.5.98      -         RFC1918
+    4      8.9   10.253.4.124     -         RFC1918
+    5      *     (no response)
+    6     93.8   206.148.27.235   AS7578    GSL - Global Secure Layer   <<< LEAVES PK
+    7     89.0   206.148.22.141   AS7578    GSL - Global Secure Layer   <<< LEAVES PK
+    8     89.0   160.202.164.165  AS137409  GSLNETWORKS-AS-AP - GSL Networks Pty LTD   <<< LEAVES PK
+    9    194.7   213.202.6.226    AS8529    OMANTEL-AS Zain Omantel International FZ   <<< LEAVES PK
+   10    177.3   134.0.220.234    AS8529    OMANTEL-AS Zain Omantel International FZ   <<< LEAVES PK
+   11    169.5   213.202.7.209    AS8529    OMANTEL-AS Zain Omantel International FZ   <<< LEAVES PK
+   12     97.2   192.168.5.21     -         RFC1918
+   13     97.4   192.168.4.41     -         RFC1918
+   14     98.1   192.168.200.38   -         RFC1918
+   15     97.5   10.15.64.114     -         RFC1918
+   16     98.1   124.29.240.218   AS9541    CYBERNET-AP - Cyber Internet Services (P
+   17     98.5   103.154.196.31   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+   18      *     (no response)
+   19     98.7   103.154.196.33   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+
+==============================================================================
+ Z-Com Lahore   probe 7613   ping min = 92.718763 ms
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator
+    1      0.4   157.20.147.17    AS152605  ZCOMNETWORKS-AS-AP - Z COM NETWORKS
+    2      0.9   110.93.205.184   AS38193   TWA-AS-AP - Transworld Associates (Pvt.)
+    3     17.1   110.93.252.200   -         unannounced
+    4      *     (no response)
+    5     94.3   192.168.76.193   -         RFC1918
+    6      *     (no response)
+    7     94.0   10.15.64.114     -         RFC1918
+    8     94.4   124.29.240.218   AS9541    CYBERNET-AP - Cyber Internet Services (P
+    9     95.7   103.154.196.31   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+   10     94.6   103.154.196.33   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+   11     95.1   103.154.196.33   AS141008  EFULIFEAssuranceLtd-AS-AP - EFU LIFE Ass
+
+==============================================================================
+ PTCL Lahore   probe 7764   ping min = no reply ms
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator
+    1      1.0   203.135.63.1     AS17557   PKTELECOM-AS-PK - Pakistan Telecommunica
+    2      0.5   172.25.3.14      -         RFC1918
+    3      *     (no response)
+    4      *     (no response)
+    5      *     (no response)
+    6        -   203.135.63.1     AS17557   PKTELECOM-AS-PK - Pakistan Telecommunica
+    7      *     (no response)
+  255      *     (no response)
