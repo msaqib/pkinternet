@@ -1,0 +1,362 @@
+[
+  {
+    "url": "https://skyscanner.pk/",
+    "edgeInfo": {},
+    "responseHeaders": {
+      "Connection": "close",
+      "Content-Length": "274",
+      "Content-Type": "text/html; charset=iso-8859-1",
+      "Date": "Wed, 02 Sep 2026 15:31:37 GMT",
+      "Location": "https://www.skyscanner.pk/",
+      "Server": "Apache/2.4.68 (Amazon Linux) OpenSSL/3.5.5",
+      "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload"
+    }
+  },
+  {
+    "url": "https://www.skyscanner.pk/",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudfront"
+      ],
+      "location": [
+        "muscat"
+      ],
+      "cacheStatus": [
+        "Miss from cloudfront"
+      ]
+    },
+    "responseHeaders": {
+      "accept-ch": "Sec-CH-UA-Model",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "no-store",
+      "content-length": "168",
+      "content-type": "text/html",
+      "date": "Wed, 02 Sep 2026 15:31:37 GMT",
+      "location": "/sttc/px/captcha-v2/index.html?url=Lz8=&uuid=63171ec4-a6e3-11f1-80cc-87619c0df2e5&vid=",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "server": "istio-envoy",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "via": "1.1 8dd746184895b782ccc160a21809c2d8.cloudfront.net (CloudFront)",
+      "x-amz-cf-id": "L1Hl-K6f-Sqbwb_nOuJijjp-AUEfd_6IQ4OjLa6RB27dJJdDrf8Bbw==",
+      "x-amz-cf-pop": "MCT50-P3",
+      "x-cache": "Miss from cloudfront",
+      "x-content-type-options": "nosniff",
+      "x-envoy-upstream-service-time": "98",
+      "x-frame-options": "SAMEORIGIN",
+      "x-microsite": "banana",
+      "x-request-handler-origin-region": "ap-southeast-1",
+      "x-skyscanner-session-id-token": "eyJhbGciOiJSUzI1NiIsImtpZCI6InNlc3Npb24tc2VydmljZS1rZXktMjAyNi0wMyIsInR5cCI6IkpXVCJ9.eyJodHRwczovL3NreXNjYW5uZXIubmV0L3Nlc3Npb25faWQiOiIwMWEwNjJiZi00NTlhLTgwMDMtOWU2MC1lMzM1MjRlMDkzOTYiLCJodHRwczovL3NreXNjYW5uZXIubmV0L3N0YXJ0ZWRfYXQiOjE3ODgzNjMwOTcsInNpZCI6IjAxYTA2MmJmLTQ1OWEtODAwMy05ZTYwLWUzMzUyNGUwOTM5NiIsImNydCI6MTc4ODM2MzA5NywiZXhwIjoxNzg4MzY0ODk3LCJpYXQiOjE3ODgzNjMwOTd9.4vXfnB5LyclsseSyublZ1GnlzdRFDfKrkNbpxOVx02F_cc_p9HX0w9TwlF4I99OgWjK1es0O3UDaqf1YRfsDtPaNAfsyq0V8mJlcVj6a-dybPzNqYEaveCvLwn_ZJwVDnSNIfNoqTvk1hgC0vhaxKoutSaqv6awrefHani8OIRfRxr-hMvrRukY9TwURMe_1hutEAqn7LXd2bWyMJcLsrpkq6SaXexIBYumuSxaAW-xwPmDXpNyBXDOfDWMRpbQCbI4WOfA_3J3G_uS2VJ79abrNsi18ZdvSRz3ORYkLDJJmdUtMGfcZesG5wPEMcgJbMEba5e6ldcBG5qa_HufmeA",
+      "x-xss-protection": "1; mode=block"
+    }
+  },
+  {
+    "url": "https://www.skyscanner.pk/sttc/px/captcha-v2/index.html?url=Lz8=&uuid=63171ec4-a6e3-11f1-80cc-87619c0df2e5&vid=",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "AWS (not CDN)",
+        "cloudfront"
+      ],
+      "location": [
+        "muscat"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "Hit from cloudfront"
+      ]
+    },
+    "responseHeaders": {
+      "accept-ranges": "bytes",
+      "age": "46785",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "public, max-age=86400",
+      "content-length": "708",
+      "content-type": "text/html",
+      "date": "Wed, 02 Sep 2026 02:31:55 GMT",
+      "etag": "\"aeca2ad9acea77846662c9e327696873\"",
+      "last-modified": "Tue, 25 Aug 2026 10:33:14 GMT",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "server": "AmazonS3",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "timing-allow-origin": "*",
+      "vary": "Accept-Encoding\nOrigin",
+      "via": "1.1 8dd746184895b782ccc160a21809c2d8.cloudfront.net (CloudFront)",
+      "x-amz-cf-id": "i0e5uTxhCgvOolIXbBoPX0a5M9FVDd-styNzh5ClAbZySEGdBscKNA==",
+      "x-amz-cf-pop": "MCT50-P3",
+      "x-amz-server-side-encryption": "AES256",
+      "x-amz-version-id": "L.k1sRrGoSNOr.CYWjKh9os3cS4oc7mE",
+      "x-cache": "Hit from cloudfront",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-xss-protection": "1; mode=block"
+    }
+  },
+  {
+    "url": "https://www.skyscanner.pk/sttc/px/captcha-v2/static/js/main.65e8e28e.js",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudfront",
+        "AWS (not CDN)"
+      ],
+      "location": [
+        "muscat"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "Hit from cloudfront"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-amz-version-id": "TLJc01X9LUDQonk9N2J5IvfKpGKxNt4a",
+      "etag": "\"c62aec6b857e07dec8f563771b5ca069\"",
+      "age": "30481",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cache": "Hit from cloudfront",
+      "x-amz-cf-id": "tcX4wt-h3dnE6L1TE3mzrbZps_NnxgJ09lmu1fyuUAgvCIDYjZe_oA==",
+      "date": "Wed, 02 Sep 2026 07:03:38 GMT",
+      "content-type": "text/javascript",
+      "vary": "Accept-Encoding, Origin",
+      "last-modified": "Tue, 25 Aug 2026 10:33:15 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=86400",
+      "timing-allow-origin": "*",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "via": "1.1 8dd746184895b782ccc160a21809c2d8.cloudfront.net (CloudFront)",
+      "accept-ranges": "bytes",
+      "content-length": "122789",
+      "x-xss-protection": "1; mode=block",
+      "x-amz-cf-pop": "MCT50-P3",
+      "server": "AmazonS3",
+      "x-amz-server-side-encryption": "AES256"
+    }
+  },
+  {
+    "url": "https://www.skyscanner.pk/sttc/px/captcha-v2/static/css/main.c04fcfb1.css",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudfront",
+        "AWS (not CDN)"
+      ],
+      "location": [
+        "muscat"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "Hit from cloudfront"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-amz-version-id": "TtG2ZHDlCcUWxGu2RXIMDj0vhM7aQ10x",
+      "etag": "\"c62d6fc5698e80d41dab320e2f4d80ce\"",
+      "age": "14689",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cache": "Hit from cloudfront",
+      "x-amz-cf-id": "ogOQtCRoWm578AM2Z4dZUvwDsm30VEnNtlQw29PWCFwUCVaNVSFQYg==",
+      "date": "Wed, 02 Sep 2026 11:26:51 GMT",
+      "content-type": "text/css",
+      "vary": "Accept-Encoding, Origin",
+      "last-modified": "Tue, 25 Aug 2026 10:33:15 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=86400",
+      "timing-allow-origin": "*",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "via": "1.1 8dd746184895b782ccc160a21809c2d8.cloudfront.net (CloudFront)",
+      "accept-ranges": "bytes",
+      "content-length": "6402",
+      "x-xss-protection": "1; mode=block",
+      "x-amz-cf-pop": "MCT50-P3",
+      "server": "AmazonS3",
+      "x-amz-server-side-encryption": "AES256"
+    }
+  },
+  {
+    "url": "https://www.skyscanner.pk/sttc/px/captcha-v2/manifest.json",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudfront",
+        "AWS (not CDN)"
+      ],
+      "location": [
+        "muscat"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "Hit from cloudfront"
+      ]
+    },
+    "responseHeaders": {
+      "x-amz-version-id": "v7BQwmynD.emVQoDbCIR3JorZDn0y8.m",
+      "etag": "\"6ebe16edc0904f8344e4f1d1d06ae2de\"",
+      "age": "29581",
+      "x-content-type-options": "nosniff",
+      "x-cache": "Hit from cloudfront",
+      "x-amz-cf-id": "Jsnok3kGrIXFtHtKOdGBOnMkAYX-jmRTWsJx_GRsYty2xEJTOAGzRA==",
+      "date": "Wed, 02 Sep 2026 07:18:44 GMT",
+      "content-type": "application/json",
+      "vary": "Accept-Encoding, Origin",
+      "last-modified": "Fri, 21 Aug 2026 07:10:20 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=86400",
+      "timing-allow-origin": "*",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "via": "1.1 5b610e97437c0e8323bc7ff9d5aeade0.cloudfront.net (CloudFront)",
+      "accept-ranges": "bytes",
+      "content-length": "335",
+      "x-xss-protection": "1; mode=block",
+      "x-amz-cf-pop": "MCT50-P3",
+      "server": "AmazonS3",
+      "x-amz-server-side-encryption": "AES256"
+    }
+  },
+  {
+    "url": "https://www.skyscanner.pk/sttc/px/captcha-v2/strings.json",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudfront",
+        "AWS (not CDN)"
+      ],
+      "location": [
+        "muscat"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "Hit from cloudfront"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-amz-version-id": "8_XIaq_RTOuBeKJiIUwou3qAeO77jxMn",
+      "etag": "W/\"142c7a5c7cb7e29eeb42c87ef112f0b3\"",
+      "age": "35599",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cache": "Hit from cloudfront",
+      "x-amz-cf-id": "gZl4Rle2K0sP78kzKHTBOjmEqicyljrXA_uHxTUugSD8eGRkGiM7Gw==",
+      "date": "Wed, 02 Sep 2026 05:38:37 GMT",
+      "content-type": "application/json",
+      "vary": "Accept-Encoding, Origin",
+      "last-modified": "Tue, 25 Aug 2026 10:33:16 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=86400",
+      "timing-allow-origin": "*",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "via": "1.1 8dd746184895b782ccc160a21809c2d8.cloudfront.net (CloudFront)",
+      "x-xss-protection": "1; mode=block",
+      "x-amz-cf-pop": "MCT50-P3",
+      "server": "AmazonS3",
+      "x-amz-server-side-encryption": "AES256"
+    }
+  },
+  {
+    "url": "https://js.skyscnr.com/sttc/px/captcha-v2/captcha-01.svg",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudfront",
+        "AWS (not CDN)"
+      ],
+      "location": [
+        "muscat"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "Hit from cloudfront"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-amz-version-id": "ujW9LPv94M6oZHYSTmMlcuiEFYNbGz9f",
+      "etag": "W/\"7ad9127cd26159437ff2bca588ea05e3\"",
+      "age": "33664",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cache": "Hit from cloudfront",
+      "x-amz-cf-id": "2H15Od62yVl-hizU96CJAGgTrIy53YwNgZP4cXcpMpoW1emQZpIw9g==",
+      "date": "Wed, 02 Sep 2026 08:57:05 GMT",
+      "content-type": "image/svg+xml",
+      "vary": "Accept-Encoding, Origin",
+      "last-modified": "Tue, 25 Aug 2026 10:33:14 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=86400",
+      "timing-allow-origin": "*",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "via": "1.1 253d6e4259dec57de8742fbba6936b54.cloudfront.net (CloudFront)",
+      "x-xss-protection": "1; mode=block",
+      "x-amz-cf-pop": "MCT50-P3",
+      "server": "AmazonS3",
+      "x-amz-server-side-encryption": "AES256"
+    }
+  },
+  {
+    "url": "https://www.skyscanner.pk/favicon.ico",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudfront",
+        "AWS (not CDN)"
+      ],
+      "location": [
+        "muscat"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "Hit from cloudfront"
+      ]
+    },
+    "responseHeaders": {
+      "x-amz-version-id": "vObuqq0DOnu3M.YMuixaoAHn5D3AGSbS",
+      "etag": "\"baab0b11a5b9c24713ec2bb992cd5af3\"",
+      "age": "3320",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cache": "Hit from cloudfront",
+      "x-amz-cf-id": "PKsuFGfY3iNf-3sWAPsGbJno94DUi2V20xFMZKVq5eexBdvJTa4WPQ==",
+      "date": "Wed, 02 Sep 2026 14:36:20 GMT",
+      "content-type": "image/vnd.microsoft.icon",
+      "vary": "Accept-Encoding, Origin",
+      "last-modified": "Fri, 21 Aug 2026 10:49:37 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=3600",
+      "timing-allow-origin": "*",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "via": "1.1 8dd746184895b782ccc160a21809c2d8.cloudfront.net (CloudFront)",
+      "accept-ranges": "bytes",
+      "content-length": "32988",
+      "x-xss-protection": "1; mode=block",
+      "x-amz-cf-pop": "MCT50-P3",
+      "server": "AmazonS3",
+      "x-amz-server-side-encryption": "AES256"
+    }
+  }
+]

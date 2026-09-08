@@ -24,7 +24,9 @@ const SUMMARY_CSV = join(__dirname, `results/pis_cdn_summary_${stamp}.csv`);
 const VANTAGE_POINTS = [
     { name: "laptop-direct-cybernet-lahore", proxy: null },
     { name: "raslas-01-nova-islamabad", proxy: "socks5://127.0.0.1:1080" },
-    // { name: "raslas-02-...", proxy: "socks5://127.0.0.1:1081" },
+    { name: "raslas-02-cybernet-haripur", proxy: "socks5://127.0.0.1:1081" },
+    { name: "raslas-04-cybernet-karachi", proxy: "socks5://127.0.0.1:1082" },
+    { name: "raslas-05-ptcl-karachi", proxy: "socks5://127.0.0.1:1083" },
 ];
 
 mkdirSync(HEADERS_DIR, { recursive: true });
@@ -44,7 +46,7 @@ const rows = ["site,vantage,provider,city,main_page_cache_status,total_resources
 
 function classify(status) {
     if (!status) return null;
-    const s = status.toLowerCase();
+    const s = String(status).toLowerCase();
     if (s.includes("hit")) return "hit";
     if (s.includes("miss")) return "miss";
     if (s.includes("dynamic")) return "dynamic";

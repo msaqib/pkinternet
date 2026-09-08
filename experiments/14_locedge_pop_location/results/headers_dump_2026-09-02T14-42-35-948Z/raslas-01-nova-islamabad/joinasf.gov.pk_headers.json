@@ -1,0 +1,911 @@
+[
+  {
+    "url": "https://joinasf.gov.pk/",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "DYNAMIC"
+      ]
+    },
+    "responseHeaders": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "no-cache, private",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "a34d6270ab4e1a10-KIX",
+      "content-encoding": "zstd",
+      "content-type": "text/html; charset=UTF-8",
+      "date": "Wed, 02 Sep 2026 15:00:29 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=MfTuqFSW1apb00nWUZho%2FkGlSWYSbJ3re3JX6SGaUFvKloIoe7XSsBO1etHmkeBVjzVs3Dmycjg7OoJyV04a8mk21JGucjHXX5OKBLrW5qS3Wqn%2FVy%2BEbnZFFre3OAdBEA%3D%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfCacheStatus;desc=\"DYNAMIC\"\ncfEdge;dur=19,cfOrigin;dur=772",
+      "vary": "Accept-Encoding,User-Agent"
+    }
+  },
+  {
+    "url": "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CRaleway:300,300i,400,400i,500,500i,600,600i,700,700i%7CPoppins:300,300i,400,400i,500,500i,600,600i,700,700i",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-content-type-options": "nosniff",
+      "expires": "Wed, 02 Sep 2026 15:00:30 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 15:00:30 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+      "last-modified": "Wed, 02 Sep 2026 15:00:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000",
+      "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+      "cache-control": "private, max-age=86400, stale-while-revalidate=604800",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin-allow-popups",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-origin": "*",
+      "x-xss-protection": "0",
+      "server": "ESF"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/vendor/aos/aos.css",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "4568",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ZtfiOweMNIIYL12eoVc6TQWPksAly9JphmbV6tY%2FUG3WiywoFQwrpvQAs4F9l0IbrcEU3sm74jCQ7qhONJG7Ncm5ixfP6ckqAXkLYV%2F9y%2BEr%2FhrpZajK5yxVhqO8RS6CRA%3D%3D\"}]}",
+      "cf-ray": "a34d6279cbe81a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "2236",
+      "date": "Wed, 02 Sep 2026 15:00:30 GMT",
+      "content-type": "text/css",
+      "last-modified": "Tue, 28 Mar 2023 18:45:34 GMT",
+      "server": "cloudflare",
+      "vary": "Accept-Encoding,User-Agent"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/vendor/bootstrap/css/bootstrap.min.css",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "4568",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=HHxSmUDcdRNZprZ2HjKoRKFXaZOBoDu7D%2FjXDK%2BgS9r8AYcy%2B%2Bd0HGLPT8r46ksChQD%2BTb3kyM86hksxEsBi8s1O813piW2Opqcvh%2FqsoXafljT5omC0imsSfeX52qLPcg%3D%3D\"}]}",
+      "cf-ray": "a34d6279cbe91a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "23954",
+      "date": "Wed, 02 Sep 2026 15:00:30 GMT",
+      "content-type": "text/css",
+      "last-modified": "Tue, 28 Mar 2023 18:45:34 GMT",
+      "server": "cloudflare",
+      "vary": "Accept-Encoding,User-Agent"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/vendor/bootstrap-icons/bootstrap-icons.css",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "4568",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=AdjqXCkqjTUoub25geyP0AyJJUzxXuImcY2AG9vmgIM8%2Be2y3Aw0NGnn2PCBqJ04RqAdLwEJb7uw0%2B57ICyMzaM6z9yo1CHDKtkCOhQlj4FjgX4of1iRhIz0%2BcNYSAAMOg%3D%3D\"}]}",
+      "cf-ray": "a34d6279cbeb1a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "10517",
+      "date": "Wed, 02 Sep 2026 15:00:30 GMT",
+      "content-type": "text/css",
+      "last-modified": "Tue, 28 Mar 2023 18:45:48 GMT",
+      "server": "cloudflare",
+      "vary": "Accept-Encoding,User-Agent"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/vendor/boxicons/css/boxicons.min.css",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "4568",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=JvJ4RL0ni%2BQSISiLbTwxFCkijTv55f4hNst0EeqN79FI6AUCHGy9EFljcA9RA3hcX%2F%2F2hehwJxWk5zTql7A4iKIXrygchvlc1bBrNsHR8ZuTBwelB%2FDqirL%2B9x6raoOs%2FA%3D%3D\"}]}",
+      "cf-ray": "a34d6279cbec1a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "11509",
+      "date": "Wed, 02 Sep 2026 15:00:30 GMT",
+      "content-type": "text/css",
+      "last-modified": "Tue, 28 Mar 2023 18:45:46 GMT",
+      "server": "cloudflare",
+      "vary": "Accept-Encoding,User-Agent"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/vendor/glightbox/css/glightbox.min.css",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "4567",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=JbCdxCYTuLa8ulve8zKnAVkKIZvqOHItDFaTj3vJUB54At1cpElAv1bYYOvayySfDjm7RewJcP1hDAUo8A6i%2FDmBM7S%2B%2BW74sdNZhJ%2FTKnRvUXKCrImWy%2B2T%2FKRYPP8%2BpQ%3D%3D\"}]}",
+      "cf-ray": "a34d6279cbee1a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "2557",
+      "date": "Wed, 02 Sep 2026 15:00:30 GMT",
+      "content-type": "text/css",
+      "last-modified": "Tue, 28 Mar 2023 18:45:48 GMT",
+      "server": "cloudflare",
+      "vary": "Accept-Encoding,User-Agent"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/vendor/swiper/swiper-bundle.min.css",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "4568",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ksxLxj2jECIqVTEVgJ8qHbujn6WvF30f542fM4Er9XvkGojprh6d%2FKIT%2BNLrni0YVhcO2Krz9VFdBmKaQEb4%2FAzF71zO9SYwZ02Klmi1ZOhmLuAfaMdOy92DDTThabygXw%3D%3D\"}]}",
+      "cf-ray": "a34d627a1c281a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "4467",
+      "date": "Wed, 02 Sep 2026 15:00:30 GMT",
+      "content-type": "text/css",
+      "last-modified": "Tue, 28 Mar 2023 18:45:50 GMT",
+      "server": "cloudflare",
+      "vary": "Accept-Encoding,User-Agent"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/css/style.css",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "4568",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=wsyK8IEDCDE9p7bvgGB%2FR91tB%2BA%2FWi7fmyX03H%2BRk6f%2BiqFFp%2BsMuAIiwwr0kLig7u6TFhTl25kISMkb%2FEYPBXYCXo4qrxeNDjVvtY3Demk5IYTVdZMtK8NSfIu9jAcSCg%3D%3D\"}]}",
+      "cf-ray": "a34d627a1c2a1a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "4719",
+      "date": "Wed, 02 Sep 2026 15:00:30 GMT",
+      "content-type": "text/css",
+      "last-modified": "Tue, 28 Mar 2023 18:45:24 GMT",
+      "server": "cloudflare",
+      "vary": "Accept-Encoding,User-Agent"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/images/Join-ASF-logo_NEW.png",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "cf-cache-status": "HIT",
+      "age": "5470",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=LK4tN6Kd%2FViTcQXPm0Wjf8KYqLKKjHfofd3CE6%2B11CCoBPW2g26Yxgbd9ircAZ4bYKiW0AWmofg48lCu%2FXfbP7ZfjspME10%2FPoz8NHX90juRqNrj3KkEoQbdxJLktLbr4w%3D%3D\"}]}",
+      "cf-ray": "a34d627c7e7f1a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "38341",
+      "date": "Wed, 02 Sep 2026 15:00:30 GMT",
+      "content-type": "image/png",
+      "last-modified": "Thu, 18 Dec 2025 17:09:57 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/img/clients/client_1.png",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "cf-cache-status": "HIT",
+      "age": "5470",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pcXqZIFGQ3%2BWcmRMptIM0Iv5D04yuD9iWtA0MdE6xBdjxbEQmVzdtttMBBwpb0ftoNROR%2BXVnLSMoM%2Fz0taT7zGsAPe8pNOaGl1fgfzCoJDZJQ3udmdDjBO3WW6mSvw4LA%3D%3D\"}]}",
+      "cf-ray": "a34d627c7e801a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "10161",
+      "date": "Wed, 02 Sep 2026 15:00:30 GMT",
+      "content-type": "image/png",
+      "last-modified": "Tue, 28 Mar 2023 18:45:30 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/img/clients/client_4.png",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "cf-cache-status": "HIT",
+      "age": "5471",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=5kHkDzRnsxH3jNN7ykOnKmc7CEJCtelpduDv1B2odnwtiOou0pY6SwzJXAgC42CGlfmOs8XCzHwNmXAg1dU87ZXdcEiCWL1MpfuFg6i6y%2F1Ci5lLHCR5QVUaSJsz%2BQcNhA%3D%3D\"}]}",
+      "cf-ray": "a34d627e4fc91a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "14411",
+      "date": "Wed, 02 Sep 2026 15:00:31 GMT",
+      "content-type": "image/png",
+      "last-modified": "Tue, 28 Mar 2023 18:45:30 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/img/team/team-1.png",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "cf-cache-status": "HIT",
+      "age": "5471",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=FPshkeFQ68GCpJNf3nSTj4XxWQghLHxxxsYqTsr1pkjORo7t%2B4FyvHQlshxDJIlXSPh0AuLrXy%2FScer%2F5SO640L8FsvEm5NskxZyZJt0QTEHg88jNzVi7L0l7mLZz1WLqQ%3D%3D\"}]}",
+      "cf-ray": "a34d627e4fcc1a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "43902",
+      "date": "Wed, 02 Sep 2026 15:00:31 GMT",
+      "content-type": "image/png",
+      "last-modified": "Tue, 28 Mar 2023 18:45:30 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/img/carousel-imgs/slide_1.jpg",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "cf-cache-status": "HIT",
+      "age": "5471",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=H7vHxLC9Q8IFcYJPTdMEiQww5fWjWRZlQmSYQc5GHifKMxXRoXj%2B6WEZ6NYbf7DkdgxmM1WHF7L8cT4UTzlXIqP%2FDpNPtGrEoUs0nlBoZWcoDDNuv8e%2FUJNIwPPpTu%2FwEQ%3D%3D\"}]}",
+      "cf-ray": "a34d627e4fcd1a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "1018461",
+      "date": "Wed, 02 Sep 2026 15:00:31 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Tue, 28 Mar 2023 18:45:30 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/img/carousel-imgs/slide_2.jpg",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "cf-cache-status": "HIT",
+      "age": "5469",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=k94JLNSCHwO09VLbBo4FVU0QdkSSC6VotiNlPWuJmoaVFuH8fUPb3%2B%2BydnWtNCKc2azR%2BhG0UWdoTnxo1dviZAab7lblO9GmTb4h0IrhjLHU6KPvd4LLXq%2BA3yIvyn%2FN%2Bg%3D%3D\"}]}",
+      "cf-ray": "a34d628139ea1a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "827565",
+      "date": "Wed, 02 Sep 2026 15:00:31 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Tue, 28 Mar 2023 18:45:28 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/img/carousel-imgs/slide_3.JPG",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "cf-cache-status": "HIT",
+      "age": "5471",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=6H6uO3YdKCglDyY7LfyuswxuewPFh2%2BuwJKY2ZIBq2xb%2B2voxf1btiPm4xjOY1LsysA31uqKUQuKnUKOqhTmS%2FOo1oRcVb1JGVsmxcuqSpCybIULxxprUn89mffUCf7sHA%3D%3D\"}]}",
+      "cf-ray": "a34d628b4a741a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "857278",
+      "date": "Wed, 02 Sep 2026 15:00:33 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Tue, 28 Mar 2023 18:45:28 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/img/team/usericon.jpg",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "cf-cache-status": "HIT",
+      "age": "5471",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ZK%2FRMGi4OW4X8cot4e2D1tWVuReYrgOJXF6YsGoHOq6oIpgtk9oM8YNCAOd0B19W4xTFxyPPCmouRDqZshlkQMe1NC0I4MEKgRgOIIyaWqTC7Rlhc0T6ge2hIwn9F%2Fk3xw%3D%3D\"}]}",
+      "cf-ray": "a34d628b4a761a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "7518",
+      "date": "Wed, 02 Sep 2026 15:00:33 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Tue, 28 Mar 2023 18:45:30 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/images/home/sample_question.jpg",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "cf-cache-status": "HIT",
+      "age": "5471",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=0rrdRTaAaL%2Bl7acvyAWRs4qbR3YhLWczleKicPSCAJzhcwjb3HHgepj0ayKogjr7sOH0LZal41FS%2BhMaP73GYF6LNjab8S0Auqa5MLUks9xIcBRcV4mEcjJbL8YNcgVLJg%3D%3D\"}]}",
+      "cf-ray": "a34d628beb111a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "2373029",
+      "date": "Wed, 02 Sep 2026 15:00:33 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Tue, 28 Mar 2023 18:46:12 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "public",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "content-encoding": "zstd",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=FiXjxn31MUPJ9XAOIXOF4NdLNmum%2F44j5tNzEvX%2FenDOb3TKn4pwLynMfB0ag7azeLCoS8q8wbwUa9V1spB5THr1I8XIksRoHdQ62EAPKzsbVFJ7W84pi2jP2Pju9sFiNA%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "cf-ray": "a34d627a1c2b1a10-KIX",
+      "expires": "Fri, 04 Sep 2026 15:00:30 GMT",
+      "date": "Wed, 02 Sep 2026 15:00:30 GMT",
+      "content-type": "application/javascript",
+      "vary": "accept-encoding",
+      "server": "cloudflare",
+      "x-frame-options": "DENY"
+    }
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.2.1.slim.min.js",
+    "edgeInfo": {
+      "pop": [
+        "lga",
+        "fjr"
+      ],
+      "provider": [
+        "fastly"
+      ],
+      "location": [
+        "new york"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "HIT, HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "etag": "W/\"28feccc0-10fdd\"",
+      "age": "1076282",
+      "x-cache": "HIT, HIT",
+      "date": "Wed, 02 Sep 2026 15:00:31 GMT",
+      "content-type": "application/javascript; charset=utf-8",
+      "last-modified": "Fri, 18 Oct 1991 12:00:00 GMT",
+      "x-cache-hits": "28, 34477",
+      "x-served-by": "cache-lga21963-LGA, cache-fjr990024-FJR",
+      "vary": "Accept-Encoding",
+      "cache-control": "public, max-age=31536000, stale-while-revalidate=604800",
+      "x-timer": "S1788361231.240470,VS0,VE0",
+      "cross-origin-resource-policy": "cross-origin",
+      "via": "1.1 varnish, 1.1 varnish",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "23856",
+      "server": "nginx"
+    }
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js",
+    "edgeInfo": {
+      "pop": [
+        "edd",
+        "fra",
+        "wsa",
+        "sin",
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare",
+        "fastly"
+      ],
+      "location": [
+        "frankfurt am main",
+        "wasua",
+        "singapore",
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "HIT, HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"4af4-w7l3qkuN+2nWUeBwFQMdOF3tlks\"",
+      "age": "2291724",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=sC8KqQeTLENjwpmbB1voYVPvoAOBfaL7Q1hjaS3suUUMyTRsHbHi116F2vueYjlXoZ7wmmaxzIdghaqq1Yk1n5u%2FScVNeHN%2FSeayco7CzazDnf3VsKmzD1Wvawgwnkj0yVM%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "x-jsd-version-type": "version",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cache": "HIT, HIT",
+      "date": "Wed, 02 Sep 2026 15:00:32 GMT",
+      "content-type": "application/javascript; charset=utf-8",
+      "x-served-by": "cache-fra-eddf8230038-FRA, cache-sin-wsat1880032-SIN",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d62855bc2a880-HKG",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "7053",
+      "server": "cloudflare",
+      "x-jsd-version": "1.12.9"
+    }
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js",
+    "edgeInfo": {
+      "pop": [
+        "eto",
+        "fra",
+        "rjt",
+        "nrt",
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare",
+        "fastly"
+      ],
+      "location": [
+        "frankfurt am main",
+        "tokyo / narita",
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "HIT, HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"bf30-qVRYMYA7E1nP7tR+O01rrmjkDpk\"",
+      "age": "1020642",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=5qbt7gl0mmTj1yC%2BcKPfOHpHLTT5uLPQm5MVpYL8RKivS2qGg6g2%2BFB01g2ZEXKiuiIERezym%2FHk%2FNNofQXZkJtxgiOXOtSin3m3Ia0HZMJTRxCCkwuFPOK2KhqXzo%2BlUG8%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "x-jsd-version-type": "version",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cache": "HIT, HIT",
+      "date": "Wed, 02 Sep 2026 15:00:32 GMT",
+      "content-type": "application/javascript; charset=utf-8",
+      "x-served-by": "cache-fra-etou8220109-FRA, cache-nrt-rjtf7700023-NRT",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d62855bc5a880-HKG",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "13501",
+      "server": "cloudflare",
+      "x-jsd-version": "4.0.0"
+    }
+  },
+  {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/v3d52b47920f24c319d37e2661827c42b1787588026925",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "public, max-age=86400",
+      "content-encoding": "gzip",
+      "etag": "W/\"2026.8.4\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d627f18d4064f-HKG",
+      "access-control-allow-origin": "*",
+      "date": "Wed, 02 Sep 2026 15:00:31 GMT",
+      "content-type": "text/javascript;charset=UTF-8",
+      "last-modified": "Mon, 24 Aug 2026 16:13:46 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://joinasf.gov.pk/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?a74547b2f0863226942ff8ded57db345",
+    "edgeInfo": {
+      "pop": [
+        "kix"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "osaka"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "7134",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=UUPaCMFQ12GFcwbWGIZb8R9ISOldT%2FU%2FTgwC3RpSCy%2F%2BuiRIuy8EGY5g6HJwTh0LhtNDlYiMzJW6aj3TnyN0pQe3uVoQEtIwqoD9idIuQhlhYZm8%2FTKeh5wVQ4qNY7Yecw%3D%3D\"}]}",
+      "cf-ray": "a34d628beb131a10-KIX",
+      "accept-ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:00:33 GMT",
+      "content-type": "font/woff2",
+      "last-modified": "Tue, 28 Mar 2023 18:45:46 GMT",
+      "server": "cloudflare",
+      "vary": "Accept-Encoding,User-Agent"
+    }
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/opensans/v44/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "age": "490048",
+      "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+      "x-content-type-options": "nosniff",
+      "expires": "Fri, 27 Aug 2027 22:53:05 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Thu, 27 Aug 2026 22:53:05 GMT",
+      "last-modified": "Mon, 15 Sep 2025 16:30:57 GMT",
+      "content-type": "font/woff2",
+      "cache-control": "public, max-age=31536000",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "42964",
+      "x-xss-protection": "0",
+      "server": "sffe"
+    }
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/raleway/v37/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "age": "591958",
+      "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+      "x-content-type-options": "nosniff",
+      "expires": "Thu, 26 Aug 2027 18:34:35 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 26 Aug 2026 18:34:35 GMT",
+      "last-modified": "Tue, 09 Sep 2025 19:06:49 GMT",
+      "content-type": "font/woff2",
+      "cache-control": "public, max-age=31536000",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "43120",
+      "x-xss-protection": "0",
+      "server": "sffe"
+    }
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/opensans/v44/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6FxZCJgg.woff2",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "age": "460377",
+      "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+      "x-content-type-options": "nosniff",
+      "expires": "Sat, 28 Aug 2027 07:07:36 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Fri, 28 Aug 2026 07:07:36 GMT",
+      "last-modified": "Mon, 15 Sep 2025 16:31:13 GMT",
+      "content-type": "font/woff2",
+      "cache-control": "public, max-age=31536000",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "45072",
+      "x-xss-protection": "0",
+      "server": "sffe"
+    }
+  }
+]

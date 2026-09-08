@@ -1,0 +1,1991 @@
+Readable routes  —  grouped_20260906_012207.csv
+112 traceroutes  ·  destination shown once per block (in the DEST header)
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 7613 · Z-Com (AS152605) · zcom.7613
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.0   110.93.254.38      —         TWA (PK)  [registry]
+    4     16.6   110.93.254.97      —         TWA (PK)  [registry]
+    5     24.2   149.40.227.191     AS174     Cogent Communications, LLC (US)
+    6     16.6   202.141.224.8      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    7     93.7   103.141.43.1       AS132872  Data Check Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 7764 · PTCL (AS17557) · ptcl.7764
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   203.135.63.1       AS17557   Pakistan Telecommunication Company Limited (PK)
+    2      0.5   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 60223 · Nayatel (AS23674) · nayatel.60223
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      2.6   100.89.32.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.27.0.29        —         (private/internal)
+    4      2.3   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.170       —         (private/internal)
+    6      *     (no response)     
+    7      *     (no response)     
+    8     24.2   221.120.202.49     AS9557    Paknet Limited Merged into PTCL (PK)
+    9      *     (no response)     
+   10      *     (no response)     
+   11     24.8   103.141.43.1       AS132872  Data Check Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 62224 · PERN (AS45773) · pern.62224
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     25.2   103.141.43.1       AS132872  Data Check Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 64078 · AS135407 · tes.64078
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      6.3   45.249.11.241      AS135407  Trans World Enterprise Services (Private) Limited (PK)
+    3      3.3   119.63.137.130     —         TWA (PK)  [registry]
+    4     22.5   110.93.253.208     —         TWA (PK)  [registry]
+    5     23.4   110.93.254.97      —         TWA (PK)  [registry]
+    6     28.1   149.40.227.191     AS174     Cogent Communications, LLC (US)
+    7     23.5   202.141.224.8      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    8     24.3   103.141.43.1       AS132872  Data Check Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 65761 · Cybernet (AS9541) · cybernet.65761
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.0.1        —         (private/internal)
+    2      1.1   192.168.1.1        —         (private/internal)
+    3      3.0   10.15.234.230      —         (private/internal)
+    4      1.9   10.15.248.89       —         (private/internal)
+    5      3.0   10.15.248.177      —         (private/internal)
+    6      9.5   10.15.248.129      —         (private/internal)
+    7     40.5   192.168.200.225    —         (private/internal)
+    8     25.8   192.168.200.34     —         (private/internal)
+    9     23.0   103.141.43.1       AS132872  Data Check Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 65892 · Nayatel (AS23674) · nayatel.65892
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.18.1       —         (private/internal)
+    2      3.6   100.114.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      4.7   172.27.0.53        —         (private/internal)
+    4      3.5   172.16.90.245      —         (private/internal)
+    5      3.5   172.31.5.206       —         (private/internal)
+    6      3.5   172.31.5.170       —         (private/internal)
+    7      *     (no response)     
+    8      *     (no response)     
+    9     24.3   221.120.202.49     AS9557    Paknet Limited Merged into PTCL (PK)
+   10      *     (no response)     
+   11      *     (no response)     
+   12     24.3   103.141.43.1       AS132872  Data Check Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 1001359 · AS147302 · falcon.1001359
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.1.1        —         (private/internal)
+    2      2.2   100.86.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      1.6   160.30.236.1       AS147302  FALCON BROADBAND (PRIVATE) LIMITED (PK)
+    4      4.3   10.165.10.1        —         (private/internal)
+    5      4.7   172.16.134.2       —         (private/internal)
+    6      5.6   10.181.227.61      —         (private/internal)
+    7      5.4   117.20.30.21       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    8     20.4   110.93.252.216     —         TWA (PK)  [registry]
+    9     22.2   110.93.252.173     —         TWA (PK)  [registry]
+   10     22.3   119.63.130.115     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+   11     22.4   103.141.43.1       AS132872  Data Check Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 1015679 · AS136174 · nova.1015679
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   192.168.100.1      —         (private/internal)
+    2      2.0   70.70.119.26       AS6327    Shaw Communications (CA)
+    3      2.5   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.6   110.93.252.48      —         TWA (PK)  [registry]
+    5     18.1   110.93.254.97      —         TWA (PK)  [registry]
+    6     20.4   149.40.227.191     AS174     Cogent Communications, LLC (US)
+    7     18.8   202.141.224.8      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    8     19.7   103.141.43.1       AS132872  Data Check Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 1016036 · Cybernet (AS9541) · cybernet.1016036
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.1.1        —         (private/internal)
+    2      2.1   203.101.189.254    AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    3      3.4   192.168.72.149     —         (private/internal)
+    4     27.9   10.15.19.81        —         (private/internal)
+    5     33.7   192.168.248.205    —         (private/internal)
+    6     22.7   192.168.200.38     —         (private/internal)
+    7     23.0   103.141.43.1       AS132872  Data Check Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 1016126 · PTCL (AS17557) · ptcl.1016126
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.10.1       —         (private/internal)
+    2      9.3   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3      8.6   10.253.5.98        —         (private/internal)
+    4      9.6   10.253.4.124       —         (private/internal)
+    5     11.1   221.120.202.49     AS9557    Paknet Limited Merged into PTCL (PK)
+    6     31.6   192.168.76.193     —         (private/internal)
+    7     21.7   192.168.200.38     —         (private/internal)
+    8     10.9   103.141.43.1       AS132872  Data Check Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 1016143 · Cybernet (AS9541) · cybernet.1016143
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   192.168.18.1       —         (private/internal)
+    2      4.7   202.163.100.236    —         CYBERNET-PK (PK)  [registry]
+    3      4.6   10.15.15.122       —         (private/internal)
+    4      5.5   192.168.251.141    —         (private/internal)
+    5      7.4   192.168.200.34     —         (private/internal)
+    6      5.5   103.141.43.1       AS132872  Data Check Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 1016467 · Nayatel (AS23674) · nayatel.1016467
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      3.6   192.168.18.1       —         (private/internal)
+    2      3.1   100.113.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.16.49.205      —         (private/internal)
+    4      4.1   10.95.178.73       —         (private/internal)
+    5     20.4   10.253.4.52        —         (private/internal)
+    6     20.6   10.253.4.21        —         (private/internal)
+    7     23.3   221.120.202.49     AS9557    Paknet Limited Merged into PTCL (PK)
+    8     20.8   192.168.76.189     —         (private/internal)
+    9     22.5   192.168.200.34     —         (private/internal)
+   10     22.0   103.141.43.1       AS132872  Data Check Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ DataCheck.pk   —   DataCheck  (Cybernet customer (own ASN))
+ SOURCE   probe 1017335 · AS138910 · AS138910.1017335
+ DEST     103.141.43.1 · Data Check Limited (AS132872) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   103.167.255.49     AS138910  N/A (PK)
+    2      0.7   10.7.41.1          —         (private/internal)
+    3      0.7   10.200.107.172     —         (private/internal)
+    4     18.1   10.232.238.134     —         (private/internal)
+    5     18.1   110.93.202.20      —         TWA (PK)  [registry]
+    6     18.7   119.63.130.115     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     19.4   103.141.43.1       AS132872  Data Check Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 7613 · Z-Com (AS152605) · zcom.7613
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.254.38      —         TWA (PK)  [registry]
+    4     16.6   110.93.255.169     —         TWA (PK)  [registry]
+    5     18.6   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 7764 · PTCL (AS17557) · ptcl.7764
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   203.135.63.1       AS17557   Pakistan Telecommunication Company Limited (PK)
+    2      0.4   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 60223 · Nayatel (AS23674) · nayatel.60223
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      2.8   100.89.32.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.0   172.27.0.29        —         (private/internal)
+    4      3.1   172.27.0.22        —         (private/internal)
+    5      3.0   172.31.5.170       —         (private/internal)
+    6      *     (no response)     
+    7      *     (no response)     
+    8     20.3   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+    9     20.1   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 62224 · PERN (AS45773) · pern.62224
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   10.102.76.1        —         (private/internal)
+    2      1.0   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     22.5   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 64078 · AS135407 · tes.64078
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.4   192.168.18.1       —         (private/internal)
+    2      3.2   45.249.11.241      AS135407  Trans World Enterprise Services (Private) Limited (PK)
+    3      3.2   119.63.137.130     —         TWA (PK)  [registry]
+    4     23.1   110.93.252.106     —         TWA (PK)  [registry]
+    5     23.0   110.93.255.169     —         TWA (PK)  [registry]
+    6     23.4   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 65761 · Cybernet (AS9541) · cybernet.65761
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   192.168.0.1        —         (private/internal)
+    2      1.1   192.168.1.1        —         (private/internal)
+    3      3.0   10.15.234.230      —         (private/internal)
+    4      2.1   10.15.248.89       —         (private/internal)
+    5      2.6   10.15.248.177      —         (private/internal)
+    6      4.0   10.15.248.129      —         (private/internal)
+    7     26.1   10.15.19.225       —         (private/internal)
+    8     21.7   192.168.76.190     —         (private/internal)
+    9     22.4   221.120.202.48     AS9557    Paknet Limited Merged into PTCL (PK)
+   10     21.9   10.253.4.71        —         (private/internal)
+   11     22.6   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+   12     21.6   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 65892 · Nayatel (AS23674) · nayatel.65892
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.8   192.168.18.1       —         (private/internal)
+    2      4.4   100.114.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.5   172.27.0.53        —         (private/internal)
+    4      3.4   172.16.90.245      —         (private/internal)
+    5      3.3   172.31.5.206       —         (private/internal)
+    6      4.2   172.31.5.170       —         (private/internal)
+    7      *     (no response)     
+    8      *     (no response)     
+    9     26.3   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+   10     25.9   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 1001359 · AS147302 · falcon.1001359
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.1.1        —         (private/internal)
+    2      4.5   100.86.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      1.3   160.30.236.1       AS147302  FALCON BROADBAND (PRIVATE) LIMITED (PK)
+    4      5.0   10.165.10.1        —         (private/internal)
+    5      4.2   172.16.134.2       —         (private/internal)
+    6      5.9   10.181.227.61      —         (private/internal)
+    7      5.3   117.20.30.21       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    8     20.4   110.93.255.108     —         TWA (PK)  [registry]
+    9     21.9   110.93.252.173     —         TWA (PK)  [registry]
+   10     21.5   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 1015679 · AS136174 · nova.1015679
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      2.0   70.70.119.26       AS6327    Shaw Communications (CA)
+    3      2.9   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.3   110.93.252.102     —         TWA (PK)  [registry]
+    5     19.0   110.93.252.173     —         TWA (PK)  [registry]
+    6     19.6   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 1016036 · Cybernet (AS9541) · cybernet.1016036
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   192.168.1.1        —         (private/internal)
+    2      2.4   203.101.189.254    AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    3      4.8   192.168.72.113     —         (private/internal)
+    4      4.1   192.168.51.2       —         (private/internal)
+    5     23.8   202.163.97.213     AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    6     23.7   192.168.200.205    —         (private/internal)
+    7     36.2   192.168.76.190     —         (private/internal)
+    8    190.1   221.120.202.48     AS9557    Paknet Limited Merged into PTCL (PK)
+    9      *     (no response)     
+   10    177.5   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+   11    180.2   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 1016126 · PTCL (AS17557) · ptcl.1016126
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.10.1       —         (private/internal)
+    2      8.2   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3      8.6   10.253.5.98        —         (private/internal)
+    4      9.1   10.253.4.42        —         (private/internal)
+    5      8.8   10.253.4.51        —         (private/internal)
+    6      9.0   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+    7      9.2   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 1016143 · Cybernet (AS9541) · cybernet.1016143
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      4.4   202.163.100.236    —         CYBERNET-PK (PK)  [registry]
+    3      4.4   10.15.15.122       —         (private/internal)
+    4     24.6   192.168.112.161    —         (private/internal)
+    5      *     (no response)     
+    6    113.0   221.120.202.48     AS9557    Paknet Limited Merged into PTCL (PK)
+    7    114.6   10.253.4.71        —         (private/internal)
+    8    139.6   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+    9    113.6   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 1016467 · Nayatel (AS23674) · nayatel.1016467
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      3.7   192.168.18.1       —         (private/internal)
+    2      3.2   100.113.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.4   172.16.49.205      —         (private/internal)
+    4      4.9   10.95.178.73       —         (private/internal)
+    5     19.9   10.253.4.52        —         (private/internal)
+    6     20.6   10.253.4.51        —         (private/internal)
+    7     20.3   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+    8     20.9   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ HBLBank.pk   —   HBL Bank  (Cybernet customer (own ASN))
+ SOURCE   probe 1017335 · AS138910 · AS138910.1017335
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   103.167.255.49     AS138910  N/A (PK)
+    2      0.5   10.7.41.1          —         (private/internal)
+    3      7.1   10.200.107.172     —         (private/internal)
+    4     16.6   10.232.238.134     —         (private/internal)
+    5     15.2   10.221.198.125     —         (private/internal)
+    6     17.1   10.222.180.17      —         (private/internal)
+    7     81.6   119.30.106.42      AS23966   LINKdotNET Telecom Limited (PK)
+    8     35.0   110.93.210.226     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    9     35.0   110.93.254.208     —         TWA (PK)  [registry]
+   10     35.7   110.93.255.169     —         TWA (PK)  [registry]
+   11     35.8   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 7613 · Z-Com (AS152605) · zcom.7613
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.6   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.2   110.93.252.200     —         TWA (PK)  [registry]
+    4     16.9   110.93.254.161     —         TWA (PK)  [registry]
+    5     17.5   110.93.254.221     —         TWA (PK)  [registry]
+    6     20.8   149.40.227.185     AS174     Cogent Communications, LLC (US)
+    7     19.0   202.141.224.145    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    8     17.5   202.141.224.8      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    9     94.6   202.141.225.182    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   10     95.5   103.94.186.1       AS136730  INTERMARKET SECURITIES LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 7764 · PTCL (AS17557) · ptcl.7764
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   203.135.63.1       AS17557   Pakistan Telecommunication Company Limited (PK)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 60223 · Nayatel (AS23674) · nayatel.60223
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.8   192.168.18.1       —         (private/internal)
+    2      2.8   100.89.32.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.2   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      2.9   172.31.5.170       —         (private/internal)
+    6      *     (no response)     
+    7      *     (no response)     
+    8     44.1   221.120.202.49     AS9557    Paknet Limited Merged into PTCL (PK)
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12     24.5   103.94.186.1       AS136730  INTERMARKET SECURITIES LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 62224 · PERN (AS45773) · pern.62224
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     23.7   103.94.186.1       AS136730  INTERMARKET SECURITIES LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 64078 · AS135407 · tes.64078
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      5.6   192.168.18.1       —         (private/internal)
+    2      3.6   45.249.11.241      AS135407  Trans World Enterprise Services (Private) Limited (PK)
+    3      3.4   119.63.137.130     —         TWA (PK)  [registry]
+    4     22.6   110.93.252.86      —         TWA (PK)  [registry]
+    5     23.2   110.93.255.169     —         TWA (PK)  [registry]
+    6     27.6   149.40.227.185     AS174     Cogent Communications, LLC (US)
+    7     27.5   202.141.224.145    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    8     23.3   202.141.224.8      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    9     24.7   202.141.225.182    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   10     25.7   103.94.186.1       AS136730  INTERMARKET SECURITIES LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 65761 · Cybernet (AS9541) · cybernet.65761
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.0.1        —         (private/internal)
+    2      1.2   192.168.1.1        —         (private/internal)
+    3      *     (no response)     
+    4      3.1   10.15.248.89       —         (private/internal)
+    5      2.0   10.15.248.177      —         (private/internal)
+    6      4.9   10.15.248.129      —         (private/internal)
+    7     21.9   192.168.200.225    —         (private/internal)
+    8     25.6   192.168.200.34     —         (private/internal)
+    9     22.5   192.168.73.78      —         (private/internal)
+   10     22.7   103.94.186.1       AS136730  INTERMARKET SECURITIES LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 65892 · Nayatel (AS23674) · nayatel.65892
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.18.1       —         (private/internal)
+    2      3.9   100.114.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.6   172.27.0.53        —         (private/internal)
+    4      3.4   172.16.90.245      —         (private/internal)
+    5      3.6   172.31.5.206       —         (private/internal)
+    6      4.3   172.31.5.170       —         (private/internal)
+    7      *     (no response)     
+    8      *     (no response)     
+    9     25.0   221.120.202.49     AS9557    Paknet Limited Merged into PTCL (PK)
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13     25.0   103.94.186.1       AS136730  INTERMARKET SECURITIES LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 1001359 · AS147302 · falcon.1001359
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   192.168.1.1        —         (private/internal)
+    2      1.5   100.86.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      1.6   160.30.236.1       AS147302  FALCON BROADBAND (PRIVATE) LIMITED (PK)
+    4      5.0   10.165.10.1        —         (private/internal)
+    5      5.0   172.16.134.2       —         (private/internal)
+    6      4.4   10.181.227.61      —         (private/internal)
+    7      4.6   117.20.30.21       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    8     20.8   110.93.252.228     —         TWA (PK)  [registry]
+    9     21.5   110.93.255.169     —         TWA (PK)  [registry]
+   10     44.7   149.40.227.185     AS174     Cogent Communications, LLC (US)
+   11     25.8   202.141.224.145    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   12     21.9   202.141.224.8      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   13     23.5   202.141.225.182    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   14     23.1   103.94.186.1       AS136730  INTERMARKET SECURITIES LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 1015679 · AS136174 · nova.1015679
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      1.7   70.70.119.26       AS6327    Shaw Communications (CA)
+    3      2.5   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.3   110.93.252.50      —         TWA (PK)  [registry]
+    5     18.7   110.93.255.169     —         TWA (PK)  [registry]
+    6     24.9   149.40.227.185     AS174     Cogent Communications, LLC (US)
+    7     22.8   202.141.224.145    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    8     25.5   202.141.224.8      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    9     23.4   202.141.225.182    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   10     25.3   103.94.186.1       AS136730  INTERMARKET SECURITIES LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 1016036 · Cybernet (AS9541) · cybernet.1016036
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.1.1        —         (private/internal)
+    2      2.4   203.101.189.254    AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    3      *     (no response)     
+    4     23.8   202.163.97.213     AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    5     24.0   192.168.248.205    —         (private/internal)
+    6     25.0   192.168.200.38     —         (private/internal)
+    7     24.1   192.168.73.78      —         (private/internal)
+    8     25.0   103.94.186.1       AS136730  INTERMARKET SECURITIES LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 1016126 · PTCL (AS17557) · ptcl.1016126
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.10.1       —         (private/internal)
+    2      8.7   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3      8.1   10.253.5.94        —         (private/internal)
+    4      8.5   10.253.4.122       —         (private/internal)
+    5      9.6   221.120.202.49     AS9557    Paknet Limited Merged into PTCL (PK)
+    6     10.9   192.168.76.193     —         (private/internal)
+    7     26.5   192.168.200.38     —         (private/internal)
+    8     10.3   192.168.73.78      —         (private/internal)
+    9     10.7   103.94.186.1       AS136730  INTERMARKET SECURITIES LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 1016143 · Cybernet (AS9541) · cybernet.1016143
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2     10.2   202.163.100.236    —         CYBERNET-PK (PK)  [registry]
+    3      4.4   10.15.15.122       —         (private/internal)
+    4      4.2   192.168.112.161    —         (private/internal)
+    5      7.1   192.168.200.38     —         (private/internal)
+    6      6.4   192.168.73.78      —         (private/internal)
+    7      5.8   103.94.186.1       AS136730  INTERMARKET SECURITIES LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 1016467 · Nayatel (AS23674) · nayatel.1016467
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      3.8   192.168.18.1       —         (private/internal)
+    2     20.7   100.113.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.3   172.16.49.205      —         (private/internal)
+    4      4.5   10.95.178.73       —         (private/internal)
+    5     20.2   10.253.4.52        —         (private/internal)
+    6     20.8   10.253.4.21        —         (private/internal)
+    7     21.3   221.120.202.49     AS9557    Paknet Limited Merged into PTCL (PK)
+    8     24.2   192.168.76.189     —         (private/internal)
+    9     23.3   192.168.200.34     —         (private/internal)
+   10     22.1   192.168.73.78      —         (private/internal)
+   11     21.9   103.94.186.1       AS136730  INTERMARKET SECURITIES LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ Intermarket.pk   —   Intermarket  (Cybernet customer (own ASN))
+ SOURCE   probe 1017335 · AS138910 · AS138910.1017335
+ DEST     103.94.186.1 · INTERMARKET SECURITIES LIMITED (AS136730) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   103.167.255.49     AS138910  N/A (PK)
+    2      0.6   10.7.41.1          —         (private/internal)
+    3      0.6   10.200.107.172     —         (private/internal)
+    4     18.0   10.232.238.134     —         (private/internal)
+    5     19.7   110.93.202.20      —         TWA (PK)  [registry]
+    6    128.6   149.40.227.185     AS174     Cogent Communications, LLC (US)
+    7     22.8   202.141.224.145    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    8     18.3   202.141.224.8      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    9     19.5   202.141.225.182    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   10     19.6   103.94.186.1       AS136730  INTERMARKET SECURITIES LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 7613 · Z-Com (AS152605) · zcom.7613
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.4   110.93.252.200     —         TWA (PK)  [registry]
+    4     16.5   110.93.252.173     —         TWA (PK)  [registry]
+    5     16.8   149.40.226.141     AS174     Cogent Communications, LLC (US)
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 7764 · PTCL (AS17557) · ptcl.7764
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.2   203.135.63.1       AS17557   Pakistan Telecommunication Company Limited (PK)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 60223 · Nayatel (AS23674) · nayatel.60223
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.18.1       —         (private/internal)
+    2      2.8   100.89.32.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.9   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      2.7   172.31.5.170       —         (private/internal)
+    6      2.9   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.6   110.93.252.84      —         TWA (PK)  [registry]
+    8     23.1   110.93.252.173     —         TWA (PK)  [registry]
+    9     23.1   149.40.226.141     AS174     Cogent Communications, LLC (US)
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 62224 · PERN (AS45773) · pern.62224
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   10.102.76.1        —         (private/internal)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 64078 · AS135407 · tes.64078
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   192.168.18.1       —         (private/internal)
+    2      4.4   45.249.11.241      AS135407  Trans World Enterprise Services (Private) Limited (PK)
+    3      3.4   119.63.137.130     —         TWA (PK)  [registry]
+    4     23.1   110.93.253.98      —         TWA (PK)  [registry]
+    5     23.4   110.93.255.169     —         TWA (PK)  [registry]
+    6     23.8   149.40.226.141     AS174     Cogent Communications, LLC (US)
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 65761 · Cybernet (AS9541) · cybernet.65761
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   192.168.0.1        —         (private/internal)
+    2      1.1   192.168.1.1        —         (private/internal)
+    3      3.0   10.15.234.230      —         (private/internal)
+    4      2.8   10.15.248.89       —         (private/internal)
+    5      3.1   10.15.248.177      —         (private/internal)
+    6      2.8   10.15.248.129      —         (private/internal)
+    7     25.5   192.168.200.229    —         (private/internal)
+    8     23.9   192.168.76.194     —         (private/internal)
+    9     24.8   119.63.137.60      —         TWA (PK)  [registry]
+   10     23.1   110.93.252.173     —         TWA (PK)  [registry]
+   11     23.4   149.40.226.141     AS174     Cogent Communications, LLC (US)
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 65892 · Nayatel (AS23674) · nayatel.65892
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      3.5   100.114.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.3   172.27.0.53        —         (private/internal)
+    4      3.8   172.16.90.245      —         (private/internal)
+    5      3.6   172.31.5.206       —         (private/internal)
+    6      3.1   172.31.5.170       —         (private/internal)
+    7      3.5   110.93.202.134     —         TWA (PK)  [registry]
+    8     23.6   110.93.252.86      —         TWA (PK)  [registry]
+    9     24.2   110.93.255.169     —         TWA (PK)  [registry]
+   10     24.4   149.40.226.141     AS174     Cogent Communications, LLC (US)
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 1001359 · AS147302 · falcon.1001359
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   192.168.1.1        —         (private/internal)
+    2      1.5   100.86.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      1.6   160.30.236.1       AS147302  FALCON BROADBAND (PRIVATE) LIMITED (PK)
+    4      5.1   10.165.10.1        —         (private/internal)
+    5      5.0   172.16.134.2       —         (private/internal)
+    6     10.2   10.181.227.61      —         (private/internal)
+    7      4.9   117.20.30.21       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    8     20.4   110.93.255.108     —         TWA (PK)  [registry]
+    9     21.0   110.93.252.173     —         TWA (PK)  [registry]
+   10      *     (no response)     
+   11     21.2   149.40.226.141     AS174     Cogent Communications, LLC (US)
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 1015679 · AS136174 · nova.1015679
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      1.6   70.70.119.26       AS6327    Shaw Communications (CA)
+    3      2.5   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.9   110.93.252.48      —         TWA (PK)  [registry]
+    5     19.4   110.93.255.169     —         TWA (PK)  [registry]
+    6     18.5   149.40.226.141     AS174     Cogent Communications, LLC (US)
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 1016036 · Cybernet (AS9541) · cybernet.1016036
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   192.168.1.1        —         (private/internal)
+    2      2.3   203.101.189.254    AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    3      3.4   192.168.72.149     —         (private/internal)
+    4     33.3   10.15.19.81        —         (private/internal)
+    5     27.4   192.168.248.205    —         (private/internal)
+    6     22.3   192.168.76.194     —         (private/internal)
+    7     22.3   119.63.137.60      —         TWA (PK)  [registry]
+    8     40.0   110.93.252.173     —         TWA (PK)  [registry]
+    9     23.8   149.40.226.141     AS174     Cogent Communications, LLC (US)
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 1016126 · PTCL (AS17557) · ptcl.1016126
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.10.1       —         (private/internal)
+    2      9.1   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3     11.4   10.253.5.94        —         (private/internal)
+    4     24.0   10.253.4.40        —         (private/internal)
+    5      9.7   10.253.4.51        —         (private/internal)
+    6     26.3   202.70.156.133     AS9557    Paknet Limited Merged into PTCL (PK)
+    7     40.4   202.70.156.133     AS9557    Paknet Limited Merged into PTCL (PK)
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 1016143 · Cybernet (AS9541) · cybernet.1016143
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      4.4   202.163.100.236    —         CYBERNET-PK (PK)  [registry]
+    3      4.9   10.15.15.122       —         (private/internal)
+    4      5.3   192.168.251.141    —         (private/internal)
+    5      *     (no response)     
+    6    113.6   119.63.137.60      —         TWA (PK)  [registry]
+    7    114.1   110.93.252.173     —         TWA (PK)  [registry]
+    8    114.4   149.40.226.141     AS174     Cogent Communications, LLC (US)
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 1016467 · Nayatel (AS23674) · nayatel.1016467
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.4   192.168.18.1       —         (private/internal)
+    2      3.6   100.113.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.4   149.40.226.144     AS174     Cogent Communications, LLC (US)
+    4     19.7   110.93.254.126     —         TWA (PK)  [registry]
+    5     20.6   110.93.255.169     —         TWA (PK)  [registry]
+    6     20.9   149.40.226.141     AS174     Cogent Communications, LLC (US)
+
+==============================================================================
+ K-Electric.pk   —   K-Electric  (Cybernet customer (own ASN))
+ SOURCE   probe 1017335 · AS138910 · AS138910.1017335
+ DEST     103.125.142.1 · K-Electric Limited (AS138444) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   103.167.255.49     AS138910  N/A (PK)
+    2      6.3   10.7.41.1          —         (private/internal)
+    3      0.5   10.200.107.172     —         (private/internal)
+    4      0.8   10.232.174.146     —         (private/internal)
+    5     10.0   10.232.107.134     —         (private/internal)
+    6     18.4   110.93.249.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     18.0   110.93.252.156     —         TWA (PK)  [registry]
+    8     18.7   110.93.255.169     —         TWA (PK)  [registry]
+    9     18.7   149.40.226.141     AS174     Cogent Communications, LLC (US)
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 7613 · Z-Com (AS152605) · zcom.7613
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     15.9   110.93.254.66      —         TWA (PK)  [registry]
+    4      *     (no response)     
+    5     91.7   192.168.76.189     —         (private/internal)
+    6     92.0   192.168.200.34     —         (private/internal)
+    7     94.3   103.155.145.1      AS141164  Khadim Ali Shah Bukhari Securities (Private) Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 7764 · PTCL (AS17557) · ptcl.7764
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   203.135.63.1       AS17557   Pakistan Telecommunication Company Limited (PK)
+    2      0.8   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 60223 · Nayatel (AS23674) · nayatel.60223
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.4   100.89.32.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.0   172.27.0.29        —         (private/internal)
+    4      3.0   172.27.0.22        —         (private/internal)
+    5      2.9   172.31.5.170       —         (private/internal)
+    6      2.7   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.9   110.93.252.84      —         TWA (PK)  [registry]
+    8     23.7   119.63.137.61      —         TWA (PK)  [registry]
+    9      *     (no response)     
+   10      *     (no response)     
+   11     24.7   103.155.145.1      AS141164  Khadim Ali Shah Bukhari Securities (Private) Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 62224 · PERN (AS45773) · pern.62224
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     23.7   103.155.145.1      AS141164  Khadim Ali Shah Bukhari Securities (Private) Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 64078 · AS135407 · tes.64078
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      3.5   45.249.11.241      AS135407  Trans World Enterprise Services (Private) Limited (PK)
+    3      3.3   119.63.137.130     —         TWA (PK)  [registry]
+    4     23.3   110.93.252.84      —         TWA (PK)  [registry]
+    5     24.4   119.63.137.61      —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7      *     (no response)     
+    8     25.0   103.155.145.1      AS141164  Khadim Ali Shah Bukhari Securities (Private) Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 65761 · Cybernet (AS9541) · cybernet.65761
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.0.1        —         (private/internal)
+    2      1.3   192.168.1.1        —         (private/internal)
+    3      2.8   10.15.234.230      —         (private/internal)
+    4      3.0   10.15.248.89       —         (private/internal)
+    5      2.5   10.15.248.177      —         (private/internal)
+    6      2.8   10.15.248.129      —         (private/internal)
+    7     33.3   10.14.16.21        —         (private/internal)
+    8     21.8   192.168.200.34     —         (private/internal)
+    9     20.5   103.155.145.1      AS141164  Khadim Ali Shah Bukhari Securities (Private) Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 65892 · Nayatel (AS23674) · nayatel.65892
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.6   100.114.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.6   172.27.0.53        —         (private/internal)
+    4      3.0   172.16.90.245      —         (private/internal)
+    5      3.4   172.31.5.206       —         (private/internal)
+    6      3.6   172.31.5.170       —         (private/internal)
+    7      3.9   110.93.202.134     —         TWA (PK)  [registry]
+    8     23.6   110.93.253.110     —         TWA (PK)  [registry]
+    9     25.1   119.63.137.61      —         TWA (PK)  [registry]
+   10      *     (no response)     
+   11      *     (no response)     
+   12     25.5   103.155.145.1      AS141164  Khadim Ali Shah Bukhari Securities (Private) Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 1001359 · AS147302 · falcon.1001359
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   192.168.1.1        —         (private/internal)
+    2      1.6   100.86.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      1.6   160.30.236.1       AS147302  FALCON BROADBAND (PRIVATE) LIMITED (PK)
+    4      5.2   10.165.10.1        —         (private/internal)
+    5      4.9   172.16.134.2       —         (private/internal)
+    6      7.9   10.181.227.61      —         (private/internal)
+    7      4.9   117.20.30.21       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    8     21.2   110.93.252.134     —         TWA (PK)  [registry]
+    9      *     (no response)     
+   10     22.1   192.168.76.189     —         (private/internal)
+   11     30.3   192.168.200.34     —         (private/internal)
+   12     22.9   103.155.145.1      AS141164  Khadim Ali Shah Bukhari Securities (Private) Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 1015679 · AS136174 · nova.1015679
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      2.1   70.70.119.26       AS6327    Shaw Communications (CA)
+    3     23.4   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.9   110.93.252.102     —         TWA (PK)  [registry]
+    5      *     (no response)     
+    6     22.1   192.168.76.193     —         (private/internal)
+    7     19.7   192.168.200.38     —         (private/internal)
+    8     19.5   103.155.145.1      AS141164  Khadim Ali Shah Bukhari Securities (Private) Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 1016036 · Cybernet (AS9541) · cybernet.1016036
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.1.1        —         (private/internal)
+    2      2.3   203.101.189.254    AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    3      3.4   192.168.72.149     —         (private/internal)
+    4     24.7   202.163.97.213     AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    5     23.6   192.168.248.205    —         (private/internal)
+    6     23.6   192.168.200.38     —         (private/internal)
+    7     24.5   103.155.145.1      AS141164  Khadim Ali Shah Bukhari Securities (Private) Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 1016126 · PTCL (AS17557) · ptcl.1016126
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.10.1       —         (private/internal)
+    2      8.3   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3      8.3   10.253.5.94        —         (private/internal)
+    4      8.3   10.253.4.122       —         (private/internal)
+    5      9.7   221.120.202.49     AS9557    Paknet Limited Merged into PTCL (PK)
+    6      9.2   192.168.76.193     —         (private/internal)
+    7     15.4   192.168.200.38     —         (private/internal)
+    8      9.9   103.155.145.1      AS141164  Khadim Ali Shah Bukhari Securities (Private) Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 1016143 · Cybernet (AS9541) · cybernet.1016143
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      4.5   202.163.100.236    —         CYBERNET-PK (PK)  [registry]
+    3      4.6   10.15.15.122       —         (private/internal)
+    4      6.4   192.168.112.161    —         (private/internal)
+    5      9.6   192.168.200.38     —         (private/internal)
+    6      5.1   103.155.145.1      AS141164  Khadim Ali Shah Bukhari Securities (Private) Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 1016467 · Nayatel (AS23674) · nayatel.1016467
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      3.7   192.168.18.1       —         (private/internal)
+    2      5.8   100.113.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.5   149.40.226.144     AS174     Cogent Communications, LLC (US)
+    4     19.9   110.93.255.176     —         TWA (PK)  [registry]
+    5     31.8   119.63.137.61      —         TWA (PK)  [registry]
+    6     20.6   192.168.76.189     —         (private/internal)
+    7     22.1   192.168.200.34     —         (private/internal)
+    8     21.8   103.155.145.1      AS141164  Khadim Ali Shah Bukhari Securities (Private) Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ KhadimAliShahBukhari.pk   —   Khadim Ali Shah Bukhari  (Cybernet customer (own ASN))
+ SOURCE   probe 1017335 · AS138910 · AS138910.1017335
+ DEST     103.155.145.1 · Khadim Ali Shah Bukhari Securities (Private) Limited (AS141164) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   103.167.255.49     AS138910  N/A (PK)
+    2      0.5   10.7.41.1          —         (private/internal)
+    3      0.5   10.200.107.172     —         (private/internal)
+    4     16.5   10.232.238.134     —         (private/internal)
+    5     16.6   110.93.202.20      —         TWA (PK)  [registry]
+    6     16.4   110.93.252.172     —         TWA (PK)  [registry]
+    7     17.8   119.63.137.61      —         TWA (PK)  [registry]
+    8     23.6   192.168.76.189     —         (private/internal)
+    9     19.3   192.168.200.34     —         (private/internal)
+   10     18.1   103.155.145.1      AS141164  Khadim Ali Shah Bukhari Securities (Private) Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 7613 · Z-Com (AS152605) · zcom.7613
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.8   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.2   110.93.252.200     —         TWA (PK)  [registry]
+    4      *     (no response)     
+    5     92.2   192.168.76.193     —         (private/internal)
+    6     94.4   192.168.200.38     —         (private/internal)
+    7     92.8   192.168.76.150     —         (private/internal)
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 7764 · PTCL (AS17557) · ptcl.7764
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   203.135.63.1       AS17557   Pakistan Telecommunication Company Limited (PK)
+    2      0.5   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 60223 · Nayatel (AS23674) · nayatel.60223
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      2.8   100.89.32.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   172.27.0.29        —         (private/internal)
+    4      2.8   172.27.0.22        —         (private/internal)
+    5      2.9   172.31.5.170       —         (private/internal)
+    6      2.9   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.9   110.93.252.84      —         TWA (PK)  [registry]
+    8     24.6   119.63.137.61      —         TWA (PK)  [registry]
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 62224 · PERN (AS45773) · pern.62224
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.3   10.102.76.1        —         (private/internal)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 64078 · AS135407 · tes.64078
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.3   45.249.11.241      AS135407  Trans World Enterprise Services (Private) Limited (PK)
+    3      3.3   119.63.137.130     —         TWA (PK)  [registry]
+    4     22.9   110.93.253.110     —         TWA (PK)  [registry]
+    5     24.4   119.63.137.61      —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 65761 · Cybernet (AS9541) · cybernet.65761
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.0.1        —         (private/internal)
+    2      1.1   192.168.1.1        —         (private/internal)
+    3      2.6   10.15.234.230      —         (private/internal)
+    4      1.9   10.15.248.89       —         (private/internal)
+    5      3.1   10.15.248.177      —         (private/internal)
+    6      3.1   10.15.248.129      —         (private/internal)
+    7     21.2   192.168.200.109    —         (private/internal)
+    8     20.1   192.168.200.34     —         (private/internal)
+    9     18.9   192.168.76.150     —         (private/internal)
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 65892 · Nayatel (AS23674) · nayatel.65892
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.8   192.168.18.1       —         (private/internal)
+    2      9.9   100.114.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.4   172.27.0.53        —         (private/internal)
+    4      3.1   172.16.90.245      —         (private/internal)
+    5      3.2   172.31.5.206       —         (private/internal)
+    6      3.7   172.31.5.170       —         (private/internal)
+    7      3.7   110.93.202.134     —         TWA (PK)  [registry]
+    8     23.4   110.93.252.34      —         TWA (PK)  [registry]
+    9     27.4   119.63.137.61      —         TWA (PK)  [registry]
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 1001359 · AS147302 · falcon.1001359
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   192.168.1.1        —         (private/internal)
+    2      2.0   100.86.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      1.7   160.30.236.1       AS147302  FALCON BROADBAND (PRIVATE) LIMITED (PK)
+    4      5.2   10.165.10.1        —         (private/internal)
+    5      5.0   172.16.134.2       —         (private/internal)
+    6      5.1   10.181.227.61      —         (private/internal)
+    7      4.9   117.20.30.21       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    8     21.0   110.93.252.134     —         TWA (PK)  [registry]
+    9     21.9   119.63.137.61      —         TWA (PK)  [registry]
+   10     21.2   192.168.76.193     —         (private/internal)
+   11     24.7   192.168.200.38     —         (private/internal)
+   12     21.8   192.168.76.150     —         (private/internal)
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 1015679 · AS136174 · nova.1015679
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.100.1      —         (private/internal)
+    2      1.8   70.70.119.26       AS6327    Shaw Communications (CA)
+    3      2.6   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.8   110.93.252.200     —         TWA (PK)  [registry]
+    5     19.9   119.63.137.61      —         TWA (PK)  [registry]
+    6     28.0   192.168.76.189     —         (private/internal)
+    7     21.8   192.168.200.34     —         (private/internal)
+    8     18.8   192.168.76.150     —         (private/internal)
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 1016036 · Cybernet (AS9541) · cybernet.1016036
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.1.1        —         (private/internal)
+    2      2.1   203.101.189.254    AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    3      3.8   192.168.72.149     —         (private/internal)
+    4     28.3   202.163.97.213     AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    5     27.7   192.168.200.205    —         (private/internal)
+    6     28.6   192.168.200.34     —         (private/internal)
+    7     22.9   192.168.76.150     —         (private/internal)
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 1016126 · PTCL (AS17557) · ptcl.1016126
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.10.1       —         (private/internal)
+    2      8.3   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3      8.3   10.253.5.94        —         (private/internal)
+    4      8.7   10.253.4.122       —         (private/internal)
+    5      9.9   221.120.202.49     AS9557    Paknet Limited Merged into PTCL (PK)
+    6      9.4   192.168.76.189     —         (private/internal)
+    7     10.2   192.168.200.34     —         (private/internal)
+    8      9.1   192.168.76.150     —         (private/internal)
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 1016143 · Cybernet (AS9541) · cybernet.1016143
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      4.5   202.163.100.236    —         CYBERNET-PK (PK)  [registry]
+    3      4.5   10.15.15.122       —         (private/internal)
+    4     13.8   192.168.112.161    —         (private/internal)
+    5      5.7   192.168.200.38     —         (private/internal)
+    6      4.5   192.168.76.150     —         (private/internal)
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 1016467 · Nayatel (AS23674) · nayatel.1016467
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      5.1   192.168.18.1       —         (private/internal)
+    2      3.4   100.113.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.1   149.40.226.144     AS174     Cogent Communications, LLC (US)
+    4     20.0   110.93.254.124     —         TWA (PK)  [registry]
+    5     21.2   119.63.137.61      —         TWA (PK)  [registry]
+    6     20.6   192.168.76.193     —         (private/internal)
+    7     25.1   192.168.200.38     —         (private/internal)
+    8     20.7   192.168.76.150     —         (private/internal)
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ MTPPL.pk   —   MTPPL  (Cybernet customer (own ASN))
+ SOURCE   probe 1017335 · AS138910 · AS138910.1017335
+ DEST     103.110.52.1 · M3 Technologies Pakistan Pvt. Ltd (AS137481) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   103.167.255.49     AS138910  N/A (PK)
+    2      0.7   10.7.41.1          —         (private/internal)
+    3      0.5   10.200.107.172     —         (private/internal)
+    4     16.4   10.232.238.134     —         (private/internal)
+    5     16.6   110.93.202.20      —         TWA (PK)  [registry]
+    6     16.6   110.93.252.172     —         TWA (PK)  [registry]
+    7      *     (no response)     
+    8     17.0   192.168.76.193     —         (private/internal)
+    9     19.7   192.168.200.38     —         (private/internal)
+   10     17.4   192.168.76.150     —         (private/internal)
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 7613 · Z-Com (AS152605) · zcom.7613
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.6   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.252.102     —         TWA (PK)  [registry]
+    4      *     (no response)     
+    5     92.5   192.168.76.193     —         (private/internal)
+    6     90.7   192.168.200.253    —         (private/internal)
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 7764 · PTCL (AS17557) · ptcl.7764
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   203.135.63.1       AS17557   Pakistan Telecommunication Company Limited (PK)
+    2      0.2   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 60223 · Nayatel (AS23674) · nayatel.60223
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      2.9   100.89.32.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.9   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      3.1   172.31.5.170       —         (private/internal)
+    6      3.0   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.4   110.93.253.110     —         TWA (PK)  [registry]
+    8     24.1   119.63.137.61      —         TWA (PK)  [registry]
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 62224 · PERN (AS45773) · pern.62224
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   10.102.76.1        —         (private/internal)
+    2      0.5   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 64078 · AS135407 · tes.64078
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      2.7   45.249.11.241      AS135407  Trans World Enterprise Services (Private) Limited (PK)
+    3      3.3   119.63.137.130     —         TWA (PK)  [registry]
+    4     23.2   110.93.252.34      —         TWA (PK)  [registry]
+    5    110.8   119.63.137.61      —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 65761 · Cybernet (AS9541) · cybernet.65761
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   192.168.0.1        —         (private/internal)
+    2      2.2   192.168.1.1        —         (private/internal)
+    3      2.9   10.15.234.230      —         (private/internal)
+    4      2.8   10.15.248.89       —         (private/internal)
+    5      2.8   10.15.248.177      —         (private/internal)
+    6      8.9   10.15.248.129      —         (private/internal)
+    7     28.8   192.168.200.109    —         (private/internal)
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 65892 · Nayatel (AS23674) · nayatel.65892
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.2   100.114.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.3   172.27.0.53        —         (private/internal)
+    4      3.1   172.16.90.245      —         (private/internal)
+    5      3.1   172.31.5.206       —         (private/internal)
+    6      3.6   172.31.5.170       —         (private/internal)
+    7      3.5   110.93.202.134     —         TWA (PK)  [registry]
+    8     23.5   110.93.252.34      —         TWA (PK)  [registry]
+    9     24.7   119.63.137.61      —         TWA (PK)  [registry]
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 1001359 · AS147302 · falcon.1001359
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   192.168.1.1        —         (private/internal)
+    2      3.5   100.86.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      1.6   160.30.236.1       AS147302  FALCON BROADBAND (PRIVATE) LIMITED (PK)
+    4      4.3   10.165.10.1        —         (private/internal)
+    5      4.7   172.16.134.2       —         (private/internal)
+    6      5.0   10.181.227.61      —         (private/internal)
+    7      5.1   117.20.30.21       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    8     20.2   110.93.252.204     —         TWA (PK)  [registry]
+    9     21.7   119.63.137.61      —         TWA (PK)  [registry]
+   10     21.6   192.168.76.193     —         (private/internal)
+   11     21.8   192.168.200.253    —         (private/internal)
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 1015679 · AS136174 · nova.1015679
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2      1.9   70.70.119.26       AS6327    Shaw Communications (CA)
+    3      2.6   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.5   110.93.252.200     —         TWA (PK)  [registry]
+    5     19.3   119.63.137.61      —         TWA (PK)  [registry]
+    6     19.4   192.168.76.189     —         (private/internal)
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 1016036 · Cybernet (AS9541) · cybernet.1016036
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.1.1        —         (private/internal)
+    2      2.0   203.101.189.254    AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    3      *     (no response)     
+    4     22.8   10.15.19.81        —         (private/internal)
+    5     22.0   192.168.200.205    —         (private/internal)
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 1016126 · PTCL (AS17557) · ptcl.1016126
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.10.1       —         (private/internal)
+    2      8.1   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3      8.1   10.253.5.98        —         (private/internal)
+    4      8.3   10.253.4.124       —         (private/internal)
+    5      9.5   221.120.202.49     AS9557    Paknet Limited Merged into PTCL (PK)
+    6      9.4   192.168.76.189     —         (private/internal)
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 1016143 · Cybernet (AS9541) · cybernet.1016143
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      6.1   202.163.100.236    —         CYBERNET-PK (PK)  [registry]
+    3      4.6   10.15.15.122       —         (private/internal)
+    4      4.8   192.168.251.141    —         (private/internal)
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 1016467 · Nayatel (AS23674) · nayatel.1016467
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      3.5   192.168.18.1       —         (private/internal)
+    2      3.1   100.113.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.3   149.40.226.144     AS174     Cogent Communications, LLC (US)
+    4     19.8   110.93.254.70      —         TWA (PK)  [registry]
+    5     21.1   119.63.137.61      —         TWA (PK)  [registry]
+    6     20.7   192.168.76.193     —         (private/internal)
+    7     20.8   192.168.200.253    —         (private/internal)
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ NayaPay.pk   —   NayaPay  (Cybernet customer (own ASN))
+ SOURCE   probe 1017335 · AS138910 · AS138910.1017335
+ DEST     103.210.224.1 · Nayapay (Pvt.) Limited (AS139067) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   103.167.255.49     AS138910  N/A (PK)
+    2      0.6   10.7.41.1          —         (private/internal)
+    3      0.7   10.200.107.172     —         (private/internal)
+    4     18.2   10.232.238.134     —         (private/internal)
+    5     18.2   110.93.202.20      —         TWA (PK)  [registry]
+    6     17.9   110.93.252.172     —         TWA (PK)  [registry]
+    7     86.4   119.63.137.61      —         TWA (PK)  [registry]
+    8     18.7   192.168.76.193     —         (private/internal)
+    9     18.6   192.168.200.253    —         (private/internal)
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 7613 · Z-Com (AS152605) · zcom.7613
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.6   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.252.102     —         TWA (PK)  [registry]
+    4      *     (no response)     
+    5     91.2   192.168.76.189     —         (private/internal)
+    6     92.7   192.168.200.34     —         (private/internal)
+    7     93.5   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 7764 · PTCL (AS17557) · ptcl.7764
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   203.135.63.1       AS17557   Pakistan Telecommunication Company Limited (PK)
+    2      0.7   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     26.7   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 60223 · Nayatel (AS23674) · nayatel.60223
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      2.7   100.89.32.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.3   172.27.0.29        —         (private/internal)
+    4      2.6   172.27.0.22        —         (private/internal)
+    5      3.1   172.31.5.170       —         (private/internal)
+    6      2.7   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.4   110.93.253.110     —         TWA (PK)  [registry]
+    8     23.6   119.63.137.61      —         TWA (PK)  [registry]
+    9      *     (no response)     
+   10      *     (no response)     
+   11     24.0   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 62224 · PERN (AS45773) · pern.62224
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   10.102.76.1        —         (private/internal)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     22.9   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 64078 · AS135407 · tes.64078
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      3.2   45.249.11.241      AS135407  Trans World Enterprise Services (Private) Limited (PK)
+    3      2.8   119.63.137.130     —         TWA (PK)  [registry]
+    4     22.4   110.93.252.84      —         TWA (PK)  [registry]
+    5     23.9   119.63.137.61      —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7      *     (no response)     
+    8     25.2   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 65761 · Cybernet (AS9541) · cybernet.65761
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   192.168.0.1        —         (private/internal)
+    2      1.1   192.168.1.1        —         (private/internal)
+    3      3.2   10.15.234.230      —         (private/internal)
+    4      3.2   10.15.248.89       —         (private/internal)
+    5      3.6   10.15.248.177      —         (private/internal)
+    6      3.3   10.15.248.129      —         (private/internal)
+    7     22.4   192.168.200.225    —         (private/internal)
+    8     23.2   192.168.200.34     —         (private/internal)
+    9     22.7   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 65892 · Nayatel (AS23674) · nayatel.65892
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   192.168.18.1       —         (private/internal)
+    2      3.6   100.114.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.3   172.27.0.53        —         (private/internal)
+    4      3.2   172.16.90.245      —         (private/internal)
+    5      3.4   172.31.5.206       —         (private/internal)
+    6      3.5   172.31.5.170       —         (private/internal)
+    7      3.4   110.93.202.134     —         TWA (PK)  [registry]
+    8     23.1   110.93.252.34      —         TWA (PK)  [registry]
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12     24.8   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 1001359 · AS147302 · falcon.1001359
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.1.1        —         (private/internal)
+    2      1.5   100.86.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      1.7   160.30.236.1       AS147302  FALCON BROADBAND (PRIVATE) LIMITED (PK)
+    4      5.0   10.165.10.1        —         (private/internal)
+    5      5.1   172.16.134.2       —         (private/internal)
+    6     20.1   10.181.227.61      —         (private/internal)
+    7      9.0   117.20.30.21       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    8     20.5   110.93.255.108     —         TWA (PK)  [registry]
+    9     21.6   119.63.137.61      —         TWA (PK)  [registry]
+   10     22.0   192.168.76.189     —         (private/internal)
+   11     22.7   192.168.200.34     —         (private/internal)
+   12     22.4   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 1015679 · AS136174 · nova.1015679
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.4   192.168.100.1      —         (private/internal)
+    2      1.6   70.70.119.26       AS6327    Shaw Communications (CA)
+    3      2.8   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.1   110.93.252.102     —         TWA (PK)  [registry]
+    5     19.4   119.63.137.61      —         TWA (PK)  [registry]
+    6     18.8   192.168.76.193     —         (private/internal)
+    7     19.7   192.168.200.38     —         (private/internal)
+    8     19.5   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 1016036 · Cybernet (AS9541) · cybernet.1016036
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.1.1        —         (private/internal)
+    2      2.3   203.101.189.254    AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    3      3.9   192.168.72.149     —         (private/internal)
+    4     27.8   10.15.19.81        —         (private/internal)
+    5     28.6   192.168.248.205    —         (private/internal)
+    6     23.1   192.168.200.38     —         (private/internal)
+    7     23.8   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 1016126 · PTCL (AS17557) · ptcl.1016126
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.10.1       —         (private/internal)
+    2      8.6   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3      8.6   10.253.5.98        —         (private/internal)
+    4      8.9   10.253.4.124       —         (private/internal)
+    5      9.9   221.120.202.49     AS9557    Paknet Limited Merged into PTCL (PK)
+    6     11.7   192.168.76.193     —         (private/internal)
+    7     43.3   192.168.200.38     —         (private/internal)
+    8      9.4   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 1016143 · Cybernet (AS9541) · cybernet.1016143
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      4.5   202.163.100.236    —         CYBERNET-PK (PK)  [registry]
+    3      4.5   10.15.15.122       —         (private/internal)
+    4      6.4   192.168.251.141    —         (private/internal)
+    5      5.5   192.168.200.34     —         (private/internal)
+    6      4.9   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 1016467 · Nayatel (AS23674) · nayatel.1016467
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      3.7   192.168.18.1       —         (private/internal)
+    2      3.1   100.113.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.6   149.40.226.144     AS174     Cogent Communications, LLC (US)
+    4     19.7   110.93.254.70      —         TWA (PK)  [registry]
+    5     21.1   119.63.137.61      —         TWA (PK)  [registry]
+    6     20.8   192.168.76.189     —         (private/internal)
+    7     23.0   192.168.200.34     —         (private/internal)
+    8     21.8   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ Shirazi.pk   —   Shirazi  (Cybernet customer (own ASN))
+ SOURCE   probe 1017335 · AS138910 · AS138910.1017335
+ DEST     103.103.112.1 · Shirazi Investments Pvt Ltd. (AS137258) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   103.167.255.49     AS138910  N/A (PK)
+    2      4.7   10.7.41.1          —         (private/internal)
+    3      0.6   10.200.107.172     —         (private/internal)
+    4     16.3   10.232.238.134     —         (private/internal)
+    5     16.3   110.93.202.20      —         TWA (PK)  [registry]
+    6     16.4   110.93.252.172     —         TWA (PK)  [registry]
+    7      *     (no response)     
+    8     17.2   192.168.76.189     —         (private/internal)
+    9     18.6   192.168.200.34     —         (private/internal)
+   10     17.8   103.103.112.1      AS137258  Shirazi Investments Pvt Ltd. (PK)   <<< DESTINATION

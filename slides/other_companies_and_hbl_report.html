@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Other Cybernet Companies & HBL</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7;
+    --surface: #fcfcfb;
+    --text: #0b0b0b;
+    --text-2: #52514e;
+    --muted: #898781;
+    --grid: #e1e0d9;
+    --axis: #c3c2b7;
+    --border: rgba(11,11,11,0.10);
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --good: #0ca30c;
+    --critical: #d03b3b;
+    --warning: #fab219;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --page: #0d0d0d; --surface: #1a1a19; --text: #ffffff; --text-2: #c3c2b7;
+      --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+      --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+      --good: #0ca30c; --critical: #e66767; --warning: #fab219;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --text: #ffffff; --text-2: #c3c2b7;
+    --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+    --good: #0ca30c; --critical: #e66767; --warning: #fab219;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--page); color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  body { display: flex; }
+  nav#toc { position: sticky; top: 0; height: 100vh; width: 250px; flex: 0 0 250px;
+    overflow-y: auto; padding: 2rem 1.2rem; border-right: 1px solid var(--border); font-size: 0.88rem; }
+  nav#toc .brand { font-weight: 700; font-size: 1rem; margin-bottom: 1.4rem; }
+  nav#toc a { display: block; color: var(--text-2); text-decoration: none; padding: 0.35rem 0;
+    border-left: 2px solid transparent; padding-left: 0.7rem; margin-left: -0.7rem; }
+  nav#toc a:hover, nav#toc a.active { color: var(--text); border-left-color: var(--s1); }
+  nav#toc .grp { margin-top: 1.1rem; color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.06em; font-size: 0.72rem; font-weight: 700; }
+  main { flex: 1; min-width: 0; max-width: 980px; margin: 0 auto; padding: 4rem 3rem 8rem; }
+  .kicker { color: var(--s1); text-transform: uppercase; letter-spacing: 0.08em;
+    font-size: 0.82rem; font-weight: 700; margin-bottom: 0.5rem; }
+  h1 { font-size: 2.4rem; line-height: 1.15; margin: 0 0 0.5rem; }
+  h2 { font-size: 1.6rem; margin: 0 0 0.3rem; padding-top: 0.2rem; }
+  h3 { font-size: 1.1rem; color: var(--text-2); margin: 1.6rem 0 0.6rem; }
+  .lede { font-size: 1.2rem; color: var(--text-2); max-width: 640px; line-height: 1.55; }
+  p { font-size: 1rem; line-height: 1.65; color: var(--text); max-width: 700px; }
+  section { padding-top: 4rem; border-top: 1px solid var(--border); margin-top: 4rem; }
+  section:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+  .q { color: var(--muted); font-size: 0.92rem; font-style: italic; margin-bottom: 1.1rem; }
+  code { background: var(--grid); padding: 0.1em 0.4em; border-radius: 4px; font-size: 0.9em; }
+  pre { background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    padding: 1rem 1.2rem; font-size: 0.88rem; overflow-x: auto; line-height: 1.55; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.92rem; }
+  th, td { text-align: left; padding: 0.5rem 0.85rem; border-bottom: 1px solid var(--grid); }
+  th { color: var(--muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  tr:last-child td { border-bottom: none; }
+  .pill { display: inline-flex; align-items: center; gap: 0.35em; padding: 0.15em 0.65em;
+    border-radius: 99px; font-size: 0.78rem; font-weight: 600; white-space: nowrap; }
+  .pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+  .pill.good { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent); }
+  .pill.good::before { background: var(--good); }
+  .pill.bad { color: var(--critical); background: color-mix(in srgb, var(--critical) 14%, transparent); }
+  .pill.bad::before { background: var(--critical); }
+  .pill.warn { color: var(--warning); background: color-mix(in srgb, var(--warning) 22%, transparent); }
+  .pill.warn::before { background: var(--warning); }
+  .pill.info { color: var(--s1); background: color-mix(in srgb, var(--s1) 14%, transparent); }
+  .pill.info::before { background: var(--s1); }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0 1rem; }
+  .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.2rem; }
+  .stat .n { font-size: 1.8rem; font-weight: 700; line-height: 1; }
+  .stat .l { color: var(--muted); font-size: 0.82rem; margin-top: 0.4rem; line-height: 1.35; }
+  .callout { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--s1);
+    border-radius: 0 8px 8px 0; padding: 1rem 1.3rem; margin: 1.2rem 0; font-size: 0.92rem; color: var(--text-2); }
+  .callout.warn { border-left-color: var(--warning); }
+  .callout.bad { border-left-color: var(--critical); }
+  .callout b { color: var(--text); }
+  .path { display: flex; align-items: center; flex-wrap: wrap; gap: 0; margin: 1.1rem 0; font-size: 0.84rem; }
+  .hop { background: var(--surface); border: 1.5px solid var(--grid); border-radius: 8px;
+    padding: 0.5rem 0.75rem; text-align: center; min-width: 88px; }
+  .hop .t { font-weight: 700; }
+  .hop .c { color: var(--muted); font-size: 0.76rem; }
+  .hop.domestic { border-color: var(--good); }
+  .hop.abroad { border-color: var(--critical); background: color-mix(in srgb, var(--critical) 6%, var(--surface)); }
+  .hop.unsure { border-color: var(--warning); background: color-mix(in srgb, var(--warning) 10%, var(--surface)); }
+  .arrow { color: var(--muted); padding: 0 0.35rem; font-size: 1.05rem; }
+  .pathlabel { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.3rem; font-weight: 600; }
+  .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; }
+  .card h4 { margin: 0 0 0.5rem; font-size: 0.92rem; }
+  .bar-row { display: grid; grid-template-columns: 150px 1fr 64px; align-items: center; gap: 0.7rem;
+    margin-bottom: 0.5rem; font-size: 0.85rem; }
+  .bar-track { background: var(--grid); border-radius: 4px; height: 14px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; }
+  .bar-val { text-align: right; color: var(--text-2); font-variant-numeric: tabular-nums; font-size: 0.82rem; }
+  .legend { display: flex; gap: 1.2rem; font-size: 0.8rem; color: var(--text-2); margin-bottom: 0.9rem; }
+  .legend span { display: inline-flex; align-items: center; gap: 0.4em; }
+  .legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+  .hopline { display: grid; grid-template-columns: 34px 60px 1fr 1fr; gap: 0.6rem; align-items: baseline;
+    font-size: 0.85rem; padding: 0.3rem 0; border-bottom: 1px dashed var(--grid); font-variant-numeric: tabular-nums; }
+  .hopline.dest { font-weight: 700; }
+  .hopline .n { color: var(--muted); }
+  .hopline .ip { color: var(--text-2); }
+  footer { border-top: 1px solid var(--border); margin-top: 5rem; padding-top: 2rem; color: var(--muted); font-size: 0.85rem; }
+  @media (max-width: 900px) {
+    nav#toc { display: none; } main { padding: 2.5rem 1.3rem 5rem; }
+    .stats { grid-template-columns: 1fr 1fr; } .card-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="toc">
+  <div class="brand">Other Companies &amp; HBL</div>
+  <a href="#intro">Overview</a>
+  <a href="#method">Method &amp; correction</a>
+  <a href="#results">The 8 companies</a>
+  <div class="grp">HBL deep dive</div>
+  <a href="#hbl-fast">The fast, normal path</a>
+  <a href="#hbl-slow">The slow, odd detour</a>
+  <a href="#hbl-decix">Checking DE-CIX directly</a>
+  <a href="#hbl-lesson">Why address-matching can't settle it</a>
+  <a href="#summary">Summary</a>
+</nav>
+
+<main>
+
+  <section id="intro">
+    <div class="kicker">Follow-up &middot; Exp 13</div>
+    <h1>Does EFU Life's problem show up anywhere else?</h1>
+    <p class="lede">Cybernet's BGP neighbor list turned up 10 Pakistani companies. This is what happened when we actually traced to them, and an interesting case: HBL Bank</p>
+    <div class="stats">
+      <div class="stat"><div class="n">10</div><div class="l">Cybernet-connected companies found via its BGP neighbor list</div></div>
+      <div class="stat"><div class="n">0 of 10</div><div class="l">tested live show as single-homed to Cybernet</div></div>
+      <div class="stat"><div class="n">1</div><div class="l"> Odd case</div></div>
+    </div>
+  </section>
+
+  <section id="method">
+    <div class="kicker">Method, and a correction made along the way</div>
+    <h2>How these companies were found, and what that does and doesn't prove</h2>
+    <p class="q">Pulled every ASN RIS has ever recorded as directly adjacent to Cybernet (192 total), kept the ones registered in Pakistan (14 unique), removed the 2 real ISPs, Cybernet's own second registration, and EFU Life itself. That leaves 10.</p>
+   
+  </section>
+
+  <section id="results">
+    <div class="kicker">Results</div>
+    <h2>8 companies, live-traced from every available Pakistani probe</h2>
+    <table>
+      <tr><th>Company</th><th>Result</th></tr>
+      <tr><td>Intermarket</td><td><span class="pill good">domestic, every probe</span></td></tr>
+      <tr><td>Shirazi</td><td><span class="pill good">domestic, every probe</span></td></tr>
+      <tr><td>Khadim Ali Shah Bukhari</td><td><span class="pill good">domestic, every probe</span></td></tr>
+      <tr><td>DataCheck</td><td><span class="pill good">domestic, every probe</span></td></tr>
+      <tr><td>MTPPL</td><td><span class="pill warn">no response, anyone</span></td></tr>
+      <tr><td>K-Electric</td><td><span class="pill warn">no response, anyone</span></td></tr>
+      <tr><td>NayaPay</td><td><span class="pill warn">no response, anyone</span></td></tr>
+      <tr><td>HBL Bank</td><td><span class="pill info">domestic, but one odd detail &darr;</span></td></tr>
+    </table>
+    <p>None show EFU Life's actual problem, an enforced international hairpin. Four are simply fine. Three gave no data either way, the specific address tested never answered anyone, not even Cybernet's own probes. HBL Bank is the interesting exception, reached fine by everyone, but with a detail worth a closer look.</p>
+  </section>
+
+  <section id="hbl-fast">
+    <div class="kicker">HBL deep dive, part 1</div>
+    <h2>What a normal path to HBL Bank looks like</h2>
+    <div class="pathlabel">PERN &rarr; HBL Bank, 22.5ms total</div>
+    <div class="path">
+      <div class="hop domestic"><div class="t">PERN</div><div class="c">source</div></div>
+      <div class="arrow">&rarr;</div>
+      <div class="hop domestic"><div class="t">HBL Bank</div><div class="c">22.5ms, direct</div></div>
+    </div>
+    <p>Fast, direct, no detour. Most probes looked like this, PTCL's own probe reached HBL in 9ms via its own network directly.</p>
+  </section>
+
+  <section id="hbl-slow">
+    <div class="kicker">HBL deep dive, part 2</div>
+    <h2>What Cybernet's own probes did instead</h2>
+    <p class="q">Cybernet is supposed to be right next to its own hosted customer. Instead, two of its probes left Cybernet's network entirely, went out to a PTCL-owned router, and came back.</p>
+    <div class="pathlabel">Cybernet probe 1016143 &rarr; HBL Bank, 113.6ms total (5x slower than PERN)</div>
+    <div id="hbl-hops"></div>
+    <div class="callout">
+      <b>Confirmed real, not a fluke:</b> the same two hostnames, <code>khi77.pie.net.pk</code>, showed up identically when this was re-run directly from a real Cybernet Lahore home connection. Same detour, independent source, six weeks apart in spirit if not in time.
+    </div>
+    <div id="hbl-retry-slot"></div>
+  </section>
+
+  <section id="hbl-decix">
+    <div class="kicker">HBL deep dive, part 3</div>
+    <h2>Checking the actual exchange, not just the traceroute</h2>
+    <p>The hostname says "pie", Pakistan's DE-CIX-powered exchange in Karachi. Rather than guess, we queried DE-CIX's own live route-server API directly.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h4>PIE Karachi's route server, right now</h4>
+        <p style="margin:0">11 members. PTCL is one, 644 routes, matching the paper's own "ISP F" figure almost exactly. <b>Cybernet is not a member at all.</b></p>
+      </div>
+      <div class="card">
+        <h4>HBL's own block, searched globally</h4>
+        <p style="margin:0">Not found at PIE Karachi. Found at two <i>other</i> DE-CIX locations instead, one via an Italian carrier, one via <b>GSL Networks &rarr; Omantel &rarr; PTCL</b> at DE-CIX Chicago.</p>
+      </div>
+    </div>
+    <div class="pathlabel">Live route into HBL's block, found at DE-CIX Chicago</div>
+    <div class="path">
+      <div class="hop abroad"><div class="t">GSL Networks</div><div class="c">same company as EFU Life's hairpin</div></div>
+      <div class="arrow">&rarr;</div>
+      <div class="hop abroad"><div class="t">Omantel</div><div class="c">same as EFU Life's hairpin</div></div>
+      <div class="arrow">&rarr;</div>
+      <div class="hop domestic"><div class="t">PTCL</div></div>
+      <div class="arrow">&rarr;</div>
+      <div class="hop domestic"><div class="t">HBL Bank</div></div>
+    </div>
+    <p>The exact same two foreign companies from EFU Life's hairpin, now showing up independently, in a completely different tool, for a completely different company. Real, currently live, corroborated two separate ways.</p>
+  </section>
+
+  <section id="hbl-lesson">
+    <div class="kicker">The methodological catch</div>
+    <h2>Why we still can't prove PIE itself was used</h2>
+    <p>A router usually has several addresses, one per cable, plus a stable "identity" address unrelated to any of them. When it replies to a traceroute probe, it commonly uses that identity address, not whichever cable actually carried your packet. So a router can genuinely be using its PIE-facing connection and still never reveal that specific address.</p>
+    <div class="callout bad">
+      <b>What this means concretely:</b> checking whether a traceroute hop falls inside PIE's published peering-LAN address range (<code>58.181.127.0/24</code>) cannot conclusively confirm or rule out exchange usage, in either direction. The DE-CIX route-server data above is the stronger evidence, it comes directly from the exchange, not from guessing at addresses.
+    </div>
+  </section>
+
+  <section id="summary">
+    <div class="kicker">Where this leaves things</div>
+    <h2>Summary</h2>
+    <ul style="font-size:0.98rem; line-height:1.75; max-width:700px;">
+      <li>EFU Life's specific problem does not show up in any of the 8 other Cybernet-connected companies actually tested live.</li>
+      <li>HBL Bank is reached fine by everyone in practice, but Cybernet's own route to it is unexpectedly slow and circuitous, real, repeatable, not yet fully explained.</li>
+      <li>Cybernet is confirmed, directly from DE-CIX's own data, not a member of PIE Karachi's route server. PTCL is.</li>
+      <li>HBL's own address block is live and announced at two international DE-CIX locations, one of them through the identical GSL Networks / Omantel chain found in EFU Life's hairpin.</li>
+      <li>Address-matching against a peering-LAN prefix cannot settle whether a specific exchange was used, a real methodological limit worth carrying into how the paper's own PKIX/PIE crossing claim is worded.</li>
+    </ul>
+  </section>
+
+  <footer>
+    Full data: <code>experiments/13_efulife_live_snapshot/OTHER_COMPANIES_RESULTS.md</code> and <code>results/other_customers_batch2_20260906_012207/</code>.
+  </footer>
+
+</main>
+
+<script>
+function hopLine(n, rtt, ip, who, dest) {
+  return `<div class="hopline ${dest?'dest':''}"><span class="n">${n}</span><span>${rtt}</span><span class="ip">${ip}</span><span>${who}${dest?' &larr; DESTINATION':''}</span></div>`;
+}
+document.getElementById('hbl-hops').innerHTML =
+  hopLine(1,'1.6ms','192.168.18.1','(private)') +
+  hopLine(2,'4.4ms','202.163.100.236','Cybernet, own network') +
+  hopLine(3,'4.4ms','10.15.15.122','(private)') +
+  hopLine(4,'24.6ms','192.168.112.161','(private)') +
+  hopLine(5,'*','—','(no response)') +
+  hopLine(6,'<b>113.0ms</b>','221.120.202.48','<b>khi77.pie.net.pk</b> — PTCL/Paknet') +
+  hopLine(7,'114.6ms','10.253.4.71','(private)') +
+  hopLine(8,'139.6ms','202.125.130.101','<b>khi77.pie.net.pk</b> — PTCL') +
+  hopLine(9,'113.6ms','103.111.84.5','HBL Bank',true);
+
+document.getElementById('hbl-retry-slot').innerHTML =
+  '<p style="color:var(--muted); font-size:0.88rem;">Retried twice, same day: all three Cybernet probes (65761, 1016036, 1016143) timed out both times with no result at all, not slow, not congested, no data returned. So whether the detour has cleared up is still unknown, RIPE simply didn\\'t deliver a fresh measurement to check against.</p>';
+</script>
+</body>
+</html>

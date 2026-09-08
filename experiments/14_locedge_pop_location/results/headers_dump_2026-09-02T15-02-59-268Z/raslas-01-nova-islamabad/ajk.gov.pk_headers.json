@@ -1,0 +1,4012 @@
+[
+  {
+    "url": "https://ajk.gov.pk/",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "DYNAMIC"
+      ]
+    },
+    "responseHeaders": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "a34d803649a602c2-HKG",
+      "content-encoding": "zstd",
+      "content-type": "text/html; charset=UTF-8",
+      "date": "Wed, 02 Sep 2026 15:20:51 GMT",
+      "link": "<https://ajk.gov.pk/wp-json/>; rel=\"https://api.w.org/\", <https://ajk.gov.pk/wp-json/wp/v2/pages/103>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://ajk.gov.pk/>; rel=shortlink",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4o%2BizcnQ06xSauzy1EeZ4tED5MShjqM7c6kqnjg%2FgTtgvjyV1%2BdZ7ktKYeWgoExbWomLtLcfcT6vSFXyqDf2fc1GRHUWPJ7Cdsq2frYsoHbZu5aeWAvi%2BnUyTj%2Bc\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfCacheStatus;desc=\"DYNAMIC\"\ncfEdge;dur=11,cfOrigin;dur=3604",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "vary": "Accept-Encoding"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/cdn-cgi/speculation",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ]
+    },
+    "responseHeaders": {
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ozZZqYBmg%2B6pfke62J2U%2BWre%2BDKVVOzPwtk70f8OYhGUlvJWr2eVtTFLTnomI%2BWhBuPnomuvnVFxIJSC2Vvr7OhNNtCU3Wrz0pZZDzZECJn9%2Fjgqfmt7LG5%2ByiBD\"}]}",
+      "cf-ray": "a34d804f2cec02c2-HKG",
+      "access-control-allow-origin": "https://ajk.gov.pk",
+      "content-length": "151",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "application/speculationrules+json",
+      "vary": "Origin",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/jeg-elementor-kit/assets/css/elements/main.css?ver=3.1.0",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5935",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=83fJiianYn7QYDqGwnmM2djZxW1nEplrxIeuiQ3kmMdqf6%2BLq6HrOEcuEQxUYwGF98O31icSO7f1GjRnkLEOuXR6qtOXlW2asBuIrUfuOoPG7LsODq42LOeuKV2%2F\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Thu, 23 Apr 2026 06:33:05 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d804f6daf02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/maxmegamenu/style.css?ver=93accd",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5935",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=hXgQ7Vy2phJhMTs9Jh5EFkch9lPg0VRiu1K31w3WDAgQ%2FIddO0B4dEVb2ZO%2BVFTAMEls7WkF2W4WZcr0QOYH3OIIxgx%2BeKOtF6QaECDN%2BDfq2mkQ5mypszf6vdPi\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Tue, 10 Sep 2024 21:42:15 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d804f6db602c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-includes/css/dashicons.min.css?ver=7.1",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5935",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=OQ596TIQ1MtFkRcKU1Rt4%2BYyp2TYZGhLG7tetGcY1SK5h2dpq%2Fxhbc9R%2FdgcEC7urkFGAPxrTs9Rfd32SlpOWOgVX2NuzexYryG%2Fsh%2BSB%2FtlLHhM2Rbx6cLv2Z3l\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Wed, 03 Dec 2025 10:46:33 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d804f6dba02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/pojo-accessibility/assets/build/fonts.css?ver=4.1.4",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5935",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=isd8Te8pdsKcvhsdYO%2Fklfih3EOi69eIGSLeeEd3XXq9ES%2BM52SqSLOMsATYmtV74pZ9oDv%2Bh%2F2UcwRPq67OEa70xonp3a%2FUZMQGuciJXkkXrq3qn5s9UI84JzVt\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Sat, 29 Aug 2026 16:28:31 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d804f6dbe02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/pojo-accessibility/assets/build/skip-link.css?ver=4.1.4",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5935",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=WFHpKNyZiDTahs581DEVtPdNwvujLGp996kXtSwUSMbOEeX29K64jvw4H5kWjWg0TLmTVAc%2BpnU3THfjYgTNi83T0V4AsCtGBZKAcaJSrizTsQoeVWguZXRayzLM\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Sat, 29 Aug 2026 16:28:32 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d804f6dc402c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5935",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TITTZU2RPD3vbsAvq2pMLbvYaYKv6HtNFZ9cmIDRJByWynCrsqnWzfbz%2BgC0yhrdEUXPnFqOQ5tI6nV8VGfnOm4N2BtXidvlEyxoVJWB3BVmLflumVI7qmlAI60i\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Sat, 29 Aug 2026 16:28:05 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d804f6dc702c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5935",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=udD97PxRN2Q%2BLVAIYSo4AWvdX%2FEYLplqycBmgOe0CYkG6frE3DJP8PMJfZLanyh8WGhdCxRCCmtdUqRFWUvRjk60N6ckWoZZGo8Jd27XpQxKepNbaFkV6EXf6mAE\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068a702c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5935",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GgvGrb3n0%2BsTFS6r0HHMWB%2BjqMkWPOx3TW9hprFVgq1pnKmWKfgskRfbkRCHTJJEOrhbVtoVZpUlqohKUwaaOSo1wRCDffIdEQpS12tvNkTi2ZFY0%2BY9fnuAgsTb\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Sat, 29 Aug 2026 16:28:05 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068ac02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/css/widget-media-carousel.min.css?ver=4.2.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5935",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=X5usHDMQC1cdhkVSPKqzBqWxIiyY4onYWsGRgrr3C63X40p7JGDVZjyHeX8xvjKKNcQGKRNVmiIGJOs1WKvMccASx7VThUeK3EccLe7H7LQV6oY7RKXZfrcX0VtJ\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068ae02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/css/widget-carousel-module-base.min.css?ver=4.2.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5934",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=W7pXRaxweJE7aPxf%2F6lvsETVMM3gxpUlGR%2FwIITju%2Fdl9m2LHtke38BfuyC8vwteaDVdAhHsvJv%2BFld5tNNyQcn5OkxDmp8UenB8qRjZw6lr8C8Q6%2B3pjIMztQBV\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068b302c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5935",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=hWlpfjM87Ph%2FUUq9hCCADNpnxsBw%2BilowJBvBU4RY6ZJnKg1M3tfaNFkoK3P8PjilevMq%2BpGUG0wcIx8l7w4D228IQqf1H6NYVjyVHUVLtzTfJEr7vzZ1d0FCRpJ\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068b602c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5933",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=MsgnYl%2BEuUM5xR7DOqr1T6QRTKmErQKH6lSuQZ1LN9XQd88BCaA7LXGSVf1LxTzJmmncV6eVEiDIjmwMClVUSBvYZCGo9y7yq9yLSpzlEj8PbeNDfLDkRy20sBav\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068b902c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5933",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=eSwwtSX%2FW3OMsglEbdpNhc%2BGZCdbNO%2Bz16Rils4tPFES186OE2geeAdq7fb0XhVU0DjieXVOMson25Umi8F6hMD%2BqBRzQIRWAVcbgmcgVcwhDng5IU4OoyDPPVnZ\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068bf02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/css/widget-call-to-action.min.css?ver=4.2.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5932",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=2ygN7O70BRQw8JTxMQBrxlkFIM887%2BHhCMJ9sosicWU2fbVDZ8oJfH2fFdUo2sYbqzlXkmeDRKKVKDBCzLRnBY2twel%2ByzM4MawBgbj90lH6RvHrMd%2BvWiN8WaZQ\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068c302c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/css/conditionals/transitions.min.css?ver=4.2.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5933",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4o6%2FPjGepR4LDNLzE%2FQ1Wgf9XSCHS6F6LJdstLDtt4c33jsUOI92KClPtzLqtch1Iz12Tekn6gdMNlr039%2FwMq8r34OO7hHkUgsPCVRdoNwfBK2QZAGqls%2BofdX3\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068cd02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5931",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=E%2BgQ2GCkKeohN%2BjWkfncWjMUDA4lBiNWxr185XnjUdsyFpQssed%2BoD23vKx1ti%2FPNhV1x5jYZGoR%2FPy5QCnngbUSShWzMurnACIWpbdOAQC%2FsFsonKWxofvnQici\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068ce02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/css/widget-blockquote.min.css?ver=4.2.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5934",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=BXcMogt89picsZHXyPBMJAjd3PrE1AlrzEPxVrEE74HXXOEkBKa4wz7GmJoKzBrVs4L2muWORG%2F42alj4kkYoL%2F%2BRgIvONM8BtdiTiVWP5PmGNNtlbAR4sEwJCMT\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068d002c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/css/widget-posts.min.css?ver=4.2.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5932",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=27QYTRinCqCCOb4iYG5AvXcKDz%2BsYascfVKPsAQ1BOl9QdHedhGKkxPBwhBU3vsQHSD86%2Bkq%2ByoQZKiU55ZVysVhwSi80mNIgGH0xRoJBQsEv5Ff8LOdFaeHGDFp\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068d102c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/css/widget-video.min.css?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5932",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4x4n7oD7cAJKrIdEq5PTiEEYR%2FNSqm9I0y5Z1Ua15jJCreGmsbyeSJ8rpflcDIr6ugC302215wBNFf7LZnFpRWYFmPGBucJhra5j4Rf%2FedNnArzRhCIu5Kt9hZzb\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068d602c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/css/widget-loop-common.min.css?ver=4.2.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5932",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=FJPxsTDHgvoUau5LFCT9POMVd%2F%2FD3srmZ5aa2Qzdfaze%2FcP8KSzPXmBKZO5TzqjsK8BcBI1ts%2BZMPwPsH3qDWiFJg32awDo9sAJR7xFhZNAIlVGgJainAIG2E5pD\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068d802c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/css/widget-loop-carousel.min.css?ver=4.2.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5933",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=yYnayq7dUwm6t%2BuNHtQplD0sFRPbOjbqhiFtn0PGW48r4tP9xyc4tq5cqph583PNXCsCpWbAZV%2FRfTlWC%2FaRJi6HYaqTPapWEj%2F2YhquatS3RPbr6wbFdKQCPGus\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068da02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/themes/hello-elementor/assets/css/reset.css?ver=3.4.5",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5931",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4U0n2eI9Oiahasuiy80mL5EnwIGzqO608rImQ0F1uDaM0%2BweEaLp6QIiEg7CphazMnDuXyVN%2B3PKGUL7cWXOa%2FN67r3MFbRK%2F%2Bx4ZdSLEIKswG6CfoPS%2BYSbF78r\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Tue, 25 Nov 2025 09:08:47 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068db02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/themes/hello-elementor/assets/css/theme.css?ver=3.4.5",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5932",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=JimIAU%2B652%2FCEUclxJIXzeMR8uQia3dmu0IrKaIWcYMpo9Wk%2FoAMGsaAJ%2BcvQ%2FnT5pMthsnmxieVswxQ7Ze%2BjUBHjncHqGnR%2FIGBT8CIIqNMf3cJB%2FNMp2splsRr\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Tue, 25 Nov 2025 09:08:47 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068de02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/themes/hello-elementor/assets/css/header-footer.css?ver=3.4.5",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5932",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=QzYe6f5dmyek%2BMuM6s%2BZzM2ad3qA8k%2BMNm%2FQAmqKGOCLBloEN4i3yyZafT3EAUzu8LWVCUhiwfAIXCWxGozrKCEVMl5asZcfMDPe3wqOX7nnX9R%2FdNb20W4hNblO\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Tue, 25 Nov 2025 09:08:47 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068df02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/css/widget-image-box.min.css?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5931",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=adskGut7IYSdZtbMKnEA9q6NJeE0xszZXuy0QaMa8DJNfMzfcmFc0c%2FmGO1sX7ZYSw1Bzpsn1PduYlTN9KQcy4AYjfjXWl7rCn2ApnqxsT88QTydog8qZ0iSV%2Bs%2F\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805068e302c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css?ver=4.2.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5932",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=NL2sNOlzSUl8xmkvOnx6TvrQL2H9vqYZGroJy1Z7xFdgs6VP5o7qUFfPSVwmNwH81ukF7UhZ0DZgqbtEV0wGvVXjdrOrtECS99sXD5QVp%2FUI%2Bmtaed0wL9UYuWBt\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8050fa8602c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/elementor/google-fonts/css/questrial.css?ver=1747044193",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5932",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=MAZHLlcMJG0HmQ%2BUD5y3hlZHSVS1D9VQ49nwvT1l0T4WfzSgcryGedlij3paHnoaUUXVyyK0yOIZSgWH3YFBZ0oOWuIbCNb5ZfV9lLnuesuyikpAbCN5b%2FHOkUxd\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Mon, 12 May 2025 10:03:14 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8050fa8a02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/elementor/google-fonts/css/quicksand.css?ver=1747044217",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5931",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GweKwykrDHvHcAunvPCAOGvT6DkrIdC2W9TdrxgpWE9EKUaZY6sL%2FYSo7Z1i%2FrTW9zpV3kpTGIFafLZGuJxx%2FJRaWoOryHZlqzFZIigsQmcQoSYUt%2BWp1DIddn7r\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "text/css",
+      "last-modified": "Mon, 12 May 2025 10:03:37 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8050fa8c02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5931",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=P3C48KQcyENHnPsvpJuhC%2Fh%2Fnf%2BA94f%2FY2on5ep8OUy16bP0vtdfLRq%2FseQEp3N%2BuoGleR5CjszmyLBLhtfB0P7kuJwLIqRoaEOudrYzugvs0QYml5cAnafwc%2F%2FB\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Mon, 28 Aug 2023 17:14:23 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8050fa8f02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5931",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VuXAsI%2BP9qJ3eRNGGaEyXfY7vpty9FyCXck6%2FxWteH4Y024j9vzSZRqGuLFyoqtHxs0X6QL5OyGQVfm21YvutsWytk2XhVSiBP%2FsHS%2BN46jaMI82BW8hFbXO1vgW\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Fri, 09 Jun 2023 05:49:24 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8050fa9302c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://www.googletagmanager.com/gtag/js?id=G-51S7W4VXN2",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "strict-transport-security": "max-age=31536000; includeSubDomains",
+      "cache-control": "private, max-age=900",
+      "content-encoding": "zstd",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-credentials": "true",
+      "expires": "Wed, 02 Sep 2026 15:21:03 GMT",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "content-length": "157569",
+      "date": "Wed, 02 Sep 2026 15:21:03 GMT",
+      "x-xss-protection": "0",
+      "content-type": "application/javascript; charset=UTF-8",
+      "vary": "Accept-Encoding",
+      "server": "Google Tag Manager",
+      "access-control-allow-headers": "Cache-Control"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2022/10/AzadKashmirSeal.png",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "5931",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=5d2oA4WcGfbFBnrevivVCLEE3zrZSKoAbhS9mdQBfJXXd2PxXlz7eSI2snB6DfnFOowJllKsJdOF%2BjCs0pAUSFkneIriUtLvWCrI%2FFxpQqkKZ%2B44W%2B8oRHeFLwyn\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:52 GMT",
+      "content-type": "image/png",
+      "last-modified": "Tue, 10 Sep 2024 21:37:47 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8050fa9602c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "90223",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2022/10/1.jpg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "4148",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=1l9%2B8N446yEBSckFnDBzaasLqYc1cQEjnoa8wv9SC25xOzsTe59dZ%2FF%2BentzSeMnivMzzxdY91OdXu1g4xje7c44VmdiO12TxX%2FxtfdIBGhF079CR1OWkQuEfPmO\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:53 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Tue, 10 Sep 2024 21:37:47 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80549ea602c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "29825",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2022/10/AJK-Map-Copy-198x300.jpg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1244",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=BXa%2Fv87VElFZh9o7OBlgiYGaTgwgHsiwA%2B1SaT8XLDSA2qPGKrHeCHdPJb4G6%2F8C%2BB%2BjUbIaJG1kOJhdQp2a%2FVCx86%2BB8LaZQs2U71VViG09QnsQisEW3p7BS2dL\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:53 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Tue, 10 Sep 2024 21:37:47 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80549eac02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "18696",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/jeg-elementor-kit/lib/jeg-framework/assets/css/jeg-dynamic-styles.css?ver=1.3.0",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1243",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=PUZA0UYV4s%2FPQV2hRrAbR5RyEtEkQYBlNsoH5CTQz04YNghQtBetgZTctG6ZaM3pT0qnBDfzaArKJfVEbUHqDvIkbmjs0b2RTC4HPc31tbqw9aUyGPar9v6sKXLY\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:53 GMT",
+      "content-type": "text/css",
+      "last-modified": "Thu, 23 Apr 2026 06:33:05 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80549edc02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "0",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/dynamicconditions/Public/js/dynamic-conditions-public.js?ver=1.7.5",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1243",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=zKCW3rPe%2FChIqmbfvsRjXr630BUj6LmWJS1Lkk2suPHgevcg%2BrZJnh7yXP%2B8jb79pThMm0ZTOxQKS%2FVOnFZcjmBPf8EU%2FfodnqBwGug9U7wkuestODUIEFZfnhR%2B\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:53 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Mon, 12 May 2025 10:02:34 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80573fdd02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdn.elementor.com/a11y/widget.js?api_key=ea11y-96cc3905-8570-4457-9912-e23d240d3f70&ver=4.1.4",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "x-elementor-trace-id": "7b2c6819-d713-4f00-b9d5-06c5117408b4",
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "age": "1234",
+      "x-permitted-cross-domain-policies": "none",
+      "access-control-allow-methods": "GET",
+      "x-content-type-options": "nosniff",
+      "expires": "Thu, 03 Sep 2026 15:20:55 GMT",
+      "date": "Wed, 02 Sep 2026 15:20:55 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Wed, 02 Sep 2026 15:00:20 GMT",
+      "vary": "Origin, accept-encoding",
+      "access-control-allow-headers": "*",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains",
+      "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+      "cache-control": "public, max-age=86400",
+      "x-dns-prefetch-control": "off",
+      "cross-origin-opener-policy": "same-origin",
+      "cross-origin-resource-policy": "same-origin, cross-origin",
+      "access-control-allow-credentials": "true",
+      "referrer-policy": "no-referrer",
+      "x-download-options": "noopen",
+      "cf-ray": "a34d805fdae786e2-HKG",
+      "access-control-allow-origin": "*",
+      "x-xss-protection": "0",
+      "origin-agent-cluster": "?1",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/pojo-accessibility/assets/build/lib-postcss.js?ver=dd3d6ae95e727956a431",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1242",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pWdBaj6%2BtR5VR5uyDax1AucvSjzuDMktBEyENnhoBstHMeAFsdn56lEyPEUl9kS9vRP%2FOiYxV4svv4FJ8wEPWFyrKRQcAz6UrHAvD4%2FL9rRI%2BZ7oZJpL5KiKlRIT\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:54 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:32 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805a196402c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1242",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=I%2FJU1SCpk%2FVkuEsc58Ar%2Bo8gF2AKVRCw9I3WgmJvlyVmOm00b7VoULiM%2BoJNCcBebN29HEHCQbuwU9FyR9mMhou3hiFgdcRXn7hIXyI7mIESElEdBTHwN7tB64WD\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:54 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 20 Aug 2026 10:49:46 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805a196a02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1244",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=qK9cEabg4NkhGQsloMDrJzjHTl%2FIAzOdZGq3krH0hP9qOacRIG8CtF6W5wb488lYrlW7Ds33I8wdNjwFPHrdbygV0%2F93Xa6rS%2Btq6H2rNqtycI7ctylyYTrs8tzD\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:54 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 20 Aug 2026 10:49:46 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805a197202c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/pojo-accessibility/assets/build/remediation-module.js?ver=dd3d6ae95e727956a431",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1243",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=r2zWe8hjqG78%2FkdKB8BNVBywNK%2BiMyq4CtB%2FHYQPl98iRqLK%2FBXtLqcrlDp0UxtmaQn7BGda9gMzTGc33IBGrrkZ5bMqzpaMuKokXTJ5gEUHOIhT3mJyYKdZ%2BXaB\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:54 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:32 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805a197902c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1243",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=0r2nvj%2BWMchfBWn6MxlYmFds7SvpdwbV9ovS4DknkSqEjRc79OBeseehjZl2OYQu1wBq4LGa8jeNS7lb86Bx%2FFzJgjeGjXHdAO11SbUmI84uV0OKRFC8RJ%2FxCmZ%2B\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:54 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805cea2902c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1242",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=jW2vpoa4weccaiVKvUEuXtJHxO9RL7ON%2Fmixi4dDZC5FWyZGlkjLxAYcXRwNjf9dxomcJ8XG0Dai2mWfaW5Ee9L286wstQ1G9ukLZ9b9%2BcFWoZX6vJBfYoPyV54L\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:54 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805d3b2702c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1245",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=icOS%2BvwksOKI7b9bkUjoRviQYFDRyS2ldf8lmypf9zYGPTSk3CHYUl6a9OCSfUprjhYygHxKJ32iSiqcWDWxs%2BI2SLnSJccILgdTczaTHFMkYIol9u1sAtnpqKNH\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:55 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805fcb1502c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1245",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=No2pdricHZ3JlLpQRgac%2F8vJONUz%2FHITGcg5W%2FTi18yPAKDC7dsflTco%2Fgd9DuA6EbOVptS5PwbveP5dHGwlv1ggYsm27rGE54oa01tlfSXfY0GYh5hsf%2BHhb5mX\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:55 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 20 Aug 2026 10:49:47 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d805fcb2102c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1243",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=w3pTsAV6F7CYkE4LWKb%2FsULT978mI7gZC3xSHGFUDLU1Ko1zZUuuKbAC9kVrhqx9UEFeCuFqsCtheIAW5REYT64pMf8aQBGdrx7UuVck02HVNp%2FY1QcyF%2B4uyzfU\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:55 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d806219fd02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-includes/js/imagesloaded.min.js?ver=5.0.0",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1243",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GWHpiqYd1ecs1%2BwIRSzFE%2BFh6615W3g%2BTi%2BNqYqtF9f6q5jm3TleJk0LpvUT1ag1KtMvbUOeston8uT1%2BZM6d1gPU9CEM0BTNMLVZNKAgBOOTQnbk6l3C42TFta8\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:55 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Fri, 11 Aug 2023 18:18:26 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80621a1f02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=3.4.5",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1242",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Xou%2FridgwGfqUp6mm4GNZAgVUsnW26m%2BKHsU%2BY2d3pe2fwI8ZpiktcSc55GaD2aY%2FetV5APH8Ql5R0QXpzNnIi6dIRq9p9wQ5jhCHWVyFtIqrviXQkGvGlDnLKXk\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:55 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Tue, 25 Nov 2025 09:08:47 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8062fcf602c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=4.2.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1245",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=5JgJ3zUpXLMmTnsxGSi4Y%2BSWrWy2qavQLjnFupY03Fc%2FsfOy5Ljx492iJQmU%2BquYBEVDMKqmMKbhA1SmiSmXWm6PivvPcyk0xY4s8wXTpqTZrbvJXj7hrJN01qSp\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:55 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8062fcf802c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-includes/js/hoverIntent.min.js?ver=1.10.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1245",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=JMsRsVuAATZ%2BMiGI8GG9qJIh5tMnUCQhq4PQ%2Bdjd76AOOIuYs5FoOcD%2FHis%2FQ0l1JiwbmX7gh9ryV%2F7awU6tdA7CNHvNTQlfirJ8ayto3Ss228eM8USFmTrV4n2R\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:55 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 27 Jun 2024 13:51:43 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8062fcfc02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=3.10.6",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1244",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=RBz8HNGsFuC4G1Mzsk8sZBJrMgKs9%2BoiXsLERldW2PktVMYoHUGYiXainboalBB5NSI%2Bf0DiZWUyzqBDkG5pLi0LQUT1ArzKK6xedDG%2BF21BYkctKK1UY%2Fx8o08g\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:55 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 18 Jun 2026 20:46:37 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8064699602c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=4.2.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1243",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=cKEYp1HxNa7ApbwIcUrkJ3LV9WSoHWkloV%2FD%2Br8aPElFBHdZbf8B%2FS%2Fy0cpNpXfabtN41nSE%2FWQQk3vmb2LhIWX3mhJgDzYTupsQV0KKoWHcC8g%2BsdvlOH8aQATJ\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:55 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8064babb02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=4.2.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1244",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=bxeDG9AcPjiArBZC187MBdTfi4yZCO1vgM1XuxNXiG8X%2F8fG9zUk%2FPXHinqeE9QNYBtIHIY9RH6Bv9J%2FhLSFLxFkqTMo8f5ssLNBCqZTV78eP1bTd26o4MUROFmg\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:55 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80654c5102c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=4.2.2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1246",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=HmqhSgiwOO8OcXMcS7KKvK4Qe3fXfXIOzyFFgynL7%2F3i29hST6UIbhW4soM%2FFFKG4cSM7hSYMSHrOl8fHebQx6Yk%2Fkk0WHtPOs1kUIfsK6Pi1viOHOWpl2hcH8Jj\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:56 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80662eaf02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/v3d52b47920f24c319d37e2661827c42b1787588026925",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "public, max-age=86400",
+      "content-encoding": "gzip",
+      "etag": "W/\"2026.8.4\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d8056399503d7-HKG",
+      "access-control-allow-origin": "*",
+      "date": "Wed, 02 Sep 2026 15:20:53 GMT",
+      "content-type": "text/javascript;charset=UTF-8",
+      "last-modified": "Mon, 24 Aug 2026 16:13:46 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2022/10/kashmir-jammu.gif",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "link": "<https://ajk.gov.pk/wp-json/>; rel=\"https://api.w.org/\"",
+      "cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "content-encoding": "zstd",
+      "x-litespeed-tag": "7f2_HTTP.404",
+      "cf-cache-status": "BYPASS",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=eW9pQ2E9qSQEQ%2BX1eA3YkGM5ELrMt3MwygI3GpiUi0hMfuIVT0%2BTD3bvHOXr1cZiPpFRIRoxXR6dHynH9eFzWBy02BWc3IiSmHFakjHiJPfejErEK3%2BvadSl9wJR\"}]}",
+      "cf-ray": "a34d8054cf7002c2-HKG",
+      "expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:56 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "vary": "Accept-Encoding",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2026/04/546_1x_shots_so.jpeg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1240",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=OXcu4xG6HftItW9qoifTanRXL%2F0weJke1moqpfLiuiCo8C8fJpy7Krv9V%2F%2B5Z5ejYSUHYLcG2Mu76l3MnFfKxHTDIR1sQ8l%2B34WXXWA1KwSTRWZO1GTxDaAuAKq5\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:53 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Thu, 16 Apr 2026 09:50:36 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8054cf7402c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "208174",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2023/02/b2@2x-scaled.jpg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1243",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=DdyKz7qs5OvjG9GukLpZ3MerdRmFsIFbKsofVArAg1Sq7sf%2BmV21ywz8Y7iHU9je%2FMrGLOgSPV87V67rgQ1lEFiiZ6whhSlGZ7rZ6F%2BDkxMlzZer9BVjzy2OgNsK\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:56 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Tue, 10 Sep 2024 21:37:50 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8067093202c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "229684",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2023/04/banner-1.png",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1242",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=wokavjJXoYVA%2B%2FJJ6e0iQHGI9yO6bcEpKYJkqARC5E%2FdqgMUPMEcH33R5Qj0BspnveI%2BCyvvyKpsh%2FLo0KTntUK770OeYHHZqqw0bSDyGsUatDJxh9DV8GpwUzQT\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:56 GMT",
+      "content-type": "image/png",
+      "last-modified": "Tue, 10 Sep 2024 21:37:50 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8067299402c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "434554",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2024/10/Banner-%E2%80%93-15.png",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1243",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4ZpJUNIu7jOzSvsvMZC%2F4r3Doatfprmz%2Fscf6uOBHprXuBHvuKlEu%2BEw%2Fu9cFRBcIHpb%2FHDshF64Inlu9XOAmFQjcXlhVoIVd5e3s%2F7wScWFbFryTvvBd8ErEKFN\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:56 GMT",
+      "content-type": "image/png",
+      "last-modified": "Mon, 28 Oct 2024 05:46:48 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8067dbdf02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "1542758",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2023/01/Black-Simple-Coffee-Landscape-Banner-scaled.jpg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1243",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=I9YJSOfw42K9ZZBsCy9xiygYbrkDVGACxy%2BksLK4rCnpcXw%2Bop6Xe9nCidLRuUjQX7KiE7jjZ7CZ6H3QaidLxM8M1PHXHRqJjtPX0XjleVG9BSe58c0uRd6RXBtO\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:56 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Tue, 10 Sep 2024 21:37:50 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d806b2d4d02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "455600",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2022/11/Muzaffarabad-bridge.jpg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1249",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Yc%2B4FfLESRQFa8dg4%2FFvZN3bqRxOeSVBLJpt5v6dSirc%2FQ%2FUypU3DGsECXgduKOnKtMiFcUdihENIBXYppumLBDIWklMwccLxL2639ZlpmiAHla7Z9EMFx44v2i9\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:02 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Tue, 10 Sep 2024 21:37:47 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d808ceafd02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "241648",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2022/10/banner-2.jpg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "5917",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=bAoG0oDN3OMuk4Bf31Op3QODk%2BO78iGbkF4MvwrLatnat1M18wPkSDCW5E5DeYS%2Bmwblr2aox9XgvnjSVB%2Bwjg%2F1fGtGT92OMibtBw%2FFtKuEYXs4HBwBtHrxH%2BPJ\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:02 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Tue, 10 Sep 2024 21:37:47 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d808ceb0602c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "237499",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2024/09/IMG_20240506_162825-Large.jpeg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "5916",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=X47ha5kgANiIax8D%2Fzfw1vWg8Z%2B2ZXcL1yJPA2LMl4HN6%2Fli%2BG0Q8d1i15qYsri8zR%2FfyfrAD0iS2g5cP3A3t8g79LQZAphmmKLGGgQhrpEGHyVRiR%2FWzQtqXZQ9\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:02 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Wed, 18 Sep 2024 07:36:07 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d808ceb0c02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "298843",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2026/08/president-Medium.jpeg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1249",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=zqRZymL%2FN%2BtV5P%2BJw2NtS%2FJ72ft%2BnjwT1HZKffRpkuUhECVBuOYLivouXawhvKYcvbg0pG6Ha9ahl0Q4bjJGxI%2BD6VmlC7xXmY8Vm3ww182Nid1ps1b8xjjURAzF\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:02 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Sat, 29 Aug 2026 16:11:45 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d808ceb1002c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "55192",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2026/08/pm-Medium.jpeg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "5919",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=jVkkazH6n8Tymmvpg56N2R7gMJbSmT1G8ReR9SMiPfQOULMs50G94MiVb49T803a2%2FcqYnBBeNTCrVD8d5RwPK58qjlHRDcW2cZv04qOse6tse8B%2F1OQNLmBUOEu\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:02 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Sat, 29 Aug 2026 16:11:40 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d808ceb1202c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "42845",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/elementor/google-fonts/fonts/quicksand-6xktdszam9ie8kbpra_hk1qn.woff2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1253",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=7oiN3%2F3swM7v6pbiSZEHzyAUE5YBDAmIUp8rDdD%2BTx0KXYUFFqgCsqX5B%2F0hwvm2fMR2XD3VZIQmU1XZ7vAtMWbT22X%2FVtkQcW%2Bdj5TsaMIO7H6XMINl4PWZNSUk\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:07 GMT",
+      "content-type": "font/woff2",
+      "last-modified": "Mon, 12 May 2025 10:03:37 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80adf86002c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "28360",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/elementor/google-fonts/fonts/questrial-qdvustchpbm7nuuevf70vifl.woff2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1253",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2B8qshHvqoTrNKQUiFnyiI1x7qMhqh4h7lc7hbimZ5SwImRHCxXsuX6B7ji1Pez5mcBjoL2YYEUEyT3ArEm%2BIysEJp9f1tI0bhbOMUQN%2BkBZtznbFrsugIhoHUftf\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:07 GMT",
+      "content-type": "font/woff2",
+      "last-modified": "Mon, 12 May 2025 10:03:13 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80adf86f02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "19292",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/elementor/thumbs/2-pwqaz0xgbm0bahxtp14fi3w4uwfbc380czds6ubsvs-qua10pqpha2pypjbg13nle7yfn3eb66xpnuf70bi7s.jpg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "5918",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=QLnM9p8Gkj6apxFj82NzMvzKwCng3gku2LPWKOIJsSSh4cjhHzxN8iX6fMi0UeWAG2d8HpqC7DQxAvZiCbHZqkUBS7O5eCS%2FqrxN2ElgDKuiuvaZasaJ6IPppKOa\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:04 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Wed, 18 Sep 2024 06:53:29 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80986b7702c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "38474",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/elementor/thumbs/3-pwqayzzm4rz0yvz6uipsxm4o9ijy4e4a0uqapkd720-qua11mn24hbr927j3xblinx384l8sktji6oezoyq60.jpg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "5919",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=oxG%2FdqadJU4esjdl%2B3WYnCjoigL2GoaliwAv555rysDv7l8GMpHREJiOuVsxSdPLmL9%2FErQqCp90IbEi61LSbn%2BDxXQJXk6X4SXjjUA8E8ABKXlRK1XR5ABwyDyZ\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:04 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Wed, 18 Sep 2024 06:53:29 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d8099bfe802c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "33551",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/elementor/thumbs/4-pwqayz1rxxxqna0k00b6d4d7o4okwp0joq2t8ael88-qua12jjeroksjevqrtjjfxm80m339zg5apiesdly48.jpg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "5921",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=oVk7hNlhHEvJ8cHqcr8sr6RVxt3e%2B4BXh5AvYlEp1psl6bqj0WaUxeOCXEnqiFW6DBoLi2eSQUux9Gik3C0agoAAA1lgUaNFeb6MnWLJwIXkU3S9s%2FuoyjNef6Jk\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:04 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Wed, 18 Sep 2024 06:53:29 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d809a5a2402c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "54906",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/cdn-cgi/challenge-platform/scripts/jsd/main.js",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "max-age=300, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "location": "/cdn-cgi/challenge-platform/h/b/scripts/jsd/e694063b5082/main.js?",
+      "cf-ray": "a34d809cb9ba02c2-HKG",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "0",
+      "date": "Wed, 02 Sep 2026 15:21:04 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/js/397f2d183c19202777d6.bundle.min.js",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5919",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=lCjG8H%2BrDPRpBMmj4fY0coaA%2FttNfAQqB2SyVrymsG%2BlX81q%2FXuNYxc6HEPYLhpAK6l1xbx5vKPDMLsSdcFgrwzX5sLgsv1RxOWN3%2FEQv%2FdTRBHz7rxPxueTA0Ri\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:04 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d809e0de702c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/js/lightbox.3f9b3a051b2336dd5372.bundle.min.js",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5919",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Ykq33DsRiH6uQ5Ps9UAC1y9awqgetuTp2loq5dsMVJ4H4OFCnshZ7o1W6JDHLr70%2FYgl4tH3j0z54T%2FjGEppb%2BBHinufHG3N1ppcWs2tCgorDUrgLo6rb6Kuc8pH\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:05 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d809f6abb02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5920",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=nUNfINFwC310lajjok0iuMHw315bDWX%2FwPn5IwkSaKbSyK4DPH4DFvk%2FgZmMz%2F%2F6IcWQR1oxHiu1GQ5fnuIraTkcKXizIoDMQ5vwFa2%2BrbdY%2FXLE3%2B2l8%2Bi3OojU\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:05 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d809f6abd02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/css/conditionals/dialog.min.css?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1242",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Qr1b9KsC8eyD%2FolQPcjofe6%2FVbZ4o68qRvxzdao8k7Kasdj3eHl7VUe4R4qyCH5%2BiQJl9ZaStOQk5N2C3U5IU7HQqsbL4zXKJkYMazTLBYze%2B56%2Bma7bLAOSQBGn\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:56 GMT",
+      "content-type": "text/css",
+      "last-modified": "Sat, 29 Aug 2026 16:28:05 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d806b2d5102c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5922",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=w0PkHuNylUSr60WoCdbaLI3QfSqNcsDh3aUlFfwG86LR59vZVOxiqQst4M1RDsmaXqJUxFmHILW3Y2AbroPxBQ99zHqUWjWkgOfUcLkhtZaBbqWLsfRNPkOfyQNO\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:05 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80a00c8202c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/css/conditionals/lightbox.min.css?ver=4.2.3",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "1242",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Oa2OEUzzXqpLu8RzzggGKChGCMEq38dvnfnWl3WHR7QBPc1%2BHqnopH1w%2FD64ENX7vjAInx983AO19VZidBCVF547hCGe24pZ1wfCKmAV24R7%2FbBMUufpBKrycN4%2B\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:20:56 GMT",
+      "content-type": "text/css",
+      "last-modified": "Sat, 29 Aug 2026 16:28:05 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d806b2d5502c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/js/section-frontend-handlers.d85ab872da118940910d.bundle.min.js",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5921",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=U5Pr734S5Dhl%2BS77oRnUyWKuXusrSHoghTQfzo%2FiZYSx%2FCXpmT0g4y9vkpUXjSzswM5bmdT6IMUAYbmwMKzB9EGia8QbDnWBOE48%2FBV0Zvt3wrF4bu71bjgwL2LR\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:05 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80a0be8502c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/js/shared-frontend-handlers.03caa53373b56d3bab67.bundle.min.js",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5919",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=YXSJMRPhqefzvxc5H3sdJRdfo0curun69tHESdYzmnfiRoEUEwUQNUEACqDUM%2FxZp8jFDQa4sRslKxnnKJxGUBwAjvG3O%2BTCit0ydcea3r6buTdKqddOE3OlbTHD\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:05 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80a0be8c02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/js/media-carousel.87c2cf115553a2c4f709.bundle.min.js",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5920",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=OdnKW7L6%2F%2Fw9CJ%2BF6kE0SwJyBpuqCbhJKU6N72%2FJiyYzeyyOgYfFriT3SoxeqpyaNSI3aKVajPMCzQZcWCJloSoCdK8cPWNl9glvjbL9kh3eC%2FqQYbliwpviAO8D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:05 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80a11fb402c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/js/text-editor.45609661e409413f1cef.bundle.min.js",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5919",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Uks6al6Bf60xLvw228EWXEfpvJr2p%2FQ%2Bd%2BwxDPSiFtQr%2BXAmEXL17AbR%2FVWC5p6TtuG5htAZlib1Mi%2F%2BXF9bUpGXYOLmd3V5wBfM6LSw%2BbViPEQbAkVsl69zMvXh\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:05 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80a11fc102c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/js/load-more.7c4417f8a727b79f546f.bundle.min.js",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5920",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=1%2F%2Bu6bJdKHUyx0h%2BNYF4mMO1IsaSZ7FfPv4NLwHL4TbXlKrA37t5ySGpKp1grrgaLMZsClD6i5c0%2FCi9YP%2BIGW28XEMqPxDISFHmxFo74urW3Id%2FMNLykH75abCs\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:05 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80a2dd8e02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/js/posts.844727d8428792223d2f.bundle.min.js",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5920",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2FGTjp9a8DaYiqDxe77P2iLIfKhb6wnRuwFQb0nD15ALQUA6%2B9IVq9y0CIdrzzLIEqo%2FVD9%2BJrIsE4Nr5HePvvJsN6YsfBo2odz2b9Cn8mcosa4BNbKVTzj7NAe%2Fl\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:05 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80a31e4602c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor/assets/js/video.86d44e46e43d0807e708.bundle.min.js",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5923",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=nW7LGWttg%2BKzVfcUNmAYDE5e7G14SrUeNaf%2FrXrBGp9Zvyv3nuTFYnHZm7Mqsdcrrktugg6Ezjsm4n8ZCj2pw13aZL9eUI5dR6BIzzzkAZdMX%2F1Mn3VbLnhjkRRZ\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:06 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Sat, 29 Aug 2026 16:28:06 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80a908d502c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/js/loop.1594a1df76e87a11eda2.bundle.min.js",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5923",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=REtLtpO4jCGEOfOylO4g2sXmHSYTxNHoHavCYLuwRzf%2FmUE4Dfdt4zWy3xnpmVHRQDF%2BZIvB8E6AVM5WZ9YRmrsYJSPuaLB2fXmYysea8hSWe%2BQB1ybHRK86Aj%2FB\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:06 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80a908d602c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/plugins/elementor-pro/assets/js/loop-carousel.881847b13e8fe1f8bfc2.bundle.min.js",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5921",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=zfKdhM5a4vjIV%2BYmu0FXyuhsoE9qyRjVHAfXVHAa6doMgwOMLRwWl6CjCEUpMUzmkuqsc1r1K2YSNYiNg83zaktx69l4gz4MhACyRKtSvvGSM4k1ISre8Sxv%2BBLL\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:06 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 20 Aug 2026 20:47:30 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80a908d802c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-includes/js/wp-emoji-release.min.js?ver=7.1",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "cf-cache-status": "HIT",
+      "age": "5921",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2F7JEh8awdl8ThS36Ypm5f4rDKvg%2B%2BMYJcn1Vlro2HN4iU%2Bc72IlaBvbWXKKscUoI%2Beup%2BOH1iWbsiIyI9WuX2ZTtcwTG8ysrWgQ%2FDpxa8nkqH8jOIx7J%2B4UOgYAL\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:06 GMT",
+      "content-type": "application/javascript",
+      "last-modified": "Thu, 09 Jul 2026 22:24:08 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80a908da02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/cdn-cgi/challenge-platform/h/b/scripts/jsd/e694063b5082/main.js?",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "max-age=14400, stale-if-error=10800, stale-while-revalidate=10800, public",
+      "content-encoding": "zstd",
+      "x-content-type-options": "nosniff",
+      "cf-ray": "a34d80a11fc402c2-HKG",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:05 GMT",
+      "content-type": "application/javascript; charset=UTF-8",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-51S7W4VXN2&gtm=45je68v1v896551542za200zd896551542&_p=1788362452335&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=944696874.1788362465&frm=0&ngs=1&pscdl=noapi&rcb=4&sr=800x600&uaa=arm&uab=64&uafvl=Not%253FA_Brand%3B24.0.0.0%7CChromium%3B152.0.7977.54&uam=&uamb=0&uap=macOS&uapv=14.4.1&uaw=0&ul=en-us&_s=1&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412528&sid=1788362464&sct=1&seg=0&dl=https%3A%2F%2Fajk.gov.pk%2F&dt=Government%20of%20the%20State%20of%20Azad%20Jammu%20%26%20Kashmir%20%E2%80%93%20Official%20Portal&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=18071",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "no-cache, no-store, must-revalidate",
+      "pragma": "no-cache",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-credentials": "true",
+      "content-security-policy-report-only": "script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/ascnsrsggc:139:0",
+      "report-to": "{\"group\":\"ascnsrsggc:139:0\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/scaffolding/ascnsrsggc:139:0\"}],}",
+      "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
+      "access-control-allow-origin": "https://ajk.gov.pk",
+      "cross-origin-opener-policy-report-only": "same-origin; report-to=ascnsrsggc:139:0",
+      "content-length": "0",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 15:21:06 GMT",
+      "content-type": "text/plain",
+      "server": "Golfe2"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2024/10/WhatsApp-Video-2024-10-02-at-10.48.28-AM-1.gif",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1251",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=cTVzGXB5rNlSPMWXQ9EU3QDZzqLj8XxSfOuboTeJee7zDFIevooRStlEuV%2BN9eC5yID0Ba22sy5oAq8jJdQWT6OqiRmo7iXHjFPmOjkKQuIp4dNhKQzxTkaqYDt9\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:05 GMT",
+      "content-type": "image/gif",
+      "last-modified": "Wed, 02 Oct 2024 05:56:03 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80a33ec002c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "620431",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/cdn-cgi/challenge-platform/h/b/jsd/oneshot/e694063b5082/0.4635408756263889:1788358520:gJohOcCxdPqQ4-PmwX_w7GGWFHjO6Gygi1P-uj_bcFE/a34d803649a602c2",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ]
+    },
+    "responseHeaders": {
+      "timing-allow-origin": "https://ajk.gov.pk",
+      "cf-ray": "a34d80a4ec1602c2-HKG",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "0",
+      "cf-chl-out-s": "OE+oAuzu/aGevAtExJxpdWKOpdBV4fBh6XqxQB1ZvT+bFcnts3qxKL9KueZ71lBAVNxxpftQaf8fUJ8v2nZe1N5jD9xhHRttK1hNRc60nQdBjFN7v8Q+jw3O4zUGyulFasoqd6KXGbPFbZUUOxEVDCHeJ+thVpYkdP6fL4QICLqOFFU7s11R54qCZ0d7p2D3DaNwuz//e8kYU4MhI3bBGR+EwAtEpAFzYkBD2Tj4DOjvFdqcuP+IlVju0wtxK6cZqQ1Yz7S4P93H8VSbc3ckKywEH6OrygexHkNzPd4lGTCDjLwvnTeQ8mTtagcxWRmIFJTbSEjo0k3kB24Jm2BR8QTuur8ZDeggG2BhV9z0ZP/uI+smlLHT1XJIr0z2ccMODPIGh2mDdSiCqC5ZIi6OtHF3Spi0Jyxk7/AByn9ogKgAsq1Z6CuVO2DuXB+bi5l8vVwhmlS/SOxKnLwYUIjsEG6g+2kD63KuhZaRiJ08CmKyg+1bENPPlMu0arCfp/X4evcZrsBzIvmSaURYrVJP89MZqPOP64vPt3IcMS4/djvPsRQPhBBR2vhzzBeD4IZTgt/kYKdhjmYYA4QKm3OKrxed0g2+HSmhqIFyR3LKjfpnEG68NTYVcE3dzUwTSmHQfG1YJmKu7rrdr3eWK4oc8wK7Mbsq009kncdeZzWJ5mXM7n0pfpulvc+noV//8H4KizQ0igd226UYZquBUa4Hkq7A8NceZ9CBt3O+UjOSJxs/jizcaAK3hUDmvPodTwfjSqPM5NSPpOApqnPwmbjtgZCntHoi91UmYaYW8ejfRQH02O6MH88l/2pDMlS4X9X9RaiYVWzl6Hx+isqH9oEIsTqjNLH4YLu+OkGjurR3ZOchLr3ccnzYZrhfLP5mWmuZFXgvZhyqK+F+tJHuEuesw+lbJqYYu2KoryPT+uhsjo8g9iFvzThY/ExwOda4LDp0cXLhakLALB4AZaTLyNaBNw==$0WfsmyEPmr7e8dHgM7zyEg==",
+      "date": "Wed, 02 Sep 2026 15:21:06 GMT",
+      "content-type": "text/plain; charset=UTF-8",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2025/01/31.1.2025.2-e1738303255360.jpg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1251",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GBIsBuPSs71DVJi6tKFysrI60PfTSvTk5Aoe7TbAwkVuDNqF1zeJn0OaIkF2LyqbSn%2FXnMIsrPi0af%2BrhKo4YI%2BAqMGbR7UIb5Ftx%2BvNkNRn%2BYXz5uxKJJt%2FTWxQ\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:06 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Fri, 31 Jan 2025 06:00:55 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80a908de02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "79156",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2025/01/31.1.2025-e1738302741746.jpg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1252",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=tKHmM3et%2FlSOHsxaVPLTRNHQwCQGYhK56WrxfhcBmg3SaOYPEc%2F7Bor7Byi0VxBk%2F5xC%2FXxq9lFRnPmuKcqGJAjBMlmaSkrpZLmvqDumZtc5j6Xa6goKely4tvvf\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:07 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Fri, 31 Jan 2025 05:52:21 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80ab4fe502c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "65465",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-21-at-10.13.23-AM-1-scaled-e1742887888182.jpeg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1251",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GQj1ARYo1UtgnmlVxal8dZcpHFCK5J7SQhdAe0rZUpu06I%2B%2BdpKUTKRWflx0WsOwdB3Y9gdfT1%2BqMKgCRmQ9DOb18OwoWs2kLM95KGvTCqjk6iUZ%2BV9EEY1fMJt7\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:07 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Tue, 25 Mar 2025 07:31:28 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80ab687e02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "334462",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/elementor/thumbs/ird-removebg-preview-qpn0b24hyy7whuzh8fj1tcgnxy5yu7qbda0v48irqg-1-qua1u52p1oppmff4q5vzjl2c6gw73qfu8uk0wsytbc.jpeg",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1252",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=CnVWH%2BeGs9qdZG7KLRnBKTVhCGh9Bbrf1GJXQttsn6UH5KtfhyISWrWaUvf9XQpsRhR0zX5PZxV0chCP7laQd74Qv9lsLG5P2q8t38NeyCvZCCaDycU6tzw8ULyl\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:07 GMT",
+      "content-type": "image/jpeg",
+      "last-modified": "Wed, 18 Sep 2024 07:20:03 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80ab688102c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "3479",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/elementor/thumbs/AJK-Food-Authority-pztssejk0ods6628lqbtdtak442s7y852562pwwhk8-1-qua1u6ydfcsa9ncef6p8okl9d8mxj4nax3uzvcw0yw.png",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1252",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=CenaFf%2BHv7hEjdm5PALTeQyd0L1ipVmQS5%2FvT3BbRkY0tKLCiAtL531YKUzRc68NHbxb0gZfd96jqdp7E5HTaHH459gjXCKAvjB7Xer3htFPnILKXuWP4aLvnNmu\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:07 GMT",
+      "content-type": "image/png",
+      "last-modified": "Thu, 19 Sep 2024 10:01:55 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80abea2d02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "15033",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/elementor/thumbs/EPA_WhiteBG-pws2ntqwkf1bbo58giqag56192c8uuwreu018v1p7s-qua1ui8fpd7q4yw0lbkrihqshv3c3hw2ynotmofaw8.png",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1252",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=NXpjeSGs45skbejQa2SjD5kacU11gI66OcGt9z82GvOXHVqOd0YDVBXmNwy1lVewkpnHzjoZF0rMdDRLDEZFGXAzRz9nWkIVyPjCc3sOxp9C5v0dCBoYtdY02JYn\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:07 GMT",
+      "content-type": "image/png",
+      "last-modified": "Wed, 18 Sep 2024 07:27:42 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80abea3302c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "16122",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/elementor/thumbs/Information-pztssejk0ods6628lqbtdtak442s7y852562pwwhk8-qua254sqyxrfe9gbjexx7b7e9opq4b2u397fyao2js.png",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1252",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=PG7pI9Vz2U%2BdfoFXz7hbnBEENURCLf8rHXj6bbK%2FehkdqHtyaVBmXXBmxvDXjrP%2F1KQBFFg%2BToOXGYAuKGhWLyw8%2FCB6tgDn2PDZK2lGl7yzqD4DRPdNjz1w2n9I\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:07 GMT",
+      "content-type": "image/png",
+      "last-modified": "Wed, 18 Sep 2024 10:18:46 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80abea3a02c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "13572",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/elementor/thumbs/Election-Comission-pztssejk0ods6628lqbtdtak442s7y852562pwwhk8-qua1ufex4v3v65041scvt0gepph8gekvy9qd6ujhew.png",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1252",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=mGqeHEVJ9ViDeilFU0pGbayANYzjU6D2qJSiRMKYOXbfPir0QTbh5iucZqBC65tzWjb3NeA1gkgUtfgf%2FG%2FK2bhCEOnjErbqOBeW1UNfggebtMvGES%2FZL8j2zmv0\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:07 GMT",
+      "content-type": "image/png",
+      "last-modified": "Thu, 19 Sep 2024 10:06:52 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80abea4102c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "12236",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/elementor/thumbs/Ehtesab-Bureau-pztssejk0ods6628lqbtdtak442s7y852562pwwhk8-qua1uclekd007b47i9503j60xjv4tb9oxvrwr0nnxk.png",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1252",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=0ZYG3H900cXsrZsTzUg3PIpjHUwwhFtT9MSkZHZAHmjt2jxE18P28DJrmDu2DE591hO3HEP4JcD5l23L7%2FKF%2B1ZIZ2XszSR75ctqcmyHgSW1MRT7x65eu%2FrWTEc3\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:07 GMT",
+      "content-type": "image/png",
+      "last-modified": "Thu, 19 Sep 2024 10:03:33 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80abea4602c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "17479",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/cdn-cgi/rum?",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-max-age": "86400",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=diHn9S1KrzbISHI%2BIccGLS%2BgIcKrrTYYPhwvkDwCwOcqoXRWEpNZHT65O1GdOSnX1tzt0NO8zirQbF9%2B1Bnzcucffa0BmyRlDT1CS2lQ4t1j3aXhlzNG2LK%2F6E%2BY\"}]}",
+      "access-control-allow-credentials": "true",
+      "access-control-allow-methods": "POST,OPTIONS",
+      "cf-ray": "a34d80b0380402c2-HKG",
+      "access-control-allow-origin": "https://ajk.gov.pk",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:07 GMT",
+      "content-type": "text/plain",
+      "vary": "Origin",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://ajk.gov.pk/wp-content/uploads/2022/10/favicon.png",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "age": "1248",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=3w6JXh0IC5tmnpm5ujLn5papsog2n0L8Hj1v7XWkVT7DQZwnuuSysfZYFq4r1%2FJtWODf%2F7XpusRsGqv6bSf%2BtuEp%2Fn3ud2TFcuG85s6oWYuula3rrRFJjK4h6Nix\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:21:07 GMT",
+      "content-type": "image/png",
+      "last-modified": "Tue, 10 Sep 2024 21:37:47 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=14400",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "cf-ray": "a34d80b0381902c2-HKG",
+      "permissions-policy": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), fullscreen=(self)",
+      "accept-ranges": "bytes",
+      "content-length": "3792",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  }
+]

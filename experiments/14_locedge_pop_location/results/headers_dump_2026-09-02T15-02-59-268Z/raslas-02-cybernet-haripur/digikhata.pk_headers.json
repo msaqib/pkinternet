@@ -1,0 +1,1476 @@
+[
+  {
+    "url": "https://digikhata.pk/",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "DYNAMIC"
+      ]
+    },
+    "responseHeaders": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "no-cache, private",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "a34d83470abfd746-MRS",
+      "content-encoding": "br",
+      "content-type": "text/html; charset=UTF-8",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=RFZVZc8FR1HlZJHR87WEmEfZE4Q21EviAFiSeieZ9xwa31dUeTDrw6OgOodDcOMPsMU28o4nJ3vxaTSWtJNwBTRrGDEo9oYPnyu52WwUci0Ui2MptigLqjG9GmxppH%2Bh9Gc2ODVPxkGxrg%3D%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfCacheStatus;desc=\"DYNAMIC\"\ncfEdge;dur=9,cfOrigin;dur=285",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "vary": "accept-encoding",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-xss-protection": "1; mode=block"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/cdn-cgi/speculation",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ]
+    },
+    "responseHeaders": {
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=mTeAogG8fnP45VZEqx5Spch7Co2DO%2BhkQASNm8vc%2BeWgPxSBC9zLshjqonk2wGOPqRFO8E%2Bmvmm4LUubpXmQMhmJ7TAA2yGI0u8gxJYzv472An5boPeabIIhbY878yXJ998ke7us%2FsCRUQ%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "cf-ray": "a34d834a1a18d746-MRS",
+      "access-control-allow-origin": "https://digikhata.pk",
+      "content-length": "151",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "application/speculationrules+json",
+      "vary": "Origin",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/css/slick.css",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"62303b5a-6f0\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ByKfvfuJ2KsX6%2BFqXMdH1l4%2BcUDE%2FxkOpEi5T4v%2FF4jb%2F37aUJy9tGYUo2wz7WzZLxEUEvTbJwiQ54LAcFfOxJO%2FNupCOplR7btrPlkYTyU2Sv5DXj8hITj6Rs3NjcwG8ZboqP43rjEf1Q%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "text/css",
+      "vary": "accept-encoding",
+      "last-modified": "Tue, 15 Mar 2022 07:08:10 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834a1a1fd746-MRS",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/css/slick-theme.css",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"62303b5a-a80\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=MyyGS2eRbSx3bkT7VSjjv5pRcsJrTywflYRi%2Fz1D6C%2B1g9DGWi8%2BL9LLgCfSQLRDCkzWkjWy%2FI1ZOA6GwqQFZoHnLLVnbEcr7NhcvhUIIGkfRGhTprtV6h8S6s3C7UR%2BLyQVxuFjCwMx4g%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "text/css",
+      "vary": "accept-encoding",
+      "last-modified": "Tue, 15 Mar 2022 07:08:10 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834a1a23d746-MRS",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/css/app.css",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"62303b5a-23aa6\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=zW0uzAVY9e%2BkWzJRSMx7Y9k5MC3iDTKlLEb%2FGjgvB66c5foXMtcp8%2BJP7%2Bz%2F6uAa5Z42GiDK3tVz3reSo%2FxD6nTBX%2F%2BSPsb8%2Fe7WrkIkJHS8ZPhNVHP%2BcbgrvkB8cfdxbUncRAx5PGKP%2BA%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "text/css",
+      "vary": "accept-encoding",
+      "last-modified": "Tue, 15 Mar 2022 07:08:10 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834a1a26d746-MRS",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/css/custom.css",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"6a8452bf-6076\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=XYrrUKb8ZALDFcBIHdyEyh06Da3xss7WwHvlPwQcYgbxU2s%2BkvJ75chzXLoam%2FRPxTgsHdenPNCv2Hga9sltOrsSmRoZrfcf9rG0lW%2FLJoRtMhjgalNHNckzUG2lx1N9JUh7BXPawHa%2B8g%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "text/css",
+      "vary": "accept-encoding",
+      "last-modified": "Tue, 18 Aug 2026 12:40:31 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834a1a2dd746-MRS",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ]
+    },
+    "responseHeaders": {
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "public",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "content-encoding": "br",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=NF6s2ySM%2FlAW27vyKUFYMacPP%2BQMJgIYF1D1tbMhG0fF6Z2%2FC0P%2BEL2AO%2ByIo4LCrKDv0jXOIFy2gbEWxIDalSd6X7HjfYEWsEiwkWqXwOFmaVJVqQ8YHNIbd2vzm1i04BTZFuiTxuSLkw%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "cf-ray": "a34d834b0c78d746-MRS",
+      "expires": "Fri, 04 Sep 2026 15:22:54 GMT",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "application/javascript",
+      "vary": "accept-encoding",
+      "server": "cloudflare",
+      "x-frame-options": "DENY"
+    }
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-content-type-options": "nosniff",
+      "expires": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+      "last-modified": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000",
+      "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+      "cache-control": "private, max-age=86400, stale-while-revalidate=604800",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin-allow-popups",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-origin": "*",
+      "x-xss-protection": "0",
+      "server": "ESF"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/logo_khata.svg",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"6a7071f1-b166\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=z3nepakwcR0wzlP0f9I1fMLEaXLTFlRALOei4oCCjc6r68SN35nlm4%2BQuqcrGd6AHnz4TFuD6b4N%2B68q%2BEIAvOaIwWtuMfFsu1%2B2onwVuOk59dkwkJwwjBOap3yOBOctXx1l9Mw3Qu%2Ffsw%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/svg+xml",
+      "vary": "accept-encoding",
+      "last-modified": "Mon, 03 Aug 2026 10:48:17 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c7cd746-MRS",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css",
+    "edgeInfo": {
+      "pop": [
+        "eto",
+        "fra",
+        "van",
+        "bom",
+        "khi"
+      ],
+      "provider": [
+        "cloudflare",
+        "fastly"
+      ],
+      "location": [
+        "frankfurt am main",
+        "van",
+        "mumbai",
+        "karachi"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "HIT, HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"14f73-BDozLk9VXMC/015FG+lVtLk5ZqA\"",
+      "age": "4629802",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=BAqU1Mfo87tp8dym9y3V8FJdlMHXNdSNhWXQA3STcFzpv5lR0i0tLUh%2FJXS8dvOrcm7nHeLwiPveFwY8XAc4Ui5zUOisSzgXIbAFN9Xif4zZODkHflUs8cRLCLTVFbsnXX54txRBWnDhp9bbhMs%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "x-jsd-version-type": "version",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cache": "HIT, HIT",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "x-served-by": "cache-fra-etou8220072-FRA, cache-bom-vanm7210081-BOM",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d834bbc3bb7dc-KHI",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "13383",
+      "server": "cloudflare",
+      "x-jsd-version": "1.11.3"
+    }
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-content-type-options": "nosniff",
+      "expires": "Wed, 02 Sep 2026 15:22:55 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 15:22:55 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+      "last-modified": "Wed, 02 Sep 2026 15:02:20 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000",
+      "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+      "cache-control": "private, max-age=86400, stale-while-revalidate=604800",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin-allow-popups",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-origin": "*",
+      "x-xss-protection": "0",
+      "server": "ESF"
+    }
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-content-type-options": "nosniff",
+      "expires": "Wed, 02 Sep 2026 15:22:55 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 15:22:55 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+      "last-modified": "Wed, 02 Sep 2026 15:22:55 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000",
+      "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+      "cache-control": "private, max-age=86400, stale-while-revalidate=604800",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin-allow-popups",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-origin": "*",
+      "x-xss-protection": "0",
+      "server": "ESF"
+    }
+  },
+  {
+    "url": "https://unpkg.com/aos@2.3.1/dist/aos.css",
+    "edgeInfo": {
+      "pop": [
+        "khi"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "karachi"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "197643",
+      "access-control-allow-methods": "GET, HEAD, OPTIONS",
+      "x-content-type-options": "nosniff",
+      "expires": "Thu, 02 Sep 2027 15:22:54 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "last-modified": "Fri, 07 Aug 2026 04:32:04 GMT",
+      "fly-request-id": "01KZ98S4DTJSA5ZAJQ1A59R7FD-sin",
+      "access-control-allow-headers": "*",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "vary": "accept-encoding",
+      "cache-control": "public, max-age=31536000",
+      "cross-origin-resource-policy": "cross-origin",
+      "via": "1.1 fly.io",
+      "cf-ray": "a34d834b6ec4a813-KHI",
+      "content-digest": "sha256=:GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4=:",
+      "access-control-allow-origin": "*",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ],
+      "cacheStatus": [
+        "BYPASS",
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cdnjs-via": "cfworker/r2",
+      "content-encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "age": "116888",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=l9M0aQmJwQFFz3rPpgI%2FJJaIiHPDaP7FzC9ldsmHPBvryeQ2tbjDAcvrtAxkZHMsfYyKZzB2pdEhMl4A0oGafPcpspE846nmCh%2BiAcmgMXf%2BSLaZTlHAtRFixRi%2BaIwEbT%2FruFdv%2BTkIB72CkD07wZNu\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cdnjs-cache": "HIT",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "last-modified": "Mon, 16 Dec 2024 22:44:28 GMT",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=15780000",
+      "cache-control": "no-transform, public, s-maxage=30672000, max-age=30672000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d834bcb17fe4b-LHE",
+      "access-control-allow-origin": "*",
+      "content-length": "18183",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/css/newhomepage.css",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"6a8452bf-d638\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=7uJn1H6UxGs3quuHPdFCW4KBot05R%2Fs7rD7MDXSffdfU%2BlzBFxD5P%2BjOpElo6RNW9icC5XxbbYiM4YtSe3G%2BpPB6BQBrO86zsO%2Frxxy6qK1MJpPjSoEadmv90DJwIaNP5TC7zhm8V6Hycg%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "text/css",
+      "vary": "accept-encoding",
+      "last-modified": "Tue, 18 Aug 2026 12:40:31 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c7ed746-MRS",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/img-hero.webp",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "etag": "\"6a7071f1-35df2\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=lCl7xE16aNDh3HvjvzMbAdEqak%2B3Fedgo%2FcxhL4DQrEcP7xBhBJVnB4GYyEpsosR9KQMrmt8yt58RRDxSIW%2FV7Sky8QjGb0tRvu%2BAfjygGyVumuh0qi%2Bq9VfibIYa36OkcZo%2BG3SfPaZ7Q%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/webp",
+      "last-modified": "Mon, 03 Aug 2026 10:48:17 GMT",
+      "vary": "accept-encoding",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c81d746-MRS",
+      "accept-ranges": "bytes",
+      "content-length": "220658",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/partyledger-icon.svg",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"6a7071f1-79c\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=2ojiUB9InvIGS1SJ2yE%2BWM65ywfuw%2FCxU2C6%2BBTTRxJhJdjevtxz%2FcvnT8FJ%2BI2%2FPGyGp3I506gHn6P1cxNAe%2FPuhBGYzkHSclSkQy6ZjFEHJKHUrm%2BUWhHOIatIl5DzM6J77bKcbr4SIg%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/svg+xml",
+      "vary": "accept-encoding",
+      "last-modified": "Mon, 03 Aug 2026 10:48:17 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c85d746-MRS",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/staffbook-icon.svg",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"6a7071f1-899\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=j6LHBxHUYBRasruYl7WMHrPVMUKbw%2Fif8PvSDrYbFuqbmmA7D7ZaM99urom1S0Iby%2BbL9kZE9PScHE%2FwyABc56OLyf3K1IbjmmX6w7HBQNKd5f%2B3dpyIppKDMIFB76kdMraXNbDD2CkNXg%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/svg+xml",
+      "vary": "accept-encoding",
+      "last-modified": "Mon, 03 Aug 2026 10:48:17 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c87d746-MRS",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/stockbook-icon.svg",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"6a7071f1-701\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=swtnfgL47oFIKiTQJ3eTXjEdBAK8y33xCZ7YawFxVeIMBrh7wTR2lFF9FP415VxExVjnBEKBfvnhamR1vitTDWgskEmceLcZm3l3QwOIkWRDe02WuvQoEOXRyzNy3yd7tvlWTScUmColzQ%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/svg+xml",
+      "vary": "accept-encoding",
+      "last-modified": "Mon, 03 Aug 2026 10:48:17 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c8cd746-MRS",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/final-party-module.webp",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "etag": "\"6a7071f1-53d42\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=G5PvR%2BX%2B71q9pZmMxE%2FFyExOunz19QpZD1L%2BxwZ00qAMtWy5KaGeEgKzooypUEyb3sIU0MuJL91F3XJ1CSLMbVggl%2BrcfMkee4s8d%2FvCvYADvsBMuY3SnqaYgyJZr8QwstANvZ4%2FXTYD6g%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/webp",
+      "last-modified": "Mon, 03 Aug 2026 10:48:17 GMT",
+      "vary": "accept-encoding",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c90d746-MRS",
+      "accept-ranges": "bytes",
+      "content-length": "343362",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/cashbook-icon.svg",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"6a7071f1-bdc\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=b0RLetA1zCIFNVIWtOCmb0V0ssbha6JrdntQ17mGuFxVBVcamgshELb1qMBvB%2Fkx3L%2F4ZlSG%2BiFF9iPnH9KWLOuigX8ENcqIhL4s8GQjJkTHc2EwGXHVS4AWL7KHQZeJP1MsKXBBzSlv4Q%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/svg+xml",
+      "vary": "accept-encoding",
+      "last-modified": "Mon, 03 Aug 2026 10:48:17 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cache-control": "max-age=3600",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c95d746-MRS",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/billbook-icon.svg",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"6a7071f1-a74\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=w9Ox4neZ2vJbmmEP7kwCmthYkcta1Ypgn3esUmlWR7uU8K8bllGuduscJ1lGqvVO%2FAJwxqoaU%2BifmcYgk61118B1eEFkhHPQTzkqDgTdwJdetEi8Af1koCFlZh11huEJEcwB48IYf2Zkhg%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/svg+xml",
+      "vary": "accept-encoding",
+      "last-modified": "Mon, 03 Aug 2026 10:48:17 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c96d746-MRS",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/expense-icon.svg",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"6a7071f1-1690\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=RVHM2uG9PQP%2BgkL4CHAdtEDkQoTH%2B6DMVq0z3ZMaf0%2FrF055YJQdbGTD66%2Blu2VePDZW1r%2F3DS75I0K15jyZnnMOeeyz0T3nntW4%2FkNFgbZH1%2FITOLwkMW1e0SM2vz%2FNvUWuKyPLvJ8sKg%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/svg+xml",
+      "vary": "accept-encoding",
+      "last-modified": "Mon, 03 Aug 2026 10:48:17 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c99d746-MRS",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/pos-digi.webp",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "etag": "\"6a7071f1-54e7e\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=7JNoJX3Yymtbd%2Biy4g3iAoiQs6HBAwGkOEjgcJ8mTN9BZg3odoYOPfZD187ykTkC3AL9Eou632HH7XQmgy9ryObfWIliP8HrzxlArVHMbp0FVRCzSvnh9muJzMvtZA8ihPyi0LalKZu3iQ%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/webp",
+      "vary": "accept-encoding",
+      "last-modified": "Mon, 03 Aug 2026 10:48:17 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c9ad746-MRS",
+      "accept-ranges": "bytes",
+      "content-length": "347774",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/qr-scanner.webp",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "etag": "\"6a7071f1-68448\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=wHplxOMHXGv6vsPT129VbRU%2BF%2BZjGY2M4Zh1g10fSMm%2BI4oF2tnEdli9U2xNMDVhQuzuKLp3uWepr3yVnqhohK0xCHMY6ioAy2W6kocfmTl5u9cvMPfbY7yVj6l9vyw6kuuJOLHaqxk3Hg%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/webp",
+      "last-modified": "Mon, 03 Aug 2026 10:48:17 GMT",
+      "vary": "accept-encoding",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c9bd746-MRS",
+      "accept-ranges": "bytes",
+      "content-length": "427080",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/nano-frame.webp",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "etag": "\"6a7071f1-2838c\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=hoqU2jeiJkC2ts3FiSiAstzmslMf8%2B4f5X2KdTWQWKLlZghvYYGkiEganG0JbMPSALcuqWVxvQxbE%2F%2BZwQfLFCt22NN1kwg5yW4UDeas7h9xLYojv2y3aGR2nfcQ8LbxYx6x6LAZ1Qy9%2BA%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/webp",
+      "last-modified": "Mon, 03 Aug 2026 10:48:17 GMT",
+      "vary": "accept-encoding",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c9cd746-MRS",
+      "accept-ranges": "bytes",
+      "content-length": "164748",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/khata1.webp",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "etag": "\"6a7087b2-1d726\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ZQCtG6eZJAryRIVBVjyhEH%2BoNJ0LgXgCaOSEjzgDpetYBnjp37rGIXUx21WzlYYTh5jQZo%2FpU4zvVwggjlK18DXA1giA%2F64ErYOzO0sk2nTgl7nim9EoNNdwHRFZn0GD%2BFUlvEvXGgJd7g%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/webp",
+      "last-modified": "Mon, 03 Aug 2026 12:21:06 GMT",
+      "vary": "accept-encoding",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c9ed746-MRS",
+      "accept-ranges": "bytes",
+      "content-length": "120614",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/khata2.webp",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "etag": "\"6a7087b2-15334\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=HRNyD80RyIcU7vBMwJMG2jQns9zL1bm03uhJopxnKAv2dIdY6al%2F4Bu4%2FHe%2F%2B%2BzXZb2A8UjPgRc%2F5%2FULOBsKRk6FWIoZred%2BX%2BeLzFHF9WJz4U%2BOLgDq3bwuiKkc9yVGDgRHOEivTaONGA%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/webp",
+      "last-modified": "Mon, 03 Aug 2026 12:21:06 GMT",
+      "vary": "accept-encoding",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0c9fd746-MRS",
+      "accept-ranges": "bytes",
+      "content-length": "86836",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/images/newhome/khata3.webp",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "HIT",
+      "etag": "\"6a7087b2-109a8\"",
+      "age": "5453",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=80bhyfSUTXSbvic8YNLUA4MomMURv2B14Sgjq80tVZzDaE5w%2Fjsh1mtInxY99zu7SDGaNS8zKIpbTCclJJYizpH1uALKNBMnaivfqg3YejZFcccnXJpxoZq0xSO5SqghE%2FjNe2WdP9ZD6A%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "image/webp",
+      "last-modified": "Mon, 03 Aug 2026 12:21:06 GMT",
+      "vary": "accept-encoding",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d834b0ca0d746-MRS",
+      "accept-ranges": "bytes",
+      "content-length": "68008",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/v3d52b47920f24c319d37e2661827c42b1787588026925",
+    "edgeInfo": {
+      "pop": [
+        "khi"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "karachi"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "public, max-age=86400",
+      "content-encoding": "gzip",
+      "etag": "W/\"2026.8.4\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d834c3993abfc-KHI",
+      "access-control-allow-origin": "*",
+      "date": "Wed, 02 Sep 2026 15:22:54 GMT",
+      "content-type": "text/javascript;charset=UTF-8",
+      "last-modified": "Mon, 24 Aug 2026 16:13:46 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-content-type-options": "nosniff",
+      "expires": "Wed, 02 Sep 2026 15:22:55 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 15:22:55 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+      "last-modified": "Wed, 02 Sep 2026 15:22:55 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000",
+      "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+      "cache-control": "private, max-age=86400, stale-while-revalidate=604800",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin-allow-popups",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-origin": "*",
+      "x-xss-protection": "0",
+      "server": "ESF"
+    }
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "age": "3424",
+      "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+      "x-content-type-options": "nosniff",
+      "expires": "Thu, 02 Sep 2027 14:25:52 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 14:25:52 GMT",
+      "last-modified": "Thu, 04 Sep 2025 17:10:24 GMT",
+      "content-type": "font/woff2",
+      "cache-control": "public, max-age=31536000",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "35508",
+      "x-xss-protection": "0",
+      "server": "sffe"
+    }
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSvfedN4.woff2",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "age": "84643",
+      "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+      "x-content-type-options": "nosniff",
+      "expires": "Wed, 01 Sep 2027 15:52:13 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Tue, 01 Sep 2026 15:52:13 GMT",
+      "last-modified": "Thu, 04 Sep 2025 17:08:03 GMT",
+      "content-type": "font/woff2",
+      "cache-control": "public, max-age=31536000",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "24576",
+      "x-xss-protection": "0",
+      "server": "sffe"
+    }
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6",
+    "edgeInfo": {
+      "pop": [
+        "edd",
+        "fra",
+        "van",
+        "bom",
+        "khi"
+      ],
+      "provider": [
+        "cloudflare",
+        "fastly"
+      ],
+      "location": [
+        "frankfurt am main",
+        "van",
+        "mumbai",
+        "karachi"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "HIT, HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"1fd5c-Agw8b5KAoxXoQl1/kuFbzQzdobI\"",
+      "age": "1353405",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=K5%2FNhvXQ8SuOW65eabmaZ7zvJuUxxVxMtry6FMJAkamnOPIPvQzb1GxOWSWRNeF64GTPcSq7xug%2FCU7oX0CN%2BJw72iOqdXn%2BbXjgTr%2BGcglHslx1be5SZjXjF2XZNwryX6cAkR8%2FzxIS%2FGvZDlQ%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "x-jsd-version-type": "version",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cache": "HIT, HIT",
+      "date": "Wed, 02 Sep 2026 15:22:56 GMT",
+      "content-type": "font/woff2",
+      "x-served-by": "cache-fra-eddf8230139-FRA, cache-bom-vanm7210073-BOM",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d83585f0c541f-KHI",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "130396",
+      "server": "cloudflare",
+      "x-jsd-version": "1.11.3"
+    }
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.6.0.min.js",
+    "edgeInfo": {
+      "pop": [
+        "lga",
+        "mrs"
+      ],
+      "provider": [
+        "fastly"
+      ],
+      "location": [
+        "new york",
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "HIT, HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "etag": "W/\"28feccc0-15d9d\"",
+      "age": "3700837",
+      "x-cache": "HIT, HIT",
+      "date": "Wed, 02 Sep 2026 15:22:57 GMT",
+      "content-type": "application/javascript; charset=utf-8",
+      "last-modified": "Fri, 18 Oct 1991 12:00:00 GMT",
+      "x-cache-hits": "538107, 564570",
+      "x-served-by": "cache-lga21931-LGA, cache-mrs1050105-MRS",
+      "vary": "Accept-Encoding",
+      "cache-control": "public, max-age=31536000, stale-while-revalidate=604800",
+      "x-timer": "S1788362577.026356,VS0,VE0",
+      "cross-origin-resource-policy": "cross-origin",
+      "via": "1.1 varnish, 1.1 varnish",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "30875",
+      "server": "nginx"
+    }
+  },
+  {
+    "url": "https://unpkg.com/aos@2.3.1/dist/aos.js",
+    "edgeInfo": {
+      "pop": [
+        "khi"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "karachi"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "378433",
+      "access-control-allow-methods": "GET, HEAD, OPTIONS",
+      "x-content-type-options": "nosniff",
+      "expires": "Thu, 02 Sep 2027 15:22:56 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:56 GMT",
+      "content-type": "text/javascript; charset=utf-8",
+      "last-modified": "Fri, 07 Aug 2026 04:32:05 GMT",
+      "fly-request-id": "01KZ6XQRNSR3P1JNFB2KGZ4CDQ-sin",
+      "access-control-allow-headers": "*",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "vary": "accept-encoding",
+      "cache-control": "public, max-age=31536000",
+      "cross-origin-resource-policy": "cross-origin",
+      "via": "1.1 fly.io",
+      "cf-ray": "a34d83557a08a813-KHI",
+      "content-digest": "sha256=:8mhhK6WerRskNTu3fWZ4O8xDWv8cIr5fk8QLrDhplo4=:",
+      "access-control-allow-origin": "*",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js",
+    "edgeInfo": {
+      "pop": [
+        "eto",
+        "fra",
+        "van",
+        "bom",
+        "khi"
+      ],
+      "provider": [
+        "cloudflare",
+        "fastly"
+      ],
+      "location": [
+        "frankfurt am main",
+        "van",
+        "mumbai",
+        "karachi"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "HIT, HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"13b17-9/0PPchLLPk7+B6DJQWmc/NU4KM\"",
+      "age": "2300409",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=aR00kb852SP%2BEVqkDN8hnnLop4bjub7FlSCPtD5zzVUwsqc4XOajyWGs3tgI8CUiwGK3XnLcdVLZ4iGs6YTxNsqvb0wA%2B56%2FsbLAYLiBV1bVhAustZaTYzaEBc5S0%2Fy84lY2H%2BYvTr52oWk0MlY%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "x-jsd-version-type": "version",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cache": "HIT, HIT",
+      "date": "Wed, 02 Sep 2026 15:22:56 GMT",
+      "content-type": "application/javascript; charset=utf-8",
+      "x-served-by": "cache-fra-etou8220020-FRA, cache-bom-vanm7210090-BOM",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d83557ba5b7dc-KHI",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "24440",
+      "server": "cloudflare",
+      "x-jsd-version": "5.3.2"
+    }
+  },
+  {
+    "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3440916086492604",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "etag": "1527363161209869731",
+      "x-content-type-options": "nosniff",
+      "expires": "Wed, 02 Sep 2026 15:22:57 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "p3p": "policyref=\"https://www.googleadservices.com/pagead/p3p.xml\", CP=\"NOI DEV PSA PSD IVA IVD OTP OUR OTR IND OTC\"",
+      "date": "Wed, 02 Sep 2026 15:22:57 GMT",
+      "content-type": "text/javascript; charset=UTF-8",
+      "vary": "Accept-Encoding",
+      "content-disposition": "attachment; filename=\"f.txt\"",
+      "link": "<https://googleads.g.doubleclick.net>; rel=\"preconnect\"; crossorigin",
+      "cache-control": "private, max-age=3600, stale-while-revalidate=3600",
+      "timing-allow-origin": "*",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-origin": "*",
+      "content-length": "67036",
+      "x-xss-protection": "0",
+      "server": "cafe"
+    }
+  },
+  {
+    "url": "https://www.googletagmanager.com/gtag/js?id=G-MRZFWNLT4H",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "strict-transport-security": "max-age=31536000; includeSubDomains",
+      "cache-control": "private, max-age=900",
+      "content-encoding": "zstd",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-credentials": "true",
+      "expires": "Wed, 02 Sep 2026 15:22:57 GMT",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "content-length": "174403",
+      "date": "Wed, 02 Sep 2026 15:22:57 GMT",
+      "x-xss-protection": "0",
+      "content-type": "application/javascript; charset=UTF-8",
+      "vary": "Accept-Encoding",
+      "server": "Google Tag Manager",
+      "access-control-allow-headers": "Cache-Control"
+    }
+  },
+  {
+    "url": "https://digikhata.pk/js/app.js",
+    "edgeInfo": {
+      "pop": [
+        "mrs"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "marseille"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"62303b5c-5f946\"",
+      "age": "5454",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=gCUecP9ugFfwIn310TAHq%2B%2FqN9P85iMfCT75o8rD5Hx7f13vYPFyXvy5KTeGypTJdJdg7YbgrLUFfirNGNoMGRmQjCXWCpTuPr0c4UFC3dFVwYnDvI1ZMUkcX4SZDUjsn6lFSZCFJSO3CQ%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:22:56 GMT",
+      "content-type": "application/javascript; charset=utf-8",
+      "vary": "accept-encoding",
+      "last-modified": "Tue, 15 Mar 2022 07:08:12 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=0; includeSubDomains; preload",
+      "cache-control": "max-age=3600",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "cf-ray": "a34d8355afdfd746-MRS",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  }
+]

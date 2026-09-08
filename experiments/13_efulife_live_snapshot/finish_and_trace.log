@@ -1,0 +1,56 @@
+[2026-09-06T00:52:53.177213] === finish_and_trace starting ===
+[2026-09-06T00:53:23.956711] live probes: 17, using 65761 for liveness pings
+[2026-09-06T00:53:55.566889]   scheduled ping livecheck NayaPay 103.210.224.2 -> 208316728
+[2026-09-06T00:54:11.768732]   scheduled ping livecheck NayaPay 103.210.224.5 -> 208316758
+[2026-09-06T00:54:27.910802]   scheduled ping livecheck NayaPay 103.210.224.10 -> 208316783
+[2026-09-06T00:54:43.858496]   scheduled ping livecheck NayaPay 103.210.224.50 -> 208316814
+[2026-09-06T00:55:00.129945]   scheduled ping livecheck NayaPay 103.210.224.100 -> 208316853
+[2026-09-06T00:55:16.051652]   scheduled ping livecheck NayaPay 103.210.224.150 -> 208316891
+[2026-09-06T00:55:32.020496]   scheduled ping livecheck NayaPay 103.210.224.200 -> 208316919
+[2026-09-06T00:55:48.242126]   scheduled ping livecheck NayaPay 103.210.224.254 -> 208316936
+[2026-09-06T00:56:04.401186]   scheduled ping livecheck DataCheck 103.141.43.1 -> 208316957
+[2026-09-06T00:56:20.297485]   scheduled ping livecheck DataCheck 103.141.43.2 -> 208316960
+[2026-09-06T00:56:36.344141]   scheduled ping livecheck DataCheck 103.141.43.5 -> 208316964
+[2026-09-06T00:56:52.288167]   scheduled ping livecheck DataCheck 103.141.43.10 -> 208316967
+[2026-09-06T00:57:08.791938]   scheduled ping livecheck DataCheck 103.141.43.50 -> 208316973
+[2026-09-06T00:57:24.787034]   scheduled ping livecheck DataCheck 103.141.43.100 -> 208316974
+[2026-09-06T00:57:40.719031]   scheduled ping livecheck DataCheck 103.141.43.150 -> 208316979
+[2026-09-06T00:57:56.628861]   scheduled ping livecheck DataCheck 103.141.43.200 -> 208316982
+[2026-09-06T00:58:12.911553]   scheduled ping livecheck DataCheck 103.141.43.254 -> 208316992
+[2026-09-06T00:58:13.223295] total liveness pings tracked: 72
+[2026-09-06T01:13:06.170908] pings completed: 72 of 72
+[2026-09-06T01:13:22.049640]   LIVE: Intermarket -> 103.94.186.1
+[2026-09-06T01:13:38.123959]   LIVE: Shirazi -> 103.103.112.1
+[2026-09-06T01:16:02.071512]   no response anywhere for MTPPL, falling back to 103.110.52.1
+[2026-09-06T01:18:24.941478]   no response anywhere for K-Electric, falling back to 103.125.142.1
+[2026-09-06T01:18:40.659078]   LIVE: Khadim Ali Shah Bukhari -> 103.155.145.1
+[2026-09-06T01:19:28.625764]   LIVE: HBL Bank -> 103.111.84.5
+[2026-09-06T01:21:51.691018]   no response anywhere for NayaPay, falling back to 103.210.224.1
+[2026-09-06T01:22:07.742475]   LIVE: DataCheck -> 103.141.43.1
+[2026-09-06T01:22:07.743590] final target list: {
+  "Intermarket": "103.94.186.1",
+  "Shirazi": "103.103.112.1",
+  "MTPPL": "103.110.52.1",
+  "K-Electric": "103.125.142.1",
+  "Khadim Ali Shah Bukhari": "103.155.145.1",
+  "HBL Bank": "103.111.84.5",
+  "NayaPay": "103.210.224.1",
+  "DataCheck": "103.141.43.1"
+}
+[2026-09-06T01:22:38.315531] re-discovered 16 live probes for traceroute round
+[2026-09-06T01:26:57.623749]   scheduled all probes -> Intermarket
+[2026-09-06T01:31:17.146527]   scheduled all probes -> Shirazi
+[2026-09-06T01:35:37.156871]   scheduled all probes -> MTPPL
+[2026-09-06T01:39:57.764347]   scheduled all probes -> K-Electric
+[2026-09-06T01:44:19.766926]   scheduled all probes -> Khadim Ali Shah Bukhari
+[2026-09-06T01:44:37.231079]   scheduled all probes -> HBL Bank
+[2026-09-06T01:44:53.447807]   scheduled all probes -> NayaPay
+[2026-09-06T01:45:10.798602]   scheduled all probes -> DataCheck
+[2026-09-06T01:45:10.800549] waiting for 128 traceroute measurements...
+[2026-09-06T01:55:09.704027] traceroutes completed: 112 of 128
+[2026-09-06T02:27:00.358710] Grouped CSV -> /Users/SameeraSalman/pkinternet/experiments/13_efulife_live_snapshot/results/other_customers_batch2_20260906_012207/grouped_20260906_012207.csv
+[2026-09-06T02:27:00.359181] Summary CSV -> /Users/SameeraSalman/pkinternet/experiments/13_efulife_live_snapshot/results/other_customers_batch2_20260906_012207/summary_20260906_012207.csv
+[2026-09-06T02:27:00.359238] Readable    -> /Users/SameeraSalman/pkinternet/experiments/13_efulife_live_snapshot/results/other_customers_batch2_20260906_012207/grouped_20260906_012207.txt
+[2026-09-06T02:27:00.359291] scheduled=128 completed=112
+[2026-09-06T02:27:00.360653] Summary written -> /Users/SameeraSalman/pkinternet/experiments/13_efulife_live_snapshot/OTHER_COMPANIES_RESULTS.md
+[2026-09-06T02:27:00.360737] === finish_and_trace DONE ===

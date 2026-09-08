@@ -1,0 +1,153 @@
+[
+  {
+    "url": "https://honda.com.pk/",
+    "edgeInfo": {},
+    "responseHeaders": {
+      "Location": "https://honda.com.pk/"
+    }
+  },
+  {
+    "url": "https://honda.com.pk/",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "muscat"
+      ]
+    },
+    "responseHeaders": {
+      "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-mitigated": "challenge",
+      "cf-ray": "a34d98cd8f83f9cd-MCT",
+      "content-encoding": "br",
+      "content-security-policy": "default-src 'none'; script-src 'nonce-cnPimu1bAJ7DD6oo31saRg' 'unsafe-eval' https://challenges.cloudflare.com; script-src-attr 'none'; style-src 'unsafe-inline'; img-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com blob:; child-src 'self' https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri 'self'",
+      "content-type": "text/html; charset=UTF-8",
+      "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "cross-origin-embedder-policy": "require-corp",
+      "cross-origin-opener-policy": "same-origin",
+      "cross-origin-resource-policy": "same-origin",
+      "date": "Wed, 02 Sep 2026 15:37:35 GMT",
+      "origin-agent-cluster": "?1",
+      "permissions-policy": "accelerometer=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=(),xr-spatial-tracking=*",
+      "referrer-policy": "same-origin",
+      "server": "cloudflare",
+      "server-timing": "chlray;desc=\"a34d98cd8f83f9cd\"",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN"
+    }
+  },
+  {
+    "url": "https://honda.com.pk/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=a34d98cd8f83f9cd",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "muscat"
+      ]
+    },
+    "responseHeaders": {
+      "cf-ray": "a34d98ceabf0f9cd-MCT",
+      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-encoding": "br",
+      "date": "Wed, 02 Sep 2026 15:37:35 GMT",
+      "content-type": "application/javascript; charset=UTF-8",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://challenges.cloudflare.com/turnstile/v0/g/330e41bb475c/api.js?onload=khCN8&render=explicit",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "muscat"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "max-age=31536000, stale-if-error=10800, stale-while-revalidate=31536000, public",
+      "timing-allow-origin": "https://honda.com.pk",
+      "content-encoding": "br",
+      "etag": "W/\"330e41bb475c-api\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "x-content-type-options": "nosniff",
+      "cf-ray": "a34d98d2ad55f9d7-MCT",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:37:36 GMT",
+      "content-type": "application/javascript; charset=UTF-8",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://honda.com.pk/cdn-cgi/challenge-platform/h/g/fo/2133845413:1788361233:xeNFIrpFokWhGHk1wS9amQTFlrHmCOl9mnbqAExmTtY/a34d98cd8f83f9cd/OX8aRCUL6hMa08inwUSH4YaFkLsa6.LFoFGmqGmnTaE-1788363455-1.2.1.1-P33dV07Y71VfDh728UMH4uvcWa.Vc6iTumPc0vP.p6E1nsQINxOmK5T3hHChgrbL",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "muscat"
+      ]
+    },
+    "responseHeaders": {
+      "timing-allow-origin": "https://honda.com.pk",
+      "content-encoding": "br",
+      "cf-ray": "a34d98d32fe1f9cd-MCT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:37:36 GMT",
+      "content-type": "text/plain; charset=UTF-8",
+      "cf-chl-gen": "XW8LzXmXxatnOdEd33vmUtFR0iKR6/2ecDFImzfBZzU=$pcH9wi6lR6PkcSTnuLZAmg==",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/turnstile/f/av0/rch/rlkua/0x4AAAAAAADnPIDROrmt1Wwj/dark/fbE/new/normal?lang=auto",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "muscat"
+      ]
+    },
+    "responseHeaders": {
+      "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "cf-ray": "a34d98d6bc8bd1e4-MCT",
+      "content-encoding": "br",
+      "content-security-policy": "default-src 'none'; script-src 'nonce-G62eKnH0IYtbzn6mcDKXQ6' 'unsafe-eval'; script-src-attr 'none'; worker-src blob:; style-src 'unsafe-inline'; img-src 'self'; connect-src 'self' https://hagen.challenges.cloudflare.com https://brunhild.challenges.cloudflare.com; frame-src 'self' blob:; child-src 'self' blob:; form-action 'none'; base-uri 'self'; trusted-types FHMZS9 default; require-trusted-types-for 'script'; sandbox allow-same-origin allow-scripts allow-popups allow-forms",
+      "content-type": "text/html; charset=UTF-8",
+      "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "cross-origin-embedder-policy": "require-corp",
+      "cross-origin-opener-policy": "same-origin",
+      "cross-origin-resource-policy": "cross-origin",
+      "date": "Wed, 02 Sep 2026 15:37:37 GMT",
+      "document-policy": "js-profiling",
+      "origin-agent-cluster": "?1",
+      "permissions-policy": "accelerometer=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=(),xr-spatial-tracking=*",
+      "referrer-policy": "same-origin",
+      "server": "cloudflare",
+      "server-timing": "7jj7kfzz;dur=258647"
+    }
+  }
+]

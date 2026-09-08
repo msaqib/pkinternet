@@ -1,0 +1,3830 @@
+[
+  {
+    "url": "https://uos.edu.pk/",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "DYNAMIC"
+      ]
+    },
+    "responseHeaders": {
+      "CF-RAY": "a34d93bd2c693805-MRS",
+      "Cache-Control": "no-cache, private\nno-cache, no-store, must-revalidate",
+      "Connection": "keep-alive",
+      "Content-Encoding": "zstd",
+      "Content-Type": "text/html; charset=UTF-8",
+      "Date": "Wed, 02 Sep 2026 15:34:12 GMT",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2FwGvsHJ%2BB4EuIX%2BrGnykwQy1H%2F2U74Ey638ZM8fsQDK0UzrnIZo2434iV3Gt7zSOLtuDVvGYGjzNuyf%2FIEKJ6kAKwGjLD8RLuLTg%2BTKfyEaaa2bq16QAFlBrl7LPh7yOv0WM05%2B8Ikcq\"}]}",
+      "Server": "cloudflare",
+      "Server-Timing": "cfCacheStatus;desc=\"DYNAMIC\"\ncfEdge;dur=50,cfOrigin;dur=4041",
+      "Transfer-Encoding": "chunked",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "expires": "0",
+      "pragma": "no-cache",
+      "vary": "accept-encoding",
+      "x-powered-by": "PHP/8.2.33\nPleskLin"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/plugins/goodlayers-core/plugins/combine/style.css",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=PNaMHxhMeS2%2F1pA4Cs7wyQlsXHUWI30oWjiIod6ucmXJPgtSI3wuzEqrCllo6w%2Fi2I70Fnuo9yWur4wriIR0D6W3Bslrii5RBM64gstdZBDtYPbwthAcBvjxcGSRK45e4oAHthJ%2B%2BJyv\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "Content-Type": "text/css",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93daf9423805-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+    "edgeInfo": {},
+    "responseHeaders": {
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "public",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "Content-Encoding": "zstd",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=uL2P%2BqmCfy5A2xGyg6PV5TtDfsgOcEkjS5BzyRwTPH4IXU0T8WZ7yGlUJ39I3GJCi28cWPhvvhp%2BTnIhlsQEP%2BXAJJcnWLgqXL6nBPteX9NnQENLLEgYFZCPW5lnQc4NFbqYTm4W4eg%2B\"}]}",
+      "X-Content-Type-Options": "nosniff",
+      "CF-RAY": "a34d93e8aa0f4b79-MRS",
+      "Expires": "Fri, 04 Sep 2026 15:34:15 GMT",
+      "Date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "Content-Type": "application/javascript",
+      "Vary": "accept-encoding",
+      "Server": "cloudflare",
+      "X-Frame-Options": "DENY"
+    }
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.2.0/css/ionicons.min.css",
+    "edgeInfo": {
+      "pop": [
+        "khi"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "karachi"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cdnjs-via": "cfworker/r2",
+      "content-encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=qnXzRlo0i4nk88BYic84atIir38Jxnyg9zZzzNzpq3V0xnXfS8kY4sp4rGP%2B6KwQoabJq1DnX2g5SwC%2BxHUqJbsb0JI4KVnDQVnXJGnT3o3aTwYMAjLWe4ri9Cs6woef5CtWKKDTOAjngmBDYQtpUtOW\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cdnjs-cache": "HIT",
+      "date": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "last-modified": "Mon, 04 May 2020 16:11:22 GMT",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=15780000",
+      "cache-control": "no-transform, public, s-maxage=30672000, max-age=30672000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93dafef07eb3-KHI",
+      "access-control-allow-origin": "*",
+      "content-length": "5222",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/plugins/goodlayers-core/include/css/page-builder.css",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2BZaM4k7%2FJK8bDcnyFnKI1EEQo42uySp14xVFcE6z8C5okFaJAU3pbqCTn5FDQt4ZZZeu8XFmqCd9XuUz7CaZDufjSys8Gn0hlFa3U2eqoUqq7gPoDr6G1smu91euvAiJmsBslUXUFplP\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:14 GMT",
+      "Content-Type": "text/css",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93db786a4b79-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/css/style-core1.css?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=dDBO8WNnSEdjxhDl7s9NlX4qMahOvyNBQsKDf2PV%2BetMyGAxjp9eFqNfwd7188RzqGz%2BVP8Bg3JLvUVZcAxviUeK9s2kXdWTomZqUig4cBM0HAQhjV6zbX7jzZ63v5kk2z7Fn%2FDSXLNE\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:14 GMT",
+      "Content-Type": "text/css",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93dbaee7a55f-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/css/custom.css?ver=5",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=UGuhxwsxg7KY6VYSoRL8UjDHOubKLwOCRA6HJXyXz17frwkqZtJGKvH%2Bt4SN3so0Bpg0YP6myLIpF1qK9blGuFyrX5Cfyxoi5pteG6eXS214Qq2t0GkIIgLy0VMqx%2FiGyuolUg3yLVGJ\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:14 GMT",
+      "Content-Type": "text/css",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93dbbdbbe179-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/css/lightbox.min.css?123",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=x2dXCpwXBNMVXixAqGKk9HhL67fq8rYZ6TTqPpBy30xMakSPpNlHWimqdYo9y2JKTVZpSxCRvUF%2FPb2YTaqOFr0zyXH%2FM3n3o9qX4t4vGN6shLSp003NNTmZqEYfhsMiUmiAhHFrBjhT\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "Content-Type": "text/css",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93e2887ce215-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/css/uos-style-custom.css?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Kgg3HLkk3W05quIpqRyz1gnt4jAVu5Lbq0wm1jv35O9vP4%2BBRxkm2k3MFBLIC5JJJJjROnnYelswHAc0G7vgpFaG9eiPfWt2SceOiA6PR2pKFIFmFSB1DmIVxZFuVAet4CAcMdP4yPjD\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "Content-Type": "text/css",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93e28a673805-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ],
+      "cacheStatus": [
+        "BYPASS",
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cdnjs-via": "cfworker/r2",
+      "content-encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "age": "117579",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=9ynCv5Px%2BZOVcEwHS9flUe0jn4l0igS8SIxQcBdChUb9lYi9R1zHeKhE5eiqHQ%2B6mK6TCsvN8aZi8M50DjQpDSMvIV433OJlQ6eKpImMRVpRfC25HQQSCSNWrEoG%2F%2B4feku%2Bf7LZzzFxRykmY1j4sloC\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cdnjs-cache": "HIT",
+      "date": "Wed, 02 Sep 2026 15:34:12 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "last-modified": "Sat, 06 Jan 2024 21:52:53 GMT",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=15780000",
+      "cache-control": "no-transform, public, s-maxage=30672000, max-age=30672000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93daef448577-LHE",
+      "access-control-allow-origin": "*",
+      "content-length": "10482",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+    "edgeInfo": {
+      "pop": [
+        "khi"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "karachi"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cdn-status": "200",
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "\"269550530cc127b6aa5a35925a7de6ce\"",
+      "age": "1098697",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:34:12 GMT",
+      "last-modified": "Mon, 25 Jan 2021 22:04:55 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "vary": "Accept-Encoding",
+      "cdn-cache": "HIT",
+      "cdn-requestpullcode": "200",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cdn-cachedat": "03/15/2026 23:52:32",
+      "cache-control": "public, max-age=31919000",
+      "cdn-requestpullsuccess": "True",
+      "timing-allow-origin": "*",
+      "cdn-requesttime": "0",
+      "cdn-requestid": "aec49df798f3281b69f4b15d956f848a",
+      "cross-origin-resource-policy": "cross-origin",
+      "cdn-pullzone": "252412",
+      "cdn-proxyver": "1.47",
+      "cf-ray": "a34d93dade37fbb9-KHI",
+      "access-control-allow-origin": "*",
+      "cdn-edgestorageid": "1334",
+      "server": "cloudflare",
+      "cdn-requestcountrycode": "DE"
+    }
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css",
+    "edgeInfo": {
+      "pop": [
+        "khi"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "karachi"
+      ],
+      "cacheStatus": [
+        "BYPASS",
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cdnjs-via": "cfworker/r2",
+      "content-encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "age": "2286266",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=08Fl4J2ogpIFUPYMI06VENuJeDpyME2jndBC%2Fx%2BfpTS5B9hjM9zzQpKD%2FV0jKA2b3imzsL%2FVKJELnrxnOru2E9LqkUwHp5kLVEpiFJFgflIWO6ocxqUFRLbL7iQhZKsDkk1W%2BgDorRef6J%2BFIXVnjF9s\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cdnjs-cache": "HIT",
+      "date": "Wed, 02 Sep 2026 15:34:12 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "last-modified": "Mon, 04 May 2020 16:04:00 GMT",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=15780000",
+      "cache-control": "no-transform, public, s-maxage=30672000, max-age=30672000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93dafef47eb3-KHI",
+      "access-control-allow-origin": "*",
+      "content-length": "845",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css",
+    "edgeInfo": {
+      "pop": [
+        "khi"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "karachi"
+      ],
+      "cacheStatus": [
+        "BYPASS",
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cdnjs-via": "cfworker/r2",
+      "content-encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "age": "2130170",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=u05xk889Mbaxy9ttTfSVg3M7HQilBcDpBGWvEKYI5mf6O66NEKLphXgZmIyIU9qPh%2F8Uau8C8U30nq9VKzA29KFtxSvJWaoARneWo%2Fmz2p0audu%2Ffs0s%2BAyxlJdJ7L%2B4EsECeDpoJr0tQfYlzQnj1Eky\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cdnjs-cache": "HIT",
+      "date": "Wed, 02 Sep 2026 15:34:12 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "last-modified": "Mon, 04 May 2020 16:04:00 GMT",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=15780000",
+      "cache-control": "no-transform, public, s-maxage=30672000, max-age=30672000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93dafef87eb3-KHI",
+      "access-control-allow-origin": "*",
+      "content-length": "331",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ],
+      "cacheStatus": [
+        "BYPASS",
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cdnjs-via": "cfworker/r2",
+      "content-encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "age": "2225247",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=JE0F2%2Bi6J10qK6UU5p7YQUwtsoNrWpvSlFJQu2fw8hmfiSQz4PdJ08u4a0BUSh9A%2BDoCRtXc4j0zcBGcFb5Nr%2B6oschTLsHOEElG0DorByzabVKiorv%2F%2BtCca%2FFa9qv1I5vqeYI%2BF5hA%2Fv%2Bp1oPssJg0\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cdnjs-cache": "HIT",
+      "date": "Wed, 02 Sep 2026 15:34:12 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "last-modified": "Mon, 07 Sep 2020 12:33:38 GMT",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=15780000",
+      "cache-control": "no-transform, public, s-maxage=30672000, max-age=30672000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93daff4e8577-LHE",
+      "access-control-allow-origin": "*",
+      "content-length": "4216",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css",
+    "edgeInfo": {
+      "pop": [
+        "khi"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "karachi"
+      ],
+      "cacheStatus": [
+        "BYPASS",
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cdnjs-via": "cfworker/r2",
+      "content-encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "age": "117582",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=tH2wp4UPrbjCsw%2BftWVjuPdCeGqIq%2B8JVfUgfVaHycKdVo3knFRW%2B0ovBVwdDXHoQfTaEQV5fjVqkDr98UIorGy3ujQy7WEUZW5Nff8U8m6DX1W6gx2XxycHGNFDNDpqt6bBQxPZjRuw%2FEzV7dyW6yr6\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cdnjs-cache": "HIT",
+      "date": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "last-modified": "Mon, 04 May 2020 16:12:04 GMT",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=15780000",
+      "cache-control": "no-transform, public, s-maxage=30672000, max-age=30672000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93daff077eb3-KHI",
+      "access-control-allow-origin": "*",
+      "content-length": "1283",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css",
+    "edgeInfo": {
+      "pop": [
+        "eto",
+        "fra",
+        "van",
+        "bom",
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare",
+        "fastly"
+      ],
+      "location": [
+        "frankfurt am main",
+        "van",
+        "mumbai",
+        "lahore"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "HIT, HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"3dcf-yUSO+/Irxvb7u7/rvWVmQrqxN2c\"",
+      "age": "1877283",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=WQTSc3OCtO0fCy%2BArGuiHtd6nbXKr6fRXaWfqObnZOhJrMk3GYuLgmvsb1gLD88pm0dWCL24oJKwZV3dvqYmvKvptNqbfvAZgpbONvyynhtfBH5EnMmF10kn9qe3xLe%2B%2BHLxe%2FWwX1T8ByizFJs%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "x-jsd-version-type": "version",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cache": "HIT, HIT",
+      "date": "Wed, 02 Sep 2026 15:34:12 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "x-served-by": "cache-fra-etou8220058-FRA, cache-bom-vanm7210063-BOM",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93daf927995a-LHE",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "2142",
+      "server": "cloudflare",
+      "x-jsd-version": "4.1.0-beta.1"
+    }
+  },
+  {
+    "url": "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cdn-status": "200",
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "\"450fc463b8b1a349df717056fbb3e078\"",
+      "age": "1340728",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:34:12 GMT",
+      "last-modified": "Mon, 25 Jan 2021 22:04:04 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "vary": "Accept-Encoding",
+      "cdn-cache": "HIT",
+      "cdn-requestpullcode": "200",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cdn-cachedat": "07/21/2025 22:36:56",
+      "cache-control": "public, max-age=31919000",
+      "cdn-requestpullsuccess": "True",
+      "timing-allow-origin": "*",
+      "cdn-requesttime": "0",
+      "cdn-requestid": "93b6412829bd949d774b0b1d994308f4",
+      "cross-origin-resource-policy": "cross-origin",
+      "cdn-pullzone": "252412",
+      "cdn-proxyver": "1.32",
+      "cf-ray": "a34d93db2998995a-LHE",
+      "access-control-allow-origin": "*",
+      "cdn-edgestorageid": "1048",
+      "server": "cloudflare",
+      "cdn-requestcountrycode": "DE"
+    }
+  },
+  {
+    "url": "https://unpkg.com/flickity@2/dist/flickity.min.css",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ]
+    },
+    "responseHeaders": {
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=60, s-maxage=300",
+      "location": "/flickity@2.3.0/dist/flickity.min.css",
+      "cross-origin-resource-policy": "cross-origin",
+      "x-content-type-options": "nosniff",
+      "cf-ray": "a34d93db2c41aa19-LHE",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "52",
+      "date": "Wed, 02 Sep 2026 15:34:12 GMT",
+      "content-type": "text/plain;charset=UTF-8",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.3.15/slick.css",
+    "edgeInfo": {
+      "pop": [
+        "khi"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "karachi"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cdnjs-via": "cfworker/r2",
+      "content-encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=1Syed1Ho1nvVdcju18kviGu0FdX1LoYJ5HECa7wLPGWF4tkEdPE02cALOzmBTwZgloptUVFMCY2omXoL%2F5IROfMsGtgfJm8%2BRJj%2BNiOkLi%2Bg6ZUEeLUEuljvUoV2PyC9RhVeqNetyp46yWfp4JOhxlb1\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cdnjs-cache": "HIT",
+      "date": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "last-modified": "Mon, 04 May 2020 16:16:21 GMT",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=15780000",
+      "cache-control": "no-transform, public, s-maxage=30672000, max-age=30672000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93dafef97eb3-KHI",
+      "access-control-allow-origin": "*",
+      "content-length": "957",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css",
+    "edgeInfo": {
+      "pop": [
+        "khi"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "karachi"
+      ],
+      "cacheStatus": [
+        "BYPASS",
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cdnjs-via": "cfworker/r2",
+      "content-encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "age": "133971",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=aqvGZuQsirudnvBVytpi29sssdToea%2Bvh0wT%2B9R%2FPMYL7zF3sF2vdqwKXn2RwystI4X8jlCOEgSLSDKYzYqDGZnGaxM%2FBAgR6OrKL%2FfTUQedJkkITfCxAAHd%2B0ROylYKRnM1R0600RcaXWfC2iTXafmT\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cdnjs-cache": "HIT",
+      "date": "Wed, 02 Sep 2026 15:34:12 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "last-modified": "Thu, 28 May 2020 14:54:02 GMT",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=15780000",
+      "cache-control": "no-transform, public, s-maxage=30672000, max-age=30672000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93daff037eb3-KHI",
+      "access-control-allow-origin": "*",
+      "content-length": "31547",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://fonts.googleapis.com/css?family=Playfair+Display:700%2C400",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-content-type-options": "nosniff",
+      "expires": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+      "last-modified": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000",
+      "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+      "cache-control": "private, max-age=86400, stale-while-revalidate=604800",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin-allow-popups",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-origin": "*",
+      "x-xss-protection": "0",
+      "server": "ESF"
+    }
+  },
+  {
+    "url": "https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CABeeZee%3Aregular%2Citalic&subset=latin%2Clatin-ext%2Cdevanagari&ver=5.0.3",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-content-type-options": "nosniff",
+      "expires": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+      "last-modified": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000",
+      "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+      "cache-control": "private, max-age=86400, stale-while-revalidate=604800",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin-allow-popups",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-origin": "*",
+      "x-xss-protection": "0",
+      "server": "ESF"
+    }
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-content-type-options": "nosniff",
+      "expires": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+      "last-modified": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000",
+      "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+      "cache-control": "private, max-age=86400, stale-while-revalidate=604800",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin-allow-popups",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-origin": "*",
+      "x-xss-protection": "0",
+      "server": "ESF"
+    }
+  },
+  {
+    "url": "https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C300&ver=5.4.2",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-content-type-options": "nosniff",
+      "expires": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+      "last-modified": "Wed, 02 Sep 2026 15:27:29 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000",
+      "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+      "cache-control": "private, max-age=86400, stale-while-revalidate=604800",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin-allow-popups",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-origin": "*",
+      "x-xss-protection": "0",
+      "server": "ESF"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/dataTables.bootstrap4.css",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=r1vqROsyPMpZab6ZP5buQiyxoUWi4jt9pni4e45g9my4trY3966hbf9XBNNcE4M0yd9%2FrPVmuOh7NsEiClJ9cyq%2FKw9YpobxK0aJQBztialI7V4C7J7UKE306SFzyNzRP%2FcS%2FV9B4z7l\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "Content-Type": "text/css",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93e388dc4b79-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/responsive.bootstrap4.css",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=2VFknKzCEvN%2FnPof9UAmyxPbH6vLUI9EIVo1eGcHtgtEsoD5bsrnVq1Xq5BUf4kqzgBkeP%2F6y0AoEfYKN%2FXX59KO4KoepUnNyj5shg6kAAkEoHN4Ekqv9Ukf%2FPxmdXnygPQSQu9uUhNm\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "Content-Type": "text/css",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93e3af89a55f-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/buttons.bootstrap4.css",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=gNcdSUYR9dIa5nm8rzesAw%2Fsj%2FSp%2FuZAh8%2FnsmmPiU4dfn83PIJQT02S2Zw%2F%2BZpkfDzitdnluNVO37fODIXQnYeoV1ccWSkO7HT4c2yAdJqRyzdLsVTLXoeEm%2Bw%2BbRICIuITvpzEAZIm\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "Content-Type": "text/css",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93e3e96fe179-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/select.bootstrap4.css",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=M7xhrlAjck1L842n6Afn5Mxx%2BHDkqgUXSmdkIji%2BYvr23PuBqFGMZCLLSeiMhPyoTkVs2d1jMhxdUeYQ9lBuidCudY9fg%2BLKcvCPYIZshR3IdHIeXaGQgH0vv4mFoyTHZ1vyHbbJl3HO\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "Content-Type": "text/css",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93e73b0be289-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/final-logo-1.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=IED5S3czA4wSOje8gtWOjKXB6VCCbKSUfN4RhEXft8GMG1Dni8aYzlOgt4qbygK7ZU2YqmPFcJ2nFZF7VE%2BgGaQgXy7Z1FKTR4CI2drw9QVFjNdRMXLXlsxiNc68FBgxWTFDbFVWWtvd\"}]}",
+      "CF-RAY": "a34d93eaedc93805-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "70822",
+      "Date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/banners/1777545068.png",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=JZUmBQytzBxE9j6EfhXAEctCFC2orccRSnuuTHNPwmXIsMdAEs5ca3yUfOq%2BL3ujBlNcJBbGqpOfd%2FBerh%2B7l4pwYbleN9VDlSnBNBc7ZBW884c0ru44sWagkQBk4kLw%2F0K7K7php32o\"}]}",
+      "CF-RAY": "a34d93eafc4ee179-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "513014",
+      "Date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/banners/1778129517.png",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=UoGgw2M8eEymjpfRMOA%2F4ahJo%2BSnwjFVcfr%2FUY2UnShOnpNAu5z%2Bxe%2FBv8a5IvzSTjXZwgslyYy7JDZNNa%2FGTuKbPNU1N9ES179cqyiHFExE1hPdzkRvJ8uMfpQyT%2FHPkIQNUk6zSozJ\"}]}",
+      "CF-RAY": "a34d93eb4c2fa55f-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "1725492",
+      "Date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/banners/1780482240.jpg",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=RxwtiT8cxaTqQcj5unVIBFhHVFrV06o2U1ZsxEE8%2FEhHohzoaxyCiY%2BVJvFALLvJFBsS3f5XdjHThcwHQxgGzo9UEqhNKvpkHKhyi8K7g0HkYhedR8KJHCiro0ZeYIzUmxAw1R1z0tF%2F\"}]}",
+      "CF-RAY": "a34d93eb4a164b79-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "275568",
+      "Date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/banners/1786440144.png",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8dtVzWI5qtHYx5X%2Btdelj7oOWCxhq%2BxDO1qlJV%2FZKNn8Wat8NjGmi7iKGmDzrBGdJMzuDIMWqbtfx2VDNcGM1LS%2B9EkdZIawPazFsSGSm64fTrRV%2FQqa0JC%2FUhnwj%2Ff%2FzsOOWROiFEDI\"}]}",
+      "CF-RAY": "a34d9419adeae289-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "6090641",
+      "Date": "Wed, 02 Sep 2026 15:34:25 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/banners/1787202535.jpg",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=iR%2Fh3A%2Bim%2FmiCH%2BlOCw0SDGyIByOXdUgXNMxioRqN0DfQSfRkkkHFsKLr4ZNMMrCIXYntHCgVoY2AuAdss4EGgEywR1zmMjo4KXW0hyCQH0VFDKkDWqIYtLkwKBulFZFRXa0czB9K8bb\"}]}",
+      "CF-RAY": "a34d9419ac35a55f-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "417992",
+      "Date": "Wed, 02 Sep 2026 15:34:24 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/journels.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=hSl0cUjfF4IsPJIlcDeSrvESSroPojuq5H%2BDfX8UxFoXgPcBQyWMsUfwhh7jA22eWwO7lS4ScchtJgmwwotM3FcaNHzfDTAf9hBJsHEfgFdzdebgHh74Z0jQELeGZUDHRRnASjp5j5Oi\"}]}",
+      "CF-RAY": "a34d941d7f85e215-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "137214",
+      "Date": "Wed, 02 Sep 2026 15:34:24 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/research.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xdd8tuuAnBr9F4dOElwC06i7g1WMKlLN67%2BG0HBKznnP6%2BlekDx7AAMplcoJfLQ%2Fo2YwatPh47a3dFkYJEakKoREGgVXd3QEjbPbEupuS2EW3Dyd8zum9uEz2LelUlPdgrLhIcnyx9kC\"}]}",
+      "CF-RAY": "a34d941d8986e179-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "98659",
+      "Date": "Wed, 02 Sep 2026 15:34:24 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/conference.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=cPrGZkgQc%2Boc5TCXvIILIVXxUc%2FvhC3nDzqXElfDmS1L%2B8g9Exz9hU1DwOWY6ua04SFLRCnTjlDAHwJBAPzWZSmvcOUTrQKYjHQQGLEBZ8viTv0GzOIgxJvDD6m4a4UDMHcvJCIGiST3\"}]}",
+      "CF-RAY": "a34d941d6d6c3805-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "124252",
+      "Date": "Wed, 02 Sep 2026 15:34:24 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-09-02%20at%2012.43.24_1788335219.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=e9LEjS3lC0vG05TZupK%2BipVQYOwODht0%2FX0dXBmZ23%2FDYR9kL1d6z7oO9%2Bw1WiKDjwj2NUHwsrAHVJeSs8B4vnRybRbqRfsRUmBY6PmSWGhGDq3smc%2BRnAvJ8860TSzbsPBzRAwMss%2Fq\"}]}",
+      "CF-RAY": "a34d941d6db04b79-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "359890",
+      "Date": "Wed, 02 Sep 2026 15:34:24 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-09-01%20at%2015.33.04_1788259145.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Se1uJq%2BCdoMhJCaowQzjpb8a2eeYNbBA4hR3BubKZMcWZGLwnaa28ts%2BSPm%2F9N2P6euGpNtRh0laKdpoyc6Ze2yyhPQ885pYtpjVKv7idiAqRuILhMjICbjAskz%2FOKprynHlh0C9ohwJ\"}]}",
+      "CF-RAY": "a34d94292b414b79-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "293163",
+      "Date": "Wed, 02 Sep 2026 15:34:26 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-08-31%20at%2018.13.29_1788182693.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=o3iAw7VnnkBTo72n6fQBrcPLEhbECihUE82TWY3DEy6zRZpKf0JXlCd8eajYlKChLuSUSXIPnk6TqhuzZE0LyjegejbkGcSr9fFb2H%2BWEdTauBV7%2BhzxSn4bMpXvuItwpkBmt%2BJjpz8R\"}]}",
+      "CF-RAY": "a34d94298c933805-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "439023",
+      "Date": "Wed, 02 Sep 2026 15:34:26 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-08-28%20at%2014.25.54_1787910872.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=MOujT8BUCCpby8U61MK%2BPRCg2TwqfXqUS8iNpH61FhqPuVRQD51THSl1omqF1p8AXsJ6Tzp8UhgqZ2QWT%2BnLBuP%2BDV746nUHL0TfSH%2BdxxTi8j%2B8sqLLI5OdJ637EM2Or13kG42D%2FPxz\"}]}",
+      "CF-RAY": "a34d9429ee93e179-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "256441",
+      "Date": "Wed, 02 Sep 2026 15:34:25 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/Pic%2028.08.2026%20E_1787918525.JPG?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "BYPASS",
+      "etag": "\"5336f-65a1a389fe332\"",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=1OkWj%2B474nBrVVNbx2OO2Zvt0LjzZENisiHeVFLNa%2BCE8FyHa6VBsUNr6DKwUtaDTy5kh%2F4glRDY0sAYM7lWtr8U1cg2e%2F%2BsS69zD1Co6drmP09YEnMWoL3F2dZxtX0RWYn4DmxGDNHV\"}]}",
+      "expires": "0",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:26 GMT",
+      "Content-Type": "image/jpeg",
+      "last-modified": "Fri, 28 Aug 2026 12:02:05 GMT",
+      "Cache-Control": "no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d94299b93e215-MRS",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "340847",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-08-27%20at%2016.32.42_1787830935.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=hOX1BKHR8jQq23ZGvP9bxyLVZMAxzjc3Z8A7fbku1sPEQjwEPcUCyhG%2BHTZWgrCaal7qiARlXAc3Oit6%2B4QaOVHF2c3UXedT84M61nmN6D8ai%2BR1LJ2Rq7w59ZoTxv06snAfZEtc6T1a\"}]}",
+      "CF-RAY": "a34d9434fc53e179-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "182608",
+      "Date": "Wed, 02 Sep 2026 15:34:28 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-08-25%20at%2015.10.40_1787652780.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Ny6h%2Bp83uLeyZQ2KXQyTiaC71K%2Fz0uTpC%2BAH6ZWY44Bo8stj9BnTYlrrcE8LMHJqf%2BOdxNdd9mnw6Ofl4SOPKqQKR8Ec102c4wl7hXlm1y0ebOo9D5M8cG%2FpK3UVCiGyHFSmgLlfBLh8\"}]}",
+      "CF-RAY": "a34d9437cfa43805-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "259585",
+      "Date": "Wed, 02 Sep 2026 15:34:28 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-08-23%20at%2017.29.22_1787488693.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4Y9rE69IPeLe7zr0FVAOqFmHK2ta2n1THNPdFiDnotVW%2B389p7Msfg7r5Xx5%2F8JkhCWnyiMaMoZsL87SYhGJF3fGpUas2qTrk%2B6ecdTGmi0Va2Kt9U2nry9n9ZoJjl28J6Phschuoj7C\"}]}",
+      "CF-RAY": "a34d94389d5ae215-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "267418",
+      "Date": "Wed, 02 Sep 2026 15:34:28 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/mmexport1787255069435.jpg_1787306484.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VbUGvIaeGZTF%2FQ6OLFGweHAQVabXVsqNHWeiDuyRJOV4Sr6xJrWejHRP9NRj%2FBFkCUM5X1w6zhavb%2BBVCb%2BFbdCN1YptP4eVhITWkf6NfdC4XkPRY%2FjWaSL9idUzTjx1pUJvQtvfeUfn\"}]}",
+      "CF-RAY": "a34d943c7c8d4b79-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "390606",
+      "Date": "Wed, 02 Sep 2026 15:34:29 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/Pic%20for%20Web%2020082026_1787213024.JPG?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cache-status": "BYPASS",
+      "etag": "\"10b868-65975f576df4f\"",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=1TiI0h49XiRsQeA6VYIbl2DAAamP%2BzkcJyXiM1lVGL%2BZbYlkczyXmCglpTUitKwDu%2BQ2AKj3u%2FzVl7k5ma6%2FyLXazvXW2ZokHOESIeJLh5enCM67Xh2t4c4NF7yVBNvlTWQvyFSv2Pim\"}]}",
+      "expires": "0",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:29 GMT",
+      "Content-Type": "image/jpeg",
+      "last-modified": "Thu, 20 Aug 2026 08:03:44 GMT",
+      "Cache-Control": "no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d94410b24e179-MRS",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "1095784",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-08-19%20at%2016.17.53_1787138713.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VDS45zPUYSL86ukXDJ9P%2FbjjMRZxZgJ4KQX5NVtmVb0X0mEHroBXZFuHxb8L8RwBCXyn%2FhaCmsODsddNGi6PRRFLaisVoHRGRROZKuqvHAffqGMKCl6IbU58mHDrRO3k2xTA4Bnh2%2B8q\"}]}",
+      "CF-RAY": "a34d9441b92e3805-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "172516",
+      "Date": "Wed, 02 Sep 2026 15:34:30 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/News_qec_1786941513.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=WkKkow9RBleFBj%2Fcz%2FNAtfymIm4uBk5pdiERk3Z34ZO7zJ3MIXPH2OQ1gNAVrmMO%2FHEGWI3WxfBWPtJK88vd6XaEvgZO8K2BrXMr0yMbPXm8uO58YT0cAn29tLqsz20%2B%2BNwU8DQT1Ht7\"}]}",
+      "CF-RAY": "a34d94462a4ce215-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "763442",
+      "Date": "Wed, 02 Sep 2026 15:34:30 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-08-14%20at%2017.15.58_1786710704.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=etNrXm%2FHZIK0wOTrC4P%2BIox46TYjbm7OXzPfHSVD9yd1tWAGDQIwCYTyHjWuMzDk4KMQ%2FfM7GIpynaEUpwKdJ8suPBqZDtrcoOnRYkXJxCHCO5z%2FXclwNJcPQYfYcWj7nF93sO8OoPqf\"}]}",
+      "CF-RAY": "a34d944dd8b74b79-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "498458",
+      "Date": "Wed, 02 Sep 2026 15:34:32 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-08-13%20at%2015.56.25_1786618683.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=gpJTRqQoUB60r6A7VW2KiSNoU1whVPo%2Fe2P9Wr0%2F%2BYy87OY%2B7AVV2K5fxwI33lgeFN%2FJLTR3AljtwYJ%2BO%2Bxtkg0ALH6rbzxG%2FCUgXsDjTRJktCAY8eUrjl3URizZdU3ZkG5Am7tvLUKD\"}]}",
+      "CF-RAY": "a34d944ecb8d3805-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "444133",
+      "Date": "Wed, 02 Sep 2026 15:34:32 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-08-11%20at%2016.23.34_1786449431.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=nv69883YfOvhkoZ%2BLZoEQBvd2hnQgkrzOab4QDDzNwQiE9lEd3RSM9boDIHc3PG9FUF2BzFdkaC9a5MV%2FvtWIy7Ntboh5cUEIQz8QvLakDImRwSyM4ixCSBw%2BSsApfmuYJhXT4GJz%2Bba\"}]}",
+      "CF-RAY": "a34d94532fd8e179-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "233362",
+      "Date": "Wed, 02 Sep 2026 15:34:32 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-08-07%20at%2016.35.43_1786103387.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=iLbTUOgaid5zkhuDn%2FcE8PrSygHLKNcVJdSBqSPomL3WApQ5C6egiA8VwFVEQha2kKvyo%2BtunURwRrC2PXKe6M%2BAUEi3iRIrqpThLtf71JCR%2BPShhIKdufMfn5JwOqQB4agZq%2BjzWnrL\"}]}",
+      "CF-RAY": "a34d94539f23a55f-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "185232",
+      "Date": "Wed, 02 Sep 2026 15:34:33 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-08-07%20at%2016.35.43%20(1)_1786103444.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=RJ%2FIT9qwJ%2B1xssXHkWvJb6RgjK2AoscuJxpY2QtEE1fNmiQcCNTqmI45pyBuOEQ8hljJ2VRl8xdBlAHRr%2FckgcGWXsMyho3vd8IHFbm6RfavFB4kfnMpFcmgjqmlji%2F0iFlDp6yFyPRI\"}]}",
+      "CF-RAY": "a34d945a1aa6e215-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "295001",
+      "Date": "Wed, 02 Sep 2026 15:34:34 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-08-06%20at%2015.45.02_1786013416.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xGqYlYDOZwFPigeIRS3uo3cNQrfOm5sXtpxV5%2BROxF3A9L3rO6MrGOur5yaeXtDPE5Ou0xIJ993Qjra9NvHmpv1%2FMK%2FDE58sUPMgz2irV43bwfnulXvz4noy6ga6l18oI%2BXT7b2rFzNZ\"}]}",
+      "CF-RAY": "a34d945c08fce179-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "180321",
+      "Date": "Wed, 02 Sep 2026 15:34:34 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-07-21%20at%2016.44.29_1784634447.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8wGte8vu3xS%2BHHg5vz0dMMp9JPvgfNQlU9M4cBSL5%2FRbr2QCZSMTx1rO2c94N4nB9c0sauziUP2BAuptz2QDmR%2FLZlP2Xs1YhiTxWRL%2BJGjw7hvgikK84yxSnkbmdaOO6ZcrswOdAuct\"}]}",
+      "CF-RAY": "a34d945d7c814b79-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "348198",
+      "Date": "Wed, 02 Sep 2026 15:34:34 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/upload/news/WhatsApp%20Image%202026-07-15%20at%2016.31.48_1784115572.jpeg?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GrRU3jQEAwc1eVql3SYhJ6LeCmMkB8l5N1eRniQ%2Fg5JceOf%2BxQJ8b42snd6fAFjAXd5FN5r6wdHXw6W8vRpVH9NvVbiGwsI1uVng4GhLByt31MF839gWMeq6CyHaA1CmwOrb1QaWw6Tp\"}]}",
+      "CF-RAY": "a34d945f0db43805-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "276186",
+      "Date": "Wed, 02 Sep 2026 15:34:34 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/gallery/campus_at_glance.jpg",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "zstd",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=23NNM80DdKjEYAhSxY1rnk0Hvx6Zr5C9tc5C10sX0N5s4dBg4Ba62MiWg63CoR8%2Fsx4cQYA5ueWefx4Kgz14Ur1f1WBsybi3pse9lRZ2ORRULyCI%2BiCSFpRZsU1X5%2FQAPWGLPImHQ5PW\"}]}",
+      "expires": "0",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:35 GMT",
+      "Content-Type": "text/html; charset=UTF-8",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "no-cache, private, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d945f890da55f-MRS",
+      "x-powered-by": "PHP/8.2.33",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/bg/0017.jpg?ver=123",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=h9qWDyqFkSspAqc1YeJWS4uH8s0YpgQZamx%2Fi7SwW8HwnCYc5mEMkrhl29i%2BJdh%2BQGXvYRST9M%2BsD8vZ6nx1NxTUnpLL9djAU1CQX7gwWvQR7B0iQTI%2BtXJKleXQ92xSawk1ahmTXEDz\"}]}",
+      "CF-RAY": "a34d94667d64a55f-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "1930550",
+      "Date": "Wed, 02 Sep 2026 15:34:36 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/facality-banners/1.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=1ny8mINQSIwDXvdXYMgpTIn3Hwk3SLXhYFa%2BChQKP1hpadzzneLaZvojWALlQkQiw1tKmCzVnOZSmtNeAD2PJM1hv%2FALaBPOAonTGoGtunrsa5yS2VI1geeDIK2Hx3QITJzoEE8ioZk0\"}]}",
+      "CF-RAY": "a34d9467c904e215-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "39799",
+      "Date": "Wed, 02 Sep 2026 15:34:36 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/facality-banners/2.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=X2dngv%2FvTNN%2BXFDIhyv2CR7aCzedQm7Tu4%2Fd6Sz%2FnIP25Mgf3Wveg9iQT1EYBoa7H2ceMaXW5626k1Bthf%2FyDOZyNZrLW14m0%2BrfRyuqw9xANyX16vKywy3xK1c15AncOWsKDCVgIj8P\"}]}",
+      "CF-RAY": "a34d9467e9ade179-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "47233",
+      "Date": "Wed, 02 Sep 2026 15:34:36 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/facality-banners/3.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=a1witURCs9kx7uL24HZ3I4ZM%2BxX1KxhzEhzuUae1eHBG9%2F7GxAwDmy%2FR8qUFQogB7EvGsRWaR7iwFf%2FdxCL4O5RxetvKerUdZpXY9NZ4P5Uw2R8abAV2iT%2BHFDONWVye4OhI%2BGINo8br\"}]}",
+      "CF-RAY": "a34d946a2a103805-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "46632",
+      "Date": "Wed, 02 Sep 2026 15:34:36 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/facality-banners/4.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=00rxc1pLIMDElDLWbTkdHiOASjYj2af5l5TUBa5rFAs6K6h666SFNyWoAzX7qBZfQbp51VoUBdbAlnuiCkCOSJpgiGyXrQT6kz82YMcSe2e1iEPEaaUqg9XMsQ638OQ1Iz5%2Fwg53Gzgt\"}]}",
+      "CF-RAY": "a34d946cc8054b79-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "45144",
+      "Date": "Wed, 02 Sep 2026 15:34:37 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/facality-banners/5.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=3iYcIOh224B4iRTq4yIx0Gdoga7ftyaPwtRESKZp1TtUu8HhnUJjzNJ9p%2F4NZid1BkpNtvuPu8R1FfWLYyGPPxj6DMXR4w9FBWzlGH%2FMXTWuDx5R0GqaWrdy36mlc7bfUwEkdMy2jErZ\"}]}",
+      "CF-RAY": "a34d946ff828e215-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "40618",
+      "Date": "Wed, 02 Sep 2026 15:34:37 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/facality-banners/6.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=FUBAka0yq6pIfYjPaxFYv2rc%2BUt5ZS6lNAor88IydWTzCyZEeJqphHaXikEexOggMVf2b7HAqSXYymDYp2gbuo10H7stq7SRGl026Zeu8d%2B%2BhGmPJdSLugc6SPvDsaDexnvYLa8nqOe6\"}]}",
+      "CF-RAY": "a34d94703999e179-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "43612",
+      "Date": "Wed, 02 Sep 2026 15:34:37 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/facality-banners/7.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2B9mGNC%2BYHcDb5ZF8oZQl4%2FLd%2BBG3jijAtOWkzcpHbtvf%2BlVzZp5l9jRAU7CwuNPogHYXrC%2FlNto7T5VAJ4uBVdlRNu3tEoRsvGv0torQICbVXq%2FQVBUItIz10Iz%2FZ1aR%2FK3CTWLgI9iY\"}]}",
+      "CF-RAY": "a34d94745c563805-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "49115",
+      "Date": "Wed, 02 Sep 2026 15:34:38 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/banners/12.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=vP%2B7zMfO0G8zhsb9g5CWQwokdl3Wba1TnN7gwxMy4NkeEE6g%2FFV8h345%2BL3wAWNUui1JLweW7KJLoMGm4OtSGhG4CkCAVnTqNsuy9mqlxGSEUNSUE%2B7NbIlDLDH1vHPKqKX2XyS6cvLW\"}]}",
+      "CF-RAY": "a34d94791b924b79-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "934271",
+      "Date": "Wed, 02 Sep 2026 15:34:39 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://static.cloudflareinsights.com/beacon.min.js/v3d52b47920f24c319d37e2661827c42b1787588026925",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "public, max-age=86400",
+      "content-encoding": "gzip",
+      "etag": "W/\"2026.8.4\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93dbba004e52-LHE",
+      "access-control-allow-origin": "*",
+      "date": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "content-type": "text/javascript;charset=UTF-8",
+      "last-modified": "Wed, 02 Sep 2026 15:29:47 GMT",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/uos_footer_logo.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=9Ft0nt%2FF22ZiQ3VFr9CgDjr0QHCSR0dPgDNnORQ%2BRtRXxNwluYmo%2Fq7fFPi6coRMngBLjADYiAbZ7RMqUxzsP8QwPsj3CPGcpyIgIIXCXRIksqvZbwgo3E9e7ipZAluDLTRXb%2BCWkYEA\"}]}",
+      "CF-RAY": "a34d947c5d9ee215-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "85923",
+      "Date": "Wed, 02 Sep 2026 15:34:39 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+    "edgeInfo": {},
+    "responseHeaders": {
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "public",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "Content-Encoding": "zstd",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=XpSewD94YICQG3Ap%2BHjAQDMuluoVf4XU%2BTAX%2FrczgEFQ41geun3uvEqCDr3sadY5eV4nqIG37VpTJM9%2B7kGBkK93j1gmHaebzjqJ4eRAsglupF451qF9BIP5KLdIjnna2UO8HPaTt%2FWC\"}]}",
+      "X-Content-Type-Options": "nosniff",
+      "CF-RAY": "a34d93ebaa10e215-MRS",
+      "Expires": "Fri, 04 Sep 2026 15:34:15 GMT",
+      "Date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "Content-Type": "application/javascript",
+      "Vary": "accept-encoding",
+      "Server": "cloudflare",
+      "X-Frame-Options": "DENY"
+    }
+  },
+  {
+    "url": "https://unpkg.com/flickity@2.3.0/dist/flickity.min.css",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "348993",
+      "access-control-allow-methods": "GET, HEAD, OPTIONS",
+      "x-content-type-options": "nosniff",
+      "expires": "Thu, 02 Sep 2027 15:34:13 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:34:13 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "last-modified": "Fri, 28 Aug 2026 16:34:02 GMT",
+      "fly-request-id": "01M11P10JDECB1AJ5R3XMPZRAR-sin",
+      "access-control-allow-headers": "*",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "vary": "accept-encoding",
+      "cache-control": "public, max-age=31536000",
+      "cross-origin-resource-policy": "cross-origin",
+      "via": "1.1 fly.io",
+      "cf-ray": "a34d93dbbdceaa19-LHE",
+      "content-digest": "sha256=:ju8u9s+ILV4ukWfLfIsOu+t1soppiDVIhzPRSTJvq08=:",
+      "access-control-allow-origin": "*",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-content-type-options": "nosniff",
+      "expires": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+      "last-modified": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000",
+      "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+      "cache-control": "private, max-age=86400, stale-while-revalidate=604800",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin-allow-popups",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-origin": "*",
+      "x-xss-protection": "0",
+      "server": "ESF"
+    }
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "x-content-type-options": "nosniff",
+      "expires": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "content-type": "text/css; charset=utf-8",
+      "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+      "last-modified": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000",
+      "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+      "cache-control": "private, max-age=86400, stale-while-revalidate=604800",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin-allow-popups",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-origin": "*",
+      "x-xss-protection": "0",
+      "server": "ESF"
+    }
+  },
+  {
+    "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/930141556&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudfront"
+      ],
+      "location": [
+        "muscat"
+      ],
+      "cacheStatus": [
+        "Miss from cloudfront"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "public, max-age=300",
+      "content-encoding": "gzip",
+      "content-type": "text/html",
+      "date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "server": "am/2",
+      "strict-transport-security": "max-age=63072000",
+      "vary": "Accept-Encoding",
+      "via": "sssr, 1.1 c2932c75b25bc91b15c5d7c319b82150.cloudfront.net (CloudFront)",
+      "x-amz-cf-id": "068Q5RHDNVy9ZPEJc26Ga8pMgD2Oqh4xaCTvsrL5j_C-bsu8vS0zBA==",
+      "x-amz-cf-pop": "MCT50-P1",
+      "x-cache": "Miss from cloudfront"
+    }
+  },
+  {
+    "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/930127468&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudfront"
+      ],
+      "location": [
+        "muscat"
+      ],
+      "cacheStatus": [
+        "Miss from cloudfront"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "public, max-age=300",
+      "content-encoding": "gzip",
+      "content-type": "text/html",
+      "date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "server": "am/2",
+      "strict-transport-security": "max-age=63072000",
+      "vary": "Accept-Encoding",
+      "via": "sssr, 1.1 c2932c75b25bc91b15c5d7c319b82150.cloudfront.net (CloudFront)",
+      "x-amz-cf-id": "-xcnQrUotc7kxywddP1b2pl5mSJv6XM_h0oRfGx9qyfsWtFHhDA2QA==",
+      "x-amz-cf-pop": "MCT50-P1",
+      "x-cache": "Miss from cloudfront"
+    }
+  },
+  {
+    "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/924304354&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudfront"
+      ],
+      "location": [
+        "muscat"
+      ],
+      "cacheStatus": [
+        "Miss from cloudfront"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "public, max-age=300",
+      "content-encoding": "gzip",
+      "content-type": "text/html",
+      "date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "server": "am/2",
+      "strict-transport-security": "max-age=63072000",
+      "vary": "Accept-Encoding",
+      "via": "sssr, 1.1 c2932c75b25bc91b15c5d7c319b82150.cloudfront.net (CloudFront)",
+      "x-amz-cf-id": "7l-6wPRCM-0bxFkZQvujuYjw89EGiB2TcDf25BLVJEAVUo2OLK6JMw==",
+      "x-amz-cf-pop": "MCT50-P1",
+      "x-cache": "Miss from cloudfront"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/bg/dots-background-1.png",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=baSJ%2FKY%2BXX2d6XZ7zHTGkthOILpjOSdHhHSs9vzEEKwp8%2FqkrHgg7qgX1TLizIl%2BXVhrENzZ153J5veOBh%2FrA32JSrpPA9B805OY8wVweViE9wV6bGuHHONsiQrSQfEeCtneUU56uJru\"}]}",
+      "CF-RAY": "a34d93ec6b2ee289-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "635",
+      "Date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/bg/puzzle-and-dots.png",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2F4owiGiQarYcOzfWmunKlhC5nTUkJ7ppgAFZaLkYMUD4y80heQgeQFvomZg5X2%2FcZkwyKBSC9kqyde0Az4sbRLEeVAoP26rkxB6Z1efh9mwKM2OD2pKJj%2FmPwOuJ3Z4WA3yoDXX5%2F2AJ\"}]}",
+      "CF-RAY": "a34d93ec7c68e215-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "5371",
+      "Date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/gallery/1.jpg",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=XE2u0QRkZu%2BHrobhKw%2BPp%2BmWnxuv%2BPBClgm5dFaW9i4P3olsp%2B6E0nNvkDGknhs%2BKcogle2eOZyxUJ7zf3G0nY2BjLRybytFQUzpY8A1uLUSsXUv5WmmKcmgLjej%2BK9XiKfFoP%2BxVI6d\"}]}",
+      "CF-RAY": "a34d947c6a4de179-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "54001",
+      "Date": "Wed, 02 Sep 2026 15:34:39 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/gallery/2.jpg",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Gy6yxwM%2B9hTgqEq0TL3NOTS4kKiIZ3yJRHlITs1tPQgRQPMdo8ewjO6hLUKxiZkDvmUH7ZFLV18Sq5y7fgZbJ3gW%2FmLrqMHuWlHaa7%2BCtP7dewTMtodej7%2FvkS6LXwDHvF22gJzRwPjK\"}]}",
+      "CF-RAY": "a34d94857d383805-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "54469",
+      "Date": "Wed, 02 Sep 2026 15:34:41 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/gallery/3.jpg",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=x1pIb%2Fo0gjn7FMesmvisueCREHebhAkZtS5%2FU7wR%2BKEN69avXa0cUuz2HBydME35ZAF2nOKxY2TDAPyxJJ4fpdGLXlmeNwOKHuL9SC3V57O%2Frv9jO3tGo41nMD6di4qTf5Dn05u46aeQ\"}]}",
+      "CF-RAY": "a34d9485e868e179-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "85201",
+      "Date": "Wed, 02 Sep 2026 15:34:41 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/gallery/4.jpg",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=yPLvYM5dGpzYBGke35GU85guqTn1TsCy5AOGROxBaHwjQ0K3p5DWnL5cFZvFTYVHdpA8qlxwS7MA%2BIEDw8qd5JrDWaA2Avd3Dlm%2F8Wl6D3oMZqKkzw5z7lFCyDB8vzCxP7IUj5%2BIiwHI\"}]}",
+      "CF-RAY": "a34d948d2f29e215-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "80563",
+      "Date": "Wed, 02 Sep 2026 15:34:42 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/gallery/5.jpg",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Ez8a%2BQpTf5wEhsYs8ibXfsJdp5o2wIHpg5t6%2BikGycSMeueUu441nkAY3CmDO5koO4LVzk4KonvGsK2AviX74J8BLb1s6saz408CYBrrUpsUWZATlDoaFHVjlg%2FCY7X9u%2Bn5zdtMrVZa\"}]}",
+      "CF-RAY": "a34d948ddbeca55f-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "115605",
+      "Date": "Wed, 02 Sep 2026 15:34:42 GMT",
+      "Content-Type": "image/jpeg",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/bg/dots-background-2.png",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=WtUHFpwLC7rPyAaO1FDXQ0F4X6QmrTUBr0EHB6hkc8%2Bomu4uw2ie7fbpLo7uQm6%2F8lwNH8gsmmvqe2gpPt6E0Vg8uQfwIxzjHOUJxISJYLfy%2Bt70jd%2FvJRlRGC59gyAeH9eLQTlA%2B6xS\"}]}",
+      "CF-RAY": "a34d94957a173805-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "548",
+      "Date": "Wed, 02 Sep 2026 15:34:44 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/podcasts/life_at_su.png",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=kbIeQ16jmh1FG9Y0C3H6Vp3ZGc9aqVBqoGIifepHCrHiW%2F7lBIhPiohO02f%2Fci1U1J%2BV8mvIZsxaZ70ZgwH9sb7feny9FOLDksIuufCRu1PXWV2ub900t%2FXh99oxsD%2Bbpow94URIZ%2F4i\"}]}",
+      "CF-RAY": "a34d94963fe7e179-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "429681",
+      "Date": "Wed, 02 Sep 2026 15:34:43 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/opensans/v44/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "age": "552675",
+      "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+      "x-content-type-options": "nosniff",
+      "expires": "Fri, 27 Aug 2027 06:03:27 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Thu, 27 Aug 2026 06:03:27 GMT",
+      "last-modified": "Mon, 15 Sep 2025 16:30:57 GMT",
+      "content-type": "font/woff2",
+      "cache-control": "public, max-age=31536000",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "42964",
+      "x-xss-protection": "0",
+      "server": "sffe"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/images/bg/dots-background-1.png?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "cf-cache-status": "BYPASS",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=1cmHqR9qSqISUqJk7%2BlhyZ2r2GiSwmy4mPBmgRQYTG0bjm463kuKU3ZfoLN0o5pmI%2BN4UHwn1XPFhr128NrxyaSHMP9ZbXkgFz5zUiaZc8eEauEjWDR9vJzLu1W6Kvaolsasok4Tt31f\"}]}",
+      "CF-RAY": "a34d94964b9c4b79-MRS",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "Accept-Ranges": "bytes",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Content-Length": "635",
+      "Date": "Wed, 02 Sep 2026 15:34:43 GMT",
+      "Content-Type": "image/png",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu3cOWxw.woff2",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "age": "385915",
+      "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+      "x-content-type-options": "nosniff",
+      "expires": "Sun, 29 Aug 2027 04:22:20 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Sat, 29 Aug 2026 04:22:20 GMT",
+      "last-modified": "Wed, 10 Sep 2025 16:43:22 GMT",
+      "content-type": "font/woff2",
+      "cache-control": "public, max-age=31536000",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "14724",
+      "x-xss-protection": "0",
+      "server": "sffe"
+    }
+  },
+  {
+    "url": "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cdn-status": "200",
+      "cf-cache-status": "HIT",
+      "etag": "\"af7ae505a9eed503f8b8e6982036873e\"",
+      "age": "739199",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:34:43 GMT",
+      "last-modified": "Mon, 25 Jan 2021 22:04:55 GMT",
+      "content-type": "font/woff2",
+      "vary": "Accept-Encoding",
+      "cdn-cache": "HIT",
+      "cdn-requestpullcode": "200",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cdn-cachedat": "08/01/2025 14:01:18",
+      "cache-control": "public, max-age=31919000",
+      "cdn-requestpullsuccess": "True",
+      "timing-allow-origin": "*",
+      "cdn-requesttime": "0",
+      "cdn-requestid": "5a3eb378297755a7f1fba7c06624477e",
+      "cross-origin-resource-policy": "cross-origin",
+      "cdn-pullzone": "252412",
+      "cdn-proxyver": "1.33",
+      "cf-ray": "a34d94981c748420-LHE",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "77160",
+      "cdn-edgestorageid": "1333",
+      "server": "cloudflare",
+      "cdn-requestcountrycode": "DE"
+    }
+  },
+  {
+    "url": "https://fonts.gstatic.com/s/opensans/v44/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTUGmu0SC55K5gw.woff2",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "age": "387692",
+      "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+      "x-content-type-options": "nosniff",
+      "expires": "Sun, 29 Aug 2027 03:53:11 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Sat, 29 Aug 2026 03:53:11 GMT",
+      "last-modified": "Mon, 15 Sep 2025 16:31:24 GMT",
+      "content-type": "font/woff2",
+      "cache-control": "public, max-age=31536000",
+      "timing-allow-origin": "*",
+      "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "22680",
+      "x-xss-protection": "0",
+      "server": "sffe"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/js/plugins.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=CcwGIc%2BbeK93xMUims533EJc42X0GhVCuPnUlPlhOu613P5S%2F1O93pHwVA4WlsEJJwBT2AjRHFL4selyHGm2ILo2B4HQ0YlQSPIQIVfog1J7iJ%2BVODFBdlZ5LDY7xKJdQ9IWjD%2FKHhhW\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:17 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93f34f1fe289-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/js/jquery/ui/effect.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=b8A9NYcrHF1uCir2JbIbHk0kZ7bqhMINRzGcsMZQpscuq%2FoVTyBGFFcTh2AROlueBlwUPZHzGsUDyxxMx%2BNA79deih5%2FRps%2FvrnCdkTC%2BV31KWG87y0phqnn447ZWvLtMgYANVYrYB5B\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:17 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93f3eb19e215-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/plugins/goodlayers-core/include/js/page-builder.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=d63CclFqKQ8XvwhAQ1PwBR%2F%2FH1MhCNfRo5UqBo%2FNThJSoF9MQ4jgkszEqE0FXkqsO8UhOAoCbD%2BcFdAvowoc%2FpdntW0tVNi%2FRGlU%2FElgPk7n85krSvfwB4QmIR%2Fe5lO5wtE%2FeUVUzzbS\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:18 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93f4ee0b3805-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/plugins/goodlayers-core/plugins/combine/script.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=vB68j%2FPY5vzuSXWOw3ssRfnJmRQ83nOKsBfWMsIIn2bQ733wYOFa0w%2BgmkSk15kmu7OZ9%2FsPwtmctLqLvYyHmmYadkeD%2F3VOisAQmJ404CVnjI8DHeUzrPo86%2FxONKsEqn0sQViJr3oi\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:19 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93fbcb34e215-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js?v=222",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ],
+      "cacheStatus": [
+        "BYPASS",
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cdnjs-via": "cfworker/r2",
+      "content-encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "age": "117582",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=A6GAtYyyJXnHWZRcMABJ1ESkGqXT%2BbqrrE2907X44jiHHhrdqaxzoNdfFzZmc99uZTHziSd2ZATmYeTz54CLLFLJbWpEm80jeD%2Ft8s0ihVCBD%2F0K4jyITNfM%2BRSmwz%2FD%2FzHncZ1hal%2F5qZy951%2BamPGz\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cdnjs-cache": "HIT",
+      "date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "content-type": "application/javascript; charset=utf-8",
+      "last-modified": "Mon, 04 May 2020 16:16:11 GMT",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=15780000",
+      "cache-control": "no-transform, public, s-maxage=30672000, max-age=30672000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93ec7fb08577-LHE",
+      "access-control-allow-origin": "*",
+      "content-length": "13489",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/adminfiles/lib/iziToast/js/iziToast.min.js",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=OL%2Fvgw3pn3rualdGHpU1%2Brh%2BVQyjcrAkOYtfn1jpBB3%2BxstOI0bEXDPQ2NECceW5BhkB7wubtIgQ9UoiPm6jIHqLmekQpwcTWf4vUt%2FAKt86gdHdTYMse%2Bw9otLkxrUOpnpsr3b7t5ZV\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:19 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93fdbafc4b79-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?v=222",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ]
+    },
+    "responseHeaders": {
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=60, s-maxage=300",
+      "location": "/flickity@2.3.0/dist/flickity.pkgd.min.js?v=222",
+      "cross-origin-resource-policy": "cross-origin",
+      "x-content-type-options": "nosniff",
+      "cf-ray": "a34d93ec7cf1aa19-LHE",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "62",
+      "date": "Wed, 02 Sep 2026 15:34:15 GMT",
+      "content-type": "text/plain;charset=UTF-8",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js?v=222",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ]
+    },
+    "responseHeaders": {
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=60, s-maxage=300",
+      "location": "/isotope-layout@3.0.6/dist/isotope.pkgd.min.js?v=222",
+      "cross-origin-resource-policy": "cross-origin",
+      "x-content-type-options": "nosniff",
+      "cf-ray": "a34d93f07f1daa19-LHE",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "67",
+      "date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "content-type": "text/plain;charset=UTF-8",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js?v=222",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ]
+    },
+    "responseHeaders": {
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=60, s-maxage=300",
+      "location": "/masonry-layout@4.2.2/dist/masonry.pkgd.min.js?v=222",
+      "cross-origin-resource-policy": "cross-origin",
+      "x-content-type-options": "nosniff",
+      "cf-ray": "a34d93f07f1faa19-LHE",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-length": "67",
+      "date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "content-type": "text/plain;charset=UTF-8",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://unpkg.com/ionicons@5.0.0/dist/ionicons.js?v=222",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "427824",
+      "access-control-allow-methods": "GET, HEAD, OPTIONS",
+      "x-content-type-options": "nosniff",
+      "expires": "Thu, 02 Sep 2027 15:34:16 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "content-type": "text/javascript; charset=utf-8",
+      "last-modified": "Fri, 28 Aug 2026 16:42:24 GMT",
+      "fly-request-id": "01M0JWR9V7PRP7JRFARJDMAJVT-sin",
+      "access-control-allow-headers": "*",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "vary": "accept-encoding",
+      "cache-control": "public, max-age=31536000",
+      "cross-origin-resource-policy": "cross-origin",
+      "via": "1.1 fly.io",
+      "cf-ray": "a34d93f07f21aa19-LHE",
+      "content-digest": "sha256=:5FhsQ60xiw0umjHpfwewdWayKE3DfMv5qoYRl5oCkWg=:",
+      "access-control-allow-origin": "*",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js?v=222",
+    "edgeInfo": {
+      "pop": [
+        "eto",
+        "fra",
+        "van",
+        "bom",
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare",
+        "fastly"
+      ],
+      "location": [
+        "frankfurt am main",
+        "van",
+        "mumbai",
+        "lahore"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "HIT, HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"11afb-s2c359KmWBXECshtBQLwy7i5utg\"",
+      "age": "4025386",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=igiLLnTX52JbdnmVbb1kkTgMn2QYyOfa%2B9jm4jVvDOzCek9esq9jZOQeDit3dm4uF4yv2SbYl8ry7RxXutSGWtorjSpXtb0c7e1SbV%2BLIxWmgBTkdfnReab4hpc7NI5pmqVIc21eOaeot67YBC0%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "x-jsd-version-type": "version",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cache": "HIT, HIT",
+      "date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "content-type": "application/javascript; charset=utf-8",
+      "x-served-by": "cache-fra-etou8220159-FRA, cache-bom-vanm7210070-BOM",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93f07d8c995a-LHE",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "19949",
+      "server": "cloudflare",
+      "x-jsd-version": "4.1.0-beta.1"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/js/lightbox.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=AcmfqlCswpVAcRmfBVQhw17bNFeE%2FY8e2pJShiVqHCHRAV%2FYdqS3O1VJKpKFxP82HwmbGhA3RgTmM5zos1JFSzw2unHLKnmW%2FBFWtKfd5cxWYd%2Bep5me6e%2Fg1rzpQBapAKXfEpcTwVDb\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:19 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d93fdbee8e289-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/js/jquery/jquery-migrate.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=3CkHx%2B0dkS34JH13jxg%2B6Wh%2FLk8%2FkQ8Zz9262nnlokIwp2rdSXjTmdI7plL2ctjCcotvZwy7AyZ0rF1ikk4iVY2Ljrg%2Bgpl%2FMSIVTidlPxzZZ%2F74jVCwFSaFDg9vmEdzz44s%2B9VGkuXF\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:19 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d94001c0c3805-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/vfs_fonts.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=mLlxnAE5cmcn0B73Tn0WCa8syJjIWGZVKuaQoDdvw2JXz31HRoeNtxXcsFwbRzwVxVPgL%2FkHRyFXdm%2Bl0MulCq%2FckOtTmJgSeBDDZ7Ah5IGQ%2Fdbsd2edI4TEDiyEaOQHGljW3UJBp%2FbX\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:20 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d94029cb8e179-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/pdfmake.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=95VnTfPvm%2Bh3EEsEfE0GC5UNa1kUGYKTz2m34ToKQnG7ld%2B3nZP1Xi5rMT3oQkCn%2Bk3aJSpcYysyZkY%2FaFGv%2B5XFbn7bKzNVXTnVc1T5bcRY7HB2vwQAxlps%2BXF9Bf6veezoEuJSD4KY\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:20 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d94055f22e289-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/dataTables.select.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=56sLXxjmVlM7j62YnSxF9diO6h6MfrdnEsExH96eK0RGqjDIggvZQw1GCOgh0jsAYf%2BQnPE21w4DexzXsHX%2Ft4lxPK9bBC2E1H3fbMrCVmYctDKUrTDX3JLSQWfIqZ1lm%2Fv5NL%2B0ohlN\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:20 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d94065e7f4b79-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/dataTables.keyTable.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=OfLwdDc4lh7sZaCo5obRAk%2B2hklbbClt6v%2Fun%2BHvgG%2BdZ5sWl8JdOGnDAmMy16eWLjZHq8hMhPozZb%2BRS3w4w%2F4C4%2BdXFV3nXSTT0jAQmqfpfg6JlDCGIuusi0pErmursJAeByQgc%2F9e\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:20 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d94074cb4e215-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/buttons.print.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=J0%2B9Dn5y666AgHG4ufE9qGjeTlBRlb1Hsy%2FOq%2Bsw1%2BvzqIFVWkyIcmGM7vE%2F5TJKF4dlQ0bcYYmtHR959NNgER0nZmDtL3U8KRS6VUimyZ9wD9KOQiXIcM7QznJQ%2FdYALLF5SZu8y4Ji\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:21 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d9408383f3805-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/buttons.flash.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=aNKrFZVYKl3b9WY%2FdpRwKyT0lWnaFQE4l%2B%2FXV%2Bk1rJ%2BIpoKC9nSbj0MVvLHZj4BrmbSZDMn%2B9gSmT4pZGWG9JuHiZnLL3oqL3IEVlSbQ2PNn6lLxWPWt3KNnulsLVXbyKnd6ipj7mP3e\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:21 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d94099dd4a55f-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/buttons.html5.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GMRbjT%2B0ZzNUXg5w1StQ2y7EOAOdtTDFIAMEs2I%2FJFGMUDG6Xg4nVkO%2BP5XUzl94afSNn7qHyZz2d2EwBCcUF%2BQJaRraSq5BUfkXeE87K%2B%2Fbxa3cNBqtqwWPfP0Nydy7ARGWpSHW4%2B%2Bi\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:21 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d94099fd34b79-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/buttons.bootstrap4.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=E1UMiraWWhMsT40JtdtYsO0ZF5kiCYWTOheu5Hc6bvaeMPjQi%2BjWxds7%2BdvULlqO30%2BFIC3rQm0o0SN3cwZhtZEqjmKOde396aZu771GZigvbFKZ94aCtoShLx4x9EXVHHIajjiqadw8\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:21 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d940cabe5e215-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/dataTables.buttons.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Vety7Dj4mKzzkE%2FiiGY3Pv59QT9dsimJIjohMWXLi9Oho%2FkaMqPxG6igk%2FRnz2nqRI6%2B8f6b95%2Fwz%2FQxBJ3sIFRHHP6rRpM1N1b4rLLo4%2BDwkphwVRnJ8jkF5lWn7R840%2BknenjINyvE\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:22 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d940ef8a33805-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/responsive.bootstrap4.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=lxgjorbiquRlwpZftbZO5f9NaQPABbp6OBMYQfwWi4mbPKRG2p%2B1603gwcQNnqxFLoucVA7YNpIJBf1dCSRaVHFsNbHFYczPXqeQc%2BPhaYZpTbf7IQkJZVd6qmlFdXFzhzuM72MkCac7\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:22 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d940f080a4b79-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/dataTables.responsive.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=NFiyKwe7q0uFh0JJBE8MMsnsJWtwCCad9Gpl8xNTczmcmaDclyjxoAt7wABqgXzNtRb19ZKTPTDzmGq7YBIQ%2F4xCXgOGUV%2BX1UIuNiGaY8IwQ3G2nJWRzQ01vIqN7fwSpIMqh035Ex64\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:22 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d941018d9a55f-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/dataTables.bootstrap4.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8uQTVDnYfrVUHOUkHThY7hfQ9LhuYMOMMP9wJ%2FUmDnIGKwMNvHqZeWltCeJ5mvMcPjHa75FVjhMx1HNOem25nW5LhEOCBo3NyLyQZJ0SGg%2BD%2B%2F8Be5UbTRbTse%2F%2BeL0FBHQYK%2FLDQbu8\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:22 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d94108f5fe179-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/datatables/jquery.dataTables.min.js?v=222",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GDMlXIsK%2FuGBo%2BbBrbIuQBwGZuN%2BNkBoI4Oytzm3wF1GkwbB%2F%2BNCac7%2Bz9QxdtBwiHkpdeQpmPdbwejZm%2FEsOFaIbKTTXxjZmEOB6iU7i17e1Qt3ZtfTmTOo1ULwpB%2BZvI7iaA%2F0GVMF\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:23 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d94133e4fe215-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js?v=222",
+    "edgeInfo": {
+      "pop": [
+        "eto",
+        "fra",
+        "van",
+        "bom",
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare",
+        "fastly"
+      ],
+      "location": [
+        "frankfurt am main",
+        "van",
+        "mumbai",
+        "lahore"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "HIT, HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "br",
+      "cf-cache-status": "HIT",
+      "etag": "W/\"8f1d-IT+QFeYwKrSVBRlke6pKSL0BtcQ\"",
+      "age": "729219",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=T9ZdmvxYfk20sn7RnYOn2gK%2BDvw%2Fsb0b3mKleXY5A0FKYeu2j1bBBa5bZOr5zI0FqfKUHDNL1bSdqABeHJ8Z3cNSzyHSaPkiqJzMUG9OqOgZ7VqUsY7mQkAUbZbR%2BF4%2Flx%2FKOb6%2F02iiHkcnUjI%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cache": "HIT, HIT",
+      "date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "content-type": "application/javascript; charset=utf-8",
+      "x-served-by": "cache-fra-etou8220148-FRA, cache-bom-vanm7210047-BOM",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "cache-control": "public, max-age=31536000, s-maxage=31536000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93f07d8d995a-LHE",
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "content-length": "9277",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js?v=222",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ],
+      "cacheStatus": [
+        "BYPASS",
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "cf-cdnjs-via": "cfworker/r2",
+      "content-encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "age": "373175",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=HnVd4vPo1sOs1ITLQLNgxeMFijpI8WCgITNL1TueafE5KoQQqeAOfwUhC%2B3jNs9JyG7pOOCW4ptu04ECuLe4EjPvfnBladf8pNn1ezpqCZvqakXEg5ybfr0MPvtamCJ1aIFDv6gyG9%2BFnaxE3e%2Bjxez5\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "x-cdnjs-cache": "HIT",
+      "date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "content-type": "application/javascript; charset=utf-8",
+      "last-modified": "Mon, 04 May 2020 16:11:48 GMT",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=15780000",
+      "cache-control": "no-transform, public, s-maxage=30672000, max-age=30672000, immutable",
+      "timing-allow-origin": "*",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+      "cross-origin-resource-policy": "cross-origin",
+      "cf-ray": "a34d93f078928577-LHE",
+      "access-control-allow-origin": "*",
+      "content-length": "30360",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://www.googletagmanager.com/gtag/js?id=UA-105155687-3",
+    "edgeInfo": {
+      "provider": [
+        "google"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "zstd",
+      "expires": "Wed, 02 Sep 2026 15:34:17 GMT",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "date": "Wed, 02 Sep 2026 15:34:17 GMT",
+      "content-type": "application/javascript; charset=UTF-8",
+      "vary": "Accept-Encoding",
+      "last-modified": "Wed, 02 Sep 2026 15:00:00 GMT",
+      "access-control-allow-headers": "Cache-Control",
+      "strict-transport-security": "max-age=31536000; includeSubDomains",
+      "cache-control": "private, max-age=900",
+      "cross-origin-resource-policy": "cross-origin",
+      "access-control-allow-credentials": "true",
+      "access-control-allow-origin": "*",
+      "content-length": "134796",
+      "x-xss-protection": "0",
+      "server": "Google Tag Manager"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/extras/modernizr.2.5.3.min.js?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=XjEGSJKTQHK5q1z64MDAunngSIx71lVPDnQtbBxGIDnWXhCPE8gQENafCz3y0ahlZbnAJ8RgQlLRYA8lwYCwrd5D7zilH2hn3OkwHzyb5FXaW%2BEnh%2FS8RJiUjbSAyWFhH12atR1SkFRe\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:22 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d941339ece289-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://uos.edu.pk/extras/jquery.min.1.7.js?v=1.0.1.2",
+    "edgeInfo": {
+      "provider": [
+        "cloudflare"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "Content-Encoding": "br",
+      "cf-cache-status": "BYPASS",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=rM35MpEO2sLfjN%2BY6DC6t1l6KuAw92%2FbUhWcyfWDS3ME1lsg6%2FVIpA6LcIbryk7pjwO7Qsvpp0Nr1LMjz6jeGvfT5t1HiLnn2F0DEBBzQRLw9a6msukXszUUwYRV34MPF2ar%2Fh9wmaU5\"}]}",
+      "expires": "Thu, 1 Jan 1970 00:00:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "Date": "Wed, 02 Sep 2026 15:34:23 GMT",
+      "Content-Type": "application/javascript",
+      "vary": "accept-encoding",
+      "Transfer-Encoding": "chunked",
+      "Cache-Control": "max-age=0, no-cache, no-store, must-revalidate",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "Connection": "keep-alive",
+      "CF-RAY": "a34d94153c414b79-MRS",
+      "x-powered-by": "PleskLin",
+      "Server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js?v=222",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "427821",
+      "access-control-allow-methods": "GET, HEAD, OPTIONS",
+      "x-content-type-options": "nosniff",
+      "expires": "Thu, 02 Sep 2027 15:34:16 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "content-type": "text/javascript; charset=utf-8",
+      "last-modified": "Fri, 28 Aug 2026 16:34:02 GMT",
+      "fly-request-id": "01KRQ9HE75RAJ9QM5A9WP8087N-bom",
+      "access-control-allow-headers": "*",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "vary": "accept-encoding",
+      "cache-control": "public, max-age=31536000",
+      "cross-origin-resource-policy": "cross-origin",
+      "via": "1.1 fly.io, 1.1 fly.io",
+      "cf-ray": "a34d93f128d6aa19-LHE",
+      "content-digest": "sha256=:OqbVjZdNBS1rrUlOFb/xA8UY4UjlkFTABlZGELQRA9I=:",
+      "access-control-allow-origin": "*",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js?v=222",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "427822",
+      "access-control-allow-methods": "GET, HEAD, OPTIONS",
+      "x-content-type-options": "nosniff",
+      "expires": "Thu, 02 Sep 2027 15:34:16 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "content-type": "text/javascript; charset=utf-8",
+      "last-modified": "Fri, 28 Aug 2026 16:37:54 GMT",
+      "fly-request-id": "01M12P6HFYSG8QCQB5KXKDJR4K-sin",
+      "access-control-allow-headers": "*",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "vary": "accept-encoding",
+      "cache-control": "public, max-age=31536000",
+      "cross-origin-resource-policy": "cross-origin",
+      "via": "1.1 fly.io",
+      "cf-ray": "a34d93f30dfcaa19-LHE",
+      "content-digest": "sha256=:CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=:",
+      "access-control-allow-origin": "*",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js?v=222",
+    "edgeInfo": {
+      "pop": [
+        "lhe"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "lahore"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "access-control-expose-headers": "*",
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "age": "427823",
+      "access-control-allow-methods": "GET, HEAD, OPTIONS",
+      "x-content-type-options": "nosniff",
+      "expires": "Thu, 02 Sep 2027 15:34:16 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 15:34:16 GMT",
+      "content-type": "text/javascript; charset=utf-8",
+      "last-modified": "Fri, 28 Aug 2026 16:36:10 GMT",
+      "fly-request-id": "01M12NCMCJX2ZFDXN19WYM12TR-ams",
+      "access-control-allow-headers": "*",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "vary": "accept-encoding",
+      "cache-control": "public, max-age=31536000",
+      "cross-origin-resource-policy": "cross-origin",
+      "via": "1.1 fly.io",
+      "cf-ray": "a34d93f30e01aa19-LHE",
+      "content-digest": "sha256=:Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=:",
+      "access-control-allow-origin": "*",
+      "server": "cloudflare"
+    }
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://pesconlinebill.pk/",
+    "edgeInfo": {
+      "pop": [
+        "nrt"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "tokyo / narita"
+      ],
+      "cacheStatus": [
+        "DYNAMIC"
+      ]
+    },
+    "responseHeaders": {
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "a34d9a587ec7b26f-NRT",
+      "content-encoding": "zstd",
+      "content-type": "text/html; charset=UTF-8",
+      "date": "Wed, 02 Sep 2026 15:38:40 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=0%2BbSWMfIkRWq3mACDnVgNSgMbMc01Xbrn4jWs8LHmtZytFrkwX5Lhr8wZ3PfN4RTkwGM7QhmnNVtpeEJcHoY20SXnE1M3EJ0qUyl8fpFZJD%2BJcNU5IWjPDIrRxoUIspUGKZlQw%3D%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "cfCacheStatus;desc=\"DYNAMIC\"\ncfEdge;dur=21,cfOrigin;dur=2054",
+      "vary": "Accept-Encoding"
+    }
+  }
+]

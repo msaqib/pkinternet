@@ -1,0 +1,244 @@
+[
+  {
+    "url": "https://zu.edu.pk/",
+    "edgeInfo": {},
+    "responseHeaders": {
+      "Location": "https://zu.edu.pk/"
+    }
+  },
+  {
+    "url": "https://zu.edu.pk/",
+    "edgeInfo": {
+      "pop": [
+        "sin"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "singapore"
+      ]
+    },
+    "responseHeaders": {
+      "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-mitigated": "challenge",
+      "cf-ray": "a34d60f32fd4f886-SIN",
+      "content-encoding": "br",
+      "content-security-policy": "default-src 'none'; script-src 'nonce-2zKqOxIV8webIghRsY7Pi3' 'unsafe-eval' https://challenges.cloudflare.com; script-src-attr 'none'; style-src 'unsafe-inline'; img-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com blob:; child-src 'self' https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri 'self'",
+      "content-type": "text/html; charset=UTF-8",
+      "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "cross-origin-embedder-policy": "require-corp",
+      "cross-origin-opener-policy": "same-origin",
+      "cross-origin-resource-policy": "same-origin",
+      "date": "Wed, 02 Sep 2026 14:59:27 GMT",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "origin-agent-cluster": "?1",
+      "permissions-policy": "accelerometer=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=(),xr-spatial-tracking=*",
+      "referrer-policy": "same-origin",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pGG6ctscXCAZQDYbNHhhd0oanq2niNxOWoKgqjqPeTCgM%2FvZUz%2Bkc%2FC4tAU6TIC5koPC38vq8mdOhoTVUYWTTgOwVenK8AI%2FDe2ZaEMOuGsmu9khuGzepvZw0w%3D%3D\"}]}",
+      "server": "cloudflare",
+      "server-timing": "chlray;desc=\"a34d60f32fd4f886\"",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "vary": "accept-encoding",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-xss-protection": "1; mode=block"
+    }
+  },
+  {
+    "url": "https://zu.edu.pk/cdn-cgi/speculation",
+    "edgeInfo": {
+      "pop": [
+        "sin"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "singapore"
+      ]
+    },
+    "responseHeaders": {
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=HHnFM2oX0Wqr4ji8jWZXRnuvoTBhMIzXnam1KoyMZkY7x3X%2BVciOIuhogZc51IlMxCtWED26HYUZh2sMhYJaiXKhqNtRgISK2ZV54TNWYaWoV71djnic4SwIyg%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "date": "Wed, 02 Sep 2026 14:59:28 GMT",
+      "content-type": "application/speculationrules+json",
+      "vary": "Origin",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "upgrade-insecure-requests",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "no-referrer-when-downgrade",
+      "cf-ray": "a34d60f43b89f886-SIN",
+      "permissions-policy": "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=()",
+      "access-control-allow-origin": "https://zu.edu.pk",
+      "content-length": "151",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://zu.edu.pk/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=a34d60f32fd4f886",
+    "edgeInfo": {
+      "pop": [
+        "sin"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "singapore"
+      ]
+    },
+    "responseHeaders": {
+      "cf-ray": "a34d60f44bb7f886-SIN",
+      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "content-encoding": "br",
+      "date": "Wed, 02 Sep 2026 14:59:28 GMT",
+      "content-type": "application/javascript; charset=UTF-8",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://challenges.cloudflare.com/turnstile/v0/g/330e41bb475c/api.js?onload=khCN8&render=explicit",
+    "edgeInfo": {
+      "pop": [
+        "hkg"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "hong kong"
+      ]
+    },
+    "responseHeaders": {
+      "cache-control": "max-age=31536000, stale-if-error=10800, stale-while-revalidate=31536000, public",
+      "timing-allow-origin": "https://zu.edu.pk",
+      "content-encoding": "br",
+      "etag": "W/\"330e41bb475c-api\"",
+      "cross-origin-resource-policy": "cross-origin",
+      "x-content-type-options": "nosniff",
+      "cf-ray": "a34d60fb4fde72ce-HKG",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 14:59:29 GMT",
+      "content-type": "application/javascript; charset=UTF-8",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://zu.edu.pk/favicon.ico",
+    "edgeInfo": {
+      "pop": [
+        "sin"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "singapore"
+      ],
+      "cacheStatus": [
+        "BYPASS"
+      ]
+    },
+    "responseHeaders": {
+      "cf-edge-cache": "cache,platform=wordpress",
+      "cf-cache-status": "BYPASS",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ieDTOmmixfj46mY1WiRXyzbjCIdLNU%2BYc6V0yavSqahINEI0dxKzYhuK3SKh7i7X%2B3Vjf8u%2Br6QRuCNLqa5JI3ihEXQExIf9KqHY6Q2Kw1Yqi8JVHavo%2BXl9Ow%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 14:59:28 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "vary": "User-Agent, accept-encoding",
+      "x-frame-options": "SAMEORIGIN",
+      "x-redirect-by": "WordPress",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "link": "<https://zu.edu.pk/wp-json/>; rel=\"https://api.w.org/\"",
+      "content-security-policy": "upgrade-insecure-requests",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "location": "https://zu.edu.pk/wp-content/uploads/2024/06/cropped-cropped-ZU-nlogo-32x32.webp",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "pragma": "no-cache",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "no-referrer-when-downgrade",
+      "cf-ray": "a34d60f67924f886-SIN",
+      "permissions-policy": "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=()",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://zu.edu.pk/cdn-cgi/challenge-platform/h/g/fo/1452649914:1788357614:oQBsEWh5fQGy9e7_xEy7lLgfCu1JYZMdvEMiT2YyZeQ/a34d60f32fd4f886/1sqqs3Gc1wOfLDhqHz1Q1utm2YbQ8j8JKo4PHiBMmBE-1788361167-1.2.1.1-wPWMHA_onTkbORlwKfztp_Jn.BNW3YHM7122ghJFTt15i0kiFsPMBshCJRLeU_i1",
+    "edgeInfo": {
+      "pop": [
+        "sin"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "singapore"
+      ]
+    },
+    "responseHeaders": {
+      "timing-allow-origin": "https://zu.edu.pk",
+      "content-encoding": "br",
+      "cf-ray": "a34d60f73b60f886-SIN",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 14:59:28 GMT",
+      "content-type": "text/plain; charset=UTF-8",
+      "cf-chl-gen": "9Gm4//yX4yfyl2/8ll+EwRc989g0lwU9GMpq/8J4ICM=$KsXg722YgiD/ox+JKvAqwg==",
+      "server": "cloudflare"
+    }
+  },
+  {
+    "url": "https://zu.edu.pk/wp-content/uploads/2024/06/cropped-cropped-ZU-nlogo-32x32.webp",
+    "edgeInfo": {
+      "pop": [
+        "sin"
+      ],
+      "provider": [
+        "cloudflare"
+      ],
+      "location": [
+        "singapore"
+      ],
+      "cacheStatus": [
+        "HIT"
+      ]
+    },
+    "responseHeaders": {
+      "content-encoding": "gzip",
+      "cf-cache-status": "HIT",
+      "etag": "\"3d4-6250c753c8640-gzip\"",
+      "age": "32491",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=oMIp0B8NZiHyh260ur7%2F%2BxVs24WR7bB0zgZkRxHpWlsI0%2BJmd0ZiQ7%2FUV9%2BRnCJypamh3npCPYt84ujyFvTNT6Mk6JdmzijbHQEslROaQ8tirNMkI0OegmY0KA%3D%3D\"}]}",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "date": "Wed, 02 Sep 2026 14:59:28 GMT",
+      "content-type": "image/webp",
+      "last-modified": "Tue, 22 Oct 2024 08:21:37 GMT",
+      "vary": "Accept-Encoding,User-Agent",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "content-security-policy": "upgrade-insecure-requests",
+      "cache-control": "max-age=28800",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "speculation-rules": "\"/cdn-cgi/speculation\"",
+      "referrer-policy": "no-referrer-when-downgrade",
+      "cf-ray": "a34d60fa2c51f886-SIN",
+      "permissions-policy": "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=()",
+      "accept-ranges": "bytes",
+      "content-length": "1003",
+      "x-xss-protection": "1; mode=block",
+      "server": "cloudflare"
+    }
+  }
+]

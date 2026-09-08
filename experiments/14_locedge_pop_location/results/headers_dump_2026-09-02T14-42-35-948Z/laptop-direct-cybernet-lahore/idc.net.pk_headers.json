@@ -1,0 +1,104 @@
+[
+  {
+    "url": "https://idc.net.pk/",
+    "edgeInfo": {},
+    "responseHeaders": {
+      "cache-control": "no-store,no-cache,max-age=0",
+      "content-length": "168",
+      "content-type": "text/html",
+      "date": "Wed, 02 Sep 2026 14:48:53 GMT",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "host-header": "8441280b0c35cbc1147f8ba998a563a7",
+      "server": "nginx",
+      "sg-captcha": "challenge",
+      "x-proxy-cache-info": "DT:1",
+      "x-robots-tag": "noindex"
+    }
+  },
+  {
+    "url": "https://idc.net.pk/.well-known/sgcaptcha/?r=%2F&y=ipr:101.53.234.88:1788360533.357",
+    "edgeInfo": {},
+    "responseHeaders": {
+      "cache-control": "no-store,no-cache,max-age=0",
+      "content-encoding": "br",
+      "content-type": "text/html",
+      "date": "Wed, 02 Sep 2026 14:48:53 GMT",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "host-header": "8441280b0c35cbc1147f8ba998a563a7",
+      "server": "nginx",
+      "sg-captcha": "challenge",
+      "vary": "Accept-Encoding",
+      "x-proxy-cache-info": "DT:1",
+      "x-robots-tag": "noindex"
+    }
+  },
+  {
+    "url": "https://d1rozh26tys225.cloudfront.net/robot-suspicion.svg",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "cloudfront",
+        "AWS (not CDN)"
+      ],
+      "location": [
+        "muscat"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "Hit from cloudfront"
+      ]
+    },
+    "responseHeaders": {
+      "x-amz-cf-pop": "MCT50-P2",
+      "content-encoding": "gzip",
+      "etag": "W/\"bf95026d64faa61f93dcec8be1040417\"",
+      "age": "38980",
+      "via": "1.1 32ed187edc1b610a3130e099c45ac74a.cloudfront.net (CloudFront)",
+      "x-cache": "Hit from cloudfront",
+      "x-amz-cf-id": "HvQWSxwsUKOgkkOXYCL3RZ0lwT9iF4Lrz-b-h1DDnaU_iZgd-Xzu3w==",
+      "date": "Wed, 02 Sep 2026 03:59:25 GMT",
+      "content-type": "image/svg+xml",
+      "vary": "Accept-Encoding",
+      "server": "AmazonS3",
+      "last-modified": "Wed, 16 Aug 2023 13:41:23 GMT",
+      "x-amz-server-side-encryption": "AES256"
+    }
+  },
+  {
+    "url": "https://d1rozh26tys225.cloudfront.net/loader.svg",
+    "edgeInfo": {
+      "pop": [
+        "mct"
+      ],
+      "provider": [
+        "AWS (not CDN)",
+        "cloudfront"
+      ],
+      "location": [
+        "muscat"
+      ],
+      "cacheStatus": [
+        "HIT",
+        "Hit from cloudfront"
+      ]
+    },
+    "responseHeaders": {
+      "vary": "Accept-Encoding",
+      "etag": "\"8946b767a9a283b2a0f3a62fd915020c\"",
+      "age": "35733",
+      "via": "1.1 32ed187edc1b610a3130e099c45ac74a.cloudfront.net (CloudFront)",
+      "accept-ranges": "bytes",
+      "x-cache": "Hit from cloudfront",
+      "content-length": "846",
+      "x-amz-cf-id": "8e4rumLSjj_jhmQlpY6NYJV_VeId-chdM-oIMPz2AaP_K8fLbPrqPg==",
+      "date": "Wed, 02 Sep 2026 04:53:21 GMT",
+      "content-type": "image/svg+xml",
+      "last-modified": "Wed, 16 Aug 2023 13:41:22 GMT",
+      "server": "AmazonS3",
+      "x-amz-cf-pop": "MCT50-P2",
+      "x-amz-server-side-encryption": "AES256"
+    }
+  }
+]
