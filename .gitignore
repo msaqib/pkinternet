@@ -41,3 +41,10 @@ HANDOFF.md
 .github/copilot-instructions.md
 .continue/
 .windsurfrules
+
+# Raw browser capture dumps (HAR files / response-header JSON) can carry live
+# third-party bearer/session tokens (e.g. Skyscanner's x-skyscanner-session-id-token
+# JWTs seen in exp 14 headers dumps) — findings live in the derived CSVs/summaries,
+# not these raw per-site captures, so don't track new ones (added 2026-09-08)
+*.har
+*_headers.json
