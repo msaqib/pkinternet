@@ -1,0 +1,254 @@
+{
+ "checks": 805956,
+ "blocks": 22556,
+ "live": 37872,
+ "ge8": 3069,
+ "withlife": 5887,
+ "hist": {
+  "8-15": 3038,
+  "4-7": 1534,
+  "16+": 31,
+  "0": 16669,
+  "1-3": 1284
+ },
+ "method": {
+  "smallisp": {
+   "icmp": 47.3,
+   "t80": 38.1,
+   "t443": 14.6,
+   "n": 2793
+  },
+  "pk": {
+   "icmp": 85.4,
+   "t80": 11.6,
+   "t443": 3.0,
+   "n": 30560
+  },
+  "topup": {
+   "icmp": 96.0,
+   "t80": 1.9,
+   "t443": 2.1,
+   "n": 4519
+  }
+ },
+ "density": {
+  "median": 9.9,
+  "p25": 4.7,
+  "p75": 14.3
+ },
+ "isps": [
+  {
+   "asn": "17557",
+   "name": "PKTELECOM-AS-PK - Pakistan Telecom",
+   "blocks": 14573,
+   "live": 25511,
+   "ge8": 2159,
+   "dens": 6.22
+  },
+  {
+   "asn": "9541",
+   "name": "CYBERNET-AP - Cyber Internet Servi",
+   "blocks": 876,
+   "live": 1140,
+   "ge8": 98,
+   "dens": 5.36
+  },
+  {
+   "asn": "23674",
+   "name": "NAYATEL-PK - Nayatel (Pvt) Ltd",
+   "blocks": 560,
+   "live": 1002,
+   "ge8": 87,
+   "dens": 6.45
+  },
+  {
+   "asn": "38264",
+   "name": "WATEEN-IMS-PK-AS-AP - National WiM",
+   "blocks": 684,
+   "live": 909,
+   "ge8": 63,
+   "dens": 4.67
+  },
+  {
+   "asn": "9260",
+   "name": "MULTINET-AS-AP - Multinet Pakistan",
+   "blocks": 119,
+   "live": 511,
+   "ge8": 45,
+   "dens": 8.72
+  },
+  {
+   "asn": "24499",
+   "name": "TPP-AS-PK - Telenor Pakistan",
+   "blocks": 80,
+   "live": 424,
+   "ge8": 39,
+   "dens": 12.15
+  },
+  {
+   "asn": "138423",
+   "name": "CMPAKLIMITED-AS-ENTCORP - CMPak Li",
+   "blocks": 79,
+   "live": 397,
+   "ge8": 19,
+   "dens": 1.5
+  },
+  {
+   "asn": "135407",
+   "name": "TES-PL-AS-AP - Trans World Enterpr",
+   "blocks": 90,
+   "live": 394,
+   "ge8": 41,
+   "dens": 12.77
+  },
+  {
+   "asn": "38193",
+   "name": "TWA-AS-AP - Transworld Associates ",
+   "blocks": 93,
+   "live": 375,
+   "ge8": 29,
+   "dens": 8.95
+  },
+  {
+   "asn": "132165",
+   "name": "CONNECT-AS-AP - Connect Communicat",
+   "blocks": 136,
+   "live": 375,
+   "ge8": 21,
+   "dens": 1.07
+  },
+  {
+   "asn": "136384",
+   "name": "OPTIX-AS-AP - Optix Pakistan (Pvt.",
+   "blocks": 88,
+   "live": 351,
+   "ge8": 26,
+   "dens": 1.57
+  },
+  {
+   "asn": "17911",
+   "name": "BRAINPK-AS-AP - Brain Telecommunic",
+   "blocks": 49,
+   "live": 268,
+   "ge8": 5,
+   "dens": 2.15
+  },
+  {
+   "asn": "17563",
+   "name": "NEXLINX-AS-AP - Autonomous System ",
+   "blocks": 119,
+   "live": 238,
+   "ge8": 16,
+   "dens": 5.53
+  },
+  {
+   "asn": "59257",
+   "name": "CMPAKLIMITED-AS-AP - CMPak Limited",
+   "blocks": 182,
+   "live": 200,
+   "ge8": 13,
+   "dens": 4.18
+  },
+  {
+   "asn": "23966",
+   "name": "LDN-AS-PK - LINKdotNET Telecom Lim",
+   "blocks": 277,
+   "live": 199,
+   "ge8": 9,
+   "dens": 2.82
+  },
+  {
+   "asn": "45773",
+   "name": "HECPERN-AS-PK - PERN AS Content Se",
+   "blocks": 47,
+   "live": 176,
+   "ge8": 13,
+   "dens": 7.85
+  },
+  {
+   "asn": "23888",
+   "name": "NTC-AS-AP - National Telecommunica",
+   "blocks": 95,
+   "live": 173,
+   "ge8": 11,
+   "dens": 5.35
+  },
+  {
+   "asn": "59323",
+   "name": "PITB-PUNJAB-PK - Punjab Informatio",
+   "blocks": 5,
+   "live": 169,
+   "ge8": 4,
+   "dens": 13.31
+  },
+  {
+   "asn": "24435",
+   "name": "SUPERNET-PAKISTAN-AS-AP - Supernet",
+   "blocks": 73,
+   "live": 168,
+   "ge8": 12,
+   "dens": 6.47
+  },
+  {
+   "asn": "7590",
+   "name": "COMSATS - Commission on Science an",
+   "blocks": 56,
+   "live": 166,
+   "ge8": 9,
+   "dens": 6.13
+  },
+  {
+   "asn": "135523",
+   "name": "MULTINET-IE-AS-AP - Multinet Broad",
+   "blocks": 25,
+   "live": 160,
+   "ge8": 9,
+   "dens": 2.52
+  },
+  {
+   "asn": "23750",
+   "name": "GERRYS-AS-AP - GERRYS INFORMATION ",
+   "blocks": 61,
+   "live": 152,
+   "ge8": 13,
+   "dens": 6.73
+  }
+ ],
+ "coverage": {
+  "total": 300,
+  "withlife": 204,
+  "panel": 121,
+  "bysize": [
+   [
+    "1 block",
+    78,
+    9
+   ],
+   [
+    "2-5",
+    126,
+    34
+   ],
+   [
+    "6-20",
+    43,
+    28
+   ],
+   [
+    "21-100",
+    40,
+    38
+   ],
+   [
+    "100+",
+    13,
+    12
+   ]
+  ]
+ },
+ "hitrate": {
+  "smallisp": 1.36,
+  "pk": 5.31,
+  "topup": 18.32
+ }
+}

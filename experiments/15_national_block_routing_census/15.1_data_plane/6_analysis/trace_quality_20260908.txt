@@ -1,0 +1,83 @@
+traces 18260   CLEAR = reached AND >=80% hops answered AND <=50% private
+
+==============================================================================================
+1. PER DESTINATION ISP
+==============================================================================================
+ISP                                   probes  reach%  clear  clear%  blocks  blk+  IPs+
+Brain Telecommunication Ltd.            2043   30.3%    185    9.1%      49    19    64
+Multinet Pakistan (Pvt.) Ltd.            684   23.7%    115   16.8%      23    20    44
+Optix Pakistan (Pvt.) Ltd.              2533   16.3%     87    3.4%      82     7    30
+Connect Communications (Pvt.) Ltd.      3343    4.9%     86    2.6%     132    23    42
+Sign In (Pvt.) Ltd.                      487   29.0%     66   13.6%      16    10    29
+Vision Telecom (Pvt.) Ltd.               344   24.7%     65   18.9%      18    12    29
+Multan Cable & Internet Services (       168   40.5%     52   31.0%       8     7    25
+Origin Net (Pvt.) Ltd.                   112   51.8%     45   40.2%       7     5    23
+Gerry's Information Technology (Pv       118   41.5%     29   24.6%       4     3    10
+The Professional Communications (P       237   19.0%     27   11.4%       8     3     9
+Cube XS Weatherly (Pvt.) Ltd.            600   10.8%     26    4.3%      22     6    10
+Ashiq Cable Network (Pvt.) Ltd.           56   50.0%     19   33.9%       1     1     4
+Master Communication (Pvt.) Ltd.         138   28.3%     15   10.9%       4     4     9
+Fast Web & Wireless Communications        92   22.8%     13   14.1%       2     1     3
+Logon Broadband (Pvt.) Ltd.              333    7.2%     12    3.6%      16     2     4
+Smart Telecom (Pvt.) Ltd.                 76    3.9%      3    3.9%       3     1     1
+Air Max (Pvt.) Ltd.                      106    3.8%      2    1.9%       4     1     1
+Alpines Internet (Pvt.) Ltd.              81    0.0%      0    0.0%       4     0     0
+Badar Enterprises Cable Network (P        53    0.0%      0    0.0%       2     0     0
+Big Data Technologies (Pvt.) Ltd.          1    0.0%      0    0.0%       1     0     0
+Bliss Communication Network (Pvt.)       124    0.0%      0    0.0%       6     0     0
+Broadband Vision (Pvt.) Ltd.            1692    0.0%      0    0.0%      68     0     0
+
+ISPs with ZERO clear traces: 28 of 45
+
+==============================================================================================
+2. PER VANTAGE
+==============================================================================================
+vantage           probes  reach%   clear  clear%  ISPs+   IPs+
+zcom.lhe            4609   12.5%     319    6.9%     16    319
+nova.lhe            4264   12.9%     309    7.2%     17    309
+orbit.fsd           2012   15.0%     159    7.9%     15    159
+cybernet.hrp         562   15.8%      29    5.2%      7     29
+ptcl.khi            1525   12.9%      24    1.6%      6     24
+nayatel.isb         3204    4.6%       4    0.1%      4      4
+cybernet.khi        2084    7.1%       3    0.1%      3      3
+
+==============================================================================================
+3. PER BLOCK  — can we seed Exp 11.1?
+==============================================================================================
+blocks probed: 696;  with >=1 clear target: 125
+
+distinct CLEAR targets per block:
+     1 clear target(s):   42 blocks
+     2 clear target(s):   28 blocks
+     3 clear target(s):   25 blocks
+     4 clear target(s):   11 blocks
+     5 clear target(s):    8 blocks
+     6 clear target(s):    3 blocks
+     7 clear target(s):    2 blocks
+     8 clear target(s):    6 blocks
+   blocks with >=1 clear targets:  125  (18.0% of probed)
+   blocks with >=2 clear targets:   83  (11.9% of probed)
+   blocks with >=4 clear targets:   30  (4.3% of probed)
+   blocks with >=8 clear targets:    6  (0.9% of probed)
+
+clear targets by how many vantages saw them clearly:
+   clear from 6 of 7 vantages:     1 targets
+   clear from 5 of 7 vantages:     9 targets
+   clear from 4 of 7 vantages:    35 targets
+   clear from 3 of 7 vantages:   109 targets
+   clear from 2 of 7 vantages:   146 targets
+   clear from 1 of 7 vantages:    37 targets
+
+best blocks (most clear targets):
+   122.129.69.0/24     Brain Telecommunication Lt    8 clear targets, best seen by 2/7 vantages
+   203.128.11.0/24     Brain Telecommunication Lt    8 clear targets, best seen by 3/7 vantages
+   203.128.31.0/24     Brain Telecommunication Lt    8 clear targets, best seen by 4/7 vantages
+   205.164.154.0/24    Optix Pakistan (Pvt.) Ltd.    8 clear targets, best seen by 3/7 vantages
+   206.0.215.0/24      Optix Pakistan (Pvt.) Ltd.    8 clear targets, best seen by 4/7 vantages
+   206.42.124.0/24     Vision Telecom (Pvt.) Ltd.    8 clear targets, best seen by 2/7 vantages
+   203.6.209.0/24      Multan Cable & Internet Se    7 clear targets, best seen by 2/7 vantages
+   125.209.117.0/24    Multinet Pakistan (Pvt.) L    7 clear targets, best seen by 2/7 vantages
+   122.129.66.0/24     Brain Telecommunication Lt    6 clear targets, best seen by 5/7 vantages
+   203.6.208.0/24      Multan Cable & Internet Se    6 clear targets, best seen by 2/7 vantages
+   205.164.153.0/24    Optix Pakistan (Pvt.) Ltd.    6 clear targets, best seen by 3/7 vantages
+   103.100.188.0/24    Brain Telecommunication Lt    5 clear targets, best seen by 4/7 vantages
