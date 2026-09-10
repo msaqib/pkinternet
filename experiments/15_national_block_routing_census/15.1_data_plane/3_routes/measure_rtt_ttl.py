@@ -42,8 +42,10 @@ ap.add_argument("--window", type=int, default=3, help="TTLs to search either sid
 ap.add_argument("--timeout", type=int, default=1000)
 ap.add_argument("--gap", type=float, default=0.05)
 ap.add_argument("--limit", type=int, default=0)
+ap.add_argument("--all", action="store_true",
+                help="measure EVERY foreign address in-path, not only those that ignore echo")
 A = ap.parse_args()
-OUT = os.path.join(HERE, "rtt_foreign_ttl.json")
+OUT = os.path.join(HERE, "rtt_foreign_ttl.json")   # set below if --all
 
 iph = ctypes.windll.iphlpapi
 class IP_OPTION_INFORMATION(ctypes.Structure):
@@ -63,6 +65,8 @@ iph.IcmpSendEcho.restype = ctypes.c_ulong
 DATA = b"exp15ttl"
 BUFSZ = ctypes.sizeof(ICMP_ECHO_REPLY) + len(DATA) + 64
 
+if A.all:
+    OUT = os.path.join(HERE, "rtt_inpath.json")
 ann = json.load(io.open(os.path.join(HERE, "selected_annotated.json"), encoding="utf-8"))
 HOME = ("PK", "PRIV", "CGN", "??")
 
@@ -81,7 +85,12 @@ for r in ann:
             meta[h["ip"]] = dict(cc=h["cc"], asn=h.get("asn"),
                                  holder=(h.get("holder") or "")[:40], kind=h.get("kind"))
 
-todo = [ip for ip in seen if not direct.get(ip, {}).get("n")]
+# In-path is the only correct method: the RTT must come from a packet travelling
+# toward the ORIGINAL destination, exactly as it did when the sweep saw this hop.
+# Pinging a router directly measures a different thing: routers deprioritise packets
+# addressed to themselves, and the route TO a router need not match the route THROUGH
+# it. --all re-measures every foreign address this way so nothing rests on direct echo.
+todo = list(seen) if A.all else [ip for ip in seen if not direct.get(ip, {}).get("n")]
 if A.limit:
     todo = todo[:A.limit]
 print(f"addresses needing TTL measurement: {len(todo)} "

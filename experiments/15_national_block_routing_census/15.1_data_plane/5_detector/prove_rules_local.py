@@ -118,15 +118,40 @@ def main():
     # The sweep sent ONE packet per TTL at 120 threads, which inflates every reading by
     # a median of 30 ms against a 34.2 ms domestic ceiling. Where measure_rtt.py or
     # measure_rtt_ttl.py has a clean burst, its MINIMUM replaces the sweep median.
+    # Priority matters. IN-PATH measurement sends packets toward the ORIGINAL
+    # destination with a limited TTL, which is how the sweep saw the hop in the first
+    # place. Pinging a router directly measures something else: routers deprioritise
+    # traffic addressed to themselves, and the route TO a router need not match the
+    # route THROUGH it. Direct echo is kept only as a last resort and is labelled.
     measured = {}
-    for fn, how in (("rtt_foreign.json", "direct echo"),
-                    ("rtt_foreign_ttl.json", "TTL-exceeded")):
+    for fn, how in (("rtt_foreign.json", "direct echo (INFERIOR)"),
+                    ("rtt_foreign_ttl.json", "in-path"),
+                    ("rtt_inpath.json", "in-path")):
         fp = P("3_routes", fn)
         if not os.path.exists(fp):
             continue
         for ip, v in json.load(io.open(fp, encoding="utf-8")).items():
             if v.get("n"):
                 measured[ip] = dict(rtt=v["min"], n=v["n"], spread=v.get("spread", 0), how=how)
+
+    # ---- R4-prime: this vantage's own domestic normal, self-calibrating.
+    # No geometry. A multiplier over straight-line distance is the wrong model at
+    # domestic scale: regressed against distance, Pakistani domestic RTT gives
+    # R^2 = 0.013. So the bound is a property of THIS vantage's measured distribution
+    # and must be re-derived anywhere else. Tukey's far fence is used because it is a
+    # standard, scale-free definition of an outlier: a slow vantage gets a high
+    # baseline AND a high fence, so the rule travels without being retuned.
+    fence = ref_n = None
+    bp = P("3_routes", "rtt_baseline_sample.json")
+    tp = os.path.join(H, "trombone_local.json")
+    if os.path.exists(bp) and os.path.exists(tp):
+        base = json.load(io.open(bp, encoding="utf-8"))
+        stat = {r["target"]: r["status"] for r in json.load(io.open(tp, encoding="utf-8"))["rows"]}
+        ref = sorted(v["min"] for t, v in base.items() if stat.get(t) == "local")
+        if len(ref) >= 100:                      # gate: too few and the shape is noise
+            qq = st.quantiles(ref, n=4)
+            fence = round(qq[2] + 3*(qq[2]-qq[0]), 1)
+            ref_n = len(ref)
 
     # ---- R2: an address cannot be where its registry says
     MIN_SAMPLES = 3
@@ -184,6 +209,15 @@ def main():
                 measured=sum(1 for x in list(falsified.values())+list(upheld.values())+list(undecidable.values())
                              if "UNIMPROVED" not in x.get("src","")),
                 falsified_detail=falsified, upheld_detail=upheld, undecidable_detail=undecidable),
+        R4prime=dict(fence_ms=fence, reference_n=ref_n,
+                     method="Tukey far fence p75 + 3 x IQR over clean minimum RTT to "
+                            "destinations whose observed path is entirely domestic",
+                     portable=True,
+                     note="A PROCEDURE, not a number. Any vantage re-runs it on its own "
+                          "traffic and gets its own fence. Gates: at least 100 reference "
+                          "destinations, and if over half of them are themselves "
+                          "detouring the baseline IS the detour and the rule must be "
+                          "rejected."),
         R4=dict(n=len(dest), median_ms=st.median(dest) if dest else None,
                 under_domestic_ceiling_pct=round(100*sum(1 for x in dest if x < DOM_CEIL)/len(dest), 1) if dest else None),
         RTT_ARM=dict(viable=False,

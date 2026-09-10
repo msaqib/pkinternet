@@ -1,136 +1,253 @@
-# Per-vantage rules
+# Detection rules
 
-**A rule here is a statement, not a threshold.** It is written as a claim that could be false,
-tested against that probe's own data, and only then applied to that probe. A rule proven for
-Z-Com says nothing about PTCL until it is tested there too.
+**A rule here is a procedure, not a number.** It is written as a statement that could be
+false, tested against a vantage point's own data, and applied to that vantage only after
+it survives. A rule proven for one probe says nothing about another until it is tested
+there too.
 
-**No constant in this file was chosen by hand.** Every number is derived from the speed of light
-in fibre, Pakistan's geography, or the structure of the probe's own traces. Where a judgement
-remains, it is named as a judgement.
+**Every threshold is derived from measurement.** The only constant typed into this
+experiment is the speed of light in fibre, and it appears in exactly one rule. Everything
+else, including the boundary between "domestic" and "abroad", is computed from the
+vantage's own traffic. That is what makes the set portable: another probe on another
+network runs the same six procedures and gets its own numbers.
 
 ---
 
-## The two constants everything rests on
+## The one constant
 
 | | value | source |
 |---|---|---|
-| speed of light in fibre | **204,000 km/s** | Bozkurt §5.1, measured |
-| fibre path vs great circle | **× 2.1** | Bozkurt, the standard conversion |
+| speed of light in fibre | **204,000 km/s** | Bozkurt et al., *Dissecting Latency in the Internet's Fiber Infrastructure*, §4.2 |
 
-From Pakistan's own extent, Gilgit to Gwadar = **1,659 km**:
+A detector cannot derive physics from its own traffic, so this one is cited rather than
+measured. It is a property of glass, not a tuning knob.
 
-| | derived |
-|---|---|
-| absolute domestic RTT floor | **16.3 ms** |
-| **expected maximum domestic RTT** | **34.2 ms** |
+### Two constants that used to be here, and why they are gone
 
-4.1 used `LOCAL_CEIL = 45 ms`, picked by hand. The derived figure is **34.2 ms**.
+**`ROUTING = 2.1`.** Bozkurt's rule of thumb: multiply line-of-sight distance by 2.1,
+divide by the speed of light in fibre. It was being applied to Pakistan as though it were
+a law. It is not. It is a *typical-case* estimate drawn from US long-haul fibre, and the
+same paper reports that only **11%** of real fibre links come within 25% of what their
+length predicts, and that servers in the *same city* often sit 10 to 30 ms apart.
 
-Minimum RTT from Karachi, if a packet genuinely travelled there:
+Measured here, it is worse than inapplicable: it is the wrong *shape*. Regressing clean
+RTT against straight-line distance over **346 domestic destinations** gives
+**R² = 0.013** with a slightly negative slope. Distance explains essentially none of
+Pakistani domestic latency, because the median domestic path is ~470 km (worth ~4.6 ms)
+while fixed access overhead is 25 to 35 ms. A multiplier over distance cannot describe a
+quantity that distance does not drive. See `derive_constants.py`.
 
-| destination | km | floor | expected |
-|---|---|---|---|
-| Muscat | 865 | **8.5 ms** | 17.8 ms |
-| Dubai | 1,183 | **11.6 ms** | 24.4 ms |
-| Singapore | 4,736 | **46.4 ms** | 97.5 ms |
-| Jinan, CN | 4,895 | **48.0 ms** | 100.8 ms |
-| Frankfurt | 5,681 | 55.7 ms | 117.0 ms |
-| Vancouver | 11,710 | 114.8 ms | 241.1 ms |
-
-**The ambiguous band is 12 to 34 ms**, where a Gulf hop and a long domestic path are
-indistinguishable by RTT. That band is a permanent limit of the method, not a tuning problem.
+**`LOCAL_CEIL` / `DOMESTIC_CEIL = 34.2 ms`.** Pakistan's span × 2.1 ÷ c, used as a
+*ceiling*. It never was one; it was a typical value being asked to act as a bound. R4′
+replaces it with a measured distribution.
 
 ---
 
-## R1 — "Probe v's access path is the chain C(v)"
+## R0 — "The measurement can support a latency rule at all"
+
+**Statement.** This RTT data is a measurement rather than noise.
+
+**Test.** Two checks that need no external reference:
+1. Does RTT ever *fall* as the path gets longer? Distance cannot decrease along a path.
+2. Does one fixed router give a stable reading across repeats?
+
+**Gate.** If either fails, **no latency rule may run on that data.** Fix the measurement;
+do not retune thresholds to fit it.
+
+**Result on this experiment.** The sweep data **failed**, and everything built on it had
+to be redone:
+
+| | sweep | clean re-measurement |
+|---|--:|--:|
+| Packets per hop | 1 | 20 to 30 |
+| Threads | 120 | 6 to 8 |
+| Adjacent pairs where RTT falls >20 ms deeper | **22%** | n/a |
+| Spread on one fixed router | 4 to 853 ms | **1 to 2 ms** |
+| Bias against clean measurement | **+30 to +41 ms** | — |
+
+R0 exists because this was missed. `local_trace.py` was built to answer two topological
+questions and returns `RoundTripTime` for free; that field was then used as if it were a
+latency measurement. On that data the old hand-picked rules label **75.9%** of the country
+as tromboning, which is a statement about thread count.
+
+---
+
+## R1 — "This vantage's access path is the chain C(v)"
 
 **Statement.** Every trace from v begins with the same routers, until routes diverge.
 
-**Test.** The longest common prefix of v's traces, tolerating a hop that is silent in some traces.
+**Test.** The address that dominates each early hop position, across all traces.
 Parameter-free: the divergence point is measured, not chosen.
 
-**Proven, all seven probes:**
+**Why it matters.** The access chain is a fixed cost paid before the measurement means
+anything. It must be subtracted before any latency is attributed to a destination.
 
-| probe | chain | B_access |
-|---|---|---|
-| zcom.lhe | `157.20.147.17` | **0.4 ms** |
-| cybernet.hrp | `192.168.1.1` → `203.101.189.254` | 2.0 ms |
-| nova.lhe | `192.168.100.1` → `70.70.71.137` → `110.93.212.161` | 2.5 ms |
-| nayatel.isb | `192.168.18.1` → `100.89.0.1` | 3.0 ms |
-| cybernet.khi | `192.168.18.1` → `202.163.100.245` | 3.1 ms |
-| orbit.fsd | `192.168.100.1` → `10.14.14.10` | 3.8 ms |
-| **ptcl.khi** | `192.168.10.1` → `39.39.0.1` | **25.5 ms** |
+**Result, AS45669 Mobilink:** three routers present in ~99% of traces, diverging at hop 6.
+**B_access = 20 ms.**
 
-**What it establishes.** PTCL pays **25.5 ms before it has measured anything**, on the first hop
-out of the CPE. Every other probe pays under 4 ms. This is the whole reason a single global
-threshold mislabels PTCL, and it is now derived rather than asserted.
+---
 
-## R2 — "Address X is not in the country its registry claims"
+## R2 — "This address is not in the country its registry claims"
 
-**Statement.** X is registered in country C. If X were in C, no probe could observe it faster than
-`2 × d(probe, C) / 204,000`.
+**Statement.** X is registered in country C. If X were in C, no Pakistani vantage could
+observe it faster than `2 × distance ÷ 204,000 km/s`.
 
-**Test.** Falsified when the observed median RTT from **any** probe is below that floor. Physics.
-The only judgement is requiring enough samples for a median, which is stated per case.
+**Test.** Clean minimum RTT, measured **in-path**, against that floor.
 
-**Why a median and not a minimum.** A single anomalous packet falsifies nothing. C-root sits at a
-143 ms median with one 3.4 ms sample; a minimum-based test wrongly rejects it.
+**Derived inputs, not typed ones.**
+* The claimed location comes from **per-address geolocation**, not a hand-written table of
+  "the nearest hub" per country. That table invented facts: it guessed Singapore for
+  `27.111.230.181`, which the geolocation databases place in Sydney.
+* The vantage's own position comes from geolocating its egress address.
+* No routing factor is applied. The floor is the straight-line bound, so falsifying it is
+  a physical impossibility rather than a judgement.
 
-**Proven:**
+**Gate: foreign claims only.** Domestically the distances are too short for physics to
+decide anything, which is what R4′ is for.
 
-| address | claims | observed | floor | verdict |
-|---|---|---|---|---|
-| `182.45.51.22` | Jinan, CN | 41.7 ms from **PTCL** | 48.0 ms | **falsified** |
-| `70.70.71.137` | Vancouver, CA | 1.8 ms from Nova | 114.8 ms | **falsified** |
-| `149.40.227.0/24` | Ashburn, US | 1.1 ms from Z-Com | 117.7 ms | **falsified** |
-| `27.111.230.170` | Singapore | 90.0 ms from Cybernet | 46.4 ms | not falsified |
-| `192.33.4.12` | C-root anycast | 111.3 ms | 55.7 ms | not falsified |
+**Minimum, not median, and why that differs from the old rule.** The old R2 took a median
+across traces spread over hours, where one fast reading could be a routing change. These
+samples are a controlled burst to one address over seconds, so the minimum is the correct
+estimator: queuing, rate limiting and slow ICMP generation only ever *add* to a round trip.
 
-The CHINANET case is falsified **using PTCL's own slow observation**, with no cross-vantage
-comparison needed. That is the property the earlier frequency-based rule lacked.
+**In-path, never direct.** A router must be measured by packets travelling toward the
+original destination with a limited TTL, exactly as the trace saw it. Pinging a router
+directly measures a different thing: routers deprioritise traffic addressed to themselves,
+and the route *to* a router need not match the route *through* it.
 
-**Grouped by prefix, not address.** `149.40.227.0/24` has **15 addresses** in domestic use across
-6 probes. Per-address tests saw fragments at 7-8% and missed them.
+**Result:** **79 addresses falsified** across 27 blocks, including seven US Department of
+Defense addresses answering in about 3 ms, plus Cogent, Cloudflare, AT&T and T-Mobile
+ranges. These are Pakistani routers numbered out of foreign address space.
 
-## R3 — "Probe v can observe paths at all"
+**What R2 does NOT establish.** It falsifies a claim. "Not in Virginia" is not "in
+Pakistan". R4′ decides that second question.
+
+---
+
+## R3 — "This vantage can observe paths, under this protocol"
 
 **Statement.** v's traces contain public addresses.
 
 **Test.** Proportion of traces with at least one public hop.
 
-| probe | protocol | traces with no public hop | status |
-|---|---|---|---|
-| nayatel.isb | TCP | **100%** | **rejected** |
-| 62224 PERN | ICMP, UDP | **100%** | **rejected** |
-| nayatel.isb | ICMP | 11% | proven |
-| 62224 PERN | TCP | 3% | proven |
+**Gate.** Proven per protocol, never universally. **A probe is not usable or unusable
+absolutely; it is usable under a protocol.** In the 4.1 archive, `nayatel.isb` produced no
+public hop in 100% of TCP traces and 11% of ICMP traces. The same device, two verdicts.
 
-**A probe is not universally usable or unusable. It is usable under a protocol.** Rules R1, R2 and
-R4 must be re-proven per protocol.
+**Result:** holds for ICMP on this vantage. 3 of 43,765 traces were blind.
 
-## R4 — "Probe v's domestic baseline is B(v)"
+---
 
-**Statement.** v's RTT to destinations that are certainly inside Pakistan.
+## R4′ — "This vantage's domestic normal is its own"
 
-**Test.** Median RTT to targets some *other* probe observes below the derived domestic ceiling
-(34.2 ms). Non-circular: the reference set is defined by other probes, and the ceiling by geography.
+**Statement.** A destination whose clean RTT lies far outside this vantage's own domestic
+distribution did not take a domestic path.
 
-**Validity gate.** A median tolerates contamination only below 50%. If v's own detour rate exceeds
-that, B(v) is the detour and the rule is **rejected for that probe**, not silently applied.
+**Test, as a procedure any vantage runs on itself:**
 
-## R5 — "Probe v detoured to destination d"
+```
+1. take destinations whose observed path is entirely domestic
+2. measure them cleanly (many packets, low concurrency), keep the minimum per destination
+3. that distribution is this vantage's normal
+4. flag anything beyond the Tukey far fence:  p75 + 3 x (p75 - p25)
+```
 
-**Only evaluated after R1 to R4 are proven for that probe under that protocol.** Anything explained
-by C(v), B(v), or a falsified geolocation is subtracted first. A detour is what survives.
+**Why a Tukey fence rather than a chosen percentile.** It is the standard, scale-free
+definition of an outlier, and nobody picks it to fit a dataset. A slow vantage gets a high
+baseline *and* a high fence; a fast one gets both low. **The rule travels without being
+retuned**, which a millisecond threshold cannot do.
+
+**Gates.**
+* At least ~100 reference destinations, or the shape of the distribution is noise.
+* **If more than half the reference set is itself detouring, the baseline IS the detour**
+  and the rule must be rejected for that vantage rather than quietly applied. This is the
+  gate that fired and correctly killed the old geometric R4.
+* R0 must pass first.
+
+**Scope, stated honestly.** The reference set is chosen by topology, so R4′ can only catch
+detours that the topological test missed. It is a second net under the first, not a
+replacement.
+
+**Result, AS45669 Mobilink:**
+
+| | |
+|---|--:|
+| Reference destinations | 347 |
+| Domestic median | 27 ms |
+| p25 / p75 | 24 / 38 ms |
+| **Fence, p75 + 3 × IQR** | **80 ms** |
+| Domestic wrongly flagged | 1.4% |
+| Known detours missed | 0 of 10 |
+
+The data separates itself: the highest domestic reading below the fence is 69 ms, the
+lowest tromboning destination is 90 ms. **That number is this vantage's answer, not the
+rule.** Any other probe re-derives its own.
+
+---
+
+## R5 — "This trace left the country and came back"
+
+**Only evaluated after R0 to R4′ are settled for that vantage under that protocol.**
+
+**Statement.** The packet reached a domestic destination by way of a router outside the
+country.
+
+**Test, in order.** Anything explained by an earlier rule is subtracted first, and a
+detour is what survives:
+
+```
+1. subtract C(v)                     the access chain is not a detour
+2. apply R2                          strip squatted space: a foreign registry is not
+                                     evidence, an impossible RTT is
+3. apply R4' to what R2 falsified    "not in Virginia" is not "in Pakistan"
+4. what remains foreign is a departure
+```
+
+**Two things that count as abroad.** A hop in a foreign country, and a hop on a **foreign
+internet exchange fabric**. The exchange hop belongs to the exchange rather than to either
+peer, but the packet is physically in Frankfurt or Singapore, so for departure it counts.
+
+**This yields a FLOOR, not a rate.** With the latency arm limited to R4′'s scope, a detour
+is only visible when a foreign router answers. Detours through silent routers or inside
+MPLS tunnels are counted as domestic.
+
+**Result:** **930 of 34,191 traces (2.72%)**, in **157 blocks** across 50 networks.
+
+---
+
+## R6 — "The verdict predicts something it was never given"
+
+**Statement.** If R5 is detecting a real phenomenon, its verdicts should predict latency
+that the topological test never saw.
+
+**Test.** Compare clean RTT for destinations R5 calls tromboning against those it calls
+domestic, within the same population.
+
+**Result:**
+
+| | n | median clean RTT |
+|---|--:|--:|
+| R5 says domestic | 347 | **26 ms** |
+| R5 says tromboning | 10 | **147 ms** |
+
+**+121 ms.** Two independent methods agreeing is stronger than either alone, and it means
+the tromboning result does not rest on country annotations.
+
+**Limit.** The tromboning sample here is 10 destinations. This is corroboration, not a
+significance test, and it should be repeated with a larger deliberate sample.
 
 ---
 
 ## What is still a judgement, named honestly
 
-- **The 2.1 routing factor** is an average over US and European research networks. Pakistan's
-  factor is unmeasured and probably higher, which makes the domestic ceiling conservative.
-- **Sample size** for a stable median is not derived. Currently 3, which is a floor not a
-  justification.
-- **The 12-34 ms ambiguous band** cannot be resolved by RTT. Gulf detours will be under-counted
-  and no threshold fixes it.
-- **Return-path asymmetry and MPLS** are invisible to traceroute. Not solvable here.
+* **The Gulf cannot be resolved by latency, and better measurement made this worse, not
+  better.** Domestic paths run at a 27 ms median; Muscat's floor is 4.2 ms and Dubai's is
+  7.0 ms. A Gulf detour and a slow domestic path are indistinguishable by RTT. Gulf
+  detours are undercounted and **no threshold fixes it** — only topology can find them.
+* **The 5-hop selection gate** upstream of all of this is a choice, and it binds almost
+  entirely on PTCL.
+* **Geolocation is a claim, not a fact.** R2 falsifies claims well, but where a falsified
+  address actually sits is only bounded, never established.
+* **Return-path asymmetry and MPLS are invisible to traceroute.** Not solvable here.
+* **One vantage.** Every number above describes AS45669. Re-deriving per vantage is
+  mandatory, not optional.

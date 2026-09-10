@@ -1,0 +1,90 @@
+{
+ "speed_of_light_fibre_km_s": 204000.0,
+ "speed_of_light_source": "Bozkurt et al., Dissecting Latency in the Internet's Fiber Infrastructure, section 4.2",
+ "vantage": {
+  "ip": "119.160.114.82",
+  "asn": "45669",
+  "cc": "PK",
+  "city": "",
+  "lat": 30.0,
+  "lon": 70.0
+ },
+ "sample": {
+  "domestic": 347,
+  "trombone": 10,
+  "located": 347
+ },
+ "routing_factor": {
+  "n": 309,
+  "median": 5.52,
+  "p25": 4.95,
+  "p75": 8.51,
+  "usable": false,
+  "note": "MEASURED but NOT USABLE, and recorded only so nobody derives it again. A multiplier over the straight-line floor is the wrong model at domestic distances. Pakistani paths here have a median straight-line length of about 470 km, worth roughly 4.6 ms, while fixed overhead is 25 to 35 ms. Regressing measured RTT on distance over 346 domestic destinations gives R^2 = 0.013 with a slightly negative slope: distance explains essentially none of the variation. Dividing an overhead-dominated RTT by a tiny distance term produces a large meaningless number. Use the measured domestic distribution instead, which needs no geometry at all."
+ },
+ "path_km": {
+  "median": 468,
+  "max": 772
+ },
+ "domestic_rtt_ms": {
+  "n": 347,
+  "median": 27,
+  "p75": 38.0,
+  "p90": 43.0,
+  "p95": 56.0,
+  "p97": 70.1,
+  "p99": 106.0,
+  "max": 467
+ },
+ "trombone_rtt_ms": {
+  "n": 10,
+  "values": [
+   90,
+   130,
+   132,
+   135,
+   142,
+   144,
+   150,
+   172,
+   206,
+   219
+  ],
+  "median": 143.0
+ },
+ "domestic_bound_options": {
+  "p90": {
+   "ms": 43.0,
+   "domestic_above": 31,
+   "domestic_above_pct": 8.9,
+   "trombone_below": 0
+  },
+  "p95": {
+   "ms": 56.0,
+   "domestic_above": 17,
+   "domestic_above_pct": 4.9,
+   "trombone_below": 0
+  },
+  "p97": {
+   "ms": 70.1,
+   "domestic_above": 10,
+   "domestic_above_pct": 2.9,
+   "trombone_below": 0
+  },
+  "p99": {
+   "ms": 106.0,
+   "domestic_above": 3,
+   "domestic_above_pct": 0.9,
+   "trombone_below": 1
+  }
+ },
+ "domestic_model": {
+  "geometric_model_usable": false,
+  "r_squared": 0.013,
+  "note": "RTT to a Pakistani destination is dominated by fixed access and per-path overhead, not by geographic distance, so no geometric ceiling is defensible domestically. The bound below is therefore purely empirical: a percentile of THIS vantage's measured domestic RTT, carrying the error rate shown. It must be re-derived per vantage. Physics still applies to FOREIGN claims, where distances are thousands of km and the distance term dominates the overhead: a US claim at roughly 11,000 km costs about 108 ms straight-line, which no amount of access overhead can fake downward. That is why R2 falsification stays geometric while the domestic bound does not."
+ },
+ "empirical_gap": {
+  "highest_domestic_below_p97": 69,
+  "lowest_trombone": 90
+ }
+}

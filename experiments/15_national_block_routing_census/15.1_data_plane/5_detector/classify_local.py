@@ -42,10 +42,29 @@ RULES = os.path.join(H, "rules_local.json")
 if not os.path.exists(RULES):
     raise SystemExit("rules_local.json missing. Run prove_rules_local.py first.")
 R = json.load(io.open(RULES, encoding="utf-8"))
-FALSIFIED = set(R["R2"]["falsified_detail"])
 FLOORS = R["country_floors"]
-DOM_CEIL = R["constants"]["domestic_ceiling_ms"]
 HOME = ("PK", "PRIV", "CGN", "??")
+
+# R2 falsifies a CLAIM: "this address is not where its registry says". That is not the
+# same as "this address is in Pakistan". An address can be provably not in Virginia and
+# still be abroad. So R4-prime decides the second question, using this vantage's own
+# measured domestic distribution rather than any assumption.
+FENCE = (R.get("R4prime") or {}).get("fence_ms")
+_rtt = {}
+for fn in ("rtt_inpath.json", "rtt_foreign_ttl.json", "rtt_foreign.json"):
+    fp = P("3_routes", fn)
+    if os.path.exists(fp):
+        for ip, v in json.load(io.open(fp, encoding="utf-8")).items():
+            if v.get("n") and ip not in _rtt:
+                _rtt[ip] = v["min"]
+
+FALSIFIED, FALSIFIED_BUT_FOREIGN = set(), set()
+for ip, rec in R["R2"]["falsified_detail"].items():
+    r = _rtt.get(ip, rec.get("rtt"))
+    if FENCE is not None and r is not None and r > FENCE:
+        FALSIFIED_BUT_FOREIGN.add(ip)   # not where it claims, but not domestic either
+    else:
+        FALSIFIED.add(ip)               # behaves domestically: squatted Pakistani space
 
 ann = json.load(io.open(P("3_routes", "selected_annotated.json"), encoding="utf-8"))
 own = json.load(io.open(P("1_universe", "block_to_asn.json"), encoding="utf-8"))
@@ -59,6 +78,8 @@ def abroad(h):
         return False
     if h["ip"] in FALSIFIED:          # squatted space: Pakistani box, foreign registry
         return False
+    # FALSIFIED_BUT_FOREIGN falls through: R2 killed its registry claim, R4-prime says
+    # its latency is outside this vantage's domestic range, so it is abroad regardless.
     return True
 
 
@@ -122,7 +143,10 @@ with io.open(os.path.join(H, "routes_trombone.txt"), "w", encoding="utf-8") as f
 print(f"traces classified      {N:,}")
 print(f"left Pakistan          {T:,}  ({100*T/N:.2f}%)   <-- a FLOOR, not a rate")
 print(f"stayed domestic        {N-T:,}")
-print(f"squatted addresses excluded from the foreign test: {len(FALSIFIED)}")
+print(f"R2 falsified {len(FALSIFIED)+len(FALSIFIED_BUT_FOREIGN)} addresses; R4-prime fence "
+      f"{FENCE} ms splits them:")
+print(f"   {len(FALSIFIED):>4} behave domestically -> squatted PK space, not a departure")
+print(f"   {len(FALSIFIED_BUT_FOREIGN):>4} exceed the fence     -> abroad, though not where they claim")
 print(f"\nexit country:")
 for cc, n in by_cc.most_common(10):
     f = FLOORS.get(cc, {})

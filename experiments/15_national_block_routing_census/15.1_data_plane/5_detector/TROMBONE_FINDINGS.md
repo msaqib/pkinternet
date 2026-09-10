@@ -10,7 +10,7 @@ is that vantage's view, not a national average.
 
 ## The headline
 
-**931 of 34,191 selected traces (2.72%) left Pakistan and came back.**
+**930 of 34,191 selected traces (2.72%) left Pakistan and came back.**
 
 **This is a floor, not a rate.** It counts only detours we can see. A detour inside a
 foreign network whose routers never answer, or one carried in an MPLS tunnel, is
@@ -68,11 +68,11 @@ cannot reach it that fast, no Pakistani origin can.
 
 | | addresses |
 |---|--:|
-| **Falsified**, cannot be where registered | **78** |
-| Upheld, consistent with the claimed country | 342 |
+| **Falsified**, cannot be where registered | **79** |
+| Upheld, consistent with the claimed country | 341 |
 | Undecidable, floor sits inside the domestic band | 78 |
 
-The 78 falsified addresses fall in 12 /24s, dominated by Cogent
+The 79 falsified addresses fall in 12 /24s, dominated by Cogent
 `149.40.226.0/24` and `149.40.227.0/24`, plus UUNET, two United States Department of
 Defense ranges and several US corporate blocks. **These are Pakistani infrastructure
 numbered out of foreign address space, and they are excluded from the foreign test.**
@@ -91,10 +91,10 @@ therefore **not used** as a detection input.
 |---|--:|--:|---|
 | CN | 376 | 14.1 | Urumqi |
 | DE | 210 | 52.1 | Frankfurt |
-| US | 146 | 118.9 | Los Angeles |
+| US | 153 | 118.9 | Los Angeles |
 | SG | 107 | 44.8 | Singapore |
-| IT | 35 | 51.1 | Milan |
 | OM | 32 | 4.2 | Muscat |
+| IT | 27 | 51.1 | Milan |
 | HK | 7 | 39.8 | Hong Kong |
 | AE | 7 | 7.0 | Dubai |
 | NL | 6 | 54.5 | Amsterdam |
@@ -125,18 +125,18 @@ Singapore.
 | `27.111.228.83` | 28 | SG | 217 | 45 | 4.8x | EQUINIX-AP |
 | `154.54.72.109` | 27 | US | 158 | 119 | 1.3x | COGENT-174 - Cogent Communicatio |
 | `195.22.198.88` | 27 | IT | 129 | 51 | 2.5x | SEABONE-NET TELECOM ITALIA SPARK |
+| `116.51.17.201` | 16 | US | 160 | 119 | 1.3x | NTT-DATA-2914 - NTT America, Inc |
 | `184.105.222.9` | 14 | US | 249 | 119 | 2.1x | HURRICANE - Hurricane Electric L |
 | `27.111.228.81` | 12 | SG | 126 | 45 | 2.8x | EQUINIX-AP |
 | `92.242.166.15` | 11 | DE | 221 | 52 | 4.2x | AS203446 SMARTNET Germany GmbH |
-| `154.54.0.42` | 8 | US | 304 | 119 | 2.6x | COGENT-174 - Cogent Communicatio |
 
 Confidence by margin over the physical floor:
 
 | | traces | share |
 |---|--:|--:|
-| **Strong**, clears the floor by 2x or more | 817 | 88% |
-| Moderate, 1.3x to 2x | 110 | 12% |
-| Thin, under 1.3x | 4 | 0% |
+| **Strong**, clears the floor by 2x or more | 801 | 86% |
+| Moderate, 1.3x to 2x | 126 | 14% |
+| Thin, under 1.3x | 3 | 0% |
 
 ## Tromboning is concentrated in two networks
 
@@ -162,13 +162,13 @@ a few operators' transit arrangements, not a national condition.
 
 ## How much rests on one address
 
-`182.45.51.22`, a single CHINANET address, carries **376 of the 931 tromboning traces,
+`182.45.51.22`, a single CHINANET address, carries **376 of the 930 tromboning traces,
 40%**.
 
 | treatment of that one address | trombone traces | headline |
 |---|--:|--:|
-| Counted as foreign, as here | 931 | **2.72%** |
-| Treated instead as squatted Pakistani space | 555 | 1.62% |
+| Counted as foreign, as here | 930 | **2.72%** |
+| Treated instead as squatted Pakistani space | 554 | 1.62% |
 
 **One address moves the headline by 1.10 points**, so it deserves its own
 paragraph rather than a footnote.
@@ -218,5 +218,5 @@ python 5_detector/classify_local.py        # R5, writes trombone_local.json + ro
 python 5_detector/write_trombone_findings.py
 ```
 
-`5_detector/routes_trombone.txt` holds all 931 tromboning paths with the exit hop
+`5_detector/routes_trombone.txt` holds all 930 tromboning paths with the exit hop
 marked, so every verdict here can be checked against the path that produced it.
