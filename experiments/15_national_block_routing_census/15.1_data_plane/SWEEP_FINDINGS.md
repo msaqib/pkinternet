@@ -693,6 +693,64 @@ answered exactly 5 hops, sitting on the floor. Selected traces are **not** unifo
 per-network comparisons of path detail must account for it. Stated in full in
 [`ISP_SUMMARY.md`](ISP_SUMMARY.md).
 
+## 5E. Discovery and tracing ran from different networks
+
+**The two halves of the study do not share a vantage point**, and any reader of the route results
+needs to know which network produced them.
+
+### The split, measured
+
+| | AS135407, TES | AS45669, Mobilink |
+|---|--:|--:|
+| Liveness checks | **781,428** | 62,674 |
+| Live hosts discovered | **33,316** | 10,421 |
+| Traceroutes | 88 | **43,671** |
+
+Hosts were found mostly from TES. Routes to them were traced almost entirely from Mobilink.
+
+### The cutover is clean, not gradual
+
+The route sweep started on TES and moved to Mobilink when the measuring machine changed networks.
+Classifying every trace by its first public hop:
+
+* traces 0 to 87 leave via `45.249.11.241` (AS135407, TES)
+* traces 88 to 43,764 leave via the Mobilink chain (`119.160.114.81`, then `119.160.84.61`)
+* no interleaving in either direction
+
+So **99.8% of the route data is single-vantage.** Every reach rate and route-visibility figure in
+`ISP_SUMMARY.md` is "as seen from Mobilink". It is not a property of the destination network alone,
+and it is not an average over two vantages.
+
+The 88 TES traces reached 19% against Mobilink's 83%, but that is the initial test batch on a small
+sample and should not be quoted as a vantage comparison.
+
+### Does the mismatch cost reach?
+
+A host discovered from TES might simply not answer from Mobilink, which would appear as a trace
+that fails to reach. Measured over the full sweep:
+
+| host discovered from | traces | reached | rate |
+|---|--:|--:|--:|
+| Mobilink, the tracing network | 10,428 | 8,806 | **84%** |
+| TES, a different network | 33,337 | 27,408 | **82%** |
+
+**2 points.** Smaller than the ~9% cross-vantage disagreement in 5B would suggest.
+
+**This is suggestive, not a controlled result.** The two groups are disjoint by construction, since
+the top-up only probed addresses the main sweep had never tried, and the top-up targeted thin
+blocks (1 to 7 live) while the main sweep covered everything. Block density and discovery vantage
+are confounded, and this design cannot separate them.
+
+### A claim to avoid
+
+The top-up found 10,421 live hosts. **These are not hosts the first vantage missed.** The top-up
+skipped every address already probed, so they sit on addresses TES never tried. The only place in
+this study where the same addresses were tried from both networks is the controlled 250-address
+re-test in 5B, and that is where the 9% figure comes from.
+
+The headline counts are a **union of two vantages over disjoint address sets**: better coverage
+than either alone, but not a two-vantage measurement of the same addresses.
+
 ## 6. Limitations
 
 - **One vantage.** The scan runs from AS135407 (TES). Validation shows about 9% of Atlas-reachable

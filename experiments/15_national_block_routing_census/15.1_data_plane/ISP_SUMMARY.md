@@ -232,22 +232,32 @@ Three consequences:
    section 5C), so densities are comparable within a network over time, not between
    networks.
 
-2. **A second vantage point does not agree with the first.** Roughly 9% of hosts
-   that answer from AS135407 do not answer from AS45669, at every concurrency
-   tested. That asymmetry is a property of Pakistani interconnection rather than a
-   fault in the scan, and it means "live" is vantage-relative. Counts in this table
-   are the union of both vantages.
+2. **Every reach rate here is "as seen from Mobilink".** Discovery and tracing ran
+   from different networks. Hosts were found mostly from AS135407 (TES): 781,428
+   checks and 33,316 live hosts, against 62,674 checks and 10,421 live from AS45669
+   (Mobilink). But the route sweep is 43,671 of 43,765 traces from Mobilink, a clean
+   cutover after the first 88. So the **reached** column is not a property of the
+   destination network alone and is not an average over two vantages
+   (`SWEEP_FINDINGS.md` section 5E).
 
-3. **Selection is biased toward dense blocks by construction.** A block needs live
+3. **A second vantage point does not agree with the first.** In a controlled re-test,
+   roughly 9% of 250 addresses confirmed alive from AS135407 did not answer from
+   AS45669, at every concurrency tested. That asymmetry is a property of Pakistani
+   interconnection rather than a fault in the scan, and it means "live" is
+   vantage-relative. Counts in this table are a union of two vantages over **disjoint
+   address sets**, because the top-up skipped every address already probed. They are
+   not a two-vantage measurement of the same addresses.
+
+4. **Selection is biased toward dense blocks by construction.** A block needs live
    hosts before it can be traced at all, and the gate then prefers clean traces.
    Blocks with 1 to 3 live hosts are held as a control group to measure how large
    that bias is. That comparison has not been run yet, so the size of the bias is
    currently unknown, not small.
 
-4. **This is one vantage pair, one country, IPv4 only, over two days.** No ISP has
+5. **This is one vantage pair, one country, IPv4 only, over two days.** No ISP has
    confirmed any of it. Nothing in this file is ground truth from an operator, and
    the route shape of a network can change on any day.
 
-5. **A network's reach rate mixes two causes**: filtering at that operator's edge,
+6. **A network's reach rate mixes two causes**: filtering at that operator's edge,
    and blocks whose live hosts were themselves marginal. This table does not
    separate them.

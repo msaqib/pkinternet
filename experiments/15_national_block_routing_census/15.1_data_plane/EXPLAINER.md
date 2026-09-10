@@ -84,7 +84,7 @@ Registration is paperwork. Announcement is operational reality. **Neither contai
 we use the union.
 
 **252,672 addresses are announced from Pakistan but registered to another country.** That is 4.4% of
-the routed space, and it includes large parts of Nayatel, Wateen, Optix and TES. Address space gets
+the routed space, and it includes large parts of Nayatel, Mobilink, Optix and TES. Address space gets
 leased and transferred far faster than registry country fields get updated. A study that defines its
 universe by registration alone silently misses all of it.
 
@@ -217,21 +217,68 @@ A refused TCP connection **counts as alive**: refusal means a host was there to 
 matters because many hosts drop ping but answer TCP, and vice versa. No single method is
 sufficient: that is measured, in `SWEEP_FINDINGS.md` section 3.1, not assumed.
 
-### Two vantage points, and a finding that came out of it
+### Two vantage points, and which one produced what
 
-The main sweep ran from AS135407 (TES). A second pass ran from AS45669 (Wateen) over blocks that
-had found 1 to 7 live hosts, to top them up toward 8.
+The measurement did not run from one place. Two Pakistani networks were used, and **they did not
+contribute equally to the two halves of the study**. This matters for reading any result, so it is
+set out explicitly.
 
-That second pass found **10,352 live hosts the first vantage had missed**.
+| | AS135407 | AS45669 |
+|---|---|---|
+| Operator | Trans World Enterprise Services (TES) | Mobilink, PMCL |
+| Access chain seen in traces | `192.168.18.1` then `45.249.11.241` | `192.168.200.5` then `119.160.114.81`, `119.160.84.61`, `119.30.105.237` |
+| Liveness checks | **781,428** | 62,674 |
+| Live hosts discovered | **33,316** | 10,421 |
+| Traceroutes | 88 | **43,671** |
 
-This is not simply the first scan being wrong. Re-testing the same known-alive addresses showed
-**roughly 9% of hosts answer from one Pakistani network but not the other, at every concurrency
-from 10 to 200 threads**. Concurrency was ruled out as the cause by testing across that range.
+**Discovery was mostly TES. Tracing was almost entirely Mobilink.**
 
-**What that means:** "alive" is not an absolute property of an address. It is a property of an
-address *as seen from a particular network*. Filtering, peering relationships and routing policy
-differ between Pakistani operators enough to change who can see whom. Counts in this study are the
-**union of both vantages**, which is strictly better evidence than either alone.
+The route sweep began on TES and moved to Mobilink after the first 88 traces, when the measuring
+machine changed networks. The cutover is clean: traces 0 to 87 leave via TES, and every one of the
+43,671 after that leaves via Mobilink, with no interleaving. So **99.8% of the route data is a
+single-vantage measurement from Mobilink**, and every route visibility figure in
+[`ISP_SUMMARY.md`](ISP_SUMMARY.md) should be read as "as seen from Mobilink", not as a property of
+the destination network alone.
+
+You can tell the two apart in any trace by its first hops, using the access chains in the table
+above. Every worked example in section 6 begins with the Mobilink chain.
+
+### Does it matter that hosts were found from one network and traced from another?
+
+It is a fair worry. Hosts discovered from TES might simply not answer from Mobilink, which would
+show up as traces that fail to reach. Measured:
+
+| host discovered from | traces | reached | rate |
+|---|--:|--:|--:|
+| Mobilink, the same network that traced it | 10,428 | 8,806 | **84%** |
+| TES, a different network | 33,337 | 27,408 | **82%** |
+
+**A 2 point difference.** The mismatch costs something, but far less than the vantage disagreement
+below might lead you to expect.
+
+Treat this as suggestive, not settled. The two groups are not a controlled comparison: the top-up
+only ever probed addresses the first sweep had never tried, so the sets are disjoint **by
+construction**, and it targeted thin blocks (1 to 7 live hosts) while the main sweep covered
+everything. Density and vantage are confounded.
+
+### "Alive" depends on where you are standing
+
+A separate, controlled test: **250 addresses confirmed alive from TES were re-probed from
+Mobilink, and about 9% did not answer**, at every concurrency from 10 to 200 threads. Concurrency
+was ruled out as the cause by testing across that range.
+
+So "alive" is not an absolute property of an address. It is a property of an address *as seen from
+a particular network*. Filtering, peering and routing policy differ between Pakistani operators
+enough to change who can see whom.
+
+**One thing this study does not show.** The top-up pass found 10,421 live hosts, and it is tempting
+to call those "hosts the first vantage missed". They are not. The top-up deliberately skipped every
+address the first sweep had already probed, so those 10,421 sit on addresses TES **never tried**,
+not on addresses TES tried and failed on. The 9% figure above comes from the controlled re-test,
+which is the only place in this study where the same addresses were tried from both networks.
+
+Counts in this study are the **union of two vantages over disjoint address sets**, which is better
+coverage than either alone. It is not a two-vantage measurement of the same addresses.
 
 Detail: `SWEEP_FINDINGS.md` section 5B.
 

@@ -36,15 +36,21 @@ The largest examples, by size:
 | prefix | addresses | announced by |
 |---|---|---|
 | `154.192.0.0/16` | 65,536 | AS23674 Nayatel |
-| `154.80.0.0/17` | 32,768 | AS45669 Wateen |
-| `154.198.64.0/18` | 16,384 | AS45669 Wateen |
-| `149.40.192.0/19` | 8,192 | AS45669 Wateen |
-| `154.81.224.0/19` | 8,192 | AS45669 Wateen |
+| `154.80.0.0/17` | 32,768 | AS45669 Mobilink (PMCL) |
+| `154.198.64.0/18` | 16,384 | AS45669 Mobilink (PMCL) |
+| `149.40.192.0/19` | 8,192 | AS45669 Mobilink (PMCL) |
+| `154.81.224.0/19` | 8,192 | AS45669 Mobilink (PMCL) |
 | `154.208.32.0/19` | 8,192 | AS150750 |
 | `205.164.128.0/19` | 8,192 | AS136384 Optix |
 | `206.0.192.0/19` | 8,192 | AS136384 Optix |
 | `154.57.208.0/20` | 4,096 | AS135407 TES |
 | `156.149.208.0/20` | 4,096 | AS24435 |
+
+> **Naming note.** AS45669 is recorded here as **Mobilink (PMCL)**, which is what the registry
+> holder string says today (`Mobilink-AS-PK - PMCL /LDI IP TRANSIT`). Earlier drafts of this file
+> called it Wateen. Wateen Telecom is a separate ASN, **AS38264**
+> (`WATEEN-IMS-PK-AS-AP`), and appears separately in `ISP_SUMMARY.md`. Anything attributing
+> AS45669 to Wateen is out of date.
 
 These are major operators, not obscure ones, and the volumes are large. This is ordinary address
 leasing: space is transferred or rented across registries far faster than the registry country
@@ -60,11 +66,11 @@ Both look like "a Pakistani network using foreign-registered addresses", but:
 |---|---|---|
 | Announced in BGP by the PK network | **yes** | **no** |
 | Visible in `announced-prefixes` | yes | no |
-| Example | `149.40.192.0/19`, Wateen | `149.40.227.0/24`, seen inside Transworld |
+| Example | `149.40.192.0/19`, Mobilink | `149.40.227.0/24`, seen inside Transworld |
 | Interpretation | normal leasing | internal use of space nobody announces |
 
-The distinction is sharp and checkable. `149.40.0.0/16` is Cogent's. Wateen legitimately announces
-several /19s and /20s inside it. But **`149.40.227.0/24` sits in none of those announcements**, it
+The distinction is sharp and checkable. `149.40.0.0/16` is Cogent's. Mobilink legitimately
+announces several /19s and /20s inside it. But **`149.40.227.0/24` sits in none of those announcements**, it
 appears only as hop addresses inside Pakistani traceroutes, and is announced by nobody in Pakistan.
 The same registry holder, the same /16, two completely different situations.
 
@@ -100,7 +106,7 @@ The same registry holder, the same /16, two completely different situations.
 ## Consequence for the scan universe
 
 `build_pk_universe.py` therefore unions both sources. Using the registry alone would have dropped
-252,672 addresses, including large parts of Nayatel, Wateen, Optix and TES.
+252,672 addresses, including large parts of Nayatel, Mobilink, Optix and TES.
 
 The same problem exists in the small-ISP universe already scanned: **113 of its 778 blocks are not
 in the PK registry list**, because they are announced from Pakistan and registered elsewhere.
