@@ -16,6 +16,23 @@ SAMPLING  Per /24-equivalent, draw DRAW (8) random addresses. Then:
           Effort follows signal: empty space costs 16 checks, populated blocks get
           worked until they yield a usable panel.
 
+          DRAWS ACCUMULATE. A draw does not replace the previous one. `live` carries
+          across draws and `seen` prevents any address being probed twice, so a first
+          draw answering 6 leaves the block needing 2 more, not 8 more. Addresses that
+          did NOT answer are written out too: the re-probe validation needs them.
+
+          THE LOOP OVERSHOOTS, deliberately. The `live < TARGET` test sits at the top
+          of the draw loop, not inside the per-address loop, so a draw always runs to
+          completion. From 6, a dense draw can close the block at 10 or 12. Measured:
+          1,012 blocks (17.2% of live blocks) ended above 8, one at 92. The overshoot
+          is free, since the draw was already running.
+
+          NOTE the asymmetry with topup_scan.py, which tests the target before EVERY
+          address and so stops exactly at 8. A block's live count is therefore shaped
+          partly by which scanner last touched it. That is fine for a floor and for
+          panel eligibility; it means the per-block distribution must not be read as a
+          distribution of true occupancy.
+
 ACCURACY  Thread count is capped deliberately. A controlled re-probe showed that at
           500+ threads roughly 18% of addresses marked dead are in fact alive: the
           path rate-limits ICMP under load and the failures are silent. Measured

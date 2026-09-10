@@ -451,6 +451,11 @@ time from each /24-equivalent and decides whether to keep going. Measured over 1
 selected from a block. Neither is a *probe*, which in this project always means a deployed RIPE
 Atlas device.
 
+> **The tallies in this section are a mid-run snapshot** of 19,267 blocks and 508,616 checks. The
+> completed sweep covers **22,556 blocks and 844,102 checks**, and 19.5% of blocks reached 8 live
+> hosts rather than the 9% quoted below. The proportions here still describe how the rule behaves;
+> the absolute counts are superseded by section 1 and `ISP_SUMMARY.md`.
+
 ### The rule
 
 ```
@@ -458,6 +463,40 @@ draw 8 addresses from the block
   0 live after 2 draws  -> stop; the block looks empty
   >=1 live              -> keep drawing until 8 live found, or 64 addresses checked
 ```
+
+### Draws accumulate, and the loop overshoots
+
+Two properties of the loop that are easy to misread from the rule as written.
+
+**Draws accumulate; nothing is discarded.** A draw does not replace the previous one. If the first
+draw of 8 answers 6 times, those 6 are kept, the next draw takes 8 addresses from the 248 not yet
+tried, and the block closes when the running total reaches 8. No address is probed twice, and
+addresses that did not answer are written to disk as well, which is what the re-probe validation in
+section 5C depends on.
+
+**The target is tested per draw, not per address, so blocks overshoot.** A draw always runs to
+completion. Starting from 6, a dense second draw can close the block at 10 or 12.
+
+| live hosts in the block | blocks | what happened |
+|---|--:|---|
+| 1 to 7 | 1,481 | hit the 64-address cap, or ran out of addresses |
+| **8** | **3,394** | 57.7%, stopped on the target |
+| 9 to 14 | 975 | overshot inside a draw |
+| 15 or more | 37 | dense blocks, up to 92 in one case |
+
+**1,012 blocks, 17.2% of live blocks, ended above 8.** The overshoot is free: it happens inside a
+draw that was already running and costs no extra checks.
+
+**The top-up pass does not overshoot**, which makes the two scanners asymmetric.
+`2_liveness/topup_scan.py` tests `live >= target` before every individual address and breaks
+immediately, so it stops exactly at 8. The main sweep stops at the end of a draw; the top-up stops
+at the address.
+
+**Consequence.** A block's live count is shaped partly by which scanner last touched it. This does
+not affect any current result, because the counts are used only as a floor and as a panel-eligibility
+test. It would matter to anyone reading the distribution above as a distribution of true occupancy.
+It is not one, and cannot be corrected into one without knowing the per-network miss rates that
+section 5C shows are not uniform.
 
 ### Where the effort went
 

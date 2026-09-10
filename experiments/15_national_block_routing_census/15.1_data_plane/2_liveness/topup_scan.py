@@ -19,6 +19,11 @@ VANTAGE   This runs from a DIFFERENT network than the earlier scans. Every recor
           property of Pakistani interconnection, not a measurement fault, and a
           second vantage measures it directly.
 
+STOPPING  Unlike scan_all_pk.py, this tests `live >= target` before every individual
+          address, so it stops exactly on 8 and never overshoots. The main sweep stops
+          at the end of a draw and can finish a block at 10 or 12. Keep the difference
+          in mind before reading per-block live counts as density.
+
 CONCURRENCY  50 threads. The recall-vs-concurrency curve on this network is flat
           (92.4% at 10 threads, 92.4% at 200), so the loss is vantage, not load.
           50 sits at the throughput knee without buying extra error.

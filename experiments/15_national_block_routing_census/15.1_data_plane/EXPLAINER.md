@@ -137,6 +137,56 @@ For each /24 block:
   disproportionately routers and gateways rather than ordinary hosts. Random draws give a less
   biased picture of what is actually in the block.
 
+### Draws accumulate. Nothing is ever thrown away
+
+A natural reading of "draw 8, then draw 8 more" is that each draw replaces the last. It does not.
+**Results accumulate across draws, and no address is ever probed twice.**
+
+If the first draw of 8 answers 6 times, those 6 are kept. The loop sees `6 < 8`, draws 8 fresh
+addresses from the 248 not yet tried, and the block finishes the moment the running total reaches
+8. From [`2_liveness/scan_all_pk.py`](2_liveness/scan_all_pk.py):
+
+```python
+live = found.get(u, 0)          # carries over from any earlier draw
+while pool and len(seen) < 64 and live < 8:
+    batch = pool[:8]            # 8 addresses NOT yet seen
+    for ip in batch:
+        if probe(ip): live += 1 # adds to the running total
+```
+
+Every address probed is written to disk with its result, so the addresses that did **not** answer
+are kept too. They are evidence, and the re-probe validation in section 4 depends on having them.
+
+**The loop overshoots on purpose, and it is worth knowing why.** The target is re-checked at the
+top of each draw, not before each address, so a draw always runs to completion. Starting at 6, a
+dense second draw can finish the block at 10 or 12 rather than stopping neatly at 8.
+
+Measured across every block that produced life:
+
+| live hosts in the block | blocks | what happened |
+|---|--:|---|
+| 1 to 7 | 1,481 | hit the 64-address cap, or ran out of addresses |
+| **8** | **3,394** | 57.7%, stopped on the target |
+| 9 to 14 | 975 | overshot inside a draw |
+| 15 or more | 37 | dense blocks, up to 92 in one case |
+
+So **1,012 blocks (17.2% of live blocks) ended above 8**. That is harmless: it is free extra data,
+and it costs nothing beyond the draw that was already running.
+
+**The two scanners differ here, and it matters if you ever read these counts as density.** The
+top-up pass ([`2_liveness/topup_scan.py`](2_liveness/topup_scan.py)) tests the target before every
+single address:
+
+```python
+if used >= A.extra or live >= A.target: break
+```
+
+so it stops exactly at 8 and never overshoots. The main sweep stops at the end of a draw; the
+top-up stops at the address. **A block's live count is therefore shaped partly by which scanner
+last touched it**, not only by what is in the block. Nothing downstream is affected today, because
+the counts are used only as a floor and to decide which blocks qualify for a panel. It would matter
+if anyone tried to read the distribution above as a distribution of true occupancy. It is not one.
+
 **Effort follows signal.** Measured over the 844,102 checks actually performed:
 
 | | blocks | checks spent | mean per block |
