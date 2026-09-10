@@ -1,4 +1,4 @@
-Traces that left Pakistan and returned. 1,003 of 34,191.
+Traces that left Pakistan and returned. 931 of 34,191.
 Detection is topological. Addresses R2 falsified are NOT counted as foreign;
 they are Pakistani infrastructure numbered out of foreign space.
 
@@ -120,28 +120,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    15  59.103.231.143     140 ms  PK   PKTELECOM-AS-PK - Pakistan Tel  
    16  *
    17  160.30.142.15      321 ms  PK   NAN-AS-AP - Nasstec Airnet Net  
-
-==========================================================================
- 154.57.222.12  block 154.57.222.0/24  exit via US COGENT-174 - Cogent Communications, LLC
-    1  *
-    2  192.168.200.5      454 ms  PRIV private                         
-    3  119.160.114.81     249 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61      143 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237     132 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226     118 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  149.40.227.197      75 ms  US   COGENT-174 - Cogent Communicat  <== LEFT PK
-    8  154.57.222.12      517 ms  PK   TES-PL-AS-AP - Trans World Ent  
-
-==========================================================================
- 154.57.222.11  block 154.57.222.0/24  exit via US COGENT-174 - Cogent Communications, LLC
-    1  *
-    2  *
-    3  119.160.114.81     208 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       69 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      67 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226     128 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  149.40.227.197      73 ms  US   COGENT-174 - Cogent Communicat  <== LEFT PK
-    8  154.57.222.11      193 ms  PK   TES-PL-AS-AP - Trans World Ent  
 
 ==========================================================================
  58.27.233.225  block 58.27.233.0/24  exit via CN CHINANET-BACKBONE - No.31,Jin-rong Stree
@@ -1849,96 +1827,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    16  110.39.144.178      82 ms  PK   WATEEN-IMS-PK-AS-AP - National  
 
 ==========================================================================
- 154.208.47.43  block 154.208.47.0/24  exit via US ATT-INTERNET4 - AT&T Enterprises, LLC
-    1  *
-    2  192.168.200.5       26 ms  PRIV private                         
-    3  119.160.114.81      42 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       26 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      74 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      56 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.98       32 ms  PK   TWA                             
-    8  110.93.254.67       65 ms  PK   TWA                             
-    9  119.63.137.49       51 ms  PK   TWA                             
-   10  *
-   11  221.120.237.49      79 ms  PK   PKTELECOM-AS-PK - Pakistan Tel  
-   12  *
-   13  *
-   14  172.7.12.2         121 ms  US   ATT-INTERNET4 - AT&T Enterpris  <== LEFT PK
-   15  154.208.47.43       66 ms  PK   ICIL-AS-AP - IN CABLE INTERNET  
-
-==========================================================================
- 154.208.47.235  block 154.208.47.0/24  exit via US ATT-INTERNET4 - AT&T Enterprises, LLC
-    1  *
-    2  *
-    3  119.160.114.81     103 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61        8 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237     128 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226       8 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.255.186      63 ms  PK   TWA                             
-    8  119.63.137.83       81 ms  PK   TWA                             
-    9  *
-   10  *
-   11  221.120.237.49     183 ms  PK   PKTELECOM-AS-PK - Pakistan Tel  
-   12  *
-   13  *
-   14  172.7.16.2          80 ms  US   ATT-INTERNET4 - AT&T Enterpris  <== LEFT PK
-   15  154.208.47.235      74 ms  PK   ICIL-AS-AP - IN CABLE INTERNET  
-
-==========================================================================
- 154.208.47.239  block 154.208.47.0/24  exit via US ATT-INTERNET4 - AT&T Enterprises, LLC
-    1  *
-    2  *
-    3  119.160.114.81     135 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       11 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237     102 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      16 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.110      65 ms  PK   TWA                             
-    8  119.63.137.83       64 ms  PK   TWA                             
-    9  *
-   10  *
-   11  221.120.237.49      90 ms  PK   PKTELECOM-AS-PK - Pakistan Tel  
-   12  *
-   13  *
-   14  172.7.12.2          78 ms  US   ATT-INTERNET4 - AT&T Enterpris  <== LEFT PK
-   15  154.208.47.239      79 ms  PK   ICIL-AS-AP - IN CABLE INTERNET  
-
-==========================================================================
- 154.208.47.241  block 154.208.47.0/24  exit via US ATT-INTERNET4 - AT&T Enterprises, LLC
-    1  *
-    2  *
-    3  119.160.114.81     562 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       25 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237     133 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226     143 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.208     144 ms  PK   TWA                             
-    8  119.63.137.83      149 ms  PK   TWA                             
-    9  *
-   10  *
-   11  221.120.237.49     122 ms  PK   PKTELECOM-AS-PK - Pakistan Tel  
-   12  *
-   13  *
-   14  172.7.10.2         196 ms  US   ATT-INTERNET4 - AT&T Enterpris  <== LEFT PK
-   15  154.208.47.241      68 ms  PK   ICIL-AS-AP - IN CABLE INTERNET  
-
-==========================================================================
- 154.208.47.39  block 154.208.47.0/24  exit via US ATT-INTERNET4 - AT&T Enterprises, LLC
-    1  *
-    2  *
-    3  119.160.114.81      63 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       34 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      10 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226     110 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.208     140 ms  PK   TWA                             
-    8  *
-    9  *
-   10  *
-   11  221.120.237.49     153 ms  PK   PKTELECOM-AS-PK - Pakistan Tel  
-   12  *
-   13  *
-   14  172.7.12.2         206 ms  US   ATT-INTERNET4 - AT&T Enterpris  <== LEFT PK
-   15  154.208.47.39      160 ms  PK   ICIL-AS-AP - IN CABLE INTERNET  
-
-==========================================================================
  110.39.182.90  block 110.39.182.0/24  exit via CN CHINANET-BACKBONE - No.31,Jin-rong Stree
     1  10.99.79.80          2 ms  PRIV private                         
     2  192.168.200.5       71 ms  PRIV private                         
@@ -3554,27 +3442,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    18  72.255.2.45        181 ms  PK   CYBERNET-AP - Cyber Internet S  
 
 ==========================================================================
- 103.203.46.34  block 103.203.46.0/24  exit via US ATT-INTERNET4 - AT&T Enterprises, LLC
-    1  *
-    2  *
-    3  119.160.114.81      34 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61        8 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      68 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  110.93.202.20       28 ms  PK   TWA                             
-    8  110.93.252.172      29 ms  PK   TWA                             
-    9  110.93.252.103      47 ms  PK   TWA                             
-   10  119.63.137.49       53 ms  PK   TWA                             
-   11  *
-   12  *
-   13  *
-   14  119.159.232.243     96 ms  PK   PKTELECOM-AS-PK - Pakistan Tel  
-   15  *
-   16  *
-   17  172.7.38.1         119 ms  US   ATT-INTERNET4 - AT&T Enterpris  <== LEFT PK
-   18  103.203.46.34       72 ms  PK   GETLINKS2-AS-AP - Getlinks (SM  
-
-==========================================================================
  151.241.20.4  block 151.241.20.0/24  exit via SG EQUINIX-AP
     1  *
     2  192.168.200.5       79 ms  PRIV private                         
@@ -4900,7 +4767,7 @@ they are Pakistani infrastructure numbered out of foreign space.
    14  223.123.124.94     113 ms  PK   CMPAKLIMITED-AS-ENTCORP - CMPa  
 
 ==========================================================================
- 103.66.148.14  block 103.66.148.0/24  exit via US NTT-DATA-2914 - NTT America, Inc.
+ 103.66.148.14  block 103.66.148.0/24  exit via IT SEABONE-NET TELECOM ITALIA SPARKLE S.p.A
     1  *
     2  192.168.200.5       30 ms  PRIV private                         
     3  119.160.114.81      20 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
@@ -4910,8 +4777,8 @@ they are Pakistani infrastructure numbered out of foreign space.
     7  *
     8  *
     9  *
-   10  116.51.17.201      232 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
-   11  93.186.133.54      267 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
+   10  116.51.17.201      232 ms  US   NTT-DATA-2914 - NTT America, I  squatted
+   11  93.186.133.54      267 ms  IT   SEABONE-NET TELECOM ITALIA SPA  <== LEFT PK
    12  213.144.176.160    207 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    13  213.144.170.13     258 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    14  110.93.252.188     196 ms  PK   TWA                             
@@ -4921,7 +4788,7 @@ they are Pakistani infrastructure numbered out of foreign space.
    18  103.66.148.14      288 ms  PK   NAN-AS-AP - Nasstec Airnet Net  
 
 ==========================================================================
- 103.66.148.73  block 103.66.148.0/24  exit via US NTT-DATA-2914 - NTT America, Inc.
+ 103.66.148.73  block 103.66.148.0/24  exit via IT SEABONE-NET TELECOM ITALIA SPARKLE S.p.A
     1  *
     2  192.168.200.5       32 ms  PRIV private                         
     3  119.160.114.81      93 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
@@ -4931,8 +4798,8 @@ they are Pakistani infrastructure numbered out of foreign space.
     7  *
     8  *
     9  *
-   10  116.51.17.201      154 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
-   11  93.186.133.54      249 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
+   10  116.51.17.201      154 ms  US   NTT-DATA-2914 - NTT America, I  squatted
+   11  93.186.133.54      249 ms  IT   SEABONE-NET TELECOM ITALIA SPA  <== LEFT PK
    12  213.144.176.160    233 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    13  213.144.170.13     204 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    14  110.93.253.124     235 ms  PK   TWA                             
@@ -4944,7 +4811,7 @@ they are Pakistani infrastructure numbered out of foreign space.
    20  103.66.148.73      234 ms  PK   NAN-AS-AP - Nasstec Airnet Net  
 
 ==========================================================================
- 103.66.148.139  block 103.66.148.0/24  exit via US NTT-DATA-2914 - NTT America, Inc.
+ 103.66.148.139  block 103.66.148.0/24  exit via IT SEABONE-NET TELECOM ITALIA SPARKLE S.p.A
     1  *
     2  192.168.200.5       55 ms  PRIV private                         
     3  119.160.114.81     121 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
@@ -4954,8 +4821,8 @@ they are Pakistani infrastructure numbered out of foreign space.
     7  *
     8  *
     9  *
-   10  116.51.17.201      137 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
-   11  93.186.133.54      203 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
+   10  116.51.17.201      137 ms  US   NTT-DATA-2914 - NTT America, I  squatted
+   11  93.186.133.54      203 ms  IT   SEABONE-NET TELECOM ITALIA SPA  <== LEFT PK
    12  213.144.176.160    231 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    13  213.144.170.13     216 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    14  110.93.253.124     293 ms  PK   TWA                             
@@ -4967,7 +4834,7 @@ they are Pakistani infrastructure numbered out of foreign space.
    20  103.66.148.139     272 ms  PK   NAN-AS-AP - Nasstec Airnet Net  
 
 ==========================================================================
- 103.66.148.170  block 103.66.148.0/24  exit via US NTT-DATA-2914 - NTT America, Inc.
+ 103.66.148.170  block 103.66.148.0/24  exit via IT SEABONE-NET TELECOM ITALIA SPARKLE S.p.A
     1  *
     2  *
     3  119.160.114.81     108 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
@@ -4977,8 +4844,8 @@ they are Pakistani infrastructure numbered out of foreign space.
     7  *
     8  *
     9  *
-   10  116.51.17.201      140 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
-   11  93.186.133.54      258 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
+   10  116.51.17.201      140 ms  US   NTT-DATA-2914 - NTT America, I  squatted
+   11  93.186.133.54      258 ms  IT   SEABONE-NET TELECOM ITALIA SPA  <== LEFT PK
    12  213.144.176.160    216 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    13  213.144.170.13     262 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    14  110.93.253.88      201 ms  PK   TWA                             
@@ -4991,7 +4858,7 @@ they are Pakistani infrastructure numbered out of foreign space.
    21  103.66.148.170     312 ms  PK   NAN-AS-AP - Nasstec Airnet Net  
 
 ==========================================================================
- 103.66.148.130  block 103.66.148.0/24  exit via US NTT-DATA-2914 - NTT America, Inc.
+ 103.66.148.130  block 103.66.148.0/24  exit via IT SEABONE-NET TELECOM ITALIA SPARKLE S.p.A
     1  *
     2  *
     3  119.160.114.81     149 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
@@ -5001,8 +4868,8 @@ they are Pakistani infrastructure numbered out of foreign space.
     7  *
     8  *
     9  *
-   10  116.51.17.201      163 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
-   11  93.186.133.54      340 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
+   10  116.51.17.201      163 ms  US   NTT-DATA-2914 - NTT America, I  squatted
+   11  93.186.133.54      340 ms  IT   SEABONE-NET TELECOM ITALIA SPA  <== LEFT PK
    12  213.144.176.160    290 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    13  213.144.170.13     259 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    14  110.93.252.174     219 ms  PK   TWA                             
@@ -5014,7 +4881,7 @@ they are Pakistani infrastructure numbered out of foreign space.
    20  103.66.148.130     248 ms  PK   NAN-AS-AP - Nasstec Airnet Net  
 
 ==========================================================================
- 103.66.148.77  block 103.66.148.0/24  exit via US NTT-DATA-2914 - NTT America, Inc.
+ 103.66.148.77  block 103.66.148.0/24  exit via IT SEABONE-NET TELECOM ITALIA SPARKLE S.p.A
     1  *
     2  *
     3  119.160.114.81      15 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
@@ -5024,8 +4891,8 @@ they are Pakistani infrastructure numbered out of foreign space.
     7  *
     8  *
     9  *
-   10  116.51.17.201      118 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
-   11  93.186.133.54      212 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
+   10  116.51.17.201      118 ms  US   NTT-DATA-2914 - NTT America, I  squatted
+   11  93.186.133.54      212 ms  IT   SEABONE-NET TELECOM ITALIA SPA  <== LEFT PK
    12  213.144.176.160    202 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    13  213.144.170.13     212 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    14  110.93.252.232     223 ms  PK   TWA                             
@@ -5036,7 +4903,7 @@ they are Pakistani infrastructure numbered out of foreign space.
    19  103.66.148.77      256 ms  PK   NAN-AS-AP - Nasstec Airnet Net  
 
 ==========================================================================
- 103.66.148.97  block 103.66.148.0/24  exit via US NTT-DATA-2914 - NTT America, Inc.
+ 103.66.148.97  block 103.66.148.0/24  exit via IT SEABONE-NET TELECOM ITALIA SPARKLE S.p.A
     1  10.99.79.80          4 ms  PRIV private                         
     2  *
     3  119.160.114.81      11 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
@@ -5046,9 +4913,9 @@ they are Pakistani infrastructure numbered out of foreign space.
     7  *
     8  *
     9  *
-   10  116.51.17.201      196 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
+   10  116.51.17.201      196 ms  US   NTT-DATA-2914 - NTT America, I  squatted
    11  *
-   12  213.144.176.160    239 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
+   12  213.144.176.160    239 ms  IT   SEABONE-NET TELECOM ITALIA SPA  <== LEFT PK
    13  213.144.170.13     227 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    14  110.93.255.236     211 ms  PK   TWA                             
    15  110.93.252.247     253 ms  PK   TWA                             
@@ -5061,7 +4928,7 @@ they are Pakistani infrastructure numbered out of foreign space.
    22  103.66.148.97      284 ms  PK   NAN-AS-AP - Nasstec Airnet Net  
 
 ==========================================================================
- 103.66.148.184  block 103.66.148.0/24  exit via US NTT-DATA-2914 - NTT America, Inc.
+ 103.66.148.184  block 103.66.148.0/24  exit via IT SEABONE-NET TELECOM ITALIA SPARKLE S.p.A
     1  10.99.79.80          4 ms  PRIV private                         
     2  *
     3  119.160.114.81      51 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
@@ -5071,9 +4938,9 @@ they are Pakistani infrastructure numbered out of foreign space.
     7  *
     8  *
     9  *
-   10  116.51.17.201      209 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
+   10  116.51.17.201      209 ms  US   NTT-DATA-2914 - NTT America, I  squatted
    11  *
-   12  213.144.176.160    224 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
+   12  213.144.176.160    224 ms  IT   SEABONE-NET TELECOM ITALIA SPA  <== LEFT PK
    13  213.144.170.13     204 ms  IT   SEABONE-NET TELECOM ITALIA SPA  abroad
    14  110.93.252.188     357 ms  PK   TWA                             
    15  110.93.252.247     209 ms  PK   TWA                             
@@ -5504,64 +5371,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    14  *
    15  *
    16  110.39.35.210      106 ms  PK   WATEEN-IMS-PK-AS-AP - National  
-
-==========================================================================
- 180.149.217.38  block 180.149.217.0/24  exit via US COGENT-174 - Cogent Communications, LLC
-    1  *
-    2  *
-    3  119.160.114.81      29 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       15 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      10 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      50 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.6         5 ms  PK   TWA                             
-    8  110.93.252.86       27 ms  PK   TWA                             
-    9  110.93.252.51       46 ms  PK   TWA                             
-   10  149.40.226.59       50 ms  US   COGENT-174 - Cogent Communicat  <== LEFT PK
-   11  180.149.217.38      59 ms  PK   REDTONE-AS-AP - Redtone Teleco  
-
-==========================================================================
- 180.149.217.220  block 180.149.217.0/24  exit via US COGENT-174 - Cogent Communications, LLC
-    1  *
-    2  *
-    3  119.160.114.81      25 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       13 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      21 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      13 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.208      26 ms  PK   TWA                             
-    8  110.93.252.49       87 ms  PK   TWA                             
-    9  149.40.226.59      411 ms  US   COGENT-174 - Cogent Communicat  <== LEFT PK
-   10  180.149.217.220    183 ms  PK   REDTONE-AS-AP - Redtone Teleco  
-
-==========================================================================
- 149.40.236.18  block 149.40.236.0/24  exit via US COGENT-174 - Cogent Communications, LLC
-    1  *
-    2  *
-    3  119.160.114.81      43 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       16 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237       8 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  182.176.220.81      67 ms  PK   PKTELECOM-AS-PK - Pakistan Tel  
-    7  *
-    8  *
-    9  119.63.137.82      442 ms  PK   TWA                             
-   10  110.93.255.169      70 ms  PK   TWA                             
-   11  149.40.226.53       45 ms  US   COGENT-174 - Cogent Communicat  <== LEFT PK
-   12  149.40.236.18       40 ms  PK   TWA-AS-AP - Transworld Associa  
-
-==========================================================================
- 202.1.26.147  block 202.1.26.0/24  exit via US T-MOBILE-AS21928 - T-Mobile USA, Inc.
-    1  *
-    2  *
-    3  119.160.114.81      26 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       62 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237       9 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226       6 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.208      36 ms  PK   TWA                             
-    8  110.93.252.49       44 ms  PK   TWA                             
-    9  110.93.197.153      67 ms  PK   TWA-AS-AP - Transworld Associa  
-   10  *
-   11  *
-   12  172.40.40.118       60 ms  US   T-MOBILE-AS21928 - T-Mobile US  <== LEFT PK
-   13  202.1.26.147        48 ms  PK   PBPL-AS-AP - PLAY BROADBAND (P  
 
 ==========================================================================
  175.110.73.195  block 175.110.73.0/24  exit via US COGENT-174 - Cogent Communications, LLC
@@ -6336,57 +6145,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    14  *
    15  *
    16  110.39.191.82      114 ms  PK   WATEEN-IMS-PK-AS-AP - National  
-
-==========================================================================
- 160.250.97.98  block 160.250.97.0/24  exit via US UUNET - Verizon Business
-    1  10.99.79.80         16 ms  PRIV private                         
-    2  *
-    3  119.160.114.81      47 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       71 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      10 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      11 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.110      28 ms  PK   TWA                             
-    8  110.93.254.145     109 ms  PK   TWA                             
-    9  119.63.130.53       50 ms  PK   TWA-AS-AP - Transworld Associa  
-   10  195.129.143.2       69 ms  US   UUNET - Verizon Business        squatted
-   11  195.129.100.134     59 ms  US   UUNET - Verizon Business        squatted
-   12  195.129.100.10      63 ms  US   UUNET - Verizon Business        squatted
-   13  195.129.100.158     64 ms  US   UUNET - Verizon Business        <== LEFT PK
-   14  160.250.97.98       58 ms  PK   ASN-NCKHI-AP - NetSol Connect   
-
-==========================================================================
- 160.250.97.165  block 160.250.97.0/24  exit via US UUNET - Verizon Business
-    1  *
-    2  *
-    3  119.160.114.81      36 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       17 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      96 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      10 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.98       27 ms  PK   TWA                             
-    8  110.93.252.103      50 ms  PK   TWA                             
-    9  119.63.130.53       70 ms  PK   TWA-AS-AP - Transworld Associa  
-   10  195.129.143.2       55 ms  US   UUNET - Verizon Business        squatted
-   11  103.77.8.2          68 ms  PK   ASN-NCKHI-AP - NetSol Connect   
-   12  103.77.8.66         63 ms  PK   ASN-NCKHI-AP - NetSol Connect   
-   13  195.129.114.2      105 ms  US   UUNET - Verizon Business        <== LEFT PK
-   14  160.250.97.165      59 ms  PK   ASN-NCKHI-AP - NetSol Connect   
-
-==========================================================================
- 160.250.97.66  block 160.250.97.0/24  exit via US UUNET - Verizon Business
-    1  *
-    2  *
-    3  119.160.114.81      22 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       16 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  *
-    6  110.93.210.226      26 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.208      35 ms  PK   TWA                             
-    8  110.93.254.39       44 ms  PK   TWA                             
-    9  119.63.130.53       46 ms  PK   TWA-AS-AP - Transworld Associa  
-   10  195.129.143.2       63 ms  US   UUNET - Verizon Business        squatted
-   11  195.129.100.134     48 ms  US   UUNET - Verizon Business        squatted
-   12  195.129.100.10      88 ms  US   UUNET - Verizon Business        squatted
-   13  195.129.10.222      47 ms  US   UUNET - Verizon Business        <== LEFT PK
-   14  160.250.97.66       93 ms  PK   ASN-NCKHI-AP - NetSol Connect   
 
 ==========================================================================
  103.48.24.62  block 103.48.24.0/24  exit via SA SAUDINETSTC-AS Saudi Telecom Company JSC
@@ -8108,19 +7866,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    15  103.29.183.173     498 ms  PK   LWPL-AS-AP - LAYER WEBHOST (PV  
 
 ==========================================================================
- 110.93.249.123  block 110.93.249.0/24  exit via US COGENT-174 - Cogent Communications, LLC
-    1  *
-    2  *
-    3  119.160.114.81      72 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       12 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      40 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226       6 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.110     130 ms  PK   TWA                             
-    8  110.93.254.127     135 ms  PK   TWA                             
-    9  149.40.227.43       75 ms  US   COGENT-174 - Cogent Communicat  <== LEFT PK
-   10  110.93.249.123     204 ms  PK   TWA-AS-AP - Transworld Associa  
-
-==========================================================================
  110.39.26.98  block 110.39.26.0/24  exit via CN CHINANET-BACKBONE - No.31,Jin-rong Stree
     1  10.99.79.80          1 ms  PRIV private                         
     2  *
@@ -8419,22 +8164,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    14  *
    15  *
    16  110.39.33.50       174 ms  PK   WATEEN-IMS-PK-AS-AP - National  
-
-==========================================================================
- 175.107.14.105  block 175.107.14.0/24  exit via US UUNET - Verizon Business
-    1  *
-    2  *
-    3  119.160.114.81      32 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       23 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      42 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226     253 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.6       106 ms  PK   TWA                             
-    8  119.63.136.223      10 ms  PK   TWA                             
-    9  *
-   10  100.10.100.2       139 ms  US   UUNET - Verizon Business        <== LEFT PK
-   11  *
-   12  *
-   13  175.107.14.105     272 ms  PK   NTC-AS-AP - National Telecommu  
 
 ==========================================================================
  110.39.129.189  block 110.39.129.0/24  exit via CN CHINANET-BACKBONE - No.31,Jin-rong Stree
@@ -9230,66 +8959,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    12  103.135.44.159     219 ms  US   EDGENAT-CLOUD - EDGENAT CLOUD   abroad
 
 ==========================================================================
- 165.101.131.69  block 165.101.131.0/24  exit via SG KBSPL-AS-AP - Kacific Broadband Satellit
-    1  *
-    2  *
-    3  119.160.114.81      38 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       44 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237     158 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226     143 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.252.7        55 ms  PK   TWA                             
-    8  110.93.202.170      52 ms  PK   TWA                             
-    9  116.58.85.214      154 ms  PK   NEXLINX-AS-AP - Autonomous Sys  
-   10  *
-   11  103.70.65.47        88 ms  SG   KBSPL-AS-AP - Kacific Broadban  <== LEFT PK
-   12  165.101.131.69     673 ms  PK   PAKDATACOMLIMITED-AS-AP - Pak   
-
-==========================================================================
- 165.101.131.38  block 165.101.131.0/24  exit via SG KBSPL-AS-AP - Kacific Broadband Satellit
-    1  *
-    2  *
-    3  119.160.114.81      59 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       64 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237     139 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226     132 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.252.7       135 ms  PK   TWA                             
-    8  110.93.202.170      68 ms  PK   TWA                             
-    9  116.58.85.214       63 ms  PK   NEXLINX-AS-AP - Autonomous Sys  
-   10  *
-   11  103.70.65.47       277 ms  SG   KBSPL-AS-AP - Kacific Broadban  <== LEFT PK
-   12  165.101.131.38     586 ms  PK   PAKDATACOMLIMITED-AS-AP - Pak   
-
-==========================================================================
- 165.101.131.10  block 165.101.131.0/24  exit via SG KBSPL-AS-AP - Kacific Broadband Satellit
-    1  *
-    2  *
-    3  119.160.114.81      28 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       21 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237       9 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226       7 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.252.7        27 ms  PK   TWA                             
-    8  110.93.202.170      29 ms  PK   TWA                             
-    9  116.58.85.214       43 ms  PK   NEXLINX-AS-AP - Autonomous Sys  
-   10  *
-   11  103.70.65.47        48 ms  SG   KBSPL-AS-AP - Kacific Broadban  <== LEFT PK
-   12  165.101.131.10     567 ms  PK   PAKDATACOMLIMITED-AS-AP - Pak   
-
-==========================================================================
- 165.101.131.26  block 165.101.131.0/24  exit via SG KBSPL-AS-AP - Kacific Broadband Satellit
-    1  *
-    2  *
-    3  119.160.114.81      18 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       24 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      10 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      13 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.252.7        28 ms  PK   TWA                             
-    8  110.93.202.170      61 ms  PK   TWA                             
-    9  116.58.85.214       42 ms  PK   NEXLINX-AS-AP - Autonomous Sys  
-   10  *
-   11  103.70.65.47        60 ms  SG   KBSPL-AS-AP - Kacific Broadban  <== LEFT PK
-   12  165.101.131.26     614 ms  PK   PAKDATACOMLIMITED-AS-AP - Pak   
-
-==========================================================================
  160.30.143.9  block 160.30.143.0/24  exit via SG EQUINIX-AP
     1  *
     2  *
@@ -9627,18 +9296,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    14  *
    15  *
    16  110.39.22.18       102 ms  PK   WATEEN-IMS-PK-AS-AP - National  
-
-==========================================================================
- 103.86.39.23  block 103.86.39.0/24  exit via US COGENT-174 - Cogent Communications, LLC
-    1  10.99.79.80          2 ms  PRIV private                         
-    2  *
-    3  119.160.114.81      23 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       29 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      65 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      15 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  149.40.227.101      22 ms  US   COGENT-174 - Cogent Communicat  <== LEFT PK
-    8  103.86.39.255       21 ms  PK   TES-PL-AS-AP - Trans World Ent  
-    9  103.86.39.23        20 ms  PK   TES-PL-AS-AP - Trans World Ent  
 
 ==========================================================================
  103.111.60.147  block 103.111.60.0/24  exit via US COGENT-174 - Cogent Communications, LLC
@@ -10715,40 +10372,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    18  175.107.234.243    365 ms  PK   CYBERNET-AP - Cyber Internet S  
 
 ==========================================================================
- 43.245.206.68  block 43.245.206.0/24  exit via US ZEN-ECN - Zenlayer Inc
-    1  *
-    2  *
-    3  119.160.114.81      33 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       20 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      36 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  110.93.202.20      141 ms  PK   TWA                             
-    8  149.40.227.185     135 ms  US   COGENT-174 - Cogent Communicat  squatted
-    9  125.209.91.26      187 ms  PK   MULTINET-AS-AP - Multinet Paki  
-   10  192.169.124.67      68 ms  US   ZEN-ECN - Zenlayer Inc          <== LEFT PK
-   11  *
-   12  *
-   13  *
-   14  43.245.206.68      121 ms  PK   MULTINET-AS-AP - Multinet Paki  
-
-==========================================================================
- 43.245.206.58  block 43.245.206.0/24  exit via US ZEN-ECN - Zenlayer Inc
-    1  *
-    2  *
-    3  119.160.114.81      75 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       13 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237     112 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  110.93.202.20       70 ms  PK   TWA                             
-    8  149.40.227.185      63 ms  US   COGENT-174 - Cogent Communicat  squatted
-    9  125.209.91.26       70 ms  PK   MULTINET-AS-AP - Multinet Paki  
-   10  192.169.124.67      69 ms  US   ZEN-ECN - Zenlayer Inc          <== LEFT PK
-   11  *
-   12  *
-   13  *
-   14  43.245.206.58      156 ms  PK   MULTINET-AS-AP - Multinet Paki  
-
-==========================================================================
  163.61.227.250  block 163.61.227.0/24  exit via CN CHINANET-BACKBONE - No.31,Jin-rong Stree
     1  *
     2  192.168.200.5       56 ms  PRIV private                         
@@ -10884,22 +10507,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    13  *
    14  *
    15  163.61.227.183      71 ms  PK   MUXBROADBANDP-AS-AP - MUX BROA  
-
-==========================================================================
- 103.152.101.226  block 103.152.101.0/24  exit via US T-MOBILE-AS21928 - T-Mobile USA, Inc.
-    1  *
-    2  *
-    3  119.160.114.81      24 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       69 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      39 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      14 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.98       29 ms  PK   TWA                             
-    8  110.93.252.201      78 ms  PK   TWA                             
-    9  110.93.219.127     160 ms  PK   TWA-AS-AP - Transworld Associa  
-   10  *
-   11  *
-   12  172.40.40.82        49 ms  US   T-MOBILE-AS21928 - T-Mobile US  <== LEFT PK
-   13  103.152.101.226     62 ms  PK   PBPL-AS-AP - PLAY BROADBAND (P  
 
 ==========================================================================
  115.167.96.151  block 115.167.96.0/24  exit via SG EQUINIX-AP
@@ -11585,20 +11192,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    14  223.123.44.106     137 ms  PK   CMPAKLIMITED-AS-ENTCORP - CMPa  
 
 ==========================================================================
- 202.141.246.254  block 202.141.246.0/24  exit via US T-MOBILE-AS21928 - T-Mobile USA, Inc.
-    1  10.99.79.80          7 ms  PRIV private                         
-    2  *
-    3  119.160.114.81      31 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       11 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237       8 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  110.93.202.20       45 ms  PK   TWA                             
-    8  149.40.227.185      43 ms  US   COGENT-174 - Cogent Communicat  squatted
-    9  202.141.224.9       41 ms  PK   MULTINET-AS-AP - Multinet Paki  
-   10  172.34.34.2         93 ms  US   T-MOBILE-AS21928 - T-Mobile US  <== LEFT PK
-   11  202.141.246.254     32 ms  PK   MULTINET-AS-AP - Multinet Paki  
-
-==========================================================================
  119.157.83.1  block 119.157.83.0/24  exit via SG EQUINIX-AP
     1  *
     2  *
@@ -11758,7 +11351,7 @@ they are Pakistani infrastructure numbered out of foreign space.
    16  203.101.169.158    176 ms  PK   CYBERNET-AP - Cyber Internet S  
 
 ==========================================================================
- 14.192.154.101  block 14.192.154.0/24  exit via DE AIDB-2-1
+ 14.192.154.101  block 14.192.154.0/24  exit via US UUNET - Verizon Business
     1  *
     2  *
     3  119.160.114.81      60 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
@@ -11770,25 +11363,9 @@ they are Pakistani infrastructure numbered out of foreign space.
     9  221.120.249.46      53 ms  PK   PKTELECOM-AS-PK - Pakistan Tel  
    10  *
    11  103.162.149.4       33 ms  PK   FIBERBEAMPVTLTD-AS-AP - Fiber   
-   12  192.166.25.3        35 ms  DE   AIDB-2-1                        <== LEFT PK
-   13  100.0.0.1           37 ms  US   UUNET - Verizon Business        abroad
+   12  192.166.25.3        35 ms  DE   AIDB-2-1                        squatted
+   13  100.0.0.1           37 ms  US   UUNET - Verizon Business        <== LEFT PK
    14  14.192.154.101      96 ms  PK   FIBERBEAMPVTLTD-AS-AP - Fiber   
-
-==========================================================================
- 14.192.154.126  block 14.192.154.0/24  exit via DE AIDB-2-1
-    1  *
-    2  *
-    3  119.160.114.81      21 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       49 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  210.2.176.22        40 ms  PK   LDN-AS-PK - LINKdotNET Telecom  
-    6  210.2.176.21        25 ms  PK   LDN-AS-PK - LINKdotNET Telecom  
-    7  *
-    8  *
-    9  221.120.249.46      59 ms  PK   PKTELECOM-AS-PK - Pakistan Tel  
-   10  *
-   11  103.162.149.4       46 ms  PK   FIBERBEAMPVTLTD-AS-AP - Fiber   
-   12  192.166.25.3        56 ms  DE   AIDB-2-1                        <== LEFT PK
-   13  14.192.154.126      30 ms  PK   FIBERBEAMPVTLTD-AS-AP - Fiber   
 
 ==========================================================================
  144.79.151.34  block 144.79.151.0/24  exit via US COGENT-174 - Cogent Communications, LLC
@@ -12516,90 +12093,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    13  *
    14  141.105.161.185     71 ms  AE   AD1 Star Satellite Communicati  abroad
    15  103.85.129.114     344 ms  AE   AD1 Star Satellite Communicati  abroad
-
-==========================================================================
- 160.191.229.124  block 160.191.229.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  192.168.200.5      247 ms  PRIV private                         
-    3  119.160.114.81     108 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61      150 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      46 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2       185 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  160.191.229.124    164 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 160.191.229.101  block 160.191.229.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  192.168.200.5       30 ms  PRIV private                         
-    3  119.160.114.81       9 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       17 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      17 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2       108 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  160.191.229.101     60 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 160.191.229.88  block 160.191.229.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      36 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61        8 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      57 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        54 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  160.191.229.88      34 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 160.191.229.114  block 160.191.229.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      88 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       26 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237       9 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        34 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  160.191.229.114     28 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 160.191.229.98  block 160.191.229.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      45 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       13 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      63 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        40 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  160.191.229.98      27 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 160.191.229.94  block 160.191.229.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      65 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       11 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237       9 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        57 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  160.191.229.94      28 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 160.191.229.123  block 160.191.229.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      34 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       19 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      21 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        53 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  160.191.229.123     28 ms  PK   MYNET1-AS-AP - MyNet Broadband  
 
 ==========================================================================
  103.29.182.186  block 103.29.182.0/24  exit via NL WorldStream WorldStream B.V.
@@ -13864,24 +13357,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    16  58.65.210.77       240 ms  PK   CYBERNET-AP - Cyber Internet S  
 
 ==========================================================================
- 103.153.39.68  block 103.153.39.0/24  exit via US ATT-INTERNET4 - AT&T Enterprises, LLC
-    1  *
-    2  *
-    3  119.160.114.81      40 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       15 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      11 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      39 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.110      40 ms  PK   TWA                             
-    8  119.63.137.83       28 ms  PK   TWA                             
-    9  *
-   10  *
-   11  119.159.232.243     90 ms  PK   PKTELECOM-AS-PK - Pakistan Tel  
-   12  *
-   13  *
-   14  172.7.38.1          94 ms  US   ATT-INTERNET4 - AT&T Enterpris  <== LEFT PK
-   15  103.153.39.68       54 ms  PK   GETLINKS2-AS-AP - Getlinks (SM  
-
-==========================================================================
  103.115.186.171  block 103.115.186.0/24  exit via IT SEABONE-NET TELECOM ITALIA SPARKLE S.p.A
     1  *
     2  192.168.200.5       18 ms  PRIV private                         
@@ -14400,212 +13875,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    21  103.153.157.89     151 ms  PK   FULLTIMEHOSTING-AS-AP - Full T  
 
 ==========================================================================
- 160.191.228.3  block 160.191.228.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  192.168.200.5       87 ms  PRIV private                         
-    3  119.160.114.81      64 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       11 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      78 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        30 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  160.191.228.3       28 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 160.191.228.25  block 160.191.228.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  192.168.200.5      121 ms  PRIV private                         
-    3  119.160.114.81     135 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       21 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      15 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        58 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  160.191.228.25      31 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 160.191.228.69  block 160.191.228.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  192.168.200.5       35 ms  PRIV private                         
-    3  119.160.114.81      33 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       32 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      14 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        95 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  160.191.228.69      50 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 160.191.228.154  block 160.191.228.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  192.168.200.5      101 ms  PRIV private                         
-    3  119.160.114.81      21 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       33 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      42 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        44 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  160.191.228.154     53 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 160.191.228.137  block 160.191.228.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  192.168.200.5       60 ms  PRIV private                         
-    3  119.160.114.81      14 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       37 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      91 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        45 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  160.191.228.137     34 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 160.191.228.108  block 160.191.228.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      22 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       11 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      17 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        49 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  160.191.228.108    200 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 160.191.228.112  block 160.191.228.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      28 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       13 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      10 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        33 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  160.191.228.112     93 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 160.191.228.152  block 160.191.228.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      17 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       19 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      17 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2       112 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  *
-   11  160.191.228.152    171 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.137.209  block 103.156.137.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  192.168.200.5       12 ms  PRIV private                         
-    3  119.160.114.81      14 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       67 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237       8 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2       134 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  103.156.137.209     74 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.137.173  block 103.156.137.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  192.168.200.5       22 ms  PRIV private                         
-    3  119.160.114.81      45 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       22 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      15 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        45 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  103.156.137.173     47 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.137.87  block 103.156.137.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      49 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       19 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      14 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        83 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  103.156.137.87      41 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.137.26  block 103.156.137.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      82 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       20 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      35 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        76 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  103.156.137.26      96 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.137.17  block 103.156.137.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      15 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       11 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      63 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        28 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  103.156.137.17      90 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.137.169  block 103.156.137.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      35 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       16 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      66 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        35 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  103.156.137.169     47 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.137.28  block 103.156.137.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      30 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       15 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      16 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        68 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  103.156.137.28      49 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.137.29  block 103.156.137.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      43 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       17 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      15 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        74 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  103.156.137.29      57 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
  110.39.134.202  block 110.39.134.0/24  exit via CN CHINANET-BACKBONE - No.31,Jin-rong Stree
     1  *
     2  192.168.200.5       68 ms  PRIV private                         
@@ -15035,91 +14304,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    18  72.255.48.32       179 ms  PK   CYBERNET-AP - Cyber Internet S  
 
 ==========================================================================
- 103.156.136.74  block 103.156.136.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  192.168.200.5       17 ms  PRIV private                         
-    3  119.160.114.81      13 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       12 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      10 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        38 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  103.156.136.74      31 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.136.80  block 103.156.136.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  192.168.200.5       27 ms  PRIV private                         
-    3  119.160.114.81      10 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       12 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      12 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        93 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  103.156.136.80      33 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.136.77  block 103.156.136.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81     106 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       24 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      44 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2       104 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  103.156.136.77      37 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.136.25  block 103.156.136.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      46 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       76 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237       9 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        46 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  103.156.136.25     154 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.136.85  block 103.156.136.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      20 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       10 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      10 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        48 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  103.156.136.85      83 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.136.24  block 103.156.136.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      56 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       21 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237     152 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        79 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  103.156.136.24      29 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
- 103.156.136.177  block 103.156.136.0/24  exit via RO ICI-ROTLD Institutul National de Cerceta
-    1  *
-    2  *
-    3  119.160.114.81      58 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       19 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      37 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  *
-    7  *
-    8  192.162.16.2        76 ms  RO   ICI-ROTLD Institutul National   <== LEFT PK
-    9  *
-   10  103.156.136.177    105 ms  PK   MYNET1-AS-AP - MyNet Broadband  
-
-==========================================================================
  110.39.140.190  block 110.39.140.0/24  exit via CN CHINANET-BACKBONE - No.31,Jin-rong Stree
     1  *
     2  *
@@ -15403,20 +14587,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    15  *
    16  *
    17  110.39.187.182      73 ms  PK   WATEEN-IMS-PK-AS-AP - National  
-
-==========================================================================
- 119.73.105.5  block 119.73.105.0/24  exit via US COGENT-174 - Cogent Communications, LLC
-    1  *
-    2  *
-    3  119.160.114.81      28 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       13 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      21 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      99 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.6        14 ms  PK   TWA                             
-    8  149.40.227.167      13 ms  US   COGENT-174 - Cogent Communicat  <== LEFT PK
-    9  *
-   10  *
-   11  119.73.105.5        47 ms  PK   TES-PL-AS-AP - Trans World Ent  
 
 ==========================================================================
  103.167.3.34  block 103.167.3.0/24  exit via SG EQUINIX-AP
@@ -16018,21 +15188,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    13  *
    14  *
    15  110.39.190.121     111 ms  PK   WATEEN-IMS-PK-AS-AP - National  
-
-==========================================================================
- 124.29.241.215  block 124.29.241.0/24  exit via US 15347 - IBEX Global Solutions
-    1  *
-    2  *
-    3  119.160.114.81      32 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       11 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      13 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226       9 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.6        23 ms  PK   TWA                             
-    8  110.93.252.86       35 ms  PK   TWA                             
-    9  110.93.255.169      39 ms  PK   TWA                             
-   10  119.63.129.210      37 ms  PK   TWA-AS-AP - Transworld Associa  
-   11  *
-   12  124.29.241.215      82 ms  US   15347 - IBEX Global Solutions   <== LEFT PK
 
 ==========================================================================
  72.255.60.33  block 72.255.60.0/24  exit via DE DE-CIX-FRA-IXP
@@ -16864,10 +16019,10 @@ they are Pakistani infrastructure numbered out of foreign space.
    12  *
    13  *
    14  *
-   15  116.51.17.201      141 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
+   15  116.51.17.201      141 ms  US   NTT-DATA-2914 - NTT America, I  squatted
    16  *
    17  *
-   18  129.250.5.251      390 ms  US   NTT-DATA-2914 - NTT America, I  abroad
+   18  129.250.5.251      390 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
    19  61.200.80.234      269 ms  US   NTT-DATA-2914 - NTT America, I  abroad
    20  103.151.64.204     242 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
    21  103.112.0.25       266 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
@@ -16887,10 +16042,10 @@ they are Pakistani infrastructure numbered out of foreign space.
    11  *
    12  *
    13  *
-   14  116.51.17.201      142 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
+   14  116.51.17.201      142 ms  US   NTT-DATA-2914 - NTT America, I  squatted
    15  *
    16  *
-   17  129.250.5.251      339 ms  US   NTT-DATA-2914 - NTT America, I  abroad
+   17  129.250.5.251      339 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
    18  61.200.80.234      254 ms  US   NTT-DATA-2914 - NTT America, I  abroad
    19  103.151.64.204     264 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
    20  103.112.0.40       248 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
@@ -16910,10 +16065,10 @@ they are Pakistani infrastructure numbered out of foreign space.
    11  *
    12  *
    13  *
-   14  116.51.17.201      160 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
+   14  116.51.17.201      160 ms  US   NTT-DATA-2914 - NTT America, I  squatted
    15  *
    16  *
-   17  129.250.5.251      286 ms  US   NTT-DATA-2914 - NTT America, I  abroad
+   17  129.250.5.251      286 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
    18  61.200.80.234      229 ms  US   NTT-DATA-2914 - NTT America, I  abroad
    19  103.151.64.204     228 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
    20  103.112.0.112      247 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
@@ -16934,10 +16089,10 @@ they are Pakistani infrastructure numbered out of foreign space.
    12  *
    13  *
    14  *
-   15  116.51.17.201      155 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
+   15  116.51.17.201      155 ms  US   NTT-DATA-2914 - NTT America, I  squatted
    16  *
    17  *
-   18  129.250.5.251      244 ms  US   NTT-DATA-2914 - NTT America, I  abroad
+   18  129.250.5.251      244 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
    19  61.200.80.234      234 ms  US   NTT-DATA-2914 - NTT America, I  abroad
    20  103.151.64.204     247 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
    21  103.112.0.34       261 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
@@ -16957,10 +16112,10 @@ they are Pakistani infrastructure numbered out of foreign space.
    11  *
    12  *
    13  *
-   14  116.51.17.201      160 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
+   14  116.51.17.201      160 ms  US   NTT-DATA-2914 - NTT America, I  squatted
    15  *
    16  *
-   17  129.250.5.251      257 ms  US   NTT-DATA-2914 - NTT America, I  abroad
+   17  129.250.5.251      257 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
    18  61.200.80.234      270 ms  US   NTT-DATA-2914 - NTT America, I  abroad
    19  103.151.64.204     288 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
    20  103.112.0.217      251 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
@@ -16980,10 +16135,10 @@ they are Pakistani infrastructure numbered out of foreign space.
    11  *
    12  *
    13  *
-   14  116.51.17.201      164 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
+   14  116.51.17.201      164 ms  US   NTT-DATA-2914 - NTT America, I  squatted
    15  *
    16  *
-   17  129.250.5.251      255 ms  US   NTT-DATA-2914 - NTT America, I  abroad
+   17  129.250.5.251      255 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
    18  61.200.80.234      254 ms  US   NTT-DATA-2914 - NTT America, I  abroad
    19  103.151.64.204     251 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
    20  103.112.0.104      512 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
@@ -17003,10 +16158,10 @@ they are Pakistani infrastructure numbered out of foreign space.
    11  *
    12  *
    13  *
-   14  116.51.17.201      206 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
+   14  116.51.17.201      206 ms  US   NTT-DATA-2914 - NTT America, I  squatted
    15  *
    16  *
-   17  129.250.5.251      253 ms  US   NTT-DATA-2914 - NTT America, I  abroad
+   17  129.250.5.251      253 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
    18  61.200.80.234      241 ms  US   NTT-DATA-2914 - NTT America, I  abroad
    19  103.112.0.242      295 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
 
@@ -17025,10 +16180,10 @@ they are Pakistani infrastructure numbered out of foreign space.
    11  *
    12  *
    13  *
-   14  116.51.17.201      159 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
+   14  116.51.17.201      159 ms  US   NTT-DATA-2914 - NTT America, I  squatted
    15  *
    16  *
-   17  129.250.5.251      300 ms  US   NTT-DATA-2914 - NTT America, I  abroad
+   17  129.250.5.251      300 ms  US   NTT-DATA-2914 - NTT America, I  <== LEFT PK
    18  61.200.80.234      243 ms  US   NTT-DATA-2914 - NTT America, I  abroad
    19  103.112.0.216      296 ms  AU   ONEQODEASSETS-AS-AP - OneQode   abroad
 
@@ -17160,22 +16315,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    15  4.16.74.34         301 ms  US   LEVEL3 - Level 3 Parent, LLC    abroad
    16  209.137.137.190    285 ms  US   KDDIA-NET - KDDI America Inc.   abroad
    17  103.83.90.251      253 ms  US   YLINX - YLINX, LLC              abroad
-
-==========================================================================
- 58.84.31.66  block 58.84.31.0/24  exit via US UUNET - Verizon Business
-    1  *
-    2  *
-    3  119.160.114.81      18 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       13 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237       6 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226       8 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.110      94 ms  PK   TWA                             
-    8  110.93.252.49       45 ms  PK   TWA                             
-    9  119.63.130.53       77 ms  PK   TWA-AS-AP - Transworld Associa  
-   10  195.129.143.2       60 ms  US   UUNET - Verizon Business        squatted
-   11  195.129.100.134     92 ms  US   UUNET - Verizon Business        squatted
-   12  195.129.143.18      46 ms  US   UUNET - Verizon Business        <== LEFT PK
-   13  58.84.31.66         59 ms  PK   ASN-NCKHI-AP - NetSol Connect   
 
 ==========================================================================
  110.39.38.234  block 110.39.38.0/24  exit via CN CHINANET-BACKBONE - No.31,Jin-rong Stree
@@ -17599,62 +16738,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    17  110.39.36.142       76 ms  PK   WATEEN-IMS-PK-AS-AP - National  
 
 ==========================================================================
- 138.252.175.134  block 138.252.175.0/24  exit via US CLOUDFLARENET - Cloudflare, Inc.
-    1  *
-    2  *
-    3  119.160.114.81      42 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       21 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      18 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226       6 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.6         9 ms  PK   TWA                             
-    8  110.93.252.84       33 ms  PK   TWA                             
-    9  110.93.252.222      38 ms  PK   TWA                             
-   10  110.93.192.198      62 ms  PK   TWA-AS-AP - Transworld Associa  
-   11  172.69.111.105      38 ms  US   CLOUDFLARENET - Cloudflare, In  <== LEFT PK
-   12  172.69.111.74       41 ms  US   CLOUDFLARENET - Cloudflare, In  abroad
-   13  172.69.111.99       34 ms  US   CLOUDFLARENET - Cloudflare, In  abroad
-   14  *
-   15  138.252.175.134     65 ms  PK   SKY47LIMITED-AS-AP - Sky47 Lim  
-
-==========================================================================
- 138.252.175.7  block 138.252.175.0/24  exit via US CLOUDFLARENET - Cloudflare, Inc.
-    1  *
-    2  192.168.200.5       67 ms  PRIV private                         
-    3  119.160.114.81       9 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61        9 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      11 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      23 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.255.186      37 ms  PK   TWA                             
-    8  110.93.252.224      35 ms  PK   TWA                             
-    9  110.93.192.198      80 ms  PK   TWA-AS-AP - Transworld Associa  
-   10  172.69.111.68       34 ms  US   CLOUDFLARENET - Cloudflare, In  <== LEFT PK
-   11  172.69.111.96      121 ms  US   CLOUDFLARENET - Cloudflare, In  abroad
-   12  172.69.111.83       37 ms  US   CLOUDFLARENET - Cloudflare, In  abroad
-   13  *
-   14  *
-   15  *
-   16  138.252.175.7       48 ms  PK   SKY47LIMITED-AS-AP - Sky47 Lim  
-
-==========================================================================
- 138.252.175.3  block 138.252.175.0/24  exit via US CLOUDFLARENET - Cloudflare, Inc.
-    1  *
-    2  *
-    3  119.160.114.81      53 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       29 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      11 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226       6 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.255.186      45 ms  PK   TWA                             
-    8  110.93.252.224      53 ms  PK   TWA                             
-    9  110.93.192.198      39 ms  PK   TWA-AS-AP - Transworld Associa  
-   10  172.69.111.101      71 ms  US   CLOUDFLARENET - Cloudflare, In  <== LEFT PK
-   11  172.69.111.95       38 ms  US   CLOUDFLARENET - Cloudflare, In  abroad
-   12  172.69.111.73       32 ms  US   CLOUDFLARENET - Cloudflare, In  abroad
-   13  *
-   14  *
-   15  *
-   16  138.252.175.3       57 ms  PK   SKY47LIMITED-AS-AP - Sky47 Lim  
-
-==========================================================================
  58.27.226.97  block 58.27.226.0/24  exit via CN CHINANET-BACKBONE - No.31,Jin-rong Stree
     1  *
     2  192.168.200.5       29 ms  PRIV private                         
@@ -17983,88 +17066,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    16  185.93.35.254      202 ms  PK   FLAMEHOSTING-AS-AP - FLAMEHOST  
 
 ==========================================================================
- 110.38.31.52  block 110.38.31.0/24  exit via US DNIC-AS-00749 - United States Department
-    1  10.99.79.80          3 ms  PRIV private                         
-    2  *
-    3  119.160.114.81      64 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       19 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      17 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226       6 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.6        14 ms  PK   TWA                             
-    8  110.93.196.123      53 ms  PK   TWA-AS-AP - Transworld Associa  
-    9  *
-   10  *
-   11  *
-   12  58.27.166.34        66 ms  PK   WATEEN-IMS-PK-AS-AP - National  
-   13  28.255.129.22       27 ms  US   DNIC-AS-00749 - United States   squatted
-   14  28.255.129.56       15 ms  US   DNIC-AS-00749 - United States   squatted
-   15  28.255.129.85       31 ms  US   DNIC-AS-00749 - United States   <== LEFT PK
-   16  *
-   17  110.38.31.52        39 ms  PK   MULTINET-AS-AP - Multinet Paki  
-
-==========================================================================
- 110.38.31.76  block 110.38.31.0/24  exit via US DNIC-AS-00749 - United States Department
-    1  *
-    2  *
-    3  119.160.114.81      58 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       12 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      10 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      12 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.6         5 ms  PK   TWA                             
-    8  110.93.196.123       8 ms  PK   TWA-AS-AP - Transworld Associa  
-    9  *
-   10  *
-   11  *
-   12  58.27.166.34        32 ms  PK   WATEEN-IMS-PK-AS-AP - National  
-   13  28.255.129.22       29 ms  US   DNIC-AS-00749 - United States   squatted
-   14  28.255.129.58       37 ms  US   DNIC-AS-00749 - United States   <== LEFT PK
-   15  28.255.129.51       29 ms  US   DNIC-AS-00749 - United States   abroad
-   16  *
-   17  28.255.129.209      42 ms  US   DNIC-AS-00749 - United States   abroad
-   18  110.38.31.76        10 ms  PK   MULTINET-AS-AP - Multinet Paki  
-
-==========================================================================
- 110.38.31.77  block 110.38.31.0/24  exit via US DNIC-AS-00749 - United States Department
-    1  *
-    2  *
-    3  119.160.114.81      52 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61      130 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237     115 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      16 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.6        49 ms  PK   TWA                             
-    8  110.93.196.123      11 ms  PK   TWA-AS-AP - Transworld Associa  
-    9  *
-   10  *
-   11  *
-   12  58.27.166.34        40 ms  PK   WATEEN-IMS-PK-AS-AP - National  
-   13  28.255.129.22       29 ms  US   DNIC-AS-00749 - United States   squatted
-   14  28.255.129.56       19 ms  US   DNIC-AS-00749 - United States   squatted
-   15  28.255.129.49       30 ms  US   DNIC-AS-00749 - United States   <== LEFT PK
-   16  *
-   17  28.255.129.209      74 ms  US   DNIC-AS-00749 - United States   abroad
-   18  110.38.31.77       123 ms  PK   MULTINET-AS-AP - Multinet Paki  
-
-==========================================================================
- 110.38.31.7  block 110.38.31.0/24  exit via US DNIC-AS-00749 - United States Department
-    1  *
-    2  *
-    3  119.160.114.81      70 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61        8 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      11 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226       7 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.6        38 ms  PK   TWA                             
-    8  110.93.196.123      12 ms  PK   TWA-AS-AP - Transworld Associa  
-    9  *
-   10  *
-   11  *
-   12  58.27.166.34        19 ms  PK   WATEEN-IMS-PK-AS-AP - National  
-   13  28.255.129.22       24 ms  US   DNIC-AS-00749 - United States   squatted
-   14  28.255.129.56       65 ms  US   DNIC-AS-00749 - United States   squatted
-   15  28.255.129.85       23 ms  US   DNIC-AS-00749 - United States   <== LEFT PK
-   16  *
-   17  110.38.31.7         23 ms  PK   MULTINET-AS-AP - Multinet Paki  
-
-==========================================================================
  202.163.73.158  block 202.163.73.0/24  exit via DE DE-CIX-FRA-IXP
     1  10.99.79.80         29 ms  PRIV private                         
     2  *
@@ -18369,30 +17370,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    22  *
    23  31.210.69.154      251 ms  TR   RADORE Radore Veri Merkezi Hiz  abroad
    24  113.203.218.172    184 ms  GE   ISTANBULDC1 GEOCOM LLC          abroad
-
-==========================================================================
- 103.12.198.49  block 103.12.198.0/24  exit via US COGENT-174 - Cogent Communications, LLC
-    1  *
-    2  192.168.200.5       20 ms  PRIV private                         
-    3  119.160.114.81      13 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       10 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237       8 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      56 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.6        19 ms  PK   TWA                             
-    8  149.40.227.161      22 ms  US   COGENT-174 - Cogent Communicat  <== LEFT PK
-    9  103.12.198.49       12 ms  PK   KKNETWROK-AS-AP - KK Networks   
-
-==========================================================================
- 103.12.198.226  block 103.12.198.0/24  exit via US COGENT-174 - Cogent Communications, LLC
-    1  *
-    2  192.168.200.5       26 ms  PRIV private                         
-    3  119.160.114.81      25 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       15 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      16 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      11 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.254.6        16 ms  PK   TWA                             
-    8  149.40.227.161      82 ms  US   COGENT-174 - Cogent Communicat  <== LEFT PK
-    9  103.12.198.226      18 ms  PK   KKNETWROK-AS-AP - KK Networks   
 
 ==========================================================================
  115.167.50.178  block 115.167.50.0/24  exit via US COGENT-174 - Cogent Communications, LLC
@@ -18703,23 +17680,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    19  117.102.11.226     109 ms  PK   BVPL-AS-AP - BROADBAND VISION   
 
 ==========================================================================
- 110.38.181.95  block 110.38.181.0/24  exit via US COGENT-174 - Cogent Communications, LLC
-    1  *
-    2  192.168.200.5       21 ms  PRIV private                         
-    3  119.160.114.81      40 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       15 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      17 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      55 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  110.93.255.186      27 ms  PK   TWA                             
-    8  110.93.252.51       58 ms  PK   TWA                             
-    9  149.40.226.67       53 ms  US   COGENT-174 - Cogent Communicat  <== LEFT PK
-   10  *
-   11  *
-   12  110.38.162.178     120 ms  PK   WATEEN-IMS-PK-AS-AP - National  
-   13  *
-   14  110.38.181.95       74 ms  PK   DSIPL-AS-AP - Dubai Sky Intern  
-
-==========================================================================
  72.255.36.230  block 72.255.36.0/24  exit via DE DE-CIX-FRA-IXP
     1  *
     2  *
@@ -18931,19 +17891,6 @@ they are Pakistani infrastructure numbered out of foreign space.
    17  *
    18  *
    19  210.56.20.133      165 ms  PK   COMSATS - Commission on Scienc  
-
-==========================================================================
- 209.150.154.35  block 209.150.154.0/24  exit via US COGENT-174 - Cogent Communications, LLC
-    1  *
-    2  *
-    3  119.160.114.81      47 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    4  119.160.84.61       19 ms  PK   Mobilink-AS-PK - PMCL /LDI IP   
-    5  119.30.105.237      32 ms  PK   Mobilink-Peering-AS-PK - IX Pe  
-    6  110.93.210.226      52 ms  PK   TWA-AS-AP - Transworld Associa  
-    7  149.40.227.35       16 ms  US   COGENT-174 - Cogent Communicat  <== LEFT PK
-    8  *
-    9  209.150.154.116     29 ms  PK   CMPAKLIMITED-AS-AP - CMPak Lim  
-   10  209.150.154.35      25 ms  PK   CMPAKLIMITED-AS-AP - CMPak Lim  
 
 ==========================================================================
  175.107.252.39  block 175.107.252.0/24  exit via SG EQUINIX-AP

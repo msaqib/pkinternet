@@ -7,9 +7,14 @@ applied to that probe. This does that for the vantage that produced 99.8% of the
 route sweep, AS45669 Mobilink, and records which rules survive.
 
 WHAT SURVIVES, and why it matters
-  R2 (an address is not in the country it claims) survives, because it rests on a
-  MEDIAN over thousands of observations of the same address. Single-sample noise
-  averages out.
+  R2 (an address is not in the country it claims) survives, and is now fed by proper
+  measurement rather than by sweep leftovers. measure_rtt.py and measure_rtt_ttl.py
+  send 25 to 30 packets per address at 6 to 8 threads and report the MINIMUM, which
+  is the right estimator for propagation delay: queuing, rate limiting and slow ICMP
+  generation only ever ADD to a round trip. Dispersion on those bursts is 1 ms, against
+  85 ms on the same addresses during the sweep, and the sweep's readings were inflated
+  by a median of 30 ms on a scale where 34.2 ms is the whole domestic budget.
+  Feeding R2 measured minimums took the falsified count from 37 to 78.
 
   The RTT arm of the Exp 04 detector does NOT survive on this dataset. local_trace.py
   sends ONE packet per TTL and ran at 120 threads, so each hop RTT is a single sample
@@ -109,23 +114,41 @@ def main():
                 rt[h["ip"]].append(h["rtt"])
                 meta[h["ip"]] = (h["cc"], h.get("asn"), h.get("holder") or "", h.get("kind"))
 
-    # ---- R2: foreign-registered addresses whose median beats their country's floor
+    # ---- measured RTT, where a dedicated burst exists
+    # The sweep sent ONE packet per TTL at 120 threads, which inflates every reading by
+    # a median of 30 ms against a 34.2 ms domestic ceiling. Where measure_rtt.py or
+    # measure_rtt_ttl.py has a clean burst, its MINIMUM replaces the sweep median.
+    measured = {}
+    for fn, how in (("rtt_foreign.json", "direct echo"),
+                    ("rtt_foreign_ttl.json", "TTL-exceeded")):
+        fp = P("3_routes", fn)
+        if not os.path.exists(fp):
+            continue
+        for ip, v in json.load(io.open(fp, encoding="utf-8")).items():
+            if v.get("n"):
+                measured[ip] = dict(rtt=v["min"], n=v["n"], spread=v.get("spread", 0), how=how)
+
+    # ---- R2: an address cannot be where its registry says
     MIN_SAMPLES = 3
     falsified, upheld, undecidable = {}, {}, {}
     for ip, v in rt.items():
         cc, asn, holder, kind = meta[ip]
         if cc in ("PK", "PRIV", "CGN", "??") or kind == "ixp":
             continue
-        if len(v) < MIN_SAMPLES:
-            continue
-        med = st.median(v)
+        m = measured.get(ip)
+        if m:
+            best, src, n = m["rtt"], m["how"], m["n"]      # burst minimum: a measurement
+        else:
+            if len(v) < MIN_SAMPLES:
+                continue
+            best, src, n = st.median(v), "sweep median (UNIMPROVED)", len(v)
         f = F.get(cc)
         if not f:
-            undecidable[ip] = dict(cc=cc, n=len(v), median=med, why="no hub for country")
+            undecidable[ip] = dict(cc=cc, n=n, rtt=best, src=src, why="no hub for country")
             continue
-        rec = dict(cc=cc, asn=asn, holder=holder[:40], n=len(v),
-                   median=med, floor=f["floor_ms"], hub=f["hub"])
-        if med < f["floor_ms"]:
+        rec = dict(cc=cc, asn=asn, holder=holder[:40], n=n, rtt=best, src=src,
+                   floor=f["floor_ms"], hub=f["hub"])
+        if best < f["floor_ms"]:
             falsified[ip] = rec
         elif f["floor_ms"] <= DOM_CEIL:
             undecidable[ip] = dict(rec, why=f"floor {f['floor_ms']:.1f} ms is inside the "
@@ -158,7 +181,9 @@ def main():
         R1=dict(chain=[dict(hop=i, ip=ip, n=n, pct=round(p, 1)) for i, ip, n, p in chain],
                 B_access_ms=st.median(rt[chain[-1][1]]) if chain else None),
         R2=dict(falsified=len(falsified), upheld=len(upheld), undecidable=len(undecidable),
-                falsified_detail=falsified),
+                measured=sum(1 for x in list(falsified.values())+list(upheld.values())+list(undecidable.values())
+                             if "UNIMPROVED" not in x.get("src","")),
+                falsified_detail=falsified, upheld_detail=upheld, undecidable_detail=undecidable),
         R4=dict(n=len(dest), median_ms=st.median(dest) if dest else None,
                 under_domestic_ceiling_pct=round(100*sum(1 for x in dest if x < DOM_CEIL)/len(dest), 1) if dest else None),
         RTT_ARM=dict(viable=False,
@@ -176,7 +201,11 @@ def main():
     for i, ip, n, p in chain:
         print(f"     hop {i}  {ip:<18}{n:>7,} traces  {p:.1f}%   median {st.median(rt[ip]):.0f} ms")
     print(f"     B_access = {out['R1']['B_access_ms']:.0f} ms")
-    print(f"\nR2 geolocation falsification, median over >={MIN_SAMPLES} observations:")
+    unimp = sum(1 for x in list(falsified.values())+list(upheld.values())+list(undecidable.values())
+                if "UNIMPROVED" in x.get("src", ""))
+    print("")
+    print(f"R2 geolocation falsification ({len(measured)} on measured burst minimums, "
+          f"{unimp} still on sweep medians):")
     print(f"     falsified   {len(falsified):>5}  address is NOT where it claims")
     print(f"     upheld      {len(upheld):>5}  consistent with its claimed country")
     print(f"     undecidable {len(undecidable):>5}  floor sits inside the domestic band")

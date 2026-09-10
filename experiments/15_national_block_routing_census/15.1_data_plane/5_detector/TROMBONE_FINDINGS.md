@@ -10,7 +10,7 @@ is that vantage's view, not a national average.
 
 ## The headline
 
-**1,003 of 34,191 selected traces (2.93%) left Pakistan and came back.**
+**931 of 34,191 selected traces (2.72%) left Pakistan and came back.**
 
 **This is a floor, not a rate.** It counts only detours we can see. A detour inside a
 foreign network whose routers never answer, or one carried in an MPLS tunnel, is
@@ -68,11 +68,11 @@ cannot reach it that fast, no Pakistani origin can.
 
 | | addresses |
 |---|--:|
-| **Falsified**, cannot be where registered | **37** |
-| Upheld, consistent with the claimed country | 161 |
-| Undecidable, floor sits inside the domestic band | 5 |
+| **Falsified**, cannot be where registered | **78** |
+| Upheld, consistent with the claimed country | 342 |
+| Undecidable, floor sits inside the domestic band | 78 |
 
-The 37 falsified addresses fall in 12 /24s, dominated by Cogent
+The 78 falsified addresses fall in 12 /24s, dominated by Cogent
 `149.40.226.0/24` and `149.40.227.0/24`, plus UUNET, two United States Department of
 Defense ranges and several US corporate blocks. **These are Pakistani infrastructure
 numbered out of foreign address space, and they are excluded from the foreign test.**
@@ -90,15 +90,15 @@ therefore **not used** as a detection input.
 | exit country | traces | physical floor, ms | nearest hub |
 |---|--:|--:|---|
 | CN | 376 | 14.1 | Urumqi |
-| DE | 212 | 52.1 | Frankfurt |
-| US | 190 | 118.9 | Los Angeles |
-| SG | 111 | 44.8 | Singapore |
+| DE | 210 | 52.1 | Frankfurt |
+| US | 146 | 118.9 | Los Angeles |
+| SG | 107 | 44.8 | Singapore |
+| IT | 35 | 51.1 | Milan |
 | OM | 32 | 4.2 | Muscat |
-| RO | 30 | 38.2 | Bucharest |
-| IT | 27 | 51.1 | Milan |
 | HK | 7 | 39.8 | Hong Kong |
 | AE | 7 | 7.0 | Dubai |
 | NL | 6 | 54.5 | Amsterdam |
+| SA | 5 | 23.5 | Jeddah |
 
 Exits crossing a foreign internet exchange:
 
@@ -122,21 +122,21 @@ Singapore.
 | `27.111.230.181` | 58 | SG | 116 | 45 | 2.6x | EQUINIX-AP |
 | `149.14.211.241` | 53 | US | 167 | 119 | 1.4x | COGENT-174 - Cogent Communicatio |
 | `185.1.191.16` | 32 | OM | 47 | 4 | 11.2x | EQUINIX-IX-MUSCAT |
-| `192.162.16.2` | 30 | RO | 56 | 38 | 1.5x | ICI-ROTLD Institutul National de |
 | `27.111.228.83` | 28 | SG | 217 | 45 | 4.8x | EQUINIX-AP |
 | `154.54.72.109` | 27 | US | 158 | 119 | 1.3x | COGENT-174 - Cogent Communicatio |
 | `195.22.198.88` | 27 | IT | 129 | 51 | 2.5x | SEABONE-NET TELECOM ITALIA SPARK |
-| `116.51.17.201` | 16 | US | 160 | 119 | 1.3x | NTT-DATA-2914 - NTT America, Inc |
 | `184.105.222.9` | 14 | US | 249 | 119 | 2.1x | HURRICANE - Hurricane Electric L |
 | `27.111.228.81` | 12 | SG | 126 | 45 | 2.8x | EQUINIX-AP |
+| `92.242.166.15` | 11 | DE | 221 | 52 | 4.2x | AS203446 SMARTNET Germany GmbH |
+| `154.54.0.42` | 8 | US | 304 | 119 | 2.6x | COGENT-174 - Cogent Communicatio |
 
 Confidence by margin over the physical floor:
 
 | | traces | share |
 |---|--:|--:|
-| **Strong**, clears the floor by 2x or more | 801 | 80% |
-| Moderate, 1.3x to 2x | 163 | 16% |
-| Thin, under 1.3x | 39 | 4% |
+| **Strong**, clears the floor by 2x or more | 817 | 88% |
+| Moderate, 1.3x to 2x | 110 | 12% |
+| Thin, under 1.3x | 4 | 0% |
 
 ## Tromboning is concentrated in two networks
 
@@ -145,13 +145,13 @@ Confidence by margin over the physical floor:
 | AS9541 | Cyber Internet Services (Pvt) Ltd. | 777 | 238 | **30.6%** |
 | AS38264 | National WiMAX/IMS environment | 1,088 | 313 | **28.8%** |
 | AS138423 | CMPak Limited | 325 | 32 | **9.8%** |
-| AS136969 | KK Networks (Pvt) Ltd. | 119 | 2 | **1.7%** |
-| AS136030 | Redtone Telecommunications Pakista | 129 | 2 | **1.6%** |
-| AS9260 | Multinet Pakistan Pvt. Ltd. | 554 | 7 | **1.3%** |
-| AS23888 | National Telecommunication Corpora | 151 | 1 | **0.7%** |
 | AS7590 | Commission on Science and Technolo | 170 | 1 | **0.6%** |
-| AS38193 | Transworld Associates (Pvt.) Ltd. | 377 | 2 | **0.5%** |
-| AS59257 | CMPak Limited | 189 | 1 | **0.5%** |
+| AS136384 | Optix Pakistan (Pvt.) Limited | 244 | 0 | **0.0%** |
+| AS132165 | Connect Communications | 207 | 0 | **0.0%** |
+| AS135523 | Multinet Broadband | 113 | 0 | **0.0%** |
+| AS59257 | CMPak Limited | 189 | 0 | **0.0%** |
+| AS17557 | Pakistan Telecommunication Company | 23,593 | 0 | **0.0%** |
+| AS17563 | Autonomous System Number for Nexli | 264 | 0 | **0.0%** |
 
 Networks with fewer than 100 traces are omitted, since a rate on 20 traces carries an
 interval wide enough to overlap anything.
@@ -162,13 +162,13 @@ a few operators' transit arrangements, not a national condition.
 
 ## How much rests on one address
 
-`182.45.51.22`, a single CHINANET address, carries **376 of the 1,003 tromboning traces,
-37%**.
+`182.45.51.22`, a single CHINANET address, carries **376 of the 931 tromboning traces,
+40%**.
 
 | treatment of that one address | trombone traces | headline |
 |---|--:|--:|
-| Counted as foreign, as here | 1,003 | **2.93%** |
-| Treated instead as squatted Pakistani space | 627 | 1.83% |
+| Counted as foreign, as here | 931 | **2.72%** |
+| Treated instead as squatted Pakistani space | 555 | 1.62% |
 
 **One address moves the headline by 1.10 points**, so it deserves its own
 paragraph rather than a footnote.
@@ -218,5 +218,5 @@ python 5_detector/classify_local.py        # R5, writes trombone_local.json + ro
 python 5_detector/write_trombone_findings.py
 ```
 
-`5_detector/routes_trombone.txt` holds all 1,003 tromboning paths with the exit hop
+`5_detector/routes_trombone.txt` holds all 931 tromboning paths with the exit hop
 marked, so every verdict here can be checked against the path that produced it.
