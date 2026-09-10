@@ -65,15 +65,19 @@ med_hops = statistics.median([sum(1 for h in r["path"] if h) for r in ann])
 to_dist  = sorted(collections.Counter(sum(1 for h in r["path"] if h is None) for r in ann).items())
 
 def tbl(rs):
-    o = ["| ASN | network | blocks | with life | live hosts | blk >=8 | traces | reached | selected | median hops |",
-         "|---|---|--:|--:|--:|--:|--:|--:|--:|--:|"]
+    # "checked" is the denominator for "live hosts" and must sit beside it. Without it a
+    # reader compares raw counts between networks of very different size and reads a
+    # difference in occupancy where there is only a difference in how much we looked.
+    o = ["| ASN | network | blocks | checked | live hosts | answered | with life | blk >=8 | traces | reached | selected | median hops |",
+         "|---|---|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|"]
     for r in rs:
         a = r["asn"]
         nm = r["name"].split(" - ", 1)[-1][:34]
         d = statistics.median(depth[a]) if depth.get(a) else 0
-        o.append(f"| {'AS'+a if a != 'unannounced' else 'none'} | {nm} | {r['blocks']:,} | {r['liveblk']:,} | "
-                 f"{r['live']:,} | {r['blk8']:,} | {r['traces']:,} | {r['reached']:,} ({r['pct_reach']:.0f}%) | "
-                 f"{r['sel']:,} | {d:.0f} |")
+        ar = 100 * r["live"] / max(r["checks"], 1)
+        o.append(f"| {'AS'+a if a != 'unannounced' else 'none'} | {nm} | {r['blocks']:,} | {r['checks']:,} | "
+                 f"{r['live']:,} | {ar:.1f}% | {r['liveblk']:,} | {r['blk8']:,} | {r['traces']:,} | "
+                 f"{r['reached']:,} ({r['pct_reach']:.0f}%) | {r['sel']:,} | {d:.0f} |")
     return "\n".join(o)
 
 to_tbl = "\n".join(f"| {k} | {v:,} | {100*v/len(ann):.1f}% |" for k, v in to_dist[:9])
@@ -96,7 +100,7 @@ enough to analyse.
 |---|---|
 | Addresses in the universe | **{T['addrs']:,}** across {T['blocks']:,} /24 blocks, {len(rows):,} networks |
 | Addresses actually checked | {T['checks']:,} ({100*T['checks']/T['addrs']:.1f}% of the space) |
-| Live hosts found | **{T['live']:,}** ({100*T['live']/T['checks']:.1f}% of checks answered) |
+| Live hosts found | **{T['live']:,}** from the {T['checks']:,} checked, so **{100*T['live']/T['checks']:.1f}% answered**. Not {100*T['live']/T['addrs']:.2f}% of the space: the other {T['addrs']-T['checks']:,} addresses were never tested |
 | Blocks with at least one live host | {T['liveblk']:,} of {T['blocks']:,} ({100*T['liveblk']/T['blocks']:.0f}%) |
 | Blocks that reached 8 live hosts | {T['blk8']:,} ({100*T['blk8']/T['liveblk']:.0f}% of live blocks) |
 | Traceroutes attempted | {T['traces']:,} |
@@ -112,8 +116,15 @@ was enough to find life in {100*T['liveblk']/T['blocks']:.0f}% of blocks.
 ## Reading the table
 
 * **blocks** is /24-equivalents the network announces.
+* **checked** is how many addresses in that network were actually tested. **This is the
+  denominator for the next column and the two must be read together.** It is not 256 per
+  block: the sampler tests 8 per block, escalating to 64 only where something answered.
+* **live hosts** is distinct addresses that answered, from either vantage point. It is a
+  **floor**, not a count of what is there, because sampling stops once a block yields 8.
+* **answered** is live hosts as a share of checked. It is the only column here that can be
+  compared between networks directly. The raw counts cannot: they mostly track how large
+  the network is and how much of it we looked at.
 * **with life** is blocks where at least one address answered.
-* **live hosts** is distinct addresses that answered, from either vantage point.
 * **blk >=8** is blocks that reached 8 live hosts, the panel target for Exp 16.1.
 * **reached** is traces whose last hop is the target itself. This is the route
   visibility number: it says how far into that network we can actually see.

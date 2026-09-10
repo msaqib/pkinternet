@@ -16,7 +16,7 @@ enough to analyse.
 |---|---|
 | Addresses in the universe | **5,774,336** across 22,556 /24 blocks, 352 networks |
 | Addresses actually checked | 844,102 (14.6% of the space) |
-| Live hosts found | **43,737** (5.2% of checks answered) |
+| Live hosts found | **43,737** from the 844,102 checked, so **5.2% answered**. Not 0.76% of the space: the other 4,930,234 addresses were never tested |
 | Blocks with at least one live host | 5,887 of 22,556 (26%) |
 | Blocks that reached 8 live hosts | 4,406 (75% of live blocks) |
 | Traceroutes attempted | 43,765 |
@@ -32,8 +32,15 @@ was enough to find life in 26% of blocks.
 ## Reading the table
 
 * **blocks** is /24-equivalents the network announces.
+* **checked** is how many addresses in that network were actually tested. **This is the
+  denominator for the next column and the two must be read together.** It is not 256 per
+  block: the sampler tests 8 per block, escalating to 64 only where something answered.
+* **live hosts** is distinct addresses that answered, from either vantage point. It is a
+  **floor**, not a count of what is there, because sampling stops once a block yields 8.
+* **answered** is live hosts as a share of checked. It is the only column here that can be
+  compared between networks directly. The raw counts cannot: they mostly track how large
+  the network is and how much of it we looked at.
 * **with life** is blocks where at least one address answered.
-* **live hosts** is distinct addresses that answered, from either vantage point.
 * **blk >=8** is blocks that reached 8 live hosts, the panel target for Exp 16.1.
 * **reached** is traces whose last hop is the target itself. This is the route
   visibility number: it says how far into that network we can actually see.
@@ -42,48 +49,48 @@ was enough to find life in 26% of blocks.
 
 ## Every network with a live host, top 40 by live hosts
 
-| ASN | network | blocks | with life | live hosts | blk >=8 | traces | reached | selected | median hops |
-|---|---|--:|--:|--:|--:|--:|--:|--:|--:|
-| AS17557 | Pakistan Telecommunication | 14,573 | 3,979 | 29,536 | 3,077 | 29,544 | 24,909 (84%) | 23,593 | 5 |
-| AS9541 | Cyber Internet Services (Pvt)  | 876 | 164 | 1,301 | 139 | 1,301 | 792 (61%) | 777 | 8 |
-| AS23674 | Nayatel (Pvt) Ltd | 560 | 149 | 1,187 | 134 | 1,187 | 680 (57%) | 663 | 7 |
-| AS38264 | National WiMAX/IMS env | 684 | 162 | 1,182 | 126 | 1,184 | 1,095 (92%) | 1,088 | 9 |
-| AS9260 | Multinet Pakistan Pvt. Ltd. | 119 | 77 | 610 | 72 | 610 | 558 (91%) | 554 | 8 |
-| AS24499 | Telenor Pakistan | 80 | 56 | 461 | 49 | 461 | 435 (94%) | 405 | 8 |
-| AS38193 | Transworld Associates (Pvt.) Ltd | 93 | 57 | 451 | 49 | 451 | 388 (86%) | 377 | 7 |
-| AS135407 | Trans World Enterprise Servic | 90 | 47 | 409 | 46 | 409 | 397 (97%) | 363 | 8 |
-| AS138423 | CMPak Limited | 79 | 66 | 373 | 19 | 386 | 342 (89%) | 325 | 8 |
-| AS132165 | Connect Communications | 136 | 39 | 368 | 21 | 372 | 314 (84%) | 207 | 8 |
-| AS136384 | Optix Pakistan (Pvt.) Limited | 88 | 37 | 351 | 26 | 351 | 328 (93%) | 244 | 7 |
-| AS17563 | Autonomous System Number for | 119 | 42 | 311 | 32 | 311 | 264 (85%) | 264 | 9 |
-| AS17911 | Brain Telecommunication Ltd. | 49 | 25 | 268 | 5 | 268 | 78 (29%) | 66 | 10 |
-| AS23966 | LINKdotNET Telecom Limited | 277 | 46 | 256 | 15 | 256 | 203 (79%) | 199 | 7 |
-| AS59257 | CMPak Limited | 182 | 36 | 252 | 23 | 252 | 195 (77%) | 189 | 9 |
-| AS45773 | PERN AS Content Servie Provi | 47 | 30 | 232 | 27 | 232 | 184 (79%) | 182 | 8 |
-| AS23888 | National Telecommunication Corpo | 95 | 34 | 228 | 21 | 228 | 151 (66%) | 151 | 8 |
-| AS7590 | Commission on Science and Technolo | 56 | 30 | 226 | 18 | 226 | 181 (80%) | 170 | 8 |
-| AS24435 | Supernet Limited T | 73 | 28 | 210 | 23 | 210 | 191 (91%) | 189 | 9 |
-| AS23750 | GERRYS INFORMATION TECHNOLOGY | 61 | 24 | 186 | 20 | 186 | 175 (94%) | 173 | 9 |
-| AS38713 | Broadband ISP, FTTH and Ca | 47 | 24 | 177 | 19 | 177 | 164 (93%) | 164 | 9 |
-| AS59323 | Punjab Information Technolo | 5 | 5 | 169 | 4 | 169 | 17 (10%) | 9 | 9 |
-| AS135523 | Multinet Broadband | 25 | 21 | 160 | 9 | 160 | 136 (85%) | 113 | 7 |
-| AS136030 | Redtone Telecommunications P | 30 | 20 | 143 | 15 | 143 | 129 (90%) | 129 | 8 |
-| AS55501 | 141-143 Maulana Shaukat Ali R | 30 | 18 | 141 | 14 | 141 | 132 (94%) | 129 | 8 |
-| AS136969 | KK Networks (Pvt) Ltd. | 27 | 17 | 129 | 14 | 129 | 123 (95%) | 119 | 8 |
-| AS133495 | Vision telecom Private limite | 18 | 13 | 108 | 8 | 108 | 102 (94%) | 77 | 9 |
-| AS150371 | Pace Telecom and Brodcasting  | 21 | 17 | 107 | 6 | 107 | 98 (92%) | 84 | 9 |
-| AS150750 | IN CABLE INTERNET (PRIVATE) LIM | 46 | 14 | 101 | 10 | 101 | 90 (89%) | 88 | 9 |
-| AS17539 | NetSol Connect | 42 | 16 | 98 | 9 | 98 | 85 (87%) | 85 | 10 |
-| AS18053 | Special Communication Organizat | 27 | 12 | 92 | 9 | 92 | 92 (100%) | 87 | 7 |
-| AS152605 | Z COM NETWORKS | 24 | 11 | 88 | 11 | 88 | 85 (97%) | 85 | 9 |
-| AS142647 | Nasstec Airnet Networks Private  | 15 | 11 | 86 | 4 | 86 | 82 (95%) | 62 | 9 |
-| AS140607 | Sign In (PVT) LTD | 24 | 14 | 83 | 7 | 83 | 72 (87%) | 65 | 9 |
-| AS58470 | IX Peering for Mobi | 21 | 10 | 81 | 8 | 81 | 69 (85%) | 57 | 6 |
-| AS55453 | House # 39 Street 38 F10  | 16 | 11 | 80 | 9 | 80 | 72 (90%) | 69 | 5 |
-| AS24440 | Cyber Internet Services Paki | 23 | 9 | 76 | 9 | 76 | 50 (66%) | 46 | 7 |
-| AS45669 | PMCL /LDI IP TRANSIT | 415 | 12 | 74 | 7 | 74 | 61 (82%) | 42 | 5 |
-| AS58895 | Ebone Network (PVT.) Limited | 154 | 10 | 70 | 6 | 70 | 68 (97%) | 67 | 8 |
-| AS9387 | SHARP TELECOM (PRIVATE) LIM | 23 | 9 | 70 | 8 | 70 | 62 (89%) | 62 | 8 |
+| ASN | network | blocks | checked | live hosts | answered | with life | blk >=8 | traces | reached | selected | median hops |
+|---|---|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| AS17557 | Pakistan Telecommunication | 14,573 | 435,875 | 29,536 | 6.8% | 3,979 | 3,077 | 29,544 | 24,909 (84%) | 23,593 | 5 |
+| AS9541 | Cyber Internet Services (Pvt)  | 876 | 22,260 | 1,301 | 5.8% | 164 | 139 | 1,301 | 792 (61%) | 777 | 8 |
+| AS23674 | Nayatel (Pvt) Ltd | 560 | 16,372 | 1,187 | 7.3% | 149 | 134 | 1,187 | 680 (57%) | 663 | 7 |
+| AS38264 | National WiMAX/IMS env | 684 | 21,196 | 1,182 | 5.6% | 162 | 126 | 1,184 | 1,095 (92%) | 1,088 | 9 |
+| AS9260 | Multinet Pakistan Pvt. Ltd. | 119 | 6,286 | 610 | 9.7% | 77 | 72 | 610 | 558 (91%) | 554 | 8 |
+| AS24499 | Telenor Pakistan | 80 | 3,659 | 461 | 12.6% | 56 | 49 | 461 | 435 (94%) | 405 | 8 |
+| AS38193 | Transworld Associates (Pvt.) Ltd | 93 | 4,532 | 451 | 10.0% | 57 | 49 | 451 | 388 (86%) | 377 | 7 |
+| AS135407 | Trans World Enterprise Servic | 90 | 3,140 | 409 | 13.0% | 47 | 46 | 409 | 397 (97%) | 363 | 8 |
+| AS138423 | CMPak Limited | 79 | 26,508 | 373 | 1.4% | 66 | 19 | 386 | 342 (89%) | 325 | 8 |
+| AS132165 | Connect Communications | 136 | 35,038 | 368 | 1.1% | 39 | 21 | 372 | 314 (84%) | 207 | 8 |
+| AS136384 | Optix Pakistan (Pvt.) Limited | 88 | 22,352 | 351 | 1.6% | 37 | 26 | 351 | 328 (93%) | 244 | 7 |
+| AS17563 | Autonomous System Number for | 119 | 4,703 | 311 | 6.6% | 42 | 32 | 311 | 264 (85%) | 264 | 9 |
+| AS17911 | Brain Telecommunication Ltd. | 49 | 12,446 | 268 | 2.2% | 25 | 5 | 268 | 78 (29%) | 66 | 10 |
+| AS23966 | LINKdotNET Telecom Limited | 277 | 7,807 | 256 | 3.3% | 46 | 15 | 256 | 203 (79%) | 199 | 7 |
+| AS59257 | CMPak Limited | 182 | 5,062 | 252 | 5.0% | 36 | 23 | 252 | 195 (77%) | 189 | 9 |
+| AS45773 | PERN AS Content Servie Provi | 47 | 2,523 | 232 | 9.2% | 30 | 27 | 232 | 184 (79%) | 182 | 8 |
+| AS23888 | National Telecommunication Corpo | 95 | 3,660 | 228 | 6.2% | 34 | 21 | 228 | 151 (66%) | 151 | 8 |
+| AS7590 | Commission on Science and Technolo | 56 | 3,107 | 226 | 7.3% | 30 | 18 | 226 | 181 (80%) | 170 | 8 |
+| AS24435 | Supernet Limited T | 73 | 2,819 | 210 | 7.4% | 28 | 23 | 210 | 191 (91%) | 189 | 9 |
+| AS23750 | GERRYS INFORMATION TECHNOLOGY | 61 | 2,444 | 186 | 7.6% | 24 | 20 | 186 | 175 (94%) | 173 | 9 |
+| AS38713 | Broadband ISP, FTTH and Ca | 47 | 2,300 | 177 | 7.7% | 24 | 19 | 177 | 164 (93%) | 164 | 9 |
+| AS59323 | Punjab Information Technolo | 5 | 1,270 | 169 | 13.3% | 5 | 4 | 169 | 17 (10%) | 9 | 9 |
+| AS135523 | Multinet Broadband | 25 | 6,356 | 160 | 2.5% | 21 | 9 | 160 | 136 (85%) | 113 | 7 |
+| AS136030 | Redtone Telecommunications P | 30 | 1,780 | 143 | 8.0% | 20 | 15 | 143 | 129 (90%) | 129 | 8 |
+| AS55501 | 141-143 Maulana Shaukat Ali R | 30 | 1,640 | 141 | 8.6% | 18 | 14 | 141 | 132 (94%) | 129 | 8 |
+| AS136969 | KK Networks (Pvt) Ltd. | 27 | 1,241 | 129 | 10.4% | 17 | 14 | 129 | 123 (95%) | 119 | 8 |
+| AS133495 | Vision telecom Private limite | 18 | 4,572 | 108 | 2.4% | 13 | 8 | 108 | 102 (94%) | 77 | 9 |
+| AS150371 | Pace Telecom and Brodcasting  | 21 | 5,334 | 107 | 2.0% | 17 | 6 | 107 | 98 (92%) | 84 | 9 |
+| AS150750 | IN CABLE INTERNET (PRIVATE) LIM | 46 | 1,499 | 101 | 6.7% | 14 | 10 | 101 | 90 (89%) | 88 | 9 |
+| AS17539 | NetSol Connect | 42 | 1,843 | 98 | 5.3% | 16 | 9 | 98 | 85 (87%) | 85 | 10 |
+| AS18053 | Special Communication Organizat | 27 | 1,016 | 92 | 9.1% | 12 | 9 | 92 | 92 (100%) | 87 | 7 |
+| AS152605 | Z COM NETWORKS | 24 | 978 | 88 | 9.0% | 11 | 11 | 88 | 85 (97%) | 85 | 9 |
+| AS142647 | Nasstec Airnet Networks Private  | 15 | 3,810 | 86 | 2.3% | 11 | 4 | 86 | 82 (95%) | 62 | 9 |
+| AS140607 | Sign In (PVT) LTD | 24 | 6,096 | 83 | 1.4% | 14 | 7 | 83 | 72 (87%) | 65 | 9 |
+| AS58470 | IX Peering for Mobi | 21 | 902 | 81 | 9.0% | 10 | 8 | 81 | 69 (85%) | 57 | 6 |
+| AS55453 | House # 39 Street 38 F10  | 16 | 690 | 80 | 11.6% | 11 | 9 | 80 | 72 (90%) | 69 | 5 |
+| AS24440 | Cyber Internet Services Paki | 23 | 734 | 76 | 10.4% | 9 | 9 | 76 | 50 (66%) | 46 | 7 |
+| AS45669 | PMCL /LDI IP TRANSIT | 415 | 7,420 | 74 | 1.0% | 12 | 7 | 74 | 61 (82%) | 42 | 5 |
+| AS58895 | Ebone Network (PVT.) Limited | 154 | 3,175 | 70 | 2.2% | 10 | 6 | 70 | 68 (97%) | 67 | 8 |
+| AS9387 | SHARP TELECOM (PRIVATE) LIM | 23 | 936 | 70 | 7.5% | 9 | 8 | 70 | 62 (89%) | 62 | 8 |
 
 The remaining **196** networks with live hosts hold 3,206 live hosts
 across 485 blocks, of which 278 reached 8, and they contributed
