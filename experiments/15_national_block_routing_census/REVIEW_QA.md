@@ -17,7 +17,7 @@ Status on each answer:
 
 ## A. Open threads
 
-### A1. PERN, Fasttrack, Nova, Z Com etc — which are PTCL customers and which are TWA customers?
+### A1. PERN, Fasttrack, Nova, Z Com etc: which are PTCL customers and which are TWA customers?
 
 **Partly answered.** We cannot see commercial relationships, but we can see which transit
 network our packets actually cross to reach each destination. From the 34,191 selected
@@ -53,28 +53,26 @@ naming before it can be looked up.
 **Open.** Not started. This experiment is a single snapshot taken 8 to 10 September 2026
 and holds no July data. The longitudinal comparison belongs in the follow-on experiment.
 
-### A3. RIS vs RouteViews — confirm
+### A3. RIS vs RouteViews, confirm
 
 **Open, and worth stating plainly.** Everything in this experiment that touches BGP comes
 from **RIPEstat**, which is fed by **RIS**. RouteViews has not been consulted at all, so
 we have no cross-check on route origin. This matters directly for A4 and B3 below, where
 a RIS-only view is currently doing load-bearing work.
 
-### A4. Announcing foreign IPs — is it automatic or manual?
+### A4. Announcing foreign IPs: is it automatic or manual?
 
 **Answered.** Manual. A network announces a prefix only if its operators configure BGP to
 originate it. Nothing about holding or leasing address space causes it to be announced.
 That is what makes the distinction in B3 meaningful: announcement is a deliberate
 operational act, registration is paperwork.
 
-### A5. "What is observers?" — the RIS sense
+### A5. "What is observers?", in the RIS sense
 
 **Answered, and it turned out to be the key to C2.**
 
-**The observer is the PEER, not the collector.** An earlier draft of this answer said a
-collector "together with the peer ASNs that feed it", which blurs the two. They are
-different things, and our own `METHODOLOGY.md` already draws the line: RIS and RouteViews
-do the same job, and *"the only difference is who volunteers to feed them"*.
+**The observer is the peer, not the collector.** `METHODOLOGY.md` draws the line: RIS and
+RouteViews do the same job, and *"the only difference is who volunteers to feed them"*.
 
 | | what it is | how many, 2026-09-13 |
 |---|---|--:|
@@ -183,10 +181,10 @@ filtered one:
 | `205.164.128.0/19` | AS136384 Optix | **yes**, to 2026-09-13 | **AS174 Cogent** |
 | `154.57.208.0/20` | AS135407 TES | **yes**, to 2026-09-13 | **AS174 Cogent** |
 
-**Our attribution is confirmed in all five cases.** An earlier draft of this document said
-four of five failed; that was wrong, and it was wrong because it used `prefix-overview`
-and `routing-status`, which report a single visibility-filtered origin and returned AS174
-or nothing. `routing-history` shows both origins running in parallel.
+**Our attribution is confirmed in all five cases.** The endpoint matters: `prefix-overview`
+and `routing-status` report a single visibility-filtered origin and return AS174 or
+nothing for these prefixes, while `routing-history` shows both origins running in
+parallel. Use `routing-history` for attribution.
 
 **What is actually happening, and it refines the finding.** In three of five cases the
 Pakistani network announces a **more-specific inside the registrant's covering
@@ -215,7 +213,7 @@ originating the prefix, which `routing-history` confirms.
 
 ### C3. I do not get "the distinction is sharp and checkable"
 
-**Answered — and the sentence should be rewritten.** It refers to telling *leasing* apart
+**Answered, and the sentence should be rewritten.** It refers to telling *leasing* apart
 from *squatting*. Both look like "a Pakistani network using foreign-registered space", but:
 
 | | leased | squatted |
@@ -236,7 +234,7 @@ combination says something neither says alone: an address that is one hop from Z
 many hops from Mobilink is infrastructure *inside* Z Com's reach, not a host in Ashburn.
 The sentence assumes the reader has both figures in view and should say so.
 
-### C5. The blocks we pick — are they 1-to-1 matched to announced and assigned prefixes?
+### C5. The blocks we pick: are they 1-to-1 matched to announced and assigned prefixes?
 
 **Answered. No, and the mapping is one-to-many.**
 
@@ -409,7 +407,7 @@ network, which is why per-network densities cannot be ranked against each other.
 
 *Source: `SWEEP_FINDINGS.md` section 5C.*
 
-### D11. What does "compare networks" mean — the vantage or the destination?
+### D11. What does "compare networks" mean, the vantage or the destination?
 
 **Answered: the destination.** The comparison is between *destination* networks, ranking
 them by live-host density. The warning is that such a ranking is not supported, because
@@ -518,12 +516,11 @@ context or removed in favour of the newer documents.
 * **D4**, the two-empty-draw rule abandons a block holding 8 live hosts 59% of the time,
   which is far larger than anything the write-up admits.
 
-**One methodological gap, found by chasing C2 and A5 together.** Announcement is recorded
-as a boolean taken from a single visibility-filtered endpoint. It should be a set of
-origins plus an observer count, because RIPEstat's own endpoints disagree about the same
-prefix at the same moment. Our attributions turned out to be correct, but we could not
-have demonstrated that from our own artifacts, and an earlier draft of this document
-wrongly reported them as errors for exactly that reason.
+**One methodological gap, from C2 and A5 together.** Announcement is recorded as a boolean
+taken from a single visibility-filtered endpoint. It should be a set of origins plus an
+observer count, because RIPEstat's own endpoints disagree about the same prefix at the
+same moment. `build_pk_universe.py` records neither, so an attribution cannot be checked
+from our own artifacts and has to be re-derived from `routing-history` each time.
 
 **One confirmation of a correction already made:** E4, the domestic ceiling, which had been
 independently challenged and replaced before this review arrived.
