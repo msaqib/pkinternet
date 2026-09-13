@@ -284,11 +284,48 @@ Measured: 1,012 blocks (17.2% of live blocks) ended above 8, one at 92.
 
 ### D2. Why does exp 16.1 "need" 8 panel size?
 
-**Open. It is an assumption, not a derivation.** The stated reason is that a longitudinal
-experiment re-measuring the same addresses over months needs spares as hosts go away, and
-8 gives redundancy. **No decay measurement supports the number 8.** What would settle it
-is measuring how many of a block's live hosts still answer after one month, and choosing
-the panel size from that. Not done.
+**Answered. K=8 is measured, not assumed, and the justification is split-block detection
+rather than panel redundancy.**
+
+`SAMPLING_METHOD.md` section 5.5 tests it directly against the June 4.1 run. Over the
+**1,758 (block, vantage) pairs that received a full K=8**, classifying every probed
+address as detour, local or inconclusive:
+
+| outcome | pairs | share |
+|---|--:|--:|
+| all probed addresses agree | 1,396 | 79.4% |
+| **addresses disagree, the block is split** | **351** | **20.0%** |
+| no usable answer | 11 | 0.6% |
+
+**One block in five is genuinely split**: part of it routes abroad while the rest stays
+domestic, so "the route to a block" is not always a well-defined object. Worked example
+from that section: `122.129.94.0/24` from Nova Lahore returns seven addresses local at 3.3
+to 20.2 ms and one, `.199`, exiting via **Omantel at 113.8 ms**.
+
+The tempting inference, use a smaller K, is refuted by the same data. On the 1,396
+unambiguous pairs, a randomly chosen **K=2 reproduces the K=8 verdict 98.6% of the time**.
+K=2 gets the verdict right and the picture wrong: with two samples there is nothing to
+compare, so a split block is invisible and is recorded as whatever the two picks happened
+to be. A 20% split rate is too large to sample away.
+
+**Caveat carried in the source:** the 20% is measured on pairs that got a full K=8 out of
+an unbalanced run, so it is an estimate on a subset and is due to be re-measured on a
+balanced sample.
+
+**On the paper.** The prefix-as-unit and density measures come from **TASS**, Klick et
+al., IMC 2016, held as `papers/2016_selective_scanning.pdf`. We take the principle and
+invert the rule: TASS drops low-density prefixes to shrink a full-space scan, we keep
+every prefix and reduce within. **The within-block argument, one prefix equals one route,
+is ours and is not TASS's**, and `SAMPLING_METHOD.md` notes that `04.1/notes.md:49`
+credits it to TASS in error.
+
+**What is still unsupported is the other reason we give for 8.** `EXPLAINER.md` and
+`SWEEP_FINDINGS.md` also say 8 gives "enough redundancy that a block stays measurable when
+individual hosts go away". No decay measurement exists behind that. Measuring how many of
+a block's live hosts still answer after a month would settle it, and would either confirm
+8 or replace the reasoning with a measured one. Not done.
+
+*Source: `SAMPLING_METHOD.md` sections 5.5 and the Provenance note in section 5.*
 
 ### D3. Is sampling with replacement or without?
 
@@ -525,8 +562,10 @@ from our own artifacts and has to be re-derived from `routing-history` each time
 **One confirmation of a correction already made:** E4, the domestic ceiling, which had been
 independently challenged and replaced before this review arrived.
 
-**Three open measurement gaps:** A2 (July routing changes), A3 (no RouteViews cross-check),
-D2 (panel size of 8 is an assumption with no decay measurement behind it).
+**Three open measurement gaps:** A2 (July routing changes), A3 (no RouteViews
+cross-check), and the decay half of D2. K=8 itself is measured and defended in
+`SAMPLING_METHOD.md` 5.5 on split-block detection; what has no measurement behind it is
+the separate claim that 8 gives redundancy as hosts disappear over months.
 
 **The rest are explanation gaps**, and most are already answered above; they need moving
 into the documents themselves.
