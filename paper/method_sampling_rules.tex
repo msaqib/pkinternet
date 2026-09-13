@@ -1,0 +1,384 @@
+% =====================================================================
+%  Sampling method and detection rules
+%  Drop-in section for paper_draft.tex:  \input{method_sampling_rules}
+%
+%  Assumes the preamble already loads: booktabs, amsmath, amssymb.
+%  Uses no algorithm package: the pseudocode sits in a plain figure float.
+%  Cites: klick2016, bozkurt:dissecting:2018, ripestat  (all in references.bib)
+%
+%  Every figure below is produced by the pipeline in
+%  experiments/15_national_block_routing_census/.
+% =====================================================================
+
+\section{Measurement Method}
+\label{sec:method}
+
+\subsection{Universe}
+\label{sec:universe}
+
+``Pakistan's address space'' has two definitions that disagree, and neither contains the
+other. The \emph{registry view} is the space recorded against Pakistan at the RIR. The
+\emph{routing view} is the space a Pakistani AS originates in BGP. Registration is
+paperwork; origination is a deliberate operational act, and BGP does not require the two
+to agree.
+
+We take the union. Of the resulting space, \textbf{252{,}672 addresses (4.4\%) are
+originated by a Pakistani AS but registered elsewhere}, typically leased space announced
+as a more-specific inside a covering announcement the registrant still originates. In the
+other direction, \textbf{1{,}209 /24 blocks} are registered to Pakistan and originated by
+nobody. A study defining its universe by registration alone discards the first set; one
+defining it by origination alone discards the second.
+
+\begin{table}[t]
+\centering
+\caption{Measurement universe.}
+\label{tab:universe}
+\begin{tabular}{lr}
+\toprule
+Addresses (registry $\cup$ routing) & 5{,}774{,}336 \\
+Announced or registered prefixes    & 932 \\
+/24-equivalent blocks               & 22{,}556 \\
+Networks with announced space       & 352 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Prefixes are subdivided into /24-equivalent \emph{blocks} so that sampling density is
+uniform: without this a /16 and a /24 would receive equal attention despite differing by a
+factor of 256. The mapping is one-to-many, not one-to-one: 686 of the 932 prefixes are
+larger than a /24. A per-block count is therefore not a per-prefix count.
+
+Origination is queried through RIPEstat~\cite{ripestat}, which is fed by RIS. We note that
+origination is \emph{not} a boolean: a prefix is originated \emph{as seen by $n$ of the
+324 IPv4 RIS peers}, and RIPEstat endpoints that report a single visibility-filtered
+origin can disagree with the full origin history for the same prefix at the same instant.
+Attribution is therefore taken from origin history rather than from a filtered view.
+
+\subsection{Adaptive liveness sampling}
+\label{sec:sampling}
+
+Exhaustive probing of 5.77M addresses is neither necessary nor courteous. We follow the
+prefix-as-unit and density formulation of TASS~\cite{klick2016}, but \emph{invert its
+rule}: TASS discards low-density prefixes to shrink a full-space scan, whereas we retain
+every prefix and reduce effort within each one.
+
+A \emph{check} tests one address by trying, in order, ICMP echo, TCP connect to port~80,
+and TCP connect to port~443, stopping at the first response. A refused TCP connection
+counts as alive, since something was present to refuse it. One check may thus emit up to
+three packets. A \emph{draw} is a batch of $D=8$ addresses.
+
+\begin{figure}[t]
+\small
+\hrule\vspace{4pt}
+\begin{tabbing}
+xx\=xx\=xx\=xx\kill
+\textbf{for each} block $B$: \\
+\> $S \leftarrow$ addresses of $B$ already probed by any prior scan \\
+\> $L \leftarrow$ live hosts already known in $B$ \\
+\> $P \leftarrow \mathrm{shuffle}\!\left(\mathrm{hosts}(B) \setminus S\right)$
+   \quad \textit{(without replacement)} \\
+\> $r \leftarrow 0$ \\
+\> \textbf{while} $P \neq \emptyset$ \textbf{and} $|S| < M$ \textbf{and} $L < K$: \\
+\> \> $b \leftarrow$ next $D$ addresses of $P$; \quad $r \leftarrow r+1$ \\
+\> \> \textbf{for} $a \in b$: \\
+\> \> \> $S \leftarrow S \cup \{a\}$;\quad
+        \textbf{if} $\mathrm{check}(a)$ \textbf{then} $L \leftarrow L+1$ \\
+\> \> \> record $(a, \mathrm{result})$ \quad \textit{(negative results retained)} \\
+\> \> \textbf{if} $L = 0$ \textbf{and} $r \geq 2$ \textbf{then break} \\
+\> emit $L$ for $B$
+\end{tabbing}
+\vspace{2pt}\hrule
+\caption{Adaptive per-block sampling. $D=8$, $K=8$, $M=64$.}
+\label{alg:sample}
+\end{figure}
+
+Sampling is \textbf{without replacement}: $S$ accumulates across draws and across scans,
+so no address is ever probed twice. Draws accumulate rather than replace, and negative
+results are retained because the miss-rate estimates of \S\ref{sec:limits} depend on them.
+The target is re-tested per draw rather than per address, so a block may terminate above
+$K$; 17.2\% of live blocks did.
+
+\paragraph{Choice of $K$.} $K=8$ is measured rather than assumed, and the criterion is
+\emph{split-block detection}, not redundancy. Over 1{,}758 (block, vantage) pairs that
+received a full $K=8$ in a prior round, \textbf{20.0\% of blocks were split}: some probed
+addresses detoured abroad while others remained domestic, so ``the route to a block'' is
+not always well defined. On the 79.4\% of pairs that were unambiguous, a randomly chosen
+$K=2$ reproduces the $K=8$ verdict 98.6\% of the time. A small $K$ therefore recovers the
+\emph{verdict} while destroying the \emph{picture}: with two samples there is nothing to
+compare against, and a split block is silently recorded as whichever pair was drawn. A
+20\% split rate is too large to sample away.
+
+\paragraph{Cost of the stopping rule.} The two-empty-draw rule is the design's principal
+source of missed occupancy, and its cost is calculable. Sampling without replacement from
+$N=254$ usable addresses, the probability that all $d=16$ draws miss a block containing
+$\ell$ live hosts is hypergeometric:
+\begin{equation}
+\Pr[\text{all } d \text{ dead}] \;=\; \prod_{i=0}^{d-1} \frac{N-\ell-i}{N-i}.
+\label{eq:hyper}
+\end{equation}
+
+\begin{table}[t]
+\centering
+\caption{Probability that the two-empty-draw rule abandons a populated block,
+from Eq.~\eqref{eq:hyper}.}
+\label{tab:hyper}
+\begin{tabular}{rrr}
+\toprule
+Live hosts $\ell$ & Density & $\Pr[\text{abandoned}]$ \\
+\midrule
+1  & 0.4\%  & 93.7\% \\
+2  & 0.8\%  & 87.8\% \\
+5  & 2.0\%  & 72.0\% \\
+8  & 3.1\%  & 59.0\% \\
+13 & 5.1\%  & 42.0\% \\
+26 & 10.2\% & 16.8\% \\
+51 & 20.1\% & \phantom{0}2.4\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A block holding eight live hosts is abandoned 59\% of the time. \textbf{Block-level
+coverage figures are therefore floors, and substantially so}: blocks we record as empty
+are not reliably empty. This does not bias the routing results of \S\ref{sec:rules},
+which condition on blocks that were successfully traced, but it forbids any claim about
+the extent of unused address space.
+
+\begin{table}[t]
+\centering
+\caption{Where sampling effort went. Effort follows signal: a populated block
+receives roughly four times the attention of an empty one.}
+\label{tab:effort}
+\begin{tabular}{lrrr}
+\toprule
+ & Blocks & Checks & Mean/block \\
+\midrule
+Recorded empty & 16{,}669 & 364{,}972 & 21.9 \\
+Contained life & \phantom{0}5{,}887 & 479{,}130 & 81.4 \\
+\midrule
+Total          & 22{,}556 & 844{,}102 & 37.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{844{,}102 addresses were checked, 14.6\% of the universe, yielding 43{,}737 live
+hosts.} The answer rate is 5.2\% \emph{of what was tested}; the remaining 4{,}930{,}234
+addresses were never probed, and the count must not be read against the full space.
+
+\subsection{Route collection and trace selection}
+\label{sec:routes}
+
+Every live host was traced with ICMP, incrementing the hop limit and terminating after
+five consecutive silent hops. Of \textbf{43{,}765} traces attempted, \textbf{36{,}214
+(82.7\%)} reached their target.
+
+A trace is retained only if it \emph{reached} its target, so that the endpoint is known,
+and at least five hops responded, so that the path has discernible shape. At most eight
+traces are kept per block, ranked by fewest timeouts. This yields \textbf{34{,}191 traces
+across 5{,}508 blocks in 217 networks}, comprising \textbf{217{,}255 responding hops},
+each resolved to a country and an operator.
+
+The five-hop gate is a judgement rather than a derived quantity, and it does not fall
+evenly: it binds almost entirely on one large network whose paths are of ordinary length
+but answer at half the usual rate (median 5 responding hops against 8 elsewhere, 48\%
+silent slots against 31\%).
+
+\section{Detection Rules}
+\label{sec:rules}
+
+A rule here is \textbf{a procedure, not a threshold}. Each is stated as a claim that could
+be false, tested against a vantage point's own data, and applied only where it survives. A
+rule proven at one vantage says nothing about another until retested there. Consequently
+every numeric bound below is an \emph{output} of the procedure at our vantage, not a
+constant of the method.
+
+\paragraph{The single constant.} The speed of light in fibre, $c_f = 204{,}000$\,km/s,
+taken from Bozkurt et al.~\cite{bozkurt:dissecting:2018}. It is a physical property, and
+it appears in exactly one rule. A detector cannot derive physics from its own traffic.
+
+We emphasise what is \emph{not} used. Bozkurt et al. also give a widely quoted rule of
+thumb, that internet latency is approximately line-of-sight distance $\times\,2.1$ divided
+by $c_f$. That is a \emph{typical-case estimator} and not an upper bound; the same work
+reports that only 11\% of real fibre links fall within 25\% of the latency their length
+predicts, and that co-located server pairs frequently differ by 10--30\,ms. Using it as a
+domestic ceiling is unsound. Worse, at national scale it is the wrong functional form:
+regressing clean minimum RTT on straight-line distance over 346 domestic destinations
+yields $R^2 = 0.013$ with a slightly negative slope. With a median domestic path of
+$\approx$470\,km (4.6\,ms of propagation) against 25--35\,ms of fixed access overhead,
+distance does not drive domestic latency, and no multiplier over distance can describe it.
+
+\subsection{R0: the measurement can support a latency rule}
+
+\textbf{Claim.} The RTT data is a measurement rather than an artefact of the measuring
+process. \textbf{Test.} Two checks requiring no external reference: does RTT ever
+\emph{decrease} with hop distance, which propagation cannot produce; and does a fixed
+router return a stable value under repetition? \textbf{Gate.} If either fails, no latency
+rule may be evaluated on that data; the measurement is repaired rather than the thresholds
+retuned.
+
+Our initial route sweep failed both, having emitted one packet per hop limit under 120-way
+concurrency: 22\% of adjacent hop pairs showed RTT falling by more than 20\,ms with
+increasing distance, and a single fixed router spanned 4--853\,ms. Re-measurement at 6--8
+threads with 20--30 packets per address yields 1--2\,ms of interquartile dispersion and
+values a median of 30--41\,ms lower. All latency figures below derive from the
+re-measurement. \textbf{Routers are measured in-path}, with packets addressed to the
+original destination under a constrained hop limit, never by addressing the router
+directly: routers deprioritise traffic addressed to themselves, and the route \emph{to} a
+router need not coincide with the route \emph{through} it.
+
+\subsection{R1: the vantage's access chain}
+
+\textbf{Claim.} All traces from vantage $v$ share an initial router sequence $C(v)$ until
+routes diverge. \textbf{Test.} The dominant address at each early hop position.
+Parameter-free, since the divergence point is measured.
+
+At our vantage, three routers appear in $\geq$98.8\% of traces, diverging at hop~6, and
+cost $B_{\mathrm{access}} = 20$\,ms. This is our own connection and is subtracted before
+any latency is attributed to a destination.
+
+\subsection{R2: an address is not where it is registered}
+
+\textbf{Claim.} If address $X$ registered in country $C$ were physically in $C$, no
+Pakistani vantage could observe it faster than $2\,d(v,C)/c_f$. \textbf{Test.} Clean
+in-path minimum RTT against that floor, with $d$ computed from per-address geolocation and
+the vantage's own geolocated position. No routing factor is applied, so a falsification is
+a physical impossibility rather than a judgement. \textbf{Gate.} Foreign claims only;
+domestic distances are too short for physics to discriminate.
+
+The minimum is the correct estimator here because queuing, rate limiting and slow ICMP
+generation are strictly additive, so the minimum of a controlled burst is the closest
+available approach to propagation cost.
+
+Of the foreign-registered addresses observed as hops, \textbf{79 are falsified}, 341 are
+upheld, and 78 are undecidable because their country's floor lies inside the domestic
+range. The falsified set includes US Department of Defense addresses responding in
+$\approx$3\,ms, together with Cogent, Cloudflare, AT\&T and T-Mobile ranges: Pakistani
+routers numbered from foreign address space. Absent this step these hops would be counted
+as departures and would fabricate thousands of spurious detours.
+
+\textbf{R2 falsifies a claim; it does not establish a location.} ``Not in Virginia'' is
+not ``in Pakistan'', which is what R4$'$ decides.
+
+\subsection{R3: the vantage can observe paths, under this protocol}
+
+\textbf{Claim.} Traces from $v$ contain public addresses. \textbf{Gate.} Established per
+protocol, never universally: a probe is usable \emph{under a protocol}, and in earlier
+data the same device yielded no public hop in 100\% of TCP traces and 11\% of ICMP traces.
+Here, 3 of 43{,}765 traces contained no public router.
+
+\subsection{R4$'$: the vantage's domestic normal is its own}
+
+\textbf{Claim.} A destination whose clean RTT lies far outside this vantage's own domestic
+distribution did not traverse a domestic path.
+
+\textbf{Test.} Construct the reference set from destinations whose observed path is
+entirely domestic; measure each cleanly and retain the minimum; flag any value beyond the
+Tukey far fence,
+\begin{equation}
+\tau \;=\; Q_3 + 3\,(Q_3 - Q_1).
+\label{eq:fence}
+\end{equation}
+
+Equation~\eqref{eq:fence} is used because it is a standard, scale-free outlier definition
+that no one selects to fit a dataset. A slow vantage obtains a high baseline \emph{and} a
+high fence, so \textbf{the procedure transfers between vantages without retuning}, which a
+millisecond threshold cannot.
+
+\textbf{Gates.} At least $\approx$100 reference destinations, or the distribution's shape
+is noise; and if more than half the reference set is itself detouring, the baseline
+\emph{is} the detour and the rule is rejected for that vantage.
+
+\textbf{Scope.} The reference set is selected topologically, so R4$'$ can only recover
+detours the topological test missed. It is a second filter beneath the first, not a
+replacement.
+
+\begin{table}[t]
+\centering
+\caption{R4$'$ evaluated at our vantage. The bound is an output of the procedure, not a
+constant of the method.}
+\label{tab:r4}
+\begin{tabular}{lr}
+\toprule
+Reference destinations              & 347 \\
+Domestic median                     & 27\,ms \\
+$Q_1$ / $Q_3$                       & 24 / 38\,ms \\
+\textbf{Fence $\tau$}               & \textbf{80\,ms} \\
+Domestic above $\tau$               & 1.4\% \\
+Known detours below $\tau$          & 0 of 10 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The two distributions separate empirically: the highest domestic value below the fence is
+69\,ms and the lowest tromboning destination is 90\,ms.
+
+\subsection{R5: the trace left the country and returned}
+
+Evaluated only after R0--R4$'$ are settled for that vantage under that protocol. Anything
+attributable to an earlier rule is subtracted first, and a detour is the residue:
+
+\begin{enumerate}\itemsep2pt
+\item subtract $C(v)$; the access chain cannot be a detour;
+\item apply R2; a foreign registry is not evidence, an impossible RTT is;
+\item apply R4$'$ to whatever R2 falsified, since ``not in $C$'' is not ``domestic'';
+\item any surviving foreign hop constitutes a departure.
+\end{enumerate}
+
+A hop on a \emph{foreign internet exchange fabric} counts as a departure: the address
+belongs to the exchange rather than to either peer, but the packet is physically abroad.
+
+\textbf{Result: 930 of 34{,}191 traces (2.72\%), across 156 blocks in 49 networks.} This
+is a \textbf{floor}. With the latency arm confined to R4$'$'s scope, a detour is visible
+only when a foreign router responds; detours through silent routers or inside MPLS tunnels
+are recorded as domestic.
+
+\paragraph{Blocks, not traces, are the unit of evidence.} Tromboning is a property of the
+destination prefix: 146 of 156 affected blocks are all-or-nothing, every selected host
+detouring or none, and 143 of 156 exit via a single common address. Eight traces into one
+block are eight observations of one routing decision. Confidence intervals must therefore
+be computed over blocks and clustered by network.
+
+\subsection{R6: the verdict predicts what it was not given}
+
+\textbf{Claim.} If R5 detects a real phenomenon, its verdicts should separate on a
+quantity the topological test never observed.
+
+\textbf{Test.} Compare clean minimum RTT between destinations R5 labels domestic and those
+it labels tromboning. Destinations labelled domestic have a median of \textbf{27\,ms};
+those labelled tromboning, \textbf{143\,ms}. The topological classifier had no access to
+latency, so the 116\,ms separation is independent corroboration rather than a restatement.
+
+\textbf{Limit.} The tromboning arm of this comparison holds 10 destinations. It is
+corroboration, not a significance test, and warrants repetition on a larger deliberate
+sample.
+
+\section{Limitations}
+\label{sec:limits}
+
+\textbf{Counts are floors with unequal tightness.} Adaptive sampling caps at 64 addresses
+per block, so no block reports more than 64 regardless of occupancy. Independently,
+re-probing recorded-dead addresses returns $\approx$35\% alive on one large network
+against 22--25\% elsewhere. Densities are therefore comparable within a network over time,
+not between networks, and no single national correction is admissible.
+
+\textbf{Liveness is vantage-relative.} In a controlled retest, $\approx$9\% of addresses
+confirmed alive from one Pakistani network did not respond from another, at every
+concurrency tested. Reported counts are a union over two vantages covering
+\emph{disjoint} address sets, not a two-vantage measurement of the same addresses.
+
+\textbf{Route collection is effectively single-vantage.} 43{,}671 of 43{,}765 traces
+egress one network. Reach rates are properties of that vantage's view, not of the
+destination network alone.
+
+\textbf{Proximate foreign destinations are undetectable by latency.} Domestic paths run at
+a 27\,ms median while the physical floors to the nearest Gulf hubs are 4--7\,ms. A Gulf
+detour and a slow domestic path are indistinguishable by RTT at any threshold; only
+topology can recover them.
+
+\textbf{Selection favours dense blocks.} A block requires live hosts before it can be
+traced, and the retention gate then prefers responsive paths. A control comparison against
+sparsely populated blocks has not been run, so the magnitude of this bias is unknown
+rather than small.
+
+\textbf{Remaining limits.} Traceroute observes the forward path only; return paths may
+differ and are invisible. MPLS tunnels conceal interior hops. The study is IPv4 only,
+covers a single country over three days, and no operator has confirmed any result.
