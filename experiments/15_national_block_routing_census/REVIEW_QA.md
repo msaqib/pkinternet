@@ -71,10 +71,23 @@ operational act, registration is paperwork.
 
 **Answered, and it turned out to be the key to C2.**
 
-In RIS, an **observer** is a **route collector** (`rrc00` to `rrc26`) together with the
-**peer ASNs that feed it**. A prefix is not simply "announced" or "not announced": it is
-announced *as seen by some number of peers*. RIPEstat currently reports **324 IPv4 RIS
-peers**.
+**The observer is the PEER, not the collector.** An earlier draft of this answer said a
+collector "together with the peer ASNs that feed it", which blurs the two. They are
+different things, and our own `METHODOLOGY.md` already draws the line: RIS and RouteViews
+do the same job, and *"the only difference is who volunteers to feed them"*.
+
+| | what it is | how many, 2026-09-13 |
+|---|---|--:|
+| **Collector** | a machine run by RIPE NCC (`rrc00` to `rrc26`) that records what it is told | **23** |
+| **Peer** | a network that volunteers a BGP session to a collector. **This is the observer** | **1,424** sessions, **558** distinct ASNs |
+| **`total_ris_peers`** | the IPv4 peer sessions RIPEstat counts when reporting visibility | **324** |
+
+A collector sees nothing itself. It only knows what its peers tell it, so a prefix is
+never simply "announced" or "not announced": it is announced **as seen by N of 324
+peers**. A globally visible prefix such as `8.8.8.0/24` scores 324 of 324.
+
+This is also why A3 matters. RouteViews is a **separate set of peers**, not a second
+opinion from the same ones, which is the only reason it can corroborate anything.
 
 This matters because **different RIPEstat endpoints apply different visibility rules and
 disagree with each other.** For `149.40.192.0/19` today:
