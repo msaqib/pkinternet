@@ -1,0 +1,405 @@
+Readable routes  —  pk_grouped_20260920_150330.csv
+24 traceroutes  ·  destination shown once per block (in the DEST header)
+
+==============================================================================
+ cuecinemas.com   —   cuecinemas  (pk-selection26-tcp-rest)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     202.141.242.194 · Multinet Pakistan Pvt. Ltd. (AS9260) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3      1.6   110.93.197.229     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4      1.4   202.142.160.201    AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    5      1.5   202.141.242.194    AS9260    Multinet Pakistan Pvt. Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ cuecinemas.com   —   cuecinemas  (pk-selection26-tcp-rest)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     202.141.242.194 · Multinet Pakistan Pvt. Ltd. (AS9260) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.2   100.89.160.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     16.0   202.141.242.194    AS9260    Multinet Pakistan Pvt. Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ cyber.net.pk   —   cyber  (pk-selection26-tcp-rest)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     203.101.172.72 · Cyber Internet Services (Pvt) Ltd. (AS9541) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.0   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.3   110.93.254.66      —         TWA (PK)  [registry]
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ cyber.net.pk   —   cyber  (pk-selection26-tcp-rest)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     203.101.172.72 · Cyber Internet Services (Pvt) Ltd. (AS9541) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   192.168.18.1       —         (private/internal)
+    2      3.3   100.89.160.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ gerrys.net   —   gerrys  (pk-selection26-tcp-rest)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     202.69.33.8 · GERRYS INFORMATION TECHNOLOGY PVT LTD. (AS23750) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     19.3   110.93.252.50      —         TWA (PK)  [registry]
+    4     19.8   110.93.255.169     —         TWA (PK)  [registry]
+    5     29.2   119.63.129.98      AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     23.1   202.69.33.8        AS23750   GERRYS INFORMATION TECHNOLOGY PVT LTD. (PK)   <<< DESTINATION
+
+==============================================================================
+ gerrys.net   —   gerrys  (pk-selection26-tcp-rest)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     202.69.33.8 · GERRYS INFORMATION TECHNOLOGY PVT LTD. (AS23750) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      2.9   100.89.160.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     23.2   202.69.33.8        AS23750   GERRYS INFORMATION TECHNOLOGY PVT LTD. (PK)   <<< DESTINATION
+
+==============================================================================
+ kpese.gov.pk   —   kpese  (pk-selection26-tcp-rest)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     175.107.63.111 · National Telecommunication Corporation HQ, (AS23888) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.4   110.93.252.200     —         TWA (PK)  [registry]
+    4     36.6   110.93.254.23      —         TWA (PK)  [registry]
+    5     39.3   110.93.204.153     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6     42.8   175.107.63.3       AS23888   National Telecommunication Corporation HQ, (PK)
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ kpese.gov.pk   —   kpese  (pk-selection26-tcp-rest)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     175.107.63.111 · National Telecommunication Corporation HQ, (AS23888) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   192.168.18.1       —         (private/internal)
+    2      3.7   100.89.160.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ lesco.gov.pk   —   lesco  (pk-selection26-tcp-rest)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     116.58.54.125 · Autonomous System Number for Nexlinx (AS17563) · PK · reached, host replied
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      2.3   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3      1.0   110.93.252.139     —         TWA (PK)  [registry]
+    4      1.0   110.93.255.94      —         TWA (PK)  [registry]
+    5      1.4   110.93.202.170     —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7      *     (no response)     
+    8      2.2   202.59.80.68       AS17563   Autonomous System Number for Nexlinx (PK)
+    9      *     (no response)     
+   10      3.3   116.58.54.125      AS17563   Autonomous System Number for Nexlinx (PK)   <<< DESTINATION
+
+==============================================================================
+ lesco.gov.pk   —   lesco  (pk-selection26-tcp-rest)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     116.58.54.125 · Autonomous System Number for Nexlinx (AS17563) · PK · reached, host replied
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.5   100.89.160.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      0.0   192.168.18.1       —         (private/internal)
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     18.0   116.58.54.125      AS17563   Autonomous System Number for Nexlinx (PK)   <<< DESTINATION
+
+==============================================================================
+ pshealthpunjab.gov.pk   —   pshealthpunjab  (pk-selection26-tcp-rest)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     116.58.20.78 · Autonomous System Number for Nexlinx (AS17563) · PK · reached, host replied
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      2.1   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      1.7   202.125.140.26     AS9557    Paknet Limited Merged into PTCL (PK)
+    6      *     (no response)     
+    7      *     (no response)     
+    8      1.7   202.59.80.56       AS17563   Autonomous System Number for Nexlinx (PK)
+    9      *     (no response)     
+   10      *     (no response)     
+   11      2.9   116.58.20.75       AS17563   Autonomous System Number for Nexlinx (PK)
+   12      3.0   116.58.20.78       AS17563   Autonomous System Number for Nexlinx (PK)   <<< DESTINATION
+
+==============================================================================
+ pshealthpunjab.gov.pk   —   pshealthpunjab  (pk-selection26-tcp-rest)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     116.58.20.78 · Autonomous System Number for Nexlinx (AS17563) · PK · reached, host replied
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      3.6   100.89.160.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     27.2   116.58.20.78       AS17563   Autonomous System Number for Nexlinx (PK)   <<< DESTINATION
+
+==============================================================================
+ pu.edu.pk   —   pu  (pk-selection26-tcp-rest)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     111.68.103.27 · PERN AS Content Servie Provider, Islamabad, Pakistan (AS45773) · PK · host did NOT reply (trace incomplete)
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.0   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.3   110.93.252.54      —         TWA (PK)  [registry]
+    4     17.0   110.93.255.169     —         TWA (PK)  [registry]
+    5     17.2   110.93.253.193     —         TWA (PK)  [registry]
+    6     24.3   117.20.16.70       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ pu.edu.pk   —   pu  (pk-selection26-tcp-rest)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     111.68.103.27 · PERN AS Content Servie Provider, Islamabad, Pakistan (AS45773) · PK · host did NOT reply (trace incomplete)
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   192.168.18.1       —         (private/internal)
+    2      3.3   100.89.160.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ tamashaweb.com   —   tamashaweb  (pk-selection26-tcp-rest)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     119.160.12.44 · PMCL /LDI IP TRANSIT (AS45669) · PK · reached, host replied
+ SERVED   Shahpur Chakar, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.0   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3      1.0   110.93.252.139     —         TWA (PK)  [registry]
+    4      1.1   110.93.255.94      —         TWA (PK)  [registry]
+    5      9.3   110.93.249.185     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    6      1.5   119.30.106.58      AS23966   LINKdotNET Telecom Limited (PK)
+    7      *     (no response)     
+    8      1.0   119.160.12.44      AS45669   PMCL /LDI IP TRANSIT (PK)   <<< DESTINATION
+
+==============================================================================
+ tamashaweb.com   —   tamashaweb  (pk-selection26-tcp-rest)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     119.160.12.44 · PMCL /LDI IP TRANSIT (AS45669) · PK · reached, host replied
+ SERVED   Shahpur Chakar, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   192.168.18.1       —         (private/internal)
+    2      3.1   100.89.160.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     39.0   119.160.12.44      AS45669   PMCL /LDI IP TRANSIT (PK)   <<< DESTINATION
+
+==============================================================================
+ universalcinemas.com   —   universalcinemas  (pk-selection26-tcp-rest)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     103.69.111.99 · LINKdotNET Telecom Limited (AS23966) · PK · reached, host replied
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.1   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.3   110.93.252.54      —         TWA (PK)  [registry]
+    4     17.0   110.93.255.169     —         TWA (PK)  [registry]
+    5     19.8   110.93.202.21      —         TWA (PK)  [registry]
+    6      *     (no response)     
+    7      *     (no response)     
+    8     39.1   119.30.106.42      AS23966   LINKdotNET Telecom Limited (PK)
+    9     35.8   119.30.105.222     AS58470   IX Peering for Mobilink and Link Direct International. (PK)
+   10      *     (no response)     
+   11      *     (no response)     
+   12     20.8   202.147.168.70     AS23966   LINKdotNET Telecom Limited (PK)
+   13      *     (no response)     
+   14      *     (no response)     
+   15     21.9   103.69.111.99      AS23966   LINKdotNET Telecom Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ universalcinemas.com   —   universalcinemas  (pk-selection26-tcp-rest)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     103.69.111.99 · LINKdotNET Telecom Limited (AS23966) · PK · reached, host replied
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.2   100.89.160.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     43.8   103.69.111.99      AS23966   LINKdotNET Telecom Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ vu.edu.pk   —   vu  (pk-selection26-tcp-rest)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     58.27.231.136 · National WiMAX/IMS environment (AS38264) · PK · reached, host replied
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      4.2   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3      1.5   110.93.197.49      AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4      *     (no response)     
+    5      *     (no response)     
+    6      1.7   111.68.103.53      AS45773   PERN AS Content Servie Provider, Islamabad, Pakistan (PK)
+    7      1.8   58.27.231.136      AS38264   National WiMAX/IMS environment (PK)   <<< DESTINATION
+
+==============================================================================
+ vu.edu.pk   —   vu  (pk-selection26-tcp-rest)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     58.27.231.136 · National WiMAX/IMS environment (AS38264) · PK · reached, host replied
+ SERVED   Lahore, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.6   100.89.160.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      8.8   58.27.231.136      AS38264   National WiMAX/IMS environment (PK)   <<< DESTINATION
+
+==============================================================================
+ weboc.gov.pk   —   weboc  (pk-selection26-tcp-rest)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     175.107.219.203 · Cyber Internet Services (Pvt) Ltd. (AS9541) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      1.0   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.5   110.93.252.200     —         TWA (PK)  [registry]
+    4      0.0   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+    8     92.8   175.107.219.203    AS9541    Cyber Internet Services (Pvt) Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ weboc.gov.pk   —   weboc  (pk-selection26-tcp-rest)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     175.107.219.203 · Cyber Internet Services (Pvt) Ltd. (AS9541) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.2   100.89.160.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     55.6   175.107.219.203    AS9541    Cyber Internet Services (Pvt) Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ zong.com.pk   —   zong  (pk-selection26-tcp-rest)
+ SOURCE   probe 7613 · Z-Com (AS152605) · Pakistan
+ DEST     209.150.154.189 · CMPak Limited (AS59257) · PK · reached, host replied
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.3   110.93.254.66      —         TWA (PK)  [registry]
+    4     36.2   110.93.254.87      —         TWA (PK)  [registry]
+    5     37.0   149.40.227.35      AS174     Cogent Communications, LLC (US)
+    6      *     (no response)     
+    7      *     (no response)     
+    8      *     (no response)     
+    9      *     (no response)     
+   10      *     (no response)     
+  255     36.9   209.150.154.189    AS59257   CMPak Limited (PK)   <<< DESTINATION
+
+==============================================================================
+ zong.com.pk   —   zong  (pk-selection26-tcp-rest)
+ SOURCE   probe 60223 · Nayatel (AS23674) · Pakistan
+ DEST     209.150.154.189 · CMPak Limited (AS59257) · PK · reached, host replied
+ SERVED   Islamabad, Islamabad, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.3   100.89.160.1       —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      3.9   209.150.154.189    AS59257   CMPak Limited (PK)   <<< DESTINATION

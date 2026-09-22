@@ -1,0 +1,30 @@
+domain,name,hosting,source,notes
+ztbl.com.pk,Zarai Taraqiati Bank,Pakistani,pk_100_final_v2,already direct-hosted in Exp07 sample
+efulife.com,EFU Life Assurance,Pakistani,pk_100_final_v2,origin already confirmed via BGP in Exp 13
+khushhalibank.com.pk,Khushhali Bank,CDN (AWS CloudFront),pk_100_final_v2,origin unknown - candidate
+mcb.com.pk,MCB Bank,CDN (Sucuri),pk_100_final_v2,origin unknown - candidate
+adamjeeinsurance.com,Adamjee Insurance,unknown,PK100sites.md,origin unknown - candidate
+alfalahamc.com,Alfalah Asset Management,unknown,PK100sites.md,origin unknown - candidate
+silkbank.com.pk,Silkbank,unknown,PK100sites.md,origin unknown - candidate
+ubank.com.pk,U Microfinance Bank,unknown,PK100sites.md,origin unknown - candidate
+ubldigital.com,United Bank Ltd (digital),unknown,PK100sites.md,origin unknown - candidate
+meezanbank.com,Meezan Bank,CDN (Cloudflare),manual,lservices.meezanbank.com found via Censys - no public DNS but pings
+hbl.com,HBL,CDN (Cloudflare),manual,multiple CN matches - cross-check against 103.111.84.5 (Exp 13 BGP finding)
+sindhbankltd.com,Sindh Bank,Pakistani,scheduled_banks_pdf,confirmed direct - 202.63.220.149 AS38584 CubeXS (PK ISP) - no Censys needed
+ubldirect.com,United Bank Ltd (direct),Pakistani,scheduled_banks_pdf,confirmed direct - 103.8.14.36 AS56126 UBL's own ASN - no Censys needed
+bok.com.pk,Bank of Khyber,Abroad,scheduled_banks_pdf,confirmed direct on 67.225.171.10 AS32244 LiquidWeb US - no CDN mask - not a hidden-origin candidate
+summitbank.com.pk,Summit Bank,unknown,scheduled_banks_pdf,DNS times out - likely dead/unreachable given bank's restructuring status - skip
+abl.com,Allied Bank Limited,CDN (Cloudflare),scheduled_banks_pdf,origin unknown - candidate
+akbl.com.pk,Askari Bank,CDN (Cloudflare),scheduled_banks_pdf,origin unknown - candidate
+albaraka.com.pk,Al Baraka Bank Pakistan,CDN (Sucuri),scheduled_banks_pdf,origin unknown - candidate
+bankislami.com.pk,BankIslami Pakistan,CDN (Cloudflare),scheduled_banks_pdf,origin unknown - candidate
+faysalbank.com,Faysal Bank,CDN (Cloudflare),scheduled_banks_pdf,origin unknown - candidate
+fwbl.com.pk,First Women Bank,CDN (Cloudflare),scheduled_banks_pdf,origin unknown - candidate
+jsbl.com,JS Bank,CDN (Cloudflare),scheduled_banks_pdf,origin unknown - candidate
+nbp.com.pk,National Bank of Pakistan,CDN (Cloudflare),scheduled_banks_pdf,origin unknown - candidate - state-owned, high priority
+soneribank.com,Soneri Bank,CDN (Cloudflare),scheduled_banks_pdf,origin unknown - candidate
+samba.com.pk,Samba Bank,CDN (Cloudflare),scheduled_banks_pdf,origin unknown - candidate
+bop.com.pk,Bank of Punjab,CDN (Incapsula),scheduled_banks_pdf,origin unknown - candidate - govt-linked - high priority - non-Cloudflare CDN
+bankalfalah.com,Bank Al Falah,unknown (Azure),scheduled_banks_pdf,Azure-hosted - unclear if CDN or direct - needs closer check before Censys
+bankalhabib.com,Bank Al Habib,unknown (Azure),scheduled_banks_pdf,Azure-hosted - unclear if CDN or direct - needs closer check before Censys
+habibmetro.com,Habib Metropolitan Bank,unknown (Azure),scheduled_banks_pdf,Azure-hosted - 403 on direct checks - unclear if CDN or direct - needs closer check before Censys

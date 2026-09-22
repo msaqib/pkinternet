@@ -1,0 +1,356 @@
+Readable routes  —  grouped_20260913_091017.csv
+15 traceroutes  ·  destination shown once per block (in the DEST header)
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 7613 · Z-Com (AS152605) · zcom.7613
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      3.2   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.7   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     18.3   110.93.254.144     —         TWA (PK)  [registry]
+    4     19.0   119.63.137.83      —         TWA (PK)  [registry]
+    5     19.0   10.253.4.37        —         (private/internal)
+    6     19.1   10.253.8.43        —         (private/internal)
+    7     19.2   221.120.221.46     AS17557   Pakistan Telecommunication Company Limited (PK)
+    8     19.2   10.190.199.58      —         (private/internal)
+    9     19.5   221.120.222.166    AS17557   Pakistan Telecommunication Company Limited (PK)
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 7764 · PTCL (AS17557) · ptcl.7764
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   203.135.63.1       AS17557   Pakistan Telecommunication Company Limited (PK)
+    2      0.5   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 60223 · Nayatel (AS23674) · nayatel.60223
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.7   192.168.18.1       —         (private/internal)
+    2      3.1   100.89.32.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.9   172.27.0.29        —         (private/internal)
+    4      2.9   172.27.0.22        —         (private/internal)
+    5      3.2   172.31.5.170       —         (private/internal)
+    6      *     (no response)     
+    7     15.3   221.120.221.46     AS17557   Pakistan Telecommunication Company Limited (PK)
+    8      *     (no response)     
+    9     14.8   221.120.222.166    AS17557   Pakistan Telecommunication Company Limited (PK)
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 62224 · PERN (AS45773) · pern.62224
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   10.102.76.1        —         (private/internal)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 64722 · AS136384 · AS136384.64722
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      3.4   205.164.150.1      AS136384  Optix Pakistan (Pvt.) Limited (US)
+    3      2.4   202.141.224.73     AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    4      2.8   149.40.227.188     AS174     Cogent Communications, LLC (US)
+    5      3.0   110.93.255.168     —         TWA (PK)  [registry]
+    6      3.6   119.63.137.83      —         TWA (PK)  [registry]
+    7     19.6   10.253.4.37        —         (private/internal)
+    8     19.6   10.253.8.41        —         (private/internal)
+    9     20.1   221.120.221.50     AS17557   Pakistan Telecommunication Company Limited (PK)
+   10     19.7   10.190.199.57      —         (private/internal)
+   11     19.6   221.120.222.166    AS17557   Pakistan Telecommunication Company Limited (PK)
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 65761 · Cybernet (AS9541) · cybernet.65761
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   192.168.0.1        —         (private/internal)
+    2      1.0   192.168.1.1        —         (private/internal)
+    3      2.9   10.15.234.230      —         (private/internal)
+    4      3.0   10.15.248.89       —         (private/internal)
+    5      2.7   10.15.248.177      —         (private/internal)
+    6      3.0   10.15.248.129      —         (private/internal)
+    7     22.6   192.168.200.85     —         (private/internal)
+    8      *     (no response)     
+    9    171.6   221.120.202.48     AS9557    Paknet Limited Merged into PTCL (PK)
+   10      *     (no response)     
+   11      *     (no response)     
+   12    187.8   221.120.221.46     AS17557   Pakistan Telecommunication Company Limited (PK)
+   13      *     (no response)     
+   14    191.9   221.120.222.166    AS17557   Pakistan Telecommunication Company Limited (PK)
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+   18      *     (no response)     
+   19      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 65892 · Nayatel (AS23674) · nayatel.65892
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   192.168.18.1       —         (private/internal)
+    2      3.6   100.114.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.5   172.27.0.53        —         (private/internal)
+    4      3.2   172.16.90.245      —         (private/internal)
+    5      3.2   172.31.5.206       —         (private/internal)
+    6      3.5   172.31.5.170       —         (private/internal)
+    7      *     (no response)     
+    8     15.1   221.120.221.50     AS17557   Pakistan Telecommunication Company Limited (PK)
+    9      *     (no response)     
+   10     15.6   221.120.222.166    AS17557   Pakistan Telecommunication Company Limited (PK)
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 1001359 · AS147302 · falcon.1001359
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.6   192.168.1.1        —         (private/internal)
+    2      1.5   100.86.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      1.8   160.30.236.1       AS147302  FALCON BROADBAND (PRIVATE) LIMITED (PK)
+    4      4.6   10.165.10.1        —         (private/internal)
+    5      4.3   172.16.134.2       —         (private/internal)
+    6      5.5   10.181.227.61      —         (private/internal)
+    7      5.1   117.20.30.21       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    8     25.0   110.93.255.104     —         TWA (PK)  [registry]
+    9     23.6   119.63.137.83      —         TWA (PK)  [registry]
+   10     23.7   10.253.4.37        —         (private/internal)
+   11     23.9   10.253.8.41        —         (private/internal)
+   12     25.3   221.120.221.50     AS17557   Pakistan Telecommunication Company Limited (PK)
+   13     24.1   10.190.199.57      —         (private/internal)
+   14     24.9   221.120.222.166    AS17557   Pakistan Telecommunication Company Limited (PK)
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+   18      *     (no response)     
+   19      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 1014872 · AS150683 · fasttel.1014872
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      6.6   192.168.100.1      —         (private/internal)
+    2      8.2   10.0.9.60          —         (private/internal)
+    3     11.0   10.179.2.49        —         (private/internal)
+    4      9.3   59.103.181.90      —         PTCL (PK)  [registry]
+    5     10.5   10.253.12.24       —         (private/internal)
+    6     20.4   10.253.12.7        —         (private/internal)
+    7     21.0   10.253.8.17        —         (private/internal)
+    8     20.0   221.120.221.50     AS17557   Pakistan Telecommunication Company Limited (PK)
+    9     20.2   10.190.199.49      —         (private/internal)
+   10     20.5   221.120.222.166    AS17557   Pakistan Telecommunication Company Limited (PK)
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 1015679 · AS136174 · nova.1015679
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.6   192.168.100.1      —         (private/internal)
+    2      1.5   70.70.233.222      AS6327    Shaw Communications (CA)
+    3      2.6   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     17.7   110.93.252.50      —         TWA (PK)  [registry]
+    5     26.6   119.63.137.83      —         TWA (PK)  [registry]
+    6     18.8   10.253.4.37        —         (private/internal)
+    7     18.8   10.253.8.43        —         (private/internal)
+    8     19.4   221.120.221.46     AS17557   Pakistan Telecommunication Company Limited (PK)
+    9     19.6   10.190.199.57      —         (private/internal)
+   10     19.2   221.120.222.166    AS17557   Pakistan Telecommunication Company Limited (PK)
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 1016036 · Cybernet (AS9541) · cybernet.1016036
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.1.1        —         (private/internal)
+    2      2.3   203.101.189.254    AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    3      4.0   192.168.72.113     —         (private/internal)
+    4      *     (no response)     
+    5     23.8   10.15.19.81        —         (private/internal)
+    6     23.8   192.168.200.205    —         (private/internal)
+    7      *     (no response)     
+    8    189.1   221.120.202.48     AS9557    Paknet Limited Merged into PTCL (PK)
+    9      *     (no response)     
+   10      *     (no response)     
+   11    206.1   221.120.221.50     AS17557   Pakistan Telecommunication Company Limited (PK)
+   12      *     (no response)     
+   13    193.4   221.120.222.166    AS17557   Pakistan Telecommunication Company Limited (PK)
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+   18      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 1016126 · PTCL (AS17557) · ptcl.1016126
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.10.1       —         (private/internal)
+    2      8.6   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3      9.1   10.253.5.98        —         (private/internal)
+    4      9.2   10.253.4.42        —         (private/internal)
+    5     25.1   10.253.4.17        —         (private/internal)
+    6     25.1   10.253.8.23        —         (private/internal)
+    7     25.4   221.120.221.46     AS17557   Pakistan Telecommunication Company Limited (PK)
+    8     29.9   10.190.199.57      —         (private/internal)
+    9     25.6   221.120.222.166    AS17557   Pakistan Telecommunication Company Limited (PK)
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 1016143 · Cybernet (AS9541) · cybernet.1016143
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      4.3   202.163.100.236    —         CYBERNET-PK (PK)  [registry]
+    3      4.3   10.15.15.122       —         (private/internal)
+    4      4.2   192.168.112.161    —         (private/internal)
+    5      *     (no response)     
+    6    115.6   221.120.202.48     AS9557    Paknet Limited Merged into PTCL (PK)
+    7    139.0   10.253.4.37        —         (private/internal)
+    8    131.5   10.253.8.43        —         (private/internal)
+    9    140.6   221.120.221.46     AS17557   Pakistan Telecommunication Company Limited (PK)
+   10    149.5   10.190.199.58      —         (private/internal)
+   11    139.9   221.120.222.166    AS17557   Pakistan Telecommunication Company Limited (PK)
+   12      *     (no response)     
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 1016393 · PTCL (AS17557) · ptcl.1016393
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.10.1       —         (private/internal)
+    2    188.8   39.45.64.1         AS17557   Pakistan Telecommunication Company Limited (PK)
+    3    190.4   10.253.9.150       —         (private/internal)
+    4    149.7   10.253.8.24        —         (private/internal)
+    5     37.7   10.253.8.23        —         (private/internal)
+    6     55.6   221.120.221.46     AS17557   Pakistan Telecommunication Company Limited (PK)
+    7    120.0   10.190.199.57      —         (private/internal)
+    8     92.7   221.120.222.166    AS17557   Pakistan Telecommunication Company Limited (PK)
+    9      *     (no response)     
+   10      *     (no response)     
+   11      *     (no response)     
+   12      *     (no response)     
+   13      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ khushhalibank-censys-candidate.pk   —   khushhalibank-candidate  (Khushhali Bank (Censys wildcard-cert candidate, AS17557 PTCL))
+ SOURCE   probe 1017335 · AS138910 · AS138910.1017335
+ DEST     119.159.230.218 · Pakistan Telecommunication Company Limited (AS17557) · PK · host did NOT reply (trace incomplete)
+ SERVED   Rawalpindi, Punjab, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   103.167.255.49     AS138910  N/A (PK)
+    2      0.7   10.7.41.1          —         (private/internal)
+    3      0.6   10.200.107.172     —         (private/internal)
+    4     18.7   10.232.238.134     —         (private/internal)
+    5     18.9   110.93.202.20      —         TWA (PK)  [registry]
+    6     18.6   110.93.255.168     —         TWA (PK)  [registry]
+    7     19.7   119.63.137.83      —         TWA (PK)  [registry]
+    8     34.6   10.253.4.37        —         (private/internal)
+    9     34.6   10.253.8.43        —         (private/internal)
+   10     37.4   221.120.221.46     AS17557   Pakistan Telecommunication Company Limited (PK)
+   11     34.9   10.190.199.50      —         (private/internal)
+   12     35.1   221.120.222.166    AS17557   Pakistan Telecommunication Company Limited (PK)
+   13      *     (no response)     
+   14      *     (no response)     
+   15      *     (no response)     
+   16      *     (no response)     
+   17      *     (no response)     
+  255      *     (no response)     

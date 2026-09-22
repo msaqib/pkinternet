@@ -1,0 +1,464 @@
+Readable routes  —  grouped_20260915_130900.csv
+26 traceroutes  ·  destination shown once per block (in the DEST header)
+
+==============================================================================
+ hbl-bank-as137513.pk   —   hbl-bank  (Bank (Cybernet customer, Cybernet-only detour via PIE hostname))
+ SOURCE   probe 7613 · Z-Com (AS152605) · zcom.7613
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.6   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.1   110.93.254.38      —         TWA (PK)  [registry]
+    4     16.8   110.93.254.97      —         TWA (PK)  [registry]
+    5     16.8   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ hbl-bank-as137513.pk   —   hbl-bank  (Bank (Cybernet customer, Cybernet-only detour via PIE hostname))
+ SOURCE   probe 7764 · PTCL (AS17557) · ptcl.7764
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.0   203.135.63.1       AS17557   Pakistan Telecommunication Company Limited (PK)
+    2      1.2   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ hbl-bank-as137513.pk   —   hbl-bank  (Bank (Cybernet customer, Cybernet-only detour via PIE hostname))
+ SOURCE   probe 60223 · Nayatel (AS23674) · nayatel.60223
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      4.4   192.168.18.1       —         (private/internal)
+    2      3.1   100.89.32.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      2.7   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      2.9   172.31.5.170       —         (private/internal)
+    6      *     (no response)     
+    7      *     (no response)     
+    8     21.5   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+    9     21.2   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ hbl-bank-as137513.pk   —   hbl-bank  (Bank (Cybernet customer, Cybernet-only detour via PIE hostname))
+ SOURCE   probe 62224 · PERN (AS45773) · pern.62224
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   10.102.76.1        —         (private/internal)
+    2      0.5   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     24.2   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ hbl-bank-as137513.pk   —   hbl-bank  (Bank (Cybernet customer, Cybernet-only detour via PIE hostname))
+ SOURCE   probe 65761 · Cybernet (AS9541) · cybernet.65761
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.3   192.168.0.1        —         (private/internal)
+    2      1.0   192.168.1.1        —         (private/internal)
+    3     12.1   10.15.234.230      —         (private/internal)
+    4      3.0   10.15.248.89       —         (private/internal)
+    5      3.5   10.15.248.177      —         (private/internal)
+    6      3.0   10.15.248.129      —         (private/internal)
+    7     19.5   192.168.200.109    —         (private/internal)
+    8      *     (no response)     
+    9    172.8   221.120.202.48     AS9557    Paknet Limited Merged into PTCL (PK)
+   10      *     (no response)     
+   11    187.4   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+   12    178.2   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ hbl-bank-as137513.pk   —   hbl-bank  (Bank (Cybernet customer, Cybernet-only detour via PIE hostname))
+ SOURCE   probe 65892 · Nayatel (AS23674) · nayatel.65892
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      4.2   100.114.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.6   172.27.0.53        —         (private/internal)
+    4      3.5   172.16.90.245      —         (private/internal)
+    5      3.1   172.31.5.206       —         (private/internal)
+    6      3.4   172.31.5.170       —         (private/internal)
+    7      *     (no response)     
+    8      *     (no response)     
+    9     23.9   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+   10     24.3   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ hbl-bank-as137513.pk   —   hbl-bank  (Bank (Cybernet customer, Cybernet-only detour via PIE hostname))
+ SOURCE   probe 1001359 · AS147302 · falcon.1001359
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   192.168.1.1        —         (private/internal)
+    2      1.3   100.86.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      1.7   160.30.236.1       AS147302  FALCON BROADBAND (PRIVATE) LIMITED (PK)
+    4      4.5   10.165.10.1        —         (private/internal)
+    5      5.3   172.16.134.2       —         (private/internal)
+    6      4.8   10.181.227.61      —         (private/internal)
+    7      5.1   117.20.30.21       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    8     22.3   110.93.253.202     —         TWA (PK)  [registry]
+    9     21.4   110.93.254.97      —         TWA (PK)  [registry]
+   10     21.2   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ hbl-bank-as137513.pk   —   hbl-bank  (Bank (Cybernet customer, Cybernet-only detour via PIE hostname))
+ SOURCE   probe 1014872 · AS150683 · fasttel.1014872
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      7.1   192.168.100.1      —         (private/internal)
+    2      7.9   10.0.9.60          —         (private/internal)
+    3     12.9   10.180.44.217      —         (private/internal)
+    4      9.5   59.103.181.90      AS17557   Pakistan Telecommunication Company Limited (PK)
+    5     10.8   10.253.12.24       —         (private/internal)
+    6     28.4   10.253.4.18        —         (private/internal)
+    7     29.1   10.253.4.51        —         (private/internal)
+    8     28.3   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+    9     29.9   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ hbl-bank-as137513.pk   —   hbl-bank  (Bank (Cybernet customer, Cybernet-only detour via PIE hostname))
+ SOURCE   probe 1015679 · AS136174 · nova.1015679
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   192.168.100.1      —         (private/internal)
+    2      2.0   70.70.209.47       AS6327    Shaw Communications (CA)
+    3      2.5   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.1   110.93.254.66      —         TWA (PK)  [registry]
+    5     18.3   110.93.254.85      —         TWA (PK)  [registry]
+    6     18.6   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ hbl-bank-as137513.pk   —   hbl-bank  (Bank (Cybernet customer, Cybernet-only detour via PIE hostname))
+ SOURCE   probe 1016036 · Cybernet (AS9541) · cybernet.1016036
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.1.1        —         (private/internal)
+    2      2.4   203.101.189.254    AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    3      4.8   192.168.72.113     —         (private/internal)
+    4      3.6   192.168.51.2       —         (private/internal)
+    5     24.1   202.163.97.213     AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    6     27.8   192.168.200.205    —         (private/internal)
+    7     24.6   192.168.76.190     —         (private/internal)
+    8    191.5   221.120.202.48     AS9557    Paknet Limited Merged into PTCL (PK)
+    9      *     (no response)     
+   10    178.5   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+   11    182.0   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ hbl-bank-as137513.pk   —   hbl-bank  (Bank (Cybernet customer, Cybernet-only detour via PIE hostname))
+ SOURCE   probe 1016126 · PTCL (AS17557) · ptcl.1016126
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.2   192.168.10.1       —         (private/internal)
+    2      8.4   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3      8.6   10.253.5.98        —         (private/internal)
+    4      8.5   10.253.4.42        —         (private/internal)
+    5      9.4   10.253.4.51        —         (private/internal)
+    6      8.9   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+    7      9.1   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ hbl-bank-as137513.pk   —   hbl-bank  (Bank (Cybernet customer, Cybernet-only detour via PIE hostname))
+ SOURCE   probe 1016143 · Cybernet (AS9541) · cybernet.1016143
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      4.5   202.163.100.236    —         CYBERNET-PK (PK)  [registry]
+    3      4.6   10.15.15.122       —         (private/internal)
+    4      4.1   192.168.112.161    —         (private/internal)
+    5      *     (no response)     
+    6    115.1   221.120.202.48     AS9557    Paknet Limited Merged into PTCL (PK)
+    7    115.5   10.253.4.71        —         (private/internal)
+    8    137.9   202.125.130.101    AS17557   Pakistan Telecommunication Company Limited (PK)
+    9    114.8   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ hbl-bank-as137513.pk   —   hbl-bank  (Bank (Cybernet customer, Cybernet-only detour via PIE hostname))
+ SOURCE   probe 1017335 · AS138910 · AS138910.1017335
+ DEST     103.111.84.5 · HBL Bank Pvt Ltd. (AS137513) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.3   103.167.255.49     AS138910  N/A (PK)
+    2      0.7   10.7.41.1          —         (private/internal)
+    3      0.5   10.200.107.172     —         (private/internal)
+    4    431.5   10.232.238.134     —         (private/internal)
+    5     25.5   10.221.198.125     —         (private/internal)
+    6     16.8   10.222.180.17      —         (private/internal)
+    7     32.4   119.30.106.42      AS23966   LINKdotNET Telecom Limited (PK)
+    8     35.0   110.93.210.226     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    9     35.0   110.93.253.182     —         TWA (PK)  [registry]
+   10     35.6   110.93.254.85      —         TWA (PK)  [registry]
+   11     35.9   103.111.84.5       AS137513  HBL Bank Pvt Ltd. (PK)   <<< DESTINATION
+
+==============================================================================
+ mcb-arif-habib-as136427.pk   —   mcb-arif-habib  (Brokerage (Cybernet customer, unconfirmed PTCL int'l detour))
+ SOURCE   probe 7613 · Z-Com (AS152605) · zcom.7613
+ DEST     103.87.162.1 · MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (AS136427) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   157.20.147.17      AS152605  Z COM NETWORKS (PK)
+    2      0.9   110.93.205.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    3     16.3   110.93.252.102     —         TWA (PK)  [registry]
+    4     17.0   110.93.252.173     —         TWA (PK)  [registry]
+    5     21.3   149.40.227.185     AS174     Cogent Communications, LLC (US)
+    6     16.9   202.141.224.9      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    7     30.7   103.87.162.1       AS136427  MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ mcb-arif-habib-as136427.pk   —   mcb-arif-habib  (Brokerage (Cybernet customer, unconfirmed PTCL int'l detour))
+ SOURCE   probe 7764 · PTCL (AS17557) · ptcl.7764
+ DEST     103.87.162.1 · MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (AS136427) · PK · host did NOT reply (trace incomplete)
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.8   203.135.63.1       AS17557   Pakistan Telecommunication Company Limited (PK)
+    2      0.3   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255      *     (no response)     
+
+==============================================================================
+ mcb-arif-habib-as136427.pk   —   mcb-arif-habib  (Brokerage (Cybernet customer, unconfirmed PTCL int'l detour))
+ SOURCE   probe 60223 · Nayatel (AS23674) · nayatel.60223
+ DEST     103.87.162.1 · MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (AS136427) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.4   192.168.18.1       —         (private/internal)
+    2      3.3   100.89.32.1        —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.0   172.27.0.29        —         (private/internal)
+    4      2.7   172.27.0.22        —         (private/internal)
+    5      2.9   172.31.5.170       —         (private/internal)
+    6      2.7   110.93.202.134     —         TWA (PK)  [registry]
+    7     22.6   110.93.252.84      —         TWA (PK)  [registry]
+    8     45.7   110.93.254.161     —         TWA (PK)  [registry]
+    9     23.6   110.93.254.221     —         TWA (PK)  [registry]
+   10     31.0   149.40.227.185     AS174     Cogent Communications, LLC (US)
+   11     23.9   202.141.224.9      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   12     23.7   103.87.162.1       AS136427  MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ mcb-arif-habib-as136427.pk   —   mcb-arif-habib  (Brokerage (Cybernet customer, unconfirmed PTCL int'l detour))
+ SOURCE   probe 62224 · PERN (AS45773) · pern.62224
+ DEST     103.87.162.1 · MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (AS136427) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.9   10.102.76.1        —         (private/internal)
+    2      0.6   172.25.3.14        —         (private/internal)
+    3      *     (no response)     
+    4      *     (no response)     
+    5      *     (no response)     
+    6      *     (no response)     
+    7      *     (no response)     
+  255     23.3   103.87.162.1       AS136427  MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ mcb-arif-habib-as136427.pk   —   mcb-arif-habib  (Brokerage (Cybernet customer, unconfirmed PTCL int'l detour))
+ SOURCE   probe 65761 · Cybernet (AS9541) · cybernet.65761
+ DEST     103.87.162.1 · MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (AS136427) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.9   192.168.0.1        —         (private/internal)
+    2      1.3   192.168.1.1        —         (private/internal)
+    3      5.4   10.15.234.230      —         (private/internal)
+    4      3.0   10.15.248.89       —         (private/internal)
+    5      2.8   10.15.248.177      —         (private/internal)
+    6     22.0   10.15.248.129      —         (private/internal)
+    7     19.5   10.14.16.25        —         (private/internal)
+    8     40.1   192.168.76.194     —         (private/internal)
+    9     20.2   119.63.137.60      —         (unknown)
+   10     20.8   110.93.252.173     —         TWA (PK)  [registry]
+   11     24.0   149.40.227.185     AS174     Cogent Communications, LLC (US)
+   12     20.3   202.141.224.9      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   13     20.5   103.87.162.1       AS136427  MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ mcb-arif-habib-as136427.pk   —   mcb-arif-habib  (Brokerage (Cybernet customer, unconfirmed PTCL int'l detour))
+ SOURCE   probe 65892 · Nayatel (AS23674) · nayatel.65892
+ DEST     103.87.162.1 · MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (AS136427) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.5   192.168.18.1       —         (private/internal)
+    2      3.8   100.114.224.1      —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      3.4   172.27.0.53        —         (private/internal)
+    4      3.4   172.16.90.245      —         (private/internal)
+    5      3.4   172.31.5.206       —         (private/internal)
+    6      4.1   172.31.5.170       —         (private/internal)
+    7      3.8   110.93.202.134     —         TWA (PK)  [registry]
+    8     23.2   110.93.252.106     —         TWA (PK)  [registry]
+    9     23.4   110.93.255.169     —         TWA (PK)  [registry]
+   10     28.3   149.40.227.185     AS174     Cogent Communications, LLC (US)
+   11     24.2   202.141.224.9      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   12     80.9   103.87.162.1       AS136427  MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ mcb-arif-habib-as136427.pk   —   mcb-arif-habib  (Brokerage (Cybernet customer, unconfirmed PTCL int'l detour))
+ SOURCE   probe 1001359 · AS147302 · falcon.1001359
+ DEST     103.87.162.1 · MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (AS136427) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.7   192.168.1.1        —         (private/internal)
+    2      1.8   100.86.0.1         —         SHARED-ADDRESS-SPACE-RFC6598-IANA-RESERVED  [registry]
+    3      1.9   160.30.236.1       AS147302  FALCON BROADBAND (PRIVATE) LIMITED (PK)
+    4      5.2   10.165.10.1        —         (private/internal)
+    5      4.6   172.16.134.2       —         (private/internal)
+    6      5.3   10.181.227.61      —         (private/internal)
+    7      5.2   117.20.30.21       AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    8     20.9   110.93.252.216     —         TWA (PK)  [registry]
+    9     21.5   110.93.252.173     —         TWA (PK)  [registry]
+   10     39.0   149.40.227.185     AS174     Cogent Communications, LLC (US)
+   11     21.8   202.141.224.9      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   12     21.4   103.87.162.1       AS136427  MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ mcb-arif-habib-as136427.pk   —   mcb-arif-habib  (Brokerage (Cybernet customer, unconfirmed PTCL int'l detour))
+ SOURCE   probe 1014872 · AS150683 · fasttel.1014872
+ DEST     103.87.162.1 · MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (AS136427) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      2.5   192.168.100.1      —         (private/internal)
+    2      7.3   10.0.9.60          —         (private/internal)
+    3     15.9   10.200.108.194     —         (private/internal)
+    4      9.6   110.93.210.226     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    5     29.2   110.93.254.110     —         TWA (PK)  [registry]
+    6     29.0   110.93.255.169     —         TWA (PK)  [registry]
+    7    100.5   149.40.227.185     AS174     Cogent Communications, LLC (US)
+    8     26.7   202.141.224.9      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    9     30.1   103.87.162.1       AS136427  MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ mcb-arif-habib-as136427.pk   —   mcb-arif-habib  (Brokerage (Cybernet customer, unconfirmed PTCL int'l detour))
+ SOURCE   probe 1015679 · AS136174 · nova.1015679
+ DEST     103.87.162.1 · MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (AS136427) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.5   192.168.100.1      —         (private/internal)
+    2      1.7   70.70.209.47       AS6327    Shaw Communications (CA)
+    3      3.0   110.93.212.161     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    4     18.4   110.93.254.66      —         TWA (PK)  [registry]
+    5     18.4   110.93.252.173     —         TWA (PK)  [registry]
+    6     24.3   149.40.227.185     AS174     Cogent Communications, LLC (US)
+    7     18.4   202.141.224.9      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+    8     18.7   103.87.162.1       AS136427  MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ mcb-arif-habib-as136427.pk   —   mcb-arif-habib  (Brokerage (Cybernet customer, unconfirmed PTCL int'l detour))
+ SOURCE   probe 1016036 · Cybernet (AS9541) · cybernet.1016036
+ DEST     103.87.162.1 · MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (AS136427) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.1.1        —         (private/internal)
+    2      2.1   203.101.189.254    AS9541    Cyber Internet Services (Pvt) Ltd. (PK)
+    3      4.6   192.168.72.113     —         (private/internal)
+    4      3.7   192.168.51.2       —         (private/internal)
+    5     26.6   10.15.19.81        —         (private/internal)
+    6     27.5   192.168.248.205    —         (private/internal)
+    7     30.4   192.168.76.194     —         (private/internal)
+    8     24.9   119.63.137.60      —         (unknown)
+    9     25.4   110.93.254.161     —         TWA (PK)  [registry]
+   10     25.9   110.93.254.221     —         TWA (PK)  [registry]
+   11     29.4   149.40.227.185     AS174     Cogent Communications, LLC (US)
+   12     25.4   202.141.224.9      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   13     60.2   103.87.162.1       AS136427  MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ mcb-arif-habib-as136427.pk   —   mcb-arif-habib  (Brokerage (Cybernet customer, unconfirmed PTCL int'l detour))
+ SOURCE   probe 1016126 · PTCL (AS17557) · ptcl.1016126
+ DEST     103.87.162.1 · MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (AS136427) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.1   192.168.10.1       —         (private/internal)
+    2      8.4   39.39.0.1          AS17557   Pakistan Telecommunication Company Limited (PK)
+    3      8.7   10.253.5.98        —         (private/internal)
+    4      8.9   10.253.4.42        —         (private/internal)
+    5      9.1   10.253.4.2         —         (private/internal)
+    6    115.0   116.51.17.201      AS2914    NTT America, Inc. (SG)
+    7    190.7   93.186.133.54      AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    8    175.2   213.144.176.160    AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+    9    175.3   213.144.170.13     AS6762    TELECOM ITALIA SPARKLE S.p.A. (IT)
+   10    177.2   110.93.252.174     —         (unknown)
+   11    177.7   110.93.252.225     —         TWA (PK)  [registry]
+   12    177.2   110.93.255.169     —         TWA (PK)  [registry]
+   13    241.7   149.40.227.185     AS174     Cogent Communications, LLC (US)
+   14    178.1   202.141.224.9      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   15    179.1   103.87.162.1       AS136427  MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ mcb-arif-habib-as136427.pk   —   mcb-arif-habib  (Brokerage (Cybernet customer, unconfirmed PTCL int'l detour))
+ SOURCE   probe 1016143 · Cybernet (AS9541) · cybernet.1016143
+ DEST     103.87.162.1 · MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (AS136427) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      1.6   192.168.18.1       —         (private/internal)
+    2      4.3   202.163.100.236    —         CYBERNET-PK (PK)  [registry]
+    3      4.7   10.15.15.122       —         (private/internal)
+    4      4.7   192.168.251.141    —         (private/internal)
+    5      *     (no response)     
+    6    116.1   119.63.137.60      —         (unknown)
+    7    116.1   110.93.254.161     —         TWA (PK)  [registry]
+    8    117.4   110.93.254.221     —         TWA (PK)  [registry]
+    9    202.8   149.40.227.185     AS174     Cogent Communications, LLC (US)
+   10    125.6   202.141.224.9      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   11    117.1   103.87.162.1       AS136427  MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (PK)   <<< DESTINATION
+
+==============================================================================
+ mcb-arif-habib-as136427.pk   —   mcb-arif-habib  (Brokerage (Cybernet customer, unconfirmed PTCL int'l detour))
+ SOURCE   probe 1017335 · AS138910 · AS138910.1017335
+ DEST     103.87.162.1 · MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (AS136427) · PK · reached, host replied
+ SERVED   Karachi, Sindh, PK   (server geolocation)
+------------------------------------------------------------------------------
+  hop   rtt(ms)   ip                 asn       operator (country)
+    1      0.4   103.167.255.49     AS138910  N/A (PK)
+    2      0.5   10.7.41.1          —         (private/internal)
+    3      0.5   10.200.107.172     —         (private/internal)
+    4      0.9   10.232.174.146     —         (private/internal)
+    5      3.1   10.232.107.134     —         (private/internal)
+    6     18.0   110.93.249.184     AS38193   Transworld Associates (Pvt.) Ltd. (PK)
+    7     18.1   110.93.255.108     —         TWA (PK)  [registry]
+    8     18.9   110.93.252.173     —         TWA (PK)  [registry]
+    9     21.9   149.40.227.185     AS174     Cogent Communications, LLC (US)
+   10     18.6   202.141.224.9      AS9260    Multinet Pakistan Pvt. Ltd. (PK)
+   11     18.7   103.87.162.1       AS136427  MCB-ARIF HABIB SAVINGS AND INVESTMENTS LIMITED (PK)   <<< DESTINATION
